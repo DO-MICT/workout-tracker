@@ -1,4 +1,7 @@
-# Workout tracker
+# GFD · Get Fit Daily
+
+_Great Form and Discipline._
+
 
 A mobile-first workout planner and logger. MVP running as a single web page, with
 Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-tracker/**.

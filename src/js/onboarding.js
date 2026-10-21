@@ -12,13 +12,15 @@ function endOnboarding(){
   var sh=document.getElementById("onboard"); sh.hidden=true; sh.innerHTML=""; document.body.style.overflow=""; OB=null;
   pickToday=true; OPEN={}; renderAll();
 }
+/* GFD brand lockup shown at the top of the sign-up and sign-in screens */
+function brandHtml(){return '<div class="brand"><svg viewBox="0 0 100 100" width="56" height="56" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#D4FF3A"/><circle cx="50" cy="50" r="37" fill="none" stroke="#0D0F12" stroke-width="8"/><text x="50" y="60" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="30" fill="#0D0F12">GFD</text></svg><div><b>Get Fit Daily</b><span>Great Form and Discipline</span></div></div>';}
 function obDots(n){return '<div class="wzsteps"><ol>'+[1,2,3].map(function(i){return '<li class="'+(i<n?'done':i===n?'on':'')+'"><span>'+i+'</span></li>';}).join("")+'</ol><p><b>Step '+n+' of 3</b> · '+["Your account","Where you train","Your plan"][n-1]+'</p></div>';}
 function renderOnboard(){
   var sh=document.getElementById("onboard"); if(!sh||!OB) return;
   var h='<div class="sheet-in ob">';
   if(OB.step==="register"&&WEB_MODE){ h+=webAuthHtml(); }
   else if(OB.step==="register"){
-    h+='<div class="obhero"><h1>Welcome</h1><p>Create your account to start testing the workout tracker.</p></div>'+obDots(1)+
+    h+=brandHtml()+'<div class="obhero"><h1>Welcome</h1><p>Create your account to start testing Get Fit Daily.</p></div>'+obDots(1)+
       '<label class="bname"><span>Name</span><input id="obName" maxlength="40" autocomplete="name" placeholder="What should we call you?"></label>'+
       '<label class="bname"><span>Email</span><input id="obEmail" type="email" inputmode="email" autocomplete="email" maxlength="80" placeholder="you@example.com"></label>'+
       '<label class="bname dim"><span>Password</span><input id="obPass" type="text" value="mvp" disabled aria-describedby="obPassNote"><em id="obPassNote">Fixed to “mvp” while we test. Real passwords come with the app store release.</em></label>'+

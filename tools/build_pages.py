@@ -9,14 +9,16 @@ from pathlib import Path
 root = Path(__file__).resolve().parent.parent
 src = (root / "app.html").read_text(encoding="utf-8")
 
-head_tags = """<title>Workout tracker</title>
+head_tags = """<title>GFD · Get Fit Daily</title>
+<meta name="description" content="Get Fit Daily: Great Form and Discipline. Plan, log and track your gym workouts.">
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#16202B">
+<meta name="theme-color" content="#0D0F12">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Workouts">
+<meta name="apple-mobile-web-app-title" content="GFD">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">"""
 
 assert src.count("<title>5-day split</title>") == 1, "title tag not found in app.html"

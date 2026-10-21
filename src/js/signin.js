@@ -37,9 +37,9 @@ function authMsg(e){
   return m;
 }
 function webAuthHtml(){
-  var m=OB.mode, h='<div class="obhero"><h1>'+({signup:"Welcome",signin:"Welcome back",check:"Check your email",reset:"Reset password",sent:"Check your email",newpass:"New password"}[m])+'</h1>';
+  var m=OB.mode, h=brandHtml()+'<div class="obhero"><h1>'+({signup:"Welcome",signin:"Welcome back",check:"Check your email",reset:"Reset password",sent:"Check your email",newpass:"New password"}[m])+'</h1>';
   if(m==="signup"){
-    h+='<p>Create your account to start testing the workout tracker.</p></div>'+obDots(1)+
+    h+='<p>Create your account to start testing Get Fit Daily.</p></div>'+obDots(1)+
       '<label class="bname"><span>Name</span><input id="obName" maxlength="40" autocomplete="name" placeholder="What should we call you?"></label>'+
       '<label class="bname"><span>Email</span><input id="obEmail" type="email" inputmode="email" autocomplete="email" maxlength="80" placeholder="you@example.com"></label>'+
       '<label class="bname"><span>Password</span><input id="obPass" type="password" autocomplete="new-password" minlength="6" maxlength="72" placeholder="At least 6 characters"></label>'+
