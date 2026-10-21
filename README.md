@@ -5,6 +5,7 @@ Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-trac
 
 ## What it does
 - Workout plans (5-day split, Bro split, Full body 3-day + cardio, or build your own with a guided setup)
+- Cole’s Sessions: a random session from the gear at a chosen location (full body, upper, lower, core or cardio; you pick how many exercises and sets)
 - Per-set logging with PR hints, rest timer with a race-start countdown, supersets and circuits
 - Equipment per location (gym, home, …); each plan day has a location and is checked against its gear, with swap suggestions
 - Profile with measurements, injury notes per exercise, light/dark mode
