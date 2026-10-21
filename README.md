@@ -10,7 +10,7 @@ Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-trac
 - Profile with measurements, injury notes per exercise, light/dark mode
 - Email + password accounts (Supabase); data syncs per user, newest save wins
 - Suggestions page (web version): testers send an idea or problem with an optional screenshot
-- Feedback page (admins only): every suggestion with sender, context and screenshot; set the status in the app
+- Feedback page (admins only): every suggestion with sender, context and screenshot; set the status and reply in the app (testers see replies, with a dot on the menu for new ones)
 
 ## Files
 | Path | What it is |

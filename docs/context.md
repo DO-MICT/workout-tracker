@@ -20,7 +20,7 @@ Tiers exist only as placeholders today; nothing is gated yet.
 - **Backend — Supabase** project `Workout tracker` (`zdllpjrkwcdmcuizxuum`, eu-west-3, free plan).
   - `profiles`: id, email, display_name, tier (`free|pro|tester`, default tester), tier_source.
   - `user_state`: user_id, data (jsonb — the whole app state), client_ts, schema_version.
-  - `suggestions`: user_id, kind (idea|bug|other), message, screenshot_path, context (plan, day, version, device), status (new|seen|planned|done|wont_do). Screenshots in private bucket `suggestions/<user_id>/…`.
+  - `suggestions`: user_id, kind (idea|bug|other), message, screenshot_path, context (plan, day, version, device), status (new|seen|planned|done|wont_do), admin_reply + replied_at (server-stamped). Screenshots in private bucket `suggestions/<user_id>/…`.
   - `profiles.is_admin` + `private.is_admin()`: admins read all suggestions, profiles and screenshots and can update suggestion status only.
   - Trigger creates profile + user_state rows on sign-up. RLS: own rows only; users may update only `display_name` on profiles.
   - Migrations in `supabase/migrations/`.
@@ -34,7 +34,7 @@ Tiers exist only as placeholders today; nothing is gated yet.
 - Logging: per-set kg/reps, grey hints from PR then from earlier sets today, auto-advance to the next exercise, supersets/circuits in blue groups, rest timer (wheel picker, per-plan rest) with race-start countdown sound.
 - Profile: details, placeholder subscription tiers (Free shows an ad placeholder), default rest, body measurements with history, backup code (copy/restore all data).
 - Injury note per exercise, light/dark/auto theme.
-- Feedback page (admins only, web): all suggestions with sender, context, screenshot viewer, status filter and picker.
+- Feedback page (admins only, web): all suggestions with sender, context, screenshot viewer, status filter and picker, reply box (tester sees the reply; unread dot on their menu).
 - Suggestions page (web only): type, text, optional screenshot (shrunk to ≤1600px JPEG), history with status.
 - Web mode: register / sign in / email confirmation / password reset, sync newest-save-wins, sign out clears the device.
 

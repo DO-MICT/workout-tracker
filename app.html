@@ -366,6 +366,21 @@ details.grp .ex{margin-bottom:8px}
 .fbview img{max-width:100%;max-height:80vh;object-fit:contain;border-radius:8px}
 .fbview .fbclose{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:12px;background:#fff;color:#000;border-color:#fff}
 .fbview .linkbtn{color:#cdd8ff}
+.sgreply{margin:8px 0 2px;background:color-mix(in srgb,var(--blue) 9%,var(--bg));border-left:4px solid var(--blue);border-radius:10px;padding:8px 10px}
+.sgreply>div{display:flex;align-items:center;gap:8px;font-size:.8rem}
+.sgreply>div b{color:var(--blue)}
+.sgreply>div span:last-child{margin-left:auto;color:var(--muted)}
+.sgreply p{margin:4px 0 0;font-size:.92rem;white-space:pre-wrap;-webkit-line-clamp:unset;display:block}
+.sgreply .linkbtn{padding:4px 0;min-height:32px}
+.newtag{background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:0 7px;font-weight:700;font-size:.7rem}
+.fbreply{margin:4px 0 10px}
+.fbreply label span{display:block;font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:4px}
+.fbreply textarea{box-sizing:border-box;width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;font-size:.95rem;resize:vertical}
+.fbreply textarea:focus-visible{outline:3px solid var(--blue);outline-offset:1px}
+.fbrbtns{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:6px;margin-top:6px}
+.replytag{font-size:.7rem;font-weight:700;background:var(--blue);color:#fff;border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:middle}
+.menu-btn{position:relative}
+.mdot{position:absolute;top:6px;right:6px;width:10px;height:10px;border-radius:50%;background:#E5484D;border:2px solid var(--bg)}
 .locbar{background:var(--card);border-radius:14px;padding:10px 12px;margin-bottom:10px}
 .loclbl{display:block;font-weight:600;font-size:.85rem;color:var(--muted);margin-bottom:6px}
 .locchips{display:flex;flex-wrap:wrap;gap:6px}
@@ -849,8 +864,8 @@ function setsFor(ex){
 /* ---------- render ---------- */
 function renderWho(){
   var w=document.getElementById("who");
-  w.innerHTML='<button class="menu-btn" id="menuBtn" aria-label="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="menu"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg></button>'+
-    '<div class="menu" id="menu" hidden><button class="menu-item" id="openProfile">Profile</button><button class="menu-item" id="openPlans">Workout plans</button><button class="menu-item" id="openBuilder">Edit this workout</button><button class="menu-item" id="openEquip">Equipment</button>'+(WEB_MODE?'<button class="menu-item" id="openSugg">Suggestions</button>':'')+(WEB_MODE&&sbAdmin?'<button class="menu-item" id="openFeedback">Feedback <span class="admtag">Admin</span></button>':'')+''+
+  w.innerHTML='<button class="menu-btn" id="menuBtn" aria-label="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="menu"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>'+(SG_UNREAD?'<span class="mdot" aria-label="New reply"></span>':'')+'</button>'+
+    '<div class="menu" id="menu" hidden><button class="menu-item" id="openProfile">Profile</button><button class="menu-item" id="openPlans">Workout plans</button><button class="menu-item" id="openBuilder">Edit this workout</button><button class="menu-item" id="openEquip">Equipment</button>'+(WEB_MODE?'<button class="menu-item" id="openSugg">Suggestions'+(SG_UNREAD?'<span class="replytag">'+SG_UNREAD+' new repl'+(SG_UNREAD>1?'ies':'y')+'</span>':'')+'</button>':'')+(WEB_MODE&&sbAdmin?'<button class="menu-item" id="openFeedback">Feedback <span class="admtag">Admin</span></button>':'')+''+
     '<div class="menu-theme"><span>Appearance</span><div class="seg" role="group" aria-label="Appearance">'+
     [["auto","Auto"],["light","Light"],["dark","Dark"]].map(function(o){return '<button data-themeset="'+o[0]+'" aria-pressed="'+(themePref()===o[0])+'">'+o[1]+'</button>';}).join("")+'</div></div></div>';
 }
@@ -1645,7 +1660,7 @@ function onSignedIn(user,fresh){
     var sh=document.getElementById("onboard");
     if(!S.onboarded){ OB={step:"choose",plan:"split5"}; sh.hidden=false; document.body.style.overflow="hidden"; renderOnboard(); }
     else if(OB){ sh.hidden=true; sh.innerHTML=""; document.body.style.overflow=""; OB=null; }
-    pickToday=true; renderAll(); setStatus();
+    pickToday=true; renderAll(); setStatus(); checkReplies();
   });
 }
 function sbQueue(){ if(!sbUser) return; sbDirty=true; clearTimeout(sbTimer); sbTimer=setTimeout(sbPush,800); }
@@ -1665,11 +1680,21 @@ function webSignOut(){
 
 /* ---------- suggestions (web version): text + optional screenshot, saved to Supabase ---------- */
 var APP_VERSION="2026.10.21";
-var SG=null; /* {kind, msg, blob, url, sending, sent, past, err} */
+var SG=null; /* {kind, msg, blob, url, sending, sent, past, err, seenBefore} */
+var SG_UNREAD=0;
+/* count replies the tester hasn't seen yet (shows a dot on the menu) */
+function checkReplies(){
+  if(!sb||!sbUser) return;
+  sb.from("suggestions").select("user_id,replied_at").eq("user_id",sbUser.id).order("created_at",{ascending:false}).limit(50).then(function(r){
+    var seen=S.sgSeen||"", n=((r&&r.data)||[]).filter(function(x){return x.user_id===sbUser.id&&x.replied_at&&x.replied_at>seen;}).length;
+    if(n!==SG_UNREAD){SG_UNREAD=n;renderWho();}
+  },function(){});
+}
+document.addEventListener("visibilitychange",function(){ if(document.visibilityState==="visible"&&sbUser) checkReplies(); });
 var SG_KINDS=[["idea","Idea"],["bug","Something’s wrong"],["other","Other"]];
 var SG_STATUS={new:"Sent",seen:"Seen",planned:"Planned",done:"Done",wont_do:"Not planned"};
 function openSugg(){
-  SG={kind:"idea",msg:"",blob:null,url:"",sending:false,sent:false,past:null,err:""};
+  SG={kind:"idea",msg:"",blob:null,url:"",sending:false,sent:false,past:null,err:"",seenBefore:S.sgSeen||""};
   var sh=document.getElementById("sugg"); sh.hidden=false; document.body.style.overflow="hidden"; renderSugg(); sh.scrollTop=0; sh.focus();
   loadPastSugg();
 }
@@ -1681,8 +1706,9 @@ function closeSugg(){
 }
 function loadPastSugg(){
   if(!sb||!sbUser) return;
-  sb.from("suggestions").select("id,kind,message,status,created_at,screenshot_path").order("created_at",{ascending:false}).limit(20).then(function(r){
+  sb.from("suggestions").select("id,kind,message,status,created_at,screenshot_path,admin_reply,replied_at").eq("user_id",sbUser.id).order("created_at",{ascending:false}).limit(20).then(function(r){
     if(!SG) return; SG.past=(r&&r.data)||[]; renderSugg(true);
+    S.sgSeen=new Date().toISOString(); SG_UNREAD=0; save(); renderWho();
   },function(){ if(SG){SG.past=[];renderSugg(true);} });
 }
 function renderSugg(keepScroll){
@@ -1707,7 +1733,9 @@ function renderSugg(keepScroll){
     else if(!SG.past.length) h+='<p class="eqempty">Nothing sent yet.</p>';
     else h+='<ul class="sglist">'+SG.past.map(function(s){
       var d=new Date(s.created_at), kn=(SG_KINDS.filter(function(k){return k[0]===s.kind;})[0]||["","Other"])[1];
-      return '<li><div class="sgmeta"><span>'+(isNaN(d)?"":d.toLocaleDateString(undefined,{day:"numeric",month:"short"}))+' · '+esc(kn)+(s.screenshot_path?' · with screenshot':'')+'</span><b class="sgst st-'+esc(s.status)+'">'+esc(SG_STATUS[s.status]||s.status)+'</b></div><p>'+esc(s.message)+'</p></li>';
+      var rd=s.replied_at?new Date(s.replied_at):null, isNew=s.admin_reply&&s.replied_at&&(!SG.seenBefore||s.replied_at>SG.seenBefore);
+      return '<li><div class="sgmeta"><span>'+(isNaN(d)?"":d.toLocaleDateString(undefined,{day:"numeric",month:"short"}))+' · '+esc(kn)+(s.screenshot_path?' · with screenshot':'')+'</span><b class="sgst st-'+esc(s.status)+'">'+esc(SG_STATUS[s.status]||s.status)+'</b></div><p>'+esc(s.message)+'</p>'+
+        (s.admin_reply?'<div class="sgreply"><div><b>Reply from the team</b>'+(isNew?'<span class="newtag">New</span>':'')+'<span>'+(rd&&!isNaN(rd)?rd.toLocaleDateString(undefined,{day:"numeric",month:"short"}):'')+'</span></div><p>'+esc(s.admin_reply)+'</p></div>':'')+'</li>';
     }).join("")+'</ul>';
   }
   sh.innerHTML=h+'</div>'; if(keepScroll) sh.scrollTop=st;
@@ -1779,7 +1807,7 @@ document.addEventListener("input",function(e){
 var sbAdmin=false, FB=null;
 var FB_FILTERS=[["new","New"],["seen","Seen"],["planned","Planned"],["done","Done"],["wont_do","Not planned"],["all","All"]];
 function openFeedback(){
-  FB={filter:"new",rows:null,who:{},urls:{},view:null,err:""};
+  FB={filter:"new",rows:null,who:{},urls:{},view:null,err:"",edit:{},draft:{},busy:{}};
   var sh=document.getElementById("feedback"); sh.hidden=false; document.body.style.overflow="hidden"; renderFeedback(); sh.scrollTop=0; sh.focus();
   loadFeedback();
 }
@@ -1790,7 +1818,7 @@ function closeFeedback(){
 }
 function loadFeedback(){
   if(!sb||!sbUser){ if(FB){FB.rows=[];FB.err="Sign in to see feedback.";renderFeedback(true);} return; }
-  sb.from("suggestions").select("id,user_id,kind,message,screenshot_path,context,status,created_at").order("created_at",{ascending:false}).limit(300).then(function(r){
+  sb.from("suggestions").select("id,user_id,kind,message,screenshot_path,context,status,created_at,admin_reply,replied_at").order("created_at",{ascending:false}).limit(300).then(function(r){
     if(!FB) return; if(r&&r.error) throw r.error;
     FB.rows=(r&&r.data)||[]; renderFeedback(true);
     var ids=FB.rows.map(function(x){return x.user_id;}).filter(function(v,i,a){return a.indexOf(v)===i;});
@@ -1826,11 +1854,30 @@ function renderFeedback(keepScroll){
         '<p class="fbmsg">'+esc(x.message)+'</p>'+
         (x.screenshot_path?(url?'<button class="fbshot" data-fbview="'+esc(x.screenshot_path)+'" aria-label="View screenshot full size"><img src="'+esc(url)+'" alt="Screenshot from '+esc(p.display_name||"tester")+'" loading="lazy"></button>':'<p class="eqempty">Loading screenshot…</p>'):'')+
         '<p class="fbctx">'+(isNaN(d)?"":d.toLocaleString(undefined,{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}))+(ctx?' · '+esc(ctx):'')+'</p>'+
+        fbReplyHtml(x)+
         '<label class="fbstatus"><span>Status</span><select data-fbstatus="'+esc(x.id)+'">'+FB_FILTERS.filter(function(f){return f[0]!=="all";}).map(function(f){return '<option value="'+f[0]+'"'+(x.status===f[0]?' selected':'')+'>'+f[1]+'</option>';}).join("")+'</select></label></article>';
     }).join("")+'</div>';
   }
   if(FB.view) h+='<div class="fbview" role="dialog" aria-label="Screenshot"><button class="chip fbclose" id="fbViewClose">Close</button><img src="'+esc(FB.urls[FB.view]||"")+'" alt="Screenshot full size"><a class="linkbtn" href="'+esc(FB.urls[FB.view]||"")+'" target="_blank" rel="noopener">Open in new tab</a></div>';
   sh.innerHTML=h+'</div>'; if(keepScroll) sh.scrollTop=st;
+}
+function fbReplyHtml(x){
+  var rd=x.replied_at?new Date(x.replied_at):null;
+  if(x.admin_reply&&!FB.edit[x.id]) return '<div class="sgreply mine"><div><b>Your reply</b><span>'+(rd&&!isNaN(rd)?rd.toLocaleString(undefined,{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}):'')+'</span></div><p>'+esc(x.admin_reply)+'</p><button class="linkbtn" data-fbedit="'+esc(x.id)+'">Edit reply</button></div>';
+  var v=FB.draft[x.id]!==undefined?FB.draft[x.id]:(x.admin_reply||"");
+  return '<div class="fbreply"><label><span>'+(x.admin_reply?'Edit your reply':'Reply to '+esc((FB.who[x.user_id]||{}).display_name||'tester'))+'</span><textarea rows="3" maxlength="2000" data-fbdraft="'+esc(x.id)+'" placeholder="The tester sees this under their suggestion.">'+esc(v)+'</textarea></label>'+
+    '<div class="fbrbtns">'+(x.admin_reply?'<button class="chip sm" data-fbcancel="'+esc(x.id)+'">Cancel</button><button class="chip sm danger" data-fbclear="'+esc(x.id)+'">Remove reply</button>':'')+
+    '<button class="chip sm primarychip" data-fbsend="'+esc(x.id)+'"'+(FB.busy[x.id]?' disabled':'')+'>'+(FB.busy[x.id]?'Sending…':(x.admin_reply?'Save reply':'Send reply'))+'</button></div></div>';
+}
+function fbSaveReply(id,text){
+  var row=(FB.rows||[]).filter(function(x){return x.id===id;})[0]; if(!row) return;
+  var vals={admin_reply:text}; if(text&&row.status==="new") vals.status="seen";
+  FB.busy[id]=true; renderFeedback(true);
+  sb.from("suggestions").update(vals).eq("id",id).then(function(r){
+    if(r&&r.error) throw r.error;
+    row.admin_reply=text||null; row.replied_at=text?new Date().toISOString():null; if(vals.status) row.status=vals.status;
+    delete FB.busy[id]; delete FB.edit[id]; delete FB.draft[id]; renderFeedback(true); toast(text?"Reply sent":"Reply removed");
+  }).catch(function(){ delete FB.busy[id]; if(FB) renderFeedback(true); toast("Couldn’t save the reply. Try again"); });
 }
 function feedbackClick(t){
   if(!FB) return false;
@@ -1839,8 +1886,13 @@ function feedbackClick(t){
   if(t.dataset.fbfilter){FB.filter=t.dataset.fbfilter;renderFeedback(true);var b=document.querySelector('[data-fbfilter="'+FB.filter+'"]');if(b)b.focus();return true;}
   if(t.dataset.fbview){FB.view=t.dataset.fbview;renderFeedback(true);var c=document.getElementById("fbViewClose");if(c)c.focus();return true;}
   if(t.id==="fbViewClose"){FB.view=null;renderFeedback(true);return true;}
+  if(t.dataset.fbedit){FB.edit[t.dataset.fbedit]=true;renderFeedback(true);var ta=document.querySelector('[data-fbdraft="'+t.dataset.fbedit+'"]');if(ta){ta.focus();ta.setSelectionRange(ta.value.length,ta.value.length);}return true;}
+  if(t.dataset.fbcancel){delete FB.edit[t.dataset.fbcancel];delete FB.draft[t.dataset.fbcancel];renderFeedback(true);return true;}
+  if(t.dataset.fbsend){var tx=document.querySelector('[data-fbdraft="'+t.dataset.fbsend+'"]'), v=(tx&&tx.value||"").trim(); if(!v){toast("Write a reply first");if(tx)tx.focus();return true;} fbSaveReply(t.dataset.fbsend,v); return true;}
+  if(t.dataset.fbclear){if(!confirmTap(t,"Remove reply","Tap again to remove")) return true; fbSaveReply(t.dataset.fbclear,""); return true;}
   return false;
 }
+document.addEventListener("input",function(e){ var id=e.target.dataset&&e.target.dataset.fbdraft; if(id&&FB) FB.draft[id]=e.target.value; });
 document.addEventListener("change",function(e){
   var id=e.target.dataset&&e.target.dataset.fbstatus; if(!id||!FB||!sb) return;
   var row=(FB.rows||[]).filter(function(x){return x.id===id;})[0]; if(!row) return;
