@@ -42,8 +42,6 @@ h1{font-size:1.9rem;line-height:1;margin:0;font-weight:800;letter-spacing:.01em}
 .menu-btn[aria-expanded="true"]{background:var(--ink);color:var(--bg)}
 .menu{position:absolute;right:0;top:calc(100% + 8px);z-index:7;min-width:230px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;box-shadow:0 10px 28px var(--shadow)}
 .menu[hidden]{display:none}
-.tabs.many .tab span{font-size:.62rem}
-.tabs.many .tab b{font-size:1.15rem}
 .wzsteps{margin:2px 0 12px}
 .wzsteps ol{display:flex;gap:6px;list-style:none;margin:0 0 6px;padding:0}
 .wzsteps li{flex:1;height:6px;border-radius:3px;background:var(--line)}
@@ -125,12 +123,23 @@ h1{font-size:1.9rem;line-height:1;margin:0;font-weight:800;letter-spacing:.01em}
 .rename{display:none;gap:8px;align-items:center;margin:-4px 0 14px;flex-wrap:wrap}
 .rename.open{display:flex}
 .rename input{flex:1 1 120px;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
-.tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:18px}
-.tab{border:0;background:var(--card);border-radius:10px;padding:8px 2px 9px;cursor:pointer;text-align:center;border-bottom:5px solid transparent;min-height:56px}
-.tab b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:1.35rem;line-height:1.05;font-weight:800}
-.tab span{display:block;font-size:.72rem;color:var(--muted);line-height:1.15}
-.tab[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);border-bottom-color:var(--ink)}
-.tab[aria-selected="true"] span{color:var(--accent-ink)}
+.daynav{position:relative;margin-bottom:18px}
+.daybtn{width:100%;display:flex;align-items:center;gap:10px;border:0;background:var(--accent);color:var(--accent-ink);border-radius:12px;padding:8px 14px 9px;min-height:56px;cursor:pointer;text-align:left;border-bottom:5px solid var(--ink)}
+.daybtn .dn{flex:1;min-width:0}
+.daybtn b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:1.7rem;line-height:1.05;font-weight:800}
+.daybtn small{display:block;font-size:.8rem;line-height:1.2;opacity:.85}
+.daybtn svg{flex:none}
+.daybtn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.daybtn:disabled{cursor:default}
+.daybtn:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.daymenu{left:0;right:0;min-width:0;max-height:min(70vh,520px);overflow:auto}
+.dm-item{display:flex!important;align-items:center;gap:10px}
+.dm-item .dn{flex:1;min-width:0}
+.dm-item .dn>span{display:block}
+.dm-item .dn small{display:block;font-weight:500;color:var(--muted);font-size:.82rem}
+.dm-item b{color:var(--done)}
+.dm-today{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--line);color:var(--ink);border-radius:999px;padding:2px 7px;margin-left:6px;vertical-align:1px}
+.daybtn .dm-today{background:var(--accent-ink);color:var(--accent)}
 .dayhead h2{font-size:2.6rem;line-height:.95;margin:0;font-weight:800}
 .dayhead p{margin:6px 0 0;color:var(--muted)}
 .progress{margin:14px 0 18px;display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--muted)}
@@ -470,7 +479,7 @@ details.grp .ex{margin-bottom:8px}
     <input id="n0" maxlength="16" aria-label="Your name">
     <button class="chip" id="saveNames">Save names</button>
   </div>
-  <nav class="tabs" id="tabs" role="tablist"></nav>
+  <nav class="daynav" id="tabs" aria-label="Day"></nav>
   <main id="day"></main>
 </div>
 <div class="timer" id="timer" role="status" aria-live="polite">
@@ -893,11 +902,24 @@ function setMenu(open){
   var m=document.getElementById("menu"), b=document.getElementById("menuBtn"); if(!m||!b) return;
   m.hidden=!open; b.setAttribute("aria-expanded",open?"true":"false");
 }
+/* one button with the full day name; tap it to pick another day of the plan */
+var DAY_CHEV='<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function isToday(d){return !!d&&d.id===WEEK[(new Date().getDay()+6)%7].id;}
 function renderTabs(){
-  var tb=document.getElementById("tabs"); tb.style.gridTemplateColumns="repeat("+DAYS.length+",minmax(0,1fr))"; tb.classList.toggle("many",DAYS.length>5);
-  tb.innerHTML=DAYS.map(function(d,i){
-    return '<button class="tab" role="tab" data-day="'+i+'" aria-selected="'+(i===day)+'"><b>'+d.short+'</b><span>'+d.title.replace(" & "," &amp; ")+'</span></button>';
-  }).join("");
+  var tb=document.getElementById("tabs"), d=DAYS[day]; if(!tb) return;
+  if(!d){tb.innerHTML="";return;}
+  var one=DAYS.length<2, tag='<span class="dm-today">Today</span>';
+  var h='<button class="daybtn" id="dayBtn"'+(one?' disabled':' aria-haspopup="true" aria-expanded="false" aria-controls="dayMenu"')+'>'+
+    '<span class="dn"><b>'+esc(weekLong(d.id))+(isToday(d)?tag:'')+'</b><small>'+(one?'Today’s session':'Day '+(day+1)+' of '+DAYS.length+' · tap to change')+'</small></span>'+(one?'':DAY_CHEV)+'</button>';
+  if(!one) h+='<div class="menu daymenu" id="dayMenu" hidden><div class="menu-lbl2">Pick a day</div>'+DAYS.map(function(x,i){
+    return '<button class="menu-item dm-item" data-day="'+i+'" aria-pressed="'+(i===day)+'"><span class="dn"><span>'+esc(weekLong(x.id))+(isToday(x)?tag:'')+'</span><small>'+esc(x.title)+'</small></span>'+(i===day?'<b aria-hidden="true">✓</b>':'')+'</button>';
+  }).join("")+'</div>';
+  tb.innerHTML=h;
+}
+function setDayMenu(open){
+  var m=document.getElementById("dayMenu"), b=document.getElementById("dayBtn"); if(!m||!b) return;
+  m.hidden=!open; b.setAttribute("aria-expanded",open?"true":"false");
+  if(open){var c=m.querySelector('[aria-pressed="true"]')||m.querySelector(".dm-item"); if(c) c.focus();}
 }
 function lastText(ex){
   var L=last()[ex.id]; if(!L||!L.sets||!L.sets.length) return labOf(ex)[0]==="kg"?"First time: pick a weight you can do with good form.":"First time: start easy and log what you do.";
@@ -1042,6 +1064,8 @@ document.addEventListener("click",function(e){
   if(!e.target.closest("#menu")) setMenu(false);
   if(!e.target.closest("#planMenu")&&!e.target.closest("#planBtn")) setPlanMenu(false);
   if(!e.target.closest("#dayLocMenu")&&!e.target.closest("#dayLocBtn")) setDayLocMenu(false);
+  if(e.target.closest("#dayBtn")){var dm=document.getElementById("dayMenu");setMenu(false);setPlanMenu(false);setDayMenu(dm&&dm.hidden);return;}
+  if(!e.target.closest("#dayMenu")) setDayMenu(false);
   var t=e.target.closest("button"); if(!t) return;
   if(t.dataset.note){e.preventDefault();openNote(t.dataset.note);return;}
   if(t.id==="openSugg"){setMenu(false);openSugg();return;}
@@ -1074,7 +1098,7 @@ document.addEventListener("click",function(e){
   if(t.id==="saveAcct"){saveAcct();return;}
   if(t.dataset.tier){acct().tier=t.dataset.tier;save();document.querySelectorAll("[data-tier]").forEach(function(b){var on=b===t;b.classList.toggle("on",on);b.setAttribute("aria-checked",on);var c=b.querySelector(".tcur");if(on&&!c)b.insertAdjacentHTML("beforeend",'<span class="tcur">Current</span>');if(!on&&c)c.remove();});renderDay();toast(TIERS.filter(function(x){return x.id===t.dataset.tier;})[0].name+" (placeholder)");return;}
   if(t.id==="testPing"){schedulePing(3);return;}
-  if(t.dataset.day!==undefined){day=+t.dataset.day;renderTabs();renderDay();window.scrollTo(0,0);return;}
+  if(t.dataset.day!==undefined){day=+t.dataset.day;renderTabs();renderDay();window.scrollTo(0,0);var db=document.getElementById("dayBtn");if(db)db.focus({preventScroll:true});return;}
   if(t.id==="editNames"){setMenu(false);var r=document.getElementById("rename");r.classList.toggle("open");document.getElementById("n0").value=S.names[0];if(r.classList.contains("open"))document.getElementById("n0").focus();return;}
   if(t.id==="saveNames"){S.names=[document.getElementById("n0").value.trim()||"Lifter 1",S.names[1]||"Lifter 2"];document.getElementById("rename").classList.remove("open");save();renderAll();return;}
   if(t.dataset.tick){
@@ -1107,6 +1131,7 @@ document.addEventListener("keydown",function(e){
   if(e.key==="Escape"&&LOC_MODE){LOC_MODE=null;renderLocBar();return;}
   if(e.key==="Enter"&&e.target.id==="plName"){var sb=document.querySelector("[data-saveren]");if(sb)sb.click();return;}
   if(e.key==="Escape"&&WZ){var eqs=document.getElementById("equip"); if(eqs&&!eqs.hidden) return; if(BD&&BD.wizard&&BD.view==="pick"){BD.view="edit";renderBuilder();} else toast("Tap Cancel to leave setup"); return;}
+  if(e.key==="Escape"){var dym=document.getElementById("dayMenu");if(dym&&!dym.hidden){setDayMenu(false);document.getElementById("dayBtn").focus();return;}}
   if(e.key==="Escape"){var dlm=document.getElementById("dayLocMenu");if(dlm&&!dlm.hidden){setDayLocMenu(false);document.getElementById("dayLocBtn").focus();return;}}
   if(e.key==="Escape"){var pm=document.getElementById("planMenu");if(pm&&!pm.hidden){setPlanMenu(false);document.getElementById("planBtn").focus();return;}}
   if(e.key==="Escape"){var ps=document.getElementById("plans");if(ps&&!ps.hidden){if(PL_REN){PL_REN=null;renderPlans();}else closePlans();return;}}
@@ -2166,7 +2191,7 @@ function renderPicker(sh){
     h+='<h4 class="pgh">'+m+'</h4>';
     part.forEach(function(r){
       var L=r.L;
-      h+='<div class="prow'+(r.ok?'':' na')+'"><div class="bn"><b>'+esc(L.n)+'</b><span>'+L.sets+' × '+esc(L.reps)+'</span>'+(r.ok?'':'<em>Needs '+esc(needsText(L,bGear()))+'</em>')+'</div>'+
+      h+='<div class="prow'+(r.ok?'':' na')+'"><div class="bn"><b>'+esc(L.n)+'</b>'+(r.ok?'':'<em>Needs '+esc(needsText(L,bGear()))+'</em>')+'</div>'+
         (r.added?'<span class="padded">Added</span>':r.ok?'<button class="chip sm" data-padd="'+L.id+'" aria-label="Add '+esc(L.n)+'">Add</button>':'')+'</div>';
     });
   });

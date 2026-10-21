@@ -29,7 +29,7 @@ Tiers exist only as placeholders today; nothing is gated yet.
 ## Features in the MVP
 - Plans: 5-day split, Bro split, Full body 3-day + cardio (Tue/Thu treadmill), custom plans via a 6-step guided setup (days Mon–Sun → exercises per day → rest → name → review → save). Every plan editable; built-ins keep only the differences and can be reset.
 - **Cole’s Sessions** (built-in plan `coles`): pick location, focus (full/upper/lower/core/cardio), exercise count (2–12) and sets (1–6); builds a balanced random session from that location’s gear, main lifts first per muscle group; swap any exercise for another of the same group; stored in `coles` (opts + today’s session).
-- Title is a plan switcher; Workout plans page (use, edit, duplicate, rename, delete, reset).
+- Title is a plan switcher; the day is one button with the full day name that opens a day picker (today marked). Workout plans page (use, edit, duplicate, rename, delete, reset).
 - ~150-exercise library with muscle group, required gear, default sets/reps, cues and stick-figure diagrams.
 - Equipment: ~90 items in 9 groups, searchable; **locations** each with their own gear; each plan day has a location and shows whether its gear is sufficient, with same-muscle swap suggestions.
 - Logging: per-set kg/reps, grey hints from PR then from earlier sets today, auto-advance to the next exercise, supersets/circuits in blue groups, rest timer (wheel picker, per-plan rest) with race-start countdown sound.
