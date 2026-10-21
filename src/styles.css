@@ -379,9 +379,6 @@ details.grp .ex{margin-bottom:8px}
 .tprice{display:block;font-weight:600;margin:2px 0 4px}
 .tier ul{margin:0;padding-left:18px;font-size:.88rem;color:var(--muted)}
 .tcur{position:absolute;top:12px;right:12px;background:var(--done);color:var(--on-done);font-size:.75rem;font-weight:700;border-radius:999px;padding:1px 9px}
-.adslot{display:flex;gap:10px;align-items:center;border:1.5px dashed var(--line);border-radius:12px;padding:14px;margin:4px 0 20px;color:var(--muted);font-size:.88rem}
-.adslot span{font-size:.7rem;font-weight:700;border:1px solid currentColor;border-radius:4px;padding:0 4px}
-.adslot p{margin:0}
 .onboard{z-index:8}
 .ob .obhero{padding:18px 0 6px}
 .ob .obhero h1{font-size:2.6rem;line-height:1;margin:0 0 6px;font-weight:800}

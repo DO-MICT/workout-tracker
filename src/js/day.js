@@ -124,7 +124,6 @@ function renderDay(){
       groupsOf(d).forEach(function(g){ h+=exHtml(g.items[0]); });
       h+='<div class="actions"><button class="primary" id="finish">Complete workout</button></div>';
     }
-    if(tierOf()==="free") h+='<div class="adslot" role="note"><span>Ad</span><p>Ad placeholder. Free plan shows ads here.</p></div>';
     document.getElementById("day").innerHTML=h; updateProgress(); return;
   }
   h+='<div class="dayhead"><h2>'+esc(d.title)+'</h2><button class="linkbtn" id="editDay">Edit workout</button></div>';
@@ -144,7 +143,6 @@ function renderDay(){
   if(!d.ex.length) h+='<div class="emptyday"><p>'+(d.title==="Rest day"?'Rest day. Recover, walk, stretch.':'No exercises on this day yet.')+'</p><button class="'+(d.title==="Rest day"?'ghost':'primary')+'" id="editDay2">Add exercises</button></div>';
   groupsOf(d).forEach(function(g){ h+= g.kind==="single" ? exHtml(g.items[0]) : grpHtml(g); });
   h+='<div class="actions"><button class="primary" id="finish">Complete workout</button></div>';
-  if(tierOf()==="free") h+='<div class="adslot" role="note"><span>Ad</span><p>Ad placeholder. Free plan shows ads here.</p></div>';
   document.getElementById("day").innerHTML=h;
   updateProgress();
 }

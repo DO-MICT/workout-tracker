@@ -40,8 +40,8 @@ function fmtDay(iso){var d=new Date(iso);return isNaN(d)?"":d.toLocaleDateString
    Shape is ready for real sign-in later: an auth provider will fill id/emailVerified,
    and the store will set tier. Passwords are never stored here. */
 var TIERS=[
- {id:"free",name:"Free",price:"R0",tag:"With ads",pts:["Built-in plans and workout logging","Equipment and one location","Shows ads"]},
- {id:"pro",name:"Pro",price:"Price TBC / month",tag:"Full access",pts:["Unlimited plans and locations","Guided plan setup and swaps","No ads"]},
+ {id:"free",name:"Free",price:"R0",tag:"Basic",pts:["Built-in plans and workout logging","Equipment and one location"]},
+ {id:"pro",name:"Pro",price:"Price TBC / month",tag:"Full access",pts:["Unlimited plans and locations","Guided plan setup and swaps"]},
  {id:"tester",name:"Tester",price:"Free during testing",tag:"Beta",pts:["Everything in Pro while the app is being tested","Early features before release","Send feedback"]}
 ];
 function acct(){

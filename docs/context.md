@@ -7,7 +7,7 @@ Deon (South Africa, West Coast). Has coded before, mainly JavaScript/Java on Ser
 
 ## Goal
 Publish to the Apple App Store and Google Play with a subscription model:
-- **Free** — with ads (AdMob later)
+- **Free** — basic access (no ads; ads dropped from the release)
 - **Pro** — full access, price TBC
 - **Tester** — full access while testing
 
@@ -36,7 +36,7 @@ Tiers exist only as placeholders today; nothing is gated yet.
 - **Well-done popup** after Complete workout: random cheer (PR-specific when a PR is beaten), time, sets, exercises, kg lifted, new PRs (with the old value) and exercises up on last time; buttons See in History / Done.
 - **History**: every Complete workout is saved as a record (outbox `S.wout` → `save_workout`, retried when back online; on-device `S.wlog` in the Claude copy). History page by month with sets per workout, delete, load older; per-exercise progress (best per workout, chart, every session), opened from History or “See history and progress” on an exercise. Older “last time” entries were imported once as workouts marked “From before history”.
 - Logging: per-set kg/reps, grey hints from PR then from earlier sets today, auto-advance to the next exercise, supersets/circuits in blue groups, rest timer (wheel picker, per-plan rest) with race-start countdown sound.
-- Profile: details, placeholder subscription tiers (Free shows an ad placeholder), default rest, body measurements with history, backup code (copy/restore all data).
+- Profile: details, placeholder subscription tiers, default rest, body measurements with history, backup code (copy/restore all data).
 - Injury note per exercise, light/dark/auto theme.
 - Feedback page (admins only, web): all suggestions with sender, context, screenshot viewer, status filter and picker, reply box (tester sees the reply; unread dot on their menu).
 - Suggestions page (web only): type, text, optional screenshot (shrunk to ≤1600px JPEG), history with status.
@@ -49,7 +49,7 @@ Tiers exist only as placeholders today; nothing is gated yet.
 1. Supabase Auth settings: Site URL + redirect URL for GitHub Pages; decide on email confirmation (built-in email sending is rate-limited — fine for a handful of testers, use custom SMTP before launch).
 2. Expo / React Native app (TypeScript, expo-router, EAS cloud builds because there's no Mac) using the same Supabase project and the same `user_state` shape.
 3. TestFlight + Play internal testing.
-4. RevenueCat for subscriptions (entitlements for Pro/Tester, webhook sets `profiles.tier`), AdMob for the free tier.
+4. RevenueCat for subscriptions (entitlements for Pro/Tester, webhook sets `profiles.tier`). No ads.
 5. Privacy policy (POPIA), in-app account deletion and data export, store listings.
 6. Stage 2 schema: split the rest of `user_state` into tables (locations, plans, plan_days, measurements, notes; workout history is already in tables), derive PRs from `workout_sets` and move the exercise library into the database.
 7. Later: Apple Health / Health Connect sync, calorie tracking, Wear OS, Apple Watch app.
