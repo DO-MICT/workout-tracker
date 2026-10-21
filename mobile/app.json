@@ -44,6 +44,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "60cf0c02-3306-4fad-ad9f-e3d95578d201"
+      }
+    },
+    "owner": "junkdump"
   }
 }
