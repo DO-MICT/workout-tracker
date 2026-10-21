@@ -17,7 +17,9 @@ Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-trac
 ## Files
 | Path | What it is |
 |---|---|
-| `app.html` | **The single source.** Same file runs inside Claude (Claude storage) and on the web (Supabase). |
+| `app.html` | Page shell: head, the HTML body and the `<script>` list. Rarely needs editing. |
+| `src/styles.css` | All the styling. |
+| `src/js/*.js` | The app code, one file per area (see below). Plain scripts that share one global scope, loaded in the order listed in `app.html`. |
 | `index.html` | Built from `app.html` for GitHub Pages. Don't edit by hand. |
 | `tools/build_pages.py` | Builds `index.html` (adds web title, home-screen install tags, icons). |
 | `manifest.webmanifest`, `icons/` | "Add to Home Screen" support. |
@@ -26,7 +28,7 @@ Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-trac
 | `docs/context.md` | Project context for planning sessions. |
 
 ## Making changes
-1. Edit `app.html`.
+1. Edit the file for that area in `src/js/` (or `src/styles.css`).
 2. Run `python3 tools/build_pages.py`.
 3. Commit and push to `main`. GitHub Pages updates within a few minutes.
 
@@ -38,3 +40,25 @@ Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-trac
 - Reading suggestions without the app: Table Editor → `suggestions` (set `status` to seen / planned / done / wont_do; testers see it update). Screenshots: Storage → `suggestions`, path in `screenshot_path`.
 - The key in `app.html` is the **publishable** key, which is meant to be public. Never put a secret/service key in this repo.
 - Auth settings to check in the dashboard (Authentication): Site URL = `https://do-mict.github.io/workout-tracker/`, add it to Redirect URLs, and decide whether email confirmation is on.
+
+## Code layout (`src/js/`, in load order)
+| File | Covers |
+|---|---|
+| `diagrams.js` | Stick-figure exercise diagrams |
+| `library.js` | Built-in program and the exercise library |
+| `state.js` | App state, load/save |
+| `day.js` | Day view rendering and its tap/click events |
+| `plans.js` | Plan data, plan switcher, Workout plans page, guided plan setup |
+| `onboarding.js` | Register + first-run setup |
+| `signin.js` | Web mode: Supabase sign-in and sync |
+| `history.js` | Saving and reading workout history, History page, per-exercise progress |
+| `feedback.js` | Suggestions page and the admin Feedback page |
+| `backup.js` | Copy out / restore all data |
+| `coles.js` | Cole’s Sessions |
+| `builder.js` | Injury notes and the workout builder |
+| `equipment.js` | Equipment and locations |
+| `profile.js` | Profile measurements, account and subscription placeholders |
+| `finish.js` | Well-done popup, on-screen keyboard, rest timer |
+| `main.js` | Startup (runs last) |
+
+New files must be added to the `<script>` list in `app.html` in the right place. Earlier files can't run code at load time that needs a later file.

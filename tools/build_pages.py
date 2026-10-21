@@ -1,4 +1,4 @@
-"""Build index.html (GitHub Pages) from app.html (the single source, also used for the Claude versions).
+"""Build index.html (GitHub Pages) from app.html (the page shell; code lives in src/).
 
 Usage:  python3 tools/build_pages.py
 Adds the web title, home-screen install tags and icons. The app switches to Supabase

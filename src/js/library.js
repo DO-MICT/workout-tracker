@@ -1,0 +1,212 @@
+/* ---------- program ---------- */
+var DEFAULT_DAYS=[
+ {id:"mon",short:"Mon",title:"Chest & arms",sub:"Heavy day",warm:"Warm-up: walk the 2 km to the gym, then 2 light sets of bench press.",ex:[
+  {id:"bench",n:"Barbell bench press",sets:4,reps:"6–8",f:"bench",c:["Feet flat, shoulder blades squeezed together and down.","Lower the bar to mid-chest with elbows about 45° from your body.","Your partner spots every set; that bench rack is light-duty."]},
+  {id:"incdb",n:"Incline dumbbell press",sets:3,reps:"8–10",f:"incline",c:["Set the bench to about 30°, not steeper.","Press up and slightly in, without clanking the dumbbells.","Lower until you feel a stretch in the chest, never pain in the shoulder."]},
+  {id:"cablepress",n:"Standing cable chest press",sets:3,reps:"10–12",f:"cablepress",c:["Both crossover pulleys at chest height, handles in hand, step forward into a split stance.","Press straight forward until your arms are nearly straight, hands meeting in front of your chest.","Brace your abs so the cables don't pull you backwards; return slowly."]},
+  {id:"crossfly",n:"Cable crossover fly",sets:3,reps:"12–15",f:"cablefly",c:["Pulleys at shoulder height, step forward, soft bend in the elbows.","Bring your hands together in front of your chest, like hugging a tree.","Control the return; don't let the stack yank your arms back."]},
+  {id:"ezcurl",n:"EZ-bar curl",sets:3,reps:"8–10",f:"curl",ss:"a",gl:"Superset: biceps & triceps",c:["Elbows stay pinned to your sides.","If you lean back to lift it, it's too heavy.","Lower slowly for a two count."]},
+  {id:"ropepush",n:"Rope pushdown",sets:3,reps:"10–12",f:"pushdown",ss:"b",c:["Elbows fixed at your sides, slight forward lean.","Push down and pull the rope ends apart at the bottom.","Only your forearms move."]}
+ ]},
+ {id:"tue",short:"Tue",title:"Back & shoulders",sub:"Heavy day",warm:"Warm-up: walk the 2 km to the gym, then 1 light set of pulldowns and rows.",ex:[
+  {id:"bbrow",n:"Barbell bent-over row",sets:4,reps:"6–8",f:"bbrow",c:["Hinge until your torso is about 45°, knees soft.","Flat back: chest proud, never rounded.","Pull the bar to your belly button, then lower under control."]},
+  {id:"cablerow",n:"Seated cable row",sets:3,reps:"10–12",f:"cablerow",c:["Low pulley on the crossover with the V-handle.","Sit tall and pull to your stomach, squeezing your shoulder blades.","Don't rock backwards to move the weight."]},
+  {id:"widepull",n:"Wide-grip lat pulldown",sets:3,reps:"10–12",f:"pulldown",c:["Wide overhand grip on the bar, thighs locked under the pads.","Pull to your upper chest, leading with your elbows.","Let it rise slowly under control; don't let the stack yank your arms up."]},
+  {id:"shouldermach",n:"Seated shoulder press machine",sets:3,reps:"8–10",f:"shouldermach",c:["Set the seat so the handles start just above shoulder height.","Keep your back and head against the pad; don't arch.","Press up until arms are nearly straight, then lower under control."]},
+  {id:"lateral",n:"Dumbbell lateral raise",sets:3,reps:"12–15",f:"lateral",c:["Go light; keep a slight bend in the elbows.","Raise to shoulder height and no higher.","Lead with your elbows, not your hands."]},
+  {id:"facepull",n:"Rope face pull",sets:3,reps:"15",f:"facepull",c:["Set the pulley at head height.","Pull the rope toward your eyes, hands ending beside your ears.","Keep your ribs down; squeeze the back of your shoulders."]}
+ ]},
+ {id:"wed",short:"Wed",title:"Legs, glutes & abs",sub:"Lower body",warm:"Warm-up: walk the 2 km to the gym, then 10 bodyweight squats and 10 lunges per leg.",ex:[
+  {id:"goblet",n:"Goblet squat",sets:4,reps:"10–12",f:"goblet",c:["Hold the dumbbell against your chest, feet shoulder width.","Sit down between your heels; knees track over your toes.","Keep your chest up and heels flat the whole rep."]},
+  {id:"rdl",n:"Barbell Romanian deadlift",sets:4,reps:"8",f:"rdl",c:["Soft knees, then push your hips back like closing a car door with your bum.","Bar slides close to your legs; back stays flat.","Stop when you feel a strong hamstring stretch, usually just below the knee."]},
+  {id:"hipthrust",n:"Barbell hip thrust",sets:3,reps:"10",f:"hipthrust",c:["Upper back on the flat bench; wrap the mat or a towel around the bar.","Drive through your heels until hips are level with your shoulders.","Chin tucked; don't arch your lower back at the top."]},
+  {id:"bss",n:"Bulgarian split squat",sets:3,reps:"8–10 / leg",f:"splitsquat",c:["Back foot laces-down on the bench, front foot far enough forward.","Drop straight down until the back knee nearly touches the floor.","Push through the front heel. Hold the rack upright for balance at first."]},
+  {id:"situp",n:"Decline sit-up",sets:3,reps:"12",f:"situp",ss:"c",gl:"Abs circuit",c:["Hook your feet under the roller.","Arms crossed on your chest, not pulling your neck.","Roll up one vertebra at a time and lower slowly."]},
+  {id:"backext",n:"Back extension",sets:3,reps:"12",f:"backext",ss:"c",c:["Pad sits just below your hip bones.","Lower with a flat back until you feel a hamstring stretch.","Rise until your body is in a straight line, no higher."]}
+ ]},
+ {id:"thu",short:"Thu",title:"Chest & arms",sub:"Volume day",warm:"Warm-up: walk the 2 km to the gym, then 2 light sets on the lying press machine.",ex:[
+  {id:"lyingpress",n:"Lying chest press machine",sets:4,reps:"8–10",f:"lyingpress",c:["Lie so the handles sit over your mid-chest.","Feet flat, shoulder blades pulled back into the bench.","Press up smoothly and lower until hands are level with your chest."]},
+  {id:"flatdb",n:"Flat dumbbell press",sets:3,reps:"10",f:"dbbench",c:["Kick the dumbbells up from your knees as you lie back.","Lower to the sides of your chest, elbows about 45°.","When done, bring them to your chest and roll up; don't drop them out wide."]},
+  {id:"bbcurl",n:"Barbell curl",sets:3,reps:"10",f:"curl",ss:"a",gl:"Superset 1: biceps & triceps",c:["Shoulder-width grip, elbows at your sides.","Curl without swinging your hips.","Full stretch at the bottom of each rep."]},
+  {id:"skull",n:"EZ-bar skull crusher",sets:3,reps:"10",f:"skull",ss:"b",c:["Start with the bar above your shoulders, arms straight.","Bend only at the elbows, lowering toward your forehead.","Go light and slow; your partner hands you the bar."]},
+  {id:"ropecurl",n:"Rope hammer curl",sets:2,reps:"15",f:"cablecurl",ss:"a",gl:"Superset 2: biceps & triceps",c:["Low pulley with the rope, palms facing each other.","Elbows stay at your sides.","Squeeze at the top for a second."]},
+  {id:"sapush",n:"Single-arm cable pushdown",sets:2,reps:"15 / arm",f:"pushdown",ss:"b",c:["Single handle on the high pulley.","Elbow pinned to your side.","Straighten fully, then return slowly."]}
+ ]},
+ {id:"fri",short:"Fri",title:"Back & shoulders",sub:"Volume day",warm:"Warm-up: walk the 2 km to the gym, then 1 light set of pulldowns.",ex:[
+  {id:"cgpull",n:"Close-grip lat pulldown",sets:4,reps:"10–12",f:"pulldown",c:["Thighs locked under the pads, chest up.","Pull the bar to your upper chest, elbows driving down.","Let it rise slowly until your arms are straight."]},
+  {id:"dbrow",n:"One-arm dumbbell row",sets:3,reps:"10 / side",f:"dbrow",c:["Same-side knee and hand on the bench, back flat.","Pull the dumbbell toward your hip, not your chest.","Don't twist your torso to lift it."]},
+  {id:"straightarm",n:"Straight-arm pulldown",sets:3,reps:"12–15",f:"straightarm",c:["High pulley, slight forward lean, arms nearly straight.","Sweep the bar down to your thighs using your lats.","Keep your elbows soft but fixed."]},
+  {id:"ohp",n:"Standing barbell overhead press",sets:3,reps:"8–10",f:"ohp",c:["Squeeze your glutes and brace your abs.","Press straight up; move your head back slightly to clear the bar.","Finish with the bar over the middle of your feet, not in front."]},
+  {id:"cablelat",n:"Cable lateral raise",sets:3,reps:"12 / side",f:"cablelateral",c:["Low pulley, handle in the far hand, cable crossing in front of you.","Raise out to the side to shoulder height.","Lower slowly; go light."]},
+  {id:"revfly",n:"Reverse cable fly",sets:3,reps:"15",f:"revfly",c:["Cables at shoulder height, grab the opposite handles.","Pull your arms out wide and back.","Squeeze the back of your shoulders; keep your neck relaxed."]}
+ ]}
+];
+/* ---------- exercise library ----------
+   req: comma = all needed, | = any one of. Gear ids come from EQUIP.
+   lab: set-row column labels [first, second]; "" hides the first column. */
+var LABS={w:["kg","reps"],bw:["+kg","reps"],cardio:["km","min"],time:["","min"],hold:["","sec"],count:["","reps"]};
+var MGS=["Chest","Back","Shoulders","Arms","Legs","Glutes","Core","Cardio","Mobility"];
+/* meta for the exercises already in the default plan: [muscle group, req] */
+var EXMETA={
+ bench:["Chest","barbell,flatbench|adjbench"],incdb:["Chest","dumbbells,inclinebench|adjbench"],cablepress:["Chest","cablecross|functional"],
+ crossfly:["Chest","cablecross|functional"],ezcurl:["Arms","ezbar|barbell"],ropepush:["Arms","cablecross|functional|latpulldown"],
+ bbrow:["Back","barbell"],cablerow:["Back","seatedrow|cablecross|functional"],widepull:["Back","latpulldown"],
+ shouldermach:["Shoulders","shoulderpress"],lateral:["Shoulders","dumbbells"],facepull:["Shoulders","cablecross|functional"],
+ goblet:["Legs","dumbbells|kettlebells"],rdl:["Legs","barbell"],hipthrust:["Glutes","barbell,flatbench|adjbench"],
+ bss:["Legs","dumbbells|calisthenics,flatbench|adjbench|plyobox"],situp:["Core","abbench|declinebench"],backext:["Back","romanchair|ghd"],
+ lyingpress:["Chest","lyingpress"],flatdb:["Chest","dumbbells,flatbench|adjbench"],bbcurl:["Arms","barbell|ezbar"],
+ skull:["Arms","ezbar|barbell,flatbench|adjbench"],ropecurl:["Arms","cablecross|functional"],sapush:["Arms","cablecross|functional"],
+ cgpull:["Back","latpulldown"],dbrow:["Back","dumbbells,flatbench|adjbench"],straightarm:["Back","cablecross|functional|latpulldown"],
+ ohp:["Shoulders","barbell"],cablelat:["Shoulders","cablecross|functional"],revfly:["Shoulders","cablecross|functional|reardelt"]
+};
+/* [id, name, muscle group, req, diagram, sets, reps, lab, cues] */
+var EXTRA=[
+ ["inclinebb","Incline barbell press","Chest","barbell,inclinebench|adjbench","incline",4,"6–8","w",["Bench at about 30°.","Lower the bar to your upper chest.","Have your partner spot you."]],
+ ["declinebb","Decline bench press","Chest","barbell,declinebench","bench",3,"8–10","w",["Lock your legs under the pads first.","Lower to your lower chest.","Always use a spotter."]],
+ ["smithbench","Smith machine bench press","Chest","smith,flatbench|adjbench","bench",3,"8–10","w",["Line the bar up with mid-chest before unracking.","Set the safety stops just above your chest.","Twist the bar to re-rack."]],
+ ["dbfly","Dumbbell fly","Chest","dumbbells,flatbench|adjbench","dbbench",3,"10–12","w",["Soft bend in the elbows, locked in.","Open wide until you feel a chest stretch.","Go light; this is a stretch move."]],
+ ["pecdeckfly","Pec deck fly","Chest","pecdeck","cablefly",3,"12–15","w",["Handles at chest height.","Squeeze your hands together in front.","Control the way back."]],
+ ["machinechest","Seated chest press machine","Chest","chestpress","machinepress",3,"10–12","w",["Handles in line with mid-chest.","Back flat on the pad.","Stop just short of locking out."]],
+ ["inclinemach","Incline press machine","Chest","inclinepressm","machinepress",3,"10–12","w",["Seat so handles start at upper chest.","Press up and slightly together.","Lower slowly."]],
+ ["lowhighfly","Low-to-high cable fly","Chest","cablecross|functional","lowhighfly",3,"12–15","w",["Pulleys at the bottom.","Sweep up and together to chin height.","Keep the elbow bend fixed."]],
+ ["chestdips","Chest dips","Chest","dipstation|assistpull","",3,"8–12","bw",["Lean forward slightly.","Lower until upper arms are level with the floor.","Stop if your shoulders ache."]],
+ ["pushup","Push-ups","Chest","calisthenics","pushup",3,"max","bw",["Hands just outside shoulder width.","Body in one straight line.","Chest to a fist off the floor."]],
+ ["ringpush","Ring push-ups","Chest","rings","pushup",3,"8–12","bw",["Rings a few centimetres off the floor.","Keep the rings close to your body.","Turn the rings out at the top."]],
+ ["trxpress","Suspension chest press","Chest","trx","pushup",3,"10–12","bw",["Face away from the anchor.","Walk your feet back to make it harder.","Keep your hips in line."]],
+ ["bandpress","Band chest press","Chest","bands","cablepress",3,"12–15","w",["Anchor the band at chest height behind you.","Press forward until arms are straight.","Return slowly."]],
+
+ ["pullup","Pull-ups","Back","pullupbar","pullup",3,"max","bw",["Start from straight arms.","Pull until your chin clears the bar.","No kipping or swinging."]],
+ ["chinup","Chin-ups","Back","pullupbar","pullup",3,"max","bw",["Palms facing you, shoulder width.","Drive your elbows down to your ribs.","Lower all the way."]],
+ ["assistpullup","Assisted pull-up","Back","assistpull","pullup",3,"8–10","w",["More weight on the stack makes it easier.","Pull your chest toward the bar.","Lower slowly."]],
+ ["deadlift","Deadlift","Back","barbell","rdl",4,"5","w",["Bar over mid-foot, shins close.","Flat back, push the floor away.","Stand tall; don't lean back at the top."]],
+ ["trapdl","Trap bar deadlift","Back","trapbar","rdl",4,"6","w",["Stand in the centre of the bar.","Hips down, chest up, then drive.","Lock out with your glutes."]],
+ ["tbarrow","T-bar row","Back","tbar|landmine,barbell|tbar","bbrow",3,"8–10","w",["Hinge to about 45°, back flat.","Pull the handle to your stomach.","Don't jerk the weight."]],
+ ["chestrow","Chest-supported row machine","Back","rowmachine","cablerow",3,"10–12","w",["Chest pressed into the pad.","Squeeze your shoulder blades together.","Pause for a second at the back."]],
+ ["invrow","Inverted row","Back","trx|rings|smith|powerrack","",3,"8–12","bw",["Body straight like a plank.","Pull your chest to the bar or handles.","Feet further forward makes it harder."]],
+ ["trxrow","Suspension row","Back","trx","",3,"10–12","bw",["Lean back with arms straight.","Pull your hands to your ribs.","Keep your hips up."]],
+ ["shrug","Dumbbell shrug","Back","dumbbells","",3,"12–15","w",["Arms straight, shoulders up to your ears.","Hold for a second at the top.","Don't roll your shoulders."]],
+ ["superman","Superman hold","Back","calisthenics|yogamat|pilatesmat","",3,"30 s","hold",["Lie face down, arms overhead.","Lift arms and legs a few centimetres.","Keep your neck long."]],
+
+ ["dbpress","Seated dumbbell shoulder press","Shoulders","dumbbells,adjbench","dbpress",3,"8–10","w",["Backrest upright.","Start with dumbbells at ear height.","Press without arching your back."]],
+ ["arnold","Arnold press","Shoulders","dumbbells","dbpress",3,"10–12","w",["Start palms facing you at chin height.","Rotate as you press up.","Reverse on the way down."]],
+ ["frontraise","Dumbbell front raise","Shoulders","dumbbells","lateral",3,"12","w",["Raise to shoulder height in front.","Slight bend in the elbows.","No swinging."]],
+ ["lateralmach","Lateral raise machine","Shoulders","lateralm","lateral",3,"12–15","w",["Pads on the outside of your elbows.","Raise to shoulder height.","Lower slowly."]],
+ ["reardeltm","Rear delt machine","Shoulders","reardelt","revfly",3,"15","w",["Chest against the pad.","Sweep your arms back wide.","Squeeze the back of your shoulders."]],
+ ["landminepress","Landmine press","Shoulders","landmine,barbell","ohp",3,"10 / arm","w",["Hold the bar end at shoulder height.","Press up and forward.","Brace your abs."]],
+ ["smithohp","Smith machine shoulder press","Shoulders","smith,adjbench|flatbench","ohp",3,"8–10","w",["Sit so the bar lowers just in front of your face.","Press to just short of lockout.","Set the stops at chin height."]],
+ ["uprightrow","Cable upright row","Shoulders","cablecross|functional|uprightrowm","",3,"12","w",["Wide grip on the bar.","Pull to chest height, elbows leading.","Stop if your shoulders pinch."]],
+ ["pikepush","Pike push-up","Shoulders","calisthenics","pushup",3,"8–10","bw",["Hips high in an upside-down V.","Lower your head toward your hands.","Press back up."]],
+ ["bandpullapart","Band pull-apart","Shoulders","bands","revfly",3,"15–20","w",["Arms straight at chest height.","Pull the band apart to your chest.","Squeeze your shoulder blades."]],
+
+ ["hammer","Hammer curl","Arms","dumbbells","hammer",3,"10–12","w",["Palms face each other.","Elbows at your sides.","Lower slowly."]],
+ ["dbcurl","Dumbbell curl","Arms","dumbbells","hammer",3,"10–12","w",["Turn your palms up as you curl.","No swinging.","Full stretch at the bottom."]],
+ ["inclinecurl","Incline dumbbell curl","Arms","dumbbells,inclinebench|adjbench","hammer",3,"10–12","w",["Bench at about 45°, arms hanging.","Curl without moving your elbows.","Go lighter than normal curls."]],
+ ["preachercurl","Preacher curl","Arms","preacher,ezbar|dumbbells","curl",3,"10–12","w",["Armpits snug against the pad.","Don't fully lock out at the bottom.","Squeeze at the top."]],
+ ["curlmach","Bicep curl machine","Arms","curlm","curl",3,"12","w",["Elbows lined up with the pivot.","Curl smoothly.","Lower for a slow count."]],
+ ["cablecurlbar","Cable bar curl","Arms","cablecross|functional","cablecurl",3,"12","w",["Low pulley with a straight bar.","Elbows pinned.","Squeeze at the top."]],
+ ["bandcurl","Band curl","Arms","bands","curl",3,"15","w",["Stand on the band.","Elbows at your sides.","Slow on the way down."]],
+ ["ohext","Overhead rope extension","Arms","cablecross|functional","ohext",3,"12","w",["Face away from the pulley.","Elbows point forward.","Straighten fully."]],
+ ["dbohext","Overhead dumbbell extension","Arms","dumbbells","ohext",3,"10–12","w",["Hold one dumbbell with both hands overhead.","Lower behind your head.","Keep elbows close."]],
+ ["tricepmach","Tricep extension machine","Arms","tricepm","pushdown",3,"12","w",["Elbows on the pad.","Push until arms are straight.","Control the return."]],
+ ["cgbench","Close-grip bench press","Arms","barbell,flatbench|adjbench","bench",3,"8–10","w",["Hands shoulder width.","Elbows tucked close.","Use a spotter."]],
+ ["benchdip","Bench dips","Arms","flatbench|adjbench|calisthenics","",3,"10–15","bw",["Hands on the bench edge behind you.","Lower until elbows are at 90°.","Keep your back close to the bench."]],
+ ["diamond","Diamond push-ups","Arms","calisthenics","pushup",3,"max","bw",["Hands together under your chest.","Elbows brush your sides.","Body straight."]],
+ ["bandpush","Band pushdown","Arms","bands","pushdown",3,"15","w",["Anchor the band high.","Elbows at your sides.","Straighten fully."]],
+ ["wristcurl","Wrist curl","Arms","dumbbells|barbell","",3,"15","w",["Forearms on your thighs, palms up.","Curl only at the wrist.","Go light."]],
+ ["farmer","Farmer's carry","Core","dumbbells|kettlebells|trapbar","",3,"40 m","w",["Heavy weights at your sides.","Stand tall and walk steadily.","Shoulders back, not shrugged."]],
+
+ ["backsquat","Barbell back squat","Legs","barbell,powerrack|smith","goblet",4,"6–8","w",["Bar on your upper back, not your neck.","Sit down between your heels.","Set the safety pins first."]],
+ ["frontsquat","Front squat","Legs","barbell,powerrack","goblet",3,"6–8","w",["Bar rests on the front of your shoulders.","Elbows high.","Stay upright."]],
+ ["smithsquat","Smith machine squat","Legs","smith","goblet",3,"8–10","w",["Feet slightly in front of the bar.","Squat to a comfortable depth.","Set the safety stops."]],
+ ["legpress","Leg press","Legs","legpress","",4,"10–12","w",["Feet shoulder width on the platform.","Lower until knees are near 90°.","Don't lock your knees at the top."]],
+ ["hacksq","Hack squat","Legs","hacksquat","goblet",3,"8–10","w",["Back flat on the pad.","Lower under control.","Push through your heels."]],
+ ["pendulum","Pendulum / belt squat","Legs","pendulum","goblet",3,"10–12","w",["Stand tall in the machine.","Sit straight down.","Drive up through mid-foot."]],
+ ["legext","Leg extension","Legs","legext","legext",3,"12","w",["Knee in line with the pivot.","Roller just above the ankle.","Pause at the top."]],
+ ["legcurl","Lying leg curl","Legs","lyingcurl","legcurl",3,"12","w",["Hips pressed into the bench.","Curl up, lower slowly.","Roller above your heels."]],
+ ["seatedlegcurl","Seated leg curl","Legs","seatedcurl","legext",3,"12","w",["Thigh pad snug.","Pull your heels under the seat.","Control the return."]],
+ ["walklunge","Walking lunge","Legs","dumbbells|calisthenics","splitsquat",3,"10 / leg","w",["Long step forward.","Back knee nearly touches the floor.","Torso upright."]],
+ ["stepup","Box step-up","Legs","plyobox|flatbench","splitsquat",3,"10 / leg","w",["Whole foot on the box.","Push through the top leg only.","Step down slowly."]],
+ ["bwsquat","Bodyweight squat","Legs","calisthenics","goblet",3,"20","count",["Feet shoulder width.","Sit back and down.","Heels stay flat."]],
+ ["jumpsquat","Jump squat","Legs","calisthenics|plyobox","goblet",3,"10","count",["Squat, then jump straight up.","Land softly on the balls of your feet.","Reset between reps."]],
+ ["boxjump","Box jump","Legs","plyobox","",3,"8","count",["Pick a box you can land on easily.","Land softly with bent knees.","Step down, don't jump down."]],
+ ["calf","Standing calf raise","Legs","standcalf|smith","calf",3,"12–15","w",["Full stretch at the bottom.","Rise as high as you can.","Pause at the top."]],
+ ["seatedcalf","Seated calf raise","Legs","seatcalf","calf",3,"15","w",["Pad on your lower thighs.","Lower heels fully.","Pause at the top."]],
+ ["dbcalf","Dumbbell calf raise","Legs","dumbbells","calf",3,"15","w",["Hold a dumbbell, balls of feet on a step.","Full range.","Hold something for balance."]],
+ ["nordic","Nordic hamstring curl","Legs","ghd|calisthenics","",3,"5","bw",["Anchor your ankles.","Lower forward as slowly as you can.","Catch yourself with your hands."]],
+ ["adduct","Hip adduction machine","Legs","abductor","",3,"12–15","w",["Pads on the inside of your knees.","Squeeze your legs together.","Control the return."]],
+ ["sledpush","Sled push","Legs","sled","",4,"20 m","w",["Arms locked, body leaning in.","Short, powerful steps.","Rest fully between pushes."]],
+
+ ["hipthrustm","Hip thrust machine","Glutes","hipthrustm","hipthrust",3,"10–12","w",["Pad across your hips.","Drive up until hips are level.","Chin tucked."]],
+ ["glutebridge","Glute bridge","Glutes","calisthenics|yogamat|pilatesmat","hipthrust",3,"15","bw",["Feet flat, knees bent.","Squeeze glutes to lift hips.","Hold for a second."]],
+ ["kickback","Cable glute kickback","Glutes","cablecross|functional|glutekick","",3,"12 / leg","w",["Ankle strap on a low pulley.","Kick back without arching your back.","Squeeze at the top."]],
+ ["abduct","Hip abduction machine","Glutes","abductor","",3,"15","w",["Pads on the outside of your knees.","Push your legs apart.","Lean forward slightly for more glutes."]],
+ ["kbswing","Kettlebell swing","Glutes","kettlebells","rdl",3,"15","w",["Hinge at the hips, not a squat.","Snap your hips to swing the bell.","Arms just guide it."]],
+ ["sumodl","Sumo deadlift","Glutes","barbell","rdl",3,"6–8","w",["Wide stance, toes out.","Hands inside your knees.","Push your knees out as you stand."]],
+ ["slrdl","Single-leg Romanian deadlift","Glutes","dumbbells|kettlebells","rdl",3,"8 / leg","w",["Hinge on one leg, the other goes back.","Keep your hips level.","Hold something for balance at first."]],
+ ["bandwalk","Banded lateral walk","Glutes","bands","",3,"12 / side","count",["Band above your knees.","Stay low in a half squat.","Small steps sideways."]],
+ ["reversehyp","Reverse hyper","Glutes","reversehyper","",3,"12","w",["Hips on the edge of the pad.","Swing your legs up to level.","Don't hyperextend."]],
+ ["pilatesringsq","Pilates ring thigh squeeze","Glutes","pilatesring","",3,"15","count",["Ring between your knees.","Squeeze and hold for two seconds.","Keep breathing."]],
+
+ ["crunch","Cable rope crunch","Core","cablecross|functional","crunch",3,"15","w",["Kneel facing a high pulley.","Crunch ribs to hips.","Hips stay still."]],
+ ["abmach","Ab crunch machine","Core","abcrunchm","crunch",3,"15","w",["Pads on your chest.","Curl forward with your abs.","Lower slowly."]],
+ ["plank","Plank","Core","calisthenics|yogamat|pilatesmat","",3,"45 s","hold",["Elbows under shoulders.","Body straight, glutes squeezed.","Stop when your hips sag."]],
+ ["sideplank","Side plank","Core","calisthenics|yogamat|pilatesmat","",3,"30 s / side","hold",["Elbow under shoulder.","Hips lifted in a straight line.","Switch sides."]],
+ ["abwheel","Ab wheel rollout","Core","abwheel","",3,"8–12","count",["Start on your knees.","Roll out only as far as your back stays flat.","Pull back with your abs."]],
+ ["hangleg","Hanging leg raise","Core","pullupbar|abstraps|captain","",3,"10–12","count",["Hang with straight arms.","Raise legs without swinging.","Lower slowly."]],
+ ["kneeraise","Captain's chair knee raise","Core","captain|dipstation","",3,"12–15","count",["Back against the pad.","Bring knees to chest.","Lower under control."]],
+ ["woodchop","Cable woodchop","Core","cablecross|functional","",3,"12 / side","w",["Pulley high, pull down across your body.","Rotate through your torso.","Pivot your back foot."]],
+ ["pallof","Pallof press","Core","cablecross|functional|bands","",3,"10 / side","w",["Stand side-on to the anchor.","Press straight out and hold.","Don't let it twist you."]],
+ ["russian","Russian twist","Core","medball|dumbbells|calisthenics","",3,"20","count",["Lean back slightly, feet down.","Rotate side to side.","Move from your ribs, not your arms."]],
+ ["deadbug","Dead bug","Core","calisthenics|yogamat|pilatesmat","",3,"10 / side","count",["Lower back pressed down.","Extend opposite arm and leg.","Move slowly."]],
+ ["medslam","Medicine ball slam","Core","medball","",3,"12","count",["Lift the ball overhead.","Slam it down hard.","Use a slam ball, not a bouncy one."]],
+ ["stabcrunch","Stability ball crunch","Core","stabball","",3,"15","count",["Ball under your lower back.","Crunch up, not too far.","Lower slowly."]],
+ ["torsorot","Rotary torso machine","Core","torso","",3,"12 / side","w",["Sit tall, knees locked in.","Rotate with control.","Go light."]],
+ ["lsit","L-sit","Core","parallettes|dipstation","",3,"15 s","hold",["Arms locked, shoulders down.","Legs straight out in front.","Bend knees to make it easier."]],
+ ["hundred","Pilates hundred","Core","pilatesmat|reformer|yogamat","",2,"60 s","hold",["Head and legs lifted.","Pump your arms with each breath.","Bend knees if your back lifts."]],
+ ["rollup","Pilates roll-up","Core","pilatesmat|reformer","",3,"8","count",["Arms overhead, lying flat.","Roll up one vertebra at a time.","Roll down slowly."]],
+ ["reformerfoot","Reformer footwork","Legs","reformer","",2,"10 each position","count",["Heels, then arches, then toes on the bar.","Press out smoothly.","Control the carriage back in."]],
+ ["ringsupport","Ring support hold","Arms","rings","",3,"20 s","hold",["Arms locked by your sides.","Turn the rings out.","Keep your body still."]],
+
+ ["treadrun","Treadmill run","Cardio","treadmill","",1,"20 min","cardio",["Start with a few minutes of walking.","Don't hold the rails.","Easy pace you can talk at."]],
+ ["inclinewalk","Incline treadmill walk","Cardio","treadmill","",1,"15 min","cardio",["Set incline to 8–12%.","Swing your arms.","Breathing hard but able to talk."]],
+ ["bikeride","Stationary bike","Cardio","bike|spinbike","",1,"20 min","cardio",["Seat at hip height.","Slight knee bend at the bottom.","Steady pace."]],
+ ["airbikeint","Air bike intervals","Cardio","airbike","",1,"10 min","cardio",["20 s hard, 40 s easy.","Push and pull with arms and legs.","Cool down after."]],
+ ["row","Rowing machine","Cardio","rower","",1,"15 min","cardio",["Legs, then body, then arms.","Reverse on the way back.","Damper around 4–6."]],
+ ["ellip","Elliptical / cross trainer","Cardio","elliptical","",1,"20 min","cardio",["Stand tall.","Use the handles to work your arms.","Steady rhythm."]],
+ ["stair","Stair climber","Cardio","stairs","",1,"15 min","cardio",["Light touch on the rails.","Whole foot on each step.","Steady pace."]],
+ ["ski","Ski erg","Cardio","skierg","",1,"10 min","cardio",["Hinge at the hips as you pull.","Arms finish by your thighs.","Rise up tall to reset."]],
+ ["curvedsprint","Curved treadmill sprints","Cardio","curvedtread","",6,"30 s","hold",["Run on the balls of your feet.","Walk to recover between sprints.","Hold the rail to stop."]],
+ ["rope","Jump rope","Cardio","jumprope","",3,"2 min","time",["Small jumps on the balls of your feet.","Turn the rope with your wrists.","Elbows close to your sides."]],
+ ["battle","Battle rope waves","Cardio","battleropes","",4,"30 s","hold",["Half-squat stance.","Alternate arms fast.","Brace your abs."]],
+ ["bagrounds","Punching bag rounds","Cardio","bag","",6,"1 min","time",["Wear gloves or wraps.","Hands up between punches.","Breathe out on each punch."]],
+ ["burpee","Burpees","Cardio","calisthenics","",3,"10","count",["Squat, kick back to a plank.","Chest down, push up.","Jump up and clap."]],
+ ["sandcarry","Sandbag carry","Cardio","sandbag","",3,"40 m","w",["Hug the bag to your chest.","Walk tall and steady.","Set it down with a flat back."]],
+
+ ["sunsal","Sun salutation flow","Mobility","yogamat","",1,"5 min","time",["Move with your breath.","Bend your knees as much as you need.","Keep it smooth, not rushed."]],
+ ["downdog","Downward dog","Mobility","yogamat|calisthenics","",3,"45 s","hold",["Hands wide, hips high.","Press your chest toward your thighs.","Bend knees if hamstrings are tight."]],
+ ["pigeon","Pigeon pose","Mobility","yogamat","",2,"60 s / side","hold",["Front shin across the mat.","Square your hips.","Use a block under your hip if needed."]],
+ ["childpose","Child's pose","Mobility","yogamat|pilatesmat","",2,"60 s","hold",["Knees wide, big toes together.","Reach your arms forward.","Breathe slowly into your back."]],
+ ["catcow","Cat-cow","Mobility","yogamat|pilatesmat|calisthenics","",2,"10","count",["Hands under shoulders, knees under hips.","Round your back, then arch it.","Move with your breath."]],
+ ["hipflexor","Kneeling hip flexor stretch","Mobility","yogamat|stretchstrap|calisthenics","",2,"45 s / side","hold",["Back knee down, squeeze that glute.","Shift your hips forward gently.","Stay upright."]],
+ ["hamstretch","Strap hamstring stretch","Mobility","stretchstrap|yogablocks","",2,"45 s / side","hold",["Lie on your back, strap round your foot.","Raise a straight leg until you feel the stretch.","Keep the other leg flat."]],
+ ["foamroll","Foam roll legs and back","Mobility","foamroller","",1,"5 min","time",["Roll slowly.","Pause on tight spots for 20 seconds.","Avoid rolling your lower back directly."]],
+ ["ballrelease","Massage ball glute release","Mobility","massageball","",1,"2 min / side","time",["Sit on the ball under one glute.","Roll slowly and breathe.","Ease off if it's sharp pain."]]
+];
+var LIB={};
+(function buildLib(){
+  DEFAULT_DAYS.forEach(function(d){d.ex.forEach(function(ex){
+    var m=EXMETA[ex.id]||["Chest",""];
+    LIB[ex.id]={id:ex.id,n:ex.n,f:ex.f,c:ex.c,mg:m[0],req:m[1],sets:ex.sets,reps:ex.reps,lab:"w"};
+  });});
+  EXTRA.forEach(function(e){ if(!LIB[e[0]]) LIB[e[0]]={id:e[0],n:e[1],mg:e[2],req:e[3],f:e[4],sets:e[5],reps:e[6],lab:e[7],c:e[8]}; });
+})();
+function gearName(id){for(var i=0;i<EQUIP.length;i++)for(var j=0;j<EQUIP[i].items.length;j++)if(EQUIP[i].items[j][0]===id)return EQUIP[i].items[j][1];return id;}
+/* returns [] when you can do it, otherwise a list of missing "any of" groups */
+function missingFor(ex,g){
+  g=g||gear(); if(!ex.req) return [];
+  return ex.req.split(",").filter(function(alt){return !alt.split("|").some(function(id){return g.indexOf(id)>=0;});});
+}
+function needsText(ex,g){return missingFor(ex,g).map(function(alt){return alt.split("|").map(gearName).join(" or ");}).join(" and ");}
+function labOf(ex){return LABS[ex.lab||"w"]||LABS.w;}
+var DAYS=DEFAULT_DAYS;
+
