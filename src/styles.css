@@ -1,28 +1,28 @@
 :root{
   --bg:#F3F2EC;--card:#FFFFFF;--ink:#0D0F12;--muted:#5B6672;--line:#D3D8DE;
-  --accent:#D4FF3A;--accent-ink:#0D0F12;--cta:#0D0F12;--on-cta:#D4FF3A;--blue:#2446A8;--steel:#A9B2BC;--done:#1F7A4D;--done-bg:#E3F3EA;--on-done:#FFFFFF;--warn:#A85A12;--shadow:rgba(0,0,0,.2);
+  --accent:#D4FF3A;--accent-ink:#0D0F12;--cta:#0D0F12;--on-cta:#D4FF3A;--blue:#0D0F12;--steel:#A9B2BC;--done:#4A6300;--done-bg:#EEF8C6;--on-done:#FFFFFF;--warn:#A85A12;--shadow:rgba(0,0,0,.2);
   color-scheme:light;
   box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     --bg:#0D0F12;--card:#171A1F;--ink:#F3F2EC;--muted:#9AA4AE;--line:#2A2F36;
-    --accent:#D4FF3A;--accent-ink:#0D0F12;--cta:#D4FF3A;--on-cta:#0D0F12;--blue:#8AA6FF;--steel:#56606B;--done:#45C08A;--done-bg:#173226;--on-done:#06240F;--warn:#F0A867;--shadow:rgba(0,0,0,.55);
+    --accent:#D4FF3A;--accent-ink:#0D0F12;--cta:#D4FF3A;--on-cta:#0D0F12;--blue:#D4FF3A;--steel:#56606B;--done:#D4FF3A;--done-bg:#262E12;--on-done:#0D0F12;--warn:#F0A867;--shadow:rgba(0,0,0,.55);
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#0D0F12;--card:#171A1F;--ink:#F3F2EC;--muted:#9AA4AE;--line:#2A2F36;
-  --accent:#D4FF3A;--accent-ink:#0D0F12;--cta:#D4FF3A;--on-cta:#0D0F12;--blue:#8AA6FF;--steel:#56606B;--done:#45C08A;--done-bg:#173226;--on-done:#06240F;--warn:#F0A867;--shadow:rgba(0,0,0,.55);
+  --accent:#D4FF3A;--accent-ink:#0D0F12;--cta:#D4FF3A;--on-cta:#0D0F12;--blue:#D4FF3A;--steel:#56606B;--done:#D4FF3A;--done-bg:#262E12;--on-done:#0D0F12;--warn:#F0A867;--shadow:rgba(0,0,0,.55);
   color-scheme:dark;
 }
 :root[data-theme="light"]{color-scheme:light}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.45;font-stretch:75%;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.45;font-stretch:75%;-webkit-text-size-adjust:100%}
 button,input{font:inherit;color:inherit}
 .wrap{max-width:640px;margin:0 auto;padding:16px 14px 120px}
-h1,h2,h3,.cond{font-family:Archivo,"Arial Narrow",Inter,sans-serif}
+h1,h2,h3,.cond{font-family:Archivo,"Arial Narrow",Figtree,sans-serif}
 header{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
 h1{font-size:1.9rem;line-height:1;margin:0;font-weight:800;letter-spacing:.01em}
 .status{font-size:.85rem;color:var(--muted);margin-top:4px}
@@ -113,7 +113,7 @@ h1{font-size:1.9rem;line-height:1;margin:0;font-weight:800;letter-spacing:.01em}
 .rename.open{display:flex}
 .rename input{flex:1 1 120px;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
 .daynav{position:relative;margin-bottom:18px}
-.daybtn{width:100%;display:flex;align-items:center;gap:10px;border:0;background:var(--accent);color:var(--accent-ink);border-radius:12px;padding:8px 14px 9px;min-height:56px;cursor:pointer;text-align:left;border-bottom:5px solid var(--ink)}
+.daybtn{width:100%;display:flex;align-items:center;gap:10px;border:0;background:var(--accent);color:var(--accent-ink);border-radius:12px;padding:8px 14px 9px;min-height:56px;cursor:pointer;text-align:left;border-bottom:5px solid var(--accent-ink)}
 .daybtn .dn{flex:1;min-width:0}
 .daybtn b{display:block;font-family:Archivo,sans-serif;font-size:1.7rem;line-height:1.05;font-weight:800}
 .daybtn small{display:block;font-size:.8rem;line-height:1.2;opacity:.85}
@@ -172,7 +172,7 @@ details.how[open] summary::before{content:"−"}
 .setrow input:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .lbl{font-size:.72rem;color:var(--muted);text-align:center}
 .tick{border:2px solid var(--line);background:transparent;border-radius:8px;height:42px;cursor:pointer;font-weight:700;font-size:1.1rem}
-.tick[aria-pressed="true"]{background:var(--done);border-color:var(--done);color:var(--on-done)}
+.tick[aria-pressed="true"]{background:var(--accent);border-color:var(--accent-ink);color:var(--accent-ink)}
 .setrow.isdone input{background:var(--done-bg);border-color:transparent}
 .fin{border:2px dashed var(--steel);background:transparent}
 .fin .row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:8px}
@@ -439,7 +439,7 @@ details.grp .ex{margin-bottom:8px}
 .fbview{position:fixed;inset:0;z-index:10;background:rgba(0,0,0,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:calc(16px + env(safe-area-inset-top,0px)) 12px calc(16px + env(safe-area-inset-bottom,0px))}
 .fbview img{max-width:100%;max-height:80vh;object-fit:contain;border-radius:8px}
 .fbview .fbclose{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:12px;background:#fff;color:#000;border-color:#fff}
-.fbview .linkbtn{color:#cdd8ff}
+.fbview .linkbtn{color:#D4FF3A}
 .sgreply{margin:8px 0 2px;background:color-mix(in srgb,var(--blue) 9%,var(--bg));border-left:4px solid var(--blue);border-radius:10px;padding:8px 10px}
 .sgreply>div{display:flex;align-items:center;gap:8px;font-size:.8rem}
 .sgreply>div b{color:var(--blue)}
@@ -452,7 +452,7 @@ details.grp .ex{margin-bottom:8px}
 .fbreply textarea{box-sizing:border-box;width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;font-size:.95rem;resize:vertical}
 .fbreply textarea:focus-visible{outline:3px solid var(--blue);outline-offset:1px}
 .fbrbtns{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:6px;margin-top:6px}
-.replytag{font-size:.7rem;font-weight:700;background:var(--blue);color:#fff;border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:middle}
+.replytag{font-size:.7rem;font-weight:700;background:var(--blue);color:var(--bg);border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:middle}
 .menu-btn{position:relative}
 .mdot{position:absolute;top:6px;right:6px;width:10px;height:10px;border-radius:50%;background:#E5484D;border:2px solid var(--bg)}
 .coles{background:var(--card);border-radius:14px;padding:12px 14px;margin:8px 0 12px}
