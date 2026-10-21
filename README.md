@@ -7,6 +7,7 @@ Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-trac
 - Workout plans (5-day split, Bro split, Full body 3-day + cardio, or build your own with a guided setup)
 - Cole’s Sessions: a random session from the gear at a chosen location (full body, upper, lower, core or cardio; you pick how many exercises and sets)
 - Per-set logging with PR hints, rest timer with a race-start countdown, supersets and circuits
+- Workout history: every completed workout (date, plan, day, location, duration, every set), per-exercise progress chart, delete a workout
 - Equipment per location (gym, home, …); each plan day has a location and is checked against its gear, with swap suggestions
 - Profile with measurements, injury notes per exercise, light/dark mode
 - Email + password accounts (Supabase); data syncs per user, newest save wins
@@ -31,7 +32,7 @@ Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-trac
 
 ## Supabase
 - Project: `Workout tracker` (`zdllpjrkwcdmcuizxuum`, eu-west-3), free plan.
-- Tables: `profiles` (name, email, tier), `user_state` (the app's data as JSON) and `suggestions` (tester feedback). Row level security: each user can only read and write their own rows; tier and suggestion status can't be changed from the app.
+- Tables: `profiles` (name, email, tier), `user_state` (the app's data as JSON) `suggestions` (tester feedback), and `workouts` + `workout_sets` (history; saved through the `save_workout` function in one transaction, with ids made on the phone so retries never duplicate). Row level security: each user can only read and write their own rows; tier and suggestion status can't be changed from the app.
 - Storage: private `suggestions` bucket for screenshots (images only, 5 MB max, one folder per user).
 - Admins: `profiles.is_admin`. Admins see Menu → Feedback in the app. Add one in the SQL editor: `update public.profiles set is_admin = true where email = '…';`
 - Reading suggestions without the app: Table Editor → `suggestions` (set `status` to seen / planned / done / wont_do; testers see it update). Screenshots: Storage → `suggestions`, path in `screenshot_path`.

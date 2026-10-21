@@ -21,6 +21,7 @@ Tiers exist only as placeholders today; nothing is gated yet.
   - `profiles`: id, email, display_name, tier (`free|pro|tester`, default tester), tier_source.
   - `user_state`: user_id, data (jsonb — the whole app state), client_ts, schema_version.
   - `suggestions`: user_id, kind (idea|bug|other), message, screenshot_path, context (plan, day, version, device), status (new|seen|planned|done|wont_do), admin_reply + replied_at (server-stamped). Screenshots in private bucket `suggestions/<user_id>/…`.
+  - `workouts` (one row per completed workout: performed_at, started_at, duration, plan/day/location ids **and names as snapshots**, set_count, volume_kg, source app|import) and `workout_sets` (exercise id/name/muscle group, exercise_order, set_no, measure w|bw|cardio|time|hold|count, weight, reps, done, superset tag; user_id + performed_at copied in for fast per-exercise progress). Written only via `save_workout(jsonb)`: one transaction, idempotent on the device-generated uuid. Users read/insert/delete their own rows; no updates yet.
   - `profiles.is_admin` + `private.is_admin()`: admins read all suggestions, profiles and screenshots and can update suggestion status only.
   - Trigger creates profile + user_state rows on sign-up. RLS: own rows only; users may update only `display_name` on profiles.
   - Migrations in `supabase/migrations/`.
@@ -32,6 +33,7 @@ Tiers exist only as placeholders today; nothing is gated yet.
 - Title is a plan switcher; the day is one button with the full day name that opens a day picker (today marked). Workout plans page (use, edit, duplicate, rename, delete, reset).
 - ~150-exercise library with muscle group, required gear, default sets/reps, cues and stick-figure diagrams.
 - Equipment: ~90 items in 9 groups, searchable; **locations** each with their own gear; each plan day has a location and shows whether its gear is sufficient, with same-muscle swap suggestions.
+- **History**: every Complete workout is saved as a record (outbox `S.wout` → `save_workout`, retried when back online; on-device `S.wlog` in the Claude copy). History page by month with sets per workout, delete, load older; per-exercise progress (best per workout, chart, every session), opened from History or “See history and progress” on an exercise. Older “last time” entries were imported once as workouts marked “From before history”.
 - Logging: per-set kg/reps, grey hints from PR then from earlier sets today, auto-advance to the next exercise, supersets/circuits in blue groups, rest timer (wheel picker, per-plan rest) with race-start countdown sound.
 - Profile: details, placeholder subscription tiers (Free shows an ad placeholder), default rest, body measurements with history, backup code (copy/restore all data).
 - Injury note per exercise, light/dark/auto theme.
@@ -48,5 +50,5 @@ Tiers exist only as placeholders today; nothing is gated yet.
 3. TestFlight + Play internal testing.
 4. RevenueCat for subscriptions (entitlements for Pro/Tester, webhook sets `profiles.tier`), AdMob for the free tier.
 5. Privacy policy (POPIA), in-app account deletion and data export, store listings.
-6. Stage 2 schema: split `user_state` into tables (locations, plans, plan_days, sessions, set_logs, measurements, notes) and move the exercise library into the database.
+6. Stage 2 schema: split the rest of `user_state` into tables (locations, plans, plan_days, measurements, notes; workout history is already in tables), derive PRs from `workout_sets` and move the exercise library into the database.
 7. Later: Apple Health / Health Connect sync, calorie tracking, Wear OS, Apple Watch app.
