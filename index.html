@@ -333,6 +333,25 @@ details.grp .ex{margin-bottom:8px}
 .obopt:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .bkbtns{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
 .bktext{box-sizing:border-box;width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--card);font:12px/1.4 ui-monospace,Menlo,monospace;color:var(--ink);margin-bottom:6px}
+.sgkinds{margin:0 0 12px}
+.sgkinds .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+#sugg textarea{box-sizing:border-box;width:100%;margin-top:6px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);font:inherit;font-size:1rem;resize:vertical;color:var(--ink)}
+#sugg textarea:focus-visible{outline:3px solid var(--blue);outline-offset:1px}
+#sugg .bname em{text-align:right}
+.sgshot{margin:2px 0 6px}
+.sgshot img{display:block;max-width:100%;max-height:320px;border-radius:12px;border:1px solid var(--line);margin-bottom:8px}
+.sgadd{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border-style:dashed;color:var(--ink);font-weight:600}
+#sugg .primary{width:100%}
+.sgdone{display:flex;gap:10px;align-items:flex-start;background:var(--done-bg);border-radius:12px;padding:12px;margin:6px 0 12px}
+.sgdone svg{color:var(--done);flex:none;margin-top:2px}
+.sgdone p{margin:2px 0 0;color:var(--muted);font-size:.92rem}
+.sglist{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.sglist li{background:var(--card);border-radius:12px;padding:10px 12px}
+.sgmeta{display:flex;justify-content:space-between;gap:8px;font-size:.8rem;color:var(--muted)}
+.sgst{font-size:.75rem;border-radius:999px;padding:0 8px;background:var(--bg);color:var(--muted)}
+.sgst.st-planned,.sgst.st-seen{color:var(--blue)}
+.sgst.st-done{background:var(--done-bg);color:var(--done)}
+.sglist p{margin:4px 0 0;font-size:.92rem;white-space:pre-wrap;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .locbar{background:var(--card);border-radius:14px;padding:10px 12px;margin-bottom:10px}
 .loclbl{display:block;font-weight:600;font-size:.85rem;color:var(--muted);margin-bottom:6px}
 .locchips{display:flex;flex-wrap:wrap;gap:6px}
@@ -422,6 +441,7 @@ details.grp .ex{margin-bottom:8px}
 <div class="sheet" id="plans" role="dialog" aria-modal="true" aria-labelledby="pltitle" tabindex="-1" hidden></div>
 <div class="sheet" id="wizard" role="dialog" aria-modal="true" aria-labelledby="wtitle" tabindex="-1" hidden></div>
 <div class="sheet" id="equip" role="dialog" aria-modal="true" aria-labelledby="etitle" tabindex="-1" hidden></div>
+<div class="sheet" id="sugg" role="dialog" aria-modal="true" aria-labelledby="sgtitle" tabindex="-1" hidden></div>
 <div class="sheet onboard" id="onboard" role="dialog" aria-modal="true" aria-label="Get started" tabindex="-1" hidden></div>
 
 <script>
@@ -815,7 +835,7 @@ function setsFor(ex){
 function renderWho(){
   var w=document.getElementById("who");
   w.innerHTML='<button class="menu-btn" id="menuBtn" aria-label="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="menu"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg></button>'+
-    '<div class="menu" id="menu" hidden><button class="menu-item" id="openProfile">Profile</button><button class="menu-item" id="openPlans">Workout plans</button><button class="menu-item" id="openBuilder">Edit this workout</button><button class="menu-item" id="openEquip">Equipment</button>'+
+    '<div class="menu" id="menu" hidden><button class="menu-item" id="openProfile">Profile</button><button class="menu-item" id="openPlans">Workout plans</button><button class="menu-item" id="openBuilder">Edit this workout</button><button class="menu-item" id="openEquip">Equipment</button>'+(WEB_MODE?'<button class="menu-item" id="openSugg">Suggestions</button>':'')+''+
     '<div class="menu-theme"><span>Appearance</span><div class="seg" role="group" aria-label="Appearance">'+
     [["auto","Auto"],["light","Light"],["dark","Dark"]].map(function(o){return '<button data-themeset="'+o[0]+'" aria-pressed="'+(themePref()===o[0])+'">'+o[1]+'</button>';}).join("")+'</div></div></div>';
 }
@@ -968,6 +988,8 @@ document.addEventListener("click",function(e){
   if(!e.target.closest("#dayLocMenu")&&!e.target.closest("#dayLocBtn")) setDayLocMenu(false);
   var t=e.target.closest("button"); if(!t) return;
   if(t.dataset.note){e.preventDefault();openNote(t.dataset.note);return;}
+  if(t.id==="openSugg"){setMenu(false);openSugg();return;}
+  if(suggClick(t)) return;
   if(webAuthClick(t)) return;
   if(onboardClick(t)) return;
   if(backupClick(t)) return;
@@ -1018,6 +1040,7 @@ document.addEventListener("click",function(e){
 });
 document.addEventListener("keydown",function(e){
   if(OB&&e.key==="Escape") return;
+  if(SG&&e.key==="Escape"){closeSugg();return;}
   if(OB&&e.key==="Enter"&&/^(obEmail|obName|obPass)$/.test(e.target.id)){var pb=document.querySelector("#onboard .primary");if(pb)pb.click();return;}
   if(OB&&e.key==="Enter"&&e.target.id==="obLoc"){document.getElementById("obLocNext").click();return;}
   if(e.key==="Enter"&&e.target.id==="locName"){var ls=document.getElementById("locSave");if(ls)ls.click();return;}
@@ -1622,6 +1645,117 @@ function webSignOut(){
   else if(sb) sb.auth.signOut().then(done,done); else done();
 }
 
+/* ---------- suggestions (web version): text + optional screenshot, saved to Supabase ---------- */
+var APP_VERSION="2026.10.21";
+var SG=null; /* {kind, msg, blob, url, sending, sent, past, err} */
+var SG_KINDS=[["idea","Idea"],["bug","Something’s wrong"],["other","Other"]];
+var SG_STATUS={new:"Sent",seen:"Seen",planned:"Planned",done:"Done",wont_do:"Not planned"};
+function openSugg(){
+  SG={kind:"idea",msg:"",blob:null,url:"",sending:false,sent:false,past:null,err:""};
+  var sh=document.getElementById("sugg"); sh.hidden=false; document.body.style.overflow="hidden"; renderSugg(); sh.scrollTop=0; sh.focus();
+  loadPastSugg();
+}
+function closeSugg(){
+  var sh=document.getElementById("sugg"); if(!sh||sh.hidden) return;
+  if(SG&&SG.url) URL.revokeObjectURL(SG.url);
+  sh.hidden=true; sh.innerHTML=""; document.body.style.overflow=""; SG=null;
+  var b=document.getElementById("menuBtn"); if(b) b.focus();
+}
+function loadPastSugg(){
+  if(!sb||!sbUser) return;
+  sb.from("suggestions").select("id,kind,message,status,created_at,screenshot_path").order("created_at",{ascending:false}).limit(20).then(function(r){
+    if(!SG) return; SG.past=(r&&r.data)||[]; renderSugg(true);
+  },function(){ if(SG){SG.past=[];renderSugg(true);} });
+}
+function renderSugg(keepScroll){
+  var sh=document.getElementById("sugg"); if(!sh||!SG) return;
+  var st=sh.scrollTop, h='<div class="sheet-in"><div class="sheet-top"><h2 id="sgtitle">Suggestions</h2><button class="chip" id="closeSugg">Close</button></div>';
+  if(!sbUser){
+    h+='<p class="sub">Sign in to send suggestions.</p>';
+  } else if(SG.sent){
+    h+='<div class="sgdone">'+OK_SVG+'<div><b>Thanks, it’s sent.</b><p>Every suggestion gets read. You can see its status below.</p></div></div><button class="primary" id="sgAgain">Send another</button>';
+  } else {
+    h+='<p class="sub">Found a problem or have an idea? Tell us what you’d change. A screenshot helps.</p>'+
+      '<div class="locchips sgkinds" role="radiogroup" aria-label="Type of suggestion">'+SG_KINDS.map(function(k){return '<button class="chip sm" role="radio" data-sgkind="'+k[0]+'" aria-checked="'+(SG.kind===k[0])+'" aria-pressed="'+(SG.kind===k[0])+'">'+k[1]+'</button>';}).join("")+'</div>'+
+      '<label class="bname"><span>Your suggestion</span><textarea id="sgMsg" rows="6" maxlength="2000" placeholder="'+(SG.kind==="bug"?"What happened, and what did you expect? Which screen were you on?":"What would make the app better for you?")+'">'+esc(SG.msg)+'</textarea><em id="sgCount">'+SG.msg.length+' / 2000</em></label>'+
+      '<div class="sgshot">'+(SG.url?'<img src="'+SG.url+'" alt="Screenshot to send"><button class="chip sm" id="sgRemove">Remove screenshot</button>':'<button class="ghost sgadd" id="sgPick">'+CAM_SVG+'<span>Add a screenshot</span></button>')+
+      '<input type="file" id="sgFile" accept="image/*" hidden></div>'+
+      '<p class="wzerr" id="sgErr" role="alert">'+esc(SG.err)+'</p>'+
+      '<button class="primary" id="sgSend"'+(SG.sending?' disabled':'')+'>'+(SG.sending?'Sending…':'Send suggestion')+'</button>';
+  }
+  if(sbUser){
+    h+='<h3 class="psec">Your suggestions</h3>';
+    if(SG.past===null) h+='<p class="eqempty">Loading…</p>';
+    else if(!SG.past.length) h+='<p class="eqempty">Nothing sent yet.</p>';
+    else h+='<ul class="sglist">'+SG.past.map(function(s){
+      var d=new Date(s.created_at), kn=(SG_KINDS.filter(function(k){return k[0]===s.kind;})[0]||["","Other"])[1];
+      return '<li><div class="sgmeta"><span>'+(isNaN(d)?"":d.toLocaleDateString(undefined,{day:"numeric",month:"short"}))+' · '+esc(kn)+(s.screenshot_path?' · with screenshot':'')+'</span><b class="sgst st-'+esc(s.status)+'">'+esc(SG_STATUS[s.status]||s.status)+'</b></div><p>'+esc(s.message)+'</p></li>';
+    }).join("")+'</ul>';
+  }
+  sh.innerHTML=h+'</div>'; if(keepScroll) sh.scrollTop=st;
+}
+var CAM_SVG='<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="10" r="2" fill="currentColor"/><path d="M4 18l5-5 4 4 3-3 4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
+/* shrink big phone screenshots before upload (max 1600px, JPEG) so they send quickly */
+function shrinkImage(file){
+  return new Promise(function(res){
+    var url=URL.createObjectURL(file), img=new Image();
+    img.onload=function(){
+      var max=1600, w=img.naturalWidth, h=img.naturalHeight, k=Math.min(1,max/Math.max(w,h));
+      var c=document.createElement("canvas"); c.width=Math.round(w*k); c.height=Math.round(h*k);
+      c.getContext("2d").drawImage(img,0,0,c.width,c.height); URL.revokeObjectURL(url);
+      c.toBlob(function(b){res(b||null);},"image/jpeg",0.82);
+    };
+    img.onerror=function(){URL.revokeObjectURL(url);res(null);};
+    img.src=url;
+  });
+}
+function suggClick(t){
+  if(!SG) return false;
+  if(t.id==="closeSugg"){closeSugg();return true;}
+  if(t.dataset.sgkind){var m=document.getElementById("sgMsg"); if(m) SG.msg=m.value; SG.kind=t.dataset.sgkind; renderSugg(true); var b=document.querySelector('[data-sgkind="'+SG.kind+'"]'); if(b) b.focus(); return true;}
+  if(t.id==="sgPick"){var f=document.getElementById("sgFile"); if(f) f.click(); return true;}
+  if(t.id==="sgRemove"){var m2=document.getElementById("sgMsg"); if(m2) SG.msg=m2.value; if(SG.url) URL.revokeObjectURL(SG.url); SG.blob=null; SG.url=""; renderSugg(true); return true;}
+  if(t.id==="sgAgain"){SG.sent=false; SG.msg=""; SG.err=""; renderSugg(); return true;}
+  if(t.id==="sgSend"){
+    var msg=(document.getElementById("sgMsg").value||"").trim(); SG.msg=msg;
+    if(msg.length<3){SG.err="Tell us a little about your suggestion first."; renderSugg(true); document.getElementById("sgMsg").focus(); return true;}
+    if(!sb||!sbUser){SG.err="You’re offline. Try again when you’re connected."; renderSugg(true); return true;}
+    SG.sending=true; SG.err=""; renderSugg(true);
+    var path=null, up=Promise.resolve({error:null});
+    if(SG.blob){ var ct=SG.blob.type||"image/jpeg", ext={"image/png":"png","image/webp":"webp","image/heic":"heic","image/heif":"heif"}[ct]||"jpg"; path=sbUser.id+"/"+Date.now()+"-"+Math.random().toString(36).slice(2,8)+"."+ext; up=sb.storage.from("suggestions").upload(path,SG.blob,{contentType:ct,upsert:false}); }
+    up.then(function(r){
+      if(r&&r.error) throw r.error;
+      var d=DAYS[day]||{};
+      return sb.from("suggestions").insert({kind:SG.kind,message:msg,screenshot_path:path,
+        context:{plan:activePlan().name,day:weekLong(d.id||""),workout:d.title||"",version:APP_VERSION,screen:innerWidth+"x"+innerHeight,ua:(navigator.userAgent||"").slice(0,160)}});
+    }).then(function(r){
+      if(r&&r.error) throw r.error;
+      if(!SG) return; if(SG.url) URL.revokeObjectURL(SG.url);
+      SG.sending=false; SG.sent=true; SG.blob=null; SG.url=""; SG.msg=""; SG.past=null; renderSugg(); loadPastSugg(); toast("Suggestion sent");
+    }).catch(function(e){
+      if(!SG) return; SG.sending=false;
+      SG.err=/size|large/i.test((e&&e.message)||"")?"That screenshot is too big. Try a smaller one.":"Couldn’t send that. Check your connection and try again.";
+      renderSugg(true);
+    });
+    return true;
+  }
+  return false;
+}
+document.addEventListener("change",function(e){
+  if(e.target.id!=="sgFile"||!SG) return;
+  var f=e.target.files&&e.target.files[0]; if(!f) return;
+  var m=document.getElementById("sgMsg"); if(m) SG.msg=m.value;
+  if(!/^image\//.test(f.type||"image/")){SG.err="Pick an image file.";renderSugg(true);return;}
+  shrinkImage(f).then(function(b){
+    if(!SG) return;
+    if(!b){ if(f.size>5*1024*1024){SG.err="That image is too big. Try a screenshot under 5 MB.";renderSugg(true);return;} b=f; }
+    if(SG.url) URL.revokeObjectURL(SG.url);
+    SG.blob=b; SG.url=URL.createObjectURL(b); SG.err=""; renderSugg(true);
+  });
+});
+document.addEventListener("input",function(e){
+  if(e.target.id==="sgMsg"&&SG){SG.msg=e.target.value; var c=document.getElementById("sgCount"); if(c) c.textContent=e.target.value.length+" / 2000";}
+});
 /* ---------- backup: copy all data out, or restore it (works in every version) ---------- */
 function backupHtml(){
   return '<h3 class="psec">Back up or move your data</h3><p class="sub">Copy your backup code to keep it safe or to move your data to another version of the app. Restoring replaces what’s here.</p>'+

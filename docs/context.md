@@ -20,7 +20,8 @@ Tiers exist only as placeholders today; nothing is gated yet.
 - **Backend — Supabase** project `Workout tracker` (`zdllpjrkwcdmcuizxuum`, eu-west-3, free plan).
   - `profiles`: id, email, display_name, tier (`free|pro|tester`, default tester), tier_source.
   - `user_state`: user_id, data (jsonb — the whole app state), client_ts, schema_version.
-  - Trigger creates both rows on sign-up. RLS: own rows only; users may update only `display_name` on profiles.
+  - `suggestions`: user_id, kind (idea|bug|other), message, screenshot_path, context (plan, day, version, device), status (new|seen|planned|done|wont_do). Screenshots in private bucket `suggestions/<user_id>/…`.
+  - Trigger creates profile + user_state rows on sign-up. RLS: own rows only; users may update only `display_name` on profiles.
   - Migrations in `supabase/migrations/`.
 - **Repo** `DO-MICT/workout-tracker` (public, required for free GitHub Pages).
 
@@ -32,6 +33,7 @@ Tiers exist only as placeholders today; nothing is gated yet.
 - Logging: per-set kg/reps, grey hints from PR then from earlier sets today, auto-advance to the next exercise, supersets/circuits in blue groups, rest timer (wheel picker, per-plan rest) with race-start countdown sound.
 - Profile: details, placeholder subscription tiers (Free shows an ad placeholder), default rest, body measurements with history, backup code (copy/restore all data).
 - Injury note per exercise, light/dark/auto theme.
+- Suggestions page (web only): type, text, optional screenshot (shrunk to ≤1600px JPEG), history with status.
 - Web mode: register / sign in / email confirmation / password reset, sync newest-save-wins, sign out clears the device.
 
 ## Data model (app state, stored as JSON in `user_state.data`)
