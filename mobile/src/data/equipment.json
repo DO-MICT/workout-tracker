@@ -1,0 +1,497 @@
+[
+ {
+  "g": "Chest",
+  "items": [
+   [
+    "flatbench",
+    "Flat bench",
+    "bench press"
+   ],
+   [
+    "inclinebench",
+    "Incline bench",
+    ""
+   ],
+   [
+    "declinebench",
+    "Decline bench",
+    ""
+   ],
+   [
+    "chestpress",
+    "Seated chest press machine",
+    ""
+   ],
+   [
+    "lyingpress",
+    "Lying chest press machine",
+    "plate loaded"
+   ],
+   [
+    "pecdeck",
+    "Pec deck / fly machine",
+    "butterfly"
+   ],
+   [
+    "inclinepressm",
+    "Incline press machine",
+    ""
+   ],
+   [
+    "dipbelt",
+    "Dip belt",
+    "weighted dips"
+   ]
+  ]
+ },
+ {
+  "g": "Back",
+  "items": [
+   [
+    "latpulldown",
+    "Lat pulldown machine",
+    "pull down"
+   ],
+   [
+    "seatedrow",
+    "Seated cable row",
+    "low row"
+   ],
+   [
+    "tbar",
+    "T-bar row",
+    "landmine row"
+   ],
+   [
+    "pullupbar",
+    "Pull-up bar",
+    "chin up"
+   ],
+   [
+    "assistpull",
+    "Assisted pull-up / dip machine",
+    "gravitron"
+   ],
+   [
+    "romanchair",
+    "Back extension / Roman chair",
+    "hyperextension"
+   ],
+   [
+    "reversehyper",
+    "Reverse hyper",
+    ""
+   ],
+   [
+    "rowmachine",
+    "Chest-supported row machine",
+    "iso row"
+   ]
+  ]
+ },
+ {
+  "g": "Shoulders",
+  "items": [
+   [
+    "shoulderpress",
+    "Shoulder press machine",
+    "overhead press"
+   ],
+   [
+    "lateralm",
+    "Lateral raise machine",
+    "delts"
+   ],
+   [
+    "reardelt",
+    "Rear delt machine",
+    "reverse fly"
+   ],
+   [
+    "landmine",
+    "Landmine attachment",
+    ""
+   ],
+   [
+    "uprightrowm",
+    "Shrug / upright row machine",
+    "traps"
+   ]
+  ]
+ },
+ {
+  "g": "Arms",
+  "items": [
+   [
+    "ezbar",
+    "EZ curl bar",
+    "skull crusher"
+   ],
+   [
+    "preacher",
+    "Preacher curl bench",
+    "scott"
+   ],
+   [
+    "curlm",
+    "Bicep curl machine",
+    "biceps"
+   ],
+   [
+    "tricepm",
+    "Tricep extension machine",
+    "triceps"
+   ],
+   [
+    "dipstation",
+    "Dip station / parallel bars",
+    "dips"
+   ],
+   [
+    "wristroller",
+    "Wrist roller",
+    "forearm grip"
+   ],
+   [
+    "gripper",
+    "Hand grippers",
+    "forearm grip"
+   ],
+   [
+    "fatgrips",
+    "Thick bar grips",
+    "fat gripz"
+   ]
+  ]
+ },
+ {
+  "g": "Legs & glutes",
+  "items": [
+   [
+    "powerrack",
+    "Squat rack / power rack",
+    "cage"
+   ],
+   [
+    "legpress",
+    "Leg press",
+    "sled press"
+   ],
+   [
+    "hacksquat",
+    "Hack squat machine",
+    ""
+   ],
+   [
+    "legext",
+    "Leg extension machine",
+    "quads"
+   ],
+   [
+    "lyingcurl",
+    "Lying leg curl machine",
+    "hamstring"
+   ],
+   [
+    "seatedcurl",
+    "Seated leg curl machine",
+    "hamstring"
+   ],
+   [
+    "standcalf",
+    "Standing calf raise machine",
+    "calves"
+   ],
+   [
+    "seatcalf",
+    "Seated calf raise machine",
+    "calves"
+   ],
+   [
+    "hipthrustm",
+    "Hip thrust machine",
+    "glute bridge"
+   ],
+   [
+    "glutekick",
+    "Glute kickback machine",
+    "glutes"
+   ],
+   [
+    "abductor",
+    "Hip abductor / adductor machine",
+    "inner outer thigh"
+   ],
+   [
+    "pendulum",
+    "Pendulum / belt squat machine",
+    ""
+   ],
+   [
+    "ghd",
+    "Glute-ham developer (GHD)",
+    "nordic"
+   ],
+   [
+    "plyobox",
+    "Plyo box",
+    "box jump step up"
+   ],
+   [
+    "sled",
+    "Push / pull sled",
+    "prowler"
+   ]
+  ]
+ },
+ {
+  "g": "Core",
+  "items": [
+   [
+    "abbench",
+    "Ab / decline sit-up bench",
+    "crunch"
+   ],
+   [
+    "abwheel",
+    "Ab roller wheel",
+    ""
+   ],
+   [
+    "captain",
+    "Captain's chair / knee raise station",
+    "vkr"
+   ],
+   [
+    "abstraps",
+    "Hanging ab straps",
+    ""
+   ],
+   [
+    "abcrunchm",
+    "Ab crunch machine",
+    ""
+   ],
+   [
+    "torso",
+    "Rotary torso machine",
+    "obliques"
+   ],
+   [
+    "medball",
+    "Medicine ball",
+    "slam ball"
+   ],
+   [
+    "stabball",
+    "Stability / Swiss ball",
+    "exercise ball"
+   ],
+   [
+    "bosu",
+    "BOSU ball",
+    "balance"
+   ]
+  ]
+ },
+ {
+  "g": "Full body",
+  "items": [
+   [
+    "dumbbells",
+    "Dumbbells",
+    "db"
+   ],
+   [
+    "barbell",
+    "Olympic barbell",
+    "bar"
+   ],
+   [
+    "plates",
+    "Weight plates",
+    "discs"
+   ],
+   [
+    "kettlebells",
+    "Kettlebells",
+    "kb"
+   ],
+   [
+    "adjbench",
+    "Adjustable bench",
+    ""
+   ],
+   [
+    "cablecross",
+    "Cable crossover",
+    "pulley"
+   ],
+   [
+    "functional",
+    "Functional trainer / cable column",
+    "dual pulley"
+   ],
+   [
+    "smith",
+    "Smith machine",
+    ""
+   ],
+   [
+    "trapbar",
+    "Trap / hex bar",
+    "deadlift"
+   ],
+   [
+    "bands",
+    "Resistance bands",
+    "loop band tube"
+   ],
+   [
+    "trx",
+    "Suspension trainer (TRX)",
+    "straps"
+   ],
+   [
+    "battleropes",
+    "Battle ropes",
+    ""
+   ],
+   [
+    "bag",
+    "Punching bag",
+    "boxing heavy bag"
+   ],
+   [
+    "sandbag",
+    "Sandbag",
+    ""
+   ],
+   [
+    "multigym",
+    "Home multi-gym",
+    "station"
+   ],
+   [
+    "weightvest",
+    "Weighted vest",
+    ""
+   ]
+  ]
+ },
+ {
+  "g": "Cardio",
+  "items": [
+   [
+    "treadmill",
+    "Treadmill",
+    "run walk"
+   ],
+   [
+    "bike",
+    "Stationary bike",
+    "exercise bike upright recumbent"
+   ],
+   [
+    "spinbike",
+    "Spin bike",
+    "indoor cycle peloton"
+   ],
+   [
+    "airbike",
+    "Air / assault bike",
+    "fan bike echo"
+   ],
+   [
+    "rower",
+    "Rowing machine",
+    "row erg concept2"
+   ],
+   [
+    "elliptical",
+    "Elliptical / cross trainer",
+    "cross-trainer"
+   ],
+   [
+    "stairs",
+    "Stair climber",
+    "stepmill"
+   ],
+   [
+    "skierg",
+    "Ski erg",
+    ""
+   ],
+   [
+    "jumprope",
+    "Jump rope",
+    "skipping"
+   ],
+   [
+    "curvedtread",
+    "Curved / manual treadmill",
+    "assault runner"
+   ]
+  ]
+ },
+ {
+  "g": "Bodyweight & mind-body",
+  "items": [
+   [
+    "calisthenics",
+    "Calisthenics (bodyweight only)",
+    "no equipment street workout"
+   ],
+   [
+    "rings",
+    "Gymnastic rings",
+    ""
+   ],
+   [
+    "parallettes",
+    "Parallettes",
+    "push-up bars"
+   ],
+   [
+    "yogamat",
+    "Yoga mat",
+    "yoga"
+   ],
+   [
+    "yogablocks",
+    "Yoga blocks & strap",
+    "yoga"
+   ],
+   [
+    "pilatesmat",
+    "Pilates mat",
+    "pilates"
+   ],
+   [
+    "reformer",
+    "Pilates reformer",
+    "pilates"
+   ],
+   [
+    "pilatesring",
+    "Pilates ring / magic circle",
+    "pilates"
+   ],
+   [
+    "foamroller",
+    "Foam roller",
+    "mobility recovery"
+   ],
+   [
+    "massageball",
+    "Massage / lacrosse ball",
+    "mobility recovery"
+   ],
+   [
+    "stretchstrap",
+    "Stretching strap",
+    "mobility flexibility"
+   ]
+  ]
+ }
+]
