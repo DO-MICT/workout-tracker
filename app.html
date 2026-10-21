@@ -236,6 +236,33 @@ details.how[open] summary::before{content:"−"}
 .hsess li div{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .hsess li .htag{margin-top:0}
 .hsess li span{display:block;font-size:.9rem;color:var(--muted);margin-top:2px}
+.donepop{position:fixed;inset:0;z-index:9;background:rgba(0,0,0,.55);display:grid;place-items:center;padding:16px;overflow:auto}
+.donepop[hidden]{display:none}
+.donecard{position:relative;overflow:hidden;width:100%;max-width:380px;background:var(--bg);border-radius:20px;padding:24px 18px 18px;text-align:center;box-shadow:0 18px 50px var(--shadow);animation:donein .35s cubic-bezier(.2,1.4,.4,1)}
+.donecard>svg{display:block;margin:0 auto 6px}
+.donecard h2{font-family:"Barlow Condensed",sans-serif;font-size:2.3rem;line-height:1;margin:6px 0 4px;font-weight:800}
+.donesub{margin:0 0 14px;color:var(--muted);font-size:.92rem}
+.donestats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:12px}
+.donestats div{background:var(--card);border-radius:12px;padding:10px 8px}
+.donestats b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:1.6rem;line-height:1.1;white-space:nowrap}
+.donestats span{font-size:.8rem;color:var(--muted)}
+.donewins{text-align:left;background:var(--done-bg);border-radius:12px;padding:10px 12px;margin-bottom:10px}
+.donewins.up{background:var(--card)}
+.donewins h3{margin:0 0 4px;font-size:.95rem}
+.donewins ul{list-style:none;margin:0;padding:0}
+.donewins li{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:.92rem}
+.donewins li span{flex:1;min-width:0}
+.donewins li b{color:var(--done)}
+.donewins li em{font-style:normal;font-size:.8rem;color:var(--muted)}
+.donebtns{display:flex;gap:8px;margin-top:6px}
+.donebtns button{flex:1}
+.donebtns .ghost{color:var(--ink);font-weight:600}
+.confetti{position:absolute;inset:0;pointer-events:none}
+.confetti i{position:absolute;top:-10px;left:calc(var(--i)*5.6% + 2%);width:7px;height:12px;border-radius:2px;background:var(--accent);opacity:0;animation:fall 1.6s ease-in calc(var(--i)*45ms) 1 forwards}
+.confetti i:nth-child(3n){background:var(--blue)}.confetti i:nth-child(3n+1){background:var(--done)}
+@keyframes fall{0%{opacity:1;transform:translateY(0) rotate(0)}100%{opacity:0;transform:translateY(420px) rotate(540deg)}}
+@keyframes donein{from{transform:scale(.85);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.donecard{animation:none}.confetti{display:none}}
 .primary{border:0;background:var(--ink);color:var(--bg);padding:15px;border-radius:12px;font-weight:700;font-size:1.05rem;cursor:pointer;font-family:"Barlow Condensed",sans-serif;font-size:1.35rem}
 .ghost{border:1px solid var(--line);background:transparent;padding:12px;border-radius:12px;cursor:pointer;color:var(--muted)}
 .notes details{background:var(--card);border-radius:12px;padding:4px 14px;margin-bottom:10px}
@@ -537,6 +564,7 @@ details.grp .ex{margin-bottom:8px}
 <div class="toast" id="toast"></div>
 <div class="sheet" id="profile" role="dialog" aria-modal="true" aria-labelledby="ptitle" tabindex="-1" hidden></div>
 <div class="sheet" id="builder" role="dialog" aria-modal="true" aria-labelledby="btitle" tabindex="-1" hidden></div>
+<div class="donepop" id="donepop" hidden></div>
 <div class="sheet note-sheet" id="notesheet" role="dialog" aria-modal="true" aria-labelledby="ntitle" tabindex="-1" hidden></div>
 <div class="sheet" id="plans" role="dialog" aria-modal="true" aria-labelledby="pltitle" tabindex="-1" hidden></div>
 <div class="sheet" id="wizard" role="dialog" aria-modal="true" aria-labelledby="wtitle" tabindex="-1" hidden></div>
@@ -1120,6 +1148,8 @@ document.addEventListener("click",function(e){
   if(t.id==="openSugg"){setMenu(false);openSugg();return;}
   if(t.id==="openHistory"){setMenu(false);openHistory();return;}
   if(t.id==="openFeedback"){setMenu(false);openFeedback();return;}
+  if(t.id==="doneClose"){closeDone();var fb=document.getElementById("dayBtn");if(fb)fb.focus({preventScroll:true});return;}
+  if(t.id==="doneHistory"){closeDone();openHistory();return;}
   if(historyClick(t)) return;
   if(feedbackClick(t)) return;
   if(suggClick(t)) return;
@@ -1175,6 +1205,7 @@ document.addEventListener("click",function(e){
 });
 document.addEventListener("keydown",function(e){
   if(OB&&e.key==="Escape") return;
+  if(e.key==="Escape"){var dp=document.getElementById("donepop");if(dp&&!dp.hidden){closeDone();return;}}
   if(H&&e.key==="Escape"){if(H.del){H.del=null;renderHistory(true);}else if(H.ex&&!H.fromEx){document.getElementById("histBack").click();}else closeHistory();return;}
   if(SG&&e.key==="Escape"){closeSugg();return;}
   if(FB&&e.key==="Escape"){if(FB.view){FB.view=null;renderFeedback(true);}else closeFeedback();return;}
@@ -2900,16 +2931,48 @@ function advanceFrom(ex){
 function groupOf(ex){var gs=groupsOf(DAYS[day]);for(var k=0;k<gs.length;k++){if(gs[k].kind!=="single"&&gs[k].items.indexOf(ex)>=0)return gs[k];}return null;}
 function findEx(id){var d=DAYS[day];for(var i=0;i<d.ex.length;i++)if(d.ex[i].id===id)return d.ex[i];return null;}
 function finishWorkout(){
-  var d=DAYS[day], c=cur(), L=last(), saved=0, now=new Date().toISOString(), rec=buildWorkout(d);
+  var d=DAYS[day], c=cur(), L=last(), saved=0, now=new Date().toISOString(), rec=buildWorkout(d), wins={prs:[],up:[]};
   d.ex.forEach(function(ex){
     var arr=setsFor(ex).slice(0,ex.sets).filter(function(s){return s.w||s.r;});
+    /* before overwriting: compare with the PR and with last time (weighted exercises only) */
+    var top=0; arr.forEach(function(s){var v=parseFloat(s.w); if(v>top) top=v;});
+    if(top>0&&labOf(ex)[0]){
+      var oldPr=parseFloat(prFor(ex))||0, prev=L[ex.id], prevTop=0;
+      if(prev&&prev.sets) prev.sets.forEach(function(s){var v=parseFloat(s.w); if(v>prevTop) prevTop=v;});
+      if(oldPr>0&&top>oldPr) wins.prs.push({n:ex.n,now:top,was:oldPr});
+      else if(prevTop>0&&top>prevTop) wins.up.push({n:ex.n,by:Math.round((top-prevTop)*100)/100});
+    }
     if(arr.length){L[ex.id]={date:now,sets:arr.map(function(s){return {w:s.w,r:s.r};})};saved++;}
     arr.forEach(function(s){var v=parseFloat(s.w); if(v>(parseFloat(prs()[ex.id])||0)) prs()[ex.id]=String(v);});
     delete c[ex.id];
   });
   recordWorkout(rec); save(); stopTimer(); renderDay(); window.scrollTo(0,0);
-  toast(saved?"Workout complete. Saved to History.":"Nothing logged yet. Enter a weight or reps first.");
+  if(saved&&rec) showDone(rec,d,wins);
+  else toast("Nothing logged yet. Enter a weight or reps first.");
 }
+/* ---------- the "well done" popup after Complete workout ---------- */
+var DONE_CHEERS=["Well done!","High five!","Look at you go!","Crushed it!","Strong work!","That’s how it’s done!","Another one in the bank!","Beast mode: complete!","Nailed it!","You showed up and smashed it!"];
+var DONE_PR_CHEERS=["New PR! Look at you go!","PR day! High five!","Stronger than ever!","New record. Take a bow!"];
+var DONE_SVG='<svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="var(--accent)"/><path d="M22 18h20v8a10 10 0 0 1-20 0z" fill="var(--accent-ink)"/><path d="M22 21h-5a5 5 0 0 0 5 7M42 21h5a5 5 0 0 1-5 7" fill="none" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round"/><path d="M32 36v6M25 46h14" stroke="var(--accent-ink)" stroke-width="3.2" stroke-linecap="round"/></svg>';
+var DONE_LAST=null;
+function donePick(a){var i=Math.floor(Math.random()*a.length); if(a.length>1&&a[i]===DONE_LAST) i=(i+1)%a.length; DONE_LAST=a[i]; return a[i];}
+function showDone(rec,d,wins){
+  var el=document.getElementById("donepop"); if(!el) return;
+  var exN={}; rec.sets.forEach(function(x){exN[x.exercise_order]=1;});
+  var nEx=Object.keys(exN).length, vol=histVolume(rec), done=rec.sets.filter(function(x){return x.done;}).length;
+  var stats=[[fmtDur(rec.duration_sec)||"–","Time"],[String(rec.sets.length),"Sets"+(done&&done<rec.sets.length?" ("+done+" ticked)":"")],[String(nEx),"Exercise"+(nEx===1?"":"s")]];
+  if(vol>0) stats.push([fmtKg(vol),"Lifted"]);
+  var h='<div class="donecard" role="dialog" aria-modal="true" aria-labelledby="doneTitle"><div class="confetti" aria-hidden="true">'+Array.apply(null,Array(18)).map(function(_,i){return '<i style="--i:'+i+'"></i>';}).join("")+'</div>'+
+    DONE_SVG+'<h2 id="doneTitle">'+esc(donePick(wins.prs.length?DONE_PR_CHEERS:DONE_CHEERS))+'</h2>'+
+    '<p class="donesub">'+esc(d.title)+' · '+esc(hDate(rec.performed_at))+'</p>'+
+    '<div class="donestats">'+stats.map(function(x){return '<div><b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div>';}).join("")+'</div>';
+  if(wins.prs.length) h+='<div class="donewins"><h3>New PR'+(wins.prs.length>1?'s':'')+'</h3><ul>'+wins.prs.map(function(p){return '<li><span>'+esc(p.n)+'</span><b>'+fmtNum(p.now)+' kg</b><em>was '+fmtNum(p.was)+'</em></li>';}).join("")+'</ul></div>';
+  if(wins.up.length) h+='<div class="donewins up"><h3>Up on last time</h3><ul>'+wins.up.map(function(p){return '<li><span>'+esc(p.n)+'</span><b>+'+fmtNum(p.by)+' kg</b></li>';}).join("")+'</ul></div>';
+  h+='<div class="donebtns"><button class="ghost" id="doneHistory">See in History</button><button class="primary" id="doneClose">Done</button></div></div>';
+  el.innerHTML=h; el.hidden=false; document.body.style.overflow="hidden";
+  var b=document.getElementById("doneClose"); if(b) b.focus();
+}
+function closeDone(){var el=document.getElementById("donepop"); if(!el||el.hidden) return; el.hidden=true; el.innerHTML=""; document.body.style.overflow="";}
 function toast(m){var t=document.getElementById("toast");t.textContent=m;t.classList.add("on");clearTimeout(toast._t);toast._t=setTimeout(function(){t.classList.remove("on");},2600);}
 
 /* ---------- on-screen keyboard ----------
