@@ -10,6 +10,7 @@ Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-trac
 - Profile with measurements, injury notes per exercise, light/dark mode
 - Email + password accounts (Supabase); data syncs per user, newest save wins
 - Suggestions page (web version): testers send an idea or problem with an optional screenshot
+- Feedback page (admins only): every suggestion with sender, context and screenshot; set the status in the app
 
 ## Files
 | Path | What it is |
@@ -31,6 +32,7 @@ Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-trac
 - Project: `Workout tracker` (`zdllpjrkwcdmcuizxuum`, eu-west-3), free plan.
 - Tables: `profiles` (name, email, tier), `user_state` (the app's data as JSON) and `suggestions` (tester feedback). Row level security: each user can only read and write their own rows; tier and suggestion status can't be changed from the app.
 - Storage: private `suggestions` bucket for screenshots (images only, 5 MB max, one folder per user).
-- Reading suggestions: Table Editor → `suggestions` (set `status` to seen / planned / done / wont_do; testers see it update). Screenshots: Storage → `suggestions`, path in `screenshot_path`.
+- Admins: `profiles.is_admin`. Admins see Menu → Feedback in the app. Add one in the SQL editor: `update public.profiles set is_admin = true where email = '…';`
+- Reading suggestions without the app: Table Editor → `suggestions` (set `status` to seen / planned / done / wont_do; testers see it update). Screenshots: Storage → `suggestions`, path in `screenshot_path`.
 - The key in `app.html` is the **publishable** key, which is meant to be public. Never put a secret/service key in this repo.
 - Auth settings to check in the dashboard (Authentication): Site URL = `https://do-mict.github.io/workout-tracker/`, add it to Redirect URLs, and decide whether email confirmation is on.
