@@ -1,0 +1,15 @@
+{
+  "name": "Workout tracker",
+  "short_name": "Workouts",
+  "description": "Plan, log and track your gym workouts.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#12161B",
+  "theme_color": "#16202B",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
