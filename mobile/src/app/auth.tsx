@@ -57,8 +57,8 @@ export default function AuthScreen() {
     <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{ flex: 1, backgroundColor: c.bg }}>
       <ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={{ paddingTop: insets.top + 40, paddingHorizontal: 18, paddingBottom: 40, gap: 16 }}>
         <View>
-          <T v="title" style={{ fontSize: 44, lineHeight: 46 }}>Workout tracker</T>
-          <T muted>Plan it. Lift it. Watch it go up.</T>
+          <T v="title" style={{ fontSize: 44, lineHeight: 46 }}>Get Fit Daily</T>
+          <T muted>Great Form and Discipline</T>
         </View>
         <Card style={{ gap: 12 }}>
           <T v="h2">{mode === 'in' ? 'Sign in' : mode === 'up' ? 'Create account' : 'Reset password'}</T>

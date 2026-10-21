@@ -169,7 +169,7 @@ export default function ProfileScreen() {
           <Btn title="Save measurements" onPress={saveMeasurements} />
         </Card>
 
-        <T v="small" muted style={{ textAlign: 'center' }}>{`Workout tracker ${Constants.expoConfig?.version ?? ''}`}</T>
+        <T v="small" muted style={{ textAlign: 'center' }}>{`GFD · Get Fit Daily ${Constants.expoConfig?.version ?? ''}`}</T>
       </ScrollView>
     </KeyboardAvoidingView>
   );
