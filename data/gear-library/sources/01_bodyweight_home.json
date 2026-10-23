@@ -1,0 +1,3380 @@
+{
+ "slice": "bodyweight",
+ "items": [
+  {
+   "id": "calisthenics",
+   "name": "Calisthenics (bodyweight only)",
+   "aliases": [
+    "No equipment",
+    "Bodyweight training",
+    "Street workout"
+   ],
+   "category": "Bodyweight stations",
+   "subcategory": "No equipment",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": true,
+   "tier": 0,
+   "setting": "both",
+   "description": "Training with nothing but your own body weight and a patch of floor. Covers push-ups, squats, lunges, planks, jumps and skill work.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "Make moves harder with leverage, tempo, range and single-limb variations.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [
+    "Push-up",
+    "Bodyweight squat",
+    "Plank",
+    "Burpee",
+    "Pistol squat",
+    "Pike push-up"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Nothing to buy; a mat and a pull-up bar are the most useful first additions.",
+   "safety": "Progress gradually on high-skill moves like handstands and planches.",
+   "keywords": "no equipment street workout bodyweight"
+  },
+  {
+   "id": "pullupbar",
+   "name": "Pull-up bar",
+   "aliases": [
+    "Chin-up bar",
+    "Horizontal bar",
+    "High bar"
+   ],
+   "category": "Bodyweight stations",
+   "subcategory": "Pull-up bars",
+   "app_group": "Back",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A horizontal bar mounted overhead to hang from. The key tool for pull-ups, chin-ups, hanging core work and levers.",
+   "muscle_focus": [
+    "Lats",
+    "Biceps",
+    "Upper back",
+    "Forearms",
+    "Core"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Bar ~25–32 mm diameter, 90–120 cm wide",
+   "adjustability": "Fixed; some have multiple grip positions (wide, neutral, angled).",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 30,
+    "height_cm": 230
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "doorwaybar",
+    "rings",
+    "powertower",
+    "stallbars"
+   ],
+   "signature_exercises": [
+    "Pull-up",
+    "Chin-up",
+    "Hanging leg raise",
+    "Toes-to-bar",
+    "Front lever",
+    "Muscle-up"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Pick a bar that is rated well above your body weight and leaves room for your knees and head.",
+   "safety": "Check fixings and load rating before every session if the bar is not permanently mounted.",
+   "keywords": "chin up hang pull up bar"
+  },
+  {
+   "id": "rings",
+   "name": "Gymnastic rings",
+   "aliases": [
+    "Rings",
+    "Still rings",
+    "Olympic rings"
+   ],
+   "category": "Gymnastics",
+   "subcategory": "Rings",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "Two free-hanging rings on adjustable straps. They allow dips, rows, push-ups and muscle-ups with a natural, unstable path.",
+   "muscle_focus": [
+    "Chest",
+    "Lats",
+    "Shoulders",
+    "Triceps",
+    "Biceps",
+    "Core"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Wood or plastic rings, 28–32 mm grip, straps 4–5 m",
+   "adjustability": "Strap length adjusts for anything from feet-on-floor rows to full hangs.",
+   "footprint": {
+    "length_cm": 100,
+    "width_cm": 60,
+    "height_cm": 280
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "pullupbar"
+   ],
+   "substitutes": [
+    "trx",
+    "dipstation",
+    "pullupbar"
+   ],
+   "signature_exercises": [
+    "Ring dip",
+    "Ring row",
+    "Ring push-up",
+    "Ring muscle-up",
+    "Ring support hold",
+    "Skin the cat"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Wooden rings grip better with chalk; buy straps with numbered markings so both sides match.",
+   "safety": "Master the ring support hold before attempting dips or muscle-ups.",
+   "keywords": "rings gymnastics muscle up"
+  },
+  {
+   "id": "parallettes",
+   "name": "Parallettes",
+   "aliases": [
+    "P-bars",
+    "Mini parallel bars",
+    "Push-up bars"
+   ],
+   "category": "Bodyweight stations",
+   "subcategory": "Parallettes",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "Pairs of short, low parallel bars for push-ups, L-sits, planche and handstand work. Come in low (10–15 cm) and high (30–40 cm) versions.",
+   "muscle_focus": [
+    "Chest",
+    "Shoulders",
+    "Triceps",
+    "Core",
+    "Wrists"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Low ~10–15 cm, high ~30–40 cm, length 30–60 cm",
+   "adjustability": "Fixed; some have height-adjustable legs.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 60,
+    "height_cm": 30
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "pushuphandles",
+    "dipbars",
+    "calisthenics"
+   ],
+   "signature_exercises": [
+    "Parallette push-up",
+    "L-sit",
+    "Tuck planche",
+    "V-sit",
+    "Handstand on parallettes"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Low parallettes suit planche and push-ups; tall ones allow dips and deeper L-sit and press work.",
+   "safety": "Make sure the feet are wide and non-slip so the bars cannot tip.",
+   "keywords": "push-up bars p-bars l-sit planche"
+  },
+  {
+   "id": "dipstation",
+   "name": "Dip station / parallel bars",
+   "aliases": [
+    "Dip stand",
+    "Dip bars",
+    "Parallel bars"
+   ],
+   "category": "Bodyweight stations",
+   "subcategory": "Dip stations",
+   "app_group": "Arms",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "A standing frame with two parallel handles at about hip height or higher for dips, support holds and leg raises.",
+   "muscle_focus": [
+    "Chest",
+    "Triceps",
+    "Front delts",
+    "Core"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Handles ~50–60 cm apart, user weight ratings 120–180 kg",
+   "adjustability": "Many have adjustable height and width.",
+   "footprint": {
+    "length_cm": 100,
+    "width_cm": 70,
+    "height_cm": 100
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "dipbars",
+    "pbars",
+    "powertower",
+    "rings",
+    "chair"
+   ],
+   "signature_exercises": [
+    "Chest dip",
+    "Triceps dip",
+    "Dip support hold",
+    "L-sit",
+    "Korean dip"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Heavier, wider bases wobble less; tapered handles let you fit different shoulder widths.",
+   "safety": "Do not let the shoulders roll forward at the bottom of a dip.",
+   "keywords": "dips parallel bars dip stand"
+  },
+  {
+   "id": "bands",
+   "name": "Resistance bands",
+   "aliases": [
+    "Exercise bands",
+    "Bands"
+   ],
+   "category": "Bands & suspension",
+   "subcategory": "Resistance bands (general)",
+   "app_group": "Full body",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "Elastic bands for adding resistance or assistance to almost any movement. The general family includes loop, tube, mini and therapy bands.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "Usually sold in colour-coded sets from ~2 kg to 80+ kg of tension",
+   "adjustability": "Change resistance by switching bands, doubling up or moving your stance.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "loopband",
+    "tubeband",
+    "miniband",
+    "therapyband"
+   ],
+   "signature_exercises": [
+    "Band row",
+    "Band pull-apart",
+    "Band-assisted pull-up",
+    "Band squat",
+    "Band face pull"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A set of 4–5 loop bands plus a door anchor covers most home needs.",
+   "safety": "Check bands for nicks or tears and replace them before they snap.",
+   "keywords": "loop band tube elastic resistance"
+  },
+  {
+   "id": "trx",
+   "name": "Suspension trainer (TRX)",
+   "aliases": [
+    "TRX",
+    "Suspension straps",
+    "Jungle gym"
+   ],
+   "category": "Bands & suspension",
+   "subcategory": "Suspension trainers",
+   "app_group": "Full body",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "Two adjustable nylon straps with handles and foot cradles, anchored overhead. You change difficulty by changing your body angle.",
+   "muscle_focus": [
+    "Full body",
+    "Core",
+    "Back",
+    "Chest"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Straps adjust ~1.3–2.0 m, anchor rated 150+ kg",
+   "adjustability": "Single-point anchor; strap length adjusts quickly.",
+   "footprint": {
+    "length_cm": 250,
+    "width_cm": 80,
+    "height_cm": 230
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "dooranchor"
+   ],
+   "substitutes": [
+    "rings"
+   ],
+   "signature_exercises": [
+    "Suspension row",
+    "Suspension chest press",
+    "Suspension pike",
+    "Suspension hamstring curl",
+    "Suspension lunge"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Look for a door anchor and extension strap in the box; cheap copies often have weak buckles.",
+   "safety": "Always test the anchor with a bodyweight pull before leaning back.",
+   "keywords": "straps trx suspension"
+  },
+  {
+   "id": "weightvest",
+   "name": "Weighted vest",
+   "aliases": [
+    "Weight vest",
+    "Plate carrier",
+    "Training vest"
+   ],
+   "category": "Wearable load",
+   "subcategory": "Weighted vests",
+   "app_group": "Full body",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A vest holding sand, iron bars or plates that adds load to bodyweight moves, walks and runs.",
+   "muscle_focus": [
+    "Full body",
+    "Legs",
+    "Core"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "Fixed 5–20 kg or adjustable vests up to ~40 kg",
+   "adjustability": "Many vests take removable weight blocks or plates.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "backpack",
+    "dipbelt"
+   ],
+   "signature_exercises": [
+    "Weighted vest push-up",
+    "Weighted pull-up",
+    "Rucking",
+    "Weighted vest walking lunge",
+    "Weighted step-up"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A snug, adjustable fit matters more than maximum weight, especially for running.",
+   "safety": "Start light; extra load raises stress on knees and the lower back.",
+   "keywords": "weight vest plate carrier"
+  },
+  {
+   "id": "abwheel",
+   "name": "Ab roller wheel",
+   "aliases": [
+    "Ab wheel",
+    "Ab roller",
+    "Ab carver"
+   ],
+   "category": "Core tools",
+   "subcategory": "Ab wheels",
+   "app_group": "Core",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A wheel with handles you roll out in front of you while bracing the trunk. A very effective anti-extension core tool.",
+   "muscle_focus": [
+    "Abs",
+    "Lats",
+    "Shoulders"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Single or double wheel; spring-assisted 'carver' versions exist",
+   "adjustability": "Fixed.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "kneepad"
+   ],
+   "substitutes": [
+    "sliders",
+    "towel",
+    "stabball"
+   ],
+   "signature_exercises": [
+    "Ab wheel rollout",
+    "Standing ab wheel rollout",
+    "Kneeling rollout"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A wide or double wheel is more stable for beginners; add a knee pad.",
+   "safety": "Stop the rollout before your lower back sags.",
+   "keywords": "ab wheel roller rollout"
+  },
+  {
+   "id": "abstraps",
+   "name": "Hanging ab straps",
+   "aliases": [
+    "Ab slings",
+    "Hanging ab slings"
+   ],
+   "category": "Core tools",
+   "subcategory": "Hanging core",
+   "app_group": "Core",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "Padded loops that hang from a pull-up bar so you can rest your upper arms in them and do knee and leg raises without grip limiting you.",
+   "muscle_focus": [
+    "Abs",
+    "Hip flexors",
+    "Obliques"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "Fixed; hook onto most bars.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "pullupbar"
+   ],
+   "substitutes": [
+    "captain",
+    "pullupbar"
+   ],
+   "signature_exercises": [
+    "Hanging knee raise",
+    "Hanging leg raise",
+    "Oblique knee raise"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Look for wide padding and metal hooks rather than plastic.",
+   "safety": "Lower your legs under control to avoid swinging.",
+   "keywords": "ab slings hanging straps knee raise"
+  },
+  {
+   "id": "openspace",
+   "name": "Open floor space",
+   "aliases": [
+    "Floor",
+    "Open space",
+    "Living room floor",
+    "Garage floor"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Floor & space",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "A clear patch of floor or ground, the base for bodyweight work, throws, shuttles and agility drills.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Roughly 2×2 m for floor work; 10–20 m of straight run for shuttles and sprints",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 200,
+    "height_cm": 250
+   },
+   "space": "M",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "calisthenics"
+   ],
+   "signature_exercises": [
+    "Shuttle run",
+    "Pro agility drill",
+    "Overhead medicine ball throw",
+    "Dot drill",
+    "Burpee"
+   ],
+   "linked_exercise_ids": [
+    "proagility",
+    "shuttlerun",
+    "mbbackthrow",
+    "mbscoop",
+    "dotdrill",
+    "boxdrill",
+    "ldrill",
+    "tdrill",
+    "zigzag",
+    "broadjump",
+    "contbroad"
+   ],
+   "buying_tips": "Clear trip hazards and check the ceiling height before jumping or throwing.",
+   "safety": "Use a non-slip surface for jumps and sprints.",
+   "keywords": "floor space room garage open"
+  },
+  {
+   "id": "wall",
+   "name": "Wall",
+   "aliases": [
+    "Sturdy wall",
+    "Wall space"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Household stand-ins",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "Any solid, clear wall. Used for support, handstands, wall sits, mobility drills and medicine-ball throws.",
+   "muscle_focus": [
+    "Shoulders",
+    "Quads",
+    "Core"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Clear wall ~1.5 m wide and ceiling-high for handstands",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "doorframe"
+   ],
+   "signature_exercises": [
+    "Wall sit",
+    "Wall handstand hold",
+    "Wall walk",
+    "Wall push-up",
+    "Wall angel",
+    "Knee-to-wall ankle mobilization"
+   ],
+   "linked_exercise_ids": [
+    "wallpush",
+    "sissysquat",
+    "tibraise",
+    "wallsit",
+    "hspu",
+    "wallhs",
+    "wallwalk",
+    "tigerbend",
+    "mbchest",
+    "wallball",
+    "mbshotput",
+    "mbsoccer",
+    "mbrotthrow",
+    "inclineplyopush",
+    "wallsprintdrill",
+    "legswing",
+    "hipcars",
+    "kneewall",
+    "legswinglat",
+    "wallangel",
+    "wallslide",
+    "soleus",
+    "couch",
+    "standquad",
+    "calfwall",
+    "breath9090",
+    "legsupwall"
+   ],
+   "buying_tips": "Use a solid masonry wall for throws; plasterboard can crack.",
+   "safety": "Keep the floor in front clear and non-slip for handstand work.",
+   "keywords": "wall handstand wall sit support"
+  },
+  {
+   "id": "doorframe",
+   "name": "Door frame",
+   "aliases": [
+    "Doorway",
+    "Doorjamb"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Household stand-ins",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "home",
+   "description": "A solid door frame used for rows, chest and lat stretches, and as a support to hold.",
+   "muscle_focus": [
+    "Upper back",
+    "Chest",
+    "Lats"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "wall",
+    "trx"
+   ],
+   "signature_exercises": [
+    "Doorway row",
+    "Doorway chest stretch",
+    "Doorframe lat stretch",
+    "PNF chest stretch"
+   ],
+   "linked_exercise_ids": [
+    "doorrow",
+    "doorlat",
+    "doorway",
+    "pnfchest"
+   ],
+   "buying_tips": "Use a frame set in a solid wall, not a flimsy interior trim.",
+   "safety": "Grip the frame itself, not the door, and keep the door wedged open.",
+   "keywords": "door frame doorway row stretch"
+  },
+  {
+   "id": "table",
+   "name": "Sturdy table",
+   "aliases": [
+    "Kitchen table",
+    "Desk",
+    "Counter"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Household stand-ins",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "home",
+   "description": "A heavy, stable table you can lie under and pull up to for inverted rows, or lean on for incline push-ups.",
+   "muscle_focus": [
+    "Upper back",
+    "Biceps",
+    "Chest"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Table height ~72–76 cm",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 90,
+    "height_cm": 75
+   },
+   "space": "M",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "doorframe",
+    "trx",
+    "rings"
+   ],
+   "signature_exercises": [
+    "Table row",
+    "Incline push-up",
+    "Bench-style dips off the edge"
+   ],
+   "linked_exercise_ids": [
+    "tablerow",
+    "inclinepush"
+   ],
+   "buying_tips": "Solid wood or metal tables with legs at the corners are safest.",
+   "safety": "Never row from a table that could tip; test it with a partial pull first.",
+   "keywords": "table row kitchen desk inverted row"
+  },
+  {
+   "id": "chair",
+   "name": "Chair",
+   "aliases": [
+    "Sturdy chair",
+    "Dining chair",
+    "Stool"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Household stand-ins",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "home",
+   "description": "A stable, non-rolling chair used as a bench for dips, step-ups, split squats, incline and decline push-ups and stretches.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Triceps",
+    "Chest"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Seat height ~45 cm",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 50,
+    "width_cm": 50,
+    "height_cm": 90
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "flatbench",
+    "plyobox",
+    "step",
+    "sofa",
+    "parkbench"
+   ],
+   "signature_exercises": [
+    "Bench dip",
+    "Bulgarian split squat",
+    "Decline push-up",
+    "Box pistol squat",
+    "Copenhagen plank",
+    "Elevated pike push-up"
+   ],
+   "linked_exercise_ids": [
+    "declinepush",
+    "inclinepush",
+    "benchdip",
+    "bss",
+    "elevpikepush",
+    "pistolbox",
+    "negpullup",
+    "copenhagen",
+    "plantar",
+    "standham",
+    "breath9090",
+    "sciatic"
+   ],
+   "buying_tips": "Pick a four-legged chair without wheels; brace it against a wall for extra stability.",
+   "safety": "Never use a swivel or wheeled office chair.",
+   "keywords": "chair stool bench seat"
+  },
+  {
+   "id": "sofa",
+   "name": "Sofa",
+   "aliases": [
+    "Couch",
+    "Settee"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Household stand-ins",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "home",
+   "description": "A sofa works as a hip-thrust bench, a heel anchor for Nordic curls and sit-ups, and a prop for the couch stretch.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings",
+    "Hip flexors"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Seat height ~40–45 cm",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 90,
+    "height_cm": 85
+   },
+   "space": "M",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "flatbench",
+    "chair",
+    "nordicstrap"
+   ],
+   "signature_exercises": [
+    "Bodyweight hip thrust",
+    "Nordic hamstring curl",
+    "Couch stretch",
+    "Feet-anchored sit-up"
+   ],
+   "linked_exercise_ids": [
+    "bwhipthrust",
+    "slhipthrust",
+    "nordic",
+    "floorsitup",
+    "couch"
+   ],
+   "buying_tips": "Heavier sofas make better anchors.",
+   "safety": "Pad the knees for Nordics and check the sofa cannot slide.",
+   "keywords": "couch sofa anchor hip thrust"
+  },
+  {
+   "id": "housestairs",
+   "name": "Stairs at home",
+   "aliases": [
+    "Staircase",
+    "Flight of stairs",
+    "Steps"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Household stand-ins",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "A flight of household stairs for stair runs and climbs, plus a single step for calf raises and step-ups.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Calves"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Step height ~17–20 cm",
+   "adjustability": "",
+   "footprint": null,
+   "space": "M",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "step",
+    "stairs",
+    "stadiumsteps"
+   ],
+   "signature_exercises": [
+    "Stair runs",
+    "Calf raise off a step",
+    "Step-up",
+    "Eccentric heel drop"
+   ],
+   "linked_exercise_ids": [
+    "stairrun",
+    "bwcalf",
+    "slcalf",
+    "eccheel",
+    "stepup"
+   ],
+   "buying_tips": "Use stairs with a handrail and good lighting.",
+   "safety": "Hold the rail for calf work and slow down on the way down.",
+   "keywords": "stairs steps staircase climb"
+  },
+  {
+   "id": "towel",
+   "name": "Towel",
+   "aliases": [
+    "Bath towel",
+    "Hand towel"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Household stand-ins",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "A towel doubles as a slider on smooth floors, a grip trainer on a pull-up bar, and a stretching strap.",
+   "muscle_focus": [
+    "Grip",
+    "Hamstrings",
+    "Core"
+   ],
+   "loading": "Friction",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "sliders",
+    "stretchstrap"
+   ],
+   "signature_exercises": [
+    "Towel pull-up",
+    "Sliding leg curl",
+    "Body saw",
+    "Towel internal rotation stretch",
+    "Strap hamstring stretch"
+   ],
+   "linked_exercise_ids": [
+    "towelpull",
+    "slidecurl",
+    "bodysaw",
+    "towelir",
+    "pnfham",
+    "hamstretch",
+    "strapquad",
+    "onearmchin"
+   ],
+   "buying_tips": "Thick cotton towels grip best on bars; thin ones slide best on floors.",
+   "safety": "Check the towel and bar for wear before hanging from it.",
+   "keywords": "towel slider grip strap"
+  },
+  {
+   "id": "backpack",
+   "name": "Loaded backpack",
+   "aliases": [
+    "Rucksack",
+    "Ruck",
+    "Weighted backpack"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Household stand-ins",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "A backpack filled with books, water bottles or plates. Used for rucking and as a stand-in weight for squats, push-ups and lunges.",
+   "muscle_focus": [
+    "Legs",
+    "Upper back",
+    "Core"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "Usually loaded with 5–25 kg",
+   "adjustability": "Change the load by adding or removing items.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "weightvest",
+    "sandbag"
+   ],
+   "signature_exercises": [
+    "Rucking",
+    "Backpack squat",
+    "Backpack push-up",
+    "Backpack lunge"
+   ],
+   "linked_exercise_ids": [
+    "ruck"
+   ],
+   "buying_tips": "A pack with a hip belt and padded straps carries heavy loads far better.",
+   "safety": "Pack the weight high and close to your back.",
+   "keywords": "backpack rucksack ruck weight"
+  },
+  {
+   "id": "waterjugs",
+   "name": "Water jugs & household weights",
+   "aliases": [
+    "Water bottles",
+    "Milk jugs",
+    "Paint cans",
+    "Bags of rice"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Household stand-ins",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "home",
+   "description": "Filled jugs, bottles, paint cans or shopping bags used as improvised dumbbells and kettlebells for light work.",
+   "muscle_focus": [
+    "Shoulders",
+    "Arms",
+    "Legs"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "~1–10 kg each (a 4 L jug of water is ~4 kg)",
+   "adjustability": "Fill to the weight you need.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "dumbbells",
+    "kettlebells",
+    "sandbag"
+   ],
+   "signature_exercises": [
+    "Jug lateral raise",
+    "Jug curl",
+    "Goblet squat with a jug",
+    "Jug farmer's carry"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Jugs with solid handles are easiest to hold; sand weighs more than water for the same size.",
+   "safety": "Make sure lids are tight and handles will not snap.",
+   "keywords": "water jug bottle milk jug household weight"
+  },
+  {
+   "id": "dowel",
+   "name": "Dowel / broomstick",
+   "aliases": [
+    "PVC pipe",
+    "Broomstick",
+    "Mobility stick",
+    "Wooden dowel"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Household stand-ins",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "A light stick used for shoulder mobility, technique practice for barbell lifts and hip-hinge drills.",
+   "muscle_focus": [
+    "Shoulders",
+    "Thoracic spine",
+    "Hamstrings"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "~1.2–1.8 m long, 2–3 cm thick",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "bands",
+    "towel"
+   ],
+   "signature_exercises": [
+    "Shoulder dislocate",
+    "Hip hinge drill",
+    "Overhead squat practice",
+    "Bench lat stretch"
+   ],
+   "linked_exercise_ids": [
+    "banddisloc",
+    "benchlat"
+   ],
+   "buying_tips": "A 1.5 m PVC pipe or broom handle is plenty; mark grip widths with tape.",
+   "safety": "",
+   "keywords": "dowel pvc broomstick stick mobility"
+  },
+  {
+   "id": "parkbench",
+   "name": "Park bench",
+   "aliases": [
+    "Outdoor bench",
+    "Picnic bench"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Outdoor",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "A solid outdoor bench for dips, step-ups, split squats, incline and decline push-ups and hip thrusts.",
+   "muscle_focus": [
+    "Chest",
+    "Triceps",
+    "Quads",
+    "Glutes"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Seat height ~45 cm",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 180,
+    "width_cm": 60,
+    "height_cm": 45
+   },
+   "space": "M",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "chair",
+    "flatbench",
+    "plyobox"
+   ],
+   "signature_exercises": [
+    "Bench dip",
+    "Step-up",
+    "Bulgarian split squat",
+    "Incline push-up",
+    "Decline push-up"
+   ],
+   "linked_exercise_ids": [
+    "benchdip",
+    "stepup",
+    "bss",
+    "inclinepush",
+    "declinepush",
+    "bwhipthrust"
+   ],
+   "buying_tips": "Choose benches bolted to the ground.",
+   "safety": "Watch for wet or slippery surfaces.",
+   "keywords": "park bench outdoor"
+  },
+  {
+   "id": "playground",
+   "name": "Playground / monkey bars",
+   "aliases": [
+    "Jungle gym",
+    "Climbing frame"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Outdoor",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "Public playground frames with overhead bars for hangs, pull-ups, monkey-bar traverses and knee raises.",
+   "muscle_focus": [
+    "Lats",
+    "Grip",
+    "Core"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "L",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "pullupbar",
+    "calispark",
+    "monkeybars"
+   ],
+   "signature_exercises": [
+    "Pull-up",
+    "Dead hang",
+    "Monkey-bar traverse",
+    "Hanging knee raise"
+   ],
+   "linked_exercise_ids": [
+    "pullup",
+    "chinup",
+    "deadhang",
+    "flexhang",
+    "hangknee",
+    "negpullup"
+   ],
+   "buying_tips": "Go outside busy hours and respect equipment age limits.",
+   "safety": "Check the bars are dry and solid before swinging.",
+   "keywords": "playground monkey bars jungle gym outdoor"
+  },
+  {
+   "id": "calispark",
+   "name": "Outdoor calisthenics park",
+   "aliases": [
+    "Street workout park",
+    "Outdoor gym",
+    "Fitness trail"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Outdoor",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "Public outdoor stations with pull-up bars at several heights, dip bars, parallel bars, monkey bars and sometimes rings or sit-up benches.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "Bars at several heights.",
+   "footprint": null,
+   "space": "XL",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "pullupbar",
+    "dipstation",
+    "powertower",
+    "playground"
+   ],
+   "signature_exercises": [
+    "Pull-up",
+    "Dip",
+    "Muscle-up",
+    "Australian row",
+    "L-sit",
+    "Hanging leg raise"
+   ],
+   "linked_exercise_ids": [
+    "pullup",
+    "chinup",
+    "widepullup",
+    "neutralpull",
+    "negpullup",
+    "scappull",
+    "deadhang",
+    "flexhang",
+    "hangknee",
+    "hangleg",
+    "archerpull",
+    "commandopull",
+    "towelpull",
+    "bandpullup",
+    "typewriterpull",
+    "onearmchin",
+    "ctbpull",
+    "lsitpull",
+    "kippullup",
+    "muscleup",
+    "toestobar",
+    "hangwiper",
+    "frontlever",
+    "tuckfl",
+    "advtuckfl",
+    "straddlefl",
+    "backlever",
+    "tuckbl",
+    "germanhang",
+    "skinthecat",
+    "chestdips",
+    "tridip",
+    "dipsupport",
+    "lsit",
+    "straightbardip",
+    "koreandip",
+    "humanflag"
+   ],
+   "buying_tips": "Many cities publish maps of free outdoor gyms.",
+   "safety": "Check bar fixings and wet weather grip before dynamic moves.",
+   "keywords": "street workout park outdoor gym bars"
+  },
+  {
+   "id": "hill",
+   "name": "Hill",
+   "aliases": [
+    "Slope",
+    "Incline",
+    "Hill route"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Outdoor",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "A slope of roughly 5–15% grade for hill sprints, hill repeats and incline walks.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings",
+    "Calves",
+    "Heart and lungs"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Ideal sprint hill: 30–60 m at 5–10% grade",
+   "adjustability": "",
+   "footprint": null,
+   "space": "XL",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "treadmill",
+    "sled",
+    "stadiumsteps"
+   ],
+   "signature_exercises": [
+    "Hill sprints",
+    "Hill repeats",
+    "Incline walk",
+    "Hill bounding"
+   ],
+   "linked_exercise_ids": [
+    "hillsprint",
+    "hike"
+   ],
+   "buying_tips": "",
+   "safety": "Walk back down to recover; downhill running is hard on the knees.",
+   "keywords": "hill sprint slope incline outdoor"
+  },
+  {
+   "id": "track",
+   "name": "Running track",
+   "aliases": [
+    "Athletics track",
+    "400 m track",
+    "Running path"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Outdoor",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "A measured track or flat path for intervals, sprints and tempo runs.",
+   "muscle_focus": [
+    "Legs",
+    "Heart and lungs"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Standard track 400 m per lap",
+   "adjustability": "",
+   "footprint": null,
+   "space": "XL",
+   "price_band": "$",
+   "requires": [
+    "runshoes"
+   ],
+   "substitutes": [
+    "treadmill",
+    "curvedtread"
+   ],
+   "signature_exercises": [
+    "400 m repeats",
+    "Tempo run",
+    "Flying sprint",
+    "Acceleration sprint"
+   ],
+   "linked_exercise_ids": [
+    "run400",
+    "sprint",
+    "temporun",
+    "flyingsprint",
+    "accelsprint",
+    "fallingstart",
+    "backpedalsprint",
+    "fartlek",
+    "run",
+    "jog",
+    "runwalk",
+    "bounds",
+    "askip",
+    "bskip",
+    "straightlegbound"
+   ],
+   "buying_tips": "Check opening times for school or club tracks.",
+   "safety": "Run counterclockwise and keep the inner lanes free for faster runners.",
+   "keywords": "track running athletics 400m intervals"
+  },
+  {
+   "id": "stadiumsteps",
+   "name": "Stadium steps",
+   "aliases": [
+    "Bleachers",
+    "Public stairs",
+    "Outdoor stairs"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Outdoor",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "Long outdoor flights of steps or stadium stands for stair runs, hops and conditioning.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Calves",
+    "Heart and lungs"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "XL",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "stairs",
+    "housestairs",
+    "hill"
+   ],
+   "signature_exercises": [
+    "Stair runs",
+    "Stair bounds",
+    "Single-leg stair hops"
+   ],
+   "linked_exercise_ids": [
+    "stairrun"
+   ],
+   "buying_tips": "",
+   "safety": "Take care on the way down and avoid wet steps.",
+   "keywords": "stadium steps bleachers stairs outdoor"
+  },
+  {
+   "id": "pool",
+   "name": "Swimming pool",
+   "aliases": [
+    "Pool",
+    "Lap pool"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Water",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A lap pool for swimming strokes, water running and low-impact rehab work.",
+   "muscle_focus": [
+    "Full body",
+    "Heart and lungs",
+    "Shoulders"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Lanes typically 25 m or 50 m",
+   "adjustability": "",
+   "footprint": null,
+   "space": "XL",
+   "price_band": "$$",
+   "requires": [
+    "goggles"
+   ],
+   "substitutes": [
+    "openwater"
+   ],
+   "signature_exercises": [
+    "Freestyle",
+    "Backstroke",
+    "Breaststroke",
+    "Butterfly",
+    "Aqua jogging"
+   ],
+   "linked_exercise_ids": [
+    "swimfree",
+    "swimback",
+    "swimbreast",
+    "swimfly"
+   ],
+   "buying_tips": "Check lane-swim times; a pool membership is often bundled with a gym.",
+   "safety": "Never swim alone if you are not a confident swimmer.",
+   "keywords": "pool swimming laps swim"
+  },
+  {
+   "id": "openwater",
+   "name": "Open water",
+   "aliases": [
+    "Lake",
+    "Sea",
+    "River",
+    "Ocean"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Water",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "Lakes, the sea or rivers for open-water swimming.",
+   "muscle_focus": [
+    "Full body",
+    "Heart and lungs"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "XL",
+   "price_band": "$",
+   "requires": [
+    "goggles"
+   ],
+   "substitutes": [
+    "pool"
+   ],
+   "signature_exercises": [
+    "Open-water freestyle",
+    "Open-water breaststroke"
+   ],
+   "linked_exercise_ids": [
+    "swimfree",
+    "swimbreast"
+   ],
+   "buying_tips": "A wetsuit and bright tow float make open water warmer and safer.",
+   "safety": "Swim with others in supervised areas and know the conditions.",
+   "keywords": "open water lake sea ocean swim wetsuit"
+  },
+  {
+   "id": "goggles",
+   "name": "Swim goggles & cap",
+   "aliases": [
+    "Goggles",
+    "Swim cap"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Water",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Goggles and a swim cap: the basic kit for lap swimming.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "Adjustable strap and nose bridge.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [
+    "Freestyle",
+    "Backstroke",
+    "Breaststroke"
+   ],
+   "linked_exercise_ids": [
+    "swimfree",
+    "swimback",
+    "swimbreast",
+    "swimfly"
+   ],
+   "buying_tips": "Try a few shapes; the best goggle is the one that seals on your face.",
+   "safety": "",
+   "keywords": "goggles swim cap"
+  },
+  {
+   "id": "swimkit",
+   "name": "Swim training aids",
+   "aliases": [
+    "Kickboard",
+    "Pull buoy",
+    "Fins",
+    "Hand paddles"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Water",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Kickboards, pull buoys, fins and paddles that isolate legs or arms or add resistance in the pool.",
+   "muscle_focus": [
+    "Shoulders",
+    "Lats",
+    "Legs"
+   ],
+   "loading": "Friction",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "pool"
+   ],
+   "substitutes": [],
+   "signature_exercises": [
+    "Kickboard kick sets",
+    "Pull buoy freestyle",
+    "Paddle sets",
+    "Fin drills"
+   ],
+   "linked_exercise_ids": [
+    "swimfree"
+   ],
+   "buying_tips": "Start with small paddles to protect the shoulders.",
+   "safety": "Build up paddle use gradually.",
+   "keywords": "kickboard pull buoy fins paddles swim"
+  },
+  {
+   "id": "bicycle",
+   "name": "Bicycle",
+   "aliases": [
+    "Road bike",
+    "Mountain bike",
+    "Commuter bike",
+    "Gravel bike"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Outdoor",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "An outdoor bike for rides, commuting and interval work. Pair with a helmet.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Heart and lungs"
+   ],
+   "loading": "Friction",
+   "weight_options": "Road, gravel, mountain, hybrid or e-bike",
+   "adjustability": "Saddle and bar height adjust to fit.",
+   "footprint": {
+    "length_cm": 180,
+    "width_cm": 60,
+    "height_cm": 110
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "bike",
+    "spinbike"
+   ],
+   "signature_exercises": [
+    "Outdoor cycling",
+    "Hill climbs",
+    "Commute ride",
+    "Cycling intervals"
+   ],
+   "linked_exercise_ids": [
+    "cycle"
+   ],
+   "buying_tips": "A proper fit matters more than the price tag; a hybrid suits most fitness riders.",
+   "safety": "Always wear a helmet and use lights in low light.",
+   "keywords": "bicycle bike cycling road mountain helmet"
+  },
+  {
+   "id": "runshoes",
+   "name": "Running shoes",
+   "aliases": [
+    "Trainers",
+    "Sneakers"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Outdoor",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Cushioned running shoes for road, treadmill and track running.",
+   "muscle_focus": [
+    "Legs"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [
+    "Running",
+    "Jogging",
+    "Tempo run",
+    "Sprint intervals"
+   ],
+   "linked_exercise_ids": [
+    "run",
+    "jog",
+    "runwalk",
+    "temporun",
+    "fartlek",
+    "run400",
+    "sprint",
+    "walk"
+   ],
+   "buying_tips": "Get fitted at a running shop and replace shoes every ~500–800 km.",
+   "safety": "",
+   "keywords": "running shoes trainers sneakers"
+  },
+  {
+   "id": "trailshoes",
+   "name": "Trail & hiking kit",
+   "aliases": [
+    "Hiking boots",
+    "Trail shoes",
+    "Trekking poles"
+   ],
+   "category": "Household & outdoor",
+   "subcategory": "Outdoor",
+   "app_group": "Outdoor & everyday",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Grippy trail shoes or hiking boots, often with trekking poles, for trail running and hiking.",
+   "muscle_focus": [
+    "Legs",
+    "Heart and lungs"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "Poles adjust in length.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "runshoes"
+   ],
+   "signature_exercises": [
+    "Hiking",
+    "Trail running",
+    "Rucking"
+   ],
+   "linked_exercise_ids": [
+    "hike",
+    "trailrun",
+    "ruck"
+   ],
+   "buying_tips": "Fit boots with the socks you will hike in; break them in before long walks.",
+   "safety": "Tell someone your route on remote trails.",
+   "keywords": "hiking boots trail shoes trekking poles hike"
+  },
+  {
+   "id": "doorwaybar",
+   "name": "Doorway pull-up bar",
+   "aliases": [
+    "Door frame pull-up bar",
+    "Over-door bar",
+    "Telescopic bar"
+   ],
+   "category": "Bodyweight stations",
+   "subcategory": "Pull-up bars",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A bar that hooks over or wedges inside a door frame with no drilling. Good for strict pull-ups, chin-ups and hangs.",
+   "muscle_focus": [
+    "Lats",
+    "Biceps",
+    "Grip",
+    "Core"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Fits frames ~60–90 cm wide; rated ~100–150 kg",
+   "adjustability": "Telescopic or leverage-style; removable.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "doorframe"
+   ],
+   "substitutes": [
+    "pullupbar",
+    "wallbar",
+    "rings"
+   ],
+   "signature_exercises": [
+    "Pull-up",
+    "Chin-up",
+    "Dead hang",
+    "Hanging knee raise",
+    "Negative pull-up"
+   ],
+   "linked_exercise_ids": [
+    "pullup",
+    "chinup",
+    "widepullup",
+    "neutralpull",
+    "negpullup",
+    "scappull",
+    "deadhang",
+    "flexhang",
+    "hangknee",
+    "hangleg",
+    "archerpull",
+    "commandopull",
+    "towelpull",
+    "bandpullup",
+    "typewriterpull",
+    "onearmchin",
+    "ctbpull",
+    "lsitpull"
+   ],
+   "buying_tips": "Measure your door frame and moulding depth first; leverage-style bars are sturdier than pure pressure ones.",
+   "safety": "No kipping or muscle-ups on doorway bars; they can pop out.",
+   "keywords": "doorway pull up bar door frame chin up"
+  },
+  {
+   "id": "wallbar",
+   "name": "Wall / ceiling-mounted pull-up bar",
+   "aliases": [
+    "Wall-mounted bar",
+    "Ceiling bar",
+    "Joist-mounted bar"
+   ],
+   "category": "Bodyweight stations",
+   "subcategory": "Pull-up bars",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A bar bolted into wall studs, masonry or ceiling joists. Rigid enough for kipping, muscle-ups and lever work.",
+   "muscle_focus": [
+    "Lats",
+    "Biceps",
+    "Core",
+    "Grip"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Rated ~150–300 kg; stand-off 50–80 cm from the wall",
+   "adjustability": "Fixed once installed.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 80,
+    "height_cm": 30
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "pullupbar",
+    "powertower",
+    "doorwaybar"
+   ],
+   "signature_exercises": [
+    "Pull-up",
+    "Muscle-up",
+    "Toes-to-bar",
+    "Kipping pull-up",
+    "Front lever"
+   ],
+   "linked_exercise_ids": [
+    "pullup",
+    "chinup",
+    "widepullup",
+    "neutralpull",
+    "negpullup",
+    "scappull",
+    "deadhang",
+    "flexhang",
+    "hangknee",
+    "hangleg",
+    "archerpull",
+    "commandopull",
+    "towelpull",
+    "bandpullup",
+    "typewriterpull",
+    "onearmchin",
+    "ctbpull",
+    "lsitpull",
+    "kippullup",
+    "muscleup",
+    "toestobar",
+    "hangwiper",
+    "frontlever",
+    "tuckfl",
+    "advtuckfl",
+    "straddlefl",
+    "backlever",
+    "tuckbl",
+    "germanhang",
+    "skinthecat"
+   ],
+   "buying_tips": "Install into solid masonry or two joists, and leave at least 60 cm overhead clearance.",
+   "safety": "Check bolts regularly and never install into plasterboard alone.",
+   "keywords": "wall mounted ceiling pull up bar"
+  },
+  {
+   "id": "powertower",
+   "name": "Power tower",
+   "aliases": [
+    "Pull-up and dip station",
+    "Vertical knee raise station",
+    "VKR tower"
+   ],
+   "category": "Bodyweight stations",
+   "subcategory": "Combination stations",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "home",
+   "description": "A free-standing tower combining a pull-up bar, dip handles, a back-padded knee-raise station and often push-up handles.",
+   "muscle_focus": [
+    "Lats",
+    "Chest",
+    "Triceps",
+    "Abs"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Height ~200–230 cm, rated ~120–180 kg",
+   "adjustability": "Many have height-adjustable bars.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 100,
+    "height_cm": 220
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "pullupbar",
+    "dipstation",
+    "captain"
+   ],
+   "signature_exercises": [
+    "Pull-up",
+    "Dip",
+    "Captain's chair knee raise",
+    "Hanging leg raise",
+    "Push-up"
+   ],
+   "linked_exercise_ids": [
+    "pullup",
+    "chinup",
+    "widepullup",
+    "neutralpull",
+    "negpullup",
+    "deadhang",
+    "hangknee",
+    "hangleg",
+    "chestdips",
+    "tridip",
+    "dipsupport",
+    "kneeraise",
+    "lsit"
+   ],
+   "buying_tips": "Wider, heavier bases wobble less; check ceiling height for full pull-ups.",
+   "safety": "Avoid kipping on free-standing towers, which can rock or tip.",
+   "keywords": "power tower pull up dip station vkr"
+  },
+  {
+   "id": "dipbars",
+   "name": "Floor dip bars",
+   "aliases": [
+    "Dip stands",
+    "Portable dip bars",
+    "Equalizer bars"
+   ],
+   "category": "Bodyweight stations",
+   "subcategory": "Dip stations",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "Two separate free-standing bars or a low parallel frame for dips, L-sits, inverted rows and push-ups.",
+   "muscle_focus": [
+    "Triceps",
+    "Chest",
+    "Core"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Height ~70–90 cm",
+   "adjustability": "Width set by where you place them.",
+   "footprint": {
+    "length_cm": 100,
+    "width_cm": 70,
+    "height_cm": 85
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "dipstation",
+    "parallettes",
+    "chair"
+   ],
+   "signature_exercises": [
+    "Triceps dip",
+    "L-sit",
+    "Inverted row",
+    "Deep push-up"
+   ],
+   "linked_exercise_ids": [
+    "tridip",
+    "chestdips",
+    "dipsupport",
+    "lsit",
+    "vsit"
+   ],
+   "buying_tips": "Heavier bars resist tipping; a cross-brace is more stable for dips.",
+   "safety": "Keep both bars square to each other.",
+   "keywords": "dip bars stands equalizer"
+  },
+  {
+   "id": "pushuphandles",
+   "name": "Push-up handles",
+   "aliases": [
+    "Push-up bars",
+    "Push-up stands",
+    "Rotating push-up handles"
+   ],
+   "category": "Bodyweight stations",
+   "subcategory": "Push-up aids",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "Small handles that keep the wrists neutral and add range to push-ups.",
+   "muscle_focus": [
+    "Chest",
+    "Triceps",
+    "Front delts"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "Fixed or rotating.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "parallettes",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "Deep push-up",
+    "Diamond push-up",
+    "Wide push-up"
+   ],
+   "linked_exercise_ids": [
+    "pushup",
+    "widepush",
+    "diamond",
+    "archerpush"
+   ],
+   "buying_tips": "Non-slip feet matter more than rotation.",
+   "safety": "Grip firmly; rotating handles can twist under fatigue.",
+   "keywords": "push-up handles stands"
+  },
+  {
+   "id": "pushupboard",
+   "name": "Push-up board",
+   "aliases": [
+    "Push-up system",
+    "Colour-coded push-up board"
+   ],
+   "category": "Bodyweight stations",
+   "subcategory": "Push-up aids",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A folding board with colour-coded slots for handles that changes the hand position to bias chest, shoulders or triceps.",
+   "muscle_focus": [
+    "Chest",
+    "Shoulders",
+    "Triceps"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "Handle positions change the grip.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "pushuphandles",
+    "calisthenics"
+   ],
+   "signature_exercises": [
+    "Wide push-up",
+    "Diamond push-up",
+    "Pike push-up"
+   ],
+   "linked_exercise_ids": [
+    "pushup",
+    "widepush",
+    "diamond"
+   ],
+   "buying_tips": "Pick one with a solid hinge; you can get the same positions on the floor.",
+   "safety": "",
+   "keywords": "push up board system"
+  },
+  {
+   "id": "nordicstrap",
+   "name": "Nordic curl strap",
+   "aliases": [
+    "Door anchor nordic strap",
+    "Nordic hamstring strap"
+   ],
+   "category": "Bodyweight stations",
+   "subcategory": "Anchors",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A padded ankle strap anchored under a door to hold your heels for Nordic hamstring curls and sit-ups.",
+   "muscle_focus": [
+    "Hamstrings"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "Fixed.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "doorframe"
+   ],
+   "substitutes": [
+    "nordicbench",
+    "sofa",
+    "ghd"
+   ],
+   "signature_exercises": [
+    "Nordic hamstring curl",
+    "Feet-anchored sit-up",
+    "Reverse Nordic"
+   ],
+   "linked_exercise_ids": [
+    "nordic",
+    "floorsitup"
+   ],
+   "buying_tips": "Check the door opens away from you so the strap pulls the door shut.",
+   "safety": "Lower slowly and catch yourself with your hands.",
+   "keywords": "nordic strap door anchor hamstring"
+  },
+  {
+   "id": "situpbar",
+   "name": "Sit-up bar",
+   "aliases": [
+    "Floor sit-up anchor",
+    "Door sit-up bar"
+   ],
+   "category": "Core tools",
+   "subcategory": "Anchors",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A small floor or under-door anchor that holds your feet down for sit-ups.",
+   "muscle_focus": [
+    "Abs",
+    "Hip flexors"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "Adjustable foot pads on some.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "sofa",
+    "nordicstrap",
+    "abbench"
+   ],
+   "signature_exercises": [
+    "Sit-up",
+    "Butterfly sit-up",
+    "Russian twist"
+   ],
+   "linked_exercise_ids": [
+    "floorsitup",
+    "butterflysitup"
+   ],
+   "buying_tips": "Suction-based ones slip on rugs; door-mounted are more secure.",
+   "safety": "",
+   "keywords": "sit-up bar anchor"
+  },
+  {
+   "id": "hangboard",
+   "name": "Hangboard",
+   "aliases": [
+    "Fingerboard",
+    "Climbing training board"
+   ],
+   "category": "Bodyweight stations",
+   "subcategory": "Grip & hang",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A wall-mounted board with edges and pockets for finger strength, dead hangs and climbing training.",
+   "muscle_focus": [
+    "Fingers",
+    "Forearms",
+    "Lats"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "Different edge depths.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 15,
+    "height_cm": 15
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "pullupbar"
+   ],
+   "signature_exercises": [
+    "Dead hang",
+    "Flexed-arm hang",
+    "Edge hangs",
+    "Repeaters"
+   ],
+   "linked_exercise_ids": [
+    "deadhang",
+    "flexhang"
+   ],
+   "buying_tips": "Mount above a door frame or on a stud-backed board.",
+   "safety": "Build up slowly; finger tendons adapt slower than muscles.",
+   "keywords": "hangboard fingerboard climbing grip"
+  },
+  {
+   "id": "stallbars",
+   "name": "Stall bars",
+   "aliases": [
+    "Swedish ladder",
+    "Wall bars",
+    "Gymnastics ladder"
+   ],
+   "category": "Gymnastics",
+   "subcategory": "Wall apparatus",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A wall-mounted wooden ladder of rungs used for hanging core work, stretching, human flags and assisted strength moves.",
+   "muscle_focus": [
+    "Core",
+    "Lats",
+    "Hamstrings",
+    "Shoulders"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Typically ~240 cm tall, 80–100 cm wide",
+   "adjustability": "Fixed.",
+   "footprint": {
+    "length_cm": 90,
+    "width_cm": 20,
+    "height_cm": 240
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "pullupbar",
+    "pole",
+    "doorframe"
+   ],
+   "signature_exercises": [
+    "Hanging leg raise",
+    "Human flag",
+    "Dead hang",
+    "Stretching",
+    "Back lever"
+   ],
+   "linked_exercise_ids": [
+    "humanflag",
+    "hangleg",
+    "hangknee",
+    "deadhang",
+    "backlever",
+    "tuckbl",
+    "germanhang"
+   ],
+   "buying_tips": "Mount into studs or masonry; a top pull-up bar extension adds a lot of options.",
+   "safety": "Check the rungs for cracks and the wall fixings for movement.",
+   "keywords": "stall bars swedish ladder wall bars"
+  },
+  {
+   "id": "pole",
+   "name": "Vertical pole",
+   "aliases": [
+    "Chinese pole",
+    "Human flag pole",
+    "Dance pole"
+   ],
+   "category": "Gymnastics",
+   "subcategory": "Wall apparatus",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A sturdy vertical pole fixed floor to ceiling or found outdoors, used for human flags and pole climbing.",
+   "muscle_focus": [
+    "Obliques",
+    "Lats",
+    "Shoulders"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Diameter ~38–50 mm",
+   "adjustability": "Pressure-fit or fixed.",
+   "footprint": {
+    "length_cm": 50,
+    "width_cm": 50,
+    "height_cm": 260
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "stallbars"
+   ],
+   "signature_exercises": [
+    "Human flag",
+    "Pole climb",
+    "Pole sit"
+   ],
+   "linked_exercise_ids": [
+    "humanflag"
+   ],
+   "buying_tips": "Fixed poles are steadier than pressure-fit ones for flags.",
+   "safety": "Use a crash mat underneath when learning flags.",
+   "keywords": "pole vertical human flag chinese pole"
+  },
+  {
+   "id": "pbars",
+   "name": "Gymnastics parallel bars",
+   "aliases": [
+    "P-bars",
+    "Floor parallel bars",
+    "Practice p-bars"
+   ],
+   "category": "Gymnastics",
+   "subcategory": "Bars",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Long, high parallel bars like gymnastics p-bars for swinging dips, support walks and press work.",
+   "muscle_focus": [
+    "Triceps",
+    "Chest",
+    "Core",
+    "Shoulders"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "~150–350 cm long",
+   "adjustability": "Adjustable height and width on most.",
+   "footprint": {
+    "length_cm": 350,
+    "width_cm": 100,
+    "height_cm": 175
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "dipstation",
+    "dipbars"
+   ],
+   "signature_exercises": [
+    "Chest dip",
+    "Support walk",
+    "L-sit",
+    "Swinging dip"
+   ],
+   "linked_exercise_ids": [
+    "chestdips",
+    "tridip",
+    "dipsupport",
+    "lsit"
+   ],
+   "buying_tips": "",
+   "safety": "Use mats underneath for swinging work.",
+   "keywords": "parallel bars p-bars gymnastics"
+  },
+  {
+   "id": "monkeybars",
+   "name": "Monkey bars",
+   "aliases": [
+    "Overhead ladder",
+    "Horizontal ladder"
+   ],
+   "category": "Gymnastics",
+   "subcategory": "Bars",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A horizontal overhead ladder for traverses, hangs and grip work; common in parks and ninja gyms.",
+   "muscle_focus": [
+    "Grip",
+    "Lats",
+    "Shoulders"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 300,
+    "width_cm": 80,
+    "height_cm": 220
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "pullupbar",
+    "playground"
+   ],
+   "signature_exercises": [
+    "Monkey-bar traverse",
+    "Dead hang",
+    "Pull-up",
+    "Hanging knee raise"
+   ],
+   "linked_exercise_ids": [
+    "deadhang",
+    "pullup",
+    "chinup",
+    "hangknee"
+   ],
+   "buying_tips": "",
+   "safety": "Land with bent knees on a soft surface.",
+   "keywords": "monkey bars overhead ladder"
+  },
+  {
+   "id": "climbrope",
+   "name": "Climbing rope",
+   "aliases": [
+    "Gym rope",
+    "Rope climb"
+   ],
+   "category": "Gymnastics",
+   "subcategory": "Climbing",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A thick rope hung from the ceiling for rope climbs, legless climbs and grip work.",
+   "muscle_focus": [
+    "Lats",
+    "Biceps",
+    "Grip",
+    "Core"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Diameter ~38 mm, 4.5–6 m long",
+   "adjustability": "",
+   "footprint": null,
+   "space": "L",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "towel",
+    "pullupbar"
+   ],
+   "signature_exercises": [
+    "Rope climb",
+    "Legless rope climb",
+    "Rope hang",
+    "Rope pull-up"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Manila grips well; poly ropes last longer outdoors.",
+   "safety": "Use a mat and climb down hand under hand.",
+   "keywords": "rope climb climbing rope"
+  },
+  {
+   "id": "pegboard",
+   "name": "Peg board",
+   "aliases": [
+    "Pegboard",
+    "Climbing peg board"
+   ],
+   "category": "Gymnastics",
+   "subcategory": "Climbing",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A wall-mounted board with holes; you climb by moving two pegs up it. A demanding test of pulling and grip strength.",
+   "muscle_focus": [
+    "Lats",
+    "Biceps",
+    "Grip"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 20,
+    "height_cm": 300
+   },
+   "space": "L",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "climbrope",
+    "pullupbar"
+   ],
+   "signature_exercises": [
+    "Peg board ascent",
+    "Peg board hang"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "",
+   "safety": "Use a mat and move pegs only when the other grip is secure.",
+   "keywords": "peg board pegboard climb"
+  },
+  {
+   "id": "salmonladder",
+   "name": "Salmon ladder",
+   "aliases": [
+    "Ninja ladder"
+   ],
+   "category": "Gymnastics",
+   "subcategory": "Climbing",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A bar moved up a ladder of hooks by explosive pull-ups. Found in ninja and obstacle-course gyms.",
+   "muscle_focus": [
+    "Lats",
+    "Biceps",
+    "Core"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 100,
+    "width_cm": 60,
+    "height_cm": 300
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "pullupbar"
+   ],
+   "signature_exercises": [
+    "Salmon ladder rung jumps",
+    "Explosive pull-up"
+   ],
+   "linked_exercise_ids": [
+    "pullup",
+    "ctbpull"
+   ],
+   "buying_tips": "",
+   "safety": "Master high chest-to-bar pull-ups and use mats before trying it.",
+   "keywords": "salmon ladder ninja"
+  },
+  {
+   "id": "gymmat",
+   "name": "Crash / gymnastics mat",
+   "aliases": [
+    "Crash mat",
+    "Tumbling mat",
+    "Panel mat"
+   ],
+   "category": "Gymnastics",
+   "subcategory": "Mats",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Thick folding or crash mats for handstands, levers and landing practice.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "Panel mats ~3–5 cm, crash mats 10–30 cm thick",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 120,
+    "height_cm": 5
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "yogamat"
+   ],
+   "signature_exercises": [
+    "Freestanding handstand",
+    "Press to handstand",
+    "Tumbling",
+    "Bail practice"
+   ],
+   "linked_exercise_ids": [
+    "handstand",
+    "freehspu",
+    "presshs",
+    "frogstand"
+   ],
+   "buying_tips": "Folding panel mats store flat and suit most home skill work.",
+   "safety": "",
+   "keywords": "crash mat tumbling panel mat gymnastics"
+  },
+  {
+   "id": "handstandcanes",
+   "name": "Handstand canes / blocks",
+   "aliases": [
+    "Handstand blocks",
+    "Canes"
+   ],
+   "category": "Gymnastics",
+   "subcategory": "Hand balance",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Raised blocks or canes that put the hands above the floor for balance training and handstand presses.",
+   "muscle_focus": [
+    "Shoulders",
+    "Wrists",
+    "Core"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Height ~20–60 cm",
+   "adjustability": "Some have adjustable height.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 40,
+    "height_cm": 40
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "parallettes",
+    "yogablocks"
+   ],
+   "signature_exercises": [
+    "Freestanding handstand",
+    "Press to handstand",
+    "One-arm handstand drills"
+   ],
+   "linked_exercise_ids": [
+    "handstand",
+    "presshs"
+   ],
+   "buying_tips": "A wide, heavy base is essential.",
+   "safety": "Learn to bail safely before training on raised blocks.",
+   "keywords": "handstand canes blocks"
+  },
+  {
+   "id": "gymgrips",
+   "name": "Gymnastics grips",
+   "aliases": [
+    "Hand grips",
+    "Palm guards"
+   ],
+   "category": "Gymnastics",
+   "subcategory": "Hand protection",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Leather or synthetic palm guards that protect hands and improve grip for high-rep pull-ups, rings and toes-to-bar.",
+   "muscle_focus": [
+    "Grip"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "chalk"
+   ],
+   "signature_exercises": [
+    "Kipping pull-up",
+    "Toes-to-bar",
+    "Ring muscle-up"
+   ],
+   "linked_exercise_ids": [
+    "kippullup",
+    "toestobar",
+    "muscleup",
+    "ringmu"
+   ],
+   "buying_tips": "Size to your hand; dowel grips suit bars and rings best.",
+   "safety": "",
+   "keywords": "grips palm guards gymnastics"
+  },
+  {
+   "id": "loopband",
+   "name": "Loop / power band",
+   "aliases": [
+    "Power band",
+    "Pull-up assist band",
+    "Super band"
+   ],
+   "category": "Bands & suspension",
+   "subcategory": "Resistance bands",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A long, closed latex loop (~2 m). Used for assisted pull-ups, mobility, band-resisted lifts and sprints.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "Widths ~1–10 cm, roughly 5–80+ kg tension",
+   "adjustability": "Choose band width for resistance.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "bands",
+    "tubeband"
+   ],
+   "signature_exercises": [
+    "Band-assisted pull-up",
+    "Band squat",
+    "Band deadlift",
+    "Banded hip distraction",
+    "Band-resisted sprint"
+   ],
+   "linked_exercise_ids": [
+    "bandpullup",
+    "bandsquat",
+    "banddl",
+    "bandgm",
+    "bandpushup",
+    "bandsprint",
+    "bandankle",
+    "bandhip",
+    "tke",
+    "bandlat",
+    "banddisloc",
+    "bandpullapart",
+    "bandfacepull",
+    "bandpallof",
+    "bandchop",
+    "bandrow",
+    "bandpress",
+    "bandkick"
+   ],
+   "buying_tips": "Buy a set of 3–4 widths; layered latex lasts longer than moulded.",
+   "safety": "Anchor securely and keep bands away from your face.",
+   "keywords": "power band loop super band pull up assist"
+  },
+  {
+   "id": "tubeband",
+   "name": "Tube band with handles",
+   "aliases": [
+    "Resistance tube",
+    "Handle bands"
+   ],
+   "category": "Bands & suspension",
+   "subcategory": "Resistance bands",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A rubber tube with a handle at each end, often clip-on so you can stack tubes. Mimics cable work at home.",
+   "muscle_focus": [
+    "Chest",
+    "Back",
+    "Shoulders",
+    "Arms"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "Typically 2–25 kg per tube; stackable",
+   "adjustability": "Clip on more tubes or step further away.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "dooranchor"
+   ],
+   "substitutes": [
+    "loopband",
+    "functional"
+   ],
+   "signature_exercises": [
+    "Band chest press",
+    "Band row",
+    "Band curl",
+    "Band lateral raise",
+    "Band woodchop"
+   ],
+   "linked_exercise_ids": [
+    "bandpress",
+    "bandfly",
+    "bandrow",
+    "bandcurl",
+    "bandohp",
+    "bandlateral",
+    "banduprow",
+    "bandchop",
+    "bandpallof",
+    "bandlatpull",
+    "bandstraight",
+    "bandpush",
+    "bandohext"
+   ],
+   "buying_tips": "Clip-on sets with ankle straps and a door anchor give the most options.",
+   "safety": "Check the tube where it joins the clip; that is where it fails.",
+   "keywords": "tube band handles resistance tube"
+  },
+  {
+   "id": "miniband",
+   "name": "Mini band",
+   "aliases": [
+    "Mini loop band",
+    "Booty band",
+    "Glute band"
+   ],
+   "category": "Bands & suspension",
+   "subcategory": "Resistance bands",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A short thin latex loop worn around the thighs or ankles for glute activation, lateral walks and hip work.",
+   "muscle_focus": [
+    "Glutes",
+    "Hip abductors"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "Usually sets of 4–5 light-to-extra-heavy",
+   "adjustability": "Change band or move it lower for more tension.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "fabricband",
+    "bands"
+   ],
+   "signature_exercises": [
+    "Banded lateral walk",
+    "Monster walk",
+    "Banded clamshell",
+    "Banded glute bridge",
+    "Seated banded hip abduction"
+   ],
+   "linked_exercise_ids": [
+    "bandclam",
+    "bandbridge",
+    "bandwalk",
+    "monsterwalk",
+    "bandabduct",
+    "clamshell",
+    "glutebridge",
+    "bwsquat"
+   ],
+   "buying_tips": "Latex mini bands are cheap but can roll; fabric versions stay put.",
+   "safety": "",
+   "keywords": "mini band booty band glute loop"
+  },
+  {
+   "id": "fabricband",
+   "name": "Fabric hip circle",
+   "aliases": [
+    "Hip circle",
+    "Fabric booty band",
+    "Cloth glute band"
+   ],
+   "category": "Bands & suspension",
+   "subcategory": "Resistance bands",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A wide woven-fabric loop worn above the knees. Stiffer than a latex mini band and does not roll up.",
+   "muscle_focus": [
+    "Glutes",
+    "Hip abductors"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "Light, medium and heavy",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "miniband"
+   ],
+   "signature_exercises": [
+    "Banded hip thrust",
+    "Banded squat",
+    "Banded lateral walk",
+    "Seated banded hip abduction"
+   ],
+   "linked_exercise_ids": [
+    "bandbridge",
+    "bandwalk",
+    "monsterwalk",
+    "bandabduct",
+    "bandclam"
+   ],
+   "buying_tips": "Pick the right size for your thigh circumference; elastic weave grips best.",
+   "safety": "",
+   "keywords": "hip circle fabric band glute"
+  },
+  {
+   "id": "therapyband",
+   "name": "Therapy band",
+   "aliases": [
+    "Flat band",
+    "Rehab band",
+    "TheraBand"
+   ],
+   "category": "Bands & suspension",
+   "subcategory": "Resistance bands",
+   "app_group": "Shoulders",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A flat, light latex sheet band used for rehab, rotator-cuff work and warm-ups.",
+   "muscle_focus": [
+    "Rotator cuff",
+    "Shoulders",
+    "Upper back"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "Light, colour-coded levels ~1–5 kg",
+   "adjustability": "Cut to length; tie into loops.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "tubeband",
+    "loopband"
+   ],
+   "signature_exercises": [
+    "Band external rotation",
+    "Band internal rotation",
+    "Band pull-apart",
+    "Band face pull"
+   ],
+   "linked_exercise_ids": [
+    "bandextrot",
+    "bandintrot",
+    "bandpullapart",
+    "bandfacepull",
+    "bandlateral",
+    "bandkick"
+   ],
+   "buying_tips": "Rolls are cheaper than precut lengths.",
+   "safety": "Latex allergy? Choose a latex-free band.",
+   "keywords": "therapy band rehab flat theraband"
+  },
+  {
+   "id": "fingerband",
+   "name": "Finger extensor band",
+   "aliases": [
+    "Rubber band",
+    "Hand expander",
+    "Finger stretcher"
+   ],
+   "category": "Bands & suspension",
+   "subcategory": "Resistance bands",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A small rubber band or ring used to train finger and wrist extensors, balancing out grip work.",
+   "muscle_focus": [
+    "Forearms",
+    "Fingers"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "gripper"
+   ],
+   "signature_exercises": [
+    "Finger extension with band"
+   ],
+   "linked_exercise_ids": [
+    "fingerext"
+   ],
+   "buying_tips": "A thick office rubber band works fine to start.",
+   "safety": "",
+   "keywords": "finger extensor rubber band hand"
+  },
+  {
+   "id": "dooranchor",
+   "name": "Door anchor",
+   "aliases": [
+    "Band door anchor",
+    "Door strap"
+   ],
+   "category": "Bands & suspension",
+   "subcategory": "Anchors",
+   "app_group": "Attachments",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A padded strap that closes into a door to anchor bands or a suspension trainer at high, middle or low height.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "Move it to the top, hinge side or bottom of the door.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "doorframe"
+   ],
+   "substitutes": [
+    "powerrack",
+    "pullupbar"
+   ],
+   "signature_exercises": [
+    "Band lat pulldown",
+    "Band pushdown",
+    "Band row",
+    "Band Pallof press",
+    "Suspension row"
+   ],
+   "linked_exercise_ids": [
+    "bandlatpull",
+    "bandstraight",
+    "bandpush",
+    "bandfacepull",
+    "bandrow",
+    "bandpallof",
+    "bandchop",
+    "bandpress",
+    "bandfly",
+    "tke",
+    "bandlat",
+    "trxrow",
+    "trxpress"
+   ],
+   "buying_tips": "Use the hinge side of a door that opens away from you.",
+   "safety": "Lock the door or make sure no one can open it mid-set.",
+   "keywords": "door anchor band anchor strap"
+  },
+  {
+   "id": "bandbar",
+   "name": "Band bar",
+   "aliases": [
+    "Resistance band bar",
+    "Portable bar"
+   ],
+   "category": "Bands & suspension",
+   "subcategory": "Band accessories",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A short bar that bands clip onto, making band squats, deadlifts, presses and rows feel more like barbell lifts.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "Bar ~100–130 cm, used with bands of 10–100 kg",
+   "adjustability": "Stack bands for more tension.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "loopband"
+   ],
+   "substitutes": [
+    "barbell",
+    "dowel"
+   ],
+   "signature_exercises": [
+    "Band squat",
+    "Band deadlift",
+    "Band bench press",
+    "Band row"
+   ],
+   "linked_exercise_ids": [
+    "bandsquat",
+    "banddl",
+    "bandpress",
+    "bandrow",
+    "bandcurl",
+    "bandohp"
+   ],
+   "buying_tips": "Pick one with a foot plate if you want ground-based lifts.",
+   "safety": "Keep the band centred under your feet.",
+   "keywords": "band bar portable barbell"
+  },
+  {
+   "id": "sprintbelt",
+   "name": "Resisted sprint harness",
+   "aliases": [
+    "Sprint belt",
+    "Partner resistance harness",
+    "Overspeed belt"
+   ],
+   "category": "Bands & suspension",
+   "subcategory": "Band accessories",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A waist belt with a long tether or band held by a partner or anchor to resist or assist sprints and agility drills.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings",
+    "Quads"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "sled",
+    "loopband"
+   ],
+   "signature_exercises": [
+    "Band-resisted sprint",
+    "Resisted lateral shuffle",
+    "Overspeed sprint"
+   ],
+   "linked_exercise_ids": [
+    "bandsprint"
+   ],
+   "buying_tips": "Quick-release belts are safer for partner drills.",
+   "safety": "Agree a signal with your partner before releasing tension.",
+   "keywords": "sprint harness belt resisted"
+  },
+  {
+   "id": "ankleweights",
+   "name": "Ankle weights",
+   "aliases": [
+    "Leg weights",
+    "Strap-on weights"
+   ],
+   "category": "Wearable load",
+   "subcategory": "Strap-on weights",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "Strap-on weights for the ankles that add load to leg raises, kickbacks and hip work.",
+   "muscle_focus": [
+    "Glutes",
+    "Hip flexors",
+    "Hamstrings"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "~0.5–5 kg per ankle; some adjustable with pockets",
+   "adjustability": "Adjustable pocket versions add weight in small steps.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "anklestrap",
+    "miniband"
+   ],
+   "signature_exercises": [
+    "Donkey kick",
+    "Fire hydrant",
+    "Lying leg raise",
+    "Standing leg curl",
+    "Side-lying leg raise"
+   ],
+   "linked_exercise_ids": [
+    "donkeykick",
+    "firehydrant",
+    "lyinglegraise"
+   ],
+   "buying_tips": "Adjustable pocket types last longer as you get stronger.",
+   "safety": "Avoid running or jumping in ankle weights; it stresses the knees and hips.",
+   "keywords": "ankle weights leg weights"
+  },
+  {
+   "id": "wristweights",
+   "name": "Wrist weights",
+   "aliases": [
+    "Wearable hand weights",
+    "Weighted bracelets"
+   ],
+   "category": "Wearable load",
+   "subcategory": "Strap-on weights",
+   "app_group": "Shoulders",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "Light strap-on wrist weights for shadowboxing, walking and arm-raise circuits.",
+   "muscle_focus": [
+    "Shoulders",
+    "Arms"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "~0.25–2 kg each",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "dumbbells",
+    "waterjugs"
+   ],
+   "signature_exercises": [
+    "Shadowboxing",
+    "Arm circles",
+    "Speed punches"
+   ],
+   "linked_exercise_ids": [
+    "shadowbox",
+    "armcircle",
+    "speedpunch"
+   ],
+   "buying_tips": "Keep them light, ~0.5–1 kg, for striking work.",
+   "safety": "Do not snap punches to full lock with added weight.",
+   "keywords": "wrist weights hand weights"
+  },
+  {
+   "id": "sliders",
+   "name": "Core sliders",
+   "aliases": [
+    "Gliding discs",
+    "Sliding discs",
+    "Valslides"
+   ],
+   "category": "Core tools",
+   "subcategory": "Sliders",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "Low-friction discs placed under hands or feet for body saws, sliding leg curls, lunges and mountain climbers.",
+   "muscle_focus": [
+    "Core",
+    "Hamstrings",
+    "Glutes",
+    "Adductors"
+   ],
+   "loading": "Friction",
+   "weight_options": "Two-sided (fabric for hard floors, plastic for carpet)",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "towel",
+    "trx",
+    "abwheel"
+   ],
+   "signature_exercises": [
+    "Sliding leg curl",
+    "Body saw",
+    "Slider reverse lunge",
+    "Slider mountain climber",
+    "Slider pike"
+   ],
+   "linked_exercise_ids": [
+    "slidecurl",
+    "bodysaw",
+    "mtnclimber",
+    "revlunge",
+    "latlunge"
+   ],
+   "buying_tips": "Double-sided sliders work on carpet and wood.",
+   "safety": "Keep the floor clean; grit makes sliders stick suddenly.",
+   "keywords": "sliders gliding discs valslides"
+  },
+  {
+   "id": "abmat",
+   "name": "AbMat",
+   "aliases": [
+    "Ab mat",
+    "Lumbar pad"
+   ],
+   "category": "Core tools",
+   "subcategory": "Mats & pads",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A curved foam pad placed under the lower back for full-range sit-ups.",
+   "muscle_focus": [
+    "Abs"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "pilatesmat",
+    "yogamat",
+    "towel"
+   ],
+   "signature_exercises": [
+    "Butterfly sit-up",
+    "Sit-up",
+    "Crunch"
+   ],
+   "linked_exercise_ids": [
+    "butterflysitup",
+    "floorsitup",
+    "floorcrunch"
+   ],
+   "buying_tips": "Add a tailbone pad if you do high-rep sit-ups.",
+   "safety": "",
+   "keywords": "abmat lumbar pad sit-up"
+  },
+  {
+   "id": "kneepad",
+   "name": "Knee pad / cushion",
+   "aliases": [
+    "Kneeling pad",
+    "Cushion",
+    "Pillow"
+   ],
+   "category": "Core tools",
+   "subcategory": "Mats & pads",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "A thick foam pad or cushion for kneeling exercises like ab-wheel rollouts, Nordics and half-kneeling work.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "yogamat",
+    "towel"
+   ],
+   "signature_exercises": [
+    "Ab wheel rollout",
+    "Knee push-up",
+    "Kneeling hip flexor stretch",
+    "Nordic hamstring curl"
+   ],
+   "linked_exercise_ids": [
+    "abwheel",
+    "kneepush",
+    "hipflexor",
+    "nordic",
+    "skatersquat",
+    "couch"
+   ],
+   "buying_tips": "Dense foam stays supportive; a folded towel works in a pinch.",
+   "safety": "",
+   "keywords": "knee pad cushion pillow kneeling"
+  },
+  {
+   "id": "step",
+   "name": "Aerobic step",
+   "aliases": [
+    "Step platform",
+    "Reebok step",
+    "Stepper"
+   ],
+   "category": "Bodyweight stations",
+   "subcategory": "Steps & platforms",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A low adjustable platform with risers for step-ups, step aerobics, calf raises and decline or incline push-ups.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Calves"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Height ~10–30 cm with risers",
+   "adjustability": "Add or remove risers to change height.",
+   "footprint": {
+    "length_cm": 110,
+    "width_cm": 40,
+    "height_cm": 20
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "housestairs",
+    "plyobox",
+    "chair"
+   ],
+   "signature_exercises": [
+    "Step-up",
+    "Calf raise",
+    "Eccentric heel drop",
+    "Step aerobics",
+    "Elevated push-up"
+   ],
+   "linked_exercise_ids": [
+    "stepup",
+    "bwcalf",
+    "slcalf",
+    "eccheel",
+    "standham",
+    "inclinepush",
+    "declinepush"
+   ],
+   "buying_tips": "A non-slip top and locking risers matter most.",
+   "safety": "Place the step on a flat, non-slip floor.",
+   "keywords": "aerobic step platform stepper"
+  }
+ ]
+}

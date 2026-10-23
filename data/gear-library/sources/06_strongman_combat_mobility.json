@@ -1,0 +1,4480 @@
+{
+ "slice": "other",
+ "items": [
+  {
+   "id": "yoke",
+   "name": "Yoke",
+   "aliases": [
+    "Strongman yoke",
+    "Super yoke",
+    "Yoke bar"
+   ],
+   "category": "Strongman",
+   "subcategory": "Carry implements",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A tall steel frame with a crossbar that sits across your upper back; you load it with plates and walk with it.",
+   "muscle_focus": [
+    "Upper back",
+    "Core",
+    "Quads",
+    "Glutes"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Frame 45–100 kg (100–220 lb); loaded 150–500+ kg",
+   "adjustability": "Fixed frame; many have adjustable crossbar height. Some double as a squat stand.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 120,
+    "height_cm": 170
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "ssb",
+    "barbell"
+   ],
+   "signature_exercises": [
+    "Yoke carry",
+    "Yoke walk for distance",
+    "Yoke pick and hold",
+    "Yoke squat"
+   ],
+   "linked_exercise_ids": [
+    "yoke"
+   ],
+   "buying_tips": "Check crossbar height adjustment and whether it converts to a rack; wide feet reduce wobble.",
+   "safety": "Practise drops and keep the run path clear before loading heavy.",
+   "keywords": "yoke carry walk strongman"
+  },
+  {
+   "id": "log",
+   "name": "Strongman log",
+   "aliases": [
+    "Log bar",
+    "Log press bar"
+   ],
+   "category": "Strongman",
+   "subcategory": "Pressing implements",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A thick cylindrical bar with neutral handles cut inside it, cleaned to the chest and pressed overhead.",
+   "muscle_focus": [
+    "Shoulders",
+    "Triceps",
+    "Upper back",
+    "Core"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Logs 30–60 kg empty (8–12 in diameter)",
+   "adjustability": "Fixed diameter; choose 10 in or 12 in. Handles fixed.",
+   "footprint": {
+    "length_cm": 210,
+    "width_cm": 35,
+    "height_cm": 35
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "axlebar",
+    "barbell"
+   ],
+   "signature_exercises": [
+    "Log clean and press",
+    "Log push press",
+    "Log clean",
+    "Log strict press"
+   ],
+   "linked_exercise_ids": [
+    "logpress"
+   ],
+   "buying_tips": "Start with a 10 in log; check handle spacing and knurling. Fillable steel logs are cheaper.",
+   "safety": "Clean it with a belly roll and keep the elbows up so it doesn't crush the sternum.",
+   "keywords": "log press strongman"
+  },
+  {
+   "id": "tyre",
+   "name": "Tyre",
+   "aliases": [
+    "Tire",
+    "Flip tyre",
+    "Tractor tyre"
+   ],
+   "category": "Strongman",
+   "subcategory": "Odd objects",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A large truck or tractor tyre flipped end over end, or hit with a sledgehammer, for full-body power and conditioning.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings",
+    "Back",
+    "Chest",
+    "Triceps"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "100–450+ kg (220–1000 lb); 1–2 m tall",
+   "adjustability": "Fixed; add chains or plates inside to make it heavier.",
+   "footprint": {
+    "length_cm": 180,
+    "width_cm": 180,
+    "height_cm": 40
+   },
+   "space": "L",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "sandbag",
+    "sled"
+   ],
+   "signature_exercises": [
+    "Tyre flip",
+    "Tyre sledgehammer strikes",
+    "Tyre jumps",
+    "Tyre drag"
+   ],
+   "linked_exercise_ids": [
+    "tyreflip"
+   ],
+   "buying_tips": "Farm and tyre shops often give used tyres away; choose one you can flip for at least a few reps.",
+   "safety": "Drive with hips and legs, not a rounded back, and never curl it up with straight arms.",
+   "keywords": "tire tyre flip"
+  },
+  {
+   "id": "atlasstone",
+   "name": "Atlas stone",
+   "aliases": [
+    "Stone",
+    "Concrete stone",
+    "Natural stone"
+   ],
+   "category": "Strongman",
+   "subcategory": "Stones",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A round concrete ball lifted from the floor and loaded onto a platform or over a bar.",
+   "muscle_focus": [
+    "Hamstrings",
+    "Glutes",
+    "Upper back",
+    "Biceps"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "40–200+ kg (90–440 lb); home moulds to cast your own",
+   "adjustability": "Fixed weight; buy a set or cast several sizes from a mould.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 60,
+    "height_cm": 60
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "sandbag",
+    "keg"
+   ],
+   "signature_exercises": [
+    "Atlas stone load",
+    "Stone over bar",
+    "Stone lap and shoulder",
+    "Stone carry"
+   ],
+   "linked_exercise_ids": [
+    "atlas"
+   ],
+   "buying_tips": "A mould lets you cast stones cheaply; use tacky and arm sleeves to protect forearms.",
+   "safety": "Lap the stone before extending and keep feet clear when dropping it.",
+   "keywords": "atlas stone load strongman"
+  },
+  {
+   "id": "stoneplatform",
+   "name": "Stone platform",
+   "aliases": [
+    "Atlas stone loader",
+    "Stone loading platform",
+    "Stone ramp"
+   ],
+   "category": "Strongman",
+   "subcategory": "Stones",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A sturdy platform or set of stepped platforms of fixed heights onto which atlas stones are loaded.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "Heights ~100–150 cm (40–60 in)",
+   "adjustability": "Some have adjustable heights or a stone ramp to return stones.",
+   "footprint": {
+    "length_cm": 80,
+    "width_cm": 80,
+    "height_cm": 130
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [
+    "atlasstone"
+   ],
+   "substitutes": [
+    "plyobox"
+   ],
+   "signature_exercises": [
+    "Atlas stone load",
+    "Stone series",
+    "Sandbag load to platform"
+   ],
+   "linked_exercise_ids": [
+    "atlas",
+    "sbload"
+   ],
+   "buying_tips": "Pick one with a lip to stop stones rolling off and a height you can adjust.",
+   "safety": "Make sure it can't tip when a heavy stone hits the edge.",
+   "keywords": "stone loader platform"
+  },
+  {
+   "id": "farmers",
+   "name": "Farmer's walk handles",
+   "aliases": [
+    "Farmer's handles",
+    "Farmers carry handles",
+    "Farmer walk implements"
+   ],
+   "category": "Strongman",
+   "subcategory": "Carry implements",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A pair of loadable handles with a central grip used to carry heavy weights in each hand.",
+   "muscle_focus": [
+    "Forearms",
+    "Traps",
+    "Core",
+    "Glutes"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Handles 15–60 kg each; 1–2 in grip",
+   "adjustability": "Plate-loaded; some have thicker or rotating handles.",
+   "footprint": {
+    "length_cm": 140,
+    "width_cm": 30,
+    "height_cm": 25
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "dumbbells",
+    "trapbar",
+    "kettlebells"
+   ],
+   "signature_exercises": [
+    "Farmer's carry",
+    "Suitcase carry",
+    "Farmer's hold for time",
+    "Farmer's walk turn"
+   ],
+   "linked_exercise_ids": [
+    "farmer",
+    "suitcase",
+    "dbtiptoewalk"
+   ],
+   "buying_tips": "Check handle height (pick height) and diameter; pairs are often sold together.",
+   "safety": "Set them down under control at the end, not by dropping them on toes.",
+   "keywords": "farmers walk carry handles"
+  },
+  {
+   "id": "framecarry",
+   "name": "Frame carry",
+   "aliases": [
+    "Farmer's frame",
+    "Carry frame"
+   ],
+   "category": "Strongman",
+   "subcategory": "Carry implements",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A rectangular steel frame you stand inside and carry by two long side handles, loaded with plates.",
+   "muscle_focus": [
+    "Forearms",
+    "Traps",
+    "Core",
+    "Legs"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Frame 60–120 kg; loaded to 300+ kg",
+   "adjustability": "Fixed; plates on loading posts at each end.",
+   "footprint": {
+    "length_cm": 300,
+    "width_cm": 80,
+    "height_cm": 40
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "farmers",
+    "trapbar"
+   ],
+   "signature_exercises": [
+    "Frame carry",
+    "Frame pick and hold",
+    "Frame deadlift"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Usually a competition piece; check the handle length fits your stride.",
+   "safety": "Keep the frame level and step with short, quick steps.",
+   "keywords": "frame carry strongman"
+  },
+  {
+   "id": "keg",
+   "name": "Keg",
+   "aliases": [
+    "Beer keg",
+    "Strongman keg"
+   ],
+   "category": "Strongman",
+   "subcategory": "Odd objects",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A steel beer keg filled with water or sand and lifted, carried, loaded or tossed.",
+   "muscle_focus": [
+    "Back",
+    "Biceps",
+    "Glutes",
+    "Shoulders"
+   ],
+   "loading": "Adjustable (dial/pin)",
+   "weight_options": "Empty ~12 kg; filled 30–100+ kg",
+   "adjustability": "Change the weight by adding or removing water or sand.",
+   "footprint": {
+    "length_cm": 45,
+    "width_cm": 45,
+    "height_cm": 60
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "sandbag",
+    "atlasstone"
+   ],
+   "signature_exercises": [
+    "Keg carry",
+    "Keg load",
+    "Keg toss",
+    "Keg clean and press"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Use an empty keg (not a deposit keg you must return); water sloshes, sand does not.",
+   "safety": "Check the caps are tight so it doesn't leak or burst.",
+   "keywords": "keg carry toss"
+  },
+  {
+   "id": "husafell",
+   "name": "Husafell stone",
+   "aliases": [
+    "Odd-object stone",
+    "Carry stone",
+    "Natural stone"
+   ],
+   "category": "Strongman",
+   "subcategory": "Stones",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A flat, awkward stone or steel replica hugged against the chest and carried for distance.",
+   "muscle_focus": [
+    "Upper back",
+    "Biceps",
+    "Core",
+    "Legs"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "Steel replicas 100–180 kg",
+   "adjustability": "Fixed; steel versions can be plate-loaded.",
+   "footprint": {
+    "length_cm": 70,
+    "width_cm": 30,
+    "height_cm": 60
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "sandbag",
+    "keg"
+   ],
+   "signature_exercises": [
+    "Husafell stone carry",
+    "Bear-hug carry",
+    "Stone hold for time"
+   ],
+   "linked_exercise_ids": [
+    "sandcarry"
+   ],
+   "buying_tips": "Plate-loaded steel versions are easier to store and adjust.",
+   "safety": "Lift it close to the body to protect the lower back.",
+   "keywords": "husafell stone carry bear hug"
+  },
+  {
+   "id": "circusdb",
+   "name": "Circus dumbbell",
+   "aliases": [
+    "Thick-handled dumbbell",
+    "Strongman dumbbell"
+   ],
+   "category": "Strongman",
+   "subcategory": "Pressing implements",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "An oversized single dumbbell with a thick, often rotating handle, cleaned and pressed overhead one-handed.",
+   "muscle_focus": [
+    "Shoulders",
+    "Triceps",
+    "Core",
+    "Grip"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Handle 20–40 kg; loaded 50–130 kg",
+   "adjustability": "Plate-loaded; some have fillable heads.",
+   "footprint": {
+    "length_cm": 55,
+    "width_cm": 30,
+    "height_cm": 30
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "dumbbells",
+    "kettlebells"
+   ],
+   "signature_exercises": [
+    "Circus dumbbell clean and press",
+    "One-arm push press",
+    "Circus dumbbell hold"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A rotating handle is closer to competition spec.",
+   "safety": "Use the free hand to help clean it and keep the wrist stacked.",
+   "keywords": "circus dumbbell press"
+  },
+  {
+   "id": "conanswheel",
+   "name": "Conan's wheel",
+   "aliases": [
+    "Conan's wheel of pain",
+    "Strongman wheel"
+   ],
+   "category": "Strongman",
+   "subcategory": "Carry implements",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A long weighted arm anchored to a central pivot; you hold the end in a Zercher position and walk it around in a circle.",
+   "muscle_focus": [
+    "Core",
+    "Biceps",
+    "Legs",
+    "Upper back"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Load 100–500+ kg",
+   "adjustability": "Plate-loaded arm; fixed pivot bolted to the floor.",
+   "footprint": {
+    "length_cm": 800,
+    "width_cm": 800,
+    "height_cm": 120
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "sandbag",
+    "yoke"
+   ],
+   "signature_exercises": [
+    "Conan's wheel carry",
+    "Zercher hold walk"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Needs a lot of floor space and anchoring; mostly a gym or competition piece.",
+   "safety": "Clear the circle before you start walking.",
+   "keywords": "conan wheel zercher carry"
+  },
+  {
+   "id": "ropepull",
+   "name": "Arm-over-arm rope pull",
+   "aliases": [
+    "Truck pull machine",
+    "Rope pull sled",
+    "Hand-over-hand pull"
+   ],
+   "category": "Strongman",
+   "subcategory": "Pulling implements",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A station or sled you pull towards you hand over hand with a thick rope while seated or braced.",
+   "muscle_focus": [
+    "Lats",
+    "Biceps",
+    "Grip",
+    "Upper back"
+   ],
+   "loading": "Friction",
+   "weight_options": "Sled 50–200 kg or adjustable brake",
+   "adjustability": "Machines have adjustable resistance; a sled is adjusted with plates.",
+   "footprint": {
+    "length_cm": 400,
+    "width_cm": 100,
+    "height_cm": 100
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "sled"
+   ],
+   "substitutes": [
+    "battleropes",
+    "sled"
+   ],
+   "signature_exercises": [
+    "Arm-over-arm sled pull",
+    "Seated rope pull",
+    "Truck pull (arm over arm)"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A thick rope and a sled with an anchor point is the cheap home version.",
+   "safety": "Wear gloves or tape to avoid rope burns.",
+   "keywords": "rope pull truck arm over arm"
+  },
+  {
+   "id": "vikingpress",
+   "name": "Viking press",
+   "aliases": [
+    "Viking press station",
+    "Landmine viking press"
+   ],
+   "category": "Strongman",
+   "subcategory": "Pressing implements",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A lever-arm pressing station with two handles at the end, pressed overhead from shoulder height.",
+   "muscle_focus": [
+    "Shoulders",
+    "Triceps",
+    "Upper chest"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Arm plus plates; ~20–300 kg",
+   "adjustability": "Many have adjustable handle height or swap-in handles.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 80,
+    "height_cm": 170
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "landmine",
+    "shoulderpress"
+   ],
+   "signature_exercises": [
+    "Viking press",
+    "Viking push press",
+    "Landmine viking press"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A landmine with a viking handle attachment is the space-saving option.",
+   "safety": "Lock your trunk so you don't over-arch the lower back.",
+   "keywords": "viking press overhead"
+  },
+  {
+   "id": "fingal",
+   "name": "Fingal's fingers",
+   "aliases": [
+    "Fingal fingers",
+    "Pole flip"
+   ],
+   "category": "Strongman",
+   "subcategory": "Odd objects",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A row of hinged poles of increasing weight that you lift from horizontal and push over to the other side.",
+   "muscle_focus": [
+    "Glutes",
+    "Back",
+    "Shoulders",
+    "Triceps"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "Poles 50–200 kg",
+   "adjustability": "Fixed per pole; some home versions are plate-loaded.",
+   "footprint": {
+    "length_cm": 400,
+    "width_cm": 300,
+    "height_cm": 250
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "tyre"
+   ],
+   "signature_exercises": [
+    "Fingal's fingers flip",
+    "Pole walk-up"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Rarely sold for home use; look for strongman gyms with one.",
+   "safety": "Walk the pole up in a straight line and step clear when it falls.",
+   "keywords": "fingal fingers strongman"
+  },
+  {
+   "id": "shield",
+   "name": "Strongman shield",
+   "aliases": [
+    "Shield carry",
+    "Strongman plate shield"
+   ],
+   "category": "Strongman",
+   "subcategory": "Carry implements",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A large, flat steel shield hugged against the chest and carried for distance.",
+   "muscle_focus": [
+    "Upper back",
+    "Biceps",
+    "Core"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "50–150 kg; some plate-loaded",
+   "adjustability": "Fixed or plate-loaded.",
+   "footprint": {
+    "length_cm": 100,
+    "width_cm": 20,
+    "height_cm": 90
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "husafell",
+    "sandbag"
+   ],
+   "signature_exercises": [
+    "Shield carry",
+    "Bear-hug hold"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Plate-loaded shields let you scale the load.",
+   "safety": "Keep it high on the chest so it doesn't hit your knees.",
+   "keywords": "shield carry strongman"
+  },
+  {
+   "id": "sledgehammer",
+   "name": "Sledgehammer",
+   "aliases": [
+    "Sledge",
+    "Training hammer",
+    "Shock hammer"
+   ],
+   "category": "Strongman",
+   "subcategory": "Clubs & hammers",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A heavy hammer swung onto a tyre or mat for rotational power and conditioning.",
+   "muscle_focus": [
+    "Core",
+    "Obliques",
+    "Shoulders",
+    "Forearms"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "4–10 kg (8–20 lb); training hammers have rubber heads",
+   "adjustability": "Fixed; use a lighter or heavier hammer to scale.",
+   "footprint": {
+    "length_cm": 90,
+    "width_cm": 15,
+    "height_cm": 15
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "tyre"
+   ],
+   "substitutes": [
+    "slamball",
+    "medball"
+   ],
+   "signature_exercises": [
+    "Sledgehammer tyre strikes",
+    "Alternating overhead strikes",
+    "Sledgehammer levering",
+    "Side-to-side chops"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A shock-absorbing hammer is kinder on your elbows than a builder's sledge.",
+   "safety": "Keep a clear radius around you and strike a tyre that won't bounce it back.",
+   "keywords": "sledgehammer tyre strike"
+  },
+  {
+   "id": "sandbag",
+   "name": "Sandbag",
+   "aliases": [
+    "Strongman sandbag",
+    "Handled sandbag",
+    "Training sandbag",
+    "Duffel bag"
+   ],
+   "category": "Strongman",
+   "subcategory": "Odd objects",
+   "app_group": "Full body",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A fillable bag of sand or pellets; handled versions suit cleans and presses, round strongman bags suit carries and loads.",
+   "muscle_focus": [
+    "Full body",
+    "Core",
+    "Upper back",
+    "Glutes"
+   ],
+   "loading": "Adjustable (dial/pin)",
+   "weight_options": "5–150+ kg (10–330 lb) depending on fill",
+   "adjustability": "Adjust with filler bags; handles vary by model.",
+   "footprint": {
+    "length_cm": 80,
+    "width_cm": 40,
+    "height_cm": 30
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "atlasstone",
+    "keg"
+   ],
+   "signature_exercises": [
+    "Sandbag clean",
+    "Sandbag shouldering",
+    "Sandbag bear-hug carry",
+    "Sandbag load to platform",
+    "Sandbag Zercher squat"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Pick a tough outer shell with inner filler bags; strongman bags have no handles.",
+   "safety": "Contain the filler in sealed inner bags so it doesn't burst.",
+   "keywords": "sandbag carry shoulder"
+  },
+  {
+   "id": "bulgarianbag",
+   "name": "Bulgarian bag",
+   "aliases": [
+    "Crescent sandbag",
+    "Suples bag"
+   ],
+   "category": "Strongman",
+   "subcategory": "Odd objects",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A crescent-shaped weighted bag with handles, swung and spun around the body for rotational strength.",
+   "muscle_focus": [
+    "Shoulders",
+    "Core",
+    "Obliques",
+    "Grip"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "5–35 kg",
+   "adjustability": "Fixed per bag.",
+   "footprint": {
+    "length_cm": 70,
+    "width_cm": 20,
+    "height_cm": 10
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "sandbag",
+    "kettlebells"
+   ],
+   "signature_exercises": [
+    "Bulgarian bag spin",
+    "Bag snatch",
+    "Arm throw",
+    "Bag squat"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Start light (5–10 kg) because the spin loads the shoulders.",
+   "safety": "Keep a clear radius around you when spinning.",
+   "keywords": "bulgarian bag spin"
+  },
+  {
+   "id": "tacky",
+   "name": "Strongman tacky",
+   "aliases": [
+    "Tacky",
+    "Stone tack",
+    "Pine tar grip"
+   ],
+   "category": "Strongman",
+   "subcategory": "Accessories",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A sticky grip paste used on forearms and hands to hold atlas stones and other odd objects.",
+   "muscle_focus": [
+    "Grip"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Tubs 50–300 g",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "chalk"
+   ],
+   "signature_exercises": [
+    "Atlas stone load",
+    "Stone over bar",
+    "Keg load"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Many gyms ban it; buy one with a remover and check your gym's rules.",
+   "safety": "",
+   "keywords": "tacky stone grip"
+  },
+  {
+   "id": "cardeadlift",
+   "name": "Car deadlift frame",
+   "aliases": [
+    "Deadlift frame",
+    "Car deadlift"
+   ],
+   "category": "Strongman",
+   "subcategory": "Pulling implements",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A lever frame lifted from long handles, mimicking lifting the back of a car.",
+   "muscle_focus": [
+    "Hamstrings",
+    "Glutes",
+    "Back",
+    "Grip"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Lever plus plates; up to 400+ kg",
+   "adjustability": "Adjustable pick height on some.",
+   "footprint": {
+    "length_cm": 300,
+    "width_cm": 100,
+    "height_cm": 60
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "trapbar",
+    "framecarry"
+   ],
+   "signature_exercises": [
+    "Car deadlift",
+    "Frame deadlift for reps"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A trap bar with high handles is the practical home stand-in.",
+   "safety": "Brace hard and keep the lower back neutral.",
+   "keywords": "car deadlift frame"
+  },
+  {
+   "id": "powerstairs",
+   "name": "Power stairs",
+   "aliases": [
+    "Duck walk implement",
+    "Stair implement"
+   ],
+   "category": "Strongman",
+   "subcategory": "Carry implements",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A handled weight lifted up a set of steps one step at a time.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings",
+    "Quads",
+    "Grip"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Implement 30–60 kg plus plates; steps ~40 cm",
+   "adjustability": "Plate-loaded implement; fixed step height.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 100,
+    "height_cm": 120
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "trapbar",
+    "farmers"
+   ],
+   "signature_exercises": [
+    "Power stairs",
+    "Duck walk",
+    "Implement deadlift"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Usually a gym piece; a farmer handle and sturdy box can mimic it.",
+   "safety": "Keep the implement swinging between the legs, not into the step.",
+   "keywords": "power stairs duck walk"
+  },
+  {
+   "id": "harness",
+   "name": "Pulling harness",
+   "aliases": [
+    "Truck pull harness",
+    "Sled harness",
+    "Prowler harness"
+   ],
+   "category": "Strongman",
+   "subcategory": "Pulling implements",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A padded harness worn over the shoulders or waist to drag sleds, tyres or vehicles.",
+   "muscle_focus": [
+    "Glutes",
+    "Quads",
+    "Calves"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "Adjustable straps.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "sled"
+   ],
+   "substitutes": [
+    "dipbelt"
+   ],
+   "signature_exercises": [
+    "Forward sled drag",
+    "Truck pull",
+    "Tyre drag",
+    "Backward sled drag"
+   ],
+   "linked_exercise_ids": [
+    "sledfwd",
+    "sledback"
+   ],
+   "buying_tips": "Look for wide padded straps and a strong D-ring.",
+   "safety": "Check the rope and clips before a heavy pull.",
+   "keywords": "harness sled pull drag"
+  },
+  {
+   "id": "steelmace",
+   "name": "Steel mace",
+   "aliases": [
+    "Macebell",
+    "Gada"
+   ],
+   "category": "Strongman",
+   "subcategory": "Clubs & hammers",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A long handle with a weighted ball at one end, swung in circles for shoulder and core strength.",
+   "muscle_focus": [
+    "Shoulders",
+    "Core",
+    "Grip",
+    "Upper back"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "4–20 kg (10–45 lb)",
+   "adjustability": "Fixed; some are plate-loadable.",
+   "footprint": {
+    "length_cm": 110,
+    "width_cm": 20,
+    "height_cm": 20
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "sledgehammer",
+    "kettlebells"
+   ],
+   "signature_exercises": [
+    "Mace 360",
+    "Mace 10-to-2",
+    "Mace barbarian squat",
+    "Mace pendulum swing"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Start with 5–7 kg to learn the 360 before going heavier.",
+   "safety": "Swing with a clear radius and a firm grip.",
+   "keywords": "steel mace 360 macebell"
+  },
+  {
+   "id": "indianclubs",
+   "name": "Indian clubs",
+   "aliases": [
+    "Steel clubs",
+    "Clubbells",
+    "Persian meels"
+   ],
+   "category": "Strongman",
+   "subcategory": "Clubs & hammers",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Bottle-shaped clubs swung in patterns to build shoulder mobility, grip and rotational strength.",
+   "muscle_focus": [
+    "Shoulders",
+    "Forearms",
+    "Core"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "Light 0.5–2 kg; steel clubs 4–20 kg",
+   "adjustability": "Fixed per club; usually bought as a pair.",
+   "footprint": {
+    "length_cm": 50,
+    "width_cm": 15,
+    "height_cm": 15
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "steelmace",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "Club arm cast",
+    "Club mill",
+    "Club shield cast",
+    "Club swipe"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Light wooden clubs suit mobility; steel clubbells suit strength.",
+   "safety": "Start light and swing in a clear area.",
+   "keywords": "indian clubs clubbell"
+  },
+  {
+   "id": "bag",
+   "name": "Punching bag",
+   "aliases": [
+    "Heavy bag",
+    "Boxing bag",
+    "Hanging bag",
+    "Banana bag",
+    "Muay Thai bag"
+   ],
+   "category": "Combat",
+   "subcategory": "Bags",
+   "app_group": "Full body",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A heavy hanging bag for punching and kicking; long (banana) bags suit kicks and knees.",
+   "muscle_focus": [
+    "Shoulders",
+    "Core",
+    "Arms",
+    "Legs"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "Typically 15–60 kg (30–130 lb); 90–180 cm long",
+   "adjustability": "Fixed; mount height adjustable by chain.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 60,
+    "height_cm": 180
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [
+    "gloves",
+    "wraps"
+   ],
+   "substitutes": [
+    "freebag"
+   ],
+   "signature_exercises": [
+    "Heavy bag rounds",
+    "Jab-cross",
+    "Hooks",
+    "Uppercuts",
+    "Roundhouse kicks",
+    "Knees"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Buy a bag about half your body weight and a ceiling mount or stand rated for it.",
+   "safety": "Always wrap hands and wear gloves.",
+   "keywords": "heavy bag punching boxing"
+  },
+  {
+   "id": "freebag",
+   "name": "Freestanding punching bag",
+   "aliases": [
+    "Free-standing bag",
+    "Pedestal bag",
+    "Water-base bag"
+   ],
+   "category": "Combat",
+   "subcategory": "Bags",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A punching bag on a base filled with water or sand, so it needs no ceiling mount.",
+   "muscle_focus": [
+    "Shoulders",
+    "Core",
+    "Arms",
+    "Legs"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "Base 100–150 kg when filled; 150–180 cm tall",
+   "adjustability": "Height adjustable on some.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 60,
+    "height_cm": 175
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [
+    "gloves",
+    "wraps"
+   ],
+   "substitutes": [
+    "bag"
+   ],
+   "signature_exercises": [
+    "Bag rounds",
+    "Jab-cross",
+    "Roundhouse kicks",
+    "Front kicks",
+    "Knees"
+   ],
+   "linked_exercise_ids": [
+    "bagfront",
+    "bagkick",
+    "bagknee",
+    "kickbagrounds",
+    "bagrounds",
+    "bagjabcross",
+    "bag123",
+    "baghook",
+    "bagpunchout"
+   ],
+   "buying_tips": "Fill the base with sand for less sliding; uppercuts are limited on most models.",
+   "safety": "Put it on a mat so it doesn't creep across the floor.",
+   "keywords": "freestanding bag pedestal"
+  },
+  {
+   "id": "speedbag",
+   "name": "Speed bag",
+   "aliases": [
+    "Speed ball",
+    "Speed bag platform",
+    "Rebound platform"
+   ],
+   "category": "Combat",
+   "subcategory": "Bags",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A small air-filled bag hung from a rebound platform and hit rhythmically for hand speed, timing and shoulder endurance.",
+   "muscle_focus": [
+    "Shoulders",
+    "Forearms"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Bags 18–30 cm; platforms 60 cm wide",
+   "adjustability": "Platform height usually adjustable.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 60,
+    "height_cm": 30
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "doubleend"
+   ],
+   "signature_exercises": [
+    "Speed bag rounds",
+    "Fist rolling",
+    "Triplets",
+    "Alternating punches"
+   ],
+   "linked_exercise_ids": [
+    "speedbag"
+   ],
+   "buying_tips": "Buy the platform and bag together; a heavy, stiff platform gives a cleaner rebound.",
+   "safety": "Set the bag at mouth height so you don't strain the shoulders.",
+   "keywords": "speed bag platform"
+  },
+  {
+   "id": "doubleend",
+   "name": "Double-end bag",
+   "aliases": [
+    "Floor-to-ceiling ball",
+    "Double end ball"
+   ],
+   "category": "Combat",
+   "subcategory": "Bags",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A small ball fixed by elastic cords to floor and ceiling that springs back for accuracy and slipping drills.",
+   "muscle_focus": [
+    "Shoulders",
+    "Arms"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "Ball 15–25 cm",
+   "adjustability": "Cord tension adjustable.",
+   "footprint": {
+    "length_cm": 100,
+    "width_cm": 100,
+    "height_cm": 250
+   },
+   "space": "M",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "reflexbag",
+    "speedbag"
+   ],
+   "signature_exercises": [
+    "Double-end bag rounds",
+    "Jab and slip",
+    "Counter punching"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Need solid floor and ceiling anchors; tension changes the speed.",
+   "safety": "Wear light gloves to protect knuckles.",
+   "keywords": "double end bag"
+  },
+  {
+   "id": "uppercutbag",
+   "name": "Uppercut bag",
+   "aliases": [
+    "Angle bag",
+    "Wall uppercut bag",
+    "Teardrop bag"
+   ],
+   "category": "Combat",
+   "subcategory": "Bags",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A bag shaped or mounted so you can throw uppercuts and hooks at an angle, which a straight heavy bag can't take well.",
+   "muscle_focus": [
+    "Shoulders",
+    "Core",
+    "Arms"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "15–40 kg",
+   "adjustability": "Fixed; wall-mounted or hanging.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 60,
+    "height_cm": 100
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [
+    "gloves",
+    "wraps"
+   ],
+   "substitutes": [
+    "bag"
+   ],
+   "signature_exercises": [
+    "Uppercuts",
+    "Body hooks",
+    "Shovel hooks"
+   ],
+   "linked_exercise_ids": [
+    "baguppercut",
+    "baghook"
+   ],
+   "buying_tips": "Wall-mounted versions save space.",
+   "safety": "Wrap hands; uppercuts stress the wrists.",
+   "keywords": "uppercut angle bag"
+  },
+  {
+   "id": "wallbag",
+   "name": "Wall bag",
+   "aliases": [
+    "Wall pad",
+    "Wall-mounted punching pad"
+   ],
+   "category": "Combat",
+   "subcategory": "Bags",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A padded target screwed to the wall for punching where there is no room for a hanging bag.",
+   "muscle_focus": [
+    "Shoulders",
+    "Arms",
+    "Core"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "60–90 cm tall",
+   "adjustability": "Fixed; mount height of choice.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 15,
+    "height_cm": 90
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "gloves",
+    "wraps"
+   ],
+   "substitutes": [
+    "bag"
+   ],
+   "signature_exercises": [
+    "Jab-cross",
+    "Hooks",
+    "Punch-outs"
+   ],
+   "linked_exercise_ids": [
+    "bagjabcross",
+    "bagpunchout"
+   ],
+   "buying_tips": "Mount to studs or masonry, not plasterboard.",
+   "safety": "Wrap and glove up; the wall gives no swing.",
+   "keywords": "wall bag pad"
+  },
+  {
+   "id": "slipbag",
+   "name": "Slip bag",
+   "aliases": [
+    "Maize bag",
+    "Slip ball"
+   ],
+   "category": "Combat",
+   "subcategory": "Bags",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A small weighted ball hung on a rope at head height for practising slipping and head movement.",
+   "muscle_focus": [
+    "Neck",
+    "Legs",
+    "Core"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "0.5–2 kg ball",
+   "adjustability": "String length adjustable.",
+   "footprint": {
+    "length_cm": 30,
+    "width_cm": 30,
+    "height_cm": 200
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "doubleend"
+   ],
+   "signature_exercises": [
+    "Slip drills",
+    "Bob and weave",
+    "Counter jab"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A tennis ball in a sock on a string is a free stand-in.",
+   "safety": "",
+   "keywords": "slip bag maize head movement"
+  },
+  {
+   "id": "reflexbag",
+   "name": "Reflex bag",
+   "aliases": [
+    "Reflex ball stand",
+    "Spinning reflex bar",
+    "Boxing reflex ball"
+   ],
+   "category": "Combat",
+   "subcategory": "Bags",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A ball or pad on a spring-loaded stand (or headband) that rebounds quickly for speed and reaction drills.",
+   "muscle_focus": [
+    "Shoulders",
+    "Arms"
+   ],
+   "loading": "Spring",
+   "weight_options": "Stand 120–170 cm",
+   "adjustability": "Height adjustable.",
+   "footprint": {
+    "length_cm": 50,
+    "width_cm": 50,
+    "height_cm": 160
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "doubleend",
+    "speedbag"
+   ],
+   "signature_exercises": [
+    "Reflex ball punches",
+    "Jab and slip",
+    "Rapid combinations"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A weighted base that doesn't tip matters more than the ball.",
+   "safety": "",
+   "keywords": "reflex bag ball stand"
+  },
+  {
+   "id": "bobdummy",
+   "name": "Torso dummy",
+   "aliases": [
+    "BOB dummy",
+    "Body opponent bag",
+    "Mannequin bag"
+   ],
+   "category": "Combat",
+   "subcategory": "Bags",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A freestanding human-shaped target for accurate strikes to head and body.",
+   "muscle_focus": [
+    "Shoulders",
+    "Arms",
+    "Core"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "Base 100–140 kg filled; 150–200 cm",
+   "adjustability": "Height adjustable.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 60,
+    "height_cm": 190
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [
+    "gloves",
+    "wraps"
+   ],
+   "substitutes": [
+    "freebag"
+   ],
+   "signature_exercises": [
+    "Target combinations",
+    "Head-body combinations",
+    "Elbows"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Fill with sand rather than water for stability.",
+   "safety": "",
+   "keywords": "bob dummy mannequin"
+  },
+  {
+   "id": "grapplingdummy",
+   "name": "Grappling dummy",
+   "aliases": [
+    "Throwing dummy",
+    "BJJ dummy",
+    "Wrestling dummy"
+   ],
+   "category": "Combat",
+   "subcategory": "Grappling",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 2,
+   "setting": "home",
+   "description": "A weighted human-shaped bag with limbs for practising throws, takedowns, ground and pound and submissions.",
+   "muscle_focus": [
+    "Full body",
+    "Core",
+    "Grip"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "10–35 kg; filled or fillable",
+   "adjustability": "Some fillable to change weight.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 50,
+    "height_cm": 25
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [
+    "tatami"
+   ],
+   "substitutes": [
+    "sandbag"
+   ],
+   "signature_exercises": [
+    "Dummy throws",
+    "Ground and pound",
+    "Guard passing",
+    "Mount transitions"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A dummy with legs that can be posed suits BJJ; a heavier one suits throws.",
+   "safety": "Throw onto mats only.",
+   "keywords": "grappling dummy bjj"
+  },
+  {
+   "id": "focusmitts",
+   "name": "Focus mitts",
+   "aliases": [
+    "Pads",
+    "Punch mitts",
+    "Hook and jab pads"
+   ],
+   "category": "Combat",
+   "subcategory": "Pads & targets",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Hand-held padded targets a partner wears so you can drill punch combinations and defence.",
+   "muscle_focus": [
+    "Shoulders",
+    "Arms",
+    "Core"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Pair",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "gloves"
+   ],
+   "substitutes": [
+    "thaipads"
+   ],
+   "signature_exercises": [
+    "Pad combinations",
+    "Jab-cross on mitts",
+    "Slip and counter"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Curved mitts with good wrist support help the holder.",
+   "safety": "The holder should meet, not push into, the punch.",
+   "keywords": "focus mitts pads"
+  },
+  {
+   "id": "thaipads",
+   "name": "Thai pads",
+   "aliases": [
+    "Kick pads",
+    "Muay Thai pads",
+    "Thai kick pads"
+   ],
+   "category": "Combat",
+   "subcategory": "Pads & targets",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Long forearm-strapped pads a partner holds for kicks, knees, elbows and punches.",
+   "muscle_focus": [
+    "Legs",
+    "Core",
+    "Shoulders"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Pair, ~40 cm long",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "gloves"
+   ],
+   "substitutes": [
+    "kickshield"
+   ],
+   "signature_exercises": [
+    "Roundhouse kicks on pads",
+    "Teep",
+    "Knee strikes",
+    "Elbows"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Curved pads with double straps hold up to kicks.",
+   "safety": "",
+   "keywords": "thai pads kick muay thai"
+  },
+  {
+   "id": "kickshield",
+   "name": "Kick shield",
+   "aliases": [
+    "Strike shield",
+    "Kick bag shield"
+   ],
+   "category": "Combat",
+   "subcategory": "Pads & targets",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A large, thick hand-held pad for full-power kicks, knees and pushes.",
+   "muscle_focus": [
+    "Legs",
+    "Glutes",
+    "Core"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "60–80 cm long",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "thaipads"
+   ],
+   "signature_exercises": [
+    "Push kicks",
+    "Side kicks",
+    "Power kicks"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Curved shields absorb more of the kick for the holder.",
+   "safety": "",
+   "keywords": "kick shield strike pad"
+  },
+  {
+   "id": "bellypad",
+   "name": "Belly pad",
+   "aliases": [
+    "Body protector",
+    "Trainer belly pad"
+   ],
+   "category": "Combat",
+   "subcategory": "Pads & targets",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A thick body protector a coach wears so you can land body shots and teeps.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "Adjustable straps.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "kickshield"
+   ],
+   "signature_exercises": [
+    "Teeps to the body",
+    "Body hooks",
+    "Knee strikes"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Mainly for coaches; check strap adjustment.",
+   "safety": "",
+   "keywords": "belly pad body protector"
+  },
+  {
+   "id": "gloves",
+   "name": "Boxing gloves",
+   "aliases": [
+    "Bag gloves",
+    "Sparring gloves",
+    "Training gloves",
+    "Muay Thai gloves"
+   ],
+   "category": "Combat",
+   "subcategory": "Protective gear",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Padded gloves that protect your hands (and partners) on bags, pads and in sparring.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "8–20 oz; 12–16 oz most common",
+   "adjustability": "Lace-up or hook-and-loop.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "wraps"
+   ],
+   "substitutes": [
+    "mmagloves"
+   ],
+   "signature_exercises": [
+    "Heavy bag rounds",
+    "Pad work",
+    "Sparring"
+   ],
+   "linked_exercise_ids": [
+    "bagrounds",
+    "bagjabcross",
+    "bag123",
+    "baghook",
+    "baguppercut",
+    "bagpunchout",
+    "kickbagrounds"
+   ],
+   "buying_tips": "14–16 oz for general training and sparring; hook-and-loop is easiest solo.",
+   "safety": "Always wrap hands underneath.",
+   "keywords": "boxing gloves"
+  },
+  {
+   "id": "mmagloves",
+   "name": "MMA gloves",
+   "aliases": [
+    "Grappling gloves",
+    "Hybrid gloves",
+    "Open-finger gloves"
+   ],
+   "category": "Combat",
+   "subcategory": "Protective gear",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Thin open-finger gloves that allow grappling as well as striking.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "4–7 oz",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "wraps"
+   ],
+   "substitutes": [
+    "gloves"
+   ],
+   "signature_exercises": [
+    "Ground and pound",
+    "MMA bag work",
+    "Grappling"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "7 oz hybrid gloves are better for sparring than 4 oz fight gloves.",
+   "safety": "They give less protection; go lighter on heavy bags.",
+   "keywords": "mma gloves"
+  },
+  {
+   "id": "wraps",
+   "name": "Hand wraps",
+   "aliases": [
+    "Boxing wraps",
+    "Gel wraps",
+    "Quick wraps"
+   ],
+   "category": "Combat",
+   "subcategory": "Protective gear",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Cloth strips wound around the hands and wrists under gloves to support knuckles and wrists.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "3–5 m (120–180 in)",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "gloves"
+   ],
+   "signature_exercises": [
+    "Heavy bag rounds",
+    "Pad work",
+    "Speed bag"
+   ],
+   "linked_exercise_ids": [
+    "bagrounds",
+    "bagjabcross",
+    "bag123",
+    "baghook",
+    "baguppercut",
+    "bagpunchout",
+    "kickbagrounds"
+   ],
+   "buying_tips": "180 in Mexican-style wraps suit most adults; gel wraps are quicker but less supportive.",
+   "safety": "Wrap firmly across the knuckles but not tight enough to numb fingers.",
+   "keywords": "hand wraps"
+  },
+  {
+   "id": "mouthguard",
+   "name": "Mouthguard",
+   "aliases": [
+    "Gum shield",
+    "Mouth guard"
+   ],
+   "category": "Combat",
+   "subcategory": "Protective gear",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A shaped guard over the teeth to protect them and the jaw during sparring and contact.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "Boil-and-bite or custom",
+   "adjustability": "Mouldable.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [
+    "Sparring",
+    "Grappling",
+    "Contact drills"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Boil-and-bite is fine to start; custom-fit is worth it for regular sparring.",
+   "safety": "Wear one for any contact sparring.",
+   "keywords": "mouthguard gumshield"
+  },
+  {
+   "id": "shinguards",
+   "name": "Shin guards",
+   "aliases": [
+    "Shin pads",
+    "Shin and instep guards"
+   ],
+   "category": "Combat",
+   "subcategory": "Protective gear",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Padded guards covering the shin and instep for kicking pads, bags and sparring partners.",
+   "muscle_focus": [
+    "Legs"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "S–XL",
+   "adjustability": "Strap or sleeve fit.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [
+    "Roundhouse kicks",
+    "Checking kicks",
+    "Kickboxing sparring"
+   ],
+   "linked_exercise_ids": [
+    "bagkick",
+    "kickbagrounds",
+    "bagfront",
+    "bagknee"
+   ],
+   "buying_tips": "Strapped guards with instep protection stay put better.",
+   "safety": "",
+   "keywords": "shin guards pads"
+  },
+  {
+   "id": "headgear",
+   "name": "Headgear",
+   "aliases": [
+    "Head guard",
+    "Sparring helmet"
+   ],
+   "category": "Combat",
+   "subcategory": "Protective gear",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Padded headgear worn for sparring to reduce cuts and bruising.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "S–XL",
+   "adjustability": "Adjustable laces or straps.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [
+    "Sparring",
+    "Partner drills"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Check it doesn't block your vision when you tuck your chin.",
+   "safety": "It reduces cuts, not concussion risk; spar sensibly.",
+   "keywords": "headgear head guard"
+  },
+  {
+   "id": "groinguard",
+   "name": "Groin guard",
+   "aliases": [
+    "Cup",
+    "Groin protector",
+    "Jockstrap cup"
+   ],
+   "category": "Combat",
+   "subcategory": "Protective gear",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A protective cup or guard worn for kicking sports and sparring.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "S–XL",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [
+    "Kickboxing sparring",
+    "Muay Thai clinch"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Steel cups are standard for Muay Thai.",
+   "safety": "",
+   "keywords": "groin guard cup"
+  },
+  {
+   "id": "tatami",
+   "name": "Martial arts mats",
+   "aliases": [
+    "Tatami",
+    "Judo mats",
+    "Grappling mats",
+    "Jigsaw mats"
+   ],
+   "category": "Combat",
+   "subcategory": "Grappling",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Thick foam mats that cushion falls for grappling, throws and floor work.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "Tiles 1×1 m, 2–5 cm thick",
+   "adjustability": "Interlocking tiles to any size.",
+   "footprint": {
+    "length_cm": 300,
+    "width_cm": 300,
+    "height_cm": 4
+   },
+   "space": "L",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "yogamat"
+   ],
+   "signature_exercises": [
+    "Breakfalls",
+    "Grappling drills",
+    "Throws",
+    "Ground work"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "4 cm is the minimum for throws; jigsaw mats are fine for drilling.",
+   "safety": "",
+   "keywords": "martial arts mats tatami grappling"
+  },
+  {
+   "id": "boxingring",
+   "name": "Boxing ring",
+   "aliases": [
+    "Ring",
+    "MMA cage",
+    "Octagon"
+   ],
+   "category": "Combat",
+   "subcategory": "Grappling",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A raised, roped (or caged) square for sparring and bouts.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "4.9–7.3 m (16–24 ft) square",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 600,
+    "width_cm": 600,
+    "height_cm": 100
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "tatami"
+   ],
+   "substitutes": [],
+   "signature_exercises": [
+    "Sparring",
+    "Ring cutting drills"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A gym fixture; floor rings are cheaper than raised ones.",
+   "safety": "",
+   "keywords": "boxing ring cage"
+  },
+  {
+   "id": "neckharness",
+   "name": "Neck harness",
+   "aliases": [
+    "Head harness",
+    "Neck strap"
+   ],
+   "category": "Combat",
+   "subcategory": "Conditioning",
+   "app_group": "Combat",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A harness that sits on the head with a chain to hang weight from, used to strengthen the neck.",
+   "muscle_focus": [
+    "Neck",
+    "Upper traps"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Plates 2.5–25 kg",
+   "adjustability": "Adjustable straps.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "bands"
+   ],
+   "signature_exercises": [
+    "Neck flexion",
+    "Neck extension",
+    "Neck harness hold"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Look for padded straps and a long chain.",
+   "safety": "Start very light and move slowly.",
+   "keywords": "neck harness"
+  },
+  {
+   "id": "gripper",
+   "name": "Hand grippers",
+   "aliases": [
+    "Captains of Crush",
+    "Grip strengthener",
+    "Torsion spring gripper"
+   ],
+   "category": "Grip",
+   "subcategory": "Crush grip",
+   "app_group": "Arms",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "Spring-loaded handles you squeeze shut to train crushing grip strength.",
+   "muscle_focus": [
+    "Forearms",
+    "Grip"
+   ],
+   "loading": "Spring",
+   "weight_options": "20–165+ kg rated (45–365 lb)",
+   "adjustability": "Fixed per gripper; buy several levels.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "adjgripper",
+    "gripball"
+   ],
+   "signature_exercises": [
+    "Hand gripper squeeze",
+    "Gripper hold",
+    "Negatives"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A set of 3–4 levels lets you progress; quality knurled grippers last longer.",
+   "safety": "",
+   "keywords": "grip strength gripper"
+  },
+  {
+   "id": "adjgripper",
+   "name": "Adjustable hand gripper",
+   "aliases": [
+    "Adjustable grip strengthener"
+   ],
+   "category": "Grip",
+   "subcategory": "Crush grip",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A gripper with a dial that sets the spring tension, so one tool covers many levels.",
+   "muscle_focus": [
+    "Forearms",
+    "Grip"
+   ],
+   "loading": "Adjustable (dial/pin)",
+   "weight_options": "10–60 kg range typical",
+   "adjustability": "Dial-adjustable.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "gripper"
+   ],
+   "signature_exercises": [
+    "Gripper squeeze",
+    "Gripper holds",
+    "High-rep squeezes"
+   ],
+   "linked_exercise_ids": [
+    "gripper"
+   ],
+   "buying_tips": "Fine for general grip; serious grip trainers prefer fixed grippers.",
+   "safety": "",
+   "keywords": "adjustable gripper"
+  },
+  {
+   "id": "fatgrips",
+   "name": "Thick bar grips",
+   "aliases": [
+    "Fat Gripz",
+    "Thick grips",
+    "Axle grips"
+   ],
+   "category": "Grip",
+   "subcategory": "Support grip",
+   "app_group": "Arms",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "Rubber sleeves that slip over a bar or dumbbell handle to make it thicker and harder to grip.",
+   "muscle_focus": [
+    "Forearms",
+    "Grip"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "5–7 cm diameter",
+   "adjustability": "Pick the diameter.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "axlebar"
+   ],
+   "signature_exercises": [
+    "Thick-grip curls",
+    "Thick-grip holds",
+    "Thick-grip rows",
+    "Axle deadlift"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Two sizes cover most uses.",
+   "safety": "",
+   "keywords": "fat grip thick"
+  },
+  {
+   "id": "wristroller",
+   "name": "Wrist roller",
+   "aliases": [
+    "Forearm roller",
+    "Wrist roller with rope"
+   ],
+   "category": "Grip",
+   "subcategory": "Wrist & forearm",
+   "app_group": "Arms",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A handle with a rope and a plate hanging from it; rolling the rope up and down works the forearms.",
+   "muscle_focus": [
+    "Forearms",
+    "Grip"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Plates 2.5–20 kg",
+   "adjustability": "Add or remove plates.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "leverbar"
+   ],
+   "signature_exercises": [
+    "Wrist roller",
+    "Reverse wrist roller"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A thick handle and a long rope give more work per rep.",
+   "safety": "Keep shoulders down; don't drop the weight fast.",
+   "keywords": "wrist roller forearm"
+  },
+  {
+   "id": "pinchblock",
+   "name": "Pinch block",
+   "aliases": [
+    "Blob",
+    "Pinch grip block",
+    "Hub"
+   ],
+   "category": "Grip",
+   "subcategory": "Pinch grip",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A block you pinch between thumb and fingers with weight hung below, for pinch grip strength.",
+   "muscle_focus": [
+    "Forearms",
+    "Thumb",
+    "Grip"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Block plus plates",
+   "adjustability": "Load via a loading pin or strap.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "loadingpin",
+    "plates"
+   ],
+   "substitutes": [
+    "plates",
+    "hexdumbbells"
+   ],
+   "signature_exercises": [
+    "Pinch block deadlift",
+    "Pinch hold",
+    "Pinch carry"
+   ],
+   "linked_exercise_ids": [
+    "platepinch",
+    "dbpinchhold"
+   ],
+   "buying_tips": "Pinching two smooth plates or a hex dumbbell head works too.",
+   "safety": "",
+   "keywords": "pinch block blob grip"
+  },
+  {
+   "id": "loadingpin",
+   "name": "Loading pin",
+   "aliases": [
+    "Grip loading pin",
+    "Weight tree pin"
+   ],
+   "category": "Grip",
+   "subcategory": "Accessories",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A short pole with a base you load plates on, used with grip tools, pinch blocks or rolling handles.",
+   "muscle_focus": [
+    "Grip"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds 25–100 kg of plates",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "kettlebells"
+   ],
+   "signature_exercises": [
+    "Pinch lifts",
+    "Rolling handle lifts",
+    "Loading-pin pull"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Choose one with a carabiner or clip at the top.",
+   "safety": "",
+   "keywords": "loading pin grip"
+  },
+  {
+   "id": "gripball",
+   "name": "Grip ball",
+   "aliases": [
+    "Stress ball",
+    "Grip putty",
+    "Therapy putty",
+    "Squeeze ball"
+   ],
+   "category": "Grip",
+   "subcategory": "Crush grip",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 0,
+   "setting": "home",
+   "description": "A squeezable rubber ball or putty for light grip work and hand rehab.",
+   "muscle_focus": [
+    "Forearms",
+    "Grip"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "Soft to firm grades",
+   "adjustability": "Buy several grades.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "gripper"
+   ],
+   "signature_exercises": [
+    "Ball squeeze",
+    "Putty pinches",
+    "Finger presses"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Good for rehab and endurance; not for max grip.",
+   "safety": "",
+   "keywords": "grip ball putty"
+  },
+  {
+   "id": "ricebucket",
+   "name": "Rice bucket",
+   "aliases": [
+    "Grip bucket"
+   ],
+   "category": "Grip",
+   "subcategory": "Wrist & forearm",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 0,
+   "setting": "home",
+   "description": "A bucket of dry rice you dig, open and twist your hands in to train fingers, wrists and forearms.",
+   "muscle_focus": [
+    "Forearms",
+    "Fingers"
+   ],
+   "loading": "Friction",
+   "weight_options": "10–20 kg of rice",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 30,
+    "width_cm": 30,
+    "height_cm": 40
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "fingerbands",
+    "gripball"
+   ],
+   "signature_exercises": [
+    "Rice bucket grabs",
+    "Finger extensions",
+    "Wrist rotations"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Any deep bucket and 10 kg of rice works.",
+   "safety": "",
+   "keywords": "rice bucket grip"
+  },
+  {
+   "id": "fingerbands",
+   "name": "Finger extensor bands",
+   "aliases": [
+    "Finger bands",
+    "Hand expander",
+    "Finger trainer"
+   ],
+   "category": "Grip",
+   "subcategory": "Finger extensors",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 0,
+   "setting": "home",
+   "description": "Small loops or sleeves you open your fingers against, to balance gripping work and protect elbows.",
+   "muscle_focus": [
+    "Forearms",
+    "Fingers"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "Light to heavy grades",
+   "adjustability": "Buy a set of grades.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "bands",
+    "ricebucket"
+   ],
+   "signature_exercises": [
+    "Finger extensions",
+    "Finger spreads"
+   ],
+   "linked_exercise_ids": [
+    "fingerext"
+   ],
+   "buying_tips": "A rubber band works; dedicated bands give more range.",
+   "safety": "",
+   "keywords": "finger extensor bands"
+  },
+  {
+   "id": "rollinghandle",
+   "name": "Rolling handle",
+   "aliases": [
+    "Rotating handle",
+    "Rolling thunder"
+   ],
+   "category": "Grip",
+   "subcategory": "Support grip",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A spinning handle that hangs weight beneath it, making one-hand holds and deadlifts much harder.",
+   "muscle_focus": [
+    "Forearms",
+    "Grip"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Handle plus plates",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "loadingpin",
+    "plates"
+   ],
+   "substitutes": [
+    "fatgrips"
+   ],
+   "signature_exercises": [
+    "Rolling handle deadlift",
+    "One-hand hold"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Clip onto a loading pin or cable stack.",
+   "safety": "",
+   "keywords": "rolling handle grip"
+  },
+  {
+   "id": "gyroball",
+   "name": "Gyro wrist ball",
+   "aliases": [
+    "Powerball",
+    "Gyroscopic wrist trainer"
+   ],
+   "category": "Grip",
+   "subcategory": "Wrist & forearm",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 0,
+   "setting": "home",
+   "description": "A hand-held gyroscope you spin up with wrist circles, training forearm endurance.",
+   "muscle_focus": [
+    "Forearms",
+    "Wrists"
+   ],
+   "loading": "Friction",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "wristroller"
+   ],
+   "signature_exercises": [
+    "Wrist circles",
+    "Gyro spin"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Better for endurance and rehab than strength.",
+   "safety": "",
+   "keywords": "gyro ball powerball"
+  },
+  {
+   "id": "leverbar",
+   "name": "Leverage bar",
+   "aliases": [
+    "Thor's hammer",
+    "Wrist leverage bar",
+    "Mace handle"
+   ],
+   "category": "Grip",
+   "subcategory": "Wrist & forearm",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A handle with weight at one end you lever up and down to train wrist radial and ulnar deviation.",
+   "muscle_focus": [
+    "Forearms",
+    "Wrists"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Handle plus plates; a sledgehammer works",
+   "adjustability": "Slide your hand to change leverage.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "sledgehammer",
+    "adjdumbbells"
+   ],
+   "signature_exercises": [
+    "Levering",
+    "Radial deviation",
+    "Ulnar deviation"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A loadable dumbbell handle with weight on one end works.",
+   "safety": "Move slowly; don't let it crash into the wrist.",
+   "keywords": "leverage bar thor hammer"
+  },
+  {
+   "id": "flexbar",
+   "name": "Flex bar",
+   "aliases": [
+    "Twist bar",
+    "Theraband flexbar",
+    "Tennis elbow bar"
+   ],
+   "category": "Grip",
+   "subcategory": "Wrist & forearm",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 0,
+   "setting": "home",
+   "description": "A flexible rubber bar you twist and bend to rehab tennis and golfer's elbow.",
+   "muscle_focus": [
+    "Forearms",
+    "Wrists"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "Colour-coded grades",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [
+    "Tyler twist",
+    "Reverse Tyler twist",
+    "Bar bend"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Pick the grade a physio suggests; red or green suits most.",
+   "safety": "",
+   "keywords": "flexbar tennis elbow"
+  },
+  {
+   "id": "cannonballs",
+   "name": "Grip balls for pull-ups",
+   "aliases": [
+    "Cannonball grips",
+    "Pull-up grip balls",
+    "Climbing holds"
+   ],
+   "category": "Grip",
+   "subcategory": "Support grip",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "Balls or holds hung from a bar to make pull-ups and hangs much harder on the grip.",
+   "muscle_focus": [
+    "Forearms",
+    "Grip",
+    "Lats"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "6–10 cm diameter",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "pullupbar"
+   ],
+   "substitutes": [
+    "fatgrips"
+   ],
+   "signature_exercises": [
+    "Ball grip hang",
+    "Ball grip pull-up",
+    "Towel pull-up"
+   ],
+   "linked_exercise_ids": [
+    "deadhang"
+   ],
+   "buying_tips": "Two sizes give progression.",
+   "safety": "",
+   "keywords": "grip balls pull-up"
+  },
+  {
+   "id": "stabball",
+   "name": "Stability / Swiss ball",
+   "aliases": [
+    "Swiss ball",
+    "Exercise ball",
+    "Physio ball",
+    "Fitness ball"
+   ],
+   "category": "Balance",
+   "subcategory": "Balls",
+   "app_group": "Core",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A large inflatable ball used for core, balance and supported stretching work.",
+   "muscle_focus": [
+    "Core",
+    "Glutes",
+    "Hamstrings"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "45, 55, 65, 75 cm",
+   "adjustability": "Choose by height; firmness by inflation.",
+   "footprint": {
+    "length_cm": 65,
+    "width_cm": 65,
+    "height_cm": 65
+   },
+   "space": "M",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "bosu"
+   ],
+   "signature_exercises": [
+    "Ball crunch",
+    "Ball pike",
+    "Stir the pot",
+    "Ball hamstring curl"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Anti-burst rated; 65 cm suits most adults 165–185 cm tall.",
+   "safety": "Inflate fully and keep away from sharp objects.",
+   "keywords": "swiss ball exercise"
+  },
+  {
+   "id": "bosu",
+   "name": "BOSU ball",
+   "aliases": [
+    "Balance trainer",
+    "Half ball",
+    "Dome"
+   ],
+   "category": "Balance",
+   "subcategory": "Balance trainers",
+   "app_group": "Core",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "A half-sphere on a flat base for balance, core and plyometric work on either side.",
+   "muscle_focus": [
+    "Core",
+    "Ankles",
+    "Legs"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "~65 cm diameter",
+   "adjustability": "Firmness by inflation.",
+   "footprint": {
+    "length_cm": 65,
+    "width_cm": 65,
+    "height_cm": 25
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "balancepad",
+    "stabball"
+   ],
+   "signature_exercises": [
+    "BOSU squat",
+    "BOSU plank",
+    "Single-leg balance",
+    "BOSU crunch"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Branded ones last longer; compare the base grip.",
+   "safety": "Step on dome-up for balance; flat-side-up is much harder.",
+   "keywords": "balance bosu"
+  },
+  {
+   "id": "wobbleboard",
+   "name": "Wobble board",
+   "aliases": [
+    "Rocker board",
+    "Balance disc board"
+   ],
+   "category": "Balance",
+   "subcategory": "Balance boards",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A round board on a half-sphere that tilts in all directions to train ankle stability.",
+   "muscle_focus": [
+    "Ankles",
+    "Calves",
+    "Core"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "35–50 cm diameter",
+   "adjustability": "Some have removable domes for different difficulty.",
+   "footprint": {
+    "length_cm": 45,
+    "width_cm": 45,
+    "height_cm": 8
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "bosu",
+    "balancepad"
+   ],
+   "signature_exercises": [
+    "Single-leg balance",
+    "Board circles",
+    "Squat on board"
+   ],
+   "linked_exercise_ids": [
+    "starexc",
+    "ybalance"
+   ],
+   "buying_tips": "Wooden boards with a grippy top are durable.",
+   "safety": "Start beside a wall or rail.",
+   "keywords": "wobble board ankle"
+  },
+  {
+   "id": "balanceboard",
+   "name": "Balance board",
+   "aliases": [
+    "Rocker roller board",
+    "Indo board",
+    "Surf balance board",
+    "Roller board"
+   ],
+   "category": "Balance",
+   "subcategory": "Balance boards",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A deck on a roller or rocker that moves side to side for surf, ski and skate balance training.",
+   "muscle_focus": [
+    "Ankles",
+    "Core",
+    "Legs"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Deck 70–90 cm",
+   "adjustability": "Roller size changes difficulty.",
+   "footprint": {
+    "length_cm": 90,
+    "width_cm": 30,
+    "height_cm": 15
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "wobbleboard"
+   ],
+   "signature_exercises": [
+    "Board balance",
+    "Board squats",
+    "Board rail-to-rail"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Roller boards are harder than rocker boards; start on carpet.",
+   "safety": "Use near a wall and wear a helmet on roller boards early on.",
+   "keywords": "balance board indo"
+  },
+  {
+   "id": "balancepad",
+   "name": "Balance pad",
+   "aliases": [
+    "Foam balance pad",
+    "Airex pad"
+   ],
+   "category": "Balance",
+   "subcategory": "Balance trainers",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A thick, soft foam pad that makes standing exercises less stable.",
+   "muscle_focus": [
+    "Ankles",
+    "Core"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "~50×40×6 cm",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 50,
+    "width_cm": 40,
+    "height_cm": 6
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "bosu",
+    "yogamat"
+   ],
+   "signature_exercises": [
+    "Single-leg balance",
+    "Pad squats",
+    "Pad lunges"
+   ],
+   "linked_exercise_ids": [
+    "starexc",
+    "ybalance"
+   ],
+   "buying_tips": "Closed-cell foam doesn't flatten as fast.",
+   "safety": "",
+   "keywords": "balance pad foam"
+  },
+  {
+   "id": "balancedisc",
+   "name": "Balance cushion",
+   "aliases": [
+    "Wobble cushion",
+    "Air disc",
+    "Stability disc"
+   ],
+   "category": "Balance",
+   "subcategory": "Balance trainers",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 0,
+   "setting": "home",
+   "description": "A small inflatable disc for balance work or active sitting.",
+   "muscle_focus": [
+    "Ankles",
+    "Core"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "33–35 cm diameter",
+   "adjustability": "Firmness by inflation.",
+   "footprint": {
+    "length_cm": 35,
+    "width_cm": 35,
+    "height_cm": 6
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "balancepad"
+   ],
+   "signature_exercises": [
+    "Single-leg balance",
+    "Seated balance",
+    "Disc squats"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Cheap way to add instability to home workouts.",
+   "safety": "",
+   "keywords": "balance cushion disc"
+  },
+  {
+   "id": "slackline",
+   "name": "Slackline",
+   "aliases": [
+    "Balance line"
+   ],
+   "category": "Balance",
+   "subcategory": "Lines & beams",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A flat webbing line tensioned between two anchors (trees or a frame) and walked for balance.",
+   "muscle_focus": [
+    "Core",
+    "Legs",
+    "Ankles"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "15–25 m lines",
+   "adjustability": "Tension by ratchet.",
+   "footprint": {
+    "length_cm": 1500,
+    "width_cm": 100,
+    "height_cm": 60
+   },
+   "space": "L",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "balancebeam"
+   ],
+   "signature_exercises": [
+    "Slackline walk",
+    "Slackline stand"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Starter kits include a training line; protect trees with tree pads.",
+   "safety": "Keep it low and over soft ground.",
+   "keywords": "slackline balance"
+  },
+  {
+   "id": "balancebeam",
+   "name": "Balance beam",
+   "aliases": [
+    "Floor beam",
+    "Gymnastics beam"
+   ],
+   "category": "Balance",
+   "subcategory": "Lines & beams",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A narrow raised or floor beam for balance and gymnastics drills.",
+   "muscle_focus": [
+    "Core",
+    "Ankles"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "2–3 m long; floor or raised",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 240,
+    "width_cm": 10,
+    "height_cm": 10
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "slackline"
+   ],
+   "signature_exercises": [
+    "Beam walk",
+    "Single-leg balance",
+    "Turns"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Folding floor beams store easily.",
+   "safety": "",
+   "keywords": "balance beam"
+  },
+  {
+   "id": "balancepods",
+   "name": "Balance pods",
+   "aliases": [
+    "Balance domes",
+    "Stepping stones",
+    "Balance pucks"
+   ],
+   "category": "Balance",
+   "subcategory": "Balance trainers",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Small half-domes placed on the floor to step or stand on for balance and agility.",
+   "muscle_focus": [
+    "Ankles",
+    "Core"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Sets of 2–6, ~15 cm",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "bosu",
+    "balancepad"
+   ],
+   "signature_exercises": [
+    "Pod hops",
+    "Pod single-leg balance",
+    "Stepping-stone course"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Good for rehab and kids' circuits.",
+   "safety": "",
+   "keywords": "balance pods domes"
+  },
+  {
+   "id": "foamroller",
+   "name": "Foam roller",
+   "aliases": [
+    "Textured roller",
+    "Vibrating roller",
+    "Half roller",
+    "Mini roller"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Rollers",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A firm foam cylinder you roll on to release tight muscles; smooth, textured and vibrating types vary in intensity.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "30–90 cm long, 15 cm diameter",
+   "adjustability": "Pick density.",
+   "footprint": {
+    "length_cm": 90,
+    "width_cm": 15,
+    "height_cm": 15
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "massagestick",
+    "massageball"
+   ],
+   "signature_exercises": [
+    "Foam roll thoracic spine",
+    "Quads",
+    "IT band",
+    "Calves",
+    "Lats"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A 90 cm medium-density roller suits most; go textured or vibrating later.",
+   "safety": "Avoid rolling directly on joints or the lower back.",
+   "keywords": "mobility recovery roller"
+  },
+  {
+   "id": "massageball",
+   "name": "Massage / lacrosse ball",
+   "aliases": [
+    "Lacrosse ball",
+    "Spiky ball",
+    "Trigger point ball"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Balls",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": true,
+   "tier": 0,
+   "setting": "both",
+   "description": "A firm small ball for pinpointing knots in feet, glutes, shoulders and pecs.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "6–12 cm",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "peanutball",
+    "foamroller"
+   ],
+   "signature_exercises": [
+    "Foot roll",
+    "Glute release",
+    "Pec release",
+    "Upper back release"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A lacrosse ball is cheap and firm; spiky balls are gentler.",
+   "safety": "Move slowly and avoid nerves and bony points.",
+   "keywords": "mobility recovery lacrosse"
+  },
+  {
+   "id": "peanutball",
+   "name": "Peanut massage ball",
+   "aliases": [
+    "Double lacrosse ball",
+    "Peanut roller"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Balls",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "Two balls joined like a peanut so they straddle the spine for upper-back and neck release.",
+   "muscle_focus": [
+    "Upper back",
+    "Neck"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "~16 cm long",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "massageball"
+   ],
+   "signature_exercises": [
+    "Thoracic roll",
+    "Neck release",
+    "Calf roll"
+   ],
+   "linked_exercise_ids": [
+    "frtspine"
+   ],
+   "buying_tips": "Two lacrosse balls taped together are a free stand-in.",
+   "safety": "",
+   "keywords": "peanut ball spine"
+  },
+  {
+   "id": "massagestick",
+   "name": "Massage stick",
+   "aliases": [
+    "Muscle roller stick",
+    "The Stick",
+    "Roller bar"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Rollers",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "A handled stick with rolling segments you press along calves, quads and hamstrings.",
+   "muscle_focus": [
+    "Legs"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "45–60 cm",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "foamroller"
+   ],
+   "signature_exercises": [
+    "Calf roll",
+    "Quad roll",
+    "Hamstring roll"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Flexible sticks are kinder on sore legs.",
+   "safety": "",
+   "keywords": "massage stick roller"
+  },
+  {
+   "id": "massagegun",
+   "name": "Percussion massager",
+   "aliases": [
+    "Massage gun",
+    "Theragun",
+    "Hypervolt"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Powered recovery",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A battery-powered gun that taps the muscles rapidly to ease soreness and warm up.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Motorised",
+   "weight_options": "Speeds 1,700–3,200 per minute",
+   "adjustability": "Several speeds and heads.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "foamroller",
+    "massageball"
+   ],
+   "signature_exercises": [
+    "Pre-workout activation",
+    "Post-workout recovery"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Mid-priced guns are fine; check noise and battery life.",
+   "safety": "Keep it off bones, the neck front and injured areas.",
+   "keywords": "massage gun percussion"
+  },
+  {
+   "id": "stretchstrap",
+   "name": "Stretching strap",
+   "aliases": [
+    "Stretch-out strap",
+    "Loop strap",
+    "Stretch band with loops"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Stretching aids",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": true,
+   "tier": 0,
+   "setting": "both",
+   "description": "A non-elastic strap, often with loops, that helps you reach and hold deeper stretches.",
+   "muscle_focus": [
+    "Hamstrings",
+    "Shoulders",
+    "Hips"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "1.8–3 m",
+   "adjustability": "Loops for grip.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "yogastrap"
+   ],
+   "signature_exercises": [
+    "Hamstring stretch",
+    "Quad stretch",
+    "Adductor stretch",
+    "Shoulder stretch"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A looped strap is easier than a plain yoga strap.",
+   "safety": "Ease into stretches; don't yank.",
+   "keywords": "mobility flexibility strap"
+  },
+  {
+   "id": "dowel",
+   "name": "Dowel / PVC pipe",
+   "aliases": [
+    "Broomstick",
+    "PVC pipe",
+    "Mobility stick",
+    "Body bar (unweighted)"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Stretching aids",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "A light stick used for shoulder pass-throughs, hip-hinge practice and warm-ups.",
+   "muscle_focus": [
+    "Shoulders",
+    "Upper back",
+    "Hips"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "120–180 cm",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "bands",
+    "stretchstrap"
+   ],
+   "signature_exercises": [
+    "Shoulder dislocates",
+    "Hip hinge drill",
+    "Overhead squat practice",
+    "Thoracic rotations"
+   ],
+   "linked_exercise_ids": [
+    "banddisloc",
+    "benchlat"
+   ],
+   "buying_tips": "A broom handle works; PVC is cheap from a hardware store.",
+   "safety": "",
+   "keywords": "dowel pvc stick"
+  },
+  {
+   "id": "inversiontable",
+   "name": "Inversion table",
+   "aliases": [
+    "Inversion bench",
+    "Back stretcher table"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Traction",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "home",
+   "description": "A table that tips you head-down, held by the ankles, to stretch and decompress the spine.",
+   "muscle_focus": [
+    "Lower back"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "User up to ~135 kg",
+   "adjustability": "Adjustable angle.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 70,
+    "height_cm": 150
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "pullupbar"
+   ],
+   "signature_exercises": [
+    "Inversion hold",
+    "Inverted crunch"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Check the ankle locks and angle stops.",
+   "safety": "Avoid with high blood pressure, glaucoma or heart problems; ask a doctor.",
+   "keywords": "inversion table back"
+  },
+  {
+   "id": "compboots",
+   "name": "Compression boots",
+   "aliases": [
+    "Recovery boots",
+    "Normatec",
+    "Pneumatic compression"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Powered recovery",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "Inflatable leg sleeves that squeeze in sequence to aid recovery.",
+   "muscle_focus": [
+    "Legs"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Pressure 20–110 mmHg",
+   "adjustability": "Adjustable pressure and time.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [
+    "Post-workout recovery"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Common in athletic clubs; home models are pricey.",
+   "safety": "Avoid with blood clots or circulation problems.",
+   "keywords": "compression boots recovery"
+  },
+  {
+   "id": "coldplunge",
+   "name": "Cold plunge tub",
+   "aliases": [
+    "Ice bath",
+    "Cold tub"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Powered recovery",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A tub of cold water (often chilled) for post-training cold immersion.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "100–500 l",
+   "adjustability": "Chillers set temperature.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 70,
+    "height_cm": 70
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [
+    "Cold plunge",
+    "Contrast therapy"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A stock tank with ice works; chillers add cost.",
+   "safety": "Never plunge alone and avoid if you have heart issues.",
+   "keywords": "ice bath cold plunge"
+  },
+  {
+   "id": "backhook",
+   "name": "Trigger point hook",
+   "aliases": [
+    "Back hook",
+    "Thera Cane",
+    "Self-massage cane"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Stretching aids",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 0,
+   "setting": "home",
+   "description": "A hooked stick that lets you press knots in your own back, neck and shoulders.",
+   "muscle_focus": [
+    "Upper back",
+    "Neck",
+    "Shoulders"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "massageball"
+   ],
+   "signature_exercises": [
+    "Trapezius release",
+    "Rhomboid release"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Pick one with several knobs.",
+   "safety": "",
+   "keywords": "back hook theracane"
+  },
+  {
+   "id": "stretchmachine",
+   "name": "Stretching machine",
+   "aliases": [
+    "Stretch station",
+    "Stretch trainer",
+    "Leg stretcher"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Stretching aids",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A seated station that braces you for supported hamstring, back, chest and hip stretches; leg stretchers spread the legs for splits.",
+   "muscle_focus": [
+    "Hamstrings",
+    "Hips",
+    "Back",
+    "Chest"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "Adjustable seat and handles.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 80,
+    "height_cm": 110
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "stretchstrap"
+   ],
+   "signature_exercises": [
+    "Seated hamstring stretch",
+    "Hip opener",
+    "Chest stretch"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Leg stretchers are cheap for splits; full stations are commercial.",
+   "safety": "Use controlled pressure.",
+   "keywords": "stretch machine"
+  },
+  {
+   "id": "flossband",
+   "name": "Floss band",
+   "aliases": [
+    "Voodoo floss",
+    "Compression band"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Stretching aids",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A thick latex band wrapped tightly around a joint while you move it, used for mobility.",
+   "muscle_focus": [
+    "Knees",
+    "Elbows",
+    "Ankles"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "2–5 cm wide, ~2 m long",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "bands"
+   ],
+   "signature_exercises": [
+    "Knee flossing",
+    "Ankle flossing",
+    "Elbow flossing"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Start with a lighter band.",
+   "safety": "Keep it on no more than 2 minutes; remove if numb.",
+   "keywords": "floss band voodoo"
+  },
+  {
+   "id": "slantboard",
+   "name": "Slant board",
+   "aliases": [
+    "Calf stretch board",
+    "Incline board",
+    "Squat wedge"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Stretching aids",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "An angled board you stand on for calf and Achilles stretches or heel-elevated squats.",
+   "muscle_focus": [
+    "Calves",
+    "Quads"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "15–45° angles",
+   "adjustability": "Adjustable angle on some.",
+   "footprint": {
+    "length_cm": 40,
+    "width_cm": 35,
+    "height_cm": 10
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "plates",
+    "step"
+   ],
+   "signature_exercises": [
+    "Slant board calf stretch",
+    "Heel-elevated squat",
+    "Reverse step-down"
+   ],
+   "linked_exercise_ids": [
+    "soleus",
+    "calfwall"
+   ],
+   "buying_tips": "An adjustable board gives progression.",
+   "safety": "",
+   "keywords": "slant board calf stretch"
+  },
+  {
+   "id": "scraper",
+   "name": "Scraping tool",
+   "aliases": [
+    "IASTM tool",
+    "Gua sha",
+    "Muscle scraper"
+   ],
+   "category": "Mobility & recovery",
+   "subcategory": "Stretching aids",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A steel or stone tool scraped along skin and muscles to ease tightness.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "massagestick"
+   ],
+   "signature_exercises": [
+    "Calf scraping",
+    "Forearm scraping"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Stainless steel with smooth edges.",
+   "safety": "Use lotion and avoid broken skin or bruises.",
+   "keywords": "scraping gua sha iastm"
+  },
+  {
+   "id": "yogamat",
+   "name": "Yoga mat",
+   "aliases": [
+    "Exercise mat",
+    "Sticky mat"
+   ],
+   "category": "Yoga",
+   "subcategory": "Mats",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": true,
+   "tier": 0,
+   "setting": "both",
+   "description": "A thin, grippy mat for yoga, stretching and floor exercises.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "3–6 mm thick; ~183×61 cm",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 183,
+    "width_cm": 61,
+    "height_cm": 1
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "pilatesmat"
+   ],
+   "signature_exercises": [
+    "Sun salutation",
+    "Downward dog",
+    "Pigeon",
+    "Bridge"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "4–5 mm with a grippy top suits most.",
+   "safety": "Clean regularly to keep grip.",
+   "keywords": "yoga mat"
+  },
+  {
+   "id": "yogablocks",
+   "name": "Yoga blocks & strap",
+   "aliases": [
+    "Yoga block",
+    "Cork block",
+    "Foam block"
+   ],
+   "category": "Yoga",
+   "subcategory": "Props",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": true,
+   "tier": 0,
+   "setting": "both",
+   "description": "Firm foam or cork blocks (often sold with a strap) that bring the floor closer in yoga poses.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "23×15×7.5–10 cm",
+   "adjustability": "Three orientations give three heights.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "dowel"
+   ],
+   "signature_exercises": [
+    "Supported bridge",
+    "Triangle with block",
+    "Half moon",
+    "Reclined bound angle"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Cork is sturdier; foam is lighter.",
+   "safety": "",
+   "keywords": "yoga block strap"
+  },
+  {
+   "id": "yogastrap",
+   "name": "Yoga strap",
+   "aliases": [
+    "D-ring strap",
+    "Yoga belt"
+   ],
+   "category": "Yoga",
+   "subcategory": "Props",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "A cotton strap with a buckle that extends your reach in seated and lying yoga stretches.",
+   "muscle_focus": [
+    "Hamstrings",
+    "Shoulders"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "1.8–3 m",
+   "adjustability": "Buckle-adjustable loop.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "stretchstrap"
+   ],
+   "signature_exercises": [
+    "Strap hamstring stretch",
+    "Cow face pose with strap",
+    "Shoulder openers"
+   ],
+   "linked_exercise_ids": [
+    "hamstretch",
+    "strapquad",
+    "strapadd",
+    "cowface"
+   ],
+   "buying_tips": "A 2.4 m strap suits most heights.",
+   "safety": "",
+   "keywords": "yoga strap"
+  },
+  {
+   "id": "bolster",
+   "name": "Yoga bolster",
+   "aliases": [
+    "Restorative bolster",
+    "Pranayama pillow"
+   ],
+   "category": "Yoga",
+   "subcategory": "Props",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A firm cylindrical or rectangular cushion that supports the body in restorative poses.",
+   "muscle_focus": [
+    "Hips",
+    "Back"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "~60×30 cm",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "yogablanket"
+   ],
+   "signature_exercises": [
+    "Supported child's pose",
+    "Reclined bound angle",
+    "Supported savasana"
+   ],
+   "linked_exercise_ids": [
+    "recboundangle",
+    "childpose",
+    "savasana",
+    "legsupwall"
+   ],
+   "buying_tips": "Buckwheat or cotton-filled bolsters hold shape.",
+   "safety": "",
+   "keywords": "bolster restorative"
+  },
+  {
+   "id": "yogawheel",
+   "name": "Yoga wheel",
+   "aliases": [
+    "Back wheel",
+    "Dharma wheel"
+   ],
+   "category": "Yoga",
+   "subcategory": "Props",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A hoop-shaped prop you lie over to open the chest and spine or use for balance.",
+   "muscle_focus": [
+    "Upper back",
+    "Chest",
+    "Shoulders"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "30–33 cm diameter",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "foamroller",
+    "stabball"
+   ],
+   "signature_exercises": [
+    "Back roll",
+    "Wheel backbend",
+    "Supported fish"
+   ],
+   "linked_exercise_ids": [
+    "fish",
+    "frtspine"
+   ],
+   "buying_tips": "Check the weight rating and padding.",
+   "safety": "Roll slowly and support the neck.",
+   "keywords": "yoga wheel backbend"
+  },
+  {
+   "id": "yogablanket",
+   "name": "Yoga blanket",
+   "aliases": [
+    "Mexican blanket",
+    "Folding blanket"
+   ],
+   "category": "Yoga",
+   "subcategory": "Props",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 0,
+   "setting": "home",
+   "description": "A dense blanket folded under knees, hips or shoulders for padding and lift.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "bolster",
+    "yogamat"
+   ],
+   "signature_exercises": [
+    "Supported shoulder stand",
+    "Hero pose",
+    "Seated forward fold"
+   ],
+   "linked_exercise_ids": [
+    "shoulderstand",
+    "hero",
+    "seatedfold"
+   ],
+   "buying_tips": "Woollen or cotton blankets fold firmer.",
+   "safety": "",
+   "keywords": "yoga blanket"
+  },
+  {
+   "id": "zafu",
+   "name": "Meditation cushion",
+   "aliases": [
+    "Zafu",
+    "Zabuton",
+    "Meditation bench"
+   ],
+   "category": "Yoga",
+   "subcategory": "Props",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 0,
+   "setting": "home",
+   "description": "A firm round cushion (with optional mat) for seated meditation and breathing.",
+   "muscle_focus": [
+    "Hips"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "bolster",
+    "yogablanket"
+   ],
+   "signature_exercises": [
+    "Seated meditation",
+    "Breathing practice"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Buckwheat filling adjusts height.",
+   "safety": "",
+   "keywords": "meditation cushion zafu"
+  },
+  {
+   "id": "aerialhammock",
+   "name": "Aerial yoga hammock",
+   "aliases": [
+    "Yoga swing",
+    "Aerial silk",
+    "Inversion swing"
+   ],
+   "category": "Yoga",
+   "subcategory": "Aerial",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A fabric sling hung from the ceiling for supported inversions, stretches and aerial yoga.",
+   "muscle_focus": [
+    "Core",
+    "Shoulders",
+    "Back"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Rated 200–300+ kg",
+   "adjustability": "Height adjustable with daisy chains.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 150,
+    "height_cm": 250
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "trx"
+   ],
+   "signature_exercises": [
+    "Aerial inversion",
+    "Supported backbend",
+    "Aerial pigeon"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Mount to a beam or rated frame.",
+   "safety": "Check the ceiling mount carefully and start low.",
+   "keywords": "aerial yoga hammock swing"
+  },
+  {
+   "id": "pilatesmat",
+   "name": "Pilates mat",
+   "aliases": [
+    "Pilates exercise mat",
+    "Thick mat"
+   ],
+   "category": "Pilates",
+   "subcategory": "Mats",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": true,
+   "tier": 0,
+   "setting": "both",
+   "description": "A thicker, denser mat than a yoga mat for rolling and spinal work in Pilates.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "8–15 mm thick",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 183,
+    "width_cm": 61,
+    "height_cm": 2
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "yogamat"
+   ],
+   "signature_exercises": [
+    "Hundred",
+    "Roll-up",
+    "Rolling like a ball",
+    "Teaser"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Pick 10 mm or more for spine comfort.",
+   "safety": "",
+   "keywords": "pilates mat"
+  },
+  {
+   "id": "reformer",
+   "name": "Pilates reformer",
+   "aliases": [
+    "Reformer",
+    "Home reformer"
+   ],
+   "category": "Pilates",
+   "subcategory": "Apparatus",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "A sliding carriage on springs with straps and a foot bar for resistance Pilates work.",
+   "muscle_focus": [
+    "Core",
+    "Legs",
+    "Glutes",
+    "Back"
+   ],
+   "loading": "Spring",
+   "weight_options": "Springs ~5–20 kg each",
+   "adjustability": "Change springs, foot bar and strap length.",
+   "footprint": {
+    "length_cm": 240,
+    "width_cm": 70,
+    "height_cm": 40
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "pilatesmat"
+   ],
+   "signature_exercises": [
+    "Footwork",
+    "Hundred on reformer",
+    "Long stretch",
+    "Elephant",
+    "Rowing"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Home reformers fold; studio reformers are sturdier.",
+   "safety": "Check springs are secure before loading the carriage.",
+   "keywords": "pilates reformer"
+  },
+  {
+   "id": "cadillac",
+   "name": "Pilates Cadillac",
+   "aliases": [
+    "Trapeze table",
+    "Cadillac table"
+   ],
+   "category": "Pilates",
+   "subcategory": "Apparatus",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A raised table with an overhead frame, springs, a push-through bar and a trapeze for supported Pilates work.",
+   "muscle_focus": [
+    "Core",
+    "Back",
+    "Shoulders",
+    "Legs"
+   ],
+   "loading": "Spring",
+   "weight_options": "",
+   "adjustability": "Many spring and bar positions.",
+   "footprint": {
+    "length_cm": 220,
+    "width_cm": 80,
+    "height_cm": 200
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "pilatestower",
+    "reformer"
+   ],
+   "signature_exercises": [
+    "Roll down with push-through bar",
+    "Leg springs",
+    "Hanging",
+    "Tower"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Usually studio kit; combination reformer-trapeze units save space.",
+   "safety": "Keep springs controlled and secure.",
+   "keywords": "cadillac trapeze table"
+  },
+  {
+   "id": "wundachair",
+   "name": "Wunda chair",
+   "aliases": [
+    "Pilates chair",
+    "Combo chair",
+    "Stability chair"
+   ],
+   "category": "Pilates",
+   "subcategory": "Apparatus",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A box with a sprung pedal you press with hands or feet for demanding Pilates work.",
+   "muscle_focus": [
+    "Core",
+    "Legs",
+    "Shoulders"
+   ],
+   "loading": "Spring",
+   "weight_options": "",
+   "adjustability": "Spring adjustments; split or single pedal.",
+   "footprint": {
+    "length_cm": 70,
+    "width_cm": 60,
+    "height_cm": 60
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "reformer"
+   ],
+   "signature_exercises": [
+    "Footwork on chair",
+    "Pike",
+    "Mountain climb",
+    "Swan on chair"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Split-pedal chairs allow one-sided work.",
+   "safety": "Hold the pedal down until springs settle.",
+   "keywords": "wunda chair pilates"
+  },
+  {
+   "id": "ladderbarrel",
+   "name": "Ladder barrel",
+   "aliases": [
+    "Pilates barrel"
+   ],
+   "category": "Pilates",
+   "subcategory": "Apparatus",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A curved barrel next to a ladder for stretching, back extension and side bends.",
+   "muscle_focus": [
+    "Back",
+    "Core",
+    "Hips"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "Sliding base sets distance.",
+   "footprint": {
+    "length_cm": 140,
+    "width_cm": 70,
+    "height_cm": 90
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "spinecorrector",
+    "stabball"
+   ],
+   "signature_exercises": [
+    "Swan on barrel",
+    "Side bends",
+    "Back extension"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Usually studio kit.",
+   "safety": "",
+   "keywords": "ladder barrel pilates"
+  },
+  {
+   "id": "spinecorrector",
+   "name": "Spine corrector",
+   "aliases": [
+    "Step barrel",
+    "Pilates arc",
+    "Small barrel"
+   ],
+   "category": "Pilates",
+   "subcategory": "Apparatus",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A small curved barrel with a step for back extension and abdominal work.",
+   "muscle_focus": [
+    "Back",
+    "Core"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 80,
+    "width_cm": 40,
+    "height_cm": 30
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "stabball",
+    "yogawheel"
+   ],
+   "signature_exercises": [
+    "Spine stretch over barrel",
+    "Teaser on arc",
+    "Side lift"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A foam Pilates arc is lighter and cheaper.",
+   "safety": "",
+   "keywords": "spine corrector arc"
+  },
+  {
+   "id": "pilatesring",
+   "name": "Pilates ring / magic circle",
+   "aliases": [
+    "Magic circle",
+    "Pilates circle"
+   ],
+   "category": "Pilates",
+   "subcategory": "Small props",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A flexible ring with pads you squeeze or press for inner thigh, chest and arm work.",
+   "muscle_focus": [
+    "Inner thighs",
+    "Chest",
+    "Arms"
+   ],
+   "loading": "Spring",
+   "weight_options": "~35 cm diameter",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "pilatesball"
+   ],
+   "signature_exercises": [
+    "Ring thigh squeeze",
+    "Chest press",
+    "Ring bridge",
+    "Side-lying leg press"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Dual-pad rings are more comfortable.",
+   "safety": "",
+   "keywords": "pilates ring"
+  },
+  {
+   "id": "pilatesball",
+   "name": "Small Pilates ball",
+   "aliases": [
+    "Mini ball",
+    "Pilates soft ball",
+    "Overball"
+   ],
+   "category": "Pilates",
+   "subcategory": "Small props",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "A soft, small inflatable ball for squeezing between knees or supporting the back in Pilates.",
+   "muscle_focus": [
+    "Core",
+    "Inner thighs"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "20–25 cm diameter",
+   "adjustability": "Inflation sets firmness.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "pilatesring",
+    "stabball"
+   ],
+   "signature_exercises": [
+    "Ball squeeze bridge",
+    "Supported roll-up",
+    "Ball crunch"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Cheap and versatile.",
+   "safety": "",
+   "keywords": "pilates small ball"
+  },
+  {
+   "id": "pilatestower",
+   "name": "Pilates tower",
+   "aliases": [
+    "Wall tower",
+    "Springboard",
+    "Pilates wall unit"
+   ],
+   "category": "Pilates",
+   "subcategory": "Apparatus",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A wall-mounted or reformer-attached frame with springs and a push-through bar.",
+   "muscle_focus": [
+    "Core",
+    "Back",
+    "Legs"
+   ],
+   "loading": "Spring",
+   "weight_options": "",
+   "adjustability": "Spring and bar positions.",
+   "footprint": {
+    "length_cm": 100,
+    "width_cm": 40,
+    "height_cm": 200
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "cadillac"
+   ],
+   "signature_exercises": [
+    "Roll down",
+    "Leg springs",
+    "Push-through"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A wall springboard is the home version of a Cadillac.",
+   "safety": "Secure the anchors properly.",
+   "keywords": "pilates tower springboard"
+  },
+  {
+   "id": "jumpboard",
+   "name": "Reformer jumpboard",
+   "aliases": [
+    "Jump board"
+   ],
+   "category": "Pilates",
+   "subcategory": "Apparatus",
+   "app_group": "Bodyweight & mind-body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A padded board fitted to a reformer for low-impact jumping and cardio.",
+   "muscle_focus": [
+    "Calves",
+    "Legs",
+    "Glutes"
+   ],
+   "loading": "Spring",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "reformer"
+   ],
+   "substitutes": [],
+   "signature_exercises": [
+    "Reformer jumping",
+    "Single-leg jumps"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Must match your reformer model.",
+   "safety": "",
+   "keywords": "jumpboard reformer"
+  }
+ ]
+}

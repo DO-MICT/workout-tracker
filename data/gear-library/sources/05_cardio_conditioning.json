@@ -1,0 +1,3265 @@
+{
+ "slice": "cardio",
+ "items": [
+  {
+   "id": "treadmill",
+   "name": "Treadmill",
+   "aliases": [
+    "Motorised treadmill",
+    "Running machine"
+   ],
+   "category": "Treadmills",
+   "subcategory": "Motorised treadmills",
+   "app_group": "Cardio",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "A motorised running belt with adjustable speed and usually incline, for walking, jogging and running indoors.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Hamstrings",
+    "Calves"
+   ],
+   "loading": "Motorised",
+   "weight_options": "Top speed 16–25 km/h; incline 0–15% (some −3% to 40%)",
+   "adjustability": "Speed and incline by console; some folding.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 90,
+    "height_cm": 150
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "curvedtread",
+    "inclinetrainer",
+    "walkingpad"
+   ],
+   "signature_exercises": [
+    "Treadmill run",
+    "Incline treadmill walk",
+    "Treadmill intervals",
+    "12-3-30 workout"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Look for a deck of at least 140 x 50 cm for running, a continuous-duty motor of 2.5 HP or more, and a good cushioned deck.",
+   "safety": "Clip on the emergency stop key and straddle the belt when starting.",
+   "keywords": "run walk jog incline"
+  },
+  {
+   "id": "walkingpad",
+   "name": "Walking pad",
+   "aliases": [
+    "Under-desk treadmill",
+    "Folding treadmill",
+    "Walking treadmill"
+   ],
+   "category": "Treadmills",
+   "subcategory": "Compact treadmills",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A slim, low, often folding treadmill without handrails, mostly for walking at a desk or in small spaces.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Calves",
+    "Glutes"
+   ],
+   "loading": "Motorised",
+   "weight_options": "Top speed 6–12 km/h; usually no incline",
+   "adjustability": "Speed by remote or app; folds or slides under a sofa.",
+   "footprint": {
+    "length_cm": 140,
+    "width_cm": 55,
+    "height_cm": 15
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "treadmill"
+   ],
+   "signature_exercises": [
+    "Treadmill walk",
+    "Desk walking",
+    "Brisk walking intervals"
+   ],
+   "linked_exercise_ids": [
+    "treadwalk"
+   ],
+   "buying_tips": "Check top speed and belt width; most are not built for running even if they claim a running mode.",
+   "safety": "Keep the speed low enough to walk without holding on, as there are usually no rails.",
+   "keywords": "under desk walking pad folding"
+  },
+  {
+   "id": "inclinetrainer",
+   "name": "Incline trainer",
+   "aliases": [
+    "Incline treadmill",
+    "X-trainer"
+   ],
+   "category": "Treadmills",
+   "subcategory": "Motorised treadmills",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A treadmill built for steep uphill walking, often up to 30–40% incline and some with decline, for hiking-style cardio.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Glutes",
+    "Hamstrings",
+    "Calves"
+   ],
+   "loading": "Motorised",
+   "weight_options": "Incline up to 30–40%; decline to −6% on some",
+   "adjustability": "Speed and steep incline by console.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 90,
+    "height_cm": 160
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "treadmill",
+    "stairs"
+   ],
+   "signature_exercises": [
+    "Incline treadmill walk",
+    "12-3-30 workout",
+    "Hill intervals",
+    "Treadmill walk"
+   ],
+   "linked_exercise_ids": [
+    "inclinewalk",
+    "w12330",
+    "treadwalk",
+    "treadint"
+   ],
+   "buying_tips": "Worth it if you mostly walk; check the incline motor speed and that the deck stays stable at maximum incline.",
+   "safety": "Don't hold the rails at steep inclines; slow down instead.",
+   "keywords": "incline hill walk hiking"
+  },
+  {
+   "id": "curvedtread",
+   "name": "Curved / manual treadmill",
+   "aliases": [
+    "Assault AirRunner",
+    "Woodway Curve",
+    "TrueForm",
+    "Non-motorised curved treadmill"
+   ],
+   "category": "Treadmills",
+   "subcategory": "Non-motorised treadmills",
+   "app_group": "Cardio",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A self-powered treadmill with a curved slat belt; you set the speed by where you run on the curve, ideal for sprints.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Hamstrings",
+    "Calves"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Speed self-set; some add belt resistance levels",
+   "adjustability": "Some have a resistance brake for sled-style pushes.",
+   "footprint": {
+    "length_cm": 180,
+    "width_cm": 85,
+    "height_cm": 165
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "treadmill"
+   ],
+   "signature_exercises": [
+    "Curved treadmill sprints",
+    "Curved treadmill run",
+    "Sled-style push on the belt"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Commercial-grade units are heavy and expensive; try one first as the running feel takes getting used to.",
+   "safety": "Step off to the side rails to stop; the belt keeps moving briefly.",
+   "keywords": "assault runner curved manual"
+  },
+  {
+   "id": "manualtread",
+   "name": "Flat manual treadmill",
+   "aliases": [
+    "Manual treadmill",
+    "Non-motorised flat treadmill",
+    "Magnetic treadmill"
+   ],
+   "category": "Treadmills",
+   "subcategory": "Non-motorised treadmills",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A cheap, flat, self-propelled treadmill with a fixed slight incline; you push the belt with your legs, mainly for walking.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Glutes",
+    "Hamstrings",
+    "Calves"
+   ],
+   "loading": "Friction",
+   "weight_options": "Fixed incline ~5–10°; magnetic tension on some",
+   "adjustability": "Tension knob on some models; folds.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 60,
+    "height_cm": 125
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "walkingpad",
+    "treadmill"
+   ],
+   "signature_exercises": [
+    "Treadmill walk",
+    "Weighted push walk",
+    "Incline power walk"
+   ],
+   "linked_exercise_ids": [
+    "treadwalk"
+   ],
+   "buying_tips": "Fine for walking without power; most are too short and jerky for running.",
+   "safety": "The belt can feel stiff then lurch; hold the rails when starting.",
+   "keywords": "manual non motorised treadmill walking"
+  },
+  {
+   "id": "antigravtread",
+   "name": "Anti-gravity treadmill",
+   "aliases": [
+    "AlterG",
+    "Unweighting treadmill",
+    "Lower-body positive pressure treadmill"
+   ],
+   "category": "Treadmills",
+   "subcategory": "Rehab treadmills",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A treadmill inside an air-pressurised chamber that lifts part of your body weight, used in rehab and for low-impact running.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Hamstrings",
+    "Calves"
+   ],
+   "loading": "Motorised",
+   "weight_options": "Body weight unloading 20–100%",
+   "adjustability": "Air pressure sets how much body weight you carry.",
+   "footprint": {
+    "length_cm": 210,
+    "width_cm": 90,
+    "height_cm": 140
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "treadmill"
+   ],
+   "signature_exercises": [
+    "Unweighted treadmill run",
+    "Return-to-run progression",
+    "Unweighted walk"
+   ],
+   "linked_exercise_ids": [
+    "treadrun",
+    "treadwalk"
+   ],
+   "buying_tips": "Found in physio clinics and pro sports facilities; pay per session rather than buying.",
+   "safety": "Follow your physio's progression plan for body-weight percentage.",
+   "keywords": "alterg rehab unweighted running"
+  },
+  {
+   "id": "bike",
+   "name": "Stationary bike",
+   "aliases": [
+    "Exercise bike",
+    "Upright bike"
+   ],
+   "category": "Bikes",
+   "subcategory": "Upright bikes",
+   "app_group": "Cardio",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "A seated exercise bike with a flywheel and adjustable resistance, for steady low-impact cardio.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Calves"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Magnetic or friction, 8–32+ levels",
+   "adjustability": "Seat height and fore-aft; handlebar on some.",
+   "footprint": {
+    "length_cm": 110,
+    "width_cm": 55,
+    "height_cm": 140
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "spinbike",
+    "recumbent",
+    "airbike"
+   ],
+   "signature_exercises": [
+    "Stationary bike ride",
+    "Tabata bike",
+    "Steady-state cycling"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Magnetic resistance is quieter and needs less upkeep than felt-pad friction.",
+   "safety": "",
+   "keywords": "exercise bike upright recumbent"
+  },
+  {
+   "id": "recumbent",
+   "name": "Recumbent bike",
+   "aliases": [
+    "Recumbent exercise bike",
+    "Seated bike"
+   ],
+   "category": "Bikes",
+   "subcategory": "Recumbent bikes",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A low exercise bike with a backrest and pedals out in front, easy on the back and hips and easy to get on and off.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Magnetic, 8–25 levels",
+   "adjustability": "Seat slides fore-aft; step-through frame.",
+   "footprint": {
+    "length_cm": 160,
+    "width_cm": 65,
+    "height_cm": 110
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "bike",
+    "recumbstep"
+   ],
+   "signature_exercises": [
+    "Recumbent bike",
+    "Recumbent intervals",
+    "Low-impact steady cardio"
+   ],
+   "linked_exercise_ids": [
+    "recumbent"
+   ],
+   "buying_tips": "Good for older users, back pain or rehab; check the seat slides far enough for your leg length.",
+   "safety": "",
+   "keywords": "recumbent seated backrest bike"
+  },
+  {
+   "id": "spinbike",
+   "name": "Spin bike",
+   "aliases": [
+    "Indoor cycle",
+    "Studio bike",
+    "Spinning bike"
+   ],
+   "category": "Bikes",
+   "subcategory": "Indoor cycles",
+   "app_group": "Cardio",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "A sturdy indoor cycle with a heavy flywheel, road-bike riding position and resistance knob, for class-style rides and intervals.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Calves"
+   ],
+   "loading": "Friction",
+   "weight_options": "Felt-pad friction or magnetic, flywheel 13–22 kg",
+   "adjustability": "Seat and bar height and fore-aft; resistance knob.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 55,
+    "height_cm": 115
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "bike",
+    "smartbike",
+    "airbike"
+   ],
+   "signature_exercises": [
+    "Spin bike intervals",
+    "Standing climbs",
+    "Tabata bike"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Magnetic resistance, an emergency brake and clip-in pedals are worth paying for.",
+   "safety": "Press the resistance knob down to brake; fixed-gear pedals keep spinning.",
+   "keywords": "indoor cycle peloton spinning"
+  },
+  {
+   "id": "smartbike",
+   "name": "Smart bike",
+   "aliases": [
+    "Peloton",
+    "Wahoo KICKR Bike",
+    "Zwift Ride",
+    "Connected bike"
+   ],
+   "category": "Bikes",
+   "subcategory": "Indoor cycles",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 2,
+   "setting": "home",
+   "description": "A connected indoor bike with automatic, app-controlled resistance, power measurement and often a screen for classes or virtual rides.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Calves"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Electromagnetic, power to 1,500–2,500 W",
+   "adjustability": "Resistance set by app; fit adjusts to a road bike.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 60,
+    "height_cm": 140
+   },
+   "space": "M",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "spinbike",
+    "turbotrainer"
+   ],
+   "signature_exercises": [
+    "Power-based intervals",
+    "Virtual climbs",
+    "FTP test",
+    "Spin class ride"
+   ],
+   "linked_exercise_ids": [
+    "spinint",
+    "bikeride",
+    "tabatabike"
+   ],
+   "buying_tips": "Check which apps it works with and whether a subscription is required to use the resistance features.",
+   "safety": "",
+   "keywords": "peloton smart zwift connected bike"
+  },
+  {
+   "id": "turbotrainer",
+   "name": "Bike trainer (turbo)",
+   "aliases": [
+    "Turbo trainer",
+    "Smart trainer",
+    "Wheel-on trainer",
+    "Direct-drive trainer",
+    "Wahoo KICKR"
+   ],
+   "category": "Bikes",
+   "subcategory": "Bike trainers",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A stand that turns your own road or mountain bike into an indoor bike, either by clamping the rear wheel or replacing it (direct drive).",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Calves"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Fluid, magnetic, fan or smart electromagnetic",
+   "adjustability": "Smart units change resistance by app.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 60,
+    "height_cm": 110
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "spinbike",
+    "smartbike",
+    "bikerollers"
+   ],
+   "signature_exercises": [
+    "Indoor bike intervals",
+    "Virtual rides (Zwift)",
+    "FTP test"
+   ],
+   "linked_exercise_ids": [
+    "spinint",
+    "bikeride",
+    "tabatabike"
+   ],
+   "buying_tips": "Direct-drive smart trainers are quieter and more accurate; check your bike's axle and cassette type.",
+   "safety": "Put a mat underneath and a fan in front; you'll sweat a lot.",
+   "keywords": "turbo trainer smart road bike zwift"
+  },
+  {
+   "id": "bikerollers",
+   "name": "Bike rollers",
+   "aliases": [
+    "Cycling rollers"
+   ],
+   "category": "Bikes",
+   "subcategory": "Bike trainers",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "Three drums you ride your own bike on freely, without clamping it, which trains balance and smooth pedalling.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Core"
+   ],
+   "loading": "Friction",
+   "weight_options": "Free rollers; some add magnetic resistance",
+   "adjustability": "Wheelbase adjusts to the bike.",
+   "footprint": {
+    "length_cm": 140,
+    "width_cm": 55,
+    "height_cm": 15
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "turbotrainer"
+   ],
+   "signature_exercises": [
+    "Roller spin-ups",
+    "Cadence drills",
+    "Easy recovery spin"
+   ],
+   "linked_exercise_ids": [
+    "bikeride",
+    "spinint"
+   ],
+   "buying_tips": "Start next to a wall or in a doorway until you can balance.",
+   "safety": "Ride beside something you can grab; falls are common at first.",
+   "keywords": "rollers road bike balance"
+  },
+  {
+   "id": "airbike",
+   "name": "Air / assault bike",
+   "aliases": [
+    "Assault bike",
+    "Echo bike",
+    "Fan bike",
+    "AirDyne"
+   ],
+   "category": "Bikes",
+   "subcategory": "Air bikes",
+   "app_group": "Cardio",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "A fan bike with moving arm handles: the harder you push and pull, the more resistance the fan gives. Brutal for intervals.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Shoulders",
+    "Arms"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Unlimited air resistance",
+   "adjustability": "Seat height and fore-aft.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 60,
+    "height_cm": 130
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "spinbike",
+    "bikeerg",
+    "rower"
+   ],
+   "signature_exercises": [
+    "Air bike intervals",
+    "Calorie sprints",
+    "Tabata bike",
+    "Arms-only air bike"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Belt-driven models (Echo, AssaultBike Elite) need less upkeep than chain drives.",
+   "safety": "",
+   "keywords": "fan bike echo assault airdyne"
+  },
+  {
+   "id": "pedalexer",
+   "name": "Pedal exerciser",
+   "aliases": [
+    "Mini exercise bike",
+    "Under-desk bike",
+    "Desk cycle"
+   ],
+   "category": "Bikes",
+   "subcategory": "Mini bikes",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A small set of pedals with a resistance knob that you use under a desk or chair with your legs, or on a table with your arms.",
+   "muscle_focus": [
+    "Quads",
+    "Calves",
+    "Shoulders"
+   ],
+   "loading": "Friction",
+   "weight_options": "Friction or magnetic, light",
+   "adjustability": "Resistance knob.",
+   "footprint": {
+    "length_cm": 50,
+    "width_cm": 40,
+    "height_cm": 30
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "ube",
+    "bike"
+   ],
+   "signature_exercises": [
+    "Seated leg pedalling",
+    "Arm pedalling",
+    "Under-desk cycling"
+   ],
+   "linked_exercise_ids": [
+    "ube"
+   ],
+   "buying_tips": "Get one with a strap or rubber feet so it doesn't slide away from your chair.",
+   "safety": "",
+   "keywords": "mini bike under desk pedal"
+  },
+  {
+   "id": "recumbstep",
+   "name": "Recumbent cross trainer",
+   "aliases": [
+    "NuStep",
+    "Recumbent stepper",
+    "Seated elliptical"
+   ],
+   "category": "Bikes",
+   "subcategory": "Recumbent bikes",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A seated full-body machine where you push foot pedals and move arm handles together, very low impact and used heavily in rehab.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Chest",
+    "Back"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Magnetic, 10+ levels",
+   "adjustability": "Seat swivels and slides; arm length adjusts.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 75,
+    "height_cm": 115
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "recumbent",
+    "elliptical"
+   ],
+   "signature_exercises": [
+    "Seated stepping",
+    "Low-impact intervals",
+    "Arms-and-legs steady cardio"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Common in hospitals, senior centres and physio clinics; good for anyone who struggles to get on a bike.",
+   "safety": "",
+   "keywords": "nustep recumbent stepper seated"
+  },
+  {
+   "id": "rower",
+   "name": "Rowing machine",
+   "aliases": [
+    "Concept2",
+    "Erg",
+    "Air rower"
+   ],
+   "category": "Rowers & ergs",
+   "subcategory": "Air rowers",
+   "app_group": "Cardio",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "A sliding-seat erg where you drive with the legs and pull a handle, with fan air resistance. Full body, low impact.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Upper back",
+    "Lats",
+    "Arms"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Air fan with damper 1–10",
+   "adjustability": "Damper lever; footplates adjust.",
+   "footprint": {
+    "length_cm": 245,
+    "width_cm": 60,
+    "height_cm": 100
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "skierg",
+    "waterrower",
+    "magrower"
+   ],
+   "signature_exercises": [
+    "Rowing machine",
+    "2,000 m row test",
+    "Rowing intervals"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "The Concept2 RowErg is the gym standard; it holds its resale value and its numbers match everyone else's.",
+   "safety": "",
+   "keywords": "row erg concept2"
+  },
+  {
+   "id": "waterrower",
+   "name": "Water rower",
+   "aliases": [
+    "WaterRower",
+    "Hydro rower"
+   ],
+   "category": "Rowers & ergs",
+   "subcategory": "Water rowers",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 2,
+   "setting": "home",
+   "description": "A rowing machine whose resistance comes from paddles in a tank of water, giving a smooth, quiet, boat-like feel.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Upper back",
+    "Lats",
+    "Arms"
+   ],
+   "loading": "Friction",
+   "weight_options": "Resistance set by water level",
+   "adjustability": "Water level; folds upright.",
+   "footprint": {
+    "length_cm": 210,
+    "width_cm": 55,
+    "height_cm": 55
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "rower",
+    "magrower"
+   ],
+   "signature_exercises": [
+    "Steady-state row",
+    "Rowing intervals",
+    "2,000 m row"
+   ],
+   "linked_exercise_ids": [
+    "row",
+    "rowint",
+    "row2k"
+   ],
+   "buying_tips": "Looks good and stands upright for storage; numbers differ from a Concept2, so don't compare splits.",
+   "safety": "",
+   "keywords": "water rower wooden"
+  },
+  {
+   "id": "magrower",
+   "name": "Magnetic rower",
+   "aliases": [
+    "Magnetic rowing machine",
+    "Hydrow (electromagnetic)",
+    "Smart rower"
+   ],
+   "category": "Rowers & ergs",
+   "subcategory": "Magnetic rowers",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A quiet rowing machine using magnets for resistance at fixed levels, popular for flats and home use.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Upper back",
+    "Lats",
+    "Arms"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "8–16 magnetic levels",
+   "adjustability": "Level dial; often folds.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 55,
+    "height_cm": 60
+   },
+   "space": "L",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "rower",
+    "waterrower"
+   ],
+   "signature_exercises": [
+    "Steady-state row",
+    "Rowing intervals",
+    "Row with a screen class"
+   ],
+   "linked_exercise_ids": [
+    "row",
+    "rowint",
+    "row2k"
+   ],
+   "buying_tips": "Cheap models have short rails; if you're over 185 cm check the inseam limit.",
+   "safety": "",
+   "keywords": "magnetic rower quiet folding"
+  },
+  {
+   "id": "hydrorower",
+   "name": "Hydraulic rower",
+   "aliases": [
+    "Piston rower",
+    "Mini rower"
+   ],
+   "category": "Rowers & ergs",
+   "subcategory": "Hydraulic rowers",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A compact budget rower using one or two hydraulic pistons on swinging arms; cheap and small, but the stroke feels unlike real rowing.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Upper back",
+    "Lats",
+    "Arms",
+    "Quads"
+   ],
+   "loading": "Hydraulic",
+   "weight_options": "Piston resistance dial, ~10 levels",
+   "adjustability": "Piston dial per arm.",
+   "footprint": {
+    "length_cm": 140,
+    "width_cm": 70,
+    "height_cm": 50
+   },
+   "space": "M",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "magrower",
+    "rower"
+   ],
+   "signature_exercises": [
+    "Piston rowing",
+    "Rowing intervals",
+    "Single-arm piston row"
+   ],
+   "linked_exercise_ids": [
+    "row",
+    "rowint"
+   ],
+   "buying_tips": "Fine for a taste of rowing on a tight budget; pistons get hot and fade on long sessions.",
+   "safety": "",
+   "keywords": "hydraulic piston rower budget"
+  },
+  {
+   "id": "skierg",
+   "name": "Ski erg",
+   "aliases": [
+    "SkiErg",
+    "Concept2 SkiErg"
+   ],
+   "category": "Rowers & ergs",
+   "subcategory": "Ski ergs",
+   "app_group": "Cardio",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A standing erg where you pull two handles down from overhead, like double-poling on cross-country skis, for upper-body-led cardio.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Lats",
+    "Triceps",
+    "Core",
+    "Glutes"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Air fan with damper 1–10",
+   "adjustability": "Damper; wall-mount or floor stand.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 60,
+    "height_cm": 215
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "rower",
+    "battleropes"
+   ],
+   "signature_exercises": [
+    "Ski erg",
+    "Ski erg sprints",
+    "Single-arm ski erg"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Needs about 2.3 m of ceiling; the wall-mount version saves floor space.",
+   "safety": "",
+   "keywords": "ski erg concept2 skierg"
+  },
+  {
+   "id": "bikeerg",
+   "name": "BikeErg",
+   "aliases": [
+    "Concept2 BikeErg",
+    "Fan bike erg"
+   ],
+   "category": "Rowers & ergs",
+   "subcategory": "Bike ergs",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "Concept2's fan-resistance indoor bike with the same monitor as their rower, used for comparable, measurable bike work.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Calves"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Air fan with damper 1–10",
+   "adjustability": "Seat and bar height; road-bike fit.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 60,
+    "height_cm": 120
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "spinbike",
+    "airbike"
+   ],
+   "signature_exercises": [
+    "BikeErg intervals",
+    "Calorie sprints",
+    "Tabata bike",
+    "Steady-state ride"
+   ],
+   "linked_exercise_ids": [
+    "spinint",
+    "bikeride",
+    "tabatabike"
+   ],
+   "buying_tips": "Accepts your own saddle and pedals; very low upkeep compared with friction spin bikes.",
+   "safety": "",
+   "keywords": "bikeerg concept2 bike erg"
+  },
+  {
+   "id": "ube",
+   "name": "Upper body ergometer",
+   "aliases": [
+    "UBE",
+    "Arm bike",
+    "Arm ergometer",
+    "Hand cycle"
+   ],
+   "category": "Rowers & ergs",
+   "subcategory": "Arm ergs",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A table-height hand-cranked bike for the arms, for cardio when the legs can't be used and for shoulder rehab or conditioning.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Shoulders",
+    "Arms",
+    "Upper back"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Magnetic or air, light to heavy",
+   "adjustability": "Crank height and seat adjust; can work forwards or backwards.",
+   "footprint": {
+    "length_cm": 100,
+    "width_cm": 70,
+    "height_cm": 130
+   },
+   "space": "M",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "pedalexer",
+    "airbike",
+    "skierg"
+   ],
+   "signature_exercises": [
+    "Arm bike",
+    "Arm bike intervals",
+    "Reverse arm cranking"
+   ],
+   "linked_exercise_ids": [
+    "ube"
+   ],
+   "buying_tips": "Common in physio clinics and adaptive gyms; a pedal exerciser on a table is the cheap home version.",
+   "safety": "",
+   "keywords": "arm bike ergometer ube hand crank"
+  },
+  {
+   "id": "swimerg",
+   "name": "Swim ergometer",
+   "aliases": [
+    "Vasa trainer",
+    "Swim bench"
+   ],
+   "category": "Rowers & ergs",
+   "subcategory": "Swim trainers",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A bench you lie on face down and pull paddles or handles on cords, copying the swim stroke for dryland swim training.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Lats",
+    "Shoulders",
+    "Triceps",
+    "Core"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Air flywheel with damper",
+   "adjustability": "Damper; bench angle on some.",
+   "footprint": {
+    "length_cm": 230,
+    "width_cm": 60,
+    "height_cm": 60
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "skierg",
+    "bands"
+   ],
+   "signature_exercises": [
+    "Freestyle pulls",
+    "Butterfly pulls",
+    "Swim-stroke intervals"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Mainly for swimmers and triathletes; long stretch cords are the cheap alternative.",
+   "safety": "",
+   "keywords": "vasa swim bench dryland"
+  },
+  {
+   "id": "stairs",
+   "name": "Stair climber",
+   "aliases": [
+    "StepMill",
+    "StairMaster",
+    "Revolving stairs"
+   ],
+   "category": "Steppers & climbers",
+   "subcategory": "Stepmills",
+   "app_group": "Cardio",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A machine with a revolving staircase you keep climbing, a very effective low-impact way to work the glutes and lungs.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Glutes",
+    "Quads",
+    "Calves"
+   ],
+   "loading": "Motorised",
+   "weight_options": "Speed 20–160+ steps per minute",
+   "adjustability": "Speed by console.",
+   "footprint": {
+    "length_cm": 155,
+    "width_cm": 80,
+    "height_cm": 220
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "stepper",
+    "inclinetrainer",
+    "versaclimber"
+   ],
+   "signature_exercises": [
+    "Stair climber",
+    "Stepmill intervals",
+    "Skip-a-step climbs"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Needs high ceilings and a lot of power; mostly a commercial-gym machine.",
+   "safety": "Hold the rails lightly only; don't lean on them.",
+   "keywords": "stepmill stairmaster"
+  },
+  {
+   "id": "stepper",
+   "name": "Step machine",
+   "aliases": [
+    "Stair stepper",
+    "Pedal stepper",
+    "StairMaster 4000 PT"
+   ],
+   "category": "Steppers & climbers",
+   "subcategory": "Pedal steppers",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A machine with two independent pedals you press down in turn, like climbing stairs without leaving the spot.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Glutes",
+    "Quads",
+    "Calves"
+   ],
+   "loading": "Hydraulic",
+   "weight_options": "Hydraulic or magnetic, 10–20 levels",
+   "adjustability": "Resistance and step depth.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 75,
+    "height_cm": 160
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "stairs",
+    "ministepper"
+   ],
+   "signature_exercises": [
+    "Stepper intervals",
+    "Steady stepping",
+    "Deep-step glute climb"
+   ],
+   "linked_exercise_ids": [
+    "stair"
+   ],
+   "buying_tips": "Look for independent pedals and a solid frame; cheap ones feel bouncy.",
+   "safety": "",
+   "keywords": "stepper stair pedals"
+  },
+  {
+   "id": "ministepper",
+   "name": "Mini stepper",
+   "aliases": [
+    "Twist stepper",
+    "Hydraulic stepper"
+   ],
+   "category": "Steppers & climbers",
+   "subcategory": "Pedal steppers",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A small floor stepper with two short pedals on hydraulic pistons, often with bands for the arms, that fits under a bed.",
+   "muscle_focus": [
+    "Glutes",
+    "Quads",
+    "Calves"
+   ],
+   "loading": "Hydraulic",
+   "weight_options": "Hydraulic pistons, light",
+   "adjustability": "Step height dial on some; twist versions.",
+   "footprint": {
+    "length_cm": 45,
+    "width_cm": 40,
+    "height_cm": 25
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "stepper",
+    "step"
+   ],
+   "signature_exercises": [
+    "Mini stepper intervals",
+    "Twist stepping",
+    "Stepping with band rows"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Good for gentle activity in small spaces; not intense enough to replace a full stepper.",
+   "safety": "",
+   "keywords": "mini stepper twist"
+  },
+  {
+   "id": "versaclimber",
+   "name": "VersaClimber",
+   "aliases": [
+    "Vertical climber",
+    "Climbing machine",
+    "Maxi Climber"
+   ],
+   "category": "Steppers & climbers",
+   "subcategory": "Vertical climbers",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A vertical climbing machine where arms and legs move together on handles and pedals, for very hard full-body, low-impact cardio.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Glutes",
+    "Quads",
+    "Lats",
+    "Shoulders",
+    "Arms"
+   ],
+   "loading": "Hydraulic",
+   "weight_options": "Hydraulic or air resistance; budget versions use body weight",
+   "adjustability": "Stroke length and resistance.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 80,
+    "height_cm": 230
+   },
+   "space": "M",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "stairs",
+    "jacobsladder",
+    "airbike"
+   ],
+   "signature_exercises": [
+    "VersaClimber",
+    "Climber sprints",
+    "Short-stroke intervals"
+   ],
+   "linked_exercise_ids": [
+    "versaclimb"
+   ],
+   "buying_tips": "Folding vertical climbers (MaxiClimber) cost far less but are much lighter-duty.",
+   "safety": "",
+   "keywords": "versa climber vertical climbing"
+  },
+  {
+   "id": "jacobsladder",
+   "name": "Jacob's ladder",
+   "aliases": [
+    "Ladder climber",
+    "Endless ladder"
+   ],
+   "category": "Steppers & climbers",
+   "subcategory": "Vertical climbers",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "An endless sloped ladder you climb on all fours; it moves at the speed you climb, for self-paced full-body cardio.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Glutes",
+    "Quads",
+    "Shoulders",
+    "Core"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Self-paced",
+   "adjustability": "Speed set by your climbing; hip belt.",
+   "footprint": {
+    "length_cm": 210,
+    "width_cm": 90,
+    "height_cm": 230
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "versaclimber",
+    "stairs"
+   ],
+   "signature_exercises": [
+    "Ladder climb intervals",
+    "Steady climb",
+    "Calorie sprints"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Mostly seen in CrossFit and military-style gyms; needs a high ceiling.",
+   "safety": "Wear the hip belt so you can't climb off the top.",
+   "keywords": "jacobs ladder climbing"
+  },
+  {
+   "id": "ropeclimber",
+   "name": "Rope climber machine",
+   "aliases": [
+    "Marpo rope trainer",
+    "Endless rope",
+    "Rope pulling machine"
+   ],
+   "category": "Steppers & climbers",
+   "subcategory": "Rope trainers",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "An endless-rope machine you pull hand over hand against adjustable resistance, standing, seated or kneeling.",
+   "muscle_focus": [
+    "Lats",
+    "Biceps",
+    "Forearms",
+    "Core",
+    "Heart & lungs"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Magnetic or air brake, adjustable",
+   "adjustability": "Resistance; mount height on some.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 90,
+    "height_cm": 240
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "battleropes",
+    "sled"
+   ],
+   "signature_exercises": [
+    "Hand-over-hand rope pull",
+    "Seated rope pull",
+    "Rope climb intervals"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Great grip and back conditioning; a sled with a rope is the low-cost alternative.",
+   "safety": "",
+   "keywords": "endless rope marpo pull"
+  },
+  {
+   "id": "treadwall",
+   "name": "Rotating climbing wall",
+   "aliases": [
+    "Treadwall",
+    "Climbing treadmill"
+   ],
+   "category": "Steppers & climbers",
+   "subcategory": "Climbing walls",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A rolling climbing wall that turns as you climb so you stay near the floor, for endurance climbing and grip.",
+   "muscle_focus": [
+    "Forearms",
+    "Lats",
+    "Shoulders",
+    "Core",
+    "Heart & lungs"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Speed and wall angle adjust",
+   "adjustability": "Angle and speed.",
+   "footprint": {
+    "length_cm": 250,
+    "width_cm": 200,
+    "height_cm": 300
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "pullupbar"
+   ],
+   "signature_exercises": [
+    "Endless climbing laps",
+    "Traverse intervals",
+    "Overhang endurance climbs"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Rare and expensive; found in climbing gyms and some boutique studios.",
+   "safety": "",
+   "keywords": "treadwall climbing wall"
+  },
+  {
+   "id": "elliptical",
+   "name": "Elliptical / cross trainer",
+   "aliases": [
+    "Cross trainer",
+    "Cross-trainer"
+   ],
+   "category": "Elliptical & gliders",
+   "subcategory": "Ellipticals",
+   "app_group": "Cardio",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "A machine with foot pedals that move in an oval path and handles that swing with them, for low-impact full-body cardio.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Chest",
+    "Back"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Magnetic, 8–25 levels; incline ramp on some",
+   "adjustability": "Resistance, ramp, stride length on some.",
+   "footprint": {
+    "length_cm": 180,
+    "width_cm": 70,
+    "height_cm": 170
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "arctrainer",
+    "recumbstep",
+    "bike"
+   ],
+   "signature_exercises": [
+    "Elliptical",
+    "Elliptical intervals",
+    "Reverse pedalling"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A stride length of at least 50 cm feels natural for most adults.",
+   "safety": "",
+   "keywords": "cross-trainer elliptical"
+  },
+  {
+   "id": "arctrainer",
+   "name": "Arc trainer",
+   "aliases": [
+    "Cybex Arc Trainer"
+   ],
+   "category": "Elliptical & gliders",
+   "subcategory": "Ellipticals",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "An elliptical-like machine with an arc-shaped foot path and high incline, putting more load on the glutes with less knee stress.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Glutes",
+    "Quads",
+    "Hamstrings"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Resistance and incline levels",
+   "adjustability": "Incline and resistance.",
+   "footprint": {
+    "length_cm": 190,
+    "width_cm": 80,
+    "height_cm": 170
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "elliptical",
+    "stairs"
+   ],
+   "signature_exercises": [
+    "Arc trainer intervals",
+    "High-incline climb",
+    "Steady low-impact cardio"
+   ],
+   "linked_exercise_ids": [
+    "ellip"
+   ],
+   "buying_tips": "Mostly found in commercial gyms; try different incline settings to shift work to the glutes.",
+   "safety": "",
+   "keywords": "arc trainer cybex"
+  },
+  {
+   "id": "lateraltrainer",
+   "name": "Lateral trainer",
+   "aliases": [
+    "Octane LateralX",
+    "Lateral elliptical",
+    "Stride trainer",
+    "Precor AMT"
+   ],
+   "category": "Elliptical & gliders",
+   "subcategory": "Ellipticals",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "An elliptical that adds side-to-side motion to the stride, training the hips and inner and outer thighs.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Glutes",
+    "Adductors",
+    "Abductors",
+    "Quads"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Resistance and stride width levels",
+   "adjustability": "Stride width and incline.",
+   "footprint": {
+    "length_cm": 190,
+    "width_cm": 90,
+    "height_cm": 170
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "elliptical",
+    "slideboard"
+   ],
+   "signature_exercises": [
+    "Lateral stride intervals",
+    "Wide-stride steady cardio",
+    "Incline lateral climb"
+   ],
+   "linked_exercise_ids": [
+    "ellip"
+   ],
+   "buying_tips": "Adds variety for skiers and court athletes; Precor's AMT has a variable stride rather than lateral motion.",
+   "safety": "",
+   "keywords": "lateral x elliptical stride amt"
+  },
+  {
+   "id": "deskelliptic",
+   "name": "Under-desk elliptical",
+   "aliases": [
+    "Seated elliptical",
+    "Cubii"
+   ],
+   "category": "Elliptical & gliders",
+   "subcategory": "Compact ellipticals",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A small pedal-only elliptical you use seated under a desk or chair, for gentle leg movement during the day.",
+   "muscle_focus": [
+    "Quads",
+    "Calves",
+    "Glutes"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Magnetic, ~8 levels",
+   "adjustability": "Resistance dial; some motorised.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 45,
+    "height_cm": 25
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "pedalexer",
+    "ministepper"
+   ],
+   "signature_exercises": [
+    "Seated elliptical pedalling",
+    "Under-desk cycling",
+    "Reverse pedalling"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Low and quiet; check your desk height leaves enough knee room.",
+   "safety": "",
+   "keywords": "under desk seated elliptical cubii"
+  },
+  {
+   "id": "airwalker",
+   "name": "Air walker",
+   "aliases": [
+    "Gazelle glider",
+    "Air glider",
+    "Outdoor park walker"
+   ],
+   "category": "Elliptical & gliders",
+   "subcategory": "Gliders",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A simple frame with two swinging foot pedals that glide forward and back, a very gentle walking-style cardio machine.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Hip flexors"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "No resistance",
+   "adjustability": "None.",
+   "footprint": {
+    "length_cm": 110,
+    "width_cm": 60,
+    "height_cm": 140
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "elliptical"
+   ],
+   "signature_exercises": [
+    "Gliding strides",
+    "Low-impact cardio",
+    "Arms-only glide"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Very cheap and folds flat, but intensity is limited; also common in outdoor fitness parks.",
+   "safety": "",
+   "keywords": "gazelle glider air walker"
+  },
+  {
+   "id": "nordicski",
+   "name": "Cross-country ski machine",
+   "aliases": [
+    "NordicTrack ski machine",
+    "Ski machine"
+   ],
+   "category": "Elliptical & gliders",
+   "subcategory": "Gliders",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 2,
+   "setting": "home",
+   "description": "A machine with sliding foot skis and pull cords for the arms, copying classic cross-country skiing for full-body cardio.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Quads",
+    "Glutes",
+    "Lats",
+    "Triceps"
+   ],
+   "loading": "Friction",
+   "weight_options": "Friction flywheel and arm cord tension",
+   "adjustability": "Leg and arm resistance separately; incline.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 60,
+    "height_cm": 120
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "skierg",
+    "elliptical"
+   ],
+   "signature_exercises": [
+    "Classic ski stride",
+    "Arm-and-leg intervals",
+    "Legs-only ski stride"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Mostly second-hand now; takes practice to coordinate arms and legs.",
+   "safety": "",
+   "keywords": "nordictrack ski machine cross country"
+  },
+  {
+   "id": "slideboard",
+   "name": "Slide board",
+   "aliases": [
+    "Lateral slide board",
+    "Slideboard",
+    "Skate board trainer"
+   ],
+   "category": "Elliptical & gliders",
+   "subcategory": "Gliders",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A long slick board with stop bumpers at each end; you slide side to side in booties, like speed skating.",
+   "muscle_focus": [
+    "Glutes",
+    "Adductors",
+    "Abductors",
+    "Quads",
+    "Heart & lungs"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Length 1.5–2.5 m",
+   "adjustability": "End bumpers adjust on some.",
+   "footprint": {
+    "length_cm": 230,
+    "width_cm": 60,
+    "height_cm": 5
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "sliders"
+   ],
+   "signature_exercises": [
+    "Lateral slides",
+    "Skater intervals",
+    "Slide board hamstring curls",
+    "Mountain climbers"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Longer boards are harder; booties must be kept clean to slide well.",
+   "safety": "Wear the booties and keep shoes off the board.",
+   "keywords": "slide board skater lateral"
+  },
+  {
+   "id": "rebounder",
+   "name": "Rebounder / mini trampoline",
+   "aliases": [
+    "Mini trampoline",
+    "Fitness trampoline",
+    "Bellicon"
+   ],
+   "category": "Elliptical & gliders",
+   "subcategory": "Rebounders",
+   "app_group": "Cardio",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A small round trampoline for bouncing, jogging and light jumping, gentler on joints than jumping on the floor.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Calves",
+    "Quads",
+    "Core"
+   ],
+   "loading": "Spring",
+   "weight_options": "Springs or bungee cords; 90–130 cm wide",
+   "adjustability": "Handle bar on some.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 120,
+    "height_cm": 25
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "jumprope"
+   ],
+   "signature_exercises": [
+    "Rebounder jog",
+    "Rebounder bounce",
+    "Jumping jacks on a rebounder"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Bungee-cord models are quieter and softer than steel springs; a handle bar helps balance.",
+   "safety": "Keep it on a flat floor with clear space around it.",
+   "keywords": "mini trampoline rebounder bounce"
+  },
+  {
+   "id": "jumprope",
+   "name": "Jump rope",
+   "aliases": [
+    "Skipping rope"
+   ],
+   "category": "Ropes & sleds",
+   "subcategory": "Jump ropes",
+   "app_group": "Cardio",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A skipping rope with handles for footwork, coordination and cheap, portable cardio.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Calves",
+    "Shoulders"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "PVC, cable, beaded or weighted; length by height",
+   "adjustability": "Cable length adjusts on most.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "cordlessrope",
+    "rebounder"
+   ],
+   "signature_exercises": [
+    "Jump rope",
+    "Double unders",
+    "Boxer skip",
+    "Criss-cross jump rope"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Size it so the handles reach your armpits when you stand on the middle.",
+   "safety": "",
+   "keywords": "skipping rope"
+  },
+  {
+   "id": "speedrope",
+   "name": "Speed rope",
+   "aliases": [
+    "Cable rope",
+    "CrossFit rope",
+    "Double-under rope"
+   ],
+   "category": "Ropes & sleds",
+   "subcategory": "Jump ropes",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A thin coated-cable rope with bearing handles that spins very fast, used for double unders and fast footwork.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Calves",
+    "Forearms"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Cable 1.8–3 mm; length adjusts",
+   "adjustability": "Cut-to-length cable.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "jumprope",
+    "beadedrope"
+   ],
+   "signature_exercises": [
+    "Double unders",
+    "Triple unders",
+    "Speed skipping",
+    "Single-leg jump rope"
+   ],
+   "linked_exercise_ids": [
+    "rope",
+    "ropealt",
+    "ropeboxer",
+    "ropecross",
+    "doubleunder",
+    "ropehk",
+    "ropeside",
+    "ropesl"
+   ],
+   "buying_tips": "Bring spare cables; they fray on concrete.",
+   "safety": "A thin cable stings when it hits; wear long socks at first.",
+   "keywords": "speed rope double unders cable"
+  },
+  {
+   "id": "weightedrope",
+   "name": "Weighted jump rope",
+   "aliases": [
+    "Heavy rope",
+    "Crossrope"
+   ],
+   "category": "Ropes & sleds",
+   "subcategory": "Jump ropes",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A thick or heavy rope, sometimes with weighted handles, that slows the rotation and works the shoulders and grip harder.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Shoulders",
+    "Forearms",
+    "Calves"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "Rope 0.25–2.3 kg (0.5–5 lb)",
+   "adjustability": "Fixed; some have removable handle weights.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "jumprope",
+    "battleropes"
+   ],
+   "signature_exercises": [
+    "Weighted rope skipping",
+    "Boxer skip",
+    "Heavy rope intervals"
+   ],
+   "linked_exercise_ids": [
+    "rope",
+    "ropealt",
+    "ropeboxer",
+    "ropehk"
+   ],
+   "buying_tips": "0.5–1 lb ropes are good for learning; heavier ones are for short conditioning blocks.",
+   "safety": "",
+   "keywords": "weighted heavy jump rope"
+  },
+  {
+   "id": "beadedrope",
+   "name": "Beaded jump rope",
+   "aliases": [
+    "Segmented rope",
+    "Freestyle rope"
+   ],
+   "category": "Ropes & sleds",
+   "subcategory": "Jump ropes",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A rope made of plastic segments on a cord; its weight and feedback make it good for learning and for freestyle tricks.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Calves",
+    "Shoulders"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Length by height",
+   "adjustability": "Beads removable to shorten.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "jumprope",
+    "speedrope"
+   ],
+   "signature_exercises": [
+    "Criss-cross jump rope",
+    "Side swings",
+    "Freestyle tricks",
+    "Alternate-foot skipping"
+   ],
+   "linked_exercise_ids": [
+    "rope",
+    "ropealt",
+    "ropeboxer",
+    "ropecross",
+    "ropeside",
+    "ropesl",
+    "doubleunder"
+   ],
+   "buying_tips": "Best rope for beginners and kids; durable outdoors.",
+   "safety": "",
+   "keywords": "beaded segmented freestyle rope"
+  },
+  {
+   "id": "cordlessrope",
+   "name": "Cordless jump rope",
+   "aliases": [
+    "Ropeless jump rope",
+    "Ghost rope"
+   ],
+   "category": "Ropes & sleds",
+   "subcategory": "Jump ropes",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "Two handles with short weighted tethers and no rope, for skipping motion where ceilings or space are too small.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Calves",
+    "Shoulders"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "Weighted ball tethers",
+   "adjustability": "Some count jumps.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "jumprope"
+   ],
+   "signature_exercises": [
+    "Ropeless skipping",
+    "High-knee skip",
+    "Boxer skip"
+   ],
+   "linked_exercise_ids": [
+    "rope",
+    "ropealt",
+    "ropeboxer",
+    "ropehk"
+   ],
+   "buying_tips": "Good for low ceilings and flats; doesn't train timing like a real rope.",
+   "safety": "",
+   "keywords": "ropeless cordless"
+  },
+  {
+   "id": "battleropes",
+   "name": "Battle ropes",
+   "aliases": [
+    "Heavy ropes",
+    "Conditioning ropes"
+   ],
+   "category": "Ropes & sleds",
+   "subcategory": "Battle ropes",
+   "app_group": "Full body",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "Heavy, thick ropes anchored at the middle that you whip in waves and slams for upper-body conditioning.",
+   "muscle_focus": [
+    "Heart & lungs",
+    "Shoulders",
+    "Arms",
+    "Core"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "38–50 mm thick, 9–15 m long (9–20 kg)",
+   "adjustability": "Change length or thickness to adjust difficulty.",
+   "footprint": {
+    "length_cm": 1000,
+    "width_cm": 150,
+    "height_cm": 0
+   },
+   "space": "L",
+   "price_band": "$$",
+   "requires": [
+    "ropeanchor"
+   ],
+   "substitutes": [
+    "skierg",
+    "weightedrope"
+   ],
+   "signature_exercises": [
+    "Battle rope alternating waves",
+    "Battle rope slams",
+    "Double waves",
+    "Grappler throws"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Poly-dacron ropes shed less than manila; 38 mm x 12 m suits most people.",
+   "safety": "",
+   "keywords": "battle ropes waves"
+  },
+  {
+   "id": "ropeanchor",
+   "name": "Battle rope anchor",
+   "aliases": [
+    "Rope anchor",
+    "Anchor strap"
+   ],
+   "category": "Ropes & sleds",
+   "subcategory": "Battle ropes",
+   "app_group": "Attachments",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A wall or floor anchor, strap or weighted base that holds the middle of a battle rope in place.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "Wall bracket, floor plate or anchor strap",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "kettlebells",
+    "powerrack"
+   ],
+   "signature_exercises": [
+    "Battle rope waves",
+    "Battle rope slams",
+    "Battle rope circles"
+   ],
+   "linked_exercise_ids": [
+    "battle",
+    "battlecircle",
+    "battledouble",
+    "battlegrap",
+    "battleslam"
+   ],
+   "buying_tips": "A strap around a rack post or heavy kettlebell works if you can't drill into a wall.",
+   "safety": "",
+   "keywords": "battle rope anchor strap"
+  },
+  {
+   "id": "sled",
+   "name": "Push / pull sled",
+   "aliases": [
+    "Prowler",
+    "Push sled",
+    "Power sled"
+   ],
+   "category": "Ropes & sleds",
+   "subcategory": "Sleds",
+   "app_group": "Legs & glutes",
+   "in_app": true,
+   "tier": 3,
+   "setting": "both",
+   "description": "A weighted sled with push uprights you drive across turf, and a hook to drag with a harness or rope. Huge leg work without eccentric soreness.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Calves",
+    "Heart & lungs"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Sled 20–45 kg empty; load with plates",
+   "adjustability": "High and low push handles on most.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 70,
+    "height_cm": 100
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "dragsled",
+    "tanksled",
+    "curvedtread"
+   ],
+   "signature_exercises": [
+    "Sled push",
+    "Forward sled drag",
+    "Backward sled drag",
+    "Sled sprint"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Needs turf or a smooth outdoor surface; check runners suit your floor.",
+   "safety": "",
+   "keywords": "prowler push sled drag"
+  },
+  {
+   "id": "dragsled",
+   "name": "Drag sled",
+   "aliases": [
+    "Pull sled",
+    "Dog sled",
+    "Speed sled",
+    "Tyre sled"
+   ],
+   "category": "Ropes & sleds",
+   "subcategory": "Sleds",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A simple flat metal sled with a plate post that you drag with a harness, straps or rope; cheaper and lighter than a push sled.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Hamstrings",
+    "Calves",
+    "Upper back"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Sled 8–20 kg empty; plate post",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 50,
+    "height_cm": 40
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [
+    "plates",
+    "sledharness"
+   ],
+   "substitutes": [
+    "sled",
+    "tyre"
+   ],
+   "signature_exercises": [
+    "Forward sled drag",
+    "Backward sled drag",
+    "Sled rope pull",
+    "Sled sprint"
+   ],
+   "linked_exercise_ids": [
+    "sledfwd",
+    "sledback",
+    "sledpull",
+    "sledsprint"
+   ],
+   "buying_tips": "Works on grass or concrete; a car tyre with a rope is the DIY version.",
+   "safety": "",
+   "keywords": "drag sled pull harness"
+  },
+  {
+   "id": "tanksled",
+   "name": "Tank-style sled",
+   "aliases": [
+    "Torque Tank",
+    "Wheeled sled",
+    "Magnetic sled"
+   ],
+   "category": "Ropes & sleds",
+   "subcategory": "Sleds",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A wheeled push sled with built-in adjustable brake resistance, so it works on any floor with no plates.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Calves",
+    "Heart & lungs"
+   ],
+   "loading": "Friction",
+   "weight_options": "Resistance levels 1–3+ by lever; some magnetic",
+   "adjustability": "Brake lever sets resistance; push and pull.",
+   "footprint": {
+    "length_cm": 110,
+    "width_cm": 70,
+    "height_cm": 100
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "sled",
+    "curvedtread"
+   ],
+   "signature_exercises": [
+    "Sled push",
+    "Sled rope pull",
+    "Backward drag"
+   ],
+   "linked_exercise_ids": [
+    "sledpush"
+   ],
+   "buying_tips": "Great for indoor gyms without turf; check the wheel type won't mark your floor.",
+   "safety": "",
+   "keywords": "tank torque sled wheels"
+  },
+  {
+   "id": "sledharness",
+   "name": "Sled harness",
+   "aliases": [
+    "Drag harness",
+    "Sled strap",
+    "Pull harness"
+   ],
+   "category": "Ropes & sleds",
+   "subcategory": "Sled accessories",
+   "app_group": "Attachments",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A shoulder or waist harness with a strap or rope that hooks onto a sled, for forward and backward drags and sprints.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "Shoulder or waist belt; straps 2–4 m",
+   "adjustability": "Strap length adjusts.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "dipbelt",
+    "liftbelt"
+   ],
+   "signature_exercises": [
+    "Sled sprint",
+    "Forward sled drag",
+    "Backward sled drag"
+   ],
+   "linked_exercise_ids": [
+    "sledsprint",
+    "sledfwd",
+    "sledback"
+   ],
+   "buying_tips": "Waist harnesses suit sprints; shoulder harnesses let you lean into heavy drags.",
+   "safety": "",
+   "keywords": "sled harness strap"
+  },
+  {
+   "id": "parachute",
+   "name": "Speed parachute",
+   "aliases": [
+    "Sprint parachute",
+    "Resistance parachute",
+    "Speed chute"
+   ],
+   "category": "Ropes & sleds",
+   "subcategory": "Sprint resistance",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A small parachute clipped to a waist belt that catches air as you sprint, adding resistance that grows with speed.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings",
+    "Quads",
+    "Heart & lungs"
+   ],
+   "loading": "Air / magnetic / fan resistance",
+   "weight_options": "Chute 1–1.5 m; ~5–15 kg drag",
+   "adjustability": "Chute size.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "sprintharness",
+    "dragsled"
+   ],
+   "signature_exercises": [
+    "Parachute sprint",
+    "Release sprints",
+    "Resisted acceleration runs"
+   ],
+   "linked_exercise_ids": [
+    "parachute"
+   ],
+   "buying_tips": "Needs a long open space and doesn't work well in strong wind.",
+   "safety": "",
+   "keywords": "parachute sprint chute"
+  },
+  {
+   "id": "sprintharness",
+   "name": "Sprint resistance harness",
+   "aliases": [
+    "Resistance belt",
+    "Overspeed trainer",
+    "Reaction belt"
+   ],
+   "category": "Ropes & sleds",
+   "subcategory": "Sprint resistance",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A waist belt with a long elastic cord or strap held by a partner or anchor, for resisted sprints, release sprints and agility work.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings",
+    "Quads",
+    "Calves"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "Bungee cord 2–5 m",
+   "adjustability": "Partner controls resistance.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "bands",
+    "parachute",
+    "sledharness"
+   ],
+   "signature_exercises": [
+    "Band-resisted sprint",
+    "Resisted lateral shuffles",
+    "Release sprints"
+   ],
+   "linked_exercise_ids": [
+    "bandsprint"
+   ],
+   "buying_tips": "A belt with a quick-release lets the partner let go for overspeed sprints.",
+   "safety": "Check the cord for cracks before every session.",
+   "keywords": "sprint harness bungee resisted"
+  },
+  {
+   "id": "plyobox",
+   "name": "Plyo box",
+   "aliases": [
+    "Jump box",
+    "Wooden plyo box",
+    "3-in-1 box"
+   ],
+   "category": "Plyo & agility",
+   "subcategory": "Plyo boxes",
+   "app_group": "Legs & glutes",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "A sturdy box for box jumps, step-ups and depth drops. Wooden 3-in-1 boxes give three heights by flipping.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Calves"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "3-in-1 wood or steel: 50/60/75 cm (20/24/30 in)",
+   "adjustability": "Flip for different heights.",
+   "footprint": {
+    "length_cm": 75,
+    "width_cm": 60,
+    "height_cm": 60
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "softbox",
+    "adjplyobox",
+    "flatbench",
+    "step"
+   ],
+   "signature_exercises": [
+    "Box jump",
+    "Box step-up",
+    "Depth jump",
+    "Lateral box jump"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Check it's stable on every face; steel boxes are sturdier but hurt more on a miss.",
+   "safety": "Step down rather than jumping down for reps.",
+   "keywords": "box jump step up"
+  },
+  {
+   "id": "softbox",
+   "name": "Soft plyo box",
+   "aliases": [
+    "Foam plyo box",
+    "Stackable soft box"
+   ],
+   "category": "Plyo & agility",
+   "subcategory": "Plyo boxes",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A dense foam box, single or stackable, that forgives missed jumps and is safer for high reps and beginners.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Calves"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "15–75 cm; stackable sets",
+   "adjustability": "Stack pieces for height.",
+   "footprint": {
+    "length_cm": 90,
+    "width_cm": 75,
+    "height_cm": 60
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "plyobox",
+    "adjplyobox"
+   ],
+   "signature_exercises": [
+    "Box jump",
+    "Lateral box jump",
+    "Single-leg box jump",
+    "Seated box jump"
+   ],
+   "linked_exercise_ids": [
+    "boxjump",
+    "latboxjump",
+    "slboxjump",
+    "seatedboxjump",
+    "stepup",
+    "powerstepup",
+    "depthdrop"
+   ],
+   "buying_tips": "Look for a heavy foam core and non-slip base; very light boxes slide.",
+   "safety": "",
+   "keywords": "soft foam plyo box"
+  },
+  {
+   "id": "adjplyobox",
+   "name": "Adjustable plyo box",
+   "aliases": [
+    "Adjustable jump box",
+    "Plyo platform"
+   ],
+   "category": "Plyo & agility",
+   "subcategory": "Plyo boxes",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A steel box or platform whose height adjusts with pins or stacked risers, so one box covers many jump heights.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Calves"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Heights 15–75 cm in steps",
+   "adjustability": "Pin or riser height adjust.",
+   "footprint": {
+    "length_cm": 70,
+    "width_cm": 60,
+    "height_cm": 75
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "plyobox",
+    "softbox"
+   ],
+   "signature_exercises": [
+    "Box jump",
+    "Depth jump",
+    "Step-up",
+    "Box squat"
+   ],
+   "linked_exercise_ids": [
+    "boxjump",
+    "depthdrop",
+    "depthjump",
+    "latboxjump",
+    "stepup",
+    "dbstepup",
+    "bbstepup",
+    "boxsquat",
+    "slboxjump",
+    "seatedboxjump",
+    "powerstepup",
+    "dbboxover"
+   ],
+   "buying_tips": "Make sure the pins lock firmly and the top is non-slip.",
+   "safety": "Re-check the pins before every jump session.",
+   "keywords": "adjustable plyo box"
+  },
+  {
+   "id": "agilityladder",
+   "name": "Agility ladder",
+   "aliases": [
+    "Speed ladder",
+    "Footwork ladder"
+   ],
+   "category": "Plyo & agility",
+   "subcategory": "Footwork",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A flat flexible ladder laid on the floor for fast footwork patterns, coordination and warm-ups.",
+   "muscle_focus": [
+    "Calves",
+    "Quads",
+    "Hip flexors",
+    "Heart & lungs"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "4–8 m; 8–20 rungs",
+   "adjustability": "Rungs slide to change spacing.",
+   "footprint": {
+    "length_cm": 600,
+    "width_cm": 50,
+    "height_cm": 0
+   },
+   "space": "L",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "cones"
+   ],
+   "signature_exercises": [
+    "Icky shuffle",
+    "Two feet in each",
+    "Lateral in-in-out-out",
+    "Ladder crossover",
+    "Hopscotch"
+   ],
+   "linked_exercise_ids": [
+    "laddersinglehop",
+    "laddercross",
+    "ladderhopscotch",
+    "ladderlateral",
+    "ladderone",
+    "laddertwo",
+    "ickyshuffle"
+   ],
+   "buying_tips": "Flat rungs are less likely to trip you; tape on the floor works if you have none.",
+   "safety": "",
+   "keywords": "agility speed ladder footwork"
+  },
+  {
+   "id": "cones",
+   "name": "Cones",
+   "aliases": [
+    "Agility cones",
+    "Disc markers",
+    "Saucer cones",
+    "Spot markers"
+   ],
+   "category": "Plyo & agility",
+   "subcategory": "Markers",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Plastic cones or flat disc markers for laying out sprints, shuttle runs and change-of-direction drills.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Calves",
+    "Heart & lungs"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Disc 5 cm, cones 15–45 cm; sets of 10–50",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "agilitypoles"
+   ],
+   "signature_exercises": [
+    "5-10-5 pro agility",
+    "T-drill",
+    "L-drill (3-cone)",
+    "Zig-zag cone drill",
+    "Shuttle run"
+   ],
+   "linked_exercise_ids": [
+    "proagility",
+    "boxdrill",
+    "ldrill",
+    "shuttlerun",
+    "tdrill",
+    "zigzag",
+    "hurdlehop"
+   ],
+   "buying_tips": "Disc cones stack and travel easily; taller cones are easier to see in a big space.",
+   "safety": "",
+   "keywords": "cones markers discs agility"
+  },
+  {
+   "id": "hurdles",
+   "name": "Hurdles",
+   "aliases": [
+    "Mini hurdles",
+    "Speed hurdles",
+    "Adjustable hurdles",
+    "Agility hurdles"
+   ],
+   "category": "Plyo & agility",
+   "subcategory": "Hurdles",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Small plastic speed hurdles (15–30 cm) or adjustable hurdles for hops, bounds and stepping drills.",
+   "muscle_focus": [
+    "Calves",
+    "Quads",
+    "Glutes",
+    "Hip flexors"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Mini 15–30 cm; adjustable 15–60 cm",
+   "adjustability": "Adjustable models set height by sliders.",
+   "footprint": {
+    "length_cm": 400,
+    "width_cm": 60,
+    "height_cm": 30
+   },
+   "space": "M",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "cones"
+   ],
+   "signature_exercises": [
+    "Hurdle hops",
+    "Lateral hurdle hops",
+    "Over-under hurdle drill",
+    "Hurdle step-overs"
+   ],
+   "linked_exercise_ids": [
+    "hurdlehop"
+   ],
+   "buying_tips": "Collapsible plastic hurdles are safest because they bend if you clip them.",
+   "safety": "Use hurdles that fall over if you clip them.",
+   "keywords": "mini hurdles speed"
+  },
+  {
+   "id": "agilitypoles",
+   "name": "Agility poles",
+   "aliases": [
+    "Slalom poles",
+    "Coaching poles"
+   ],
+   "category": "Plyo & agility",
+   "subcategory": "Markers",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Upright slalom poles on spiked or weighted bases for weaving, cutting and change-of-direction drills.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Calves",
+    "Heart & lungs"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "1.2–1.8 m; sets of 6–12",
+   "adjustability": "Spike or weighted base.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "cones"
+   ],
+   "signature_exercises": [
+    "Slalom runs",
+    "Zig-zag cuts",
+    "Weave-and-sprint"
+   ],
+   "linked_exercise_ids": [
+    "zigzag"
+   ],
+   "buying_tips": "Spiked bases for grass; weighted bases for indoor or hard floors.",
+   "safety": "",
+   "keywords": "slalom poles agility"
+  },
+  {
+   "id": "reactionball",
+   "name": "Reaction ball",
+   "aliases": [
+    "Reflex ball",
+    "Z-ball"
+   ],
+   "category": "Plyo & agility",
+   "subcategory": "Reaction tools",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A small rubber ball with knobbly sides that bounces unpredictably, for reaction time and hand-eye coordination.",
+   "muscle_focus": [
+    "Forearms"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "6–10 cm",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "massageball"
+   ],
+   "signature_exercises": [
+    "Wall reaction catches",
+    "Drop-and-catch",
+    "Partner reaction drills"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Cheap and portable; tennis balls are an easier starting point.",
+   "safety": "",
+   "keywords": "reaction ball reflex"
+  },
+  {
+   "id": "reactlights",
+   "name": "Reaction lights",
+   "aliases": [
+    "BlazePod",
+    "Reaction pods",
+    "Light training system"
+   ],
+   "category": "Plyo & agility",
+   "subcategory": "Reaction tools",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Wireless light pods that turn on in random or set orders; you sprint or reach to tap them off, for reaction and agility training.",
+   "muscle_focus": [
+    "Quads",
+    "Calves",
+    "Heart & lungs"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Sets of 4–12 pods",
+   "adjustability": "Controlled by app.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "cones"
+   ],
+   "signature_exercises": [
+    "Reactive sprints",
+    "Light-tap drills",
+    "Reaction shuffle"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Check the app's drill library and whether it needs a subscription.",
+   "safety": "",
+   "keywords": "blazepod lights reaction pods"
+  },
+  {
+   "id": "speedrings",
+   "name": "Agility rings",
+   "aliases": [
+    "Speed rings",
+    "Agility hoops"
+   ],
+   "category": "Plyo & agility",
+   "subcategory": "Footwork",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Flat plastic rings that link into patterns on the floor for hopping and footwork drills.",
+   "muscle_focus": [
+    "Calves",
+    "Quads",
+    "Hip flexors"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Rings 40–50 cm; sets of 6–12",
+   "adjustability": "Lay out any pattern.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "agilityladder",
+    "cones"
+   ],
+   "signature_exercises": [
+    "Hopscotch patterns",
+    "Single-leg ring hops",
+    "In-out footwork"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "More flexible layouts than a ladder; good for kids' sessions.",
+   "safety": "",
+   "keywords": "agility rings hoops hopscotch"
+  },
+  {
+   "id": "medball",
+   "name": "Medicine ball",
+   "aliases": [
+    "Med ball",
+    "Rubber medicine ball",
+    "Bouncing medicine ball"
+   ],
+   "category": "Throwing balls",
+   "subcategory": "Medicine balls",
+   "app_group": "Core",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A weighted ball for throws, passes, twists and loaded core work; rubber ones bounce back off walls and the floor.",
+   "muscle_focus": [
+    "Core",
+    "Obliques",
+    "Shoulders",
+    "Chest"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "1–12 kg (2–25 lb); rubber bouncing or soft",
+   "adjustability": "Fixed; buy a few weights.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "slamball",
+    "wallball",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "Medicine ball chest pass",
+    "Rotational throw",
+    "Russian twist",
+    "Medicine ball slam"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "3–5 kg suits most adults for throws; rubber bouncing balls are best for rebounds.",
+   "safety": "Don't slam a bouncing ball; it can fly back at your face.",
+   "keywords": "slam ball med ball"
+  },
+  {
+   "id": "slamball",
+   "name": "Slam ball",
+   "aliases": [
+    "Dead ball",
+    "No-bounce ball",
+    "D-ball"
+   ],
+   "category": "Throwing balls",
+   "subcategory": "Slam balls",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A heavy, dead-bounce ball with a thick shell, sand-filled so it doesn't bounce back when you slam it to the floor.",
+   "muscle_focus": [
+    "Lats",
+    "Core",
+    "Shoulders",
+    "Glutes"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "4–70 kg (10–150 lb)",
+   "adjustability": "Fixed weight.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "medball",
+    "sandbell",
+    "sandbag"
+   ],
+   "signature_exercises": [
+    "Medicine ball slam",
+    "Rotational slam",
+    "Overhead backward throw",
+    "Ball-over-shoulder"
+   ],
+   "linked_exercise_ids": [
+    "medslam",
+    "mbrotslam",
+    "mbbackthrow",
+    "mbscoop"
+   ],
+   "buying_tips": "Textured shells are easier to grip with sweaty hands; heavy ones double as strongman-style shouldering balls.",
+   "safety": "Slam on rubber flooring, not concrete or wood.",
+   "keywords": "slam ball dead ball"
+  },
+  {
+   "id": "wallball",
+   "name": "Wall ball",
+   "aliases": [
+    "Soft medicine ball",
+    "Wall-ball shot ball",
+    "Dynamax"
+   ],
+   "category": "Throwing balls",
+   "subcategory": "Wall balls",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A large, soft-shelled medicine ball made to be thrown at a wall target and caught, as in CrossFit wall-ball shots.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Shoulders",
+    "Heart & lungs"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "2–14 kg; standard 9 kg / 6 kg (20 / 14 lb)",
+   "adjustability": "Fixed weight.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "wall"
+   ],
+   "substitutes": [
+    "medball"
+   ],
+   "signature_exercises": [
+    "Wall ball",
+    "Overhead throw",
+    "Chest pass to wall",
+    "Rotational wall throw"
+   ],
+   "linked_exercise_ids": [
+    "wallball",
+    "mbchest",
+    "mbsoccer",
+    "mbshotput",
+    "mbrotthrow"
+   ],
+   "buying_tips": "Double-stitched synthetic leather lasts longest; 35 cm diameter is standard.",
+   "safety": "",
+   "keywords": "wall ball crossfit"
+  },
+  {
+   "id": "wbtarget",
+   "name": "Wall-ball target",
+   "aliases": [
+    "Wall ball target",
+    "Rig target"
+   ],
+   "category": "Throwing balls",
+   "subcategory": "Wall balls",
+   "app_group": "Attachments",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A wall-mounted target or rig attachment marking the standard height (3 m or 2.7 m) for wall-ball shots.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "Targets at 2.7 m and 3 m",
+   "adjustability": "Height fixed or adjustable on rig mounts.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "wallball"
+   ],
+   "substitutes": [
+    "wall"
+   ],
+   "signature_exercises": [
+    "Wall ball",
+    "Target throws",
+    "Wall-ball thrusters"
+   ],
+   "linked_exercise_ids": [
+    "wallball"
+   ],
+   "buying_tips": "A tape mark on a solid wall works fine at home.",
+   "safety": "",
+   "keywords": "wall ball target"
+  },
+  {
+   "id": "sandbell",
+   "name": "Sandbell",
+   "aliases": [
+    "Hyperwear SandBell",
+    "Sand disc"
+   ],
+   "category": "Throwing balls",
+   "subcategory": "Slam balls",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A floppy, sand-filled disc bag with no handles that you slam, throw, carry and twist with.",
+   "muscle_focus": [
+    "Core",
+    "Shoulders",
+    "Forearms",
+    "Glutes"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "2–25 kg (5–50 lb)",
+   "adjustability": "Fixed weight.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "slamball",
+    "sandbag"
+   ],
+   "signature_exercises": [
+    "Sandbell slam",
+    "Rotational slam",
+    "Russian twist",
+    "Sandbell press"
+   ],
+   "linked_exercise_ids": [
+    "medslam",
+    "mbrotslam",
+    "russian"
+   ],
+   "buying_tips": "Holds its shape poorly, which is the point; good for grip work.",
+   "safety": "",
+   "keywords": "sandbell sand disc slam"
+  },
+  {
+   "id": "mbrebounder",
+   "name": "Medicine ball rebounder",
+   "aliases": [
+    "Rebounder net",
+    "Plyo rebounder",
+    "Throw-back net"
+   ],
+   "category": "Throwing balls",
+   "subcategory": "Rebounders",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "An angled trampoline net that throws a medicine ball straight back, so you can do throws and catches without a partner or wall.",
+   "muscle_focus": [
+    "Core",
+    "Obliques",
+    "Chest",
+    "Shoulders"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Frame 90–120 cm; angle adjusts",
+   "adjustability": "Net angle.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 100,
+    "height_cm": 120
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [
+    "medball"
+   ],
+   "substitutes": [
+    "wall"
+   ],
+   "signature_exercises": [
+    "Chest pass",
+    "Rotational throw",
+    "Overhead throw",
+    "Single-arm shot put"
+   ],
+   "linked_exercise_ids": [
+    "mbchest",
+    "mbsoccer",
+    "mbrotthrow",
+    "mbshotput"
+   ],
+   "buying_tips": "Use a soft medicine ball; hard balls can damage the net.",
+   "safety": "",
+   "keywords": "rebounder net medicine ball throw"
+  },
+  {
+   "id": "handlemedball",
+   "name": "Handled medicine ball",
+   "aliases": [
+    "Dual-grip medicine ball",
+    "Med ball with handles"
+   ],
+   "category": "Throwing balls",
+   "subcategory": "Medicine balls",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A medicine ball with one or two built-in handles, making it easier to hold for twists, chops, push-ups and kettlebell-style moves.",
+   "muscle_focus": [
+    "Core",
+    "Obliques",
+    "Shoulders"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "2–10 kg",
+   "adjustability": "Fixed weight.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "medball",
+    "kettlebells"
+   ],
+   "signature_exercises": [
+    "Medicine ball woodchop",
+    "Russian twist",
+    "Medicine ball push-up",
+    "Squat to press"
+   ],
+   "linked_exercise_ids": [
+    "mbchop",
+    "russian",
+    "mbpushup",
+    "mbsquatpress",
+    "mblungetwist"
+   ],
+   "buying_tips": "Handles make it unsuitable for slams or wall throws.",
+   "safety": "",
+   "keywords": "med ball handles dual grip"
+  },
+  {
+   "id": "ropeball",
+   "name": "Rope medicine ball",
+   "aliases": [
+    "Rope slam ball",
+    "Swing ball"
+   ],
+   "category": "Throwing balls",
+   "subcategory": "Medicine balls",
+   "app_group": "Conditioning & agility",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A medicine ball on a rope or strap that you swing and slam into the ground or a wall for rotational power.",
+   "muscle_focus": [
+    "Obliques",
+    "Core",
+    "Shoulders",
+    "Lats"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "2–8 kg",
+   "adjustability": "Hold the rope shorter or longer.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "sledgehammer",
+    "slamball"
+   ],
+   "signature_exercises": [
+    "Rotational rope slams",
+    "Overhead rope slam",
+    "Hammer-style swings"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Needs clear space; a sledgehammer and tyre is a similar alternative.",
+   "safety": "Check nobody is within swinging range.",
+   "keywords": "rope medicine ball swing"
+  }
+ ]
+}
