@@ -1,0 +1,4877 @@
+[
+ {
+  "id": "mountain",
+  "name": "Mountain pose",
+  "aliases": [
+   "Tadasana",
+   "Samasthiti"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Balance",
+   "Beginner-friendly",
+   "Home-friendly",
+   "Warm-up"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Core",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Glutes",
+   "Erector spinae"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Stand with feet hip-width, weight even through both feet.",
+   "Lift kneecaps gently and lengthen up through the crown.",
+   "Relax shoulders down and breathe slowly."
+  ],
+  "common_mistakes": [
+   "Locking knees hard",
+   "Leaning weight into the heels"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Tree pose"
+  ],
+  "safety": "Safe for nearly everyone; widen stance if balance is poor.",
+  "video": null,
+  "notes": "Foundation stance for all standing poses; good for posture awareness."
+ },
+ {
+  "id": "tree",
+  "name": "Tree pose",
+  "aliases": [
+   "Vrksasana",
+   "Vrikshasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Balance",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hip abductors",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Adductors",
+   "Feet"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Press the lifted foot into the inner calf or thigh, never the knee.",
+   "Keep the standing hip stacked over the foot.",
+   "Fix your gaze on one still point."
+  ],
+  "common_mistakes": [
+   "Resting the foot on the side of the knee",
+   "Standing hip jutting out to the side"
+  ],
+  "regressions": [
+   "Tree pose with toes on the floor (kickstand)"
+  ],
+  "progressions": [
+   "Tree pose with eyes closed",
+   "Tree pose with arms overhead"
+  ],
+  "safety": "Use a wall for support if balance is unsteady.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "warrior1",
+  "name": "Warrior I",
+  "aliases": [
+   "Virabhadrasana I",
+   "Warrior one"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Strength",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Shoulders",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Bend the front knee over the ankle, back foot angled 45 degrees.",
+   "Square hips toward the front of the mat.",
+   "Reach arms up while dropping shoulders away from ears."
+  ],
+  "common_mistakes": [
+   "Front knee drifting past the toes or caving in",
+   "Arching the low back to square the hips"
+  ],
+  "regressions": [
+   "High lunge with back heel lifted"
+  ],
+  "progressions": [
+   "Warrior III"
+  ],
+  "safety": "Shorten the stance if hips or knees complain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "warrior2",
+  "name": "Warrior II",
+  "aliases": [
+   "Virabhadrasana II",
+   "Warrior two"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Strength",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Bend the front knee to track over the middle toes.",
+   "Open hips to the long side of the mat.",
+   "Reach arms out level and look over the front hand."
+  ],
+  "common_mistakes": [
+   "Front knee collapsing inward",
+   "Leaning the torso over the front leg"
+  ],
+  "regressions": [
+   "Shorter stance with less knee bend"
+  ],
+  "progressions": [
+   "Reverse warrior",
+   "Extended side angle"
+  ],
+  "safety": "Keep the front knee no further forward than the ankle.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "revwarrior",
+  "name": "Reverse warrior",
+  "aliases": [
+   "Viparita Virabhadrasana",
+   "Peaceful warrior"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Obliques",
+   "Latissimus dorsi"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Intercostals"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "20–30 sec / side",
+  "form_cues": [
+   "From Warrior II, slide the back hand down the back leg.",
+   "Reach the front arm up and back over your ear.",
+   "Keep the front knee bent and steady."
+  ],
+  "common_mistakes": [
+   "Straightening the front knee",
+   "Leaning all your weight on the back hand"
+  ],
+  "regressions": [
+   "Warrior II"
+  ],
+  "progressions": [
+   "Extended side angle"
+  ],
+  "safety": "Keep the reach gentle if you have low-back pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sideangle",
+  "name": "Extended side angle",
+  "aliases": [
+   "Utthita Parsvakonasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Strength",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Obliques",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Latissimus dorsi"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "From Warrior II, rest the forearm on the front thigh or hand on a block.",
+   "Reach the top arm over your ear in one long line.",
+   "Roll the top ribs open toward the ceiling."
+  ],
+  "common_mistakes": [
+   "Dumping weight into the forearm",
+   "Collapsing the chest toward the floor"
+  ],
+  "regressions": [
+   "Forearm on thigh"
+  ],
+  "progressions": [
+   "Bound side angle"
+  ],
+  "safety": "Use a block under the hand if the floor feels far away.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "triangle",
+  "name": "Triangle pose",
+  "aliases": [
+   "Trikonasana",
+   "Utthita Trikonasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Stretching",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings",
+   "Obliques",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Straighten both legs, front foot pointing forward.",
+   "Hinge at the front hip and reach long before tipping down.",
+   "Stack shoulders and open the chest to the side."
+  ],
+  "common_mistakes": [
+   "Rounding the spine to reach the floor",
+   "Hyperextending the front knee"
+  ],
+  "regressions": [
+   "Hand on a block or shin"
+  ],
+  "progressions": [
+   "Revolved triangle"
+  ],
+  "safety": "Keep a micro-bend in the front knee if you hyperextend.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "revtriangle",
+  "name": "Revolved triangle",
+  "aliases": [
+   "Parivrtta Trikonasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Balance",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings",
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Erector spinae",
+   "Glutes"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Use a shorter stance with hips squared forward.",
+   "Lengthen the spine first, then twist from the ribs.",
+   "Place the bottom hand on a block if needed."
+  ],
+  "common_mistakes": [
+   "Twisting from the neck instead of the torso",
+   "Losing balance by keeping feet on one line"
+  ],
+  "regressions": [
+   "Revolved hand on block",
+   "Pyramid pose"
+  ],
+  "progressions": [
+   "Revolved half moon"
+  ],
+  "safety": "Avoid deep twists if pregnant or with disc issues.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "chairpose",
+  "name": "Chair pose",
+  "aliases": [
+   "Utkatasana",
+   "Fierce pose",
+   "Awkward pose"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Strength",
+   "Endurance",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Shoulders",
+   "Calves"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec",
+  "form_cues": [
+   "Sit hips back as if onto a chair, weight in the heels.",
+   "Keep knees behind the toes.",
+   "Reach arms up and draw the belly in."
+  ],
+  "common_mistakes": [
+   "Arching the low back",
+   "Letting knees drift far past the toes"
+  ],
+  "regressions": [
+   "Wall sit with hands on thighs"
+  ],
+  "progressions": [
+   "Revolved chair"
+  ],
+  "safety": "Keep the bend shallower if knees hurt.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "revchair",
+  "name": "Revolved chair",
+  "aliases": [
+   "Parivrtta Utkatasana",
+   "Twisted chair"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Strength",
+   "Mobility"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Upper back"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "20–30 sec / side",
+  "form_cues": [
+   "From Chair pose, bring palms together at the chest.",
+   "Hook the elbow outside the opposite knee.",
+   "Keep knees level and twist from the upper back."
+  ],
+  "common_mistakes": [
+   "One knee sliding forward past the other",
+   "Rounding the back instead of lengthening"
+  ],
+  "regressions": [
+   "Chair pose",
+   "Twist with hands on thighs"
+  ],
+  "progressions": [],
+  "safety": "Skip deep twists if pregnant or with a disc injury.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "standfold",
+  "name": "Standing forward fold",
+  "aliases": [
+   "Uttanasana",
+   "Forward bend"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Mobility",
+   "Recovery"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Erector spinae"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Hinge from the hips with a long spine.",
+   "Bend knees as much as you need.",
+   "Let the head and neck hang heavy."
+  ],
+  "common_mistakes": [
+   "Locking the knees and rounding hard",
+   "Holding the breath"
+  ],
+  "regressions": [
+   "Ragdoll with bent knees",
+   "Half forward fold"
+  ],
+  "progressions": [
+   "Big-toe hold forward fold"
+  ],
+  "safety": "Rise slowly to avoid dizziness; bend knees if you have back pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "widefold",
+  "name": "Wide-legged forward fold",
+  "aliases": [
+   "Prasarita Padottanasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Mobility"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Erector spinae",
+   "Calves"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Step feet wide, toes slightly in.",
+   "Hinge from the hips with hands on the floor or blocks.",
+   "Lengthen the crown toward the floor."
+  ],
+  "common_mistakes": [
+   "Weight sinking into the heels",
+   "Rounding only from the upper back"
+  ],
+  "regressions": [
+   "Hands on blocks"
+  ],
+  "progressions": [
+   "Hands clasped behind the back"
+  ],
+  "safety": "Rise slowly with a flat back to avoid dizziness.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pyramid",
+  "name": "Pyramid pose",
+  "aliases": [
+   "Parsvottanasana",
+   "Intense side stretch"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Hip rotators",
+   "Erector spinae"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Step one foot back about a leg's length, hips square.",
+   "Fold over the front leg with a long spine.",
+   "Keep the front knee soft, not locked."
+  ],
+  "common_mistakes": [
+   "Hips twisting open",
+   "Rounding to get the head lower"
+  ],
+  "regressions": [
+   "Hands on blocks"
+  ],
+  "progressions": [
+   "Revolved triangle"
+  ],
+  "safety": "Shorten the stance if hamstrings feel sharp, not stretched.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "eagle",
+  "name": "Eagle pose",
+  "aliases": [
+   "Garudasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Balance",
+   "Mobility",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Rear deltoids",
+   "Core"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "20–30 sec / side",
+  "form_cues": [
+   "Sit into a slight squat, wrap one thigh over the other.",
+   "Cross arms and lift elbows to shoulder height.",
+   "Squeeze everything toward the midline."
+  ],
+  "common_mistakes": [
+   "Standing knee locked straight",
+   "Shoulders hunched up to the ears"
+  ],
+  "regressions": [
+   "Toes of the top leg on the floor"
+  ],
+  "progressions": [
+   "Eagle with a forward fold"
+  ],
+  "safety": "Skip the leg wrap if you have knee pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dancer",
+  "name": "Dancer pose",
+  "aliases": [
+   "Natarajasana",
+   "Lord of the dance"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Balance",
+   "Mobility",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Quadriceps",
+   "Hip flexors",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Erector spinae",
+   "Calves"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "20–30 sec / side",
+  "form_cues": [
+   "Hold the inside of one foot behind you.",
+   "Kick the foot into the hand as you tip forward.",
+   "Reach the free arm forward for balance."
+  ],
+  "common_mistakes": [
+   "Letting the lifted knee splay out wide",
+   "Collapsing the chest down"
+  ],
+  "regressions": [
+   "Standing quad stretch at a wall"
+  ],
+  "progressions": [
+   "Dancer with a strap overhead"
+  ],
+  "safety": "Use a wall or strap; ease off with low-back pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "halfmoon",
+  "name": "Half moon pose",
+  "aliases": [
+   "Ardha Chandrasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Balance",
+   "Strength",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hip abductors",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "20–30 sec / side",
+  "form_cues": [
+   "Balance on one leg with the bottom hand on a block.",
+   "Lift the top leg to hip height, foot flexed.",
+   "Stack hips and open the chest to the side."
+  ],
+  "common_mistakes": [
+   "Standing knee locked",
+   "Top hip rolling forward"
+  ],
+  "regressions": [
+   "Half moon with back to a wall"
+  ],
+  "progressions": [
+   "Revolved half moon",
+   "Sugarcane pose"
+  ],
+  "safety": "Practise near a wall until balance is steady.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "goddess",
+  "name": "Goddess pose",
+  "aliases": [
+   "Utkata Konasana",
+   "Horse stance"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Strength",
+   "Mobility",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Adductors",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec",
+  "form_cues": [
+   "Take a wide stance, toes turned out.",
+   "Bend knees over the toes and sink hips.",
+   "Keep the spine tall and arms in cactus."
+  ],
+  "common_mistakes": [
+   "Knees caving inward",
+   "Tipping the pelvis forward"
+  ],
+  "regressions": [
+   "Shallower bend"
+  ],
+  "progressions": [
+   "Goddess with heels lifted"
+  ],
+  "safety": "Keep knees in line with toes to protect them.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "handtotoe",
+  "name": "Extended hand-to-big-toe pose",
+  "aliases": [
+   "Utthita Hasta Padangusthasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Balance",
+   "Stretching",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Core"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "20–30 sec / side",
+  "form_cues": [
+   "Hook the big toe with two fingers or use a strap.",
+   "Stand tall on a firm standing leg.",
+   "Extend the lifted leg forward, then open it to the side."
+  ],
+  "common_mistakes": [
+   "Rounding the back to straighten the leg",
+   "Hiking the hip of the lifted leg"
+  ],
+  "regressions": [
+   "Bent lifted knee",
+   "Using a strap"
+  ],
+  "progressions": [
+   "Free-floating leg without the hand"
+  ],
+  "safety": "Use a strap or bend the knee to avoid straining the hamstring.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "garland",
+  "name": "Garland pose",
+  "aliases": [
+   "Malasana",
+   "Yogi squat"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Adductors",
+   "Hip flexors",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Erector spinae",
+   "Glutes"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Squat deep with feet a little wider than hips.",
+   "Press elbows into the inner knees, palms together.",
+   "Lift the chest and keep heels down if you can."
+  ],
+  "common_mistakes": [
+   "Heels lifting and weight rolling forward",
+   "Rounding the back heavily"
+  ],
+  "regressions": [
+   "Block under the hips or rolled mat under heels"
+  ],
+  "progressions": [
+   "Bound garland"
+  ],
+  "safety": "Sit on a block if knees are sensitive.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "crescent",
+  "name": "High lunge",
+  "aliases": [
+   "Crescent lunge",
+   "Ashta Chandrasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Strength",
+   "Balance",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Calves"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Stay on the ball of the back foot, back leg strong.",
+   "Bend the front knee to about 90 degrees.",
+   "Square the hips and reach arms up."
+  ],
+  "common_mistakes": [
+   "Back knee sagging",
+   "Leaning the torso forward"
+  ],
+  "regressions": [
+   "Low lunge"
+  ],
+  "progressions": [
+   "Warrior III"
+  ],
+  "safety": "Shorten the stance for knee comfort.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "legsupwall",
+  "name": "Legs up the wall",
+  "aliases": [
+   "Viparita Karani"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Recovery",
+   "Restorative"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Lower back"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Wall"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "3–10 min",
+  "form_cues": [
+   "Sit sideways to a wall and swing legs up.",
+   "Rest your back and head on the floor.",
+   "Let arms fall open and breathe slowly."
+  ],
+  "common_mistakes": [
+   "Hips too far from the wall with straining hamstrings",
+   "Forcing the legs straight"
+  ],
+  "regressions": [
+   "Calves on a chair"
+  ],
+  "progressions": [
+   "Blanket under the hips"
+  ],
+  "safety": "Come down if your feet go numb; check with a doctor if you have glaucoma.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "downdog",
+  "name": "Downward dog",
+  "aliases": [
+   "Adho Mukha Svanasana",
+   "Downward-facing dog",
+   "Down dog"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Mobility",
+   "Warm-up"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Latissimus dorsi",
+   "Core",
+   "Triceps"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Press hands wide and lift hips up and back.",
+   "Bend knees to keep the spine long.",
+   "Let heels sink toward the floor."
+  ],
+  "common_mistakes": [
+   "Rounding the upper back",
+   "Shoulders crunched up to the ears"
+  ],
+  "regressions": [
+   "Puppy pose",
+   "Downward dog with bent knees"
+  ],
+  "progressions": [
+   "Three-legged dog"
+  ],
+  "safety": "Rest in child's pose if wrists or shoulders hurt.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "childpose",
+  "name": "Child's pose",
+  "aliases": [
+   "Balasana",
+   "Extended child's pose"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Recovery",
+   "Stretching",
+   "Mobility"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Erector spinae",
+   "Latissimus dorsi",
+   "Hip extensors"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Sit hips toward the heels with knees wide or together.",
+   "Reach arms forward or rest them by your sides.",
+   "Breathe into the back of the ribs."
+  ],
+  "common_mistakes": [
+   "Forcing hips down when knees hurt",
+   "Holding tension in the shoulders"
+  ],
+  "regressions": [
+   "Pillow between hips and heels"
+  ],
+  "progressions": [
+   "Thread-the-needle variation"
+  ],
+  "safety": "Place a cushion behind the knees if knee flexion hurts.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "catcow",
+  "name": "Cat-cow",
+  "aliases": [
+   "Marjaryasana-Bitilasana",
+   "Cat and cow"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Warm-up",
+   "Recovery"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Erector spinae",
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Neck"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10 cycles",
+  "form_cues": [
+   "Start on hands and knees, wrists under shoulders.",
+   "Inhale, drop the belly and lift chest.",
+   "Exhale, round the spine and tuck the chin."
+  ],
+  "common_mistakes": [
+   "Moving only the neck",
+   "Rushing instead of matching the breath"
+  ],
+  "regressions": [
+   "Seated cat-cow on a chair"
+  ],
+  "progressions": [
+   "Bird dog"
+  ],
+  "safety": "Keep the range pain-free; pad the knees if needed.",
+  "video": null,
+  "notes": "Moving flow, counted in breath cycles rather than held."
+ },
+ {
+  "id": "lowlunge",
+  "name": "Low lunge",
+  "aliases": [
+   "Anjaneyasana",
+   "Crescent moon pose"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Mobility",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hip flexors",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Lower the back knee to the mat, front knee over ankle.",
+   "Sink hips forward and lift the chest.",
+   "Reach arms overhead without arching the low back."
+  ],
+  "common_mistakes": [
+   "Front knee shooting past the toes",
+   "Dumping into the low back"
+  ],
+  "regressions": [
+   "Hands on the front thigh"
+  ],
+  "progressions": [
+   "Low lunge with quad stretch"
+  ],
+  "safety": "Pad the back knee with a folded mat.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "chaturanga",
+  "name": "Four-limbed staff pose",
+  "aliases": [
+   "Chaturanga Dandasana",
+   "Chaturanga",
+   "Yoga push-up"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Strength",
+   "Calisthenics"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Triceps",
+   "Pectorals",
+   "Anterior deltoids"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Serratus anterior"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–10 sec",
+  "form_cues": [
+   "From plank, shift forward onto the toes.",
+   "Lower with elbows hugging the ribs.",
+   "Stop when upper arms are parallel to the floor."
+  ],
+  "common_mistakes": [
+   "Dropping lower than the shoulders",
+   "Hips sagging toward the mat"
+  ],
+  "regressions": [
+   "Knees-down chaturanga",
+   "Knees-chest-chin"
+  ],
+  "progressions": [
+   "Chaturanga push-ups"
+  ],
+  "safety": "Lower with control and stop above shoulder height to protect shoulders.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "updog",
+  "name": "Upward-facing dog",
+  "aliases": [
+   "Urdhva Mukha Svanasana",
+   "Up dog"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Stretching"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Erector spinae",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Hip flexors",
+   "Shoulders"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–30 sec",
+  "form_cues": [
+   "Press through straight arms, thighs lifted off the mat.",
+   "Roll shoulders back and open the chest.",
+   "Press the tops of the feet down."
+  ],
+  "common_mistakes": [
+   "Shoulders shrugged up to ears",
+   "Hanging into the low back"
+  ],
+  "regressions": [
+   "Cobra pose"
+  ],
+  "progressions": [
+   "Wheel pose"
+  ],
+  "safety": "Use cobra instead with low-back or wrist pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cobra",
+  "name": "Cobra pose",
+  "aliases": [
+   "Bhujangasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Stretching",
+   "Rehab"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Erector spinae"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Hip flexors",
+   "Rhomboids"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–30 sec",
+  "form_cues": [
+   "Lie face down, hands under the shoulders.",
+   "Lift the chest using the back, little weight in the hands.",
+   "Keep elbows bent and close to the ribs."
+  ],
+  "common_mistakes": [
+   "Pushing to straight arms and crunching the low back",
+   "Craning the neck up"
+  ],
+  "regressions": [
+   "Sphinx pose"
+  ],
+  "progressions": [
+   "Upward-facing dog"
+  ],
+  "safety": "Keep the lift low if you feel low-back pinching.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sphinx",
+  "name": "Sphinx pose",
+  "aliases": [
+   "Salamba Bhujangasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Stretching",
+   "Recovery"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Erector spinae"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Rectus abdominis"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Lie on your belly with elbows under the shoulders.",
+   "Press forearms down and lift the chest.",
+   "Relax glutes and let the spine lengthen."
+  ],
+  "common_mistakes": [
+   "Sinking between the shoulders",
+   "Clenching the glutes hard"
+  ],
+  "regressions": [
+   "Lie flat with a pillow under the chest"
+  ],
+  "progressions": [
+   "Cobra pose"
+  ],
+  "safety": "Lower down if you feel pinching in the lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "locust",
+  "name": "Locust pose",
+  "aliases": [
+   "Salabhasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Strength",
+   "Rehab"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Erector spinae",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Rear deltoids",
+   "Rhomboids"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–30 sec",
+  "form_cues": [
+   "Lie face down, arms by your sides.",
+   "Lift chest, arms and legs together.",
+   "Look slightly down to keep the neck long."
+  ],
+  "common_mistakes": [
+   "Bending the knees",
+   "Throwing the head back"
+  ],
+  "regressions": [
+   "Half locust (one leg)"
+  ],
+  "progressions": [
+   "Bow pose"
+  ],
+  "safety": "Keep the lift modest with low-back issues.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bow",
+  "name": "Bow pose",
+  "aliases": [
+   "Dhanurasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Stretching"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Erector spinae",
+   "Quadriceps",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Pectorals",
+   "Anterior deltoids",
+   "Glutes"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–30 sec",
+  "form_cues": [
+   "Lie face down and hold the outside of the ankles.",
+   "Kick feet into hands to lift chest and thighs.",
+   "Keep knees about hip-width."
+  ],
+  "common_mistakes": [
+   "Knees splaying wide",
+   "Holding the breath"
+  ],
+  "regressions": [
+   "Half bow (one leg)",
+   "Locust pose"
+  ],
+  "progressions": [
+   "Wheel pose"
+  ],
+  "safety": "Avoid if pregnant or with acute back pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "camel",
+  "name": "Camel pose",
+  "aliases": [
+   "Ustrasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Stretching"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hip flexors",
+   "Quadriceps",
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Pectorals",
+   "Erector spinae"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–30 sec",
+  "form_cues": [
+   "Kneel with hips over knees, hands on the low back.",
+   "Lift the chest up before leaning back.",
+   "Reach for the heels only if the hips stay forward."
+  ],
+  "common_mistakes": [
+   "Hips drifting back behind the knees",
+   "Dropping the head back early"
+  ],
+  "regressions": [
+   "Hands on low back",
+   "Toes tucked for higher heels"
+  ],
+  "progressions": [
+   "Wheel pose"
+  ],
+  "safety": "Come up slowly; skip with neck or low-back injuries.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bridgepose",
+  "name": "Bridge pose",
+  "aliases": [
+   "Setu Bandha Sarvangasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Strength",
+   "Rehab"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Erector spinae",
+   "Hip flexors",
+   "Pectorals"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec",
+  "form_cues": [
+   "Lie on your back, feet hip-width near the hips.",
+   "Press feet down and lift hips high.",
+   "Roll shoulders under and interlace hands below you."
+  ],
+  "common_mistakes": [
+   "Knees falling out wide",
+   "Turning the head while lifted"
+  ],
+  "regressions": [
+   "Supported bridge on a block"
+  ],
+  "progressions": [
+   "Wheel pose"
+  ],
+  "safety": "Keep the neck still while the hips are up.",
+  "video": null,
+  "notes": "Yoga version focuses on chest opening; see Glute bridge for strength reps."
+ },
+ {
+  "id": "wheel",
+  "name": "Wheel pose",
+  "aliases": [
+   "Urdhva Dhanurasana",
+   "Full backbend"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Strength"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Erector spinae",
+   "Shoulders",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Triceps",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–20 sec",
+  "form_cues": [
+   "Place hands by the ears, fingers toward the shoulders.",
+   "Press up onto the crown, then straighten arms.",
+   "Keep feet and knees parallel."
+  ],
+  "common_mistakes": [
+   "Elbows and knees splaying out",
+   "Pushing up from cold muscles"
+  ],
+  "regressions": [
+   "Bridge pose",
+   "Wheel with blocks at a wall"
+  ],
+  "progressions": [
+   "Wheel with one leg lifted"
+  ],
+  "safety": "Warm up well first; avoid with shoulder, wrist or back injuries.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "fish",
+  "name": "Fish pose",
+  "aliases": [
+   "Matsyasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Mobility"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Pectorals",
+   "Hip flexors",
+   "Neck flexors"
+  ],
+  "secondary_muscles": [
+   "Erector spinae"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–30 sec",
+  "form_cues": [
+   "Lie on your back with hands under the hips.",
+   "Press forearms down to lift the chest.",
+   "Rest the crown lightly or keep the head lifted."
+  ],
+  "common_mistakes": [
+   "Putting body weight into the head",
+   "Shrugging shoulders"
+  ],
+  "regressions": [
+   "Supported fish on blocks"
+  ],
+  "progressions": [
+   "Fish with legs lifted"
+  ],
+  "safety": "Keep weight off the head if you have neck issues.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pigeon",
+  "name": "Pigeon pose",
+  "aliases": [
+   "Eka Pada Rajakapotasana",
+   "Sleeping pigeon"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Mobility",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Glutes",
+   "Piriformis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Hip external rotators"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30–60 sec / side",
+  "form_cues": [
+   "Bring one shin forward across the mat.",
+   "Extend the back leg straight behind you.",
+   "Keep hips level, then fold forward slowly."
+  ],
+  "common_mistakes": [
+   "Hips tipping onto the front-leg side",
+   "Twisting the front knee"
+  ],
+  "regressions": [
+   "Figure-four stretch on the back",
+   "Block under the front hip"
+  ],
+  "progressions": [
+   "King pigeon"
+  ],
+  "safety": "Switch to the supine figure-four if the front knee hurts.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "seatedfold",
+  "name": "Seated forward fold",
+  "aliases": [
+   "Paschimottanasana",
+   "Seated forward bend"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Mobility"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings",
+   "Erector spinae"
+  ],
+  "secondary_muscles": [
+   "Calves"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Sit tall with legs straight, feet flexed.",
+   "Hinge forward from the hips, leading with the chest.",
+   "Bend knees if the back starts rounding."
+  ],
+  "common_mistakes": [
+   "Rounding hard to touch the toes",
+   "Bouncing into the stretch"
+  ],
+  "regressions": [
+   "Sit on a folded blanket",
+   "Strap around the feet"
+  ],
+  "progressions": [
+   "Hold the outer feet"
+  ],
+  "safety": "Bend the knees if you feel nerve tingling.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "janusirsa",
+  "name": "Head-to-knee pose",
+  "aliases": [
+   "Janu Sirsasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Mobility",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings",
+   "Erector spinae"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Obliques"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Extend one leg, other foot against the inner thigh.",
+   "Turn the chest over the straight leg.",
+   "Fold from the hips with a long spine."
+  ],
+  "common_mistakes": [
+   "Rounding from the upper back only",
+   "Forcing the head to the knee"
+  ],
+  "regressions": [
+   "Strap around the foot"
+  ],
+  "progressions": [
+   "Revolved head-to-knee"
+  ],
+  "safety": "Pad under the bent knee if it lifts high.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "boundangle",
+  "name": "Bound angle pose",
+  "aliases": [
+   "Baddha Konasana",
+   "Butterfly pose",
+   "Cobbler's pose"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Mobility"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Hip external rotators",
+   "Erector spinae"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Sit with soles of the feet together.",
+   "Hold the feet and sit tall.",
+   "Let knees relax down, no pushing."
+  ],
+  "common_mistakes": [
+   "Pressing knees down with the hands",
+   "Slumping the lower back"
+  ],
+  "regressions": [
+   "Sit on a blanket",
+   "Blocks under the knees"
+  ],
+  "progressions": [
+   "Forward fold in bound angle"
+  ],
+  "safety": "Support the knees with blocks if groin feels strained.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "recboundangle",
+  "name": "Reclined bound angle",
+  "aliases": [
+   "Supta Baddha Konasana",
+   "Reclined butterfly"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Recovery",
+   "Stretching"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Adductors",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Pectorals"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat|yogablocks",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "1–3 min",
+  "form_cues": [
+   "Lie back with soles of the feet together.",
+   "Let knees fall open, supported if needed.",
+   "Rest arms by your sides and breathe slowly."
+  ],
+  "common_mistakes": [
+   "Straining to drop the knees",
+   "Arching the low back"
+  ],
+  "regressions": [
+   "Blocks under each knee"
+  ],
+  "progressions": [
+   "Bolster under the spine"
+  ],
+  "safety": "Support the knees if you feel groin or knee strain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "boat",
+  "name": "Boat pose",
+  "aliases": [
+   "Navasana",
+   "Paripurna Navasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Core",
+   "Strength"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–30 sec",
+  "form_cues": [
+   "Balance just behind the sit bones.",
+   "Lift shins parallel to the floor, chest proud.",
+   "Reach arms forward alongside the knees."
+  ],
+  "common_mistakes": [
+   "Rounding the back",
+   "Holding the breath"
+  ],
+  "regressions": [
+   "Half boat with hands behind the thighs"
+  ],
+  "progressions": [
+   "Full boat with straight legs",
+   "Low boat"
+  ],
+  "safety": "Keep knees bent if the low back aches.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "halflord",
+  "name": "Seated spinal twist",
+  "aliases": [
+   "Ardha Matsyendrasana",
+   "Half lord of the fishes"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Recovery"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Obliques",
+   "Erector spinae"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Piriformis"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Cross one foot outside the opposite knee.",
+   "Lengthen up on the inhale.",
+   "Twist on the exhale, hugging the knee."
+  ],
+  "common_mistakes": [
+   "Leaning back into the hand",
+   "Cranking the neck around"
+  ],
+  "regressions": [
+   "Easy seated twist"
+  ],
+  "progressions": [
+   "Bound half lord of the fishes"
+  ],
+  "safety": "Twist gently; avoid deep twists if pregnant or with a disc injury.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "supinetwist",
+  "name": "Supine spinal twist",
+  "aliases": [
+   "Supta Matsyendrasana",
+   "Reclined twist"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Recovery",
+   "Mobility",
+   "Stretching"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Obliques",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Erector spinae",
+   "Pectorals"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30–60 sec / side",
+  "form_cues": [
+   "Lie on your back and draw one knee across the body.",
+   "Open the opposite arm out wide.",
+   "Let shoulders stay heavy on the mat."
+  ],
+  "common_mistakes": [
+   "Lifting the shoulder to get the knee down",
+   "Forcing the range"
+  ],
+  "regressions": [
+   "Pillow under the knee"
+  ],
+  "progressions": [
+   "Twist with the top leg extended"
+  ],
+  "safety": "Keep it gentle with back injuries.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "happybaby",
+  "name": "Happy baby",
+  "aliases": [
+   "Ananda Balasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Recovery",
+   "Stretching"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Adductors",
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Erector spinae"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Lie on your back and hold the outer feet.",
+   "Stack ankles over knees.",
+   "Draw knees toward the armpits, tailbone heavy."
+  ],
+  "common_mistakes": [
+   "Tailbone curling off the mat",
+   "Tugging with tense shoulders"
+  ],
+  "regressions": [
+   "Hold the shins or use a strap"
+  ],
+  "progressions": [
+   "Rock side to side"
+  ],
+  "safety": "Avoid pressure on the belly late in pregnancy.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "savasana",
+  "name": "Corpse pose",
+  "aliases": [
+   "Savasana",
+   "Final relaxation"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Recovery",
+   "Restorative"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Full body"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "3–10 min",
+  "form_cues": [
+   "Lie on your back with legs and arms relaxed apart.",
+   "Close your eyes and let the breath be natural.",
+   "Release tension from face, jaw and shoulders."
+  ],
+  "common_mistakes": [
+   "Rushing out of the pose",
+   "Fidgeting instead of settling"
+  ],
+  "regressions": [
+   "Pillow under the knees"
+  ],
+  "progressions": [],
+  "safety": "Bend the knees or use a pillow if the low back aches.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "shoulderstand",
+  "name": "Supported shoulder stand",
+  "aliases": [
+   "Salamba Sarvangasana",
+   "Candle pose"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Balance"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Core",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Neck extensors",
+   "Glutes"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Swing legs over, hands supporting the back.",
+   "Walk elbows in toward each other.",
+   "Stack hips over shoulders, weight on shoulders not neck."
+  ],
+  "common_mistakes": [
+   "Turning the head while up",
+   "Elbows splaying wide"
+  ],
+  "regressions": [
+   "Legs up the wall",
+   "Half shoulder stand"
+  ],
+  "progressions": [
+   "Plough pose"
+  ],
+  "safety": "Avoid with neck injury, high blood pressure or glaucoma; fold blankets under the shoulders.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "plough",
+  "name": "Plough pose",
+  "aliases": [
+   "Halasana",
+   "Plow pose"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Mobility"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings",
+   "Erector spinae"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Neck extensors"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec",
+  "form_cues": [
+   "From shoulder stand, lower the toes behind the head.",
+   "Keep hips stacked over the shoulders.",
+   "Keep the neck still and the throat soft."
+  ],
+  "common_mistakes": [
+   "Turning the head",
+   "Forcing toes to the floor"
+  ],
+  "regressions": [
+   "Feet on a chair behind you"
+  ],
+  "progressions": [
+   "Ear-pressure pose"
+  ],
+  "safety": "Avoid with neck injury, glaucoma or high blood pressure.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "headstand",
+  "name": "Supported headstand",
+  "aliases": [
+   "Salamba Sirsasana",
+   "Headstand"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Balance",
+   "Strength"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Trapezius",
+   "Triceps",
+   "Neck"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–60 sec",
+  "form_cues": [
+   "Interlace fingers and cradle the back of the head.",
+   "Press forearms down to lift weight off the head.",
+   "Walk feet in, then lift legs slowly with control."
+  ],
+  "common_mistakes": [
+   "Kicking up with momentum",
+   "Dumping weight into the neck"
+  ],
+  "regressions": [
+   "Dolphin pose",
+   "Headstand at a wall"
+  ],
+  "progressions": [
+   "Tripod headstand"
+  ],
+  "safety": "Learn with a teacher; avoid with neck injury, high blood pressure or glaucoma.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "crow",
+  "name": "Crow pose",
+  "aliases": [
+   "Bakasana",
+   "Crane pose"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Balance",
+   "Strength",
+   "Calisthenics"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Core",
+   "Triceps",
+   "Wrist flexors"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–30 sec",
+  "form_cues": [
+   "Plant hands shoulder-width and bend elbows back.",
+   "Rest knees high on the backs of the upper arms.",
+   "Shift forward and lift one foot, then the other."
+  ],
+  "common_mistakes": [
+   "Looking straight down and tipping over",
+   "Not leaning far enough forward"
+  ],
+  "regressions": [
+   "Feet on a block",
+   "One foot lifted"
+  ],
+  "progressions": [
+   "Side crow",
+   "Crane with straight arms"
+  ],
+  "safety": "Put a pillow in front of your face while learning; skip with wrist pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sidecrow",
+  "name": "Side crow",
+  "aliases": [
+   "Parsva Bakasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Balance",
+   "Strength",
+   "Calisthenics"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Wrist flexors"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "10–20 sec / side",
+  "form_cues": [
+   "Squat and twist so both knees face one side.",
+   "Plant hands, stack the outer thigh on one arm.",
+   "Lean forward and float the feet."
+  ],
+  "common_mistakes": [
+   "Twisting too little",
+   "Collapsing the shoulders"
+  ],
+  "regressions": [
+   "Crow pose"
+  ],
+  "progressions": [
+   "Eka Pada Koundinyasana I"
+  ],
+  "safety": "Skip with wrist injuries; use a cushion in front.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dolphin",
+  "name": "Dolphin pose",
+  "aliases": [
+   "Ardha Pincha Mayurasana",
+   "Dolphin dog"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Strength",
+   "Mobility"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec",
+  "form_cues": [
+   "Start on forearms, elbows shoulder-width.",
+   "Lift hips up and back into an inverted V.",
+   "Press forearms down and push away from the floor."
+  ],
+  "common_mistakes": [
+   "Elbows sliding outward",
+   "Upper back collapsing"
+  ],
+  "regressions": [
+   "Puppy pose"
+  ],
+  "progressions": [
+   "Forearm stand",
+   "Dolphin push-ups"
+  ],
+  "safety": "Use a strap above the elbows if they splay.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "lizard",
+  "name": "Lizard pose",
+  "aliases": [
+   "Utthan Pristhasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Mobility",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hip flexors",
+   "Adductors",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30–60 sec / side",
+  "form_cues": [
+   "From low lunge, place both hands inside the front foot.",
+   "Lower the back knee or keep it lifted.",
+   "Drop to forearms or blocks if hips allow."
+  ],
+  "common_mistakes": [
+   "Front knee caving inward",
+   "Shoulders collapsing"
+  ],
+  "regressions": [
+   "Hands on blocks"
+  ],
+  "progressions": [
+   "Lizard with a back-leg quad stretch"
+  ],
+  "safety": "Pad the back knee; ease off with groin pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cowface",
+  "name": "Cow face pose",
+  "aliases": [
+   "Gomukhasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Mobility"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Glutes",
+   "Hip external rotators",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Latissimus dorsi"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30–60 sec / side",
+  "form_cues": [
+   "Stack one knee over the other, feet by the hips.",
+   "Reach one arm up and one behind, clasp fingers.",
+   "Sit evenly on both sit bones."
+  ],
+  "common_mistakes": [
+   "One hip lifting off the floor",
+   "Arching the back to reach hands"
+  ],
+  "regressions": [
+   "Strap between hands",
+   "Sit on a block"
+  ],
+  "progressions": [
+   "Forward fold in cow face"
+  ],
+  "safety": "Use a strap; avoid if knee or shoulder pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "puppy",
+  "name": "Puppy pose",
+  "aliases": [
+   "Uttana Shishosana",
+   "Extended puppy"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Mobility"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Latissimus dorsi",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Erector spinae",
+   "Triceps"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Start on hands and knees, walk hands forward.",
+   "Keep hips above the knees.",
+   "Melt the chest toward the mat, forehead down."
+  ],
+  "common_mistakes": [
+   "Hips sinking back toward the heels",
+   "Overarching the low back"
+  ],
+  "regressions": [
+   "Child's pose"
+  ],
+  "progressions": [
+   "Puppy with elbows on blocks"
+  ],
+  "safety": "Ease off with shoulder impingement.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hero",
+  "name": "Hero pose",
+  "aliases": [
+   "Virasana"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Stretching",
+   "Mobility",
+   "Recovery"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Ankles",
+   "Tibialis anterior"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "1–3 min",
+  "form_cues": [
+   "Kneel with knees together and feet just wider than hips.",
+   "Sit between the feet, on a block if needed.",
+   "Lengthen the spine with hands on thighs."
+  ],
+  "common_mistakes": [
+   "Feet splaying out and twisting the knees",
+   "Forcing hips to the floor"
+  ],
+  "regressions": [
+   "Sit on a block"
+  ],
+  "progressions": [
+   "Reclined hero"
+  ],
+  "safety": "Use a block and stop with any knee pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "supbridge",
+  "name": "Supported bridge",
+  "aliases": [
+   "Supported Setu Bandha",
+   "Block bridge"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Restorative",
+   "Recovery"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hip flexors",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Pectorals"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Yoga mat",
+   "Yoga block"
+  ],
+  "req": "yogablocks",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "1–3 min",
+  "form_cues": [
+   "Lift hips and slide a block under the sacrum.",
+   "Rest your weight onto the block.",
+   "Relax arms beside you and breathe."
+  ],
+  "common_mistakes": [
+   "Block under the low back instead of the sacrum",
+   "Gripping the glutes"
+  ],
+  "regressions": [
+   "Lowest block height"
+  ],
+  "progressions": [
+   "Taller block height",
+   "One leg extended"
+  ],
+  "safety": "Remove the block and lower slowly if the back feels pinched.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sunsal",
+  "name": "Sun salutation A",
+  "aliases": [
+   "Surya Namaskar A",
+   "Sun salutation flow"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Warm-up",
+   "Endurance"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Full body"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "5–10 min",
+  "form_cues": [
+   "Link one movement to each breath.",
+   "Move through mountain, fold, plank, chaturanga, cobra, down dog.",
+   "Step or jump forward and rise back to standing."
+  ],
+  "common_mistakes": [
+   "Rushing and losing the breath",
+   "Collapsing in the chaturanga"
+  ],
+  "regressions": [
+   "Knees-down plank and cobra"
+  ],
+  "progressions": [
+   "Sun salutation B"
+  ],
+  "safety": "Drop knees in plank and skip chaturanga if shoulders are weak.",
+  "video": null,
+  "notes": "Classic warm-up; 3–5 rounds is typical."
+ },
+ {
+  "id": "sunsalb",
+  "name": "Sun salutation B",
+  "aliases": [
+   "Surya Namaskar B"
+  ],
+  "training_type": "Yoga",
+  "tags": [
+   "Yoga",
+   "Mobility",
+   "Warm-up",
+   "Endurance"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Full body"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Yoga mat"
+  ],
+  "req": "yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "10–15 min",
+  "form_cues": [
+   "Begin and end each round in chair pose.",
+   "Add Warrior I on each side between vinyasas.",
+   "Keep each move on a single breath."
+  ],
+  "common_mistakes": [
+   "Rushing through warrior stances",
+   "Sagging hips in plank"
+  ],
+  "regressions": [
+   "Sun salutation A"
+  ],
+  "progressions": [
+   "Add holds in each warrior"
+  ],
+  "safety": "Modify chaturanga to knees-down if form fades.",
+  "video": null,
+  "notes": "More heating than A; 3–5 rounds is typical."
+ },
+ {
+  "id": "hundred",
+  "name": "Pilates hundred",
+  "aliases": [
+   "The Hundred",
+   "Hundreds"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core",
+   "Endurance",
+   "Warm-up"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Shoulders"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "100 pumps",
+  "form_cues": [
+   "Curl head and shoulders up, legs in tabletop or extended.",
+   "Pump straight arms by your sides.",
+   "Inhale for 5 pumps, exhale for 5."
+  ],
+  "common_mistakes": [
+   "Neck taking the strain",
+   "Belly doming out"
+  ],
+  "regressions": [
+   "Feet down, knees bent",
+   "Head down"
+  ],
+  "progressions": [
+   "Legs extended low"
+  ],
+  "safety": "Keep the head down if the neck strains.",
+  "video": null,
+  "notes": "10 breath cycles of 10 pumps."
+ },
+ {
+  "id": "rollup",
+  "name": "Pilates roll-up",
+  "aliases": [
+   "Roll up"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core",
+   "Mobility"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Erector spinae"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "6–8",
+  "form_cues": [
+   "Lie long with arms overhead.",
+   "Curl up one vertebra at a time and reach for the toes.",
+   "Roll down slowly with control."
+  ],
+  "common_mistakes": [
+   "Jerking up with momentum",
+   "Feet flying off the mat"
+  ],
+  "regressions": [
+   "Half roll-back",
+   "Bent knees"
+  ],
+  "progressions": [
+   "Teaser"
+  ],
+  "safety": "Bend knees or use a strap with low-back issues.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "rollover",
+  "name": "Pilates rollover",
+  "aliases": [
+   "Roll over"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core",
+   "Mobility"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Erector spinae"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "5–6",
+  "form_cues": [
+   "Lift straight legs over the head, toes toward the floor.",
+   "Flex the feet and roll down one bone at a time.",
+   "Lower legs only as far as the back stays down."
+  ],
+  "common_mistakes": [
+   "Using momentum to throw legs over",
+   "Rolling onto the neck"
+  ],
+  "regressions": [
+   "Half rollover",
+   "Single-leg circles"
+  ],
+  "progressions": [
+   "Jackknife"
+  ],
+  "safety": "Avoid with neck problems or osteoporosis.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "legcircles",
+  "name": "Single-leg circles",
+  "aliases": [
+   "Pilates leg circles",
+   "One-leg circle"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core",
+   "Mobility",
+   "Unilateral"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Hip flexors",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "5 each direction / side",
+  "form_cues": [
+   "Lie on your back, one leg up to the ceiling.",
+   "Draw circles from the hip, keeping pelvis still.",
+   "Keep circles small enough for a stable trunk."
+  ],
+  "common_mistakes": [
+   "Pelvis rocking side to side",
+   "Circles too big"
+  ],
+  "regressions": [
+   "Bent bottom knee",
+   "Bent working knee"
+  ],
+  "progressions": [
+   "Larger circles"
+  ],
+  "safety": "Keep circles small if the hip clicks or hurts.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "rollingball",
+  "name": "Rolling like a ball",
+  "aliases": [
+   "Rolling back"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core",
+   "Mobility",
+   "Balance"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Erector spinae"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "6–8",
+  "form_cues": [
+   "Hug the shins and balance behind the sit bones.",
+   "Keep a tight C-curve and roll back to the shoulder blades.",
+   "Roll up and balance without feet touching."
+  ],
+  "common_mistakes": [
+   "Rolling onto the neck",
+   "Losing the ball shape"
+  ],
+  "regressions": [
+   "Rock without full roll"
+  ],
+  "progressions": [
+   "Open-leg rocker"
+  ],
+  "safety": "Avoid with osteoporosis or spine injuries; never roll onto the neck.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "singlelegstretch",
+  "name": "Single-leg stretch",
+  "aliases": [
+   "Pilates single leg stretch"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Hip flexors"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "8 / side",
+  "form_cues": [
+   "Curl head and shoulders up, one knee in.",
+   "Extend the other leg long and low.",
+   "Switch legs smoothly without rocking."
+  ],
+  "common_mistakes": [
+   "Low back arching off the mat",
+   "Pulling on the knee with the neck"
+  ],
+  "regressions": [
+   "Head down",
+   "Legs higher"
+  ],
+  "progressions": [
+   "Double-leg stretch"
+  ],
+  "safety": "Keep the extended leg higher to protect the low back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "doublelegstretch",
+  "name": "Double-leg stretch",
+  "aliases": [
+   "Pilates double leg stretch"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Shoulders"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "6–8",
+  "form_cues": [
+   "Hug both knees in with head curled up.",
+   "Reach arms back and legs forward together.",
+   "Circle arms round and hug back in."
+  ],
+  "common_mistakes": [
+   "Head dropping back",
+   "Low back lifting"
+  ],
+  "regressions": [
+   "Single-leg stretch"
+  ],
+  "progressions": [
+   "Double straight-leg stretch"
+  ],
+  "safety": "Keep legs higher if the low back arches.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "scissors",
+  "name": "Pilates scissors",
+  "aliases": [
+   "Single straight-leg stretch",
+   "Hamstring pull"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core",
+   "Stretching"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "8 / side",
+  "form_cues": [
+   "Curl up with both legs straight.",
+   "Hold one leg and pulse it toward you twice.",
+   "Switch legs in a scissor motion."
+  ],
+  "common_mistakes": [
+   "Rolling the head down",
+   "Bending knees heavily"
+  ],
+  "regressions": [
+   "Bent knees"
+  ],
+  "progressions": [
+   "Double straight-leg stretch"
+  ],
+  "safety": "Keep the head down if the neck tires.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "lowerlift",
+  "name": "Double straight-leg stretch",
+  "aliases": [
+   "Lower lift",
+   "Double leg lower"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Hip flexors"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "6–8",
+  "form_cues": [
+   "Hands behind the head, legs straight up.",
+   "Lower legs only as far as the back stays down.",
+   "Exhale and lift legs back up."
+  ],
+  "common_mistakes": [
+   "Low back arching off the mat",
+   "Pulling on the head"
+  ],
+  "regressions": [
+   "Smaller range",
+   "Head down"
+  ],
+  "progressions": [
+   "Teaser"
+  ],
+  "safety": "Shorten the range at the first sign of back arching.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "crisscross",
+  "name": "Criss-cross",
+  "aliases": [
+   "Pilates criss cross"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core",
+   "Rotation"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Hip flexors"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "8 / side",
+  "form_cues": [
+   "Hands behind the head, curl up.",
+   "Rotate one armpit toward the opposite knee.",
+   "Extend the other leg long and switch."
+  ],
+  "common_mistakes": [
+   "Pulling the elbow instead of rotating ribs",
+   "Rushing"
+  ],
+  "regressions": [
+   "Feet on the mat"
+  ],
+  "progressions": [
+   "Slower tempo with a hold"
+  ],
+  "safety": "Keep the neck long and relaxed.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "spinestretch",
+  "name": "Spine stretch forward",
+  "aliases": [
+   "Pilates spine stretch"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Mobility",
+   "Stretching"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Erector spinae",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Rectus abdominis"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "5–6",
+  "form_cues": [
+   "Sit tall, legs straight and wider than hips.",
+   "Exhale and peel the spine forward like a C.",
+   "Restack one vertebra at a time."
+  ],
+  "common_mistakes": [
+   "Hinging flat instead of rounding",
+   "Collapsing from the waist"
+  ],
+  "regressions": [
+   "Sit on a cushion",
+   "Bent knees"
+  ],
+  "progressions": [
+   "Saw"
+  ],
+  "safety": "Sit on a raised surface if hamstrings are tight.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "openlegrocker",
+  "name": "Open-leg rocker",
+  "aliases": [
+   "Pilates rocker"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core",
+   "Balance"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "6",
+  "form_cues": [
+   "Balance holding ankles, legs straight in a V.",
+   "Roll back to the shoulder blades.",
+   "Roll up to balance with legs still open."
+  ],
+  "common_mistakes": [
+   "Rolling onto the neck",
+   "Collapsing the chest on the way up"
+  ],
+  "regressions": [
+   "Rolling like a ball",
+   "Balance with bent knees"
+  ],
+  "progressions": [
+   "Teaser"
+  ],
+  "safety": "Avoid with spinal injuries or osteoporosis.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "corkscrew",
+  "name": "Corkscrew",
+  "aliases": [
+   "Pilates corkscrew"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core",
+   "Rotation"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Hip flexors"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "3 / direction",
+  "form_cues": [
+   "Lie on your back, legs together straight up.",
+   "Circle both legs to one side, down and around.",
+   "Keep shoulders heavy on the mat."
+  ],
+  "common_mistakes": [
+   "Big uncontrolled circles",
+   "Back arching at the bottom"
+  ],
+  "regressions": [
+   "Smaller circles"
+  ],
+  "progressions": [
+   "Advanced corkscrew with hips lifting"
+  ],
+  "safety": "Keep circles small with low-back pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "saw",
+  "name": "Pilates saw",
+  "aliases": [
+   "The saw"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Mobility",
+   "Rotation",
+   "Stretching"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Erector spinae"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "4 / side",
+  "form_cues": [
+   "Sit tall, legs wide, arms out.",
+   "Twist toward one leg, then reach the little finger past the little toe.",
+   "Restack and return to center."
+  ],
+  "common_mistakes": [
+   "Hips lifting off the mat",
+   "Rounding before twisting"
+  ],
+  "regressions": [
+   "Sit on a cushion"
+  ],
+  "progressions": [
+   "Spine twist"
+  ],
+  "safety": "Keep the twist gentle with back issues.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "swan",
+  "name": "Pilates swan",
+  "aliases": [
+   "Swan dive prep",
+   "Swan"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Mobility",
+   "Strength"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Erector spinae"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Triceps",
+   "Rhomboids"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "5–6",
+  "form_cues": [
+   "Lie face down, hands by the shoulders.",
+   "Lift the chest by lengthening up through the crown.",
+   "Lower with control."
+  ],
+  "common_mistakes": [
+   "Crunching into the low back",
+   "Shrugging shoulders"
+  ],
+  "regressions": [
+   "Sphinx pose"
+  ],
+  "progressions": [
+   "Swan dive"
+  ],
+  "safety": "Keep the lift small with low-back pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "singlelegkick",
+  "name": "Single-leg kick",
+  "aliases": [
+   "Pilates single leg kick"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Strength"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Erector spinae",
+   "Shoulders"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "8 / side",
+  "form_cues": [
+   "Lie prone, propped on forearms, belly lifted.",
+   "Kick one heel to the glute twice.",
+   "Switch legs, keeping hips on the mat."
+  ],
+  "common_mistakes": [
+   "Sinking into the shoulders",
+   "Hips lifting"
+  ],
+  "regressions": [
+   "Lower chest to the mat"
+  ],
+  "progressions": [
+   "Double-leg kick"
+  ],
+  "safety": "Lie flatter with low-back pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pshoulderbridge",
+  "name": "Pilates shoulder bridge",
+  "aliases": [
+   "Shoulder bridge"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Strength",
+   "Glutes"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Erector spinae",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "5 / side",
+  "form_cues": [
+   "Lift into a bridge with hands supporting or on the floor.",
+   "Extend one leg up to the ceiling.",
+   "Lower the leg to knee height and lift, hips level."
+  ],
+  "common_mistakes": [
+   "Hips dropping on the working side",
+   "Arching the low back"
+  ],
+  "regressions": [
+   "Glute bridge",
+   "Single-leg bridge hold"
+  ],
+  "progressions": [
+   "Faster kicks"
+  ],
+  "safety": "Keep the range small if hamstrings cramp.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "spinetwist",
+  "name": "Spine twist",
+  "aliases": [
+   "Pilates spine twist"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Mobility",
+   "Rotation"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Erector spinae"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "4 / side",
+  "form_cues": [
+   "Sit tall, legs together, arms out.",
+   "Twist from the waist, pulsing twice.",
+   "Return to center growing taller."
+  ],
+  "common_mistakes": [
+   "Hips shifting",
+   "Arms leading the twist"
+  ],
+  "regressions": [
+   "Sit cross-legged"
+  ],
+  "progressions": [
+   "Saw"
+  ],
+  "safety": "Twist gently with back issues.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sidekick",
+  "name": "Side kick",
+  "aliases": [
+   "Side kick series",
+   "Side-lying kick"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Strength",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hip abductors"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Lie on your side, legs slightly forward.",
+   "Kick the top leg forward twice, then sweep back.",
+   "Keep the torso still."
+  ],
+  "common_mistakes": [
+   "Rolling hips back",
+   "Swinging with momentum"
+  ],
+  "regressions": [
+   "Bend the bottom knee"
+  ],
+  "progressions": [
+   "Side kick bicycle"
+  ],
+  "safety": "Prop the head on the hand to keep the neck easy.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "teaser",
+  "name": "Teaser",
+  "aliases": [
+   "Pilates teaser"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core",
+   "Balance"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Erector spinae",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "3–5",
+  "form_cues": [
+   "Lift legs and torso into a V, arms parallel to legs.",
+   "Balance on the sit bones with a lifted chest.",
+   "Roll down slowly and repeat."
+  ],
+  "common_mistakes": [
+   "Hunching the shoulders",
+   "Using momentum"
+  ],
+  "regressions": [
+   "One-leg teaser",
+   "Bent-knee teaser"
+  ],
+  "progressions": [
+   "Teaser with leg circles"
+  ],
+  "safety": "Avoid with back injury; build up with single-leg versions.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "swimming",
+  "name": "Pilates swimming",
+  "aliases": [
+   "Swimming"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Strength",
+   "Endurance"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Erector spinae",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Rear deltoids",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "20–30 flutters",
+  "form_cues": [
+   "Lie face down, reach arms and legs long.",
+   "Lift opposite arm and leg in quick flutters.",
+   "Keep the gaze down and the neck long."
+  ],
+  "common_mistakes": [
+   "Lifting the head too high",
+   "Bending knees"
+  ],
+  "regressions": [
+   "Bird dog",
+   "Alternating arm-leg lift slowly"
+  ],
+  "progressions": [
+   "Longer sets"
+  ],
+  "safety": "Keep the lift small with low-back pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "legpullfront",
+  "name": "Leg pull front",
+  "aliases": [
+   "Pilates leg pull front",
+   "Plank leg lift"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Strength",
+   "Core"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Transverse abdominis",
+   "Shoulders",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Triceps"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "5 / side",
+  "form_cues": [
+   "Start in a straight-arm plank.",
+   "Lift one leg and pulse the foot.",
+   "Lower and switch without moving the hips."
+  ],
+  "common_mistakes": [
+   "Hips sagging",
+   "Shoulders sinking"
+  ],
+  "regressions": [
+   "Plank hold"
+  ],
+  "progressions": [
+   "Leg pull back"
+  ],
+  "safety": "Drop to a plank hold if the wrists hurt.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "legpullback",
+  "name": "Leg pull back",
+  "aliases": [
+   "Reverse plank leg lift"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Strength",
+   "Core"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Core"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Pilates mat"
+  ],
+  "req": "pilatesmat|yogamat",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "4 / side",
+  "form_cues": [
+   "Sit with hands behind, lift into reverse plank.",
+   "Kick one leg up, then lower with control.",
+   "Keep hips high throughout."
+  ],
+  "common_mistakes": [
+   "Hips sagging",
+   "Shoulders shrugging"
+  ],
+  "regressions": [
+   "Reverse tabletop"
+  ],
+  "progressions": [],
+  "safety": "Point fingers toward the feet; skip with shoulder pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pilatesringsq",
+  "name": "Pilates ring thigh squeeze",
+  "aliases": [
+   "Magic circle inner thigh squeeze",
+   "Adductor squeeze"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Strength",
+   "Rehab",
+   "Home-friendly"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Pelvic floor",
+   "Core"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Pilates ring",
+   "Mat"
+  ],
+  "req": "pilatesring",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "12–15",
+  "form_cues": [
+   "Place the ring between the knees or ankles.",
+   "Squeeze slowly for 2 seconds.",
+   "Release with control without letting it drop."
+  ],
+  "common_mistakes": [
+   "Bracing with the neck",
+   "Snapping the release"
+  ],
+  "regressions": [
+   "Pillow squeeze"
+  ],
+  "progressions": [
+   "Squeeze in a bridge"
+  ],
+  "safety": "Keep pressure moderate after groin injuries.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ringpress",
+  "name": "Pilates ring chest press",
+  "aliases": [
+   "Magic circle arm press"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Strength",
+   "Home-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Pectorals"
+  ],
+  "secondary_muscles": [
+   "Anterior deltoids",
+   "Triceps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Pilates ring",
+   "Mat"
+  ],
+  "req": "pilatesring",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "12–15",
+  "form_cues": [
+   "Hold the ring at chest height, palms on the pads.",
+   "Squeeze the ring with soft elbows.",
+   "Keep shoulders down away from ears."
+  ],
+  "common_mistakes": [
+   "Shrugging",
+   "Locking elbows"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Overhead ring press"
+  ],
+  "safety": "Use light pressure with shoulder pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ringleg",
+  "name": "Side-lying ring leg press",
+  "aliases": [
+   "Magic circle side-lying leg press"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Strength",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Hip abductors",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Obliques"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Pilates ring",
+   "Mat"
+  ],
+  "req": "pilatesring",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Lie on your side with the ring between the ankles.",
+   "Press the top leg down into the ring.",
+   "Lift back up against the outside pad."
+  ],
+  "common_mistakes": [
+   "Rolling the hips back",
+   "Rushing"
+  ],
+  "regressions": [
+   "Side kick"
+  ],
+  "progressions": [],
+  "safety": "Prop the head to keep the neck easy.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ringbridge",
+  "name": "Pilates ring bridge",
+  "aliases": [
+   "Magic circle bridge"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Strength",
+   "Glutes"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Pilates ring",
+   "Mat"
+  ],
+  "req": "pilatesring",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "10–12",
+  "form_cues": [
+   "Ring between the knees, feet hip-width.",
+   "Roll up into a bridge one bone at a time.",
+   "Squeeze the ring at the top, then roll down."
+  ],
+  "common_mistakes": [
+   "Arching the low back at the top",
+   "Losing ring tension"
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Single-leg ring bridge"
+  ],
+  "safety": "Keep the weight off the neck.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "reformerfoot",
+  "name": "Reformer footwork",
+  "aliases": [
+   "Footwork series",
+   "Reformer leg press"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Strength",
+   "Warm-up"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Pilates reformer"
+  ],
+  "req": "reformer",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "10 per position",
+  "form_cues": [
+   "Lie on the carriage with feet on the footbar.",
+   "Press out to straight legs without locking.",
+   "Return with control, resisting the springs."
+  ],
+  "common_mistakes": [
+   "Hyperextending knees",
+   "Pelvis rocking"
+  ],
+  "regressions": [
+   "Lighter springs"
+  ],
+  "progressions": [
+   "Single-leg footwork"
+  ],
+  "safety": "Use lighter springs and avoid locking knees.",
+  "video": null,
+  "notes": "Positions: toes, arches, heels, wide V; 2–4 springs typical."
+ },
+ {
+  "id": "longstretch",
+  "name": "Long stretch",
+  "aliases": [
+   "Reformer long stretch"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core",
+   "Strength"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Transverse abdominis",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Glutes"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [
+   "Pilates reformer"
+  ],
+  "req": "reformer",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "5–8",
+  "form_cues": [
+   "Hold the footbar in a plank, heels on the headrest.",
+   "Push the carriage back from the shoulders.",
+   "Pull it in keeping a straight line."
+  ],
+  "common_mistakes": [
+   "Hips sagging",
+   "Shrugging the shoulders"
+  ],
+  "regressions": [
+   "Knee stretches"
+  ],
+  "progressions": [
+   "Up stretch"
+  ],
+  "safety": "Use 1–2 springs; stop with wrist or shoulder pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "elephant",
+  "name": "Elephant",
+  "aliases": [
+   "Reformer elephant"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core",
+   "Stretching"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Transverse abdominis",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Shoulders"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pilates reformer"
+  ],
+  "req": "reformer",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "8–10",
+  "form_cues": [
+   "Stand on the carriage, hands on the footbar, hips high.",
+   "Push the carriage back with the legs.",
+   "Draw it in using the abs."
+  ],
+  "common_mistakes": [
+   "Bending knees",
+   "Dropping the hips"
+  ],
+  "regressions": [
+   "Smaller range"
+  ],
+  "progressions": [
+   "Single-leg elephant"
+  ],
+  "safety": "Keep the range short if hamstrings are tight.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "rowing",
+  "name": "Reformer rowing",
+  "aliases": [
+   "Rowing series",
+   "Rowing back"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Strength",
+   "Mobility"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Rhomboids",
+   "Rear deltoids"
+  ],
+  "secondary_muscles": [
+   "Erector spinae",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Pilates reformer"
+  ],
+  "req": "reformer",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "5–6",
+  "form_cues": [
+   "Sit tall on the carriage holding the straps.",
+   "Pull the straps with elbows bent, rolling back.",
+   "Sit up and circle arms round."
+  ],
+  "common_mistakes": [
+   "Slouching",
+   "Yanking with the arms"
+  ],
+  "regressions": [
+   "Seated straight-arm pull"
+  ],
+  "progressions": [
+   "Rowing from the hips"
+  ],
+  "safety": "Use light springs; keep the back long.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kneestretch",
+  "name": "Knee stretches",
+  "aliases": [
+   "Reformer knee stretch series"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Core"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Shoulders"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pilates reformer"
+  ],
+  "req": "reformer",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "10",
+  "form_cues": [
+   "Kneel on the carriage, hands on the footbar.",
+   "Push the carriage back with a round back.",
+   "Draw it in with the abs."
+  ],
+  "common_mistakes": [
+   "Using the legs only",
+   "Sinking into the shoulders"
+  ],
+  "regressions": [
+   "Smaller range"
+  ],
+  "progressions": [
+   "Knees off"
+  ],
+  "safety": "Pad knees; use 1–2 springs.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "shortspine",
+  "name": "Short spine massage",
+  "aliases": [
+   "Short spine stretch"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Mobility",
+   "Stretching"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Erector spinae",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Rectus abdominis"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pilates reformer"
+  ],
+  "req": "reformer",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "4–6",
+  "form_cues": [
+   "Feet in straps, legs out.",
+   "Lift legs over, rolling the spine up.",
+   "Roll down slowly one bone at a time."
+  ],
+  "common_mistakes": [
+   "Rolling onto the neck",
+   "Using momentum"
+  ],
+  "regressions": [
+   "Feet in straps"
+  ],
+  "progressions": [
+   "Long spine massage"
+  ],
+  "safety": "Avoid with neck issues or osteoporosis.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "feetstraps",
+  "name": "Feet in straps",
+  "aliases": [
+   "Reformer frog",
+   "Reformer leg circles"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Mobility",
+   "Strength"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Adductors",
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Core"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Pilates reformer"
+  ],
+  "req": "reformer",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "8–10 per pattern",
+  "form_cues": [
+   "Lie on the carriage, feet in straps.",
+   "Move through frogs, circles and openings.",
+   "Keep the pelvis steady."
+  ],
+  "common_mistakes": [
+   "Low back arching",
+   "Heavy springs"
+  ],
+  "regressions": [
+   "Lighter springs"
+  ],
+  "progressions": [
+   "Single-leg straps"
+  ],
+  "safety": "Use light springs and keep range pain-free.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pullstraps",
+  "name": "Pulling straps",
+  "aliases": [
+   "Long box pulling straps"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Strength"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Latissimus dorsi",
+   "Rear deltoids"
+  ],
+  "secondary_muscles": [
+   "Erector spinae",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Pilates reformer"
+  ],
+  "req": "reformer",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "6–8",
+  "form_cues": [
+   "Lie prone on the long box, holding the straps.",
+   "Pull arms down by your sides, lifting the chest.",
+   "Return slowly with control."
+  ],
+  "common_mistakes": [
+   "Crunching the low back",
+   "Shrugging"
+  ],
+  "regressions": [
+   "Lighter spring"
+  ],
+  "progressions": [
+   "T-pull"
+  ],
+  "safety": "Use a light spring and lift the chest only slightly.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "mermaid",
+  "name": "Mermaid",
+  "aliases": [
+   "Reformer mermaid",
+   "Side stretch"
+  ],
+  "training_type": "Pilates",
+  "tags": [
+   "Pilates",
+   "Stretching",
+   "Mobility"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Latissimus dorsi",
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Quadratus lumborum"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Pilates reformer"
+  ],
+  "req": "reformer",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "4 / side",
+  "form_cues": [
+   "Sit sideways on the carriage, hand on the footbar.",
+   "Push the carriage out as you side-bend.",
+   "Return and reach the other way."
+  ],
+  "common_mistakes": [
+   "Shrugging",
+   "Twisting"
+  ],
+  "regressions": [
+   "Seated side stretch"
+  ],
+  "progressions": [
+   "Mermaid with a twist"
+  ],
+  "safety": "Keep it gentle with shoulder pain.",
+  "video": null,
+  "notes": ""
+ }
+]

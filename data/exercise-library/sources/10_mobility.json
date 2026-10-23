@@ -1,0 +1,4614 @@
+[
+ {
+  "id": "legswing",
+  "name": "Front-to-back leg swing",
+  "aliases": [
+   "Forward leg swings",
+   "Sagittal leg swings"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Core"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Wall or support (optional)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "10–15 / side",
+  "form_cues": [
+   "Hold a wall and stand tall on one leg.",
+   "Swing the free leg forward and back like a pendulum.",
+   "Let the range grow gradually with each swing."
+  ],
+  "common_mistakes": [
+   "Rounding the lower back to fake range",
+   "Swinging wildly from the first rep"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Lateral leg swing",
+   "Frankenstein walk"
+  ],
+  "safety": "Start small and build range; keep the swing controlled.",
+  "video": null,
+  "notes": "Classic pre-run and pre-leg-day drill."
+ },
+ {
+  "id": "legswinglat",
+  "name": "Lateral leg swing",
+  "aliases": [
+   "Side-to-side leg swings",
+   "Frontal leg swings"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Adductors",
+   "Hip abductors"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Core"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Wall or support (optional)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "10–15 / side",
+  "form_cues": [
+   "Face a wall with both hands on it.",
+   "Swing one leg across your body and out to the side.",
+   "Keep your hips and chest facing the wall."
+  ],
+  "common_mistakes": [
+   "Twisting the torso with each swing",
+   "Locking the standing knee"
+  ],
+  "regressions": [
+   "Front-to-back leg swing"
+  ],
+  "progressions": [
+   "Walking hip opener"
+  ],
+  "safety": "Keep swings controlled; ease off if you feel groin pinching.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "armcircle",
+  "name": "Arm circles",
+  "aliases": [
+   "Shoulder circles"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Deltoids",
+   "Rotator cuff"
+  ],
+  "secondary_muscles": [
+   "Trapezius"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "10 each way",
+  "form_cues": [
+   "Stand tall with arms straight out to the sides.",
+   "Draw small circles, then gradually make them bigger.",
+   "Reverse direction halfway through."
+  ],
+  "common_mistakes": [
+   "Shrugging shoulders up to the ears",
+   "Arching the lower back"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Arm swings",
+   "Shoulder CARs"
+  ],
+  "safety": "Keep circles pain-free; shrink them if anything pinches.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "wgs",
+  "name": "World's greatest stretch",
+  "aliases": [
+   "Lunge with rotation and reach",
+   "WGS"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hip flexors",
+   "Hamstrings",
+   "Thoracic spine"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Glutes",
+   "Shoulders"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "5 / side",
+  "form_cues": [
+   "Step into a long lunge and put both hands inside the front foot.",
+   "Drop the inside elbow toward the instep, then rotate that arm to the ceiling.",
+   "Finish by straightening the front leg to stretch the hamstring."
+  ],
+  "common_mistakes": [
+   "Letting the back knee collapse to the floor",
+   "Rushing through each position",
+   "Rotating from the lower back instead of the upper back"
+  ],
+  "regressions": [
+   "Spiderman lunge",
+   "Kneeling hip flexor stretch"
+  ],
+  "progressions": [],
+  "safety": "Move slowly; drop the back knee to the floor if balance is an issue.",
+  "video": null,
+  "notes": "One of the best single warm-up drills: hips, hamstrings and upper back in one move."
+ },
+ {
+  "id": "spiderlunge",
+  "name": "Spiderman lunge",
+  "aliases": [
+   "Elbow-to-instep lunge",
+   "Lunge with elbow drop"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hip flexors",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "5–8 / side",
+  "form_cues": [
+   "From a push-up position, step one foot outside the same hand.",
+   "Sink the hips and reach that elbow toward the instep.",
+   "Step back and switch sides."
+  ],
+  "common_mistakes": [
+   "Hips piking up high",
+   "Front heel lifting off the floor"
+  ],
+  "regressions": [
+   "Kneeling hip flexor stretch"
+  ],
+  "progressions": [
+   "World's greatest stretch"
+  ],
+  "safety": "Keep the back leg long and core braced; stop if the groin pinches.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "inchworm",
+  "name": "Inchworm",
+  "aliases": [
+   "Walkout",
+   "Hand walkout"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly",
+   "Calisthenics"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Chest",
+   "Calves"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "6–8",
+  "form_cues": [
+   "Hinge forward and place hands on the floor, bending knees as needed.",
+   "Walk hands out to a plank, keeping hips level.",
+   "Walk hands back toward the feet and stand up."
+  ],
+  "common_mistakes": [
+   "Letting the hips sag in the plank",
+   "Walking hands out too far for your strength"
+  ],
+  "regressions": [
+   "Standing hamstring stretch"
+  ],
+  "progressions": [
+   "Inchworm with push-up"
+  ],
+  "safety": "Bend the knees as much as needed to protect your lower back.",
+  "video": null,
+  "notes": "Add a push-up at the plank for a fuller warm-up."
+ },
+ {
+  "id": "lungetwist",
+  "name": "Walking lunge with twist",
+  "aliases": [
+   "Lunge with rotation",
+   "Twisting lunge"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Thoracic spine"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "8 / side",
+  "form_cues": [
+   "Step forward into a lunge with the front knee over the foot.",
+   "Rotate your chest toward the front leg.",
+   "Return to centre, then step through to the next lunge."
+  ],
+  "common_mistakes": [
+   "Front knee caving inward",
+   "Twisting from the knee instead of the torso"
+  ],
+  "regressions": [
+   "Static lunge"
+  ],
+  "progressions": [
+   "World's greatest stretch"
+  ],
+  "safety": "Keep steps short if knees are sore; rotate from the ribs, not the knee.",
+  "video": null,
+  "notes": "Hold a light plate or ball at the chest to add load."
+ },
+ {
+  "id": "hipgate",
+  "name": "Walking hip opener and closer",
+  "aliases": [
+   "Open the gate",
+   "Close the gate",
+   "Hip gate swings"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hip rotators",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "8 / side each way",
+  "form_cues": [
+   "Lift one knee high in front of you.",
+   "Rotate it out to the side and down (open), or side to front (close).",
+   "Stand tall and walk forward between reps."
+  ],
+  "common_mistakes": [
+   "Leaning the torso to fake range",
+   "Rushing the circle"
+  ],
+  "regressions": [
+   "Standing hip circles"
+  ],
+  "progressions": [
+   "Hip CARs"
+  ],
+  "safety": "Hold a wall for balance if needed; keep the movement smooth.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "frankenstein",
+  "name": "Frankenstein walk",
+  "aliases": [
+   "Toy soldiers",
+   "Straight-leg kicks"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "10 / side",
+  "form_cues": [
+   "Walk forward kicking one straight leg up.",
+   "Reach the opposite hand toward the toes.",
+   "Keep your chest up and standing leg tall."
+  ],
+  "common_mistakes": [
+   "Rounding the back to reach the toes",
+   "Kicking higher than your hamstrings allow"
+  ],
+  "regressions": [
+   "Front-to-back leg swing"
+  ],
+  "progressions": [],
+  "safety": "Kick only to a comfortable height; this is a warm-up, not a max test.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kneehug",
+  "name": "Walking knee hug",
+  "aliases": [
+   "Knee-to-chest walk",
+   "Knee pulls"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly",
+   "Balance"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Calves"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "8 / side",
+  "form_cues": [
+   "Step forward and pull one knee to your chest.",
+   "Rise onto the toes of the standing foot.",
+   "Release and step through to the other side."
+  ],
+  "common_mistakes": [
+   "Rounding the back to meet the knee",
+   "Losing balance from rushing"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Walking leg cradle"
+  ],
+  "safety": "Hold a wall if balance is shaky.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "quadpull",
+  "name": "Walking quad pull",
+  "aliases": [
+   "Walking quad stretch",
+   "Heel-to-glute walk"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly",
+   "Balance"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Quadriceps",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Calves"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "8 / side",
+  "form_cues": [
+   "Step forward and grab the opposite ankle behind you.",
+   "Pull heel to glute and squeeze that glute.",
+   "Reach the free arm overhead for balance."
+  ],
+  "common_mistakes": [
+   "Arching the lower back",
+   "Knee drifting out to the side"
+  ],
+  "regressions": [
+   "Standing quad stretch"
+  ],
+  "progressions": [],
+  "safety": "Keep knees close together and avoid yanking the ankle.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hipcircle",
+  "name": "Standing hip circles",
+  "aliases": [
+   "Hip rotations",
+   "Hula hoops"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hip flexors",
+   "Lower back"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Glutes"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "10 each way",
+  "form_cues": [
+   "Stand with hands on hips and feet shoulder-width.",
+   "Draw big circles with your hips.",
+   "Keep your head and shoulders still."
+  ],
+  "common_mistakes": [
+   "Moving the whole upper body",
+   "Making tiny, rushed circles"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Hip CARs"
+  ],
+  "safety": "Keep the movement pain-free and controlled.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "anklecircle",
+  "name": "Ankle circles",
+  "aliases": [
+   "Ankle rotations",
+   "Ankle rolls"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Ankle joint",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Shins"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 1,
+  "reps": "10 each way / side",
+  "form_cues": [
+   "Lift one foot off the floor or sit with the leg extended.",
+   "Draw slow, full circles with your toes.",
+   "Change direction halfway."
+  ],
+  "common_mistakes": [
+   "Moving the whole leg instead of the ankle",
+   "Rushing small circles"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Knee-to-wall ankle mobilization"
+  ],
+  "safety": "Move only in a pain-free range after ankle sprains.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "wristcircle",
+  "name": "Wrist circles",
+  "aliases": [
+   "Wrist rotations",
+   "Wrist CARs"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Forearms",
+   "Wrist joint"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Mobility",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "10 each way",
+  "form_cues": [
+   "Interlock fingers or make loose fists.",
+   "Draw slow, full circles with the wrists.",
+   "Keep the forearms still."
+  ],
+  "common_mistakes": [
+   "Moving the elbows instead of the wrists",
+   "Going too fast"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Quadruped wrist rocks"
+  ],
+  "safety": "Keep it pain-free; useful before push-ups, handstands and pressing.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "wristrock",
+  "name": "Quadruped wrist rocks",
+  "aliases": [
+   "Wrist prep rocks",
+   "All-fours wrist rocks"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Forearm flexors",
+   "Wrist joint"
+  ],
+  "secondary_muscles": [
+   "Forearm extensors"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Mat (optional)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "10 each direction",
+  "form_cues": [
+   "Kneel on all fours with hands under shoulders.",
+   "Rock forward and back over the hands, keeping palms flat.",
+   "Repeat with fingers turned out, then with backs of hands down."
+  ],
+  "common_mistakes": [
+   "Letting palms peel off the floor",
+   "Pushing into sharp pain"
+  ],
+  "regressions": [
+   "Wrist circles"
+  ],
+  "progressions": [],
+  "safety": "Shift less body weight onto the hands if wrists are sensitive.",
+  "video": null,
+  "notes": "Great before handstands, push-ups and front squats."
+ },
+ {
+  "id": "deepsquat",
+  "name": "Deep squat hold",
+  "aliases": [
+   "Bodyweight squat hold",
+   "Asian squat",
+   "Prying squat"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hips",
+   "Ankles",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Sit down into the bottom of a squat, feet flat.",
+   "Push knees out with your elbows and lift your chest.",
+   "Shift side to side gently to explore the range."
+  ],
+  "common_mistakes": [
+   "Heels rising off the floor",
+   "Collapsing the chest forward"
+  ],
+  "regressions": [
+   "Box squat hold",
+   "Hold a doorframe for support"
+  ],
+  "progressions": [
+   "Goblet squat hold"
+  ],
+  "safety": "Hold onto something if heels lift; skip if deep knee flexion hurts.",
+  "video": null,
+  "notes": "Raise heels on a plate if ankle mobility limits depth."
+ },
+ {
+  "id": "scorpion",
+  "name": "Scorpion stretch",
+  "aliases": [
+   "Prone scorpion"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hip flexors",
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Thoracic spine",
+   "Glutes"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "6 / side",
+  "form_cues": [
+   "Lie face down with arms out wide.",
+   "Lift one leg and reach the foot toward the opposite hand.",
+   "Keep both shoulders as close to the floor as you can."
+  ],
+  "common_mistakes": [
+   "Shoulders lifting off the floor",
+   "Swinging the leg fast"
+  ],
+  "regressions": [
+   "Lumbar rotations"
+  ],
+  "progressions": [],
+  "safety": "Move slowly; skip if you have a disc problem or lower back pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kneedrop",
+  "name": "Lumbar rotations",
+  "aliases": [
+   "Lying knee drops",
+   "Windshield wipers (supine)"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Obliques",
+   "Lower back"
+  ],
+  "secondary_muscles": [
+   "Hip rotators"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "10 / side",
+  "form_cues": [
+   "Lie on your back with knees bent and feet flat.",
+   "Let both knees fall slowly to one side.",
+   "Keep shoulders flat and return through the middle."
+  ],
+  "common_mistakes": [
+   "Lifting the opposite shoulder",
+   "Dropping the knees too fast"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Scorpion stretch"
+  ],
+  "safety": "Move within a pain-free range; great gentle option for stiff backs.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hipcars",
+  "name": "Hip CARs",
+  "aliases": [
+   "Hip controlled articular rotations",
+   "Standing hip circles (controlled)"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly",
+   "Rehab",
+   "Balance",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hip rotators",
+   "Hip flexors",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Adductors"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Wall or support (optional)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "3–5 / side each way",
+  "form_cues": [
+   "Brace your core and lift one knee to hip height.",
+   "Rotate the knee out, open it to the side, then sweep the leg back.",
+   "Move as slowly as possible with zero movement in the torso."
+  ],
+  "common_mistakes": [
+   "Leaning or twisting the trunk",
+   "Moving fast to get through sticky spots"
+  ],
+  "regressions": [
+   "Standing hip circles"
+  ],
+  "progressions": [
+   "Quadruped hip CARs"
+  ],
+  "safety": "Stay in a pain-free range and keep the trunk locked.",
+  "video": null,
+  "notes": "From Functional Range Conditioning; also done on all fours."
+ },
+ {
+  "id": "shouldercars",
+  "name": "Shoulder CARs",
+  "aliases": [
+   "Shoulder controlled articular rotations"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly",
+   "Rehab",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Rotator cuff",
+   "Deltoids"
+  ],
+  "secondary_muscles": [
+   "Scapular muscles",
+   "Core"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "3–5 / side each way",
+  "form_cues": [
+   "Make a tight fist and brace your whole body.",
+   "Raise the arm forward and overhead as far as possible.",
+   "Rotate the thumb out and draw the biggest slow circle behind you."
+  ],
+  "common_mistakes": [
+   "Arching the lower back or twisting to cheat range",
+   "Moving too fast"
+  ],
+  "regressions": [
+   "Arm circles"
+  ],
+  "progressions": [
+   "Wall slide"
+  ],
+  "safety": "Keep everything but the working arm still; skip painful arcs.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "spinecars",
+  "name": "Spinal CARs",
+  "aliases": [
+   "Spine segmentation",
+   "Standing cat-cow roll-down"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Spinal erectors",
+   "Abdominals"
+  ],
+  "secondary_muscles": [
+   "Neck"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "3–5 each way",
+  "form_cues": [
+   "Stand tall with knees soft and squeeze your glutes lightly.",
+   "Curl down one vertebra at a time, starting at the neck.",
+   "Roll back up one segment at a time, then try side bends and rotation."
+  ],
+  "common_mistakes": [
+   "Bending only at the hips",
+   "Rushing so the spine moves as one block"
+  ],
+  "regressions": [
+   "Lumbar rotations"
+  ],
+  "progressions": [],
+  "safety": "Go slowly and avoid if you have an acute disc injury.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ninetyswitch",
+  "name": "90/90 hip switch",
+  "aliases": [
+   "Shin box switch",
+   "Windshield wiper hip switch"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hip rotators",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "8 / side",
+  "form_cues": [
+   "Sit with both knees bent to 90°, one leg in front and one to the side.",
+   "Keep feet planted and rotate both knees to the other side.",
+   "Sit tall; use hands behind you only if needed."
+  ],
+  "common_mistakes": [
+   "Slumping the lower back",
+   "Lifting the feet off the floor"
+  ],
+  "regressions": [
+   "90/90 hip stretch"
+  ],
+  "progressions": [
+   "Shin box get-up"
+  ],
+  "safety": "Use hand support if knees or hips are irritated.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ninetyhold",
+  "name": "90/90 hip stretch",
+  "aliases": [
+   "90-90 stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Glutes",
+   "Hip external rotators"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Adductors"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30–60 sec / side",
+  "form_cues": [
+   "Sit in the 90/90 position with both knees at right angles.",
+   "Sit tall and hinge your chest over the front shin.",
+   "Breathe slowly and relax into it."
+  ],
+  "common_mistakes": [
+   "Rounding the back instead of hinging",
+   "Forcing the knee down"
+  ],
+  "regressions": [
+   "Supine figure-four stretch"
+  ],
+  "progressions": [
+   "90/90 hip switch"
+  ],
+  "safety": "Prop the hip on a cushion if the knee feels strained.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kneewall",
+  "name": "Knee-to-wall ankle mobilization",
+  "aliases": [
+   "Ankle dorsiflexion drill",
+   "Knee-to-wall test"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly",
+   "Rehab",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Ankle joint",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Soleus"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Wall"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "10–15 / side",
+  "form_cues": [
+   "Stand facing a wall in a split stance, front toes a few cm away.",
+   "Drive the front knee toward the wall over the middle toes.",
+   "Keep the heel glued to the floor."
+  ],
+  "common_mistakes": [
+   "Heel lifting",
+   "Knee caving inward"
+  ],
+  "regressions": [
+   "Ankle circles"
+  ],
+  "progressions": [
+   "Banded ankle distraction"
+  ],
+  "safety": "Move the foot back as you improve; stop with sharp front-of-ankle pain.",
+  "video": null,
+  "notes": "Doubles as a dorsiflexion test: aim for about 10 cm toe-to-wall."
+ },
+ {
+  "id": "openbook",
+  "name": "Open book",
+  "aliases": [
+   "Side-lying thoracic rotation",
+   "Open book stretch"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Thoracic spine",
+   "Pectorals"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "8 / side",
+  "form_cues": [
+   "Lie on your side with knees bent to hip height and arms out front.",
+   "Open the top arm across, following it with your eyes.",
+   "Keep the knees stacked on the floor."
+  ],
+  "common_mistakes": [
+   "Knees lifting apart",
+   "Forcing the arm to the floor"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Quadruped thoracic rotation"
+  ],
+  "safety": "Squeeze a pillow between knees to keep the lower back still.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "quadtrot",
+  "name": "Quadruped thoracic rotation",
+  "aliases": [
+   "Hand-behind-head T-spine rotation",
+   "Quadruped T-spine rotation"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Thoracic spine"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Rear deltoids"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "8 / side",
+  "form_cues": [
+   "Kneel on all fours and sit the hips slightly back.",
+   "Place one hand behind your head.",
+   "Rotate that elbow down under the body, then up toward the ceiling."
+  ],
+  "common_mistakes": [
+   "Rotating from the lower back",
+   "Shifting hips side to side"
+  ],
+  "regressions": [
+   "Open book"
+  ],
+  "progressions": [
+   "World's greatest stretch"
+  ],
+  "safety": "Sitting back toward the heels keeps the movement in the upper back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "wallslide",
+  "name": "Wall slide",
+  "aliases": [
+   "Scapular wall slide",
+   "Wall slides"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Rehab",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Serratus anterior",
+   "Lower trapezius"
+  ],
+  "secondary_muscles": [
+   "Rotator cuff"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Wall"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "10–12",
+  "form_cues": [
+   "Put forearms on a wall at shoulder height.",
+   "Slide them up, letting shoulder blades wrap around the ribs.",
+   "Lower slowly back down."
+  ],
+  "common_mistakes": [
+   "Shrugging as the arms rise",
+   "Arching the lower back"
+  ],
+  "regressions": [
+   "Wall angel"
+  ],
+  "progressions": [
+   "Wall slide with band",
+   "Foam roller wall slide"
+  ],
+  "safety": "Stay below any pinching point in the shoulder.",
+  "video": null,
+  "notes": "Add a loop band around the wrists for more rotator cuff work."
+ },
+ {
+  "id": "wallangel",
+  "name": "Wall angel",
+  "aliases": [
+   "Wall snow angels"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Rehab",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Lower trapezius",
+   "Rhomboids",
+   "Thoracic spine"
+  ],
+  "secondary_muscles": [
+   "Rotator cuff",
+   "Pectorals"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Wall"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "10",
+  "form_cues": [
+   "Stand with head, upper back and glutes against a wall.",
+   "Hold arms in a W with backs of hands on the wall.",
+   "Slide arms up and down without anything lifting away."
+  ],
+  "common_mistakes": [
+   "Lower back arching off the wall",
+   "Hands peeling away from the wall"
+  ],
+  "regressions": [
+   "Floor angel"
+  ],
+  "progressions": [
+   "Wall slide"
+  ],
+  "safety": "Step feet farther out if you can't keep your back flat.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "adductrock",
+  "name": "Adductor rock-back",
+  "aliases": [
+   "Quadruped adductor stretch",
+   "Frog rock-back"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Hips",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "10 / side",
+  "form_cues": [
+   "Kneel on all fours and straighten one leg out to the side.",
+   "Rock hips back toward your heel.",
+   "Keep your back flat and return forward."
+  ],
+  "common_mistakes": [
+   "Rounding the lower back",
+   "Rotating the foot up"
+  ],
+  "regressions": [
+   "Side lunge adductor stretch"
+  ],
+  "progressions": [],
+  "safety": "Keep the range comfortable on the groin.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "activeslr",
+  "name": "Active straight leg raise",
+  "aliases": [
+   "ASLR",
+   "Lying leg raise for mobility"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Core"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Lie on your back with both legs straight.",
+   "Raise one straight leg as high as you can without help.",
+   "Press the other leg firmly into the floor."
+  ],
+  "common_mistakes": [
+   "Bending the raised knee",
+   "Bottom leg lifting off the floor"
+  ],
+  "regressions": [
+   "Strap hamstring stretch"
+  ],
+  "progressions": [],
+  "safety": "Keep the lower back flat; useful as a hamstring mobility check.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "couch",
+  "name": "Couch stretch",
+  "aliases": [
+   "Rear-foot elevated hip flexor stretch",
+   "Wall quad stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Quadriceps",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Rectus femoris"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Wall or couch",
+   "Mat or cushion"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "60–90 sec / side",
+  "form_cues": [
+   "Kneel with your back shin up a wall or couch.",
+   "Step the other foot forward and squeeze the back glute.",
+   "Lift your chest slowly toward upright."
+  ],
+  "common_mistakes": [
+   "Arching the lower back",
+   "Kneeling right on the kneecap without padding"
+  ],
+  "regressions": [
+   "Kneeling hip flexor stretch"
+  ],
+  "progressions": [],
+  "safety": "Pad the knee well and back off if the knee hurts.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bretzel",
+  "name": "Bretzel stretch",
+  "aliases": [
+   "Pretzel stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hip flexors",
+   "Quadriceps",
+   "Thoracic spine"
+  ],
+  "secondary_muscles": [
+   "Pectorals",
+   "Glutes"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "45–60 sec / side",
+  "form_cues": [
+   "Lie on your side, top knee bent at hip height and pinned down.",
+   "Grab the bottom foot behind you with your top hand.",
+   "Rotate your chest and shoulders toward the floor behind you."
+  ],
+  "common_mistakes": [
+   "Letting the top knee lift",
+   "Holding the breath"
+  ],
+  "regressions": [
+   "Open book"
+  ],
+  "progressions": [],
+  "safety": "Use a strap on the back foot if you can't reach it.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hipflexor",
+  "name": "Kneeling hip flexor stretch",
+  "aliases": [
+   "Half-kneeling hip flexor stretch",
+   "Lunge stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hip flexors",
+   "Psoas"
+  ],
+  "secondary_muscles": [
+   "Quadriceps"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Mat or cushion"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30–45 sec / side",
+  "form_cues": [
+   "Kneel on one knee with the other foot forward.",
+   "Tuck your pelvis and squeeze the back glute.",
+   "Shift your weight forward until you feel the front of the hip."
+  ],
+  "common_mistakes": [
+   "Arching the lower back",
+   "Lunging far without tucking the pelvis"
+  ],
+  "regressions": [
+   "Standing hip flexor stretch"
+  ],
+  "progressions": [
+   "Couch stretch"
+  ],
+  "safety": "Pad the knee; you should feel it in the hip, not the lower back.",
+  "video": null,
+  "notes": "Reach the same-side arm overhead for a stronger stretch."
+ },
+ {
+  "id": "standquad",
+  "name": "Standing quad stretch",
+  "aliases": [
+   "Standing quadriceps stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly",
+   "Balance"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Hip flexors"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Wall or support (optional)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Stand tall and grab one ankle behind you.",
+   "Pull the heel toward your glute, knees together.",
+   "Tuck your pelvis gently to feel more in the hip."
+  ],
+  "common_mistakes": [
+   "Arching the back",
+   "Knee flaring out to the side"
+  ],
+  "regressions": [
+   "Side-lying quad stretch"
+  ],
+  "progressions": [
+   "Couch stretch"
+  ],
+  "safety": "Hold a wall for balance; don't yank the ankle.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "standham",
+  "name": "Standing hamstring stretch",
+  "aliases": [
+   "Heel-on-step hamstring stretch",
+   "Elevated hamstring stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Low step or chair (optional)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Put one heel on a low step with the leg straight.",
+   "Keep your back flat and hinge forward from the hips.",
+   "Point the toes up for more stretch."
+  ],
+  "common_mistakes": [
+   "Rounding the back to reach down",
+   "Locking the knee hard"
+  ],
+  "regressions": [
+   "Seated hamstring stretch"
+  ],
+  "progressions": [
+   "Strap hamstring stretch"
+  ],
+  "safety": "Use a lower step if you feel it behind the knee rather than the thigh.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "seatedham",
+  "name": "Seated single-leg hamstring stretch",
+  "aliases": [
+   "Seated hamstring stretch",
+   "Hurdler stretch (modified)"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Calves"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Sit with one leg straight and the other foot against the inner thigh.",
+   "Hinge forward from the hips toward the straight leg's foot.",
+   "Keep your chest long rather than curling down."
+  ],
+  "common_mistakes": [
+   "Rounding the back",
+   "Bouncing"
+  ],
+  "regressions": [
+   "Standing hamstring stretch"
+  ],
+  "progressions": [
+   "PNF hamstring stretch"
+  ],
+  "safety": "Sit on a cushion if your lower back rounds a lot.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "calfwall",
+  "name": "Wall calf stretch",
+  "aliases": [
+   "Gastrocnemius stretch",
+   "Standing calf stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Gastrocnemius"
+  ],
+  "secondary_muscles": [
+   "Achilles tendon"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Wall"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Put your hands on a wall with one leg back and straight.",
+   "Press the back heel down, toes pointing forward.",
+   "Lean your hips toward the wall."
+  ],
+  "common_mistakes": [
+   "Back heel lifting",
+   "Back foot turned out"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Bent-knee soleus stretch"
+  ],
+  "safety": "Ease in gradually if you have Achilles pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "soleus",
+  "name": "Bent-knee soleus stretch",
+  "aliases": [
+   "Soleus stretch",
+   "Bent-knee calf stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Soleus"
+  ],
+  "secondary_muscles": [
+   "Achilles tendon"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Wall"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Stand in a short split stance facing a wall.",
+   "Bend both knees and sink the back knee toward the floor.",
+   "Keep the back heel down."
+  ],
+  "common_mistakes": [
+   "Heel lifting",
+   "Standing too far from the wall"
+  ],
+  "regressions": [
+   "Wall calf stretch"
+  ],
+  "progressions": [
+   "Knee-to-wall ankle mobilization"
+  ],
+  "safety": "Back off if the Achilles feels sharp rather than stretched.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "figure4",
+  "name": "Supine figure-four stretch",
+  "aliases": [
+   "Lying piriformis stretch",
+   "Figure-4 glute stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Glutes",
+   "Piriformis"
+  ],
+  "secondary_muscles": [
+   "Hip external rotators"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30–45 sec / side",
+  "form_cues": [
+   "Lie on your back and cross one ankle over the other knee.",
+   "Pull the bottom thigh toward your chest.",
+   "Gently push the crossed knee away to deepen it."
+  ],
+  "common_mistakes": [
+   "Lifting the head and shoulders",
+   "Letting the ankle sickle"
+  ],
+  "regressions": [
+   "Seated figure-four stretch"
+  ],
+  "progressions": [
+   "90/90 hip stretch"
+  ],
+  "safety": "Flex the crossed foot to protect the knee.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "doorway",
+  "name": "Doorway chest stretch",
+  "aliases": [
+   "Doorframe pec stretch",
+   "Corner stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Pectorals"
+  ],
+  "secondary_muscles": [
+   "Anterior deltoids",
+   "Biceps"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Doorframe"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Place your forearm on a doorframe with elbow at shoulder height.",
+   "Step through with the same-side leg.",
+   "Turn your chest slightly away until you feel the chest open."
+  ],
+  "common_mistakes": [
+   "Shrugging the shoulder up",
+   "Elbow far above the shoulder"
+  ],
+  "regressions": [],
+  "progressions": [
+   "PNF chest stretch"
+  ],
+  "safety": "Keep the elbow at or below shoulder height to protect the shoulder joint.",
+  "video": null,
+  "notes": "Raise the elbow higher to bias the lower pec."
+ },
+ {
+  "id": "doorlat",
+  "name": "Doorframe lat stretch",
+  "aliases": [
+   "Standing lat stretch",
+   "Door lat hang stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Teres major",
+   "Obliques"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Doorframe or sturdy post"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Grab a doorframe at hip height with one hand.",
+   "Sit your hips back and away, letting the side body lengthen.",
+   "Rotate slightly to find the tightest spot."
+  ],
+  "common_mistakes": [
+   "Rounding through the shoulders only",
+   "Holding the breath"
+  ],
+  "regressions": [
+   "Standing overhead side stretch"
+  ],
+  "progressions": [
+   "Bench lat stretch"
+  ],
+  "safety": "Make sure the post you hold is solid.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "tristretch",
+  "name": "Overhead triceps stretch",
+  "aliases": [
+   "Triceps stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Lats"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Raise one arm and bend the elbow so your hand drops behind your head.",
+   "Use the other hand to ease the elbow back.",
+   "Keep your ribs down."
+  ],
+  "common_mistakes": [
+   "Arching the lower back",
+   "Pulling the head forward"
+  ],
+  "regressions": [],
+  "progressions": [],
+  "safety": "Ease off if you feel pinching at the top of the shoulder.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "crossbody",
+  "name": "Cross-body shoulder stretch",
+  "aliases": [
+   "Posterior shoulder stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Rear deltoids",
+   "Rotator cuff"
+  ],
+  "secondary_muscles": [
+   "Rhomboids"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Bring one straight arm across your chest.",
+   "Pull it in at the upper arm with the other hand.",
+   "Keep the shoulder down, away from the ear."
+  ],
+  "common_mistakes": [
+   "Pulling at the elbow joint",
+   "Rotating the torso"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Sleeper stretch"
+  ],
+  "safety": "Pull above the elbow, not on the joint.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sleeper",
+  "name": "Sleeper stretch",
+  "aliases": [
+   "Side-lying internal rotation stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Rehab",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Posterior rotator cuff",
+   "Posterior shoulder capsule"
+  ],
+  "secondary_muscles": [
+   "Rear deltoids"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Lie on your side with the bottom arm out at 90°, elbow bent.",
+   "Use the top hand to press the forearm gently toward the floor.",
+   "Roll back slightly to ease pressure on the shoulder."
+  ],
+  "common_mistakes": [
+   "Pushing hard into pain",
+   "Lying directly on the point of the shoulder"
+  ],
+  "regressions": [
+   "Cross-body shoulder stretch"
+  ],
+  "progressions": [],
+  "safety": "Very gentle pressure only; stop with any sharp front-of-shoulder pain.",
+  "video": null,
+  "notes": "Popular with throwers and racquet-sport players."
+ },
+ {
+  "id": "traps",
+  "name": "Upper trap stretch",
+  "aliases": [
+   "Lateral neck stretch",
+   "Side neck stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly",
+   "Recovery"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Upper trapezius"
+  ],
+  "secondary_muscles": [
+   "Scalenes"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Sit tall and hold the chair with one hand.",
+   "Tilt your ear toward the opposite shoulder.",
+   "Rest the other hand on your head for light extra pull."
+  ],
+  "common_mistakes": [
+   "Pulling hard on the head",
+   "Letting the shoulder rise"
+  ],
+  "regressions": [
+   "Neck half circles"
+  ],
+  "progressions": [],
+  "safety": "Use only light hand pressure; stop with tingling in the arm.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "levator",
+  "name": "Levator scapulae stretch",
+  "aliases": [
+   "Armpit-sniff stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly",
+   "Recovery"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Levator scapulae"
+  ],
+  "secondary_muscles": [
+   "Upper trapezius"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Turn your nose toward your armpit.",
+   "Gently pull your head down with the same-side hand.",
+   "Hold the opposite shoulder down."
+  ],
+  "common_mistakes": [
+   "Pulling too hard",
+   "Rounding the whole upper back"
+  ],
+  "regressions": [
+   "Upper trap stretch"
+  ],
+  "progressions": [],
+  "safety": "Keep pressure gentle; neck stretches should never feel sharp.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "chintuck",
+  "name": "Chin tucks",
+  "aliases": [
+   "Neck retractions",
+   "Cervical retraction"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Rehab",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Deep neck flexors"
+  ],
+  "secondary_muscles": [
+   "Upper back"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "10",
+  "form_cues": [
+   "Sit or stand tall looking straight ahead.",
+   "Slide your chin straight back to make a double chin.",
+   "Hold 2–3 seconds and relax."
+  ],
+  "common_mistakes": [
+   "Tipping the head down instead of sliding back",
+   "Straining the jaw"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Supine chin tuck with head lift"
+  ],
+  "safety": "Stop if you get dizziness or arm symptoms.",
+  "video": null,
+  "notes": "Good counter to 'tech neck' posture."
+ },
+ {
+  "id": "wristflex",
+  "name": "Wrist flexor stretch",
+  "aliases": [
+   "Forearm flexor stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Forearm flexors"
+  ],
+  "secondary_muscles": [
+   "Wrist"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Hold one arm out straight, palm up.",
+   "Gently pull the fingers back with the other hand.",
+   "Keep the elbow straight."
+  ],
+  "common_mistakes": [
+   "Bending the elbow",
+   "Forcing it through tingling"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Quadruped wrist rocks"
+  ],
+  "safety": "Stop with numbness or tingling in the fingers.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "wristext",
+  "name": "Wrist extensor stretch",
+  "aliases": [
+   "Forearm extensor stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Forearm extensors"
+  ],
+  "secondary_muscles": [
+   "Wrist"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Hold one arm out straight, palm down.",
+   "Gently press the back of the hand toward you.",
+   "Keep the elbow straight."
+  ],
+  "common_mistakes": [
+   "Bending the elbow",
+   "Pushing too hard"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Quadruped wrist rocks"
+  ],
+  "safety": "Helpful for tennis-elbow type tightness; keep it gentle.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "butterfly",
+  "name": "Butterfly stretch",
+  "aliases": [
+   "Seated groin stretch",
+   "Seated adductor stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Hip rotators"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "30–45 sec",
+  "form_cues": [
+   "Sit with the soles of your feet together.",
+   "Hold your feet and sit tall.",
+   "Let the knees drop; hinge forward a little for more."
+  ],
+  "common_mistakes": [
+   "Bouncing the knees",
+   "Rounding the back"
+  ],
+  "regressions": [],
+  "progressions": [
+   "PNF adductor stretch"
+  ],
+  "safety": "Don't push the knees down with force.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sidelungestretch",
+  "name": "Side lunge adductor stretch",
+  "aliases": [
+   "Standing groin stretch",
+   "Lateral lunge stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Stand with feet wide.",
+   "Shift into one bent knee, keeping the other leg straight.",
+   "Keep both feet flat and chest up."
+  ],
+  "common_mistakes": [
+   "Bent knee caving inward",
+   "Straight-leg foot rolling onto its edge"
+  ],
+  "regressions": [
+   "Butterfly stretch"
+  ],
+  "progressions": [
+   "Adductor rock-back"
+  ],
+  "safety": "Keep the bent knee tracking over the toes.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "itband",
+  "name": "Standing IT band stretch",
+  "aliases": [
+   "Cross-leg side stretch",
+   "Standing TFL stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Tensor fasciae latae",
+   "Gluteus medius"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Cross one leg behind the other.",
+   "Push the hip of the back leg out to the side.",
+   "Reach the same arm overhead and lean away."
+  ],
+  "common_mistakes": [
+   "Bending forward",
+   "Bending the back knee"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Foam roll IT band"
+  ],
+  "safety": "Hold a wall for balance.",
+  "video": null,
+  "notes": "The IT band itself barely stretches; this mainly targets the TFL and glute."
+ },
+ {
+  "id": "shinstretch",
+  "name": "Kneeling shin stretch",
+  "aliases": [
+   "Tibialis stretch",
+   "Anterior shin stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Tibialis anterior"
+  ],
+  "secondary_muscles": [
+   "Ankle"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "30 sec",
+  "form_cues": [
+   "Kneel with the tops of your feet flat on the floor.",
+   "Sit back toward your heels.",
+   "Lift the knees slightly for more stretch."
+  ],
+  "common_mistakes": [
+   "Sitting back on painful knees",
+   "Toes curling under"
+  ],
+  "regressions": [
+   "Standing shin stretch"
+  ],
+  "progressions": [],
+  "safety": "Use a cushion under the knees; skip if kneeling hurts.",
+  "video": null,
+  "notes": "Useful for shin splints."
+ },
+ {
+  "id": "plantar",
+  "name": "Seated plantar fascia stretch",
+  "aliases": [
+   "Toe stretch",
+   "Foot arch stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Rehab",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Plantar fascia"
+  ],
+  "secondary_muscles": [
+   "Foot intrinsics"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Chair"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "20–30 sec / side",
+  "form_cues": [
+   "Sit and cross one foot over the other knee.",
+   "Pull your toes back toward your shin.",
+   "Feel along the arch with the other thumb."
+  ],
+  "common_mistakes": [
+   "Pulling the ankle instead of the toes",
+   "Rushing it"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Massage ball foot roll"
+  ],
+  "safety": "Great first thing in the morning for plantar fasciitis.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "towelir",
+  "name": "Towel internal rotation stretch",
+  "aliases": [
+   "Behind-back towel stretch",
+   "Towel shoulder stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Rehab",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Rotator cuff",
+   "Posterior shoulder"
+  ],
+  "secondary_muscles": [
+   "Triceps"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Towel"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "20–30 sec / side",
+  "form_cues": [
+   "Hold a towel overhead with one hand and behind your back with the other.",
+   "Pull up with the top hand to raise the lower hand.",
+   "Keep shoulders relaxed."
+  ],
+  "common_mistakes": [
+   "Yanking the towel",
+   "Arching the back"
+  ],
+  "regressions": [
+   "Sleeper stretch"
+  ],
+  "progressions": [],
+  "safety": "Gentle pull only; common in shoulder rehab programmes.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pnfham",
+  "name": "PNF hamstring stretch",
+  "aliases": [
+   "Contract-relax hamstring stretch",
+   "Partner hamstring stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Partner, strap or towel"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "3 cycles / side",
+  "form_cues": [
+   "Lie down with one leg raised; a partner or strap holds it at a stretch.",
+   "Push the leg down into resistance for 6 seconds.",
+   "Relax, breathe out and ease the leg higher; repeat."
+  ],
+  "common_mistakes": [
+   "Pushing at full force",
+   "Partner forcing the leg past comfort"
+  ],
+  "regressions": [
+   "Strap hamstring stretch"
+  ],
+  "progressions": [],
+  "safety": "Contract at moderate effort; communicate clearly with your partner.",
+  "video": null,
+  "notes": "Proprioceptive neuromuscular facilitation: contract 6 sec, relax, then stretch 20–30 sec."
+ },
+ {
+  "id": "pnfchest",
+  "name": "PNF chest stretch",
+  "aliases": [
+   "Contract-relax pec stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Pectorals"
+  ],
+  "secondary_muscles": [
+   "Anterior deltoids"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Doorframe or partner"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "3 cycles / side",
+  "form_cues": [
+   "Set up in the doorway chest stretch.",
+   "Press the forearm into the frame for 6 seconds.",
+   "Relax, step through a little deeper and hold."
+  ],
+  "common_mistakes": [
+   "Shrugging during the push",
+   "Going deeper too fast"
+  ],
+  "regressions": [
+   "Doorway chest stretch"
+  ],
+  "progressions": [],
+  "safety": "Keep the elbow at or below shoulder height.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pnfadd",
+  "name": "PNF adductor stretch",
+  "aliases": [
+   "Contract-relax butterfly"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Hip rotators"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "3 cycles",
+  "form_cues": [
+   "Sit in a butterfly with hands on the inner knees.",
+   "Press knees up into your hands for 6 seconds.",
+   "Relax and let the knees fall a little lower."
+  ],
+  "common_mistakes": [
+   "Forcing the knees down",
+   "Holding the breath"
+  ],
+  "regressions": [
+   "Butterfly stretch"
+  ],
+  "progressions": [],
+  "safety": "Gentle hand pressure only; never push through groin pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "scappush",
+  "name": "Scap push-up",
+  "aliases": [
+   "Scapular push-up",
+   "Serratus push-up"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Rehab",
+   "Warm-up",
+   "Home-friendly",
+   "Calisthenics"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Serratus anterior"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Chest"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "10–15",
+  "form_cues": [
+   "Hold a plank on hands with straight arms.",
+   "Let your chest sink between the shoulder blades.",
+   "Push the floor away to spread the shoulder blades."
+  ],
+  "common_mistakes": [
+   "Bending the elbows",
+   "Letting the hips sag"
+  ],
+  "regressions": [
+   "Wall scap push-up",
+   "Kneeling scap push-up"
+  ],
+  "progressions": [
+   "Scap pull-up"
+  ],
+  "safety": "Keep the elbows locked; the movement is only at the shoulder blades.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ytw",
+  "name": "Prone Y-T-W raise",
+  "aliases": [
+   "YTWs",
+   "Prone YTW"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Rehab",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Lower trapezius",
+   "Rhomboids",
+   "Rear deltoids"
+  ],
+  "secondary_muscles": [
+   "Rotator cuff"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "8 each letter",
+  "form_cues": [
+   "Lie face down with your forehead on a towel.",
+   "Lift your arms into a Y, then a T, then a W.",
+   "Squeeze shoulder blades down and back each time."
+  ],
+  "common_mistakes": [
+   "Shrugging up to the ears",
+   "Lifting the chest off the floor"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Dumbbell Y-T-W on incline bench"
+  ],
+  "safety": "Use thumbs up and light or no weight.",
+  "video": null,
+  "notes": "Add 0.5–2 kg plates or dumbbells to progress."
+ },
+ {
+  "id": "eccheel",
+  "name": "Eccentric heel drop",
+  "aliases": [
+   "Alfredson heel drop",
+   "Eccentric calf lowering"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Rehab",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Gastrocnemius",
+   "Soleus",
+   "Achilles tendon"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Step"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "15 / side",
+  "form_cues": [
+   "Stand on a step and rise up on both feet.",
+   "Shift onto one foot and lower the heel slowly below the step.",
+   "Use both feet to come back up."
+  ],
+  "common_mistakes": [
+   "Dropping fast instead of lowering slowly",
+   "Bouncing at the bottom"
+  ],
+  "regressions": [
+   "Two-leg heel drop"
+  ],
+  "progressions": [
+   "Weighted eccentric heel drop"
+  ],
+  "safety": "Mild tendon discomfort is common; stop if pain is sharp or worsening.",
+  "video": null,
+  "notes": "Classic Achilles tendinopathy protocol; do with straight and bent knee."
+ },
+ {
+  "id": "shortfoot",
+  "name": "Short foot exercise",
+  "aliases": [
+   "Foot doming",
+   "Arch lifts"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Rehab",
+   "Home-friendly",
+   "Balance"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Foot intrinsics"
+  ],
+  "secondary_muscles": [
+   "Tibialis posterior"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "10 × 5 sec / side",
+  "form_cues": [
+   "Sit or stand with the foot flat.",
+   "Draw the ball of the foot toward the heel to lift the arch.",
+   "Keep the toes long and relaxed."
+  ],
+  "common_mistakes": [
+   "Curling the toes",
+   "Rolling the foot outward"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Single-leg balance with short foot"
+  ],
+  "safety": "Gentle and safe; useful for flat feet and plantar pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "mckenzie",
+  "name": "Prone press-up",
+  "aliases": [
+   "McKenzie press-up",
+   "Prone extension"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Rehab",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Lumbar spine"
+  ],
+  "secondary_muscles": [
+   "Abdominals"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "10",
+  "form_cues": [
+   "Lie face down with hands under your shoulders.",
+   "Press your chest up, letting the hips and belly stay on the floor.",
+   "Relax your lower back and lower slowly."
+  ],
+  "common_mistakes": [
+   "Squeezing the glutes and lifting the hips",
+   "Going into painful range"
+  ],
+  "regressions": [
+   "Prone on elbows"
+  ],
+  "progressions": [],
+  "safety": "Stop if leg pain spreads further down; see a professional for disc issues.",
+  "video": null,
+  "notes": "Part of the McKenzie method for some back pain types."
+ },
+ {
+  "id": "sciatic",
+  "name": "Sciatic nerve floss",
+  "aliases": [
+   "Seated nerve glide",
+   "Slump nerve glide"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Rehab",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Sciatic nerve"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Chair"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "10–15 / side",
+  "form_cues": [
+   "Sit tall at the edge of a chair.",
+   "Straighten one knee while you look up.",
+   "Bend the knee as you look down; keep it smooth."
+  ],
+  "common_mistakes": [
+   "Holding at end range like a stretch",
+   "Moving into tingling"
+  ],
+  "regressions": [],
+  "progressions": [],
+  "safety": "Should feel mild; stop if symptoms increase or linger.",
+  "video": null,
+  "notes": "Nerves like movement, not long holds."
+ },
+ {
+  "id": "breath9090",
+  "name": "90/90 breathing",
+  "aliases": [
+   "Crocodile breathing (90/90)",
+   "Supine diaphragmatic breathing"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Diaphragm"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Pelvic floor"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Wall or chair"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "3–5 min",
+  "form_cues": [
+   "Lie on your back with feet on a wall, hips and knees at 90°.",
+   "Breathe in through the nose into the ribs and belly.",
+   "Exhale fully through the mouth and pause."
+  ],
+  "common_mistakes": [
+   "Breathing only into the chest",
+   "Arching the lower back"
+  ],
+  "regressions": [],
+  "progressions": [],
+  "safety": "Very safe; a good post-workout cool-down to calm the nervous system.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hamstretch",
+  "name": "Strap hamstring stretch",
+  "aliases": [
+   "Lying hamstring stretch",
+   "Supine hamstring stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Stretching strap or towel"
+  ],
+  "req": "stretchstrap",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30–45 sec / side",
+  "form_cues": [
+   "Lie on your back with a strap around one foot.",
+   "Raise the straight leg until you feel a stretch.",
+   "Keep the other leg flat on the floor."
+  ],
+  "common_mistakes": [
+   "Bending the raised knee a lot",
+   "Lifting the hips"
+  ],
+  "regressions": [
+   "Standing hamstring stretch"
+  ],
+  "progressions": [
+   "PNF hamstring stretch"
+  ],
+  "safety": "Use a towel if you don't have a strap.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "strapquad",
+  "name": "Strap prone quad stretch",
+  "aliases": [
+   "Lying strap quad stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Hip flexors"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Stretching strap or towel"
+  ],
+  "req": "stretchstrap",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Lie face down with a strap looped around one ankle.",
+   "Pull the heel toward your glute.",
+   "Press the hip into the floor."
+  ],
+  "common_mistakes": [
+   "Arching the back",
+   "Knee drifting outward"
+  ],
+  "regressions": [
+   "Side-lying quad stretch"
+  ],
+  "progressions": [
+   "Couch stretch"
+  ],
+  "safety": "Ease the strap in slowly.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "strapadd",
+  "name": "Strap adductor stretch",
+  "aliases": [
+   "Lying strap groin stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Stretching strap"
+  ],
+  "req": "stretchstrap",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Lie on your back with a strap on one foot, leg straight up.",
+   "Lower the leg out to the side.",
+   "Keep the opposite hip pinned down."
+  ],
+  "common_mistakes": [
+   "Rolling the pelvis over",
+   "Bending the knee"
+  ],
+  "regressions": [
+   "Butterfly stretch"
+  ],
+  "progressions": [],
+  "safety": "Lower only as far as your hips stay level.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "banddisloc",
+  "name": "Band shoulder dislocate",
+  "aliases": [
+   "Band pass-through",
+   "Shoulder pass-through"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Pectorals",
+   "Anterior deltoids",
+   "Rotator cuff"
+  ],
+  "secondary_muscles": [
+   "Lats",
+   "Upper back"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Resistance band or dowel"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "10–15",
+  "form_cues": [
+   "Hold a band wide with straight arms in front.",
+   "Lift it overhead and behind you in one smooth arc.",
+   "Bring it back the same way."
+  ],
+  "common_mistakes": [
+   "Bending the elbows",
+   "Arching the lower back"
+  ],
+  "regressions": [
+   "Arm circles"
+  ],
+  "progressions": [
+   "Narrow-grip pass-through"
+  ],
+  "safety": "Start with a wide grip and narrow it gradually.",
+  "video": null,
+  "notes": "A PVC pipe or broomstick works too."
+ },
+ {
+  "id": "bandlat",
+  "name": "Banded lat stretch",
+  "aliases": [
+   "Band overhead lat distraction"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Teres major",
+   "Triceps"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Resistance band",
+   "High anchor"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "30–60 sec / side",
+  "form_cues": [
+   "Loop a band around a high anchor and your wrist.",
+   "Step back and sit your hips back.",
+   "Let the band pull your arm overhead and to the side."
+  ],
+  "common_mistakes": [
+   "Shrugging up",
+   "Rounding through the lower back"
+  ],
+  "regressions": [
+   "Doorframe lat stretch"
+  ],
+  "progressions": [],
+  "safety": "Use a secure anchor; check the band for tears.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandhip",
+  "name": "Banded hip distraction",
+  "aliases": [
+   "Band hip flexor distraction",
+   "Banded hip mobilization"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hip capsule",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Glutes"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Heavy resistance band",
+   "Low anchor"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "60 sec / side",
+  "form_cues": [
+   "Loop a heavy band around the top of your thigh from a low anchor.",
+   "Step away into a kneeling lunge or all-fours position.",
+   "Rock gently into the stretch."
+  ],
+  "common_mistakes": [
+   "Band sliding down to the knee",
+   "Not enough tension"
+  ],
+  "regressions": [
+   "Kneeling hip flexor stretch"
+  ],
+  "progressions": [],
+  "safety": "Anchor must be solid; band high in the hip crease.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandankle",
+  "name": "Banded ankle distraction",
+  "aliases": [
+   "Banded ankle mobilization"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Ankle joint",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Soleus"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Heavy resistance band",
+   "Low anchor"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "10–15 / side",
+  "form_cues": [
+   "Loop a band around the front of the ankle, anchored behind you.",
+   "Step forward into a half-kneel.",
+   "Drive the knee forward over the toes; the band pulls the ankle back."
+  ],
+  "common_mistakes": [
+   "Band on the foot, not the ankle crease",
+   "Heel lifting"
+  ],
+  "regressions": [
+   "Knee-to-wall ankle mobilization"
+  ],
+  "progressions": [],
+  "safety": "Avoid after a recent sprain without clearance.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bander",
+  "name": "Band external rotation",
+  "aliases": [
+   "Banded shoulder external rotation"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Rehab",
+   "Warm-up",
+   "Isolation",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Rotator cuff",
+   "Infraspinatus",
+   "Teres minor"
+  ],
+  "secondary_muscles": [
+   "Rear deltoids"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Hold a band at elbow height with the elbow tucked at your side.",
+   "Rotate the forearm outward, keeping the elbow pinned.",
+   "Return slowly."
+  ],
+  "common_mistakes": [
+   "Elbow drifting away from the body",
+   "Rotating the torso"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Side-lying dumbbell external rotation",
+   "Cable external rotation"
+  ],
+  "safety": "Light band; a rolled towel under the arm helps keep form.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandir",
+  "name": "Band internal rotation",
+  "aliases": [
+   "Banded shoulder internal rotation"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Rehab",
+   "Isolation",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Subscapularis"
+  ],
+  "secondary_muscles": [
+   "Pectorals"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Anchor a band at elbow height to the side of the working arm.",
+   "Pull the forearm across your stomach.",
+   "Keep the elbow tucked against your side."
+  ],
+  "common_mistakes": [
+   "Elbow flaring",
+   "Twisting the body"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Cable internal rotation"
+  ],
+  "safety": "Light resistance; stop if the front of the shoulder hurts.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "tke",
+  "name": "Terminal knee extension",
+  "aliases": [
+   "TKE",
+   "Banded knee extension"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Rehab",
+   "Isolation",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Quadriceps",
+   "Vastus medialis"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Resistance band",
+   "Low anchor"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "15–20 / side",
+  "form_cues": [
+   "Loop a band behind your knee from an anchor in front.",
+   "Start with the knee slightly bent.",
+   "Squeeze the quad to straighten the knee fully."
+  ],
+  "common_mistakes": [
+   "Leaning the torso forward",
+   "Letting the knee snap back"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Spanish squat"
+  ],
+  "safety": "Keep it pain-free; common after knee surgery.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "foamroll",
+  "name": "Foam roll legs and back",
+  "aliases": [
+   "Foam rolling",
+   "Self-myofascial release"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Recovery",
+   "Home-friendly",
+   "Warm-up"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Quadriceps",
+   "Hamstrings",
+   "Calves",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Glutes"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Foam roller"
+  ],
+  "req": "foamroller",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "5–10 min",
+  "form_cues": [
+   "Roll slowly, about 2–3 cm per second.",
+   "Pause 20–30 seconds on tender spots and breathe.",
+   "Spend 30–60 seconds on each area."
+  ],
+  "common_mistakes": [
+   "Rolling too fast",
+   "Rolling directly on joints or the lower back"
+  ],
+  "regressions": [],
+  "progressions": [],
+  "safety": "Avoid bony areas, the lower back and the neck.",
+  "video": null,
+  "notes": "General routine; see individual entries for each area."
+ },
+ {
+  "id": "frquad",
+  "name": "Foam roll quads",
+  "aliases": [
+   "Quad roll"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Home-friendly",
+   "Warm-up"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Hip flexors"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Foam roller"
+  ],
+  "req": "foamroller",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "60 sec / side",
+  "form_cues": [
+   "Lie face down with the roller under your thighs.",
+   "Roll from just above the knee to the hip.",
+   "Turn slightly in and out to hit inner and outer quads."
+  ],
+  "common_mistakes": [
+   "Sagging the hips",
+   "Rolling over the kneecap"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Single-leg quad roll"
+  ],
+  "safety": "Keep your core braced to protect the lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "frham",
+  "name": "Foam roll hamstrings",
+  "aliases": [
+   "Hamstring roll"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Foam roller"
+  ],
+  "req": "foamroller",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 1,
+  "reps": "60 sec / side",
+  "form_cues": [
+   "Sit with the roller under your thighs and hands behind you.",
+   "Lift your hips and roll from knee to glute.",
+   "Cross one leg over the other for more pressure."
+  ],
+  "common_mistakes": [
+   "Rolling behind the knee",
+   "Rushing"
+  ],
+  "regressions": [],
+  "progressions": [],
+  "safety": "Avoid the back of the knee.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "frcalf",
+  "name": "Foam roll calves",
+  "aliases": [
+   "Calf roll"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Gastrocnemius",
+   "Soleus"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Foam roller"
+  ],
+  "req": "foamroller",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 1,
+  "reps": "60 sec / side",
+  "form_cues": [
+   "Sit with the roller under your calves.",
+   "Lift your hips and roll from ankle to knee.",
+   "Turn the foot in and out to hit each side."
+  ],
+  "common_mistakes": [
+   "Rolling over the Achilles hard",
+   "Going too fast"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Massage ball calf release"
+  ],
+  "safety": "Stack one leg on top for more pressure.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "fritb",
+  "name": "Foam roll IT band",
+  "aliases": [
+   "Lateral thigh roll",
+   "IT band roll"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Tensor fasciae latae",
+   "Vastus lateralis"
+  ],
+  "secondary_muscles": [
+   "IT band"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Foam roller"
+  ],
+  "req": "foamroller",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 1,
+  "reps": "45–60 sec / side",
+  "form_cues": [
+   "Lie on your side with the roller under the outer thigh.",
+   "Use the top leg and hands to control pressure.",
+   "Roll from hip to just above the knee."
+  ],
+  "common_mistakes": [
+   "Putting full body weight on it",
+   "Rolling over the hip bone"
+  ],
+  "regressions": [],
+  "progressions": [],
+  "safety": "This area is sensitive; reduce pressure with the top foot.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "frglute",
+  "name": "Foam roll glutes",
+  "aliases": [
+   "Glute roll",
+   "Piriformis roll"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Glutes",
+   "Piriformis"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Foam roller"
+  ],
+  "req": "foamroller",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 1,
+  "reps": "60 sec / side",
+  "form_cues": [
+   "Sit on the roller and cross one ankle over the other knee.",
+   "Lean toward the crossed-leg side.",
+   "Roll slowly over the glute."
+  ],
+  "common_mistakes": [
+   "Rolling onto the lower back",
+   "Rolling fast"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Massage ball glute release"
+  ],
+  "safety": "Stay on the meaty glute area, away from the tailbone.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "frtspine",
+  "name": "Foam roll thoracic spine",
+  "aliases": [
+   "Upper back roll",
+   "Foam roller thoracic extension"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Home-friendly",
+   "Warm-up"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Thoracic spine",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Spinal erectors"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Foam roller"
+  ],
+  "req": "foamroller",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "10 reps + 60 sec roll",
+  "form_cues": [
+   "Lie with the roller under your upper back, hands behind your head.",
+   "Roll from mid-back to the shoulder blades.",
+   "Pause and gently extend over the roller at stiff spots."
+  ],
+  "common_mistakes": [
+   "Rolling onto the lower back",
+   "Flaring ribs and arching from the lower back"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Peanut thoracic extension"
+  ],
+  "safety": "Never roll the lumbar spine; support your head.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "frlat",
+  "name": "Foam roll lats",
+  "aliases": [
+   "Lat roll"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Teres major"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Foam roller"
+  ],
+  "req": "foamroller",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 1,
+  "reps": "60 sec / side",
+  "form_cues": [
+   "Lie on your side with the roller under your armpit, arm overhead.",
+   "Roll down toward the bottom of the ribs.",
+   "Rotate slightly forward and back."
+  ],
+  "common_mistakes": [
+   "Rolling over the shoulder joint",
+   "Rolling onto the ribs too hard"
+  ],
+  "regressions": [],
+  "progressions": [],
+  "safety": "Keep the head supported on the arm.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "frpec",
+  "name": "Foam roll chest",
+  "aliases": [
+   "Pec roll"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Pectorals"
+  ],
+  "secondary_muscles": [
+   "Anterior deltoids"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Foam roller"
+  ],
+  "req": "foamroller",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 1,
+  "reps": "45–60 sec / side",
+  "form_cues": [
+   "Lie face down with the roller at an angle under one side of the chest.",
+   "Extend that arm out to the side.",
+   "Roll slowly from the breastbone toward the shoulder."
+  ],
+  "common_mistakes": [
+   "Rolling over the collarbone",
+   "Too much body weight"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Massage ball pec release"
+  ],
+  "safety": "Light pressure; avoid the front of the shoulder joint.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "stabtspine",
+  "name": "Stability ball back stretch",
+  "aliases": [
+   "Ball thoracic extension",
+   "Swiss ball back extension stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching",
+   "Home-friendly",
+   "Recovery"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Thoracic spine",
+   "Abdominals",
+   "Pectorals"
+  ],
+  "secondary_muscles": [
+   "Hip flexors"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Stability ball"
+  ],
+  "req": "stabball",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "30–45 sec",
+  "form_cues": [
+   "Sit on a stability ball and walk your feet forward.",
+   "Lie back so the ball supports your upper and mid back.",
+   "Reach your arms overhead and relax."
+  ],
+  "common_mistakes": [
+   "Letting the head drop unsupported",
+   "Feet too close together"
+  ],
+  "regressions": [
+   "Foam roll thoracic spine"
+  ],
+  "progressions": [],
+  "safety": "Keep feet wide for balance; avoid if you get dizzy.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ballrelease",
+  "name": "Massage ball glute release",
+  "aliases": [
+   "Lacrosse ball glute release",
+   "Piriformis ball release"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Glutes",
+   "Piriformis"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Massage or lacrosse ball"
+  ],
+  "req": "massageball",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 1,
+  "reps": "60–90 sec / side",
+  "form_cues": [
+   "Sit or lie with the ball under one glute.",
+   "Find a tender spot and let your weight sink in.",
+   "Breathe and make small circles."
+  ],
+  "common_mistakes": [
+   "Rolling on the sciatic nerve with sharp, shooting pain",
+   "Going too hard"
+  ],
+  "regressions": [
+   "Foam roll glutes"
+  ],
+  "progressions": [],
+  "safety": "Move off any spot that causes numbness or shooting pain.",
+  "video": null,
+  "notes": "Do it against a wall for less pressure."
+ },
+ {
+  "id": "ballfoot",
+  "name": "Massage ball foot roll",
+  "aliases": [
+   "Plantar fascia ball roll",
+   "Foot ball release"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Rehab",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Plantar fascia"
+  ],
+  "secondary_muscles": [
+   "Foot intrinsics"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Massage or lacrosse ball"
+  ],
+  "req": "massageball",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 1,
+  "reps": "60–90 sec / side",
+  "form_cues": [
+   "Stand or sit with the ball under one foot.",
+   "Roll from heel to toes with steady pressure.",
+   "Pause on tender spots."
+  ],
+  "common_mistakes": [
+   "Standing with full weight straight away",
+   "Rolling the heel bone hard"
+  ],
+  "regressions": [
+   "Seated plantar fascia stretch"
+  ],
+  "progressions": [],
+  "safety": "A frozen water bottle works for sore arches.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ballpec",
+  "name": "Massage ball pec release",
+  "aliases": [
+   "Lacrosse ball chest release"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Pectorals",
+   "Pec minor"
+  ],
+  "secondary_muscles": [
+   "Anterior deltoids"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Massage or lacrosse ball"
+  ],
+  "req": "massageball",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 1,
+  "reps": "60 sec / side",
+  "form_cues": [
+   "Stand facing a wall with the ball under your chest, just inside the shoulder.",
+   "Lean in to apply pressure.",
+   "Slowly move the arm up and down."
+  ],
+  "common_mistakes": [
+   "Pressing on the collarbone or armpit nerves",
+   "Too much pressure"
+  ],
+  "regressions": [
+   "Foam roll chest"
+  ],
+  "progressions": [],
+  "safety": "Stay on soft tissue; stop with tingling down the arm.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "balltrap",
+  "name": "Massage ball upper back release",
+  "aliases": [
+   "Lacrosse ball trap release",
+   "Shoulder blade ball release"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Rhomboids",
+   "Upper trapezius"
+  ],
+  "secondary_muscles": [
+   "Rotator cuff"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Massage or lacrosse ball"
+  ],
+  "req": "massageball",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 1,
+  "reps": "60 sec / side",
+  "form_cues": [
+   "Stand against a wall or lie with the ball between spine and shoulder blade.",
+   "Lean into the ball at a tender spot.",
+   "Cross the arm over your chest to open the area."
+  ],
+  "common_mistakes": [
+   "Putting the ball on the spine",
+   "Rolling onto the neck"
+  ],
+  "regressions": [
+   "Foam roll thoracic spine"
+  ],
+  "progressions": [],
+  "safety": "Keep the ball off the spine and the neck.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "balltfl",
+  "name": "Massage ball TFL release",
+  "aliases": [
+   "Hip flexor ball release",
+   "Lacrosse ball TFL"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Tensor fasciae latae",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Massage or lacrosse ball"
+  ],
+  "req": "massageball",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 1,
+  "reps": "60 sec / side",
+  "form_cues": [
+   "Lie face down with the ball just in front of and below the hip bone.",
+   "Let your weight sink in.",
+   "Bend and straighten the knee slowly."
+  ],
+  "common_mistakes": [
+   "Pressing on the hip bone",
+   "Lying on it with full weight from the start"
+  ],
+  "regressions": [
+   "Foam roll IT band"
+  ],
+  "progressions": [],
+  "safety": "Avoid the groin area and front-of-hip nerves.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ballforearm",
+  "name": "Massage ball forearm release",
+  "aliases": [
+   "Lacrosse ball forearm roll"
+  ],
+  "training_type": "Recovery",
+  "tags": [
+   "Recovery",
+   "Home-friendly"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Forearm flexors",
+   "Forearm extensors"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Massage or lacrosse ball"
+  ],
+  "req": "massageball",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 1,
+  "reps": "60 sec / side",
+  "form_cues": [
+   "Place the ball on a table under your forearm.",
+   "Press down with the other hand.",
+   "Open and close your fist as you roll."
+  ],
+  "common_mistakes": [
+   "Rolling over the elbow joint",
+   "Pressing too hard"
+  ],
+  "regressions": [
+   "Wrist flexor stretch"
+  ],
+  "progressions": [],
+  "safety": "Good for climbers, lifters with grippy forearms and desk workers.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sideer",
+  "name": "Side-lying dumbbell external rotation",
+  "aliases": [
+   "Side-lying external rotation"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Rehab",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Infraspinatus",
+   "Teres minor"
+  ],
+  "secondary_muscles": [
+   "Rear deltoids"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Light dumbbell",
+   "Mat"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Lie on your side with the top elbow bent at 90° on your hip.",
+   "Rotate the dumbbell up toward the ceiling.",
+   "Lower slowly."
+  ],
+  "common_mistakes": [
+   "Using too heavy a weight",
+   "Lifting the elbow off the side"
+  ],
+  "regressions": [
+   "Band external rotation"
+  ],
+  "progressions": [
+   "Cable external rotation"
+  ],
+  "safety": "Use 1–3 kg; place a towel between elbow and ribs.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "benchlat",
+  "name": "Bench lat stretch",
+  "aliases": [
+   "Kneeling bench lat stretch",
+   "Elbows-on-bench T-spine stretch"
+  ],
+  "training_type": "Stretching",
+  "tags": [
+   "Stretching"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Lats",
+   "Thoracic spine"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Pectorals"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Bench",
+   "Dowel (optional)"
+  ],
+  "req": "flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Kneel facing a bench with elbows on the edge.",
+   "Bend the elbows so your hands meet behind your head (or hold a dowel).",
+   "Sit hips back and let the chest sink."
+  ],
+  "common_mistakes": [
+   "Arching the lower back",
+   "Shrugging"
+  ],
+  "regressions": [
+   "Doorframe lat stretch"
+  ],
+  "progressions": [],
+  "safety": "Keep ribs down; stop with shoulder pinching.",
+  "video": null,
+  "notes": "Great prep for overhead squats and presses."
+ },
+ {
+  "id": "cableer",
+  "name": "Cable external rotation",
+  "aliases": [
+   "Cable shoulder external rotation"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Rehab",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Infraspinatus",
+   "Teres minor"
+  ],
+  "secondary_muscles": [
+   "Rear deltoids"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable column"
+  ],
+  "req": "functional|cablecross",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Set a cable at elbow height and stand side-on.",
+   "Keep the elbow tucked and rotate the forearm out.",
+   "Return slowly against the cable."
+  ],
+  "common_mistakes": [
+   "Elbow drifting from the side",
+   "Too heavy"
+  ],
+  "regressions": [
+   "Band external rotation"
+  ],
+  "progressions": [],
+  "safety": "Keep it light; this is a control exercise.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cableir",
+  "name": "Cable internal rotation",
+  "aliases": [
+   "Cable shoulder internal rotation"
+  ],
+  "training_type": "Mobility",
+  "tags": [
+   "Mobility",
+   "Rehab",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Mobility",
+  "primary_muscles": [
+   "Subscapularis"
+  ],
+  "secondary_muscles": [
+   "Pectorals"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable column"
+  ],
+  "req": "functional|cablecross",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Set a cable at elbow height, cable on the working-arm side.",
+   "Keep the elbow pinned and rotate the forearm across your body.",
+   "Return slowly."
+  ],
+  "common_mistakes": [
+   "Turning the torso",
+   "Elbow lifting"
+  ],
+  "regressions": [
+   "Band internal rotation"
+  ],
+  "progressions": [],
+  "safety": "Light load; stop with front-of-shoulder pain.",
+  "video": null,
+  "notes": ""
+ }
+]

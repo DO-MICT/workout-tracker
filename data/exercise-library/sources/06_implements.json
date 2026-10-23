@@ -1,0 +1,5131 @@
+[
+ {
+  "id": "bandcurl",
+  "name": "Band curl",
+  "aliases": [
+   "Resistance band bicep curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Home-friendly",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis",
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand on the band with feet hip-width apart.",
+   "Keep elbows pinned to your sides as you curl.",
+   "Lower slowly against the band's pull."
+  ],
+  "common_mistakes": [
+   "Swinging the torso to finish reps",
+   "Letting elbows drift forward"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Dumbbell curl",
+   "Band hammer curl"
+  ],
+  "safety": "Check the band for nicks or tears before every session.",
+  "video": null,
+  "notes": "Widen your stance to make it harder."
+ },
+ {
+  "id": "bandpress",
+  "name": "Band chest press",
+  "aliases": [
+   "Standing band chest press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Anchor the band at chest height behind you.",
+   "Stagger your stance and brace your core.",
+   "Press straight forward until arms are long, then return slowly."
+  ],
+  "common_mistakes": [
+   "Shrugging shoulders toward ears",
+   "Letting the band snap back"
+  ],
+  "regressions": [
+   "Incline push-up"
+  ],
+  "progressions": [
+   "Push-ups",
+   "Band chest fly"
+  ],
+  "safety": "Secure the anchor point firmly so the band can't slip free.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandpullapart",
+  "name": "Band pull-apart",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Home-friendly",
+   "Warm-up",
+   "Rehab"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Middle traps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Hold the band at shoulder height with straight arms.",
+   "Pull the band apart until it touches your chest.",
+   "Squeeze shoulder blades together, then return slowly."
+  ],
+  "common_mistakes": [
+   "Bending the elbows too much",
+   "Arching the lower back"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Band face pull"
+  ],
+  "safety": "Use a light band; this should never pinch the front of the shoulder.",
+  "video": null,
+  "notes": "Great as a warm-up before pressing."
+ },
+ {
+  "id": "bandpush",
+  "name": "Band pushdown",
+  "aliases": [
+   "Band triceps pushdown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Anchor the band high, over a door or bar.",
+   "Keep elbows tucked at your sides.",
+   "Push down until arms are straight, then control the return."
+  ],
+  "common_mistakes": [
+   "Elbows flaring out",
+   "Leaning over to push with body weight"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Band overhead triceps extension"
+  ],
+  "safety": "Make sure the door is closed and locked if using a door anchor.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandwalk",
+  "name": "Banded lateral walk",
+  "aliases": [
+   "Mini-band side walk",
+   "Lateral band walk"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Glutes",
+   "Warm-up",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glute medius"
+  ],
+  "secondary_muscles": [
+   "Glute max",
+   "Tensor fasciae latae"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Mini band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Place the mini band above the knees or around the ankles.",
+   "Sit into a quarter squat with chest up.",
+   "Step sideways, keeping tension on the band."
+  ],
+  "common_mistakes": [
+   "Letting knees cave inward",
+   "Standing up tall between steps"
+  ],
+  "regressions": [
+   "Banded clamshell"
+  ],
+  "progressions": [
+   "Monster walk"
+  ],
+  "safety": "Keep the band flat on the skin so it doesn't roll and pinch.",
+  "video": null,
+  "notes": "Band around ankles or feet is harder than above the knees."
+ },
+ {
+  "id": "bandrow",
+  "name": "Band seated row",
+  "aliases": [
+   "Resistance band row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Sit tall with legs long and the band looped around your feet.",
+   "Pull handles to your lower ribs.",
+   "Squeeze shoulder blades together before releasing slowly."
+  ],
+  "common_mistakes": [
+   "Rounding the back",
+   "Leaning back to cheat the pull"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Suspension row",
+   "One-arm dumbbell row"
+  ],
+  "safety": "Wrap the band securely around the feet so it can't slip off.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandlatpull",
+  "name": "Band lat pulldown",
+  "aliases": [
+   "Kneeling band pulldown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Anchor the band high and kneel facing it.",
+   "Pull elbows down toward your back pockets.",
+   "Keep chest tall and return slowly."
+  ],
+  "common_mistakes": [
+   "Pulling with the arms only",
+   "Rounding forward"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Assisted pull-up",
+   "Wide-grip lat pulldown"
+  ],
+  "safety": "Double-check the high anchor is secure before loading it.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandohp",
+  "name": "Band overhead press",
+  "aliases": [
+   "Resistance band shoulder press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Upper traps"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Stand on the band and hold handles at shoulder height.",
+   "Press straight up until arms are locked out.",
+   "Keep ribs down and glutes tight."
+  ],
+  "common_mistakes": [
+   "Arching the lower back",
+   "Pressing forward instead of up"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Seated dumbbell shoulder press"
+  ],
+  "safety": "Stand squarely on the band so it can't slip out from underfoot.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandlateral",
+  "name": "Band lateral raise",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Upper traps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand on the band with handles at your sides.",
+   "Raise arms out to shoulder height with soft elbows.",
+   "Lower slowly and keep shoulders away from ears."
+  ],
+  "common_mistakes": [
+   "Shrugging the weight up",
+   "Raising above shoulder height"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Dumbbell lateral raise"
+  ],
+  "safety": "Use a light band; the tension is highest at the top.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandfacepull",
+  "name": "Band face pull",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Rehab",
+   "Home-friendly",
+   "Warm-up"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Rotator cuff",
+   "Middle traps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Anchor the band at face height.",
+   "Pull the band toward your forehead, elbows high.",
+   "Finish with hands beside your ears, thumbs back."
+  ],
+  "common_mistakes": [
+   "Elbows dropping below shoulders",
+   "Leaning back"
+  ],
+  "regressions": [
+   "Band pull-apart"
+  ],
+  "progressions": [
+   "Rope face pull"
+  ],
+  "safety": "Keep it light and pain-free in the shoulder.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandsquat",
+  "name": "Band squat",
+  "aliases": [
+   "Resistance band squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand on the band, handles at shoulders.",
+   "Sit hips back and down, knees tracking toes.",
+   "Drive through the whole foot to stand tall."
+  ],
+  "common_mistakes": [
+   "Knees caving in",
+   "Heels lifting"
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Goblet squat"
+  ],
+  "safety": "Keep the band under the mid-foot so it can't fly out.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "banddl",
+  "name": "Band deadlift",
+  "aliases": [
+   "Resistance band deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand on the band and hinge to grab the handles.",
+   "Keep a flat back and push hips back.",
+   "Stand up by driving hips forward."
+  ],
+  "common_mistakes": [
+   "Rounding the lower back",
+   "Squatting instead of hinging"
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Kettlebell deadlift"
+  ],
+  "safety": "Keep the band centred under both feet.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandgm",
+  "name": "Band good morning",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Spinal erectors"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand on the band and loop it behind your neck.",
+   "Hinge forward with soft knees and a flat back.",
+   "Squeeze glutes to return upright."
+  ],
+  "common_mistakes": [
+   "Rounding the spine",
+   "Bending knees too much"
+  ],
+  "regressions": [
+   "Band deadlift"
+  ],
+  "progressions": [
+   "Barbell Romanian deadlift"
+  ],
+  "safety": "Pad the band across the upper back, not the neck.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandbridge",
+  "name": "Banded glute bridge",
+  "aliases": [
+   "Mini-band glute bridge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Glutes",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glute max"
+  ],
+  "secondary_muscles": [
+   "Glute medius",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Mini band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Lie on your back with the mini band above your knees.",
+   "Press knees out against the band.",
+   "Drive hips up and squeeze glutes at the top."
+  ],
+  "common_mistakes": [
+   "Arching the lower back at the top",
+   "Letting knees cave"
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Barbell hip thrust"
+  ],
+  "safety": "Keep ribs down to protect the lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandclam",
+  "name": "Banded clamshell",
+  "aliases": [
+   "Clam shell with band"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Glutes",
+   "Isolation",
+   "Rehab",
+   "Home-friendly"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glute medius"
+  ],
+  "secondary_muscles": [
+   "Hip external rotators"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Mini band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "15 / side",
+  "form_cues": [
+   "Lie on your side, knees bent, band above knees.",
+   "Keep feet together and open the top knee.",
+   "Hold briefly at the top, then lower slowly."
+  ],
+  "common_mistakes": [
+   "Rolling the hips backward",
+   "Rushing the reps"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Banded lateral walk"
+  ],
+  "safety": "Move only through a pain-free range.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandkick",
+  "name": "Band glute kickback",
+  "aliases": [
+   "Standing band kickback"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Glutes",
+   "Isolation",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glute max"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Loop the band around one ankle and anchor it low.",
+   "Kick the leg back from the hip, knee slightly bent.",
+   "Squeeze the glute without arching your back."
+  ],
+  "common_mistakes": [
+   "Arching the lower back",
+   "Swinging the leg"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Cable glute kickback"
+  ],
+  "safety": "Hold a support to stay balanced.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandohext",
+  "name": "Band overhead triceps extension",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Anchor the band low behind you, hands overhead.",
+   "Keep elbows pointing up and close to your head.",
+   "Straighten arms fully, then lower with control."
+  ],
+  "common_mistakes": [
+   "Elbows flaring wide",
+   "Arching the back"
+  ],
+  "regressions": [
+   "Band pushdown"
+  ],
+  "progressions": [
+   "Overhead dumbbell extension"
+  ],
+  "safety": "Make sure the band is secure behind you before loading it.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandfly",
+  "name": "Band chest fly",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Anchor the band behind you at chest height.",
+   "Keep a slight bend in the elbows.",
+   "Hug your arms together in front of your chest."
+  ],
+  "common_mistakes": [
+   "Bending elbows into a press",
+   "Letting arms travel too far back"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Dumbbell fly"
+  ],
+  "safety": "Avoid overstretching the front of the shoulder.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandextrot",
+  "name": "Band external rotation",
+  "aliases": [
+   "Band shoulder external rotation"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Rehab",
+   "Isolation",
+   "Warm-up"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rotator cuff (infraspinatus)"
+  ],
+  "secondary_muscles": [
+   "Rear delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "15 / side",
+  "form_cues": [
+   "Anchor the band at elbow height.",
+   "Tuck the elbow at your side, a towel helps.",
+   "Rotate the forearm outward, keeping the elbow still."
+  ],
+  "common_mistakes": [
+   "Elbow drifting away from the body",
+   "Using too strong a band"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Band face pull"
+  ],
+  "safety": "Use a light band and stop if you feel pinching.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandintrot",
+  "name": "Band internal rotation",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Rehab",
+   "Isolation"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rotator cuff (subscapularis)"
+  ],
+  "secondary_muscles": [
+   "Chest"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "15 / side",
+  "form_cues": [
+   "Anchor the band at elbow height on your working side.",
+   "Keep the elbow tucked at 90 degrees.",
+   "Rotate the forearm in across your stomach."
+  ],
+  "common_mistakes": [
+   "Twisting the torso",
+   "Letting the elbow lift"
+  ],
+  "regressions": [],
+  "progressions": [],
+  "safety": "Light resistance only; this is a control drill.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "monsterwalk",
+  "name": "Monster walk",
+  "aliases": [
+   "Banded monster walk"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Glutes",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glute medius",
+   "Glute max"
+  ],
+  "secondary_muscles": [
+   "Quadriceps"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Mini band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Band around ankles, sit into a quarter squat.",
+   "Step diagonally forward and out with each foot.",
+   "Keep constant tension; don't let feet come together."
+  ],
+  "common_mistakes": [
+   "Knees caving in",
+   "Standing too upright"
+  ],
+  "regressions": [
+   "Banded lateral walk"
+  ],
+  "progressions": [],
+  "safety": "Keep the band flat so it doesn't roll.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandhamcurl",
+  "name": "Band hamstring curl",
+  "aliases": [
+   "Lying band leg curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Lie face down with the band anchored low behind you.",
+   "Loop it around your ankles and curl heels to glutes.",
+   "Lower slowly without lifting hips."
+  ],
+  "common_mistakes": [
+   "Hips lifting off the floor",
+   "Letting the band snap back"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Lying leg curl"
+  ],
+  "safety": "Anchor the band firmly to something heavy and low.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandpushup",
+  "name": "Banded push-up",
+  "aliases": [
+   "Band-resisted push-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Loop the band across your upper back, ends under hands.",
+   "Hold a straight line from head to heels.",
+   "Press up hard against the band to lockout."
+  ],
+  "common_mistakes": [
+   "Hips sagging",
+   "Band sliding up the neck"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Ring push-ups"
+  ],
+  "safety": "Pin the band securely under your palms before each rep.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "banduprow",
+  "name": "Band upright row",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts",
+   "Upper traps"
+  ],
+  "secondary_muscles": [
+   "Biceps"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand on the band, hands shoulder-width.",
+   "Lead with the elbows up to chest height.",
+   "Lower slowly and keep the bar path close."
+  ],
+  "common_mistakes": [
+   "Pulling hands above chest",
+   "Narrow grip that pinches shoulders"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Cable upright row"
+  ],
+  "safety": "Stop below shoulder height if you feel a pinch.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandstraight",
+  "name": "Band straight-arm pulldown",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Triceps (long head)",
+   "Core"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Anchor the band high and hinge slightly.",
+   "Keep arms straight and sweep hands to your thighs.",
+   "Feel the lats squeeze, then return slowly."
+  ],
+  "common_mistakes": [
+   "Bending the elbows",
+   "Shrugging"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Straight-arm pulldown"
+  ],
+  "safety": "Secure the high anchor before loading it.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandabduct",
+  "name": "Seated banded hip abduction",
+  "aliases": [
+   "Seated band abduction"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Glutes",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glute medius"
+  ],
+  "secondary_muscles": [
+   "Glute max"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Mini band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Sit on the edge of a bench, band above knees.",
+   "Push knees out as far as you can.",
+   "Hold a second, then return with control."
+  ],
+  "common_mistakes": [
+   "Using momentum",
+   "Letting feet come off the floor"
+  ],
+  "regressions": [
+   "Banded clamshell"
+  ],
+  "progressions": [
+   "Hip abduction machine"
+  ],
+  "safety": "Keep the band flat on the thighs.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbswing",
+  "name": "Kettlebell swing",
+  "aliases": [
+   "Russian kettlebell swing",
+   "Two-hand swing"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Power",
+   "Glutes",
+   "Compound",
+   "Home-friendly",
+   "Endurance"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Lower back",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "15–20",
+  "form_cues": [
+   "Hike the bell back high between your thighs.",
+   "Snap hips forward and squeeze glutes hard.",
+   "Let the bell float to chest height; arms stay relaxed."
+  ],
+  "common_mistakes": [
+   "Squatting the swing instead of hinging",
+   "Lifting with the arms",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Kettlebell deadlift"
+  ],
+  "progressions": [
+   "One-arm kettlebell swing",
+   "Kettlebell snatch"
+  ],
+  "safety": "Clear the space around you and keep a neutral spine throughout.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbamswing",
+  "name": "American kettlebell swing",
+  "aliases": [
+   "Overhead kettlebell swing"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Power",
+   "Endurance",
+   "Compound"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "12–15",
+  "form_cues": [
+   "Swing as normal but carry the bell to overhead.",
+   "Finish with biceps by ears, bell bottom up.",
+   "Keep ribs down; don't arch to reach overhead."
+  ],
+  "common_mistakes": [
+   "Hyperextending the lower back",
+   "Pulling with the arms"
+  ],
+  "regressions": [
+   "Kettlebell swing"
+  ],
+  "progressions": [],
+  "safety": "Skip it if you lack full overhead shoulder mobility.",
+  "video": null,
+  "notes": "Common in CrossFit; the Russian swing is safer for most people."
+ },
+ {
+  "id": "kb1swing",
+  "name": "One-arm kettlebell swing",
+  "aliases": [
+   "Single-arm swing"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Power",
+   "Unilateral",
+   "Compound"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Forearms",
+   "Lats"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Grip the handle with one hand, free arm relaxed.",
+   "Keep shoulders square; resist the twist.",
+   "Drive with hips and let the bell float."
+  ],
+  "common_mistakes": [
+   "Rotating the torso",
+   "Shrugging the working shoulder"
+  ],
+  "regressions": [
+   "Kettlebell swing"
+  ],
+  "progressions": [
+   "Kettlebell snatch"
+  ],
+  "safety": "Start lighter than your two-hand swing weight.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbclean",
+  "name": "Kettlebell clean",
+  "aliases": [
+   "Single-arm kettlebell clean"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Power",
+   "Compound",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Forearms",
+   "Upper back",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "6–8 / side",
+  "form_cues": [
+   "Hike the bell back, then drive hips forward.",
+   "Keep the elbow close and zip the bell up.",
+   "Catch it softly in the rack, wrist straight."
+  ],
+  "common_mistakes": [
+   "Bell flipping over and banging the forearm",
+   "Casting the bell wide"
+  ],
+  "regressions": [
+   "Kettlebell swing"
+  ],
+  "progressions": [
+   "Kettlebell clean and press"
+  ],
+  "safety": "Learn with a light bell; a bruised forearm means the path is too wide.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbsnatch",
+  "name": "Kettlebell snatch",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Power",
+   "Compound",
+   "Unilateral",
+   "Endurance"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Core",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5–8 / side",
+  "form_cues": [
+   "Swing back and drive hips explosively.",
+   "Keep the bell close and punch through at the top.",
+   "Lock out overhead with biceps by your ear."
+  ],
+  "common_mistakes": [
+   "Letting the bell flop onto the wrist",
+   "Pressing it up instead of hip drive"
+  ],
+  "regressions": [
+   "One-arm kettlebell swing",
+   "Kettlebell high pull"
+  ],
+  "progressions": [],
+  "safety": "Needs good overhead mobility; drop the bell safely if control is lost.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbtgu",
+  "name": "Turkish get-up",
+  "aliases": [
+   "Kettlebell get-up",
+   "TGU"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Core",
+   "Compound",
+   "Unilateral",
+   "Mobility"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Triceps",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "2–3 / side",
+  "form_cues": [
+   "Keep eyes on the bell and arm locked the whole time.",
+   "Move step by step: roll, elbow, hand, bridge, sweep, stand.",
+   "Reverse each step slowly to return to the floor."
+  ],
+  "common_mistakes": [
+   "Bending the bell arm",
+   "Rushing transitions"
+  ],
+  "regressions": [
+   "Half Turkish get-up"
+  ],
+  "progressions": [],
+  "safety": "Practise with a shoe or no weight first; never lose sight of the bell.",
+  "video": null,
+  "notes": "Builds shoulder stability through the whole body."
+ },
+ {
+  "id": "kbpress",
+  "name": "Kettlebell overhead press",
+  "aliases": [
+   "Single-arm kettlebell press",
+   "KB military press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Unilateral",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Upper traps",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "6–8 / side",
+  "form_cues": [
+   "Start with the bell in the rack, forearm vertical.",
+   "Squeeze glutes and grip, then press straight up.",
+   "Finish with biceps by your ear, then lower to rack."
+  ],
+  "common_mistakes": [
+   "Leaning back to finish",
+   "Flaring the elbow early"
+  ],
+  "regressions": [
+   "Seated dumbbell shoulder press"
+  ],
+  "progressions": [
+   "Kettlebell push press",
+   "Bottoms-up kettlebell press"
+  ],
+  "safety": "Brace hard and don't press through shoulder pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbpushpress",
+  "name": "Kettlebell push press",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Power",
+   "Compound",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5–8 / side",
+  "form_cues": [
+   "Dip a few centimetres by bending the knees.",
+   "Drive up with the legs to launch the bell.",
+   "Finish the lockout with the arm."
+  ],
+  "common_mistakes": [
+   "Dipping too deep",
+   "Pressing before the legs finish"
+  ],
+  "regressions": [
+   "Kettlebell overhead press"
+  ],
+  "progressions": [
+   "Kettlebell jerk"
+  ],
+  "safety": "Keep heels down in the dip and control the bell back to the rack.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbjerk",
+  "name": "Kettlebell jerk",
+  "aliases": [
+   "Single-arm kettlebell jerk"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Power",
+   "Unilateral",
+   "Endurance"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5 / side",
+  "form_cues": [
+   "Dip and drive to launch the bell.",
+   "Drop under it with a second dip to lock out.",
+   "Stand tall with the arm locked before lowering."
+  ],
+  "common_mistakes": [
+   "Pressing out the lockout",
+   "Rushing the second dip"
+  ],
+  "regressions": [
+   "Kettlebell push press"
+  ],
+  "progressions": [],
+  "safety": "Requires solid overhead mobility and wrist position.",
+  "video": null,
+  "notes": "A staple of kettlebell sport."
+ },
+ {
+  "id": "goblet",
+  "name": "Goblet squat",
+  "aliases": [
+   "Kettlebell goblet squat",
+   "Dumbbell goblet squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Core",
+   "Upper back"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Kettlebell or dumbbell"
+  ],
+  "req": "kettlebells|dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold the bell by the horns against your chest.",
+   "Sit down between your heels, elbows inside knees.",
+   "Drive up through the whole foot, chest tall."
+  ],
+  "common_mistakes": [
+   "Heels lifting",
+   "Rounding the upper back"
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Double kettlebell front squat",
+   "Front squat"
+  ],
+  "safety": "Keep heels down; elevate them slightly if ankles are tight.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbfrontsq",
+  "name": "Double kettlebell front squat",
+  "aliases": [
+   "Double KB front squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Upper back"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "2 kettlebells"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "6–10",
+  "form_cues": [
+   "Clean both bells to the rack, elbows tucked.",
+   "Squat to depth keeping the chest up.",
+   "Drive up without letting the bells pull you forward."
+  ],
+  "common_mistakes": [
+   "Elbows flaring and chest dropping",
+   "Knees caving"
+  ],
+  "regressions": [
+   "Goblet squat"
+  ],
+  "progressions": [
+   "Front squat"
+  ],
+  "safety": "Clean the bells into position carefully; set them down rather than drop them.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbgobrevlunge",
+  "name": "Goblet reverse lunge",
+  "aliases": [
+   "Kettlebell goblet reverse lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Kettlebell or dumbbell"
+  ],
+  "req": "kettlebells|dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Hold the bell at your chest.",
+   "Step back and lower the back knee softly.",
+   "Push through the front foot to return."
+  ],
+  "common_mistakes": [
+   "Front knee caving",
+   "Stepping too short"
+  ],
+  "regressions": [
+   "Bodyweight reverse lunge"
+  ],
+  "progressions": [
+   "Walking lunge"
+  ],
+  "safety": "Use a support nearby if balance is an issue.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbcossack",
+  "name": "Goblet Cossack squat",
+  "aliases": [
+   "Kettlebell Cossack squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Mobility",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Adductors",
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Kettlebell or dumbbell"
+  ],
+  "req": "kettlebells|dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "6 / side",
+  "form_cues": [
+   "Take a very wide stance holding the bell at your chest.",
+   "Shift and sit deep into one hip, other leg straight.",
+   "Lift the straight-leg toes up and keep the heel down."
+  ],
+  "common_mistakes": [
+   "Lifting the bent-leg heel",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Lateral lunge"
+  ],
+  "progressions": [],
+  "safety": "Work within your hip range; go only as deep as you can control.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbwindmill",
+  "name": "Kettlebell windmill",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Core",
+   "Mobility",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Obliques",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5 / side",
+  "form_cues": [
+   "Lock the bell overhead, feet angled away from it.",
+   "Push the hip out and slide your free hand down the leg.",
+   "Keep eyes on the bell and the arm vertical."
+  ],
+  "common_mistakes": [
+   "Bending the overhead arm",
+   "Twisting the chest down to the floor"
+  ],
+  "regressions": [
+   "Bodyweight windmill"
+  ],
+  "progressions": [
+   "Turkish get-up"
+  ],
+  "safety": "Start light; stop if the shoulder feels unstable.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbhalo",
+  "name": "Kettlebell halo",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Mobility",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Core",
+   "Triceps"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6 / direction",
+  "form_cues": [
+   "Hold the bell upside down by the horns.",
+   "Circle it closely around your head.",
+   "Keep ribs down and hips still."
+  ],
+  "common_mistakes": [
+   "Arching the back",
+   "Circling too far from the head"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Kettlebell overhead press"
+  ],
+  "safety": "Use a light bell and move slowly to avoid knocking your head.",
+  "video": null,
+  "notes": "Great shoulder warm-up before pressing."
+ },
+ {
+  "id": "kbdl",
+  "name": "Kettlebell deadlift",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Quadriceps",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Stand with the bell between your feet.",
+   "Push hips back and grip it with a flat back.",
+   "Stand tall by driving hips forward."
+  ],
+  "common_mistakes": [
+   "Rounding the back",
+   "Squatting the weight up"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Kettlebell swing",
+   "Deadlift"
+  ],
+  "safety": "Keep the bell close to you and the spine neutral.",
+  "video": null,
+  "notes": "Teaches the hinge before learning swings."
+ },
+ {
+  "id": "kbrdl",
+  "name": "Double kettlebell Romanian deadlift",
+  "aliases": [
+   "Double KB RDL"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "2 kettlebells"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Hold a bell in each hand at your thighs.",
+   "Push hips back with soft knees until hamstrings stretch.",
+   "Squeeze glutes to stand up."
+  ],
+  "common_mistakes": [
+   "Rounding the back",
+   "Bending knees too much"
+  ],
+  "regressions": [
+   "Kettlebell deadlift"
+  ],
+  "progressions": [
+   "Barbell Romanian deadlift"
+  ],
+  "safety": "Keep bells close to the legs throughout.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbgorilla",
+  "name": "Kettlebell gorilla row",
+  "aliases": [
+   "Gorilla row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Unilateral",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "2 kettlebells"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Hinge over two bells placed between your feet.",
+   "Row one bell to your hip while pressing into the other.",
+   "Alternate sides without twisting the torso."
+  ],
+  "common_mistakes": [
+   "Rotating the hips",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "One-arm dumbbell row"
+  ],
+  "progressions": [],
+  "safety": "Keep a flat back and hips high throughout.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbfloorpress",
+  "name": "Kettlebell floor press",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Lie on the floor, upper arm resting on the ground.",
+   "Press the bell up over your shoulder.",
+   "Lower until the elbow lightly touches the floor."
+  ],
+  "common_mistakes": [
+   "Bouncing the elbow off the floor",
+   "Wrist bent backward"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Flat dumbbell press"
+  ],
+  "safety": "Roll the bell into position from your side rather than lifting it overhead.",
+  "video": null,
+  "notes": "Can also be done with two bells."
+ },
+ {
+  "id": "kbbottomup",
+  "name": "Bottoms-up kettlebell press",
+  "aliases": [
+   "Bottom-up KB press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Rehab",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Rotator cuff"
+  ],
+  "secondary_muscles": [
+   "Forearms",
+   "Triceps"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5 / side",
+  "form_cues": [
+   "Hold the bell upside down, crushing the handle.",
+   "Keep the wrist straight and bell balanced.",
+   "Press slowly straight up and lower with control."
+  ],
+  "common_mistakes": [
+   "Loose grip causing the bell to tip",
+   "Pressing too fast"
+  ],
+  "regressions": [
+   "Kettlebell overhead press"
+  ],
+  "progressions": [],
+  "safety": "Use a light bell; it can tip suddenly, so keep your head out of its path.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbcleanpress",
+  "name": "Kettlebell clean and press",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Power",
+   "Compound",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "6 / side",
+  "form_cues": [
+   "Clean the bell to the rack.",
+   "Pause, brace, and press overhead.",
+   "Lower to rack, then let it swing back for the next clean."
+  ],
+  "common_mistakes": [
+   "Leaning back on the press",
+   "Banging the forearm on the clean"
+  ],
+  "regressions": [
+   "Kettlebell clean"
+  ],
+  "progressions": [
+   "Kettlebell jerk"
+  ],
+  "safety": "Keep the core braced throughout.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbthruster",
+  "name": "Kettlebell thruster",
+  "aliases": [
+   "Double kettlebell thruster"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Endurance",
+   "Power"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Squat with the bell(s) in the rack.",
+   "Drive up out of the squat.",
+   "Use that momentum to press overhead."
+  ],
+  "common_mistakes": [
+   "Pressing before standing",
+   "Chest dropping in the squat"
+  ],
+  "regressions": [
+   "Goblet squat"
+  ],
+  "progressions": [],
+  "safety": "Keep heels down and lower the bells back to the rack under control.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbhighpull",
+  "name": "Kettlebell high pull",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Power",
+   "Unilateral"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Upper traps",
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Start like a one-arm swing.",
+   "At the hip snap, pull the elbow back and high.",
+   "Let the bell return into the backswing."
+  ],
+  "common_mistakes": [
+   "Pulling with the arm too early",
+   "Rounding the shoulders"
+  ],
+  "regressions": [
+   "One-arm kettlebell swing"
+  ],
+  "progressions": [
+   "Kettlebell snatch"
+  ],
+  "safety": "Keep the bell close to avoid hitting your face.",
+  "video": null,
+  "notes": "A teaching step toward the snatch."
+ },
+ {
+  "id": "kbsdhp",
+  "name": "Kettlebell sumo deadlift high pull",
+  "aliases": [
+   "KB SDHP"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Power",
+   "Endurance",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Upper traps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Shoulders"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Take a wide stance, bell between your feet.",
+   "Drive up through the legs and hips.",
+   "Pull the bell to chin height, elbows high."
+  ],
+  "common_mistakes": [
+   "Pulling with arms before hips extend",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Kettlebell deadlift"
+  ],
+  "progressions": [],
+  "safety": "Avoid it if upright rows bother your shoulders.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbrackcarry",
+  "name": "Kettlebell front rack carry",
+  "aliases": [
+   "Double KB rack walk"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Core",
+   "Endurance",
+   "Compound"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Core",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Glutes"
+  ],
+  "movement_pattern": "Carry",
+  "equipment": [
+   "2 kettlebells"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 m",
+  "form_cues": [
+   "Clean two bells to the rack.",
+   "Walk tall with ribs down and short steps.",
+   "Breathe behind the brace."
+  ],
+  "common_mistakes": [
+   "Leaning back",
+   "Elbows flaring"
+  ],
+  "regressions": [
+   "Farmer's carry"
+  ],
+  "progressions": [
+   "Yoke carry"
+  ],
+  "safety": "Set the bells down with a controlled hinge.",
+  "video": null,
+  "notes": "Track distance in metres; one-bell version trains anti-side-bend."
+ },
+ {
+  "id": "kbwaiter",
+  "name": "Kettlebell overhead carry",
+  "aliases": [
+   "Waiter's walk"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Unilateral",
+   "Core"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Upper traps",
+   "Obliques"
+  ],
+  "movement_pattern": "Carry",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "cardio",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "20 m / side",
+  "form_cues": [
+   "Press the bell overhead and lock the arm.",
+   "Keep the biceps by your ear while you walk.",
+   "Stay tall; don't lean away from the bell."
+  ],
+  "common_mistakes": [
+   "Bent elbow",
+   "Arching the lower back"
+  ],
+  "regressions": [
+   "Kettlebell front rack carry"
+  ],
+  "progressions": [
+   "Turkish get-up"
+  ],
+  "safety": "Only carry overhead with full, pain-free shoulder mobility.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbbentpress",
+  "name": "Kettlebell bent press",
+  "aliases": [
+   "Bent press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Mobility",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Obliques",
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "3 / side",
+  "form_cues": [
+   "Rack the bell and push the hip out to the side.",
+   "Lean under the bell while the arm stays vertical.",
+   "Stand up beneath the locked arm."
+  ],
+  "common_mistakes": [
+   "Pressing the bell up instead of getting under it",
+   "Losing sight of the bell"
+  ],
+  "regressions": [
+   "Kettlebell windmill"
+  ],
+  "progressions": [],
+  "safety": "An advanced lift: learn it light and with coaching.",
+  "video": null,
+  "notes": "Old-time strongman lift."
+ },
+ {
+  "id": "vestlunge",
+  "name": "Weighted vest walking lunge",
+  "aliases": [
+   "Vest lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Unilateral",
+   "Endurance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core",
+   "Calves"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Weighted vest"
+  ],
+  "req": "weightvest",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Fit the vest snugly so it doesn't bounce.",
+   "Take a long step and lower the back knee softly.",
+   "Drive through the front heel into the next step."
+  ],
+  "common_mistakes": [
+   "Front knee caving",
+   "Leaning forward under the vest"
+  ],
+  "regressions": [
+   "Walking lunge"
+  ],
+  "progressions": [
+   "Sandbag shouldered lunge"
+  ],
+  "safety": "Start with a light vest (around 5–10% of body weight).",
+  "video": null,
+  "notes": "Log the vest weight as added kg."
+ },
+ {
+  "id": "vestpushup",
+  "name": "Weighted vest push-up",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Weighted vest"
+  ],
+  "req": "weightvest",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Tighten the vest so the load sits high on the chest.",
+   "Keep a straight line from head to heels.",
+   "Lower until the chest nearly touches, then press up."
+  ],
+  "common_mistakes": [
+   "Hips sagging under the extra load",
+   "Elbows flaring wide"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Banded push-up"
+  ],
+  "safety": "Add load gradually; reduce it if your lower back sags.",
+  "video": null,
+  "notes": "Log vest weight as added kg."
+ },
+ {
+  "id": "mbpushup",
+  "name": "Medicine ball push-up",
+  "aliases": [
+   "Staggered med ball push-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Medicine ball"
+  ],
+  "req": "medball",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–8 / side",
+  "form_cues": [
+   "Place one hand on the ball, the other on the floor.",
+   "Lower with control, keeping hips square.",
+   "Press up and switch the ball to the other hand."
+  ],
+  "common_mistakes": [
+   "Ball rolling away",
+   "Twisting the hips"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Ring push-ups"
+  ],
+  "safety": "Use a non-bouncing ball and keep the wrist stacked over it.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "mbohlunge",
+  "name": "Medicine ball overhead lunge",
+  "aliases": [
+   "Overhead med ball walking lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Unilateral",
+   "Core"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Medicine ball"
+  ],
+  "req": "medball",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Hold the ball overhead with arms locked.",
+   "Step forward and lower the back knee.",
+   "Keep ribs down; don't let the ball drift forward."
+  ],
+  "common_mistakes": [
+   "Arching the lower back",
+   "Elbows bending"
+  ],
+  "regressions": [
+   "Goblet reverse lunge"
+  ],
+  "progressions": [],
+  "safety": "Skip the overhead hold if your shoulders lack mobility.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "mblungetwist",
+  "name": "Medicine ball lunge with twist",
+  "aliases": [
+   "Lunge with rotation"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Core",
+   "Warm-up"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Shoulders"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Medicine ball"
+  ],
+  "req": "medball",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Hold the ball at chest height, arms extended.",
+   "Lunge forward, then rotate toward the front leg.",
+   "Turn back to centre before standing up."
+  ],
+  "common_mistakes": [
+   "Front knee drifting inward when you rotate",
+   "Rushing the twist"
+  ],
+  "regressions": [
+   "Bodyweight reverse lunge"
+  ],
+  "progressions": [],
+  "safety": "Rotate through the upper back, not the knee.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "mbsquatpress",
+  "name": "Medicine ball squat to press",
+  "aliases": [
+   "Med ball squat press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Endurance",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Triceps"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Medicine ball"
+  ],
+  "req": "medball",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold the ball at your chest and squat.",
+   "Stand up and press the ball overhead.",
+   "Lower it to your chest as you sit back down."
+  ],
+  "common_mistakes": [
+   "Heels lifting",
+   "Arching the back overhead"
+  ],
+  "regressions": [
+   "Goblet squat"
+  ],
+  "progressions": [
+   "Kettlebell thruster"
+  ],
+  "safety": "Control the ball overhead; don't release or throw it.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sandcarry",
+  "name": "Sandbag bear-hug carry",
+  "aliases": [
+   "Sandbag carry"
+  ],
+  "training_type": "Strongman",
+  "tags": [
+   "Strongman",
+   "Strength",
+   "Core",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Core",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Glutes",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Carry",
+  "equipment": [
+   "Sandbag"
+  ],
+  "req": "sandbag",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "40 m",
+  "form_cues": [
+   "Hug the bag tight to your chest, hands clasped.",
+   "Stand tall and keep your chin over the bag.",
+   "Walk with short, quick steps and steady breathing."
+  ],
+  "common_mistakes": [
+   "Leaning back excessively",
+   "Letting the bag slide down"
+  ],
+  "regressions": [
+   "Kettlebell front rack carry"
+  ],
+  "progressions": [
+   "Yoke carry"
+  ],
+  "safety": "Lift the bag from the floor with a hinge, not a rounded back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sbclean",
+  "name": "Sandbag clean",
+  "aliases": [
+   "Sandbag lap clean"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Strongman",
+   "Power",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Forearms",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Sandbag"
+  ],
+  "req": "sandbag",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "5–8",
+  "form_cues": [
+   "Straddle the bag and grip the sides or handles.",
+   "Drive hips through to pop the bag up.",
+   "Drop under it and catch it on your forearms at the chest."
+  ],
+  "common_mistakes": [
+   "Pulling with a rounded back",
+   "Curling the bag up with the arms"
+  ],
+  "regressions": [
+   "Kettlebell clean"
+  ],
+  "progressions": [
+   "Sandbag shouldering"
+  ],
+  "safety": "Start light; awkward loads need a tight, neutral spine.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sbshoulder",
+  "name": "Sandbag shouldering",
+  "aliases": [
+   "Sandbag to shoulder"
+  ],
+  "training_type": "Strongman",
+  "tags": [
+   "Strongman",
+   "Strength",
+   "Power",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Core",
+   "Traps"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Sandbag"
+  ],
+  "req": "sandbag",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 4,
+  "reps": "3–5 / side",
+  "form_cues": [
+   "Lap the bag first by squatting and pulling it to your thighs.",
+   "Explode hips and pop the bag onto one shoulder.",
+   "Stand tall, then lower it under control."
+  ],
+  "common_mistakes": [
+   "Lifting with the lower back alone",
+   "Not alternating shoulders"
+  ],
+  "regressions": [
+   "Sandbag clean"
+  ],
+  "progressions": [
+   "Atlas stone load"
+  ],
+  "safety": "A rounded back is normal on stone-style lifts but keep it braced; start light.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sbzercher",
+  "name": "Sandbag Zercher squat",
+  "aliases": [
+   "Sandbag front-hold squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Compound",
+   "Core"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Core",
+   "Biceps"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Sandbag"
+  ],
+  "req": "sandbag",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Cradle the bag in the crooks of your elbows.",
+   "Squat deep while keeping the chest up.",
+   "Drive up through the whole foot."
+  ],
+  "common_mistakes": [
+   "Upper back rounding",
+   "Bag sliding toward the wrists"
+  ],
+  "regressions": [
+   "Goblet squat"
+  ],
+  "progressions": [
+   "Front squat"
+  ],
+  "safety": "Keep elbows high and the load tight to your body.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sbbearsq",
+  "name": "Sandbag bear-hug squat",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Compound",
+   "Core"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Sandbag"
+  ],
+  "req": "sandbag",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Hug the bag tight to your chest.",
+   "Sit down between your knees.",
+   "Stand up without letting the bag pull you forward."
+  ],
+  "common_mistakes": [
+   "Rounding forward",
+   "Heels lifting"
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Sandbag Zercher squat"
+  ],
+  "safety": "Keep the bag close to reduce strain on the lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sbrow",
+  "name": "Sandbag bent-over row",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts",
+   "Forearms"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Sandbag"
+  ],
+  "req": "sandbag",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Hinge forward with a flat back, holding the bag's handles.",
+   "Row the bag to your belly button.",
+   "Lower it slowly without losing your hinge."
+  ],
+  "common_mistakes": [
+   "Standing up during the row",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Band seated row"
+  ],
+  "progressions": [
+   "Barbell bent-over row"
+  ],
+  "safety": "Keep the spine neutral and brace before each rep.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sbpress",
+  "name": "Sandbag overhead press",
+  "aliases": [
+   "Sandbag clean and press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Upper back"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Sandbag"
+  ],
+  "req": "sandbag",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–8",
+  "form_cues": [
+   "Clean the bag to your chest.",
+   "Brace and press it straight overhead.",
+   "Lower it back to the chest under control."
+  ],
+  "common_mistakes": [
+   "Leaning back",
+   "Bag rolling forward overhead"
+  ],
+  "regressions": [
+   "Kettlebell overhead press"
+  ],
+  "progressions": [
+   "Log press"
+  ],
+  "safety": "Use handles if available; loose sand shifts mid-rep.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sbload",
+  "name": "Sandbag load to platform",
+  "aliases": [
+   "Sandbag over bar",
+   "Sandbag to platform"
+  ],
+  "training_type": "Strongman",
+  "tags": [
+   "Strongman",
+   "Power",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Lower back"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Biceps"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Sandbag",
+   "Platform or box"
+  ],
+  "req": "sandbag",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–5",
+  "form_cues": [
+   "Lap the bag onto your thighs.",
+   "Hug it tight and extend the hips hard.",
+   "Drive the bag onto the platform without pressing it."
+  ],
+  "common_mistakes": [
+   "Using the arms to throw the bag",
+   "Standing too far from the platform"
+  ],
+  "regressions": [
+   "Sandbag clean"
+  ],
+  "progressions": [
+   "Atlas stone load"
+  ],
+  "safety": "Use a stable platform at waist to chest height and keep fingers clear.",
+  "video": null,
+  "notes": "Popular in strongman events and medleys."
+ },
+ {
+  "id": "wristroller",
+  "name": "Wrist roller",
+  "aliases": [
+   "Forearm roller"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Endurance"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Forearm flexors",
+   "Forearm extensors"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Wrist roller",
+   "Weight plate"
+  ],
+  "req": "wristroller",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "2–3 lengths",
+  "form_cues": [
+   "Hold the roller at shoulder height with straight arms.",
+   "Roll the weight all the way up, one hand at a time.",
+   "Unroll slowly under control; don't let it drop."
+  ],
+  "common_mistakes": [
+   "Letting arms drop to waist height",
+   "Spinning the weight down quickly"
+  ],
+  "regressions": [
+   "Wrist curl"
+  ],
+  "progressions": [],
+  "safety": "Stop if you feel sharp pain at the elbow (tennis-elbow area).",
+  "video": null,
+  "notes": "Roll overhand for extensors and underhand for flexors."
+ },
+ {
+  "id": "gripper",
+  "name": "Hand gripper squeeze",
+  "aliases": [
+   "Gripper close",
+   "Captains of Crush gripper"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Forearm flexors"
+  ],
+  "secondary_muscles": [
+   "Hand intrinsics"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Hand gripper"
+  ],
+  "req": "gripper",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–12 / hand",
+  "form_cues": [
+   "Set the gripper deep in the palm.",
+   "Squeeze until the handles touch.",
+   "Hold the close for a second, then open slowly."
+  ],
+  "common_mistakes": [
+   "Gripper set too high in the fingers",
+   "Rushing reps with no full close"
+  ],
+  "regressions": [
+   "Finger extension with band"
+  ],
+  "progressions": [],
+  "safety": "Build up gradually; overuse can irritate finger tendons.",
+  "video": null,
+  "notes": "Hold for time at the close for crush endurance."
+ },
+ {
+  "id": "fingerext",
+  "name": "Finger extension with band",
+  "aliases": [
+   "Rubber band finger extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Rehab",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Forearm extensors"
+  ],
+  "secondary_muscles": [
+   "Hand intrinsics"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Small rubber band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "20–25 / hand",
+  "form_cues": [
+   "Loop a band around all fingers and the thumb.",
+   "Spread fingers wide against the band.",
+   "Return slowly and repeat."
+  ],
+  "common_mistakes": [
+   "Using too thick a band",
+   "Moving through a tiny range"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Hand gripper squeeze"
+  ],
+  "safety": "Ease off if you feel joint pain.",
+  "video": null,
+  "notes": "Balances out gripper and climbing work; helps keep elbows healthy."
+ },
+ {
+  "id": "fatgriphold",
+  "name": "Thick-grip dumbbell hold",
+  "aliases": [
+   "Fat grip hold"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Forearm flexors"
+  ],
+  "secondary_muscles": [
+   "Traps",
+   "Hand intrinsics"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Thick bar grips",
+   "Dumbbells"
+  ],
+  "req": "fatgrips,dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–40 sec",
+  "form_cues": [
+   "Fit thick grips over the handles.",
+   "Deadlift the dumbbells and stand tall.",
+   "Crush the handles and hold for time."
+  ],
+  "common_mistakes": [
+   "Shrugging the shoulders",
+   "Letting the thumb slip"
+  ],
+  "regressions": [
+   "Farmer's carry"
+  ],
+  "progressions": [
+   "Axle deadlift"
+  ],
+  "safety": "Set the dumbbells down before your grip fully fails.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "fatgripcurl",
+  "name": "Thick-grip dumbbell curl",
+  "aliases": [
+   "Fat grip curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps",
+   "Forearm flexors"
+  ],
+  "secondary_muscles": [
+   "Brachioradialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Thick bar grips",
+   "Dumbbells"
+  ],
+  "req": "fatgrips,dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Fit the thick grips and hold the dumbbells hard.",
+   "Curl up with elbows pinned to your sides.",
+   "Lower slowly without losing your crush grip."
+  ],
+  "common_mistakes": [
+   "Swinging",
+   "Wrists curling back"
+  ],
+  "regressions": [
+   "Dumbbell curl"
+  ],
+  "progressions": [],
+  "safety": "Use about 20–30% less weight than your normal curl.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "farmer",
+  "name": "Farmer's carry",
+  "aliases": [
+   "Farmer's walk"
+  ],
+  "training_type": "Strongman",
+  "tags": [
+   "Strongman",
+   "Strength",
+   "Core",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Forearms",
+   "Traps",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Calves"
+  ],
+  "movement_pattern": "Carry",
+  "equipment": [
+   "Dumbbells or kettlebells"
+  ],
+  "req": "dumbbells|kettlebells|trapbar",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "40 m",
+  "form_cues": [
+   "Deadlift the weights and stand tall.",
+   "Shoulders down and back, ribs stacked over hips.",
+   "Walk with short, quick steps; don't let weights swing."
+  ],
+  "common_mistakes": [
+   "Shrugging up to the ears",
+   "Leaning forward"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Suitcase carry",
+   "Yoke carry"
+  ],
+  "safety": "Lift and set the weights down with a flat back.",
+  "video": null,
+  "notes": "Log weight per hand; a trap bar or farmer's handles allow heavier loads."
+ },
+ {
+  "id": "suitcase",
+  "name": "Suitcase carry",
+  "aliases": [
+   "One-arm farmer's carry"
+  ],
+  "training_type": "Strongman",
+  "tags": [
+   "Strongman",
+   "Strength",
+   "Core",
+   "Unilateral"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Forearms"
+  ],
+  "secondary_muscles": [
+   "Quadratus lumborum",
+   "Traps",
+   "Glutes"
+  ],
+  "movement_pattern": "Anti-lateral flexion",
+  "equipment": [
+   "Dumbbell or kettlebell"
+  ],
+  "req": "dumbbells|kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "30 m / side",
+  "form_cues": [
+   "Hold one weight at your side like a suitcase.",
+   "Stay perfectly upright; don't lean either way.",
+   "Walk slowly, then switch hands."
+  ],
+  "common_mistakes": [
+   "Leaning away from or toward the weight",
+   "Hiking the hip"
+  ],
+  "regressions": [
+   "Farmer's carry"
+  ],
+  "progressions": [],
+  "safety": "Brace hard and pick the weight up with a hinge.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "platepinch",
+  "name": "Plate pinch hold",
+  "aliases": [
+   "Plate pinch"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Forearm flexors",
+   "Thumb muscles"
+  ],
+  "secondary_muscles": [
+   "Hand intrinsics"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Weight plates"
+  ],
+  "req": "plates",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "20–30 sec / hand",
+  "form_cues": [
+   "Pinch two smooth plates together, smooth sides out.",
+   "Keep fingers straight and thumb pressed hard.",
+   "Stand tall and hold for time."
+  ],
+  "common_mistakes": [
+   "Curling fingers around the edge",
+   "Holding plates against the leg"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Thick-grip dumbbell hold"
+  ],
+  "safety": "Hold over a clear floor and keep your feet out of the drop zone.",
+  "video": null,
+  "notes": "Walk with the plates for a pinch carry."
+ },
+ {
+  "id": "trxrow",
+  "name": "Suspension row",
+  "aliases": [
+   "TRX row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx|rings",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lean back with arms straight and body in a plank.",
+   "Pull your chest to your hands, elbows at your sides.",
+   "Lower slowly, keeping hips up."
+  ],
+  "common_mistakes": [
+   "Hips sagging",
+   "Shrugging shoulders"
+  ],
+  "regressions": [
+   "Band seated row"
+  ],
+  "progressions": [
+   "Single-arm suspension row",
+   "Ring row"
+  ],
+  "safety": "Check the anchor point and straps before every set.",
+  "video": null,
+  "notes": "Walk feet forward to make it harder."
+ },
+ {
+  "id": "trx1row",
+  "name": "Single-arm suspension row",
+  "aliases": [
+   "One-arm TRX row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Unilateral",
+   "Core"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Obliques"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Hold both handles in one hand, body in a plank.",
+   "Row up without twisting toward the strap.",
+   "Lower slowly and keep hips square."
+  ],
+  "common_mistakes": [
+   "Rotating the torso to cheat",
+   "Hips dropping"
+  ],
+  "regressions": [
+   "Suspension row"
+  ],
+  "progressions": [],
+  "safety": "Lock the handles together so they can't slip.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trxpress",
+  "name": "Suspension chest press",
+  "aliases": [
+   "TRX chest press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Compound",
+   "Core"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx|rings",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Face away from the anchor, arms out in front.",
+   "Lower your chest between your hands in a plank.",
+   "Press back up without letting hips sag."
+  ],
+  "common_mistakes": [
+   "Straps rubbing the arms",
+   "Hips sagging"
+  ],
+  "regressions": [
+   "Band chest press"
+  ],
+  "progressions": [
+   "Suspension chest fly",
+   "Ring push-ups"
+  ],
+  "safety": "Lower your body angle gradually; the straps can swing if you lose control.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trxfly",
+  "name": "Suspension chest fly",
+  "aliases": [
+   "TRX fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Isolation",
+   "Core"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Lean forward, arms out front with soft elbows.",
+   "Open arms wide as you lower your chest.",
+   "Hug back together using your chest."
+  ],
+  "common_mistakes": [
+   "Bending elbows into a press",
+   "Going too low and straining shoulders"
+  ],
+  "regressions": [
+   "Suspension chest press"
+  ],
+  "progressions": [
+   "Ring fly"
+  ],
+  "safety": "Start upright and only lean further once you control the bottom.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trxcurl",
+  "name": "Suspension bicep curl",
+  "aliases": [
+   "TRX curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Forearms",
+   "Core"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx|rings",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Face the anchor, palms up, leaning back.",
+   "Keep elbows high and still.",
+   "Curl hands toward your forehead."
+  ],
+  "common_mistakes": [
+   "Dropping elbows into a row",
+   "Hips sagging"
+  ],
+  "regressions": [
+   "Band curl"
+  ],
+  "progressions": [
+   "Ring bicep curl"
+  ],
+  "safety": "Walk feet forward slowly to add load.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trxtri",
+  "name": "Suspension triceps extension",
+  "aliases": [
+   "TRX triceps press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Core"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx|rings",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Face away, arms straight overhead holding handles.",
+   "Bend only at the elbows, hands toward your forehead.",
+   "Straighten arms to push back to the start."
+  ],
+  "common_mistakes": [
+   "Elbows flaring",
+   "Hips piking"
+  ],
+  "regressions": [
+   "Band overhead triceps extension"
+  ],
+  "progressions": [],
+  "safety": "Begin fairly upright; the movement gets hard quickly as you lean.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trxy",
+  "name": "Suspension Y raise",
+  "aliases": [
+   "TRX Y-fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Rehab",
+   "Isolation"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Lower traps",
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Rotator cuff"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx|rings",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lean back with straight arms.",
+   "Raise arms up and out into a Y shape.",
+   "Keep shoulders down, away from ears."
+  ],
+  "common_mistakes": [
+   "Bending the elbows",
+   "Arching the back"
+  ],
+  "regressions": [
+   "Band pull-apart"
+  ],
+  "progressions": [],
+  "safety": "Use a small lean; this targets small muscles.",
+  "video": null,
+  "notes": "Pair with T and W raises as a shoulder-health circuit."
+ },
+ {
+  "id": "trxt",
+  "name": "Suspension reverse fly",
+  "aliases": [
+   "TRX T-fly",
+   "Suspension T raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Rehab"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Middle traps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx|rings",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lean back, arms straight in front.",
+   "Open arms wide into a T.",
+   "Squeeze shoulder blades, then return slowly."
+  ],
+  "common_mistakes": [
+   "Bending elbows into a row",
+   "Hips sagging"
+  ],
+  "regressions": [
+   "Band pull-apart"
+  ],
+  "progressions": [
+   "Reverse cable fly"
+  ],
+  "safety": "Keep the lean modest at first.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trxw",
+  "name": "Suspension face pull",
+  "aliases": [
+   "TRX W raise",
+   "TRX face pull"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Rehab"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts",
+   "Rotator cuff"
+  ],
+  "secondary_muscles": [
+   "Middle traps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx|rings",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lean back, palms down, arms straight.",
+   "Pull elbows high and wide, hands beside your ears.",
+   "Finish in a W shape, then lower slowly."
+  ],
+  "common_mistakes": [
+   "Elbows dropping",
+   "Leaning too far back"
+  ],
+  "regressions": [
+   "Band face pull"
+  ],
+  "progressions": [
+   "Rope face pull"
+  ],
+  "safety": "Keep it pain-free in the shoulder.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trxpistol",
+  "name": "Suspension-assisted pistol squat",
+  "aliases": [
+   "TRX pistol squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Unilateral",
+   "Balance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx|rings",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5–8 / side",
+  "form_cues": [
+   "Hold the handles and stand on one leg.",
+   "Sit down slowly with the free leg out front.",
+   "Use the straps only as much as needed to rise."
+  ],
+  "common_mistakes": [
+   "Knee caving inward",
+   "Pulling hard with the arms"
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Pistol squat"
+  ],
+  "safety": "Stop above the depth where your knee or hip hurts.",
+  "video": null,
+  "notes": "Reduce the arm assist over time."
+ },
+ {
+  "id": "trxlunge",
+  "name": "Suspension lunge",
+  "aliases": [
+   "TRX suspended lunge",
+   "TRX split squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Unilateral",
+   "Balance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Place the back foot in the foot cradle.",
+   "Lower the back knee toward the floor.",
+   "Drive through the front heel to stand."
+  ],
+  "common_mistakes": [
+   "Front knee caving",
+   "Leaning too far forward"
+  ],
+  "regressions": [
+   "Goblet reverse lunge"
+  ],
+  "progressions": [
+   "Bulgarian split squat"
+  ],
+  "safety": "Lower the straps to mid-calf height for good balance.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trxhamcurl",
+  "name": "Suspension hamstring curl",
+  "aliases": [
+   "TRX leg curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Isolation",
+   "Core"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx|rings",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Lie on your back with heels in the cradles.",
+   "Lift hips into a bridge.",
+   "Curl heels to your glutes, keeping hips high."
+  ],
+  "common_mistakes": [
+   "Hips dropping during the curl",
+   "Rushing the return"
+  ],
+  "regressions": [
+   "Suspension hip press"
+  ],
+  "progressions": [
+   "Nordic hamstring curl"
+  ],
+  "safety": "Set the straps about 20–30 cm off the floor.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trxhippress",
+  "name": "Suspension hip press",
+  "aliases": [
+   "TRX glute bridge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Glutes",
+   "Core"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Lie on your back, heels in the cradles.",
+   "Press heels down and lift hips high.",
+   "Pause at the top, then lower slowly."
+  ],
+  "common_mistakes": [
+   "Arching the lower back",
+   "Legs swinging"
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Suspension hamstring curl"
+  ],
+  "safety": "Keep the straps still before lifting.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ringrow",
+  "name": "Ring row",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Gymnastic rings"
+  ],
+  "req": "rings",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Hang under the rings, body straight.",
+   "Pull the rings to your ribs, turning palms in.",
+   "Lower to straight arms with control."
+  ],
+  "common_mistakes": [
+   "Hips sagging",
+   "Short range of motion"
+  ],
+  "regressions": [
+   "Suspension row"
+  ],
+  "progressions": [
+   "Inverted row",
+   "Pull-ups"
+  ],
+  "safety": "Check ring straps and anchor before use.",
+  "video": null,
+  "notes": "Raise the feet on a box to make it harder."
+ },
+ {
+  "id": "ringpush",
+  "name": "Ring push-ups",
+  "aliases": [
+   "Ring push-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Compound",
+   "Core"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Gymnastic rings"
+  ],
+  "req": "rings",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Set rings a few centimetres off the floor.",
+   "Lower with elbows tucked and rings steady.",
+   "Press up and turn the rings out at the top."
+  ],
+  "common_mistakes": [
+   "Rings wobbling wide",
+   "Hips sagging"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Ring fly"
+  ],
+  "safety": "Set rings low first so a slip doesn't drop you far.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ringcurl",
+  "name": "Ring bicep curl",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Forearms",
+   "Core"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Gymnastic rings"
+  ],
+  "req": "rings",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Lean back with palms up and arms straight.",
+   "Curl hands toward your forehead, elbows high.",
+   "Lower slowly without dropping elbows."
+  ],
+  "common_mistakes": [
+   "Turning it into a row",
+   "Hips sagging"
+  ],
+  "regressions": [
+   "Suspension bicep curl"
+  ],
+  "progressions": [],
+  "safety": "Rings rotate freely, so start with a small lean.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ringfly",
+  "name": "Ring fly",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Isolation"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core",
+   "Biceps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Gymnastic rings"
+  ],
+  "req": "rings",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Start in a push-up position on the rings.",
+   "Slide arms wide with a slight elbow bend.",
+   "Squeeze arms back together under the chest."
+  ],
+  "common_mistakes": [
+   "Going too deep too soon",
+   "Bending elbows into a press"
+  ],
+  "regressions": [
+   "Suspension chest fly"
+  ],
+  "progressions": [],
+  "safety": "Start rings high and feet close to keep the load manageable; deep stretches strain the shoulder.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "yoke",
+  "name": "Yoke carry",
+  "aliases": [
+   "Yoke walk"
+  ],
+  "training_type": "Strongman",
+  "tags": [
+   "Strongman",
+   "Compound",
+   "Core",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Calves",
+   "Spinal erectors"
+  ],
+  "movement_pattern": "Carry",
+  "equipment": [
+   "Yoke"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 3,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "20 m",
+  "form_cues": [
+   "Set under the yoke bar like a back squat.",
+   "Brace hard and stand it up.",
+   "Take short, fast steps, keeping the yoke level."
+  ],
+  "common_mistakes": [
+   "Taking long strides that swing the yoke",
+   "Losing the brace and folding forward"
+  ],
+  "regressions": [
+   "Farmer's carry"
+  ],
+  "progressions": [],
+  "safety": "Learn with light loads on a flat surface and drop the yoke forward or back if you lose control.",
+  "video": null,
+  "notes": "No yoke? A barbell in a rack can be walked out for short distances (bar walk). req uses barbell as nearest gear id."
+ },
+ {
+  "id": "sledpush",
+  "name": "Sled push",
+  "aliases": [
+   "Prowler push"
+  ],
+  "training_type": "Strongman",
+  "tags": [
+   "Strongman",
+   "Strength",
+   "Legs",
+   "Compound",
+   "Endurance",
+   "Power"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings",
+   "Shoulders",
+   "Core"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Push sled"
+  ],
+  "req": "sled",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "20 m",
+  "form_cues": [
+   "Grip the poles with arms long and lean in at 45 degrees.",
+   "Drive knees forward and push through the balls of the feet.",
+   "Keep your back flat and steps powerful."
+  ],
+  "common_mistakes": [
+   "Hips too high",
+   "Short, choppy steps"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Sled forward drag",
+   "Yoke carry"
+  ],
+  "safety": "Use a clear lane and a surface the sled slides evenly on.",
+  "video": null,
+  "notes": "No eccentric load, so it is easy to recover from."
+ },
+ {
+  "id": "sledpull",
+  "name": "Sled rope pull",
+  "aliases": [
+   "Hand-over-hand sled pull"
+  ],
+  "training_type": "Strongman",
+  "tags": [
+   "Strongman",
+   "Strength",
+   "Back",
+   "Endurance"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Forearms",
+   "Core",
+   "Rear delts"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Sled",
+   "Rope"
+  ],
+  "req": "sled",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "20 m",
+  "form_cues": [
+   "Sit or stand in an athletic stance holding the rope.",
+   "Pull hand over hand, keeping the sled moving.",
+   "Brace your core and don't round your back."
+  ],
+  "common_mistakes": [
+   "Pulling with a rounded back",
+   "Pausing between pulls"
+  ],
+  "regressions": [
+   "Band seated row"
+  ],
+  "progressions": [],
+  "safety": "Clear the rope path and keep fingers out of the sled hardware.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sledback",
+  "name": "Backward sled drag",
+  "aliases": [
+   "Reverse sled drag"
+  ],
+  "training_type": "Strongman",
+  "tags": [
+   "Strongman",
+   "Strength",
+   "Legs",
+   "Rehab",
+   "Endurance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Glutes",
+   "Forearms"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Sled",
+   "Straps"
+  ],
+  "req": "sled",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "20 m",
+  "form_cues": [
+   "Hold the straps facing the sled, arms long.",
+   "Sit slightly and walk backward on the balls of your feet.",
+   "Keep tension in the straps and take steady steps."
+  ],
+  "common_mistakes": [
+   "Standing too upright",
+   "Pulling with the arms"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Sled push"
+  ],
+  "safety": "Check the path behind you is clear before you start.",
+  "video": null,
+  "notes": "Knee-friendly quad builder; often used for rehab."
+ },
+ {
+  "id": "sledfwd",
+  "name": "Forward sled drag",
+  "aliases": [
+   "Harness sled drag"
+  ],
+  "training_type": "Strongman",
+  "tags": [
+   "Strongman",
+   "Strength",
+   "Legs",
+   "Endurance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Quadriceps",
+   "Core"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Sled",
+   "Harness or straps"
+  ],
+  "req": "sled",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "20 m",
+  "form_cues": [
+   "Clip the harness or hold the straps behind you.",
+   "Lean forward and drive each leg back powerfully.",
+   "Keep a tall spine and steady pace."
+  ],
+  "common_mistakes": [
+   "Leaning too far and losing balance",
+   "Shuffling short steps"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Sled push"
+  ],
+  "safety": "Use a harness that sits at the waist or chest, not the neck.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "tyreflip",
+  "name": "Tyre flip",
+  "aliases": [
+   "Tire flip"
+  ],
+  "training_type": "Strongman",
+  "tags": [
+   "Strongman",
+   "Power",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Spinal erectors",
+   "Chest",
+   "Triceps"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Large tyre"
+  ],
+  "req": "sled",
+  "equipment_tier": 3,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "4–6",
+  "form_cues": [
+   "Squat down, chest against the tyre, fingers under the tread.",
+   "Drive forward and up with the legs, not the arms.",
+   "Pop a knee in, flip hands, and push it over."
+  ],
+  "common_mistakes": [
+   "Deadlifting with a rounded back",
+   "Curling the tyre with the arms (biceps tear risk)"
+  ],
+  "regressions": [
+   "Sandbag load to platform"
+  ],
+  "progressions": [],
+  "safety": "Keep arms long (never curl the tyre) and stay clear of where it lands.",
+  "video": null,
+  "notes": "No gear id for a tyre; req uses sled as the nearest strongman-area id."
+ },
+ {
+  "id": "atlas",
+  "name": "Atlas stone load",
+  "aliases": [
+   "Stone to platform",
+   "Stone load"
+  ],
+  "training_type": "Strongman",
+  "tags": [
+   "Strongman",
+   "Power",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Spinal erectors"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Upper back",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Atlas stone",
+   "Platform"
+  ],
+  "req": "sandbag",
+  "equipment_tier": 3,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "2–4",
+  "form_cues": [
+   "Straddle the stone and wrap your arms deep around it.",
+   "Lap it onto your thighs, then re-grip high.",
+   "Extend hips explosively to roll it onto the platform."
+  ],
+  "common_mistakes": [
+   "Pulling with straight legs",
+   "Stone too far from the body"
+  ],
+  "regressions": [
+   "Sandbag load to platform"
+  ],
+  "progressions": [],
+  "safety": "Use tacky and forearm sleeves, start light, and keep your feet clear of the drop.",
+  "video": null,
+  "notes": "No gear id for stones; req uses sandbag, the closest home substitute."
+ },
+ {
+  "id": "logpress",
+  "name": "Log press",
+  "aliases": [
+   "Log clean and press"
+  ],
+  "training_type": "Strongman",
+  "tags": [
+   "Strongman",
+   "Shoulders",
+   "Compound",
+   "Power"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Upper chest",
+   "Core",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Strongman log"
+  ],
+  "req": "barbell",
+  "equipment_tier": 3,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–5",
+  "form_cues": [
+   "Clean the log onto your chest, elbows high.",
+   "Dip and drive with the legs.",
+   "Press through to lockout with the head forward."
+  ],
+  "common_mistakes": [
+   "Pressing with elbows low",
+   "Leaning back on the press"
+  ],
+  "regressions": [
+   "Sandbag overhead press",
+   "Standing barbell overhead press"
+  ],
+  "progressions": [],
+  "safety": "Learn the clean light and drop the log in front, never behind you.",
+  "video": null,
+  "notes": "No log gear id; req uses barbell as nearest. Neutral grip suits sore shoulders."
+ },
+ {
+  "id": "axledl",
+  "name": "Axle deadlift",
+  "aliases": [
+   "Fat bar deadlift"
+  ],
+  "training_type": "Strongman",
+  "tags": [
+   "Strongman",
+   "Strength",
+   "Compound",
+   "Back"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Forearms"
+  ],
+  "secondary_muscles": [
+   "Spinal erectors",
+   "Traps",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Axle bar or barbell with thick grips",
+   "Weight plates"
+  ],
+  "req": "barbell,plates,fatgrips",
+  "equipment_tier": 3,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–5",
+  "form_cues": [
+   "Set up like a normal deadlift, double overhand grip.",
+   "Squeeze the thick bar hard before you pull.",
+   "Drive through the floor and lock out tall."
+  ],
+  "common_mistakes": [
+   "Mixed grip to avoid grip work",
+   "Bar drifting away from the shins"
+  ],
+  "regressions": [
+   "Thick-grip dumbbell hold",
+   "Deadlift"
+  ],
+  "progressions": [],
+  "safety": "Use a hook or double overhand grip and lower with control; the axle doesn't spin.",
+  "video": null,
+  "notes": "Thick grips on a regular barbell mimic an axle."
+ }
+]

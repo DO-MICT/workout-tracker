@@ -1,0 +1,4549 @@
+[
+ {
+  "id": "multigympress",
+  "name": "Multi-gym chest press",
+  "aliases": [
+   "Home gym chest press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Home multi-gym"
+  ],
+  "req": "multigym",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Set the seat so handles line up with mid-chest.",
+   "Press forward smoothly until arms are nearly straight.",
+   "Control the weight back until you feel a chest stretch."
+  ],
+  "common_mistakes": [
+   "Shrugging shoulders up to the ears.",
+   "Letting the stack slam between reps."
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Seated chest press machine",
+   "Flat dumbbell press"
+  ],
+  "safety": "Adjust the seat before loading; keep the weight stack clear of hands and feet.",
+  "video": null,
+  "notes": "Most home multi-gyms use a pulley-driven press arm; resistance may feel lighter than a commercial machine."
+ },
+ {
+  "id": "multigymfly",
+  "name": "Multi-gym pec fly",
+  "aliases": [
+   "Home gym butterfly",
+   "Multi-gym pec deck"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Home multi-gym"
+  ],
+  "req": "multigym",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Keep a soft bend in the elbows throughout.",
+   "Squeeze the pads or handles together in front of your chest.",
+   "Open slowly until you feel a stretch, not a strain."
+  ],
+  "common_mistakes": [
+   "Pushing with the hands instead of hugging with the arms.",
+   "Letting the arms travel too far back."
+  ],
+  "regressions": [
+   "Band chest fly"
+  ],
+  "progressions": [
+   "Pec deck fly"
+  ],
+  "safety": "Avoid overstretching the shoulders at the open position.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "multigymlegext",
+  "name": "Multi-gym leg extension",
+  "aliases": [
+   "Home gym leg extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Home multi-gym"
+  ],
+  "req": "multigym",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Line your knee up with the machine's pivot point.",
+   "Kick up until legs are straight and squeeze the quads.",
+   "Lower slowly over two to three seconds."
+  ],
+  "common_mistakes": [
+   "Swinging the weight up with momentum.",
+   "Lifting hips off the seat."
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Leg extension"
+  ],
+  "safety": "Start light if you have knee pain and stop if it sharpens.",
+  "video": null,
+  "notes": "Usually shares a station with the multi-gym leg curl."
+ },
+ {
+  "id": "multigymlegcurl",
+  "name": "Multi-gym leg curl",
+  "aliases": [
+   "Home gym leg curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Home multi-gym"
+  ],
+  "req": "multigym",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Set the pad just above your heels.",
+   "Curl the pad towards your glutes without lifting your hips.",
+   "Return slowly to almost straight legs."
+  ],
+  "common_mistakes": [
+   "Hips popping up off the bench.",
+   "Cutting the range short at the bottom."
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Lying leg curl",
+   "Seated leg curl"
+  ],
+  "safety": "Keep your hips pressed down to protect the lower back.",
+  "video": null,
+  "notes": "Depending on the model this is done seated, standing or lying on the leg-extension attachment."
+ },
+ {
+  "id": "preachercurl",
+  "name": "Preacher curl",
+  "aliases": [
+   "EZ-bar preacher curl",
+   "Scott curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis",
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Preacher curl bench",
+   "EZ curl bar"
+  ],
+  "req": "preacher,ezbar",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Set the pad so your armpits sit snug on top.",
+   "Curl up without letting your elbows leave the pad.",
+   "Lower under control to almost straight arms."
+  ],
+  "common_mistakes": [
+   "Dropping fast to the bottom and bouncing.",
+   "Lifting elbows or shoulders off the pad."
+  ],
+  "regressions": [
+   "Dumbbell curl",
+   "Bicep curl machine"
+  ],
+  "progressions": [
+   "Dumbbell preacher curl"
+  ],
+  "safety": "Don't fully lock out under heavy load at the bottom; the biceps tendon is most stretched there.",
+  "video": null,
+  "notes": "A straight barbell also works if you have no EZ bar."
+ },
+ {
+  "id": "dbpreacher",
+  "name": "Dumbbell preacher curl",
+  "aliases": [
+   "Single-arm preacher curl",
+   "One-arm preacher curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Preacher curl bench",
+   "Dumbbell"
+  ],
+  "req": "preacher,dumbbells",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Rest the back of your upper arm flat on the pad.",
+   "Curl up, turning the pinkie slightly up at the top.",
+   "Lower slowly until the arm is nearly straight."
+  ],
+  "common_mistakes": [
+   "Rolling the shoulder forward to finish the rep.",
+   "Going too heavy and losing the bottom half."
+  ],
+  "regressions": [
+   "Dumbbell curl"
+  ],
+  "progressions": [
+   "Preacher curl"
+  ],
+  "safety": "Use a weight you can control at full stretch.",
+  "video": null,
+  "notes": "Often done on the steep (vertical) side of the pad for a harder peak contraction."
+ },
+ {
+  "id": "preacherhammer",
+  "name": "Preacher hammer curl",
+  "aliases": [
+   "Neutral-grip preacher curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Brachialis",
+   "Brachioradialis"
+  ],
+  "secondary_muscles": [
+   "Biceps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Preacher curl bench",
+   "Dumbbell"
+  ],
+  "req": "preacher,dumbbells",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Hold the dumbbell with thumb up throughout.",
+   "Keep the elbow pinned to the pad as you curl.",
+   "Lower slowly to a full stretch."
+  ],
+  "common_mistakes": [
+   "Turning the palm up mid-rep.",
+   "Rushing the lowering phase."
+  ],
+  "regressions": [
+   "Hammer curl"
+  ],
+  "progressions": [
+   "Reverse-grip preacher curl"
+  ],
+  "safety": "Keep the wrist straight and neutral.",
+  "video": null,
+  "notes": "Builds arm thickness and elbow-flexor strength."
+ },
+ {
+  "id": "revpreacher",
+  "name": "Reverse-grip preacher curl",
+  "aliases": [
+   "Reverse preacher curl",
+   "Overhand preacher curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Brachioradialis",
+   "Brachialis"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Preacher curl bench",
+   "EZ curl bar"
+  ],
+  "req": "preacher,ezbar",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Grip the bar palms down, hands shoulder-width.",
+   "Curl up while keeping wrists straight.",
+   "Lower with control; don't let the bar drop."
+  ],
+  "common_mistakes": [
+   "Letting the wrists bend back.",
+   "Using too much weight for the grip."
+  ],
+  "regressions": [
+   "Hammer curl"
+  ],
+  "progressions": [
+   "Preacher curl"
+  ],
+  "safety": "Go lighter than a regular preacher curl; forearms tire fast.",
+  "video": null,
+  "notes": "Great for forearm and elbow health in pulling athletes."
+ },
+ {
+  "id": "machinechest",
+  "name": "Seated chest press machine",
+  "aliases": [
+   "Machine chest press",
+   "Vertical chest press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound",
+   "Beginner-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Chest press machine"
+  ],
+  "req": "chestpress",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Set the seat so handles are level with mid-chest.",
+   "Keep shoulder blades back and down against the pad.",
+   "Press out, then return slowly until you feel a stretch."
+  ],
+  "common_mistakes": [
+   "Seat set too low or high.",
+   "Elbows flaring straight out to the sides."
+  ],
+  "regressions": [
+   "Push-ups",
+   "Multi-gym chest press"
+  ],
+  "progressions": [
+   "Iso-lateral chest press",
+   "Barbell bench press"
+  ],
+  "safety": "Set the seat height before loading, and keep wrists stacked over elbows.",
+  "video": null,
+  "notes": "A safe way to train chest to failure without a spotter."
+ },
+ {
+  "id": "isochestpress",
+  "name": "Iso-lateral chest press",
+  "aliases": [
+   "Hammer Strength chest press",
+   "Plate-loaded chest press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Plate-loaded chest press machine",
+   "Weight plates"
+  ],
+  "req": "chestpress,plates",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Load both sides evenly and set handles at mid-chest.",
+   "Drive the arms forward along their curved path together.",
+   "Lower slowly to a deep chest stretch."
+  ],
+  "common_mistakes": [
+   "One arm doing more of the work.",
+   "Bouncing out of the bottom."
+  ],
+  "regressions": [
+   "Seated chest press machine"
+  ],
+  "progressions": [
+   "Single-arm machine chest press",
+   "Barbell bench press"
+  ],
+  "safety": "Make sure the arms are both on their stops before you load or unload plates.",
+  "video": null,
+  "notes": "Independent arms help fix left-right imbalances."
+ },
+ {
+  "id": "widechestpress",
+  "name": "Wide chest press machine",
+  "aliases": [
+   "Hammer Strength wide chest",
+   "Plate-loaded wide chest press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Plate-loaded wide chest press machine",
+   "Weight plates"
+  ],
+  "req": "chestpress,plates",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Grip the wide handles with elbows slightly below shoulders.",
+   "Press forward and in, squeezing the chest.",
+   "Return slowly to a full stretch across the chest."
+  ],
+  "common_mistakes": [
+   "Shoulders rolling forward at the top.",
+   "Short, choppy reps."
+  ],
+  "regressions": [
+   "Seated chest press machine"
+  ],
+  "progressions": [
+   "Iso-lateral chest press"
+  ],
+  "safety": "Avoid an aggressive stretch if your shoulders are sensitive.",
+  "video": null,
+  "notes": "The wider path puts more emphasis on the outer chest stretch than a standard chest press."
+ },
+ {
+  "id": "sachestpress",
+  "name": "Single-arm machine chest press",
+  "aliases": [
+   "One-arm chest press machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound",
+   "Unilateral"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps",
+   "Obliques"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Chest press machine"
+  ],
+  "req": "chestpress",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Brace your free hand on the seat or your hip.",
+   "Press one handle forward without twisting your torso.",
+   "Lower slowly and keep the shoulder blade pinned."
+  ],
+  "common_mistakes": [
+   "Rotating the body to finish the rep.",
+   "Using momentum from the hips."
+  ],
+  "regressions": [
+   "Seated chest press machine"
+  ],
+  "progressions": [
+   "Iso-lateral chest press"
+  ],
+  "safety": "Keep the torso square to stop the lower back twisting.",
+  "video": null,
+  "notes": "Best on machines with independent arms."
+ },
+ {
+  "id": "lyingpress",
+  "name": "Lying chest press machine",
+  "aliases": [
+   "Lying machine bench press",
+   "Supine chest press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Lying chest press machine"
+  ],
+  "req": "lyingpress",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Lie with handles in line with your mid-chest.",
+   "Keep feet flat and upper back tight on the pad.",
+   "Press up, then lower slowly to a stretch."
+  ],
+  "common_mistakes": [
+   "Arching hard off the bench.",
+   "Locking out aggressively."
+  ],
+  "regressions": [
+   "Seated chest press machine"
+  ],
+  "progressions": [
+   "Barbell bench press"
+  ],
+  "safety": "Make sure the starting position is safe before unracking.",
+  "video": null,
+  "notes": "Mimics the bench press with no need for a spotter."
+ },
+ {
+  "id": "inclinemach",
+  "name": "Incline press machine",
+  "aliases": [
+   "Incline chest press machine",
+   "Machine incline press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Upper chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Incline press machine"
+  ],
+  "req": "inclinepressm",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Set the seat so handles start at upper chest.",
+   "Press up and slightly in, keeping shoulders down.",
+   "Lower slowly until hands are level with the chest."
+  ],
+  "common_mistakes": [
+   "Seat too low, turning it into a shoulder press.",
+   "Shrugging at the top."
+  ],
+  "regressions": [
+   "Seated chest press machine"
+  ],
+  "progressions": [
+   "Iso-lateral incline press",
+   "Incline dumbbell press"
+  ],
+  "safety": "Keep shoulder blades back to protect the front of the shoulder.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "isoincline",
+  "name": "Iso-lateral incline press",
+  "aliases": [
+   "Hammer Strength incline press",
+   "Plate-loaded incline press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Upper chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Plate-loaded incline press machine",
+   "Weight plates"
+  ],
+  "req": "inclinepressm,plates",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Set the seat so handles sit at upper-chest level.",
+   "Drive both arms up evenly.",
+   "Lower under control to a deep upper-chest stretch."
+  ],
+  "common_mistakes": [
+   "Uneven loading or pressing.",
+   "Bouncing at the bottom."
+  ],
+  "regressions": [
+   "Incline press machine"
+  ],
+  "progressions": [
+   "Incline barbell press"
+  ],
+  "safety": "Rack both arms before getting up or changing plates.",
+  "video": null,
+  "notes": "Arms can be pressed one at a time for unilateral work."
+ },
+ {
+  "id": "declinemach",
+  "name": "Decline chest press machine",
+  "aliases": [
+   "Machine decline press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Lower chest"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Decline press machine"
+  ],
+  "req": "chestpress",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Set the seat so handles start at lower chest.",
+   "Press down and forward until arms are nearly straight.",
+   "Return slowly and keep the chest proud."
+  ],
+  "common_mistakes": [
+   "Letting shoulders roll forward.",
+   "Rushing the lowering phase."
+  ],
+  "regressions": [
+   "Chest dips (assisted)"
+  ],
+  "progressions": [
+   "Decline bench press",
+   "Iso-lateral decline press"
+  ],
+  "safety": "Use the foot lever or a partner to get into position if the start is deep.",
+  "video": null,
+  "notes": "Nearest app gear id is the seated chest press machine."
+ },
+ {
+  "id": "isodecline",
+  "name": "Iso-lateral decline press",
+  "aliases": [
+   "Hammer Strength decline press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Lower chest"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Plate-loaded decline press machine",
+   "Weight plates"
+  ],
+  "req": "chestpress,plates",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Load both sides evenly before sitting down.",
+   "Press down and out along the arc together.",
+   "Lower with control to a full stretch."
+  ],
+  "common_mistakes": [
+   "Pushing with one side more than the other.",
+   "Losing upper-back tightness."
+  ],
+  "regressions": [
+   "Decline chest press machine"
+  ],
+  "progressions": [
+   "Decline bench press"
+  ],
+  "safety": "Make sure both arms are resting on their stops before loading.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pecdeckfly",
+  "name": "Pec deck fly",
+  "aliases": [
+   "Pec deck",
+   "Butterfly machine",
+   "Machine fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Pec deck / fly machine"
+  ],
+  "req": "pecdeck",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Set the seat so handles are at chest height.",
+   "Keep a slight bend in the elbows and hug the handles together.",
+   "Open slowly until you feel a stretch, then squeeze back."
+  ],
+  "common_mistakes": [
+   "Letting the arms travel far behind the body.",
+   "Pressing with the hands instead of moving at the shoulder."
+  ],
+  "regressions": [
+   "Multi-gym pec fly"
+  ],
+  "progressions": [
+   "Single-arm pec deck fly",
+   "Cable crossover fly"
+  ],
+  "safety": "Limit the backward stretch if you have shoulder pain.",
+  "video": null,
+  "notes": "Pause one second at the squeeze for more chest work."
+ },
+ {
+  "id": "sapecdeck",
+  "name": "Single-arm pec deck fly",
+  "aliases": [
+   "One-arm machine fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Pec deck / fly machine"
+  ],
+  "req": "pecdeck",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Sit side-on or square and hold the frame with your free hand.",
+   "Sweep one handle across your body past midline.",
+   "Return slowly to a controlled stretch."
+  ],
+  "common_mistakes": [
+   "Twisting the torso to move the weight.",
+   "Using too much load to cross midline."
+  ],
+  "regressions": [
+   "Pec deck fly"
+  ],
+  "progressions": [
+   "Cable crossover fly"
+  ],
+  "safety": "Keep the shoulder down and back throughout.",
+  "video": null,
+  "notes": "Crossing past midline gives a stronger peak contraction than two-arm flies."
+ },
+ {
+  "id": "assistdip",
+  "name": "Assisted dip",
+  "aliases": [
+   "Machine-assisted dip",
+   "Gravitron dip"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Beginner-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Assisted pull-up / dip machine"
+  ],
+  "req": "assistpull",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Kneel or stand on the pad and grip the dip handles.",
+   "Lower until upper arms are about parallel to the floor.",
+   "Press back up, leaning slightly forward for chest."
+  ],
+  "common_mistakes": [
+   "Going too deep and straining the shoulders.",
+   "Shrugging at the bottom."
+  ],
+  "regressions": [
+   "Bench dips"
+  ],
+  "progressions": [
+   "Chest dips"
+  ],
+  "safety": "More counterweight makes it easier; stop short of any shoulder pinch.",
+  "video": null,
+  "notes": "Reduce the assistance over time as you get stronger."
+ },
+ {
+  "id": "machinedip",
+  "name": "Seated dip machine",
+  "aliases": [
+   "Triceps dip machine",
+   "Seated triceps press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Front delts"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Seated dip machine"
+  ],
+  "req": "tricepm",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Sit tall with your back on the pad and grip the handles.",
+   "Press down until arms are straight, elbows close to sides.",
+   "Let the handles rise slowly to about 90 degrees."
+  ],
+  "common_mistakes": [
+   "Elbows flaring wide.",
+   "Leaning forward and pushing with shoulders."
+  ],
+  "regressions": [
+   "Bench dips"
+  ],
+  "progressions": [
+   "Chest dips"
+  ],
+  "safety": "Don't let the handles rise so high that your shoulders roll forward.",
+  "video": null,
+  "notes": "No exact app gear id; nearest is the tricep extension machine."
+ },
+ {
+  "id": "assistpullup",
+  "name": "Assisted pull-up",
+  "aliases": [
+   "Machine-assisted pull-up",
+   "Gravitron pull-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Beginner-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts",
+   "Rhomboids"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Assisted pull-up / dip machine"
+  ],
+  "req": "assistpull",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Grip just outside shoulder width, palms forward.",
+   "Pull your chest towards the bar, elbows down to your ribs.",
+   "Lower slowly to fully straight arms."
+  ],
+  "common_mistakes": [
+   "Half reps that skip the bottom stretch.",
+   "Swinging or kicking."
+  ],
+  "regressions": [
+   "Inverted row"
+  ],
+  "progressions": [
+   "Pull-ups"
+  ],
+  "safety": "Step on and off the pad carefully; more counterweight means more help.",
+  "video": null,
+  "notes": "Cut the assistance by one plate when you can do 3 x 10."
+ },
+ {
+  "id": "assistchinup",
+  "name": "Assisted chin-up",
+  "aliases": [
+   "Machine-assisted chin-up",
+   "Assisted underhand pull-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Beginner-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Forearms"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Assisted pull-up / dip machine"
+  ],
+  "req": "assistpull",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Grip shoulder-width with palms facing you.",
+   "Drive elbows down and bring chin over the bar.",
+   "Lower all the way to straight arms."
+  ],
+  "common_mistakes": [
+   "Craning the neck to reach the bar.",
+   "Dropping fast on the way down."
+  ],
+  "regressions": [
+   "Assisted pull-up"
+  ],
+  "progressions": [
+   "Chin-ups"
+  ],
+  "safety": "Keep the shoulders active at the bottom rather than hanging loose.",
+  "video": null,
+  "notes": "Biceps help more here, so most people find it easier than the pull-up."
+ },
+ {
+  "id": "chestrow",
+  "name": "Chest-supported row machine",
+  "aliases": [
+   "Seated machine row",
+   "Machine row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound",
+   "Beginner-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids",
+   "Mid traps"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Chest-supported row machine"
+  ],
+  "req": "rowmachine",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Set the chest pad so you can just reach the handles.",
+   "Pull elbows back and squeeze shoulder blades together.",
+   "Let the arms straighten slowly and the shoulders reach forward."
+  ],
+  "common_mistakes": [
+   "Lifting the chest off the pad.",
+   "Shrugging instead of pulling back."
+  ],
+  "regressions": [
+   "Inverted row"
+  ],
+  "progressions": [
+   "Iso-lateral row",
+   "Barbell bent-over row"
+  ],
+  "safety": "Chest support takes load off the lower back.",
+  "video": null,
+  "notes": "Neutral grip hits lats more; wide overhand hits upper back more."
+ },
+ {
+  "id": "isorow",
+  "name": "Iso-lateral row",
+  "aliases": [
+   "Hammer Strength row",
+   "Plate-loaded row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps",
+   "Mid traps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Plate-loaded row machine",
+   "Weight plates"
+  ],
+  "req": "rowmachine,plates",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Keep your chest on the pad and feet planted.",
+   "Row the handles back towards your hips.",
+   "Reach forward fully on the way back for a lat stretch."
+  ],
+  "common_mistakes": [
+   "Jerking the weight with the torso.",
+   "Short range at the front."
+  ],
+  "regressions": [
+   "Chest-supported row machine"
+  ],
+  "progressions": [
+   "Iso-lateral low row",
+   "T-bar row"
+  ],
+  "safety": "Load both sides evenly before starting.",
+  "video": null,
+  "notes": "Arms can be worked one at a time."
+ },
+ {
+  "id": "isohighrow",
+  "name": "Iso-lateral high row",
+  "aliases": [
+   "Hammer Strength high row",
+   "Machine high row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Plate-loaded high row machine",
+   "Weight plates"
+  ],
+  "req": "rowmachine,plates",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Secure your thighs under the pads.",
+   "Pull the handles down and back towards your lower chest.",
+   "Return slowly with a full stretch overhead."
+  ],
+  "common_mistakes": [
+   "Leaning way back to cheat.",
+   "Pulling with the hands rather than driving elbows."
+  ],
+  "regressions": [
+   "Assisted pull-up"
+  ],
+  "progressions": [
+   "Pull-ups",
+   "Iso-lateral front lat pulldown"
+  ],
+  "safety": "Keep the chest up and avoid jerky reps.",
+  "video": null,
+  "notes": "Sits between a pulldown and a row; great for lat width. App gear id is the nearest match."
+ },
+ {
+  "id": "isolowrow",
+  "name": "Iso-lateral low row",
+  "aliases": [
+   "Hammer Strength low row",
+   "Machine low row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Biceps",
+   "Rear delts"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Plate-loaded low row machine",
+   "Weight plates"
+  ],
+  "req": "rowmachine,plates",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Sit with chest on the pad and grab the low handles.",
+   "Row elbows back past your torso towards your hips.",
+   "Reach forward slowly for a full lat stretch."
+  ],
+  "common_mistakes": [
+   "Rounding the lower back.",
+   "Flaring elbows wide."
+  ],
+  "regressions": [
+   "Chest-supported row machine"
+  ],
+  "progressions": [
+   "Iso-lateral row"
+  ],
+  "safety": "Keep your chest on the pad the whole time.",
+  "video": null,
+  "notes": "The low-to-high path biases the lower lats."
+ },
+ {
+  "id": "widerowmach",
+  "name": "Wide-grip machine row",
+  "aliases": [
+   "Upper back machine row",
+   "Wide machine row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Upper back",
+   "Rear delts",
+   "Mid traps"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Biceps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Chest-supported row machine"
+  ],
+  "req": "rowmachine",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Grip the wide handles with palms facing down.",
+   "Pull elbows out and back to shoulder height.",
+   "Squeeze shoulder blades, then return slowly."
+  ],
+  "common_mistakes": [
+   "Shrugging up towards the ears.",
+   "Pulling to the belly instead of the chest."
+  ],
+  "regressions": [
+   "Chest-supported row machine"
+  ],
+  "progressions": [
+   "Machine rear delt row"
+  ],
+  "safety": "Keep the neck relaxed and chin tucked.",
+  "video": null,
+  "notes": "Targets the upper back more than the lats."
+ },
+ {
+  "id": "dyrow",
+  "name": "Iso-lateral D.Y. row",
+  "aliases": [
+   "Hammer Strength DY row",
+   "Dorian Yates row machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Biceps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Plate-loaded D.Y. row machine",
+   "Weight plates"
+  ],
+  "req": "rowmachine,plates",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Set the chest pad so you reach the handles with straight arms.",
+   "Pull with an underhand or neutral grip towards your waist.",
+   "Lower under control for a full stretch."
+  ],
+  "common_mistakes": [
+   "Using the legs to drive the weight.",
+   "Cutting the stretch short."
+  ],
+  "regressions": [
+   "Chest-supported row machine"
+  ],
+  "progressions": [
+   "Barbell bent-over row"
+  ],
+  "safety": "Keep the chest supported to protect the lower back.",
+  "video": null,
+  "notes": "Mimics the underhand barbell row made popular by Dorian Yates."
+ },
+ {
+  "id": "tbarrow",
+  "name": "T-bar row",
+  "aliases": [
+   "Plate-loaded T-bar row",
+   "Standing T-bar row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Mid traps",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps",
+   "Lower back"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "T-bar row machine",
+   "Weight plates"
+  ],
+  "req": "tbar,plates",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "8–10",
+  "form_cues": [
+   "Hinge forward with a flat back, knees soft.",
+   "Row the handles towards your upper stomach.",
+   "Lower slowly without losing your back position."
+  ],
+  "common_mistakes": [
+   "Rounding the lower back.",
+   "Standing up taller with each rep to cheat."
+  ],
+  "regressions": [
+   "Chest-supported T-bar row"
+  ],
+  "progressions": [
+   "Barbell bent-over row"
+  ],
+  "safety": "Keep a neutral spine; skip this if you have lower-back pain and use the chest-supported version.",
+  "video": null,
+  "notes": "A landmine with a V-handle works if your gym has no T-bar station."
+ },
+ {
+  "id": "cstbar",
+  "name": "Chest-supported T-bar row",
+  "aliases": [
+   "Incline T-bar row",
+   "Lying T-bar row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Mid traps",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Chest-supported T-bar row machine",
+   "Weight plates"
+  ],
+  "req": "tbar,plates",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "8–12",
+  "form_cues": [
+   "Lie chest-down on the pad with feet on the platform.",
+   "Row the handles up until elbows pass your torso.",
+   "Lower all the way to straight arms."
+  ],
+  "common_mistakes": [
+   "Lifting the chest off the pad.",
+   "Jerking the first part of the rep."
+  ],
+  "regressions": [
+   "Chest-supported row machine"
+  ],
+  "progressions": [
+   "T-bar row"
+  ],
+  "safety": "Step on the platform carefully and keep your chin neutral.",
+  "video": null,
+  "notes": "Easier on the lower back than the standing T-bar row."
+ },
+ {
+  "id": "isopulldown",
+  "name": "Iso-lateral front lat pulldown",
+  "aliases": [
+   "Hammer Strength pulldown",
+   "Plate-loaded pulldown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Teres major",
+   "Rear delts"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Plate-loaded pulldown machine",
+   "Weight plates"
+  ],
+  "req": "latpulldown,plates",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lock your thighs under the pads.",
+   "Pull the handles down towards your shoulders, elbows to ribs.",
+   "Let the arms rise slowly to a full stretch."
+  ],
+  "common_mistakes": [
+   "Leaning back a lot to cheat.",
+   "Not letting the arms straighten."
+  ],
+  "regressions": [
+   "Assisted pull-up"
+  ],
+  "progressions": [
+   "Pull-ups"
+  ],
+  "safety": "Control the return so the plates don't yank your shoulders.",
+  "video": null,
+  "notes": "No exact app gear id; nearest is the lat pulldown machine."
+ },
+ {
+  "id": "pullovermach",
+  "name": "Pullover machine",
+  "aliases": [
+   "Machine pullover",
+   "Nautilus pullover"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Teres major",
+   "Triceps (long head)"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Pullover machine"
+  ],
+  "req": "latpulldown",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Set the seat so your shoulders line up with the pivot.",
+   "Drive the elbows down in an arc to your stomach.",
+   "Return slowly to a deep overhead stretch."
+  ],
+  "common_mistakes": [
+   "Pulling with the hands instead of the elbows.",
+   "Arching the lower back at the top."
+  ],
+  "regressions": [
+   "Straight-arm pulldown"
+  ],
+  "progressions": [
+   "Dumbbell pullover"
+  ],
+  "safety": "Limit the top stretch if overhead positions hurt your shoulders.",
+  "video": null,
+  "notes": "No exact app gear id; nearest is the lat pulldown machine. Trains lats without the biceps tiring first."
+ },
+ {
+  "id": "reardeltrow",
+  "name": "Machine rear delt row",
+  "aliases": [
+   "Wide-elbow machine row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Mid traps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Chest-supported row machine"
+  ],
+  "req": "rowmachine",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Use a wide overhand grip and set your chest on the pad.",
+   "Row with elbows flared out to shoulder level.",
+   "Squeeze the back of the shoulders, then lower slowly."
+  ],
+  "common_mistakes": [
+   "Turning it into a regular row with elbows in.",
+   "Using too much weight."
+  ],
+  "regressions": [
+   "Rear delt machine"
+  ],
+  "progressions": [
+   "Face pull"
+  ],
+  "safety": "Keep it light and controlled; the rear delts are small.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "backext",
+  "name": "Back extension",
+  "aliases": [
+   "45-degree back extension",
+   "Hyperextension",
+   "Roman chair back extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Home-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lower back",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Back extension / Roman chair"
+  ],
+  "req": "romanchair",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Set the pad just below your hip bones.",
+   "Hinge down with a flat back, then rise until body is straight.",
+   "Squeeze glutes at the top without over-arching."
+  ],
+  "common_mistakes": [
+   "Hyperextending past straight at the top.",
+   "Jerking up fast."
+  ],
+  "regressions": [
+   "Superman hold"
+  ],
+  "progressions": [
+   "Weighted back extension",
+   "GHD back extension"
+  ],
+  "safety": "Don't arch past a straight line; stop if you feel sharp back pain.",
+  "video": null,
+  "notes": "Hold a plate to your chest to add load."
+ },
+ {
+  "id": "glutebackext",
+  "name": "Glute-focused back extension",
+  "aliases": [
+   "Glute hyperextension",
+   "Rounded-back hyperextension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Lower back"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Back extension / Roman chair"
+  ],
+  "req": "romanchair",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Turn feet out and keep chin tucked, upper back slightly rounded.",
+   "Lower by hinging at the hips.",
+   "Drive hips into the pad by squeezing the glutes."
+  ],
+  "common_mistakes": [
+   "Using the lower back to lift.",
+   "Setting the pad too high so you can't hinge."
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Back extension",
+   "Hip thrust machine"
+  ],
+  "safety": "Keep the movement at the hips, not the lower back.",
+  "video": null,
+  "notes": "Setting the pad lower on the thighs lets the hips move more."
+ },
+ {
+  "id": "slbackext",
+  "name": "Single-leg back extension",
+  "aliases": [
+   "Single-leg hyperextension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Lower back"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Back extension / Roman chair"
+  ],
+  "req": "romanchair",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Hook one foot under the roller, other leg free.",
+   "Hinge down slowly with hips square.",
+   "Rise by driving the working hip into the pad."
+  ],
+  "common_mistakes": [
+   "Hips twisting open.",
+   "Bouncing at the bottom."
+  ],
+  "regressions": [
+   "Back extension"
+  ],
+  "progressions": [
+   "Glute-ham raise"
+  ],
+  "safety": "Go slowly; the single leg makes balance harder.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ghdbackext",
+  "name": "GHD back extension",
+  "aliases": [
+   "90-degree back extension",
+   "GHD hyperextension",
+   "Horizontal back extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Advanced"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lower back",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Glute-ham developer (GHD)"
+  ],
+  "req": "ghd",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Set the pad at your hips with feet locked under the rollers.",
+   "Lower your torso towards the floor with a flat back.",
+   "Rise until your body is horizontal, not higher."
+  ],
+  "common_mistakes": [
+   "Swinging up past horizontal.",
+   "Rounding fast at the bottom."
+  ],
+  "regressions": [
+   "Back extension"
+  ],
+  "progressions": [
+   "Reverse hyper"
+  ],
+  "safety": "Lift no higher than straight; this horizontal version is harder than 45 degrees.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ghr",
+  "name": "Glute-ham raise",
+  "aliases": [
+   "GHR",
+   "GHD glute-ham raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Advanced"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Calves"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Glute-ham developer (GHD)"
+  ],
+  "req": "ghd",
+  "equipment_tier": 3,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–8",
+  "form_cues": [
+   "Lock feet in with knees just behind the pad.",
+   "Start upright, then lower forward with a straight line hips to head.",
+   "Pull yourself back up by digging toes into the plate."
+  ],
+  "common_mistakes": [
+   "Bending at the hips to cheat.",
+   "Dropping uncontrolled on the way down."
+  ],
+  "regressions": [
+   "Lying leg curl",
+   "Back extension"
+  ],
+  "progressions": [
+   "Nordic hamstring curl"
+  ],
+  "safety": "Build up slowly; push off a box or use a band if you can't control the lowering.",
+  "video": null,
+  "notes": "One of the best hamstring builders for knee flexion and hip extension together."
+ },
+ {
+  "id": "ghdhipext",
+  "name": "GHD hip extension",
+  "aliases": [
+   "GHD hip raise",
+   "Hip extension on GHD"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Lower back"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Glute-ham developer (GHD)"
+  ],
+  "req": "ghd",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Set the pad so your hips hang just off the front.",
+   "Hinge down from the hips, keeping the spine neutral.",
+   "Squeeze glutes to bring your body back to straight."
+  ],
+  "common_mistakes": [
+   "Rounding and un-rounding the spine.",
+   "Overextending at the top."
+  ],
+  "regressions": [
+   "Back extension"
+  ],
+  "progressions": [
+   "Reverse hyper"
+  ],
+  "safety": "Keep the motion at the hips; stop if the lower back takes over.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "reversehyp",
+  "name": "Reverse hyper",
+  "aliases": [
+   "Reverse hyperextension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Lower back"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Reverse hyper machine"
+  ],
+  "req": "reversehyper",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Lie chest-down with hips at the pad's edge and grip the handles.",
+   "Swing legs up until in line with the body, squeezing glutes.",
+   "Lower under control; don't let the pendulum yank you."
+  ],
+  "common_mistakes": [
+   "Letting momentum drive the swing.",
+   "Overarching at the top."
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "GHD hip extension"
+  ],
+  "safety": "Start light; the strap and pendulum can whip the spine if you go too heavy.",
+  "video": null,
+  "notes": "Popular as a lower-back rehab and strength accessory."
+ },
+ {
+  "id": "backextmach",
+  "name": "Seated back extension machine",
+  "aliases": [
+   "Lower back machine",
+   "Lumbar extension machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Rehab"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lower back"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Back extension machine"
+  ],
+  "req": "romanchair",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Sit with the pad across your upper back and feet secure.",
+   "Push back slowly until your torso is upright or slightly past.",
+   "Return to the start with control."
+  ],
+  "common_mistakes": [
+   "Jerking back with momentum.",
+   "Using too much weight."
+  ],
+  "regressions": [
+   "Superman hold"
+  ],
+  "progressions": [
+   "Back extension"
+  ],
+  "safety": "Use a light load and slow reps; skip if it aggravates back pain.",
+  "video": null,
+  "notes": "No exact app gear id; nearest is the Roman chair."
+ },
+ {
+  "id": "shrugmach",
+  "name": "Machine shrug",
+  "aliases": [
+   "Shrug machine",
+   "Plate-loaded shrug"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Upper traps"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Shrug machine"
+  ],
+  "req": "uprightrowm",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand tall with arms straight holding the handles.",
+   "Lift shoulders straight up towards the ears.",
+   "Pause, then lower slowly to a full stretch."
+  ],
+  "common_mistakes": [
+   "Rolling the shoulders in circles.",
+   "Bending the elbows to pull."
+  ],
+  "regressions": [
+   "Dumbbell shrug"
+  ],
+  "progressions": [
+   "Barbell shrug"
+  ],
+  "safety": "Keep the neck neutral; don't jut your chin forward.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "machuprightrow",
+  "name": "Machine upright row",
+  "aliases": [
+   "Upright row machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts",
+   "Upper traps"
+  ],
+  "secondary_muscles": [
+   "Biceps"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Shrug / upright row machine"
+  ],
+  "req": "uprightrowm",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Grip slightly wider than shoulders.",
+   "Lead with the elbows up to about shoulder height.",
+   "Lower slowly to straight arms."
+  ],
+  "common_mistakes": [
+   "Pulling elbows above shoulder level.",
+   "Narrow grip causing shoulder pinch."
+  ],
+  "regressions": [
+   "Lateral raise machine"
+  ],
+  "progressions": [
+   "Cable upright row"
+  ],
+  "safety": "Stop at shoulder height and skip it if you feel a pinch.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "shouldermach",
+  "name": "Seated shoulder press machine",
+  "aliases": [
+   "Machine shoulder press",
+   "Machine overhead press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound",
+   "Beginner-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Upper chest"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Shoulder press machine"
+  ],
+  "req": "shoulderpress",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Set the seat so handles start just above shoulder level.",
+   "Press up without locking out hard.",
+   "Lower slowly until hands are near the shoulders."
+  ],
+  "common_mistakes": [
+   "Arching the lower back off the pad.",
+   "Seat too high so the range is short."
+  ],
+  "regressions": [
+   "Pike push-up"
+  ],
+  "progressions": [
+   "Iso-lateral shoulder press",
+   "Seated dumbbell shoulder press"
+  ],
+  "safety": "Keep the back flat on the pad.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "isoshoulder",
+  "name": "Iso-lateral shoulder press",
+  "aliases": [
+   "Hammer Strength shoulder press",
+   "Plate-loaded shoulder press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Triceps"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Plate-loaded shoulder press machine",
+   "Weight plates"
+  ],
+  "req": "shoulderpress,plates",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Load both sides evenly and sit tall.",
+   "Press both handles overhead along their arc.",
+   "Lower slowly to shoulder height."
+  ],
+  "common_mistakes": [
+   "One side drifting ahead.",
+   "Shrugging at the top."
+  ],
+  "regressions": [
+   "Seated shoulder press machine"
+  ],
+  "progressions": [
+   "Standing barbell overhead press"
+  ],
+  "safety": "Rack both arms before standing up.",
+  "video": null,
+  "notes": "Press one arm at a time to even out imbalances."
+ },
+ {
+  "id": "lateralmach",
+  "name": "Lateral raise machine",
+  "aliases": [
+   "Machine lateral raise",
+   "Side raise machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Upper traps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Lateral raise machine"
+  ],
+  "req": "lateralm",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Line your shoulders up with the machine's pivot.",
+   "Raise the arms out to shoulder height, leading with the elbows.",
+   "Lower slowly without letting the stack rest."
+  ],
+  "common_mistakes": [
+   "Shrugging the weight up with traps.",
+   "Swinging the torso."
+  ],
+  "regressions": [
+   "Dumbbell lateral raise"
+  ],
+  "progressions": [
+   "Single-arm machine lateral raise",
+   "Cable lateral raise"
+  ],
+  "safety": "Stop at shoulder height if raising higher pinches.",
+  "video": null,
+  "notes": "Keeps constant tension through the whole range."
+ },
+ {
+  "id": "salateralmach",
+  "name": "Single-arm machine lateral raise",
+  "aliases": [
+   "One-arm lateral raise machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Lateral raise machine"
+  ],
+  "req": "lateralm",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Sit tall and work one arm at a time.",
+   "Raise the elbow out to shoulder height.",
+   "Lower slowly and keep the shoulder down."
+  ],
+  "common_mistakes": [
+   "Leaning away to cheat.",
+   "Rushing reps."
+  ],
+  "regressions": [
+   "Lateral raise machine"
+  ],
+  "progressions": [
+   "Cable lateral raise"
+  ],
+  "safety": "Keep the weight modest and the shoulder relaxed.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "reardeltm",
+  "name": "Rear delt machine",
+  "aliases": [
+   "Reverse pec deck",
+   "Reverse fly machine",
+   "Rear delt fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Mid traps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Rear delt machine"
+  ],
+  "req": "reardelt",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Face the pad with handles at shoulder height.",
+   "Sweep arms back in a wide arc, slight bend in elbows.",
+   "Return slowly without letting the stack touch."
+  ],
+  "common_mistakes": [
+   "Squeezing shoulder blades so traps take over.",
+   "Using momentum."
+  ],
+  "regressions": [
+   "Band pull-apart"
+  ],
+  "progressions": [
+   "Single-arm reverse pec deck",
+   "Reverse cable fly"
+  ],
+  "safety": "Use moderate weight; the rear delts are small.",
+  "video": null,
+  "notes": "Most pec decks double as a rear delt machine with the handles reversed."
+ },
+ {
+  "id": "sareardelt",
+  "name": "Single-arm reverse pec deck",
+  "aliases": [
+   "One-arm rear delt fly machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Mid traps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Rear delt machine"
+  ],
+  "req": "reardelt",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Sit side-on or square and grip the opposite handle.",
+   "Sweep the arm back across your body to shoulder line.",
+   "Return slowly to the start."
+  ],
+  "common_mistakes": [
+   "Twisting the torso.",
+   "Pulling past the line of the body."
+  ],
+  "regressions": [
+   "Rear delt machine"
+  ],
+  "progressions": [
+   "Reverse cable fly"
+  ],
+  "safety": "Keep the shoulder down and the movement smooth.",
+  "video": null,
+  "notes": "Reaching across the body gives a longer range than the two-arm version."
+ },
+ {
+  "id": "curlmach",
+  "name": "Bicep curl machine",
+  "aliases": [
+   "Machine curl",
+   "Machine preacher curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Beginner-friendly"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Bicep curl machine"
+  ],
+  "req": "curlm",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Line your elbows up with the machine's pivot.",
+   "Curl up and squeeze the biceps at the top.",
+   "Lower slowly until arms are nearly straight."
+  ],
+  "common_mistakes": [
+   "Lifting elbows off the pad.",
+   "Half reps at the top."
+  ],
+  "regressions": [
+   "Dumbbell curl"
+  ],
+  "progressions": [
+   "Single-arm machine curl",
+   "Preacher curl"
+  ],
+  "safety": "Don't let the weight drop at the bottom.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sacurlmach",
+  "name": "Single-arm machine curl",
+  "aliases": [
+   "One-arm machine curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Bicep curl machine"
+  ],
+  "req": "curlm",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Work one arm at a time with the elbow on the pad.",
+   "Curl up fully and squeeze.",
+   "Lower slowly to a full stretch."
+  ],
+  "common_mistakes": [
+   "Shifting the body to help.",
+   "Rushing the lowering."
+  ],
+  "regressions": [
+   "Bicep curl machine"
+  ],
+  "progressions": [
+   "Dumbbell preacher curl"
+  ],
+  "safety": "Keep the wrist straight.",
+  "video": null,
+  "notes": "Best on machines with independent handles."
+ },
+ {
+  "id": "tricepmach",
+  "name": "Tricep extension machine",
+  "aliases": [
+   "Machine triceps extension",
+   "Seated triceps extension machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Tricep extension machine"
+  ],
+  "req": "tricepm",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Line your elbows up with the machine's pivot.",
+   "Push the handles down until arms are straight.",
+   "Return slowly without letting elbows lift off the pad."
+  ],
+  "common_mistakes": [
+   "Shoulders rolling forward.",
+   "Bouncing at the top."
+  ],
+  "regressions": [
+   "Bench dips"
+  ],
+  "progressions": [
+   "Overhead triceps extension machine",
+   "Rope pushdown"
+  ],
+  "safety": "Keep the elbows fixed on the pad.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ohtricepmach",
+  "name": "Overhead triceps extension machine",
+  "aliases": [
+   "Machine overhead triceps extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Overhead triceps extension machine"
+  ],
+  "req": "tricepm",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Sit with elbows pointing up and resting on the pad.",
+   "Extend the arms until straight overhead.",
+   "Lower slowly to a deep triceps stretch."
+  ],
+  "common_mistakes": [
+   "Elbows drifting wide.",
+   "Arching the lower back."
+  ],
+  "regressions": [
+   "Tricep extension machine"
+  ],
+  "progressions": [
+   "Overhead rope extension"
+  ],
+  "safety": "Limit the stretch if the elbows or shoulders feel irritated.",
+  "video": null,
+  "notes": "Overhead position stretches the long head of the triceps."
+ },
+ {
+  "id": "legpress",
+  "name": "Leg press",
+  "aliases": [
+   "45-degree leg press",
+   "Sled leg press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound",
+   "Beginner-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Adductors"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Leg press"
+  ],
+  "req": "legpress",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "10–12",
+  "form_cues": [
+   "Place feet shoulder-width in the middle of the platform.",
+   "Lower until knees reach about 90 degrees, hips stay down.",
+   "Press through the whole foot without locking the knees."
+  ],
+  "common_mistakes": [
+   "Lower back peeling off the pad at the bottom.",
+   "Knees caving in."
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Hack squat",
+   "Barbell back squat"
+  ],
+  "safety": "Never lock out hard, and keep the safety handles in reach.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "horlegpress",
+  "name": "Seated leg press machine",
+  "aliases": [
+   "Horizontal leg press",
+   "Selectorized leg press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound",
+   "Beginner-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Seated leg press machine"
+  ],
+  "req": "legpress",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Set the seat so knees start at about 90 degrees.",
+   "Push through mid-foot until legs are nearly straight.",
+   "Return slowly without letting the stack slam."
+  ],
+  "common_mistakes": [
+   "Seat too close so the hips round.",
+   "Locking the knees."
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Leg press"
+  ],
+  "safety": "Keep the lower back on the pad.",
+  "video": null,
+  "notes": "A gentle starting point for beginners."
+ },
+ {
+  "id": "salegpress",
+  "name": "Single-leg leg press",
+  "aliases": [
+   "One-leg leg press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Leg press"
+  ],
+  "req": "legpress",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Place one foot in the middle of the platform.",
+   "Lower slowly, keeping the knee in line with the toes.",
+   "Press up without locking out."
+  ],
+  "common_mistakes": [
+   "Hips twisting.",
+   "Knee caving inward."
+  ],
+  "regressions": [
+   "Leg press"
+  ],
+  "progressions": [
+   "Bulgarian split squat"
+  ],
+  "safety": "Use much lighter weight than two-leg pressing.",
+  "video": null,
+  "notes": "Great for spotting and fixing side-to-side differences."
+ },
+ {
+  "id": "widelegpress",
+  "name": "Wide-stance leg press",
+  "aliases": [
+   "Sumo leg press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Leg press"
+  ],
+  "req": "legpress",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Place feet wide with toes turned out slightly.",
+   "Lower with knees tracking over the toes.",
+   "Drive through the heels to press up."
+  ],
+  "common_mistakes": [
+   "Knees collapsing inward.",
+   "Hips lifting off the seat."
+  ],
+  "regressions": [
+   "Leg press"
+  ],
+  "progressions": [
+   "Sumo deadlift"
+  ],
+  "safety": "Only go as deep as your hips allow without rounding.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "highlegpress",
+  "name": "High-foot leg press",
+  "aliases": [
+   "Feet-high leg press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Quadriceps"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Leg press"
+  ],
+  "req": "legpress",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Place feet high on the platform, hip-width.",
+   "Lower until hips are deeply flexed but still on the pad.",
+   "Push through the heels to the top."
+  ],
+  "common_mistakes": [
+   "Tailbone lifting off the seat.",
+   "Heels lifting."
+  ],
+  "regressions": [
+   "Leg press"
+  ],
+  "progressions": [
+   "Hip thrust machine"
+  ],
+  "safety": "Stop the descent before your lower back rounds.",
+  "video": null,
+  "notes": "Moving feet higher shifts work from quads to glutes and hamstrings."
+ },
+ {
+  "id": "narrowlegpress",
+  "name": "Narrow-stance leg press",
+  "aliases": [
+   "Close-stance leg press",
+   "Quad-focus leg press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Glutes"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Leg press"
+  ],
+  "req": "legpress",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Place feet hip-width or closer, low on the platform.",
+   "Lower slowly, letting knees travel forward.",
+   "Press up through the whole foot."
+  ],
+  "common_mistakes": [
+   "Heels lifting off the platform.",
+   "Going so deep the lower back rounds."
+  ],
+  "regressions": [
+   "Leg press"
+  ],
+  "progressions": [
+   "Hack squat"
+  ],
+  "safety": "Skip low foot placement if it bothers your knees.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "verticalleg",
+  "name": "Vertical leg press",
+  "aliases": [
+   "Vertical sled press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Vertical leg press"
+  ],
+  "req": "legpress",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie flat with hips directly under the platform.",
+   "Unlock and lower the platform towards your chest.",
+   "Press straight up without locking the knees."
+  ],
+  "common_mistakes": [
+   "Lifting the hips off the floor pad.",
+   "Going too deep and rounding."
+  ],
+  "regressions": [
+   "Leg press"
+  ],
+  "progressions": [
+   "Hack squat"
+  ],
+  "safety": "Always use the safety stops; this machine loads straight down onto you.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "legpresscalf",
+  "name": "Leg press calf raise",
+  "aliases": [
+   "Calf press",
+   "Leg press calf press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Leg press"
+  ],
+  "req": "legpress",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Place the balls of your feet on the bottom edge of the platform.",
+   "Keep knees soft and press through the toes.",
+   "Lower heels slowly for a deep stretch."
+  ],
+  "common_mistakes": [
+   "Bending the knees to move the weight.",
+   "Bouncing reps."
+  ],
+  "regressions": [
+   "Standing calf raise"
+  ],
+  "progressions": [
+   "Donkey calf raise"
+  ],
+  "safety": "Keep the safety handles locked; feet can slip off the edge.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hacksq",
+  "name": "Hack squat",
+  "aliases": [
+   "Machine hack squat",
+   "Plate-loaded hack squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Adductors"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Hack squat machine"
+  ],
+  "req": "hacksquat",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "8–12",
+  "form_cues": [
+   "Set shoulders under the pads and feet shoulder-width.",
+   "Lower until thighs are at least parallel, back flat.",
+   "Drive up through mid-foot without locking out."
+  ],
+  "common_mistakes": [
+   "Heels lifting.",
+   "Hips sliding off the back pad."
+  ],
+  "regressions": [
+   "Leg press"
+  ],
+  "progressions": [
+   "Barbell back squat"
+  ],
+  "safety": "Engage the safety catches before you start.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "revhack",
+  "name": "Reverse hack squat",
+  "aliases": [
+   "Facing hack squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Hack squat machine"
+  ],
+  "req": "hacksquat",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Face the back pad with chest on it and shoulders under the pads.",
+   "Sit hips back and down, keeping chest on the pad.",
+   "Drive up through the heels."
+  ],
+  "common_mistakes": [
+   "Chest coming off the pad.",
+   "Cutting depth short."
+  ],
+  "regressions": [
+   "Leg press"
+  ],
+  "progressions": [
+   "Hack squat"
+  ],
+  "safety": "Use the safety stops and start light.",
+  "video": null,
+  "notes": "More hip hinge than the regular hack squat, so the glutes work harder."
+ },
+ {
+  "id": "pendulum",
+  "name": "Pendulum squat",
+  "aliases": [
+   "Pendulum squat machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Glutes"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Pendulum squat machine"
+  ],
+  "req": "pendulum",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Set shoulders under the pads with feet forward on the platform.",
+   "Sink deep with the arc, knees travelling forward.",
+   "Drive back up without locking out."
+  ],
+  "common_mistakes": [
+   "Shallow reps.",
+   "Feet set too far back so heels lift."
+  ],
+  "regressions": [
+   "Leg press"
+  ],
+  "progressions": [
+   "Hack squat"
+  ],
+  "safety": "Use the safety lock; depth is deep, so build up gradually.",
+  "video": null,
+  "notes": "Very quad-dominant with little load on the spine."
+ },
+ {
+  "id": "beltsquat",
+  "name": "Belt squat",
+  "aliases": [
+   "Belt squat machine",
+   "Hip belt squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Belt squat machine"
+  ],
+  "req": "pendulum",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "8–12",
+  "form_cues": [
+   "Attach the belt low around your hips and stand tall.",
+   "Squat down keeping torso upright.",
+   "Drive up through mid-foot."
+  ],
+  "common_mistakes": [
+   "Leaning forward.",
+   "Belt riding up onto the lower back."
+  ],
+  "regressions": [
+   "Goblet squat"
+  ],
+  "progressions": [
+   "Barbell back squat"
+  ],
+  "safety": "Great option when the spine needs a break; unhook the belt only when the lever is racked.",
+  "video": null,
+  "notes": "Loads the legs without compressing the spine."
+ },
+ {
+  "id": "beltmarch",
+  "name": "Belt squat march",
+  "aliases": [
+   "Belt squat marching"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Endurance",
+   "Conditioning"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Calves"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Belt squat machine"
+  ],
+  "req": "pendulum",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec",
+  "form_cues": [
+   "Stand tall with the belt loaded and knees soft.",
+   "March in place, lifting knees to hip height.",
+   "Keep hips level and steady."
+  ],
+  "common_mistakes": [
+   "Shuffling feet instead of driving knees.",
+   "Leaning back."
+  ],
+  "regressions": [
+   "Belt squat"
+  ],
+  "progressions": [],
+  "safety": "Keep the load moderate and stop if form breaks.",
+  "video": null,
+  "notes": "A conditioning and hip-stability finisher."
+ },
+ {
+  "id": "vsquat",
+  "name": "V-squat",
+  "aliases": [
+   "V-squat machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "V-squat machine"
+  ],
+  "req": "hacksquat",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Stand on the platform with shoulders under the pads.",
+   "Squat down with a slight lean following the machine's arc.",
+   "Press up through the whole foot."
+  ],
+  "common_mistakes": [
+   "Heels lifting.",
+   "Short range."
+  ],
+  "regressions": [
+   "Leg press"
+  ],
+  "progressions": [
+   "Hack squat"
+  ],
+  "safety": "Use the safety catches.",
+  "video": null,
+  "notes": "No exact app gear id; nearest is the hack squat machine."
+ },
+ {
+  "id": "legext",
+  "name": "Leg extension",
+  "aliases": [
+   "Leg extension machine",
+   "Quad extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Beginner-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Leg extension machine"
+  ],
+  "req": "legext",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Line your knee up with the pivot and set the pad on your lower shins.",
+   "Extend fully and squeeze the quads.",
+   "Lower slowly over two to three seconds."
+  ],
+  "common_mistakes": [
+   "Swinging the weight up.",
+   "Hips lifting off the seat."
+  ],
+  "regressions": [
+   "Multi-gym leg extension"
+  ],
+  "progressions": [
+   "Single-leg leg extension"
+  ],
+  "safety": "Use moderate loads if you have knee pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "salegext",
+  "name": "Single-leg leg extension",
+  "aliases": [
+   "One-leg leg extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Leg extension machine"
+  ],
+  "req": "legext",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Work one leg at a time with the other relaxed.",
+   "Extend fully and pause.",
+   "Lower slowly."
+  ],
+  "common_mistakes": [
+   "Twisting the hips.",
+   "Rushing the lowering."
+  ],
+  "regressions": [
+   "Leg extension"
+  ],
+  "progressions": [],
+  "safety": "Go lighter than half your two-leg weight to start.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "legcurl",
+  "name": "Lying leg curl",
+  "aliases": [
+   "Prone leg curl",
+   "Lying hamstring curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Lying leg curl machine"
+  ],
+  "req": "lyingcurl",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie face down with knees just off the pad's edge.",
+   "Curl heels towards your glutes, hips pressed down.",
+   "Lower slowly until legs are almost straight."
+  ],
+  "common_mistakes": [
+   "Hips lifting off the pad.",
+   "Dropping the weight."
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Single-leg lying leg curl",
+   "Nordic hamstring curl"
+  ],
+  "safety": "Keep the hips down to protect the lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "salyingcurl",
+  "name": "Single-leg lying leg curl",
+  "aliases": [
+   "One-leg lying leg curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Lying leg curl machine"
+  ],
+  "req": "lyingcurl",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Work one leg at a time with hips square.",
+   "Curl the heel up fully.",
+   "Lower slowly."
+  ],
+  "common_mistakes": [
+   "Hip on the working side lifting.",
+   "Jerky reps."
+  ],
+  "regressions": [
+   "Lying leg curl"
+  ],
+  "progressions": [
+   "Glute-ham raise"
+  ],
+  "safety": "Start light; it's easy to strain a hamstring with jerky reps.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "seatedlegcurl",
+  "name": "Seated leg curl",
+  "aliases": [
+   "Seated hamstring curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Seated leg curl machine"
+  ],
+  "req": "seatedcurl",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lock the thigh pad down firmly.",
+   "Curl the heels down and back as far as you can.",
+   "Return slowly to almost straight legs."
+  ],
+  "common_mistakes": [
+   "Thigh pad set too loose.",
+   "Leaning back to cheat."
+  ],
+  "regressions": [
+   "Lying leg curl"
+  ],
+  "progressions": [
+   "Single-leg seated leg curl"
+  ],
+  "safety": "Lean forward slightly for more hamstring stretch.",
+  "video": null,
+  "notes": "The seated position stretches the hamstrings more than lying."
+ },
+ {
+  "id": "saseatedcurl",
+  "name": "Single-leg seated leg curl",
+  "aliases": [
+   "One-leg seated leg curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Seated leg curl machine"
+  ],
+  "req": "seatedcurl",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Lock the thigh pad down and work one leg.",
+   "Curl the heel back fully.",
+   "Return slowly."
+  ],
+  "common_mistakes": [
+   "Twisting in the seat.",
+   "Partial reps."
+  ],
+  "regressions": [
+   "Seated leg curl"
+  ],
+  "progressions": [],
+  "safety": "Keep the pad tight on the thighs.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "standlegcurl",
+  "name": "Standing leg curl",
+  "aliases": [
+   "Standing single-leg curl",
+   "Standing hamstring curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Standing leg curl machine"
+  ],
+  "req": "lyingcurl",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Stand tall with the pad behind your ankle.",
+   "Curl the heel up towards your glute.",
+   "Lower slowly without swinging."
+  ],
+  "common_mistakes": [
+   "Hip flexing forward.",
+   "Leaning the torso."
+  ],
+  "regressions": [
+   "Lying leg curl"
+  ],
+  "progressions": [
+   "Single-leg lying leg curl"
+  ],
+  "safety": "Hold the handles and keep the hips square.",
+  "video": null,
+  "notes": "No exact app gear id; nearest is the lying leg curl machine."
+ },
+ {
+  "id": "kneelcurl",
+  "name": "Kneeling leg curl",
+  "aliases": [
+   "Kneeling hamstring curl machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Kneeling leg curl machine"
+  ],
+  "req": "lyingcurl",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Kneel with forearms on the pads and heel under the roller.",
+   "Curl the heel up towards your glute.",
+   "Lower slowly."
+  ],
+  "common_mistakes": [
+   "Arching the lower back.",
+   "Using momentum."
+  ],
+  "regressions": [
+   "Lying leg curl"
+  ],
+  "progressions": [
+   "Glute-ham raise"
+  ],
+  "safety": "Keep the hips steady.",
+  "video": null,
+  "notes": "No exact app gear id; nearest is the lying leg curl machine."
+ },
+ {
+  "id": "calf",
+  "name": "Standing calf raise",
+  "aliases": [
+   "Standing calf raise machine",
+   "Machine calf raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Standing calf raise machine"
+  ],
+  "req": "standcalf",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "10–15",
+  "form_cues": [
+   "Stand with balls of feet on the edge and shoulders under the pads.",
+   "Rise as high as you can and pause.",
+   "Lower slowly to a deep heel stretch."
+  ],
+  "common_mistakes": [
+   "Bouncing at the bottom.",
+   "Bending the knees."
+  ],
+  "regressions": [
+   "Dumbbell calf raise"
+  ],
+  "progressions": [
+   "Single-leg calf raise machine",
+   "Donkey calf raise"
+  ],
+  "safety": "Pause at the bottom to avoid Achilles strain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "slcalfmach",
+  "name": "Single-leg calf raise machine",
+  "aliases": [
+   "One-leg machine calf raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Standing calf raise machine"
+  ],
+  "req": "standcalf",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Stand on one foot on the edge.",
+   "Rise high and pause at the top.",
+   "Lower slowly to a full stretch."
+  ],
+  "common_mistakes": [
+   "Bending the knee.",
+   "Short range."
+  ],
+  "regressions": [
+   "Standing calf raise"
+  ],
+  "progressions": [],
+  "safety": "Keep a light grip on the handles for balance.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "seatedcalf",
+  "name": "Seated calf raise",
+  "aliases": [
+   "Seated calf raise machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves (soleus)"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Seated calf raise machine"
+  ],
+  "req": "seatcalf",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "12–15",
+  "form_cues": [
+   "Set the pad snug on your lower thighs.",
+   "Rise high onto the balls of your feet.",
+   "Lower slowly to a deep stretch."
+  ],
+  "common_mistakes": [
+   "Bouncing reps.",
+   "Partial range."
+  ],
+  "regressions": [
+   "Dumbbell calf raise"
+  ],
+  "progressions": [
+   "Single-leg seated calf raise"
+  ],
+  "safety": "Release the safety lever only once the pad is set.",
+  "video": null,
+  "notes": "Bent knees bias the soleus."
+ },
+ {
+  "id": "saseatcalf",
+  "name": "Single-leg seated calf raise",
+  "aliases": [
+   "One-leg seated calf raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves (soleus)"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Seated calf raise machine"
+  ],
+  "req": "seatcalf",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Place one foot on the platform under the pad.",
+   "Rise as high as possible.",
+   "Lower slowly to a deep stretch."
+  ],
+  "common_mistakes": [
+   "Bouncing.",
+   "Leaning onto the pad."
+  ],
+  "regressions": [
+   "Seated calf raise"
+  ],
+  "progressions": [],
+  "safety": "Keep the pad secure.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "donkeycalf",
+  "name": "Donkey calf raise",
+  "aliases": [
+   "Donkey calf raise machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Donkey calf raise machine"
+  ],
+  "req": "standcalf",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Hinge forward with hips under the pad and back flat.",
+   "Rise high on your toes.",
+   "Lower to a deep stretch."
+  ],
+  "common_mistakes": [
+   "Rounding the back.",
+   "Short reps."
+  ],
+  "regressions": [
+   "Standing calf raise"
+  ],
+  "progressions": [],
+  "safety": "Keep the spine neutral.",
+  "video": null,
+  "notes": "No exact app gear id; nearest is the standing calf machine."
+ },
+ {
+  "id": "hacksqcalf",
+  "name": "Hack squat calf raise",
+  "aliases": [
+   "Calf raise on hack squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Hack squat machine"
+  ],
+  "req": "hacksquat",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand with balls of feet on the platform edge.",
+   "Rise high and pause.",
+   "Lower slowly."
+  ],
+  "common_mistakes": [
+   "Bending the knees.",
+   "Bouncing."
+  ],
+  "regressions": [
+   "Standing calf raise"
+  ],
+  "progressions": [
+   "Donkey calf raise"
+  ],
+  "safety": "Watch foot placement on the edge.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "adduct",
+  "name": "Hip adduction machine",
+  "aliases": [
+   "Inner thigh machine",
+   "Adductor machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Adductors"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Hip abductor / adductor machine"
+  ],
+  "req": "abductor",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Sit tall with pads on the inside of your knees.",
+   "Squeeze the legs together.",
+   "Open slowly to a comfortable stretch."
+  ],
+  "common_mistakes": [
+   "Letting the weight snap open.",
+   "Leaning forward."
+  ],
+  "regressions": [],
+  "progressions": [
+   "Wide-stance leg press"
+  ],
+  "safety": "Don't force a stretch past what's comfortable.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "abduct",
+  "name": "Hip abduction machine",
+  "aliases": [
+   "Outer thigh machine",
+   "Abductor machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glute medius",
+   "Glute minimus"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Hip abductor / adductor machine"
+  ],
+  "req": "abductor",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Sit tall with pads on the outside of your knees.",
+   "Push the legs apart.",
+   "Return slowly."
+  ],
+  "common_mistakes": [
+   "Using momentum.",
+   "Bouncing reps."
+  ],
+  "regressions": [
+   "Banded lateral walk"
+  ],
+  "progressions": [
+   "Leaning hip abduction"
+  ],
+  "safety": "Keep the movement smooth.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "abductlean",
+  "name": "Leaning hip abduction",
+  "aliases": [
+   "Forward-lean abduction",
+   "Glute-focus hip abduction"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glute max (upper)",
+   "Glute medius"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Hip abductor / adductor machine"
+  ],
+  "req": "abductor",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Sit and lean forward from the hips, holding the frame.",
+   "Push the knees out.",
+   "Return slowly."
+  ],
+  "common_mistakes": [
+   "Rounding the back.",
+   "Using momentum."
+  ],
+  "regressions": [
+   "Hip abduction machine"
+  ],
+  "progressions": [
+   "Multi-hip abduction"
+  ],
+  "safety": "Keep the back flat.",
+  "video": null,
+  "notes": "Leaning forward shifts work towards the upper glute max."
+ },
+ {
+  "id": "multihipabd",
+  "name": "Multi-hip abduction",
+  "aliases": [
+   "Standing hip abduction machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glute medius"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Multi-hip machine"
+  ],
+  "req": "abductor",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Stand tall with the pad on the outside of your thigh.",
+   "Lift the leg sideways.",
+   "Lower slowly."
+  ],
+  "common_mistakes": [
+   "Leaning the torso.",
+   "Swinging."
+  ],
+  "regressions": [
+   "Hip abduction machine"
+  ],
+  "progressions": [],
+  "safety": "Hold the handles for balance.",
+  "video": null,
+  "notes": "No exact app gear id; nearest is the abductor machine."
+ },
+ {
+  "id": "multihipext",
+  "name": "Multi-hip glute extension",
+  "aliases": [
+   "Standing hip extension machine"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Multi-hip machine"
+  ],
+  "req": "glutekick",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Stand tall with the pad behind your thigh.",
+   "Drive the leg back.",
+   "Return slowly."
+  ],
+  "common_mistakes": [
+   "Arching the lower back.",
+   "Swinging."
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Glute kickback machine"
+  ],
+  "safety": "Brace the core.",
+  "video": null,
+  "notes": "No exact app gear id; nearest is the glute kickback machine."
+ },
+ {
+  "id": "hipthrustm",
+  "name": "Hip thrust machine",
+  "aliases": [
+   "Glute drive machine",
+   "Machine hip thrust"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Hip thrust machine"
+  ],
+  "req": "hipthrustm",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "8–12",
+  "form_cues": [
+   "Set the belt across your hips and feet flat.",
+   "Drive hips up until body is straight.",
+   "Lower slowly."
+  ],
+  "common_mistakes": [
+   "Overarching the lower back.",
+   "Feet set too far forward."
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Barbell hip thrust"
+  ],
+  "safety": "Tuck the chin and keep ribs down.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "slhipthrustm",
+  "name": "Single-leg hip thrust machine",
+  "aliases": [
+   "One-leg machine hip thrust"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Hip thrust machine"
+  ],
+  "req": "hipthrustm",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Set up as normal and lift one foot off.",
+   "Drive the hips up through the planted heel.",
+   "Lower slowly."
+  ],
+  "common_mistakes": [
+   "Hips tilting.",
+   "Arching."
+  ],
+  "regressions": [
+   "Hip thrust machine"
+  ],
+  "progressions": [
+   "Barbell hip thrust"
+  ],
+  "safety": "Use much lighter load than two-leg.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "glutekickm",
+  "name": "Glute kickback machine",
+  "aliases": [
+   "Machine glute kickback"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Glute kickback machine"
+  ],
+  "req": "glutekick",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Set the pad behind your knee or foot.",
+   "Drive the leg back and up.",
+   "Return slowly."
+  ],
+  "common_mistakes": [
+   "Arching the back.",
+   "Swinging."
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Hip thrust machine"
+  ],
+  "safety": "Brace the core to protect the lower back.",
+  "video": null,
+  "notes": ""
+ }
+]

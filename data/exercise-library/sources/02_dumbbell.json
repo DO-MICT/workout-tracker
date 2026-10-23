@@ -1,0 +1,5604 @@
+[
+ {
+  "id": "dbfloorpress",
+  "name": "Dumbbell floor press",
+  "aliases": [
+   "DB floor press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Lie on your back, knees bent, dumbbells over your chest.",
+   "Lower until your upper arms touch the floor, then pause.",
+   "Press straight up and squeeze your chest at the top."
+  ],
+  "common_mistakes": [
+   "Bouncing the elbows off the floor",
+   "Flaring elbows out to 90°"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Flat dumbbell press"
+  ],
+  "safety": "Lay the dumbbells down at your sides, don't drop them over your face.",
+  "video": null,
+  "notes": "Great no-bench option; the shorter range is kind to cranky shoulders."
+ },
+ {
+  "id": "dbfloorfly",
+  "name": "Dumbbell floor fly",
+  "aliases": [
+   "Floor fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Lie on the floor with a soft bend in your elbows.",
+   "Open your arms wide until elbows lightly touch the floor.",
+   "Hug the weights back up over your chest."
+  ],
+  "common_mistakes": [
+   "Bending the elbows into a press",
+   "Going too heavy"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Dumbbell fly"
+  ],
+  "safety": "Use light weights and keep the elbow bend fixed.",
+  "video": null,
+  "notes": "The floor stops the stretch, so it is safer than a bench fly for beginners."
+ },
+ {
+  "id": "dbstandpress",
+  "name": "Standing dumbbell shoulder press",
+  "aliases": [
+   "Standing DB overhead press",
+   "Dumbbell military press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Upper traps",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Stand tall, dumbbells at shoulder height, palms forward.",
+   "Squeeze glutes and abs, then press straight overhead.",
+   "Lower with control back to your shoulders."
+  ],
+  "common_mistakes": [
+   "Leaning back to finish the rep",
+   "Pressing the weights forward instead of up"
+  ],
+  "regressions": [
+   "Seated dumbbell shoulder press"
+  ],
+  "progressions": [
+   "Dumbbell push press"
+  ],
+  "safety": "Keep your ribs down so your lower back doesn't arch.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "arnold",
+  "name": "Arnold press",
+  "aliases": [
+   "Arnold dumbbell press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Upper traps"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Start with dumbbells at chin height, palms facing you.",
+   "Rotate palms forward as you press overhead.",
+   "Reverse the turn on the way down."
+  ],
+  "common_mistakes": [
+   "Rushing the rotation",
+   "Arching the lower back"
+  ],
+  "regressions": [
+   "Seated dumbbell shoulder press"
+  ],
+  "progressions": [],
+  "safety": "Go lighter than your normal press; the rotation loads the shoulder more.",
+  "video": null,
+  "notes": "Usually done seated on an upright bench; standing works too."
+ },
+ {
+  "id": "lateral",
+  "name": "Dumbbell lateral raise",
+  "aliases": [
+   "Side raise",
+   "Side lateral raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Upper traps",
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand tall with a slight bend in your elbows.",
+   "Raise the weights out to the sides to shoulder height.",
+   "Lower slowly over two to three seconds."
+  ],
+  "common_mistakes": [
+   "Swinging the body for momentum",
+   "Shrugging the shoulders up"
+  ],
+  "regressions": [
+   "Band lateral raise"
+  ],
+  "progressions": [
+   "Leaning single-arm lateral raise",
+   "Cable lateral raise"
+  ],
+  "safety": "Stop at shoulder height if you get any pinching.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbleanlateral",
+  "name": "Leaning single-arm lateral raise",
+  "aliases": [
+   "Lean-away lateral raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Upper traps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbell",
+   "Sturdy post or rack"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Hold a post and lean away with your arm straight.",
+   "Raise the dumbbell out to the side to shoulder height.",
+   "Lower slowly and keep the lean steady."
+  ],
+  "common_mistakes": [
+   "Turning it into an upright row",
+   "Swinging"
+  ],
+  "regressions": [
+   "Dumbbell lateral raise"
+  ],
+  "progressions": [
+   "Lying side lateral raise"
+  ],
+  "safety": "Hold something solid that will not move when you lean on it.",
+  "video": null,
+  "notes": "The lean keeps tension on the side delt at the bottom of the rep."
+ },
+ {
+  "id": "frontraise",
+  "name": "Dumbbell front raise",
+  "aliases": [
+   "DB front raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts"
+  ],
+  "secondary_muscles": [
+   "Upper chest",
+   "Serratus"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold dumbbells in front of your thighs, palms down.",
+   "Raise to eye level with straight but soft arms.",
+   "Lower slowly without swinging back."
+  ],
+  "common_mistakes": [
+   "Leaning back to lift the weight",
+   "Raising far above head height"
+  ],
+  "regressions": [
+   "Band front raise"
+  ],
+  "progressions": [
+   "Plate front raise"
+  ],
+  "safety": "Keep it light; front delts already get lots of work from pressing.",
+  "video": null,
+  "notes": "Alternate arms or use a neutral grip if your shoulders feel pinchy."
+ },
+ {
+  "id": "dbrearfly",
+  "name": "Bent-over dumbbell reverse fly",
+  "aliases": [
+   "Bent-over rear delt raise",
+   "Rear delt fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Middle traps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Hinge forward until your chest is nearly parallel to the floor.",
+   "With soft elbows, raise the weights out wide.",
+   "Pause, then lower without letting your torso bob."
+  ],
+  "common_mistakes": [
+   "Using the back to swing the weights",
+   "Squeezing the shoulder blades instead of moving the arms"
+  ],
+  "regressions": [
+   "Band pull-apart"
+  ],
+  "progressions": [
+   "Chest-supported dumbbell reverse fly"
+  ],
+  "safety": "Keep a flat back and brace; sit down on a bench if your lower back tires.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbuprightrow",
+  "name": "Dumbbell upright row",
+  "aliases": [
+   "DB upright row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts",
+   "Upper traps"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Front delts"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold dumbbells in front of your thighs.",
+   "Lead with your elbows and lift to lower-chest height.",
+   "Lower under control."
+  ],
+  "common_mistakes": [
+   "Pulling higher than shoulder height",
+   "Shrugging instead of lifting with the elbows"
+  ],
+  "regressions": [
+   "Dumbbell lateral raise"
+  ],
+  "progressions": [
+   "Dumbbell high pull"
+  ],
+  "safety": "Stop below shoulder height if you feel a pinch in the front of the shoulder.",
+  "video": null,
+  "notes": "Dumbbells let your hands move freely, which is easier on the wrists than a bar."
+ },
+ {
+  "id": "dbsapress",
+  "name": "Single-arm dumbbell overhead press",
+  "aliases": [
+   "One-arm DB shoulder press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Obliques"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Stand tall with one dumbbell at your shoulder.",
+   "Brace your abs and press straight up without leaning.",
+   "Lower slowly back to the shoulder."
+  ],
+  "common_mistakes": [
+   "Leaning away from the weight",
+   "Flaring the ribs"
+  ],
+  "regressions": [
+   "Half-kneeling single-arm dumbbell press"
+  ],
+  "progressions": [
+   "Dumbbell push press"
+  ],
+  "safety": "Keep the free hand on your belly to feel your abs stay tight.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbhkpress",
+  "name": "Half-kneeling single-arm dumbbell press",
+  "aliases": [
+   "Half-kneeling DB press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Rehab"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Glutes",
+   "Obliques"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Dumbbell",
+   "Mat"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Kneel with the same-side knee down as the pressing arm.",
+   "Squeeze the down-side glute and stay tall.",
+   "Press up slightly in front of your head, then lower."
+  ],
+  "common_mistakes": [
+   "Arching the lower back",
+   "Shifting the hips sideways"
+  ],
+  "regressions": [
+   "Seated dumbbell shoulder press"
+  ],
+  "progressions": [
+   "Single-arm dumbbell overhead press"
+  ],
+  "safety": "Pad the down knee with a mat or folded towel.",
+  "video": null,
+  "notes": "The kneeling stance stops you cheating with the lower back."
+ },
+ {
+  "id": "dbzpress",
+  "name": "Dumbbell Z press",
+  "aliases": [
+   "Seated floor press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core",
+   "Upper traps"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Dumbbells",
+   "Mat"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Sit on the floor with legs straight out in front.",
+   "Sit tall without leaning back, dumbbells at shoulders.",
+   "Press overhead and lower with control."
+  ],
+  "common_mistakes": [
+   "Rounding or leaning back",
+   "Going too heavy"
+  ],
+  "regressions": [
+   "Seated dumbbell shoulder press"
+  ],
+  "progressions": [],
+  "safety": "If tight hamstrings round your back, bend your knees slightly or sit on a plate.",
+  "video": null,
+  "notes": "Named after strongman Zydrunas Savickas; exposes weak core and mobility."
+ },
+ {
+  "id": "dbpushpress",
+  "name": "Dumbbell push press",
+  "aliases": [
+   "DB push press"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Upper traps"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "5–8",
+  "form_cues": [
+   "Hold dumbbells at your shoulders, feet hip-width.",
+   "Dip a few inches at the knees, then drive up hard.",
+   "Use the leg drive to press overhead; lower with control."
+  ],
+  "common_mistakes": [
+   "Dipping too deep like a squat",
+   "Pressing before the legs finish"
+  ],
+  "regressions": [
+   "Standing dumbbell shoulder press"
+  ],
+  "progressions": [
+   "Dumbbell thruster"
+  ],
+  "safety": "Keep the dip short and the knees tracking over your toes.",
+  "video": null,
+  "notes": "Lets you handle more weight overhead than a strict press."
+ },
+ {
+  "id": "dbcuban",
+  "name": "Dumbbell Cuban press",
+  "aliases": [
+   "Cuban rotation press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Rehab",
+   "Warm-up"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rotator cuff",
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Side delts",
+   "Middle traps"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Upright-row light dumbbells until elbows reach shoulder height.",
+   "Rotate forearms up so your hands are over your elbows.",
+   "Press overhead, then reverse each step."
+  ],
+  "common_mistakes": [
+   "Going too heavy",
+   "Dropping elbows during the rotation"
+  ],
+  "regressions": [
+   "Side-lying dumbbell external rotation"
+  ],
+  "progressions": [],
+  "safety": "Use very light weights; this is a shoulder-health drill, not a strength test.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbextrot",
+  "name": "Side-lying dumbbell external rotation",
+  "aliases": [
+   "Side-lying external rotation"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Rehab",
+   "Isolation",
+   "Warm-up"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rotator cuff (infraspinatus, teres minor)"
+  ],
+  "secondary_muscles": [
+   "Rear delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Light dumbbell",
+   "Mat"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Lie on your side, top elbow bent 90° and pinned to your ribs.",
+   "Rotate the forearm up toward the ceiling.",
+   "Lower slowly without the elbow lifting off your side."
+  ],
+  "common_mistakes": [
+   "Letting the elbow leave the body",
+   "Using too heavy a weight"
+  ],
+  "regressions": [
+   "Band external rotation"
+  ],
+  "progressions": [
+   "Dumbbell Cuban press"
+  ],
+  "safety": "Start with 1–3 kg; stop if you feel sharp pain.",
+  "video": null,
+  "notes": "A rolled towel under the elbow helps keep good position."
+ },
+ {
+  "id": "dbluraise",
+  "name": "Dumbbell Lu raise",
+  "aliases": [
+   "Lu Xiaojun raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts",
+   "Upper traps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Serratus"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold light dumbbells at your sides, thumbs up.",
+   "Raise straight-armed out to the side and keep going overhead.",
+   "Lower slowly along the same path."
+  ],
+  "common_mistakes": [
+   "Going too heavy",
+   "Bending the elbows"
+  ],
+  "regressions": [
+   "Dumbbell lateral raise"
+  ],
+  "progressions": [],
+  "safety": "Only take it overhead if you can do so without pain.",
+  "video": null,
+  "notes": "Named after Olympic lifter Lu Xiaojun; works the top range of the shoulder."
+ },
+ {
+  "id": "dbscaption",
+  "name": "Dumbbell scaption raise",
+  "aliases": [
+   "Scaption",
+   "Y raise standing"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Rehab"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Serratus",
+   "Lower traps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand with thumbs pointing up.",
+   "Raise arms in a Y shape, about 30° in front of your sides.",
+   "Stop at shoulder height and lower slowly."
+  ],
+  "common_mistakes": [
+   "Shrugging",
+   "Lifting straight out to the side"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Dumbbell lateral raise"
+  ],
+  "safety": "Keep it light and pain-free.",
+  "video": null,
+  "notes": "Often used in shoulder rehab; the angle matches how the shoulder blade sits."
+ },
+ {
+  "id": "dbhighpull",
+  "name": "Dumbbell high pull",
+  "aliases": [
+   "DB high pull"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Upper traps",
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Biceps"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "6–8",
+  "form_cues": [
+   "Hold dumbbells in front of your thighs, hinge slightly.",
+   "Drive your hips forward explosively.",
+   "Let the pop carry the weights up, elbows high and out."
+  ],
+  "common_mistakes": [
+   "Pulling with the arms only",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Dumbbell upright row"
+  ],
+  "progressions": [
+   "Single-arm dumbbell snatch"
+  ],
+  "safety": "Keep the weights close to your body and your back flat.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbbentrow",
+  "name": "Bent-over dumbbell row",
+  "aliases": [
+   "Two-arm dumbbell row",
+   "DB bent-over row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids",
+   "Middle traps"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps",
+   "Lower back"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Hinge forward with a flat back, weights hanging under your shoulders.",
+   "Row elbows back toward your hips.",
+   "Squeeze at the top, then lower all the way."
+  ],
+  "common_mistakes": [
+   "Standing up as you row",
+   "Rounding the lower back"
+  ],
+  "regressions": [
+   "One-arm dumbbell row"
+  ],
+  "progressions": [
+   "Dumbbell gorilla row"
+  ],
+  "safety": "Brace your abs; if your lower back fatigues, switch to a supported row.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbgorillarow",
+  "name": "Dumbbell gorilla row",
+  "aliases": [
+   "Gorilla row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Unilateral"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps",
+   "Obliques",
+   "Lower back"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Stand wide, hinge forward, dumbbells on the floor between your feet.",
+   "Row one weight up while the other arm pushes into its dumbbell.",
+   "Lower and alternate sides."
+  ],
+  "common_mistakes": [
+   "Twisting the torso",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Bent-over dumbbell row"
+  ],
+  "progressions": [
+   "Renegade row"
+  ],
+  "safety": "Keep your hips level and back flat throughout.",
+  "video": null,
+  "notes": "Popular with kettlebells; dumbbells work just as well."
+ },
+ {
+  "id": "dbreardeltrow",
+  "name": "Dumbbell rear delt row",
+  "aliases": [
+   "Wide-elbow dumbbell row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts",
+   "Middle traps"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Biceps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hinge forward with palms facing your legs or behind you.",
+   "Row with elbows flared out wide, about 70–90°.",
+   "Pull until upper arms line up with your torso."
+  ],
+  "common_mistakes": [
+   "Pulling elbows to the hips like a lat row",
+   "Going too heavy"
+  ],
+  "regressions": [
+   "Bent-over dumbbell reverse fly"
+  ],
+  "progressions": [
+   "Chest-supported dumbbell row"
+  ],
+  "safety": "Keep a neutral spine and brace your core.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "shrug",
+  "name": "Dumbbell shrug",
+  "aliases": [
+   "DB shrug"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy",
+   "Home-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Upper traps"
+  ],
+  "secondary_muscles": [
+   "Levator scapulae",
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand tall with heavy dumbbells at your sides.",
+   "Shrug your shoulders straight up toward your ears.",
+   "Hold one second, then lower fully."
+  ],
+  "common_mistakes": [
+   "Rolling the shoulders",
+   "Bending the elbows"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Incline dumbbell shrug"
+  ],
+  "safety": "Keep your neck neutral; don't jut your chin forward.",
+  "video": null,
+  "notes": "Use straps if grip gives out before your traps."
+ },
+ {
+  "id": "dbdeadlift",
+  "name": "Dumbbell deadlift",
+  "aliases": [
+   "DB deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Lower back"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Upper back",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Stand with dumbbells at your sides or in front of your shins.",
+   "Push hips back and bend knees until weights reach mid-shin.",
+   "Stand up by driving through your feet and squeezing your glutes."
+  ],
+  "common_mistakes": [
+   "Rounding the back",
+   "Letting the weights drift away from your legs"
+  ],
+  "regressions": [
+   "Kettlebell deadlift"
+  ],
+  "progressions": [
+   "Dumbbell Romanian deadlift",
+   "Trap bar deadlift"
+  ],
+  "safety": "Keep your spine neutral and brace before every rep.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbsuitcasedl",
+  "name": "Dumbbell suitcase deadlift",
+  "aliases": [
+   "Suitcase deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Quadratus lumborum",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Stand with one dumbbell at your side.",
+   "Hinge and bend knees to lower it beside your foot.",
+   "Stand up without leaning toward the weight."
+  ],
+  "common_mistakes": [
+   "Tilting the shoulders toward the dumbbell",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Dumbbell deadlift"
+  ],
+  "progressions": [
+   "Dumbbell single-leg Romanian deadlift"
+  ],
+  "safety": "Stay square and stop if you can't keep your torso upright.",
+  "video": null,
+  "notes": "Doubles as anti-lateral-flexion core training."
+ },
+ {
+  "id": "dbrdl",
+  "name": "Dumbbell Romanian deadlift",
+  "aliases": [
+   "DB RDL",
+   "Dumbbell stiff-leg deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Hypertrophy",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Stand tall, soft knees, dumbbells in front of your thighs.",
+   "Push your hips back and slide the weights down your legs.",
+   "Stop at a deep hamstring stretch, then drive hips forward."
+  ],
+  "common_mistakes": [
+   "Squatting the weight down",
+   "Rounding the back to go lower"
+  ],
+  "regressions": [
+   "Dumbbell deadlift"
+  ],
+  "progressions": [
+   "Dumbbell B-stance Romanian deadlift",
+   "Barbell Romanian deadlift"
+  ],
+  "safety": "Only go as low as you can with a flat back.",
+  "video": null,
+  "notes": "Strict stiff-leg version: knees nearly straight and weights to the floor."
+ },
+ {
+  "id": "dbbstance",
+  "name": "Dumbbell B-stance Romanian deadlift",
+  "aliases": [
+   "Kickstand RDL",
+   "Staggered-stance RDL"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Adductors"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Put most weight on the front leg, back toes lightly down beside its heel.",
+   "Hinge hips back with a flat back.",
+   "Drive through the front heel to stand tall."
+  ],
+  "common_mistakes": [
+   "Pushing off the back foot",
+   "Rotating the hips open"
+  ],
+  "regressions": [
+   "Dumbbell Romanian deadlift"
+  ],
+  "progressions": [
+   "Single-leg Romanian deadlift"
+  ],
+  "safety": "Keep the back foot as a kickstand for balance only.",
+  "video": null,
+  "notes": "Bridge between two-leg and single-leg RDLs."
+ },
+ {
+  "id": "slrdl",
+  "name": "Single-leg Romanian deadlift",
+  "aliases": [
+   "Dumbbell single-leg RDL",
+   "SLDL"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Balance"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Adductors",
+   "Foot and ankle stabilisers"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells|kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Stand on one leg with a soft knee, weight in the opposite hand.",
+   "Hinge forward as your free leg reaches straight back.",
+   "Keep hips square and return to standing."
+  ],
+  "common_mistakes": [
+   "Opening the hip toward the ceiling",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Dumbbell B-stance Romanian deadlift"
+  ],
+  "progressions": [],
+  "safety": "Use a wall or rack with your free hand if balance is shaky.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbcurl",
+  "name": "Dumbbell curl",
+  "aliases": [
+   "Standing DB curl",
+   "Alternating dumbbell curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy",
+   "Home-friendly"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis",
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Stand tall, elbows tucked at your sides, palms forward.",
+   "Curl up and squeeze at the top.",
+   "Lower slowly until your arms are fully straight."
+  ],
+  "common_mistakes": [
+   "Swinging the torso",
+   "Letting elbows drift forward"
+  ],
+  "regressions": [
+   "Band curl"
+  ],
+  "progressions": [
+   "Incline dumbbell curl",
+   "Dumbbell spider curl"
+  ],
+  "safety": "Keep wrists neutral; drop the weight if you have to swing it.",
+  "video": null,
+  "notes": "Curl both arms together or alternate them."
+ },
+ {
+  "id": "hammer",
+  "name": "Hammer curl",
+  "aliases": [
+   "Dumbbell hammer curl",
+   "Neutral-grip curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy",
+   "Home-friendly"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Brachialis",
+   "Brachioradialis"
+  ],
+  "secondary_muscles": [
+   "Biceps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold dumbbells with palms facing each other.",
+   "Curl up keeping thumbs on top.",
+   "Lower under control to full extension."
+  ],
+  "common_mistakes": [
+   "Swinging",
+   "Letting the wrists bend"
+  ],
+  "regressions": [
+   "Band curl"
+  ],
+  "progressions": [
+   "Cross-body hammer curl"
+  ],
+  "safety": "Keep elbows pinned to your sides.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbcrosshammer",
+  "name": "Cross-body hammer curl",
+  "aliases": [
+   "Pinwheel curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Brachialis",
+   "Brachioradialis"
+  ],
+  "secondary_muscles": [
+   "Biceps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Hold dumbbells with thumbs up.",
+   "Curl one weight across your body toward the opposite shoulder.",
+   "Lower slowly and alternate."
+  ],
+  "common_mistakes": [
+   "Twisting the torso",
+   "Lifting the elbow forward"
+  ],
+  "regressions": [
+   "Hammer curl"
+  ],
+  "progressions": [],
+  "safety": "Keep the shoulder still; only the forearm moves.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbzottman",
+  "name": "Zottman curl",
+  "aliases": [
+   "Dumbbell Zottman curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps",
+   "Brachioradialis"
+  ],
+  "secondary_muscles": [
+   "Brachialis",
+   "Wrist extensors"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Curl up with palms facing up.",
+   "At the top, turn palms down.",
+   "Lower slowly with palms down, then turn back at the bottom."
+  ],
+  "common_mistakes": [
+   "Rushing the lowering phase",
+   "Using a weight too heavy for the palms-down part"
+  ],
+  "regressions": [
+   "Dumbbell curl"
+  ],
+  "progressions": [],
+  "safety": "Pick a weight you can control on the way down.",
+  "video": null,
+  "notes": "Trains biceps up and forearms on the way down."
+ },
+ {
+  "id": "dbrevcurl",
+  "name": "Dumbbell reverse curl",
+  "aliases": [
+   "Overhand dumbbell curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Brachioradialis",
+   "Brachialis"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Wrist extensors"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Hold dumbbells with palms facing down.",
+   "Curl up keeping wrists straight.",
+   "Lower slowly."
+  ],
+  "common_mistakes": [
+   "Letting wrists drop",
+   "Swinging"
+  ],
+  "regressions": [
+   "Hammer curl"
+  ],
+  "progressions": [
+   "Zottman curl"
+  ],
+  "safety": "Go light; the overhand grip limits the load.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbconc",
+  "name": "Concentration curl",
+  "aliases": [
+   "Dumbbell concentration curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbell",
+   "Bench or chair"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Sit with your elbow braced on your inner thigh.",
+   "Curl the weight toward your shoulder.",
+   "Squeeze, then lower to full extension."
+  ],
+  "common_mistakes": [
+   "Lifting the elbow off the thigh",
+   "Leaning back"
+  ],
+  "regressions": [
+   "Dumbbell curl"
+  ],
+  "progressions": [
+   "Dumbbell spider curl"
+  ],
+  "safety": "Use a stable seat; any bench or chair works.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbwaitercurl",
+  "name": "Dumbbell waiter curl",
+  "aliases": [
+   "Waiter's curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis",
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Cup one end of a dumbbell in both palms, like a tray.",
+   "Curl it up keeping elbows by your sides.",
+   "Lower slowly without the dumbbell tipping."
+  ],
+  "common_mistakes": [
+   "Swinging",
+   "Letting elbows flare"
+  ],
+  "regressions": [
+   "Dumbbell curl"
+  ],
+  "progressions": [],
+  "safety": "Hold the dumbbell securely so it can't slip out.",
+  "video": null,
+  "notes": "Keeps the biceps under tension at the top."
+ },
+ {
+  "id": "dbohext",
+  "name": "Overhead dumbbell extension",
+  "aliases": [
+   "Two-hand overhead DB extension",
+   "Seated dumbbell French press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy",
+   "Home-friendly"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps (long head)"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold one dumbbell overhead with both hands under the top plate.",
+   "Lower it behind your head, elbows pointing up.",
+   "Straighten your arms fully at the top."
+  ],
+  "common_mistakes": [
+   "Elbows flaring wide",
+   "Arching the lower back"
+  ],
+  "regressions": [
+   "Band pushdown"
+  ],
+  "progressions": [
+   "Single-arm overhead dumbbell extension"
+  ],
+  "safety": "Sit down with back support if your lower back arches.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbsaohext",
+  "name": "Single-arm overhead dumbbell extension",
+  "aliases": [
+   "One-arm overhead triceps extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps (long head)"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Hold a dumbbell overhead, arm straight.",
+   "Lower it behind your head, elbow pointing up.",
+   "Extend back up; support the elbow with your free hand if needed."
+  ],
+  "common_mistakes": [
+   "Elbow drifting out",
+   "Going too heavy"
+  ],
+  "regressions": [
+   "Overhead dumbbell extension"
+  ],
+  "progressions": [],
+  "safety": "Lower slowly to protect the elbow.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbkickback",
+  "name": "Dumbbell triceps kickback",
+  "aliases": [
+   "Triceps kickback"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Rear delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Hinge forward and pin upper arms by your sides.",
+   "Straighten your elbows to push the weights back.",
+   "Pause at full lockout, then lower slowly."
+  ],
+  "common_mistakes": [
+   "Swinging the upper arm",
+   "Not reaching full lockout"
+  ],
+  "regressions": [
+   "Band pushdown"
+  ],
+  "progressions": [
+   "Rope pushdown"
+  ],
+  "safety": "Keep your back flat; support one hand on a bench if needed.",
+  "video": null,
+  "notes": "Can be done one arm at a time with a hand on a bench."
+ },
+ {
+  "id": "wristcurl",
+  "name": "Wrist curl",
+  "aliases": [
+   "Dumbbell wrist curl",
+   "Seated wrist curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Wrist flexors"
+  ],
+  "secondary_muscles": [
+   "Grip"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells",
+   "Bench or knee support"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Rest forearms on your thighs or a bench, palms up, wrists off the edge.",
+   "Let the dumbbells roll down toward your fingers.",
+   "Curl your wrists up as high as you can."
+  ],
+  "common_mistakes": [
+   "Lifting the forearms",
+   "Bouncing"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Wrist roller"
+  ],
+  "safety": "Use light weights and smooth reps.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbrevwrist",
+  "name": "Reverse wrist curl",
+  "aliases": [
+   "Dumbbell wrist extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Rehab"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Wrist extensors"
+  ],
+  "secondary_muscles": [
+   "Brachioradialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells",
+   "Bench or knee support"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Rest forearms on your thighs, palms down, wrists off the edge.",
+   "Lift the backs of your hands toward the ceiling.",
+   "Lower slowly."
+  ],
+  "common_mistakes": [
+   "Going too heavy",
+   "Moving the forearm"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Dumbbell reverse curl"
+  ],
+  "safety": "Very light weights are enough; this can help with tennis elbow rehab.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbpronsup",
+  "name": "Dumbbell pronation and supination",
+  "aliases": [
+   "Forearm rotations",
+   "Dumbbell wrist rotations"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Rehab"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Pronators",
+   "Supinators"
+  ],
+  "secondary_muscles": [
+   "Brachioradialis"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Rest your forearm on your thigh, hold one end of a dumbbell.",
+   "Slowly rotate palm up, then palm down.",
+   "Keep the forearm still the whole time."
+  ],
+  "common_mistakes": [
+   "Moving the elbow",
+   "Using a weight that's too heavy"
+  ],
+  "regressions": [],
+  "progressions": [],
+  "safety": "Holding further from the end makes it harder; start close.",
+  "video": null,
+  "notes": "A hammer works if you don't have a light dumbbell."
+ },
+ {
+  "id": "farmer",
+  "name": "Farmer's carry",
+  "aliases": [
+   "Dumbbell farmer's walk",
+   "Farmer's walk"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Endurance",
+   "Strongman"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Forearms",
+   "Grip",
+   "Upper traps"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Glutes",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Carry",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells|kettlebells|trapbar",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–40 m",
+  "form_cues": [
+   "Pick up heavy dumbbells with a flat back.",
+   "Stand tall, shoulders down, and walk with short steps.",
+   "Set them down with control at the end."
+  ],
+  "common_mistakes": [
+   "Leaning or swaying",
+   "Shrugging up"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Suitcase carry"
+  ],
+  "safety": "Clear your path and deadlift the weights down, don't drop them.",
+  "video": null,
+  "notes": "Track the weight per hand; distance or time goes in the reps."
+ },
+ {
+  "id": "dbpinchhold",
+  "name": "Dumbbell pinch hold",
+  "aliases": [
+   "Dumbbell head pinch",
+   "Hex dumbbell pinch grip"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Grip (thumb and fingers)"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Hex dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–30 sec",
+  "form_cues": [
+   "Grab a hex dumbbell by one end with fingers and thumb only.",
+   "Stand and hold it at your side.",
+   "Squeeze hard until time is up."
+  ],
+  "common_mistakes": [
+   "Letting the palm touch",
+   "Holding over your feet"
+  ],
+  "regressions": [
+   "Farmer's carry"
+  ],
+  "progressions": [],
+  "safety": "Hold it beside your foot, not over it, in case it slips.",
+  "video": null,
+  "notes": "Pinching two plates together is a common alternative."
+ },
+ {
+  "id": "goblet",
+  "name": "Goblet squat",
+  "aliases": [
+   "Dumbbell goblet squat",
+   "Kettlebell goblet squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Core",
+   "Upper back"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells|kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold one dumbbell vertically against your chest.",
+   "Sit down between your knees, chest tall.",
+   "Drive up through your whole foot."
+  ],
+  "common_mistakes": [
+   "Heels lifting",
+   "Knees caving in"
+  ],
+  "regressions": [
+   "Bodyweight squat",
+   "Box squat"
+  ],
+  "progressions": [
+   "Dumbbell front squat",
+   "Front squat"
+  ],
+  "safety": "Keep your heels down; stop if your knees hurt.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbsquat",
+  "name": "Dumbbell squat",
+  "aliases": [
+   "Dumbbell squat at sides",
+   "DB suitcase squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Hamstrings",
+   "Forearms"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold dumbbells at your sides, feet shoulder-width.",
+   "Squat down keeping your chest up and knees over toes.",
+   "Stand by pushing the floor away."
+  ],
+  "common_mistakes": [
+   "Rounding forward",
+   "Knees caving in"
+  ],
+  "regressions": [
+   "Goblet squat"
+  ],
+  "progressions": [
+   "Dumbbell front squat"
+  ],
+  "safety": "Keep the weights hanging straight; don't let them hit your knees.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbfrontsquat",
+  "name": "Dumbbell front squat",
+  "aliases": [
+   "Front-rack dumbbell squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Upper back",
+   "Adductors"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Rest one end of each dumbbell on your shoulders, elbows high.",
+   "Squat down keeping your torso upright.",
+   "Drive up without letting the elbows drop."
+  ],
+  "common_mistakes": [
+   "Elbows dropping",
+   "Rounding the upper back"
+  ],
+  "regressions": [
+   "Goblet squat"
+  ],
+  "progressions": [
+   "Dumbbell thruster",
+   "Front squat"
+  ],
+  "safety": "Brace hard; the weight sits on your shoulders, so keep a tight upper back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbheelsquat",
+  "name": "Heels-elevated dumbbell squat",
+  "aliases": [
+   "Cyclist squat",
+   "Heel-raised goblet squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Adductors"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Dumbbells",
+   "Wedge, plate or step"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Put your heels on a wedge or small plate, feet close.",
+   "Hold dumbbells at your sides or one at your chest.",
+   "Sink straight down letting knees travel forward."
+  ],
+  "common_mistakes": [
+   "Leaning forward",
+   "Bouncing out of the bottom"
+  ],
+  "regressions": [
+   "Goblet squat"
+  ],
+  "progressions": [
+   "Dumbbell front squat"
+  ],
+  "safety": "Make sure the heel support can't slide out.",
+  "video": null,
+  "notes": "Raised heels shift work to the quads; a weight plate is a handy wedge."
+ },
+ {
+  "id": "dbsumo",
+  "name": "Dumbbell sumo squat",
+  "aliases": [
+   "Plié squat",
+   "Sumo goblet squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Adductors",
+   "Glutes",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells|kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Stand wide, toes turned out, one dumbbell hanging between your legs.",
+   "Push knees out and sit straight down.",
+   "Squeeze your glutes to stand up."
+  ],
+  "common_mistakes": [
+   "Knees caving in",
+   "Leaning forward"
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Dumbbell sumo deadlift high pull"
+  ],
+  "safety": "Stand on two plates or steps if you want the dumbbell to go deeper.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbcossack",
+  "name": "Dumbbell cossack squat",
+  "aliases": [
+   "Goblet cossack squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Mobility",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Adductors",
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells|kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "6–8 / side",
+  "form_cues": [
+   "Stand very wide holding a dumbbell at your chest.",
+   "Sit down over one leg while the other stays straight, toes up.",
+   "Push back to the middle and switch sides."
+  ],
+  "common_mistakes": [
+   "Heel of the bent leg lifting",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Lateral lunge"
+  ],
+  "progressions": [],
+  "safety": "Only go as deep as your hips allow without pain.",
+  "video": null,
+  "notes": "Great for adductor strength and hip mobility."
+ },
+ {
+  "id": "dbsplitsquat",
+  "name": "Dumbbell split squat",
+  "aliases": [
+   "Static lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Stand in a long split stance with dumbbells at your sides.",
+   "Lower your back knee straight down toward the floor.",
+   "Drive through the front foot to come up; finish all reps then switch."
+  ],
+  "common_mistakes": [
+   "Front heel lifting",
+   "Stance too short"
+  ],
+  "regressions": [
+   "Bodyweight split squat"
+  ],
+  "progressions": [
+   "Bulgarian split squat"
+  ],
+  "safety": "Pad the floor under your back knee if it touches.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dblunge",
+  "name": "Dumbbell forward lunge",
+  "aliases": [
+   "DB lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Adductors"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Stand tall, dumbbells at your sides.",
+   "Step forward and lower until both knees bend about 90°.",
+   "Push off the front foot back to standing."
+  ],
+  "common_mistakes": [
+   "Front knee caving inward",
+   "Stepping too short"
+  ],
+  "regressions": [
+   "Dumbbell reverse lunge"
+  ],
+  "progressions": [
+   "Dumbbell walking lunge"
+  ],
+  "safety": "Step far enough that your front heel stays down.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbrevlunge",
+  "name": "Dumbbell reverse lunge",
+  "aliases": [
+   "Backward lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Adductors"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Stand tall, dumbbells at your sides.",
+   "Step back and lower your back knee toward the floor.",
+   "Drive through the front heel to return."
+  ],
+  "common_mistakes": [
+   "Leaning forward too much",
+   "Landing on the back knee"
+  ],
+  "regressions": [
+   "Dumbbell split squat"
+  ],
+  "progressions": [
+   "Dumbbell deficit reverse lunge"
+  ],
+  "safety": "Easier on the knees than forward lunges.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbdefrevlunge",
+  "name": "Dumbbell deficit reverse lunge",
+  "aliases": [
+   "Elevated reverse lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Adductors"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbells",
+   "Step or plate (5–10 cm)"
+  ],
+  "req": "dumbbells,plyobox|plates",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Stand on a low step holding dumbbells.",
+   "Step back off it and sink deep.",
+   "Drive through the front foot to step back up."
+  ],
+  "common_mistakes": [
+   "Using too high a step",
+   "Wobbly front knee"
+  ],
+  "regressions": [
+   "Dumbbell reverse lunge"
+  ],
+  "progressions": [
+   "Bulgarian split squat"
+  ],
+  "safety": "Use a stable step no higher than about 10 cm.",
+  "video": null,
+  "notes": "The extra depth stretches the glutes more than a normal lunge."
+ },
+ {
+  "id": "dbwalklunge",
+  "name": "Dumbbell walking lunge",
+  "aliases": [
+   "Walking lunges with dumbbells"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Endurance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Adductors",
+   "Grip"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Hold dumbbells at your sides and step forward into a lunge.",
+   "Lower the back knee close to the floor.",
+   "Drive forward into the next step without pausing upright."
+  ],
+  "common_mistakes": [
+   "Knees caving in",
+   "Steps too short"
+  ],
+  "regressions": [
+   "Dumbbell forward lunge"
+  ],
+  "progressions": [
+   "Dumbbell overhead walking lunge"
+  ],
+  "safety": "Make sure you have a clear path.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dblatlunge",
+  "name": "Dumbbell lateral lunge",
+  "aliases": [
+   "Side lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Adductors",
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells|kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Hold a dumbbell at your chest.",
+   "Step wide to the side and sit back into that hip.",
+   "Keep the other leg straight, then push back to centre."
+  ],
+  "common_mistakes": [
+   "Knee caving inward",
+   "Heel lifting"
+  ],
+  "regressions": [
+   "Bodyweight lateral lunge"
+  ],
+  "progressions": [
+   "Dumbbell cossack squat"
+  ],
+  "safety": "Keep toes pointing forward or slightly out.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbcurtsy",
+  "name": "Dumbbell curtsy lunge",
+  "aliases": [
+   "Curtsy lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes (incl. glute medius)",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Adductors"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Hold dumbbells at your sides or one at your chest.",
+   "Step one leg diagonally behind the other, like a curtsy.",
+   "Lower, then drive through the front heel to return."
+  ],
+  "common_mistakes": [
+   "Twisting the hips too much",
+   "Front knee collapsing"
+  ],
+  "regressions": [
+   "Dumbbell reverse lunge"
+  ],
+  "progressions": [],
+  "safety": "Stop short of any knee discomfort; it's a twisting angle.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbohlunge",
+  "name": "Dumbbell overhead walking lunge",
+  "aliases": [
+   "Overhead lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Compound",
+   "Balance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Core",
+   "Upper back"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Press dumbbells overhead and lock your arms.",
+   "Walk forward in lunges keeping your arms vertical.",
+   "Keep ribs down and steps controlled."
+  ],
+  "common_mistakes": [
+   "Arms drifting forward",
+   "Arching the back"
+  ],
+  "regressions": [
+   "Dumbbell walking lunge"
+  ],
+  "progressions": [],
+  "safety": "Use light weights; lower them with control if you lose position.",
+  "video": null,
+  "notes": "Single-arm overhead version is a common CrossFit option."
+ },
+ {
+  "id": "dbohsquat",
+  "name": "Single-arm dumbbell overhead squat",
+  "aliases": [
+   "One-arm DB overhead squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Mobility",
+   "Unilateral",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Core",
+   "Upper back"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5–6 / side",
+  "form_cues": [
+   "Press one dumbbell overhead and lock the arm.",
+   "Squat down keeping the arm vertical and eyes forward.",
+   "Stand up without the weight drifting."
+  ],
+  "common_mistakes": [
+   "Bent arm",
+   "Torso twisting"
+  ],
+  "regressions": [
+   "Goblet squat"
+  ],
+  "progressions": [],
+  "safety": "Practise with no weight first; it needs good shoulder mobility.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbglutebridge",
+  "name": "Dumbbell glute bridge",
+  "aliases": [
+   "Weighted glute bridge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Dumbbell",
+   "Mat"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Lie on your back, knees bent, dumbbell resting on your hip crease.",
+   "Drive through your heels and lift your hips.",
+   "Squeeze your glutes hard at the top, then lower."
+  ],
+  "common_mistakes": [
+   "Arching the lower back at the top",
+   "Pushing through the toes"
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Dumbbell hip thrust"
+  ],
+  "safety": "Hold the dumbbell with both hands and pad it with a towel.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbslbridge",
+  "name": "Single-leg dumbbell glute bridge",
+  "aliases": [
+   "Single-leg weighted bridge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Dumbbell",
+   "Mat"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Lie down, one foot planted, other leg lifted, dumbbell on the working hip.",
+   "Push through the planted heel to raise your hips.",
+   "Keep the hips level as you lower."
+  ],
+  "common_mistakes": [
+   "Hips tilting",
+   "Arching the back"
+  ],
+  "regressions": [
+   "Dumbbell glute bridge"
+  ],
+  "progressions": [
+   "Single-leg dumbbell hip thrust"
+  ],
+  "safety": "Hold the dumbbell steady with your hand so it can't roll.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbfrogpump",
+  "name": "Dumbbell frog pump",
+  "aliases": [
+   "Weighted frog pump"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy",
+   "Home-friendly"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Dumbbell",
+   "Mat"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–30",
+  "form_cues": [
+   "Lie down, soles of the feet together, knees out wide.",
+   "Rest a dumbbell on your hips.",
+   "Drive your hips up fast and squeeze, then lower."
+  ],
+  "common_mistakes": [
+   "Arching the back",
+   "Heels sliding away"
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Dumbbell glute bridge"
+  ],
+  "safety": "Keep reps smooth; stop if your hips feel pinchy.",
+  "video": null,
+  "notes": "A high-rep glute burnout."
+ },
+ {
+  "id": "dbcalf",
+  "name": "Dumbbell calf raise",
+  "aliases": [
+   "Standing dumbbell calf raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves (gastrocnemius)"
+  ],
+  "secondary_muscles": [
+   "Soleus"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Hold dumbbells at your sides, balls of feet on a step.",
+   "Lower heels for a deep stretch.",
+   "Rise as high as you can and pause."
+  ],
+  "common_mistakes": [
+   "Bouncing",
+   "Bending the knees"
+  ],
+  "regressions": [
+   "Bodyweight calf raise"
+  ],
+  "progressions": [
+   "Single-leg dumbbell calf raise"
+  ],
+  "safety": "Hold a rail with one hand if balance is an issue.",
+  "video": null,
+  "notes": "Works fine on flat floor if you have no step."
+ },
+ {
+  "id": "dbslcalf",
+  "name": "Single-leg dumbbell calf raise",
+  "aliases": [
+   "One-leg calf raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves (gastrocnemius)"
+  ],
+  "secondary_muscles": [
+   "Soleus",
+   "Foot stabilisers"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbell",
+   "Step"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–15 / side",
+  "form_cues": [
+   "Stand on one foot on a step, dumbbell in the same-side hand.",
+   "Lower the heel slowly below the step.",
+   "Push up as high as possible and pause."
+  ],
+  "common_mistakes": [
+   "Rushing the reps",
+   "Using the free hand to pull up"
+  ],
+  "regressions": [
+   "Dumbbell calf raise"
+  ],
+  "progressions": [],
+  "safety": "Lightly hold a wall for balance only.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbtiptoewalk",
+  "name": "Dumbbell tiptoe farmer's walk",
+  "aliases": [
+   "Farmer's walk on toes",
+   "Calf walk"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Endurance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Grip",
+   "Upper traps",
+   "Core"
+  ],
+  "movement_pattern": "Carry",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–30 m",
+  "form_cues": [
+   "Pick up dumbbells and rise onto the balls of your feet.",
+   "Walk with short steps without letting heels touch.",
+   "Stay tall and set the weights down with control."
+  ],
+  "common_mistakes": [
+   "Heels dropping",
+   "Leaning forward"
+  ],
+  "regressions": [
+   "Dumbbell calf raise"
+  ],
+  "progressions": [],
+  "safety": "Use moderate weights; rolling an ankle is the main risk.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbtrap3",
+  "name": "Bent-over dumbbell trap-3 raise",
+  "aliases": [
+   "Trap 3 raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Rehab"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lower traps"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Rotator cuff"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Light dumbbell"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Hinge forward, one hand on a bench or thigh.",
+   "Raise a light dumbbell up and out at about 45°, thumb up.",
+   "Pull the shoulder blade down and back; lower slowly."
+  ],
+  "common_mistakes": [
+   "Shrugging",
+   "Going too heavy"
+  ],
+  "regressions": [
+   "Dumbbell scaption raise"
+  ],
+  "progressions": [
+   "Incline dumbbell Y raise"
+  ],
+  "safety": "Use 1–4 kg; it's a small muscle.",
+  "video": null,
+  "notes": "Helps posture and shoulder blade control."
+ },
+ {
+  "id": "dbthruster",
+  "name": "Dumbbell thruster",
+  "aliases": [
+   "DB squat to press"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Front delts"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core",
+   "Upper traps"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "8–10",
+  "form_cues": [
+   "Hold dumbbells at your shoulders and squat down.",
+   "Drive up hard and use the momentum to press overhead.",
+   "Lower to the shoulders as you sink into the next squat."
+  ],
+  "common_mistakes": [
+   "Pressing before you stand",
+   "Elbows dropping in the squat"
+  ],
+  "regressions": [
+   "Dumbbell front squat",
+   "Standing dumbbell shoulder press"
+  ],
+  "progressions": [
+   "Dumbbell cluster"
+  ],
+  "safety": "Keep your core braced and don't arch at the top.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbsnatch",
+  "name": "Single-arm dumbbell snatch",
+  "aliases": [
+   "DB snatch",
+   "Dumbbell power snatch"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Upper traps",
+   "Quadriceps",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 4,
+  "reps": "5 / side",
+  "form_cues": [
+   "Start with the dumbbell between your feet, hips back, flat back.",
+   "Explode up through the hips and pull the dumbbell high and close.",
+   "Punch it overhead and stand tall; lower in stages."
+  ],
+  "common_mistakes": [
+   "Pressing it up instead of pulling",
+   "Rounding the back at the start"
+  ],
+  "regressions": [
+   "Dumbbell high pull",
+   "Dumbbell hang clean"
+  ],
+  "progressions": [],
+  "safety": "Learn it light; lower the weight to the shoulder first, then the floor.",
+  "video": null,
+  "notes": "Alternate arms each rep for conditioning work."
+ },
+ {
+  "id": "dbhangclean",
+  "name": "Dumbbell hang clean",
+  "aliases": [
+   "DB hang power clean"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Upper traps"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Forearms",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "5–6",
+  "form_cues": [
+   "Hold dumbbells at mid-thigh with a flat back.",
+   "Jump the hips forward and shrug the weights up.",
+   "Drop under and catch them on your shoulders, knees soft."
+  ],
+  "common_mistakes": [
+   "Reverse-curling the weights",
+   "Catching with locked knees"
+  ],
+  "regressions": [
+   "Dumbbell high pull"
+  ],
+  "progressions": [
+   "Dumbbell squat clean",
+   "Dumbbell clean and press"
+  ],
+  "safety": "Keep the dumbbells close to your body on the way up.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbsquatclean",
+  "name": "Dumbbell squat clean",
+  "aliases": [
+   "DB clean from floor"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Upper traps",
+   "Core",
+   "Forearms"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "5",
+  "form_cues": [
+   "Start with dumbbells on the floor beside your feet.",
+   "Pull explosively and drop into a front squat to catch them.",
+   "Stand up tall with the weights on your shoulders."
+  ],
+  "common_mistakes": [
+   "Rounding the back off the floor",
+   "Catching too high and stiff"
+  ],
+  "regressions": [
+   "Dumbbell hang clean"
+  ],
+  "progressions": [
+   "Dumbbell cluster"
+  ],
+  "safety": "Brace before every pull and keep a flat back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbcleanpress",
+  "name": "Dumbbell clean and press",
+  "aliases": [
+   "DB clean and jerk",
+   "Dumbbell clean to press"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Upper traps",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "6–8",
+  "form_cues": [
+   "Hang-clean the dumbbells to your shoulders.",
+   "Re-set your feet and brace.",
+   "Press or push-press overhead, then lower to the thighs."
+  ],
+  "common_mistakes": [
+   "Rushing the press before you're stable",
+   "Arching the back overhead"
+  ],
+  "regressions": [
+   "Dumbbell hang clean",
+   "Standing dumbbell shoulder press"
+  ],
+  "progressions": [
+   "Man maker"
+  ],
+  "safety": "Lower the weights in two steps to protect your back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbcluster",
+  "name": "Dumbbell cluster",
+  "aliases": [
+   "Squat clean thruster"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Triceps",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–8",
+  "form_cues": [
+   "Clean the dumbbells from the floor into a front squat.",
+   "Drive straight up out of the squat.",
+   "Use the momentum to press overhead in one motion."
+  ],
+  "common_mistakes": [
+   "Pausing at the bottom",
+   "Pulling with a round back"
+  ],
+  "regressions": [
+   "Dumbbell thruster",
+   "Dumbbell squat clean"
+  ],
+  "progressions": [],
+  "safety": "Very demanding; scale weight and reps to keep form crisp.",
+  "video": null,
+  "notes": "A CrossFit staple: a squat clean flowing into a thruster."
+ },
+ {
+  "id": "renegade",
+  "name": "Renegade row",
+  "aliases": [
+   "Plank row",
+   "Dumbbell renegade row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Chest",
+   "Triceps",
+   "Rear delts"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Hex dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "6–8 / side",
+  "form_cues": [
+   "Get into a push-up position holding hex dumbbells, feet wide.",
+   "Row one dumbbell to your hip without twisting.",
+   "Set it down softly and alternate."
+  ],
+  "common_mistakes": [
+   "Hips rotating",
+   "Feet too close together"
+  ],
+  "regressions": [
+   "Bent-over dumbbell row",
+   "Plank"
+  ],
+  "progressions": [
+   "Man maker"
+  ],
+  "safety": "Use hex dumbbells so they can't roll and catch your wrists.",
+  "video": null,
+  "notes": "Add a push-up between rows for a harder version."
+ },
+ {
+  "id": "dbdevilpress",
+  "name": "Devil press",
+  "aliases": [
+   "Dumbbell devil press"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Cardio",
+   "Strength",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Triceps",
+   "Core",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Hex dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Do a burpee with your hands on the dumbbells.",
+   "Jump the feet in and swing both weights back between your legs.",
+   "Snap the hips to swing them straight overhead in one motion."
+  ],
+  "common_mistakes": [
+   "Rounding the back on the swing",
+   "Pressing with the arms"
+  ],
+  "regressions": [
+   "Burpees",
+   "Two-arm dumbbell snatch"
+  ],
+  "progressions": [
+   "Man maker"
+  ],
+  "safety": "Start light; the swing should come from the hips, not the lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "manmaker",
+  "name": "Man maker",
+  "aliases": [
+   "Dumbbell man maker"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Cardio",
+   "Strength",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Chest",
+   "Back",
+   "Shoulders",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core",
+   "Glutes"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Hex dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–8",
+  "form_cues": [
+   "Push-up on the dumbbells, then row each side once.",
+   "Jump the feet in and clean the weights to your shoulders.",
+   "Squat and press overhead (thruster); that's one rep."
+  ],
+  "common_mistakes": [
+   "Sagging hips in the plank",
+   "Rushing the clean with a round back"
+  ],
+  "regressions": [
+   "Renegade row",
+   "Dumbbell thruster"
+  ],
+  "progressions": [],
+  "safety": "Use hex dumbbells and a modest weight; form fades fast as you tire.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbsdhp",
+  "name": "Dumbbell sumo deadlift high pull",
+  "aliases": [
+   "SDHP"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Cardio",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Upper traps"
+  ],
+  "secondary_muscles": [
+   "Side delts",
+   "Adductors",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells|kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Stand wide holding one dumbbell by the head with both hands.",
+   "Drive through your legs and hips explosively.",
+   "Pull the dumbbell to chin height, elbows high, then lower."
+  ],
+  "common_mistakes": [
+   "Pulling with the arms only",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Dumbbell sumo squat"
+  ],
+  "progressions": [
+   "Dumbbell high pull"
+  ],
+  "safety": "Keep the dumbbell close and stop the pull below your chin.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbsumodl",
+  "name": "Dumbbell sumo deadlift",
+  "aliases": [
+   "Wide-stance DB deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Adductors",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Lower back",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells|kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Stand wide, toes out, one dumbbell on end between your feet.",
+   "Sit hips back and grab the handle with a flat back.",
+   "Push the floor apart to stand up, squeezing glutes."
+  ],
+  "common_mistakes": [
+   "Rounding the back",
+   "Knees caving in"
+  ],
+  "regressions": [
+   "Dumbbell sumo squat"
+  ],
+  "progressions": [
+   "Sumo deadlift"
+  ],
+  "safety": "Stand on two plates if the dumbbell is too low to reach with a flat back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbpress",
+  "name": "Seated dumbbell shoulder press",
+  "aliases": [
+   "Seated DB press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Upper traps"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Dumbbells",
+   "Adjustable bench (upright)"
+  ],
+  "req": "dumbbells,adjbench|flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Set the bench upright and sit with your back flat on the pad.",
+   "Start with dumbbells at ear height, elbows slightly forward.",
+   "Press up until arms are straight, then lower slowly."
+  ],
+  "common_mistakes": [
+   "Arching off the backrest",
+   "Cutting the range short at the bottom"
+  ],
+  "regressions": [
+   "Seated machine shoulder press"
+  ],
+  "progressions": [
+   "Standing dumbbell shoulder press",
+   "Arnold press"
+  ],
+  "safety": "Kick the dumbbells up off your knees one at a time to get into position.",
+  "video": null,
+  "notes": "A flat bench works too; sitting without back support adds core work."
+ },
+ {
+  "id": "flatdb",
+  "name": "Flat dumbbell press",
+  "aliases": [
+   "Dumbbell bench press",
+   "DB bench"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Dumbbells",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Lie back with feet flat and shoulder blades pinched together.",
+   "Lower the dumbbells to the sides of your chest, elbows about 45°.",
+   "Press up and slightly in until arms are straight."
+  ],
+  "common_mistakes": [
+   "Flaring elbows to 90°",
+   "Clanking the weights at the top"
+  ],
+  "regressions": [
+   "Dumbbell floor press",
+   "Push-ups"
+  ],
+  "progressions": [
+   "Incline dumbbell press",
+   "Barbell bench press"
+  ],
+  "safety": "Kick the dumbbells up from your knees and lower them back to your knees when done.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbneutralpress",
+  "name": "Neutral-grip dumbbell press",
+  "aliases": [
+   "Hammer-grip dumbbell bench press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Dumbbells",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Lie on a flat bench, palms facing each other.",
+   "Lower with elbows close to your sides.",
+   "Press straight up, keeping the dumbbells parallel."
+  ],
+  "common_mistakes": [
+   "Letting elbows flare",
+   "Bouncing at the bottom"
+  ],
+  "regressions": [
+   "Dumbbell floor press"
+  ],
+  "progressions": [
+   "Dumbbell squeeze press"
+  ],
+  "safety": "A shoulder-friendly option if regular pressing aches.",
+  "video": null,
+  "notes": "More triceps than the standard grip."
+ },
+ {
+  "id": "dbsabench",
+  "name": "Single-arm dumbbell bench press",
+  "aliases": [
+   "One-arm DB bench press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Obliques"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Dumbbell",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Lie on a bench with one dumbbell, other hand on your belly.",
+   "Lower it to your chest without twisting.",
+   "Press up while keeping your hips and shoulders flat."
+  ],
+  "common_mistakes": [
+   "Rolling toward the weight",
+   "Lifting the hips"
+  ],
+  "regressions": [
+   "Flat dumbbell press"
+  ],
+  "progressions": [],
+  "safety": "Start light; the unevenness takes getting used to.",
+  "video": null,
+  "notes": "Doubles as anti-rotation core work."
+ },
+ {
+  "id": "dbsqueeze",
+  "name": "Dumbbell squeeze press",
+  "aliases": [
+   "Hex press",
+   "Crush press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest (inner)",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Dumbbells",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie on a bench and press the dumbbells together over your chest.",
+   "Keep squeezing them together as you lower to your chest.",
+   "Press back up without letting them separate."
+  ],
+  "common_mistakes": [
+   "Letting the dumbbells drift apart",
+   "Using too much weight"
+  ],
+  "regressions": [
+   "Dumbbell floor press"
+  ],
+  "progressions": [],
+  "safety": "Hex dumbbells are easiest to squeeze; keep wrists straight.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "incdb",
+  "name": "Incline dumbbell press",
+  "aliases": [
+   "Incline DB bench press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Upper chest",
+   "Front delts"
+  ],
+  "secondary_muscles": [
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Dumbbells",
+   "Adjustable bench (incline)"
+  ],
+  "req": "dumbbells,inclinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Set the bench to about 30°, not steeper.",
+   "Lower to the upper chest with elbows slightly tucked.",
+   "Press up and slightly in, without clanking the dumbbells."
+  ],
+  "common_mistakes": [
+   "Bench set too steep",
+   "Bouncing at the bottom"
+  ],
+  "regressions": [
+   "Flat dumbbell press"
+  ],
+  "progressions": [
+   "Incline barbell press"
+  ],
+  "safety": "Lower until you feel a chest stretch, never pain in the shoulder.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbdeclinepress",
+  "name": "Decline dumbbell press",
+  "aliases": [
+   "Decline DB bench press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Lower chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Dumbbells",
+   "Decline bench"
+  ],
+  "req": "dumbbells,declinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Hook your feet under the pads and lie back.",
+   "Lower the dumbbells to your lower chest.",
+   "Press up and slightly in."
+  ],
+  "common_mistakes": [
+   "Rushing the descent",
+   "Letting the weights drift over your face"
+  ],
+  "regressions": [
+   "Flat dumbbell press"
+  ],
+  "progressions": [
+   "Decline bench press"
+  ],
+  "safety": "Have a partner hand you the dumbbells, or start with them on your thighs.",
+  "video": null,
+  "notes": "Some adjustable benches decline; otherwise use a fixed decline bench."
+ },
+ {
+  "id": "dbfly",
+  "name": "Dumbbell fly",
+  "aliases": [
+   "Flat dumbbell fly",
+   "Chest fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Biceps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Soft bend in the elbows, locked in.",
+   "Open wide until you feel a chest stretch.",
+   "Hug the weights back up over your chest."
+  ],
+  "common_mistakes": [
+   "Bending elbows into a press",
+   "Lowering too far"
+  ],
+  "regressions": [
+   "Dumbbell floor fly"
+  ],
+  "progressions": [
+   "Incline dumbbell fly"
+  ],
+  "safety": "Go light; this is a stretch move.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbinclinefly",
+  "name": "Incline dumbbell fly",
+  "aliases": [
+   "Incline fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Upper chest"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells",
+   "Adjustable bench (incline)"
+  ],
+  "req": "dumbbells,inclinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Set the bench to 30° and hold dumbbells over your upper chest.",
+   "Open your arms wide with a fixed elbow bend.",
+   "Squeeze them back together over your chest."
+  ],
+  "common_mistakes": [
+   "Turning it into a press",
+   "Going too deep"
+  ],
+  "regressions": [
+   "Dumbbell fly"
+  ],
+  "progressions": [
+   "Low-to-high cable fly"
+  ],
+  "safety": "Keep the weight light enough to control the stretch.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbdeclinefly",
+  "name": "Decline dumbbell fly",
+  "aliases": [
+   "Decline fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Lower chest"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells",
+   "Decline bench"
+  ],
+  "req": "dumbbells,declinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Secure your feet and lie back on a decline bench.",
+   "Open arms wide with soft elbows.",
+   "Bring the weights back together over your lower chest."
+  ],
+  "common_mistakes": [
+   "Bending elbows too much",
+   "Dropping too low"
+  ],
+  "regressions": [
+   "Dumbbell fly"
+  ],
+  "progressions": [],
+  "safety": "Sit up carefully at the end with the weights held close to your chest.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbpullover",
+  "name": "Dumbbell pullover",
+  "aliases": [
+   "DB pullover"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Triceps (long head)",
+   "Serratus"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbell",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie on a bench holding one dumbbell over your chest with both hands.",
+   "With slightly bent elbows, lower it back behind your head.",
+   "Pull it back over your chest using chest and lats."
+  ],
+  "common_mistakes": [
+   "Bending the elbows like a triceps extension",
+   "Over-arching the lower back"
+  ],
+  "regressions": [
+   "Straight-arm pulldown"
+  ],
+  "progressions": [],
+  "safety": "Grip the dumbbell securely and stop before your shoulders feel strained.",
+  "video": null,
+  "notes": "Lying across the bench is the classic old-school version."
+ },
+ {
+  "id": "dbrow",
+  "name": "One-arm dumbbell row",
+  "aliases": [
+   "Single-arm DB row",
+   "Bench dumbbell row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Unilateral",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps",
+   "Middle traps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Dumbbell",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–12 / side",
+  "form_cues": [
+   "Knee and hand on the bench, back flat.",
+   "Pull the dumbbell toward your hip, not your armpit.",
+   "Lower until your arm is fully straight."
+  ],
+  "common_mistakes": [
+   "Twisting the torso to lift",
+   "Shrugging the weight up"
+  ],
+  "regressions": [
+   "Bent-over dumbbell row"
+  ],
+  "progressions": [
+   "Kroc row"
+  ],
+  "safety": "Keep your neck neutral and your back flat.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbkroc",
+  "name": "Kroc row",
+  "aliases": [
+   "Heavy dumbbell row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Unilateral",
+   "Endurance"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Grip",
+   "Rear delts"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Heavy dumbbell",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "15–20 / side",
+  "form_cues": [
+   "Brace one hand on a bench, feet staggered.",
+   "Row a heavy dumbbell for high reps with a little body English.",
+   "Lower to a full stretch each rep."
+  ],
+  "common_mistakes": [
+   "Turning it into a full-body jerk",
+   "Losing the flat back"
+  ],
+  "regressions": [
+   "One-arm dumbbell row"
+  ],
+  "progressions": [],
+  "safety": "Use straps if needed and keep the lower back neutral.",
+  "video": null,
+  "notes": "Named after powerlifter Matt Kroczaleski."
+ },
+ {
+  "id": "dbchestrow",
+  "name": "Chest-supported dumbbell row",
+  "aliases": [
+   "Incline dumbbell row",
+   "Prone incline row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids",
+   "Middle traps"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Dumbbells",
+   "Adjustable bench (incline)"
+  ],
+  "req": "dumbbells,inclinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie face down on a bench set to 30–45°.",
+   "Let the dumbbells hang, then row elbows toward your hips.",
+   "Squeeze your shoulder blades and lower slowly."
+  ],
+  "common_mistakes": [
+   "Lifting your chest off the pad",
+   "Shrugging"
+  ],
+  "regressions": [
+   "One-arm dumbbell row"
+  ],
+  "progressions": [
+   "Kroc row"
+  ],
+  "safety": "A great option when your lower back is tired.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbinclinerevfly",
+  "name": "Chest-supported dumbbell reverse fly",
+  "aliases": [
+   "Incline rear delt fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Middle traps",
+   "Rhomboids"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells",
+   "Adjustable bench (incline)"
+  ],
+  "req": "dumbbells,inclinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Lie face down on an incline bench.",
+   "With soft elbows, raise the dumbbells out wide.",
+   "Pause at the top, then lower under control."
+  ],
+  "common_mistakes": [
+   "Swinging",
+   "Squeezing shoulder blades instead of moving the arms"
+  ],
+  "regressions": [
+   "Bent-over dumbbell reverse fly"
+  ],
+  "progressions": [
+   "Rear delt machine"
+  ],
+  "safety": "Use light weights; rear delts are small.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbincliney",
+  "name": "Incline dumbbell Y raise",
+  "aliases": [
+   "Prone Y raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Rehab"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Lower traps",
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Side delts",
+   "Rotator cuff"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells",
+   "Adjustable bench (incline)"
+  ],
+  "req": "dumbbells,inclinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie face down on a 30–45° incline, thumbs up.",
+   "Raise the dumbbells in a Y shape in line with your ears.",
+   "Lower slowly without shrugging."
+  ],
+  "common_mistakes": [
+   "Shrugging",
+   "Using momentum"
+  ],
+  "regressions": [
+   "Dumbbell scaption raise"
+  ],
+  "progressions": [],
+  "safety": "Use very light dumbbells (1–5 kg).",
+  "video": null,
+  "notes": "Good for posture and shoulder blade control."
+ },
+ {
+  "id": "dbinclineshrug",
+  "name": "Incline dumbbell shrug",
+  "aliases": [
+   "Prone incline shrug"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Middle traps",
+   "Upper traps"
+  ],
+  "secondary_muscles": [
+   "Rhomboids"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells",
+   "Adjustable bench (incline)"
+  ],
+  "req": "dumbbells,inclinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Lie face down on an incline bench, arms hanging.",
+   "Shrug your shoulders up and back toward each other.",
+   "Hold briefly, then lower."
+  ],
+  "common_mistakes": [
+   "Bending the elbows",
+   "Rolling the shoulders"
+  ],
+  "regressions": [
+   "Dumbbell shrug"
+  ],
+  "progressions": [],
+  "safety": "Keep your chest on the pad.",
+  "video": null,
+  "notes": "Targets the middle traps more than standing shrugs."
+ },
+ {
+  "id": "dblyinglat",
+  "name": "Lying side lateral raise",
+  "aliases": [
+   "Side-lying lateral raise",
+   "Incline side raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Supraspinatus"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbell",
+   "Adjustable bench (incline)"
+  ],
+  "req": "dumbbells,inclinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Lie on your side on an incline bench.",
+   "Raise the top arm out until it points up.",
+   "Lower slowly to below the bench line."
+  ],
+  "common_mistakes": [
+   "Going too heavy",
+   "Rotating the torso"
+  ],
+  "regressions": [
+   "Dumbbell lateral raise"
+  ],
+  "progressions": [],
+  "safety": "Use a light weight; keep it pain-free.",
+  "video": null,
+  "notes": "Loads the bottom of the lateral raise that standing raises miss."
+ },
+ {
+  "id": "inclinecurl",
+  "name": "Incline dumbbell curl",
+  "aliases": [
+   "Incline DB curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps (long head)"
+  ],
+  "secondary_muscles": [
+   "Brachialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells",
+   "Adjustable bench (incline)"
+  ],
+  "req": "dumbbells,inclinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Sit back on a 45–60° bench, arms hanging straight down.",
+   "Curl up without moving your elbows forward.",
+   "Lower all the way to a full stretch."
+  ],
+  "common_mistakes": [
+   "Bringing elbows forward",
+   "Lifting the head and shoulders off the pad"
+  ],
+  "regressions": [
+   "Dumbbell curl"
+  ],
+  "progressions": [
+   "Dumbbell spider curl"
+  ],
+  "safety": "Go lighter than normal curls; the stretch is demanding.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbinclinehammer",
+  "name": "Incline hammer curl",
+  "aliases": [
+   "Incline neutral-grip curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Brachialis",
+   "Brachioradialis"
+  ],
+  "secondary_muscles": [
+   "Biceps (long head)"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells",
+   "Adjustable bench (incline)"
+  ],
+  "req": "dumbbells,inclinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Sit back on an incline bench, palms facing in.",
+   "Curl up with thumbs leading.",
+   "Lower slowly to full stretch."
+  ],
+  "common_mistakes": [
+   "Swinging",
+   "Elbows drifting forward"
+  ],
+  "regressions": [
+   "Hammer curl"
+  ],
+  "progressions": [],
+  "safety": "Keep shoulders back on the pad.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbspidercurl",
+  "name": "Dumbbell spider curl",
+  "aliases": [
+   "Prone incline curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps (short head)"
+  ],
+  "secondary_muscles": [
+   "Brachialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells",
+   "Adjustable bench (incline)"
+  ],
+  "req": "dumbbells,inclinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie chest-down on an incline bench, arms hanging.",
+   "Curl up and squeeze hard at the top.",
+   "Lower slowly without swinging."
+  ],
+  "common_mistakes": [
+   "Moving the upper arm",
+   "Lifting the chest off the pad"
+  ],
+  "regressions": [
+   "Concentration curl"
+  ],
+  "progressions": [],
+  "safety": "Keep your chin over the top of the bench, not resting on it.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbpreacher",
+  "name": "Dumbbell preacher curl",
+  "aliases": [
+   "Single-arm DB preacher curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps (short head)"
+  ],
+  "secondary_muscles": [
+   "Brachialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbell",
+   "Preacher bench or incline bench"
+  ],
+  "req": "dumbbells,preacher|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Rest the back of your upper arm on the pad.",
+   "Curl the dumbbell up and squeeze.",
+   "Lower slowly but stop just short of locking out hard."
+  ],
+  "common_mistakes": [
+   "Dropping fast at the bottom",
+   "Lifting the elbow off the pad"
+  ],
+  "regressions": [
+   "Concentration curl"
+  ],
+  "progressions": [],
+  "safety": "Control the bottom to protect the elbow.",
+  "video": null,
+  "notes": "No preacher bench? Lean over the back of an incline bench."
+ },
+ {
+  "id": "dbskull",
+  "name": "Dumbbell skull crusher",
+  "aliases": [
+   "Lying dumbbell triceps extension",
+   "DB lying extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie on a bench, dumbbells over your shoulders, palms facing each other.",
+   "Bend the elbows to lower the weights beside your head.",
+   "Straighten your arms, keeping upper arms still."
+  ],
+  "common_mistakes": [
+   "Elbows flaring",
+   "Moving the upper arms"
+  ],
+  "regressions": [
+   "Overhead dumbbell extension"
+  ],
+  "progressions": [
+   "EZ-bar skull crusher"
+  ],
+  "safety": "Lower slowly; the weights end up near your head.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbtate",
+  "name": "Tate press",
+  "aliases": [
+   "Dumbbell Tate press",
+   "Elbows-out extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Chest"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie on a bench, dumbbells over your chest, palms toward your feet.",
+   "Bend the elbows out to lower the dumbbell ends to your chest.",
+   "Extend back up by squeezing your triceps."
+  ],
+  "common_mistakes": [
+   "Going too heavy",
+   "Letting the elbows drop toward your sides"
+  ],
+  "regressions": [
+   "Dumbbell skull crusher"
+  ],
+  "progressions": [],
+  "safety": "Use light weights and lower with control.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbcgpress",
+  "name": "Close-grip dumbbell press",
+  "aliases": [
+   "Dumbbell crush press for triceps",
+   "Neutral close-grip DB press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Dumbbells",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Lie on a bench, dumbbells touching, palms facing each other.",
+   "Lower them to your lower chest with elbows tucked.",
+   "Press straight up with the weights still touching."
+  ],
+  "common_mistakes": [
+   "Elbows flaring",
+   "Bouncing off the chest"
+  ],
+  "regressions": [
+   "Diamond push-ups"
+  ],
+  "progressions": [
+   "Close-grip bench press"
+  ],
+  "safety": "Keep the weights over your chest, not your face.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbcrossext",
+  "name": "Lying cross-body triceps extension",
+  "aliases": [
+   "Single-arm lying dumbbell extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbell",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Lie on a bench with one dumbbell straight up.",
+   "Bend the elbow so the weight lowers toward the opposite shoulder.",
+   "Extend back up."
+  ],
+  "common_mistakes": [
+   "Moving the upper arm",
+   "Going too heavy"
+  ],
+  "regressions": [
+   "Dumbbell skull crusher"
+  ],
+  "progressions": [],
+  "safety": "Lower slowly so the dumbbell doesn't hit your chest.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bss",
+  "name": "Bulgarian split squat",
+  "aliases": [
+   "Rear-foot elevated split squat",
+   "RFESS",
+   "Dumbbell Bulgarian split squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbells",
+   "Flat bench"
+  ],
+  "req": "dumbbells|calisthenics,flatbench|adjbench|plyobox",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Rest your back foot laces-down on a bench.",
+   "Lower straight down until the front thigh is near parallel.",
+   "Drive through the front heel to stand."
+  ],
+  "common_mistakes": [
+   "Front foot too close to the bench",
+   "Pushing off the back foot"
+  ],
+  "regressions": [
+   "Dumbbell split squat"
+  ],
+  "progressions": [],
+  "safety": "Find your stance with no weight first; stop if the knee hurts.",
+  "video": null,
+  "notes": "Lean forward slightly for more glute, stay upright for more quad."
+ },
+ {
+  "id": "dbffesplit",
+  "name": "Front-foot elevated split squat",
+  "aliases": [
+   "FFE split squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbells",
+   "Step or plate"
+  ],
+  "req": "dumbbells,plyobox|plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Put your front foot on a low step, back foot on the floor.",
+   "Sink until the back knee nearly touches the floor.",
+   "Drive up through the front foot."
+  ],
+  "common_mistakes": [
+   "Front heel lifting",
+   "Leaning sideways"
+  ],
+  "regressions": [
+   "Dumbbell split squat"
+  ],
+  "progressions": [
+   "Bulgarian split squat"
+  ],
+  "safety": "Use a stable step about 5–10 cm high.",
+  "video": null,
+  "notes": "Gives more depth than a regular split squat."
+ },
+ {
+  "id": "dbstepup",
+  "name": "Dumbbell step-up",
+  "aliases": [
+   "DB box step-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbells",
+   "Bench or box"
+  ],
+  "req": "dumbbells,plyobox|flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Place your whole foot on a knee-height box or bench.",
+   "Drive through that heel to stand up tall.",
+   "Step down slowly with the same leg leading back."
+  ],
+  "common_mistakes": [
+   "Pushing off the bottom foot",
+   "Box too high"
+  ],
+  "regressions": [
+   "Box step-up"
+  ],
+  "progressions": [
+   "Dumbbell lateral step-up"
+  ],
+  "safety": "Make sure the bench or box is solid and won't tip.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dblatstepup",
+  "name": "Dumbbell lateral step-up",
+  "aliases": [
+   "Side step-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes (incl. glute medius)"
+  ],
+  "secondary_muscles": [
+   "Adductors"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbells",
+   "Bench or box"
+  ],
+  "req": "dumbbells,plyobox|flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Stand side-on to a box with dumbbells at your sides.",
+   "Step the near foot up and stand tall.",
+   "Lower slowly back down on the same side."
+  ],
+  "common_mistakes": [
+   "Knee caving in",
+   "Hopping off the floor foot"
+  ],
+  "regressions": [
+   "Dumbbell step-up"
+  ],
+  "progressions": [],
+  "safety": "Use a lower box to start.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbboxover",
+  "name": "Dumbbell box step-over",
+  "aliases": [
+   "DB box step-over"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Cardio",
+   "Endurance",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Grip"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbells",
+   "Plyo box"
+  ],
+  "req": "dumbbells,plyobox",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–20",
+  "form_cues": [
+   "Hold dumbbells at your sides facing a box.",
+   "Step up, stand tall on top, and step down the other side.",
+   "Turn and repeat, alternating legs."
+  ],
+  "common_mistakes": [
+   "Jumping down",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Dumbbell step-up"
+  ],
+  "progressions": [],
+  "safety": "Step, don't jump, down from the box with weights in hand.",
+  "video": null,
+  "notes": "Common in CrossFit workouts; count total reps."
+ },
+ {
+  "id": "dbhipthrust",
+  "name": "Dumbbell hip thrust",
+  "aliases": [
+   "DB hip thrust"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Home-friendly"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Dumbbell",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Upper back on a bench edge, dumbbell on your hips.",
+   "Drive through your heels and raise hips to a straight line.",
+   "Tuck your chin and squeeze glutes hard at the top."
+  ],
+  "common_mistakes": [
+   "Arching the lower back",
+   "Feet too far forward"
+  ],
+  "regressions": [
+   "Dumbbell glute bridge"
+  ],
+  "progressions": [
+   "Barbell hip thrust"
+  ],
+  "safety": "Pad the dumbbell and hold it in place with both hands.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbslhipthrust",
+  "name": "Single-leg dumbbell hip thrust",
+  "aliases": [
+   "One-leg hip thrust"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Dumbbell",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–12 / side",
+  "form_cues": [
+   "Upper back on a bench, dumbbell on the working hip.",
+   "Lift one foot and drive through the other heel.",
+   "Keep hips level and lower slowly."
+  ],
+  "common_mistakes": [
+   "Hips dropping to one side",
+   "Overarching"
+  ],
+  "regressions": [
+   "Dumbbell hip thrust"
+  ],
+  "progressions": [],
+  "safety": "Start with bodyweight to master the balance.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dblegcurl",
+  "name": "Dumbbell lying leg curl",
+  "aliases": [
+   "Prone dumbbell hamstring curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbell",
+   "Flat bench"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie face down with knees just off the bench end.",
+   "Squeeze a dumbbell between your feet.",
+   "Curl heels toward your glutes and lower slowly."
+  ],
+  "common_mistakes": [
+   "Dropping the dumbbell",
+   "Lifting the hips"
+  ],
+  "regressions": [
+   "Nordic hamstring curl"
+  ],
+  "progressions": [
+   "Lying leg curl"
+  ],
+  "safety": "Have a partner place the dumbbell, and keep it light.",
+  "video": null,
+  "notes": "A home substitute for the leg curl machine."
+ },
+ {
+  "id": "dbseatcalf",
+  "name": "Seated dumbbell calf raise",
+  "aliases": [
+   "DB seated calf raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves (soleus)"
+  ],
+  "secondary_muscles": [
+   "Gastrocnemius"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Dumbbells",
+   "Bench",
+   "Step or plate"
+  ],
+  "req": "dumbbells,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Sit with balls of the feet on a plate or step.",
+   "Rest dumbbells on your knees.",
+   "Lower heels, then press up as high as possible."
+  ],
+  "common_mistakes": [
+   "Bouncing",
+   "Too short a range"
+  ],
+  "regressions": [
+   "Dumbbell calf raise"
+  ],
+  "progressions": [
+   "Seated calf raise"
+  ],
+  "safety": "Pad the dumbbells on your knees with a towel.",
+  "video": null,
+  "notes": ""
+ }
+]

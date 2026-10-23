@@ -1,0 +1,5813 @@
+[
+ {
+  "id": "wallpush",
+  "name": "Wall push-up",
+  "aliases": [
+   "Standing wall press-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Rehab",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Wall"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Place hands on the wall at shoulder height, slightly wider than shoulders.",
+   "Keep a straight line from head to heels.",
+   "Bend elbows to bring your chest near the wall, then press away."
+  ],
+  "common_mistakes": [
+   "Letting hips sag or stick out",
+   "Flaring elbows straight out to the sides"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Incline push-up",
+   "Knee push-up"
+  ],
+  "safety": "Stand on a non-slip surface so your feet don't slide.",
+  "video": null,
+  "notes": "Step feet further back to make it harder. Great first step for beginners and shoulder rehab."
+ },
+ {
+  "id": "inclinepush",
+  "name": "Incline push-up",
+  "aliases": [
+   "Hands-elevated push-up",
+   "Bench push-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Bench or sturdy chair"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Hands on a sturdy bench or counter, just wider than shoulders.",
+   "Squeeze glutes and brace so your body moves as one piece.",
+   "Lower your chest to the edge, then push the surface away."
+  ],
+  "common_mistakes": [
+   "Hips sagging toward the floor",
+   "Only going halfway down"
+  ],
+  "regressions": [
+   "Wall push-up"
+  ],
+  "progressions": [
+   "Knee push-up",
+   "Push-ups"
+  ],
+  "safety": "Make sure the chair or bench can't slide or tip before you start.",
+  "video": null,
+  "notes": "The lower the surface, the harder it gets."
+ },
+ {
+  "id": "kneepush",
+  "name": "Knee push-up",
+  "aliases": [
+   "Kneeling push-up",
+   "Modified push-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Mat (optional)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–15",
+  "form_cues": [
+   "Kneel with hands under shoulders and hips in line with knees and head.",
+   "Lower until your chest is a fist's height from the floor.",
+   "Keep elbows about 45° from your body as you press up."
+  ],
+  "common_mistakes": [
+   "Piking hips up into the air",
+   "Dropping the head toward the floor"
+  ],
+  "regressions": [
+   "Incline push-up"
+  ],
+  "progressions": [
+   "Push-ups"
+  ],
+  "safety": "Use a folded mat under your knees if kneeling is uncomfortable.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pushup",
+  "name": "Push-ups",
+  "aliases": [
+   "Press-up",
+   "Standard push-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Calisthenics",
+   "Home-friendly",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core",
+   "Serratus anterior"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–15",
+  "form_cues": [
+   "Hands just wider than shoulders, body straight from head to heels.",
+   "Lower until your chest nearly touches the floor, elbows at about 45°.",
+   "Push the floor away and finish with arms fully straight."
+  ],
+  "common_mistakes": [
+   "Sagging hips or arching the lower back",
+   "Flaring elbows to 90°",
+   "Cutting the range short"
+  ],
+  "regressions": [
+   "Knee push-up",
+   "Incline push-up"
+  ],
+  "progressions": [
+   "Decline push-up",
+   "Archer push-up",
+   "Ring push-ups"
+  ],
+  "safety": "Stop if you feel sharp wrist or shoulder pain; try fists or handles to ease the wrists.",
+  "video": null,
+  "notes": "Add a weight vest or plate on the back to progress; slow 3-second lowering builds strength."
+ },
+ {
+  "id": "widepush",
+  "name": "Wide push-up",
+  "aliases": [
+   "Wide-grip push-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–15",
+  "form_cues": [
+   "Place hands about one and a half shoulder-widths apart.",
+   "Lower your chest between your hands, keeping the body rigid.",
+   "Press up while squeezing your chest together."
+  ],
+  "common_mistakes": [
+   "Going too wide and straining the shoulders",
+   "Letting the head drop first"
+  ],
+  "regressions": [
+   "Knee push-up"
+  ],
+  "progressions": [
+   "Archer push-up",
+   "Decline push-up"
+  ],
+  "safety": "Keep the width moderate; very wide hands stress the shoulder joint.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "diamond",
+  "name": "Diamond push-ups",
+  "aliases": [
+   "Close-grip push-up",
+   "Triangle push-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Calisthenics",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–12",
+  "form_cues": [
+   "Form a diamond with thumbs and index fingers under your chest.",
+   "Keep elbows close to your sides as you lower.",
+   "Press up until your arms lock out fully."
+  ],
+  "common_mistakes": [
+   "Elbows flaring wide",
+   "Hips sagging as the triceps fatigue"
+  ],
+  "regressions": [
+   "Knee push-up",
+   "Incline push-up"
+  ],
+  "progressions": [
+   "Sphinx push-up",
+   "Tiger bend push-up"
+  ],
+  "safety": "Move hands slightly further apart if your wrists or elbows complain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "declinepush",
+  "name": "Decline push-up",
+  "aliases": [
+   "Feet-elevated push-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Calisthenics",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Upper chest",
+   "Front delts"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Bench or chair"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Put your feet on a bench or chair, hands on the floor under shoulders.",
+   "Brace your core so your hips don't sag.",
+   "Lower your chest to the floor, then press back up."
+  ],
+  "common_mistakes": [
+   "Hips sagging into an arch",
+   "Head poking forward toward the floor"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Pike push-up",
+   "Archer push-up"
+  ],
+  "safety": "Use a stable box or chair that can't slide out from under your feet.",
+  "video": null,
+  "notes": "Higher feet shift more load to the shoulders."
+ },
+ {
+  "id": "archerpush",
+  "name": "Archer push-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5–8 / side",
+  "form_cues": [
+   "Set hands very wide with fingers turned slightly out.",
+   "Shift down toward one hand while the other arm stays straight.",
+   "Press back up through the bent arm, then switch sides."
+  ],
+  "common_mistakes": [
+   "Bending the 'straight' arm to help",
+   "Twisting the hips toward the floor"
+  ],
+  "regressions": [
+   "Wide push-up"
+  ],
+  "progressions": [
+   "One-arm push-up"
+  ],
+  "safety": "Warm up wrists and shoulders well before loading one side.",
+  "video": null,
+  "notes": "A key step toward the one-arm push-up."
+ },
+ {
+  "id": "spiderpush",
+  "name": "Spiderman push-up",
+  "aliases": [
+   "Spider push-up"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Compound",
+   "Mobility"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Hip flexors",
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10 / side",
+  "form_cues": [
+   "Start in a strong push-up position.",
+   "As you lower, bring one knee toward the same-side elbow.",
+   "Return the leg as you press up; alternate sides."
+  ],
+  "common_mistakes": [
+   "Letting the hips rotate or sag",
+   "Rushing so the chest doesn't reach the bottom"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Archer push-up"
+  ],
+  "safety": "Keep the movement slow if your hips are tight.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hindupush",
+  "name": "Hindu push-up",
+  "aliases": [
+   "Dand"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Mobility",
+   "Endurance"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Shoulders",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Hip flexors",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Start in a downward-dog shape with hips high.",
+   "Swoop your chest low and forward between your hands.",
+   "Finish in an upward arch, then push hips back up to start."
+  ],
+  "common_mistakes": [
+   "Collapsing into the lower back at the top",
+   "Bending the arms only, without the swoop"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Dive bomber push-up"
+  ],
+  "safety": "Skip the arched finish if you have lower back pain.",
+  "video": null,
+  "notes": "Traditional Indian wrestling exercise; pairs well with Hindu squats."
+ },
+ {
+  "id": "divebomber",
+  "name": "Dive bomber push-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Mobility"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Chest",
+   "Front delts",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Lower back"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Start with hips high and arms straight, like a downward dog.",
+   "Dive your chest close to the floor, sweeping forward.",
+   "Reverse the path back to the start instead of pushing straight up."
+  ],
+  "common_mistakes": [
+   "Dropping straight down without the sweep",
+   "Letting elbows flare wide"
+  ],
+  "regressions": [
+   "Hindu push-up",
+   "Pike push-up"
+  ],
+  "progressions": [
+   "Elevated pike push-up"
+  ],
+  "safety": "Move slowly at first; it is tough on stiff shoulders.",
+  "video": null,
+  "notes": "Unlike the Hindu push-up, the bomber returns along the same path."
+ },
+ {
+  "id": "pseudoplanchepush",
+  "name": "Pseudo planche push-up",
+  "aliases": [
+   "PPPU"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Biceps",
+   "Core",
+   "Serratus anterior"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–8",
+  "form_cues": [
+   "Turn fingers out and place hands beside your waist.",
+   "Lean shoulders forward past your hands and keep that lean.",
+   "Lower and press while keeping arms locked in line at the top."
+  ],
+  "common_mistakes": [
+   "Losing the forward lean as you push",
+   "Bending at the hips"
+  ],
+  "regressions": [
+   "Push-ups",
+   "Planche lean"
+  ],
+  "progressions": [
+   "Planche push-up"
+  ],
+  "safety": "Warm up wrists thoroughly; the lean puts big stress on them.",
+  "video": null,
+  "notes": "Main pushing drill for planche training."
+ },
+ {
+  "id": "onearmpush",
+  "name": "One-arm push-up",
+  "aliases": [
+   "Single-arm push-up"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core",
+   "Obliques"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "3–6 / side",
+  "form_cues": [
+   "Spread feet wide and place one hand under your chest.",
+   "Put the free hand behind your back and brace hard.",
+   "Lower with control, keeping hips square, then press up."
+  ],
+  "common_mistakes": [
+   "Rotating the torso to cheat the rep",
+   "Feet too close together"
+  ],
+  "regressions": [
+   "Archer push-up",
+   "Incline push-up"
+  ],
+  "progressions": [],
+  "safety": "Build up slowly with incline versions to protect the shoulder.",
+  "video": null,
+  "notes": "Elevate the hand on a bench to regress."
+ },
+ {
+  "id": "typewriterpush",
+  "name": "Typewriter push-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4–6 / side",
+  "form_cues": [
+   "Set hands very wide and lower to the bottom of a push-up.",
+   "Slide your chest across to one hand, then the other, staying low.",
+   "Return to centre and press up."
+  ],
+  "common_mistakes": [
+   "Rising up while shifting sideways",
+   "Hips sagging during the slide"
+  ],
+  "regressions": [
+   "Archer push-up"
+  ],
+  "progressions": [
+   "One-arm push-up"
+  ],
+  "safety": "Stop if you feel pinching in the shoulder at the bottom.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sphinxpush",
+  "name": "Sphinx push-up",
+  "aliases": [
+   "Forearm-to-hands push-up",
+   "Triceps extension push-up"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Mat (optional)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–12",
+  "form_cues": [
+   "Start on forearms in a plank, hands slightly ahead of elbows.",
+   "Press through palms to straighten your arms.",
+   "Lower back onto the forearms slowly."
+  ],
+  "common_mistakes": [
+   "Pushing with the hips instead of the arms",
+   "Hands placed too far forward"
+  ],
+  "regressions": [
+   "Diamond push-ups"
+  ],
+  "progressions": [
+   "Tiger bend push-up"
+  ],
+  "safety": "Start from the knees if your elbows feel strained.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "tigerbend",
+  "name": "Tiger bend push-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Chest",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Wall or partner spot"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "2–5",
+  "form_cues": [
+   "Start in a handstand against a wall.",
+   "Lower onto your forearms with control.",
+   "Press back up to straight arms."
+  ],
+  "common_mistakes": [
+   "Collapsing onto the head",
+   "Lowering too fast"
+  ],
+  "regressions": [
+   "Sphinx push-up",
+   "Handstand push-up"
+  ],
+  "progressions": [],
+  "safety": "Only attempt with a solid wall handstand and a soft surface.",
+  "video": null,
+  "notes": "Classic old-school strength feat."
+ },
+ {
+  "id": "scappush",
+  "name": "Scapular push-up",
+  "aliases": [
+   "Push-up plus",
+   "Scap push-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Rehab",
+   "Warm-up",
+   "Isolation"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Serratus anterior"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Core"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Start in a high plank with straight arms.",
+   "Let your chest sink between shoulder blades, then push the floor away.",
+   "Keep elbows locked the whole time."
+  ],
+  "common_mistakes": [
+   "Bending the elbows",
+   "Moving the hips instead of the shoulder blades"
+  ],
+  "regressions": [
+   "Wall push-up"
+  ],
+  "progressions": [
+   "Push-ups"
+  ],
+  "safety": "Keep the range pain-free if you have shoulder impingement.",
+  "video": null,
+  "notes": "Great warm-up for push-ups and handstands."
+ },
+ {
+  "id": "pikepush",
+  "name": "Pike push-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Upper chest",
+   "Traps",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Walk feet in so hips are high and you form an upside-down V.",
+   "Lower the top of your head toward a spot ahead of your hands.",
+   "Press back up, keeping hips high."
+  ],
+  "common_mistakes": [
+   "Letting hips drop into a push-up shape",
+   "Elbows flaring straight out"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Elevated pike push-up",
+   "Handstand push-up"
+  ],
+  "safety": "Lower slowly so you don't bump your head.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "elevpikepush",
+  "name": "Elevated pike push-up",
+  "aliases": [
+   "Feet-elevated pike push-up",
+   "Box pike push-up"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Upper chest",
+   "Traps",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Box, bench or chair"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–8",
+  "form_cues": [
+   "Put feet on a box and walk hands back until hips are over shoulders.",
+   "Lower your head in front of your hands, forming a tripod.",
+   "Press up to straight arms, keeping hips stacked."
+  ],
+  "common_mistakes": [
+   "Hips drifting back behind the hands",
+   "Head lowering directly between hands"
+  ],
+  "regressions": [
+   "Pike push-up"
+  ],
+  "progressions": [
+   "Handstand push-up"
+  ],
+  "safety": "Use a box that cannot slide; keep the neck neutral.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "planchepush",
+  "name": "Planche push-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Serratus anterior",
+   "Biceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Floor or parallettes"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "2–5",
+  "form_cues": [
+   "Hold a tuck or straddle planche with arms straight.",
+   "Bend elbows to lower your chest while staying parallel.",
+   "Press back up without losing the lean."
+  ],
+  "common_mistakes": [
+   "Feet touching down during the rep",
+   "Shoulders not leaning past the hands"
+  ],
+  "regressions": [
+   "Pseudo planche push-up",
+   "Tuck planche"
+  ],
+  "progressions": [],
+  "safety": "Elite skill: build up over months and stop at any wrist or elbow pain.",
+  "video": null,
+  "notes": "Parallettes ease the wrists; the tuck version is the usual first step."
+ },
+ {
+  "id": "benchdip",
+  "name": "Bench dips",
+  "aliases": [
+   "Chair dip",
+   "Triceps bench dip"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Chest"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Bench or sturdy chair"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Hands on the edge of a bench by your hips, legs out in front.",
+   "Lower until elbows reach about 90°, staying close to the bench.",
+   "Press through your palms to straighten your arms."
+  ],
+  "common_mistakes": [
+   "Dropping too deep and straining the shoulders",
+   "Letting the hips drift far from the bench"
+  ],
+  "regressions": [
+   "Bent-knee bench dip"
+  ],
+  "progressions": [
+   "Chest dips",
+   "Triceps dip"
+  ],
+  "safety": "Stop at 90° if you have shoulder issues; use a chair braced against a wall.",
+  "video": null,
+  "notes": "Bend knees to make it easier, raise feet onto another chair to make it harder."
+ },
+ {
+  "id": "bwsquat",
+  "name": "Bodyweight squat",
+  "aliases": [
+   "Air squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Calisthenics",
+   "Home-friendly",
+   "Compound",
+   "Warm-up"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Adductors",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Feet about shoulder-width, toes turned out slightly.",
+   "Sit hips back and down, knees tracking over toes.",
+   "Stand by driving through the whole foot."
+  ],
+  "common_mistakes": [
+   "Heels lifting off the floor",
+   "Knees caving inward"
+  ],
+  "regressions": [
+   "Box squat to chair",
+   "Wall sit"
+  ],
+  "progressions": [
+   "Pistol squat",
+   "Shrimp squat",
+   "Bulgarian split squat"
+  ],
+  "safety": "Go only as deep as you can keep a neutral back and heels down.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "wallsit",
+  "name": "Wall sit",
+  "aliases": [
+   "Wall squat hold"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Endurance",
+   "Rehab"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Adductors",
+   "Calves"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Wall"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Slide down the wall until thighs are parallel to the floor.",
+   "Keep knees over ankles and back flat on the wall.",
+   "Breathe steadily and hold."
+  ],
+  "common_mistakes": [
+   "Knees drifting past the toes",
+   "Pushing on thighs with the hands"
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Single-leg wall sit"
+  ],
+  "safety": "Sit higher on the wall if your knees ache.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sumobwsquat",
+  "name": "Sumo squat",
+  "aliases": [
+   "Wide-stance bodyweight squat",
+   "Plié squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Adductors",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Take a wide stance with toes turned out about 45°.",
+   "Sit straight down, pushing knees out over toes.",
+   "Keep chest tall and squeeze glutes to stand."
+  ],
+  "common_mistakes": [
+   "Knees collapsing inward",
+   "Leaning far forward"
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Cossack squat"
+  ],
+  "safety": "Only go as wide as your hips comfortably allow.",
+  "video": null,
+  "notes": "Hold a dumbbell or kettlebell between the legs to load it."
+ },
+ {
+  "id": "hindusquat",
+  "name": "Hindu squat",
+  "aliases": [
+   "Baithak"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Endurance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Calves",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–30",
+  "form_cues": [
+   "Swing arms back as you squat and let heels rise.",
+   "Touch fingers near your heels at the bottom.",
+   "Drive up, swinging arms forward, in a smooth rhythm."
+  ],
+  "common_mistakes": [
+   "Bouncing hard at the bottom",
+   "Holding your breath"
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Shrimp squat"
+  ],
+  "safety": "Stay on the balls of the feet only if your knees are pain-free.",
+  "video": null,
+  "notes": "Traditional high-rep conditioning squat from Indian wrestling."
+ },
+ {
+  "id": "cossack",
+  "name": "Cossack squat",
+  "aliases": [
+   "Side-to-side squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Mobility",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Adductors",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "6–8 / side",
+  "form_cues": [
+   "Start in a very wide stance.",
+   "Shift into one hip and squat deep while the other leg goes straight.",
+   "Keep the bent-side heel down and chest tall."
+  ],
+  "common_mistakes": [
+   "Lifting the heel of the working leg",
+   "Rounding the back to get lower"
+  ],
+  "regressions": [
+   "Lateral lunge"
+  ],
+  "progressions": [
+   "Goblet Cossack squat"
+  ],
+  "safety": "Hold onto a door frame for balance if needed.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sissysquat",
+  "name": "Sissy squat",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Wall or post to hold (optional)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–12",
+  "form_cues": [
+   "Rise onto your toes and hold a support with one hand.",
+   "Push knees forward and lean back so hips stay straight.",
+   "Lower until knees are near the floor, then return."
+  ],
+  "common_mistakes": [
+   "Bending at the hips like a normal squat",
+   "Dropping too fast onto the knees"
+  ],
+  "regressions": [
+   "Wall sit",
+   "Reverse Nordic"
+  ],
+  "progressions": [],
+  "safety": "Use a pad under the knees and skip it if you have kneecap pain.",
+  "video": null,
+  "notes": "Strong quad isolation without any machine."
+ },
+ {
+  "id": "pistolbox",
+  "name": "Box pistol squat",
+  "aliases": [
+   "Single-leg box squat",
+   "Pistol to box"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core",
+   "Calves"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Box, bench or chair"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5–8 / side",
+  "form_cues": [
+   "Stand on one leg in front of a box, other leg reaching forward.",
+   "Sit back slowly until you lightly touch the box.",
+   "Stand up without rocking or using momentum."
+  ],
+  "common_mistakes": [
+   "Dropping onto the box",
+   "Knee caving inward"
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Pistol squat"
+  ],
+  "safety": "Lower the box height gradually as you get stronger.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pistol",
+  "name": "Pistol squat",
+  "aliases": [
+   "Single-leg squat"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Unilateral",
+   "Balance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Adductors",
+   "Core",
+   "Calves"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "3–6 / side",
+  "form_cues": [
+   "Stand on one leg with the other straight out in front.",
+   "Reach arms forward and sink all the way down.",
+   "Drive up through the whole foot, keeping the free leg off the floor."
+  ],
+  "common_mistakes": [
+   "Heel lifting at the bottom",
+   "Knee collapsing inward"
+  ],
+  "regressions": [
+   "Box pistol squat",
+   "Skater squat"
+  ],
+  "progressions": [
+   "Weighted pistol squat"
+  ],
+  "safety": "Raise the heel on a small plate if ankle mobility limits depth.",
+  "video": null,
+  "notes": "Holding a light weight in front can actually help balance."
+ },
+ {
+  "id": "shrimp",
+  "name": "Shrimp squat",
+  "aliases": [
+   "Airborne lunge"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Unilateral",
+   "Balance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "3–6 / side",
+  "form_cues": [
+   "Stand on one leg and hold the other foot behind you.",
+   "Lower until the back knee touches the floor softly.",
+   "Drive up through the front foot, staying tall."
+  ],
+  "common_mistakes": [
+   "Crashing the knee into the floor",
+   "Leaning far forward"
+  ],
+  "regressions": [
+   "Skater squat",
+   "Reverse lunge"
+  ],
+  "progressions": [
+   "Pistol squat"
+  ],
+  "safety": "Put a cushion under the back knee while learning.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "skatersquat",
+  "name": "Skater squat",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Unilateral",
+   "Balance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Pad or cushion (optional)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5–8 / side",
+  "form_cues": [
+   "Stand on one leg with the other bent behind you.",
+   "Hinge slightly and lower until the back knee touches a pad.",
+   "Push through the front heel to stand."
+  ],
+  "common_mistakes": [
+   "Back foot touching down for help",
+   "Knee caving inward"
+  ],
+  "regressions": [
+   "Reverse lunge"
+  ],
+  "progressions": [
+   "Shrimp squat",
+   "Pistol squat"
+  ],
+  "safety": "Reach arms forward for balance and keep the movement slow.",
+  "video": null,
+  "notes": "Similar to the shrimp squat, but the back leg is free rather than held."
+ },
+ {
+  "id": "splitsquat",
+  "name": "Split squat",
+  "aliases": [
+   "Static lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Unilateral",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Adductors",
+   "Calves"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–12 / side",
+  "form_cues": [
+   "Take a long split stance, both feet facing forward.",
+   "Drop the back knee straight down toward the floor.",
+   "Push through the front foot to rise, feet staying planted."
+  ],
+  "common_mistakes": [
+   "Front knee caving in",
+   "Stance too narrow, like walking a tightrope"
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Bulgarian split squat"
+  ],
+  "safety": "Hold a wall for balance if needed.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bss",
+  "name": "Bulgarian split squat",
+  "aliases": [
+   "Rear-foot elevated split squat",
+   "RFESS"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Unilateral",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Adductors",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Bench or chair"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–12 / side",
+  "form_cues": [
+   "Rest your back foot laces-down on a bench behind you.",
+   "Lower straight down until the front thigh is near parallel.",
+   "Drive through the front heel to stand tall."
+  ],
+  "common_mistakes": [
+   "Front foot too close to the bench",
+   "Pushing off the back leg"
+  ],
+  "regressions": [
+   "Split squat"
+  ],
+  "progressions": [
+   "Shrimp squat",
+   "Dumbbell Bulgarian split squat"
+  ],
+  "safety": "Use a stable bench that won't slide.",
+  "video": null,
+  "notes": "Hold dumbbells to add load; listed here as the bodyweight version."
+ },
+ {
+  "id": "fwdlunge",
+  "name": "Forward lunge",
+  "aliases": [
+   "Front lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Unilateral",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–12 / side",
+  "form_cues": [
+   "Step forward and lower both knees to about 90°.",
+   "Keep your torso upright and front knee over the foot.",
+   "Push hard off the front foot to return."
+  ],
+  "common_mistakes": [
+   "Short step that pushes the knee far over the toes",
+   "Back knee slamming into the floor"
+  ],
+  "regressions": [
+   "Split squat"
+  ],
+  "progressions": [
+   "Walking lunge"
+  ],
+  "safety": "Use reverse lunges instead if forward steps bother your knees.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "revlunge",
+  "name": "Reverse lunge",
+  "aliases": [
+   "Backward lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Unilateral",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–12 / side",
+  "form_cues": [
+   "Step back and lower the back knee toward the floor.",
+   "Keep most of your weight in the front heel.",
+   "Drive through the front foot to bring the leg back."
+  ],
+  "common_mistakes": [
+   "Leaning far forward",
+   "Stepping back too narrow and losing balance"
+  ],
+  "regressions": [
+   "Split squat"
+  ],
+  "progressions": [
+   "Deficit reverse lunge",
+   "Shrimp squat"
+  ],
+  "safety": "Often the most knee-friendly lunge.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "walklunge",
+  "name": "Walking lunge",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Unilateral",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Adductors",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Step forward into a lunge, back knee just above the floor.",
+   "Push up and bring the back foot through into the next step.",
+   "Keep your torso tall and steps even."
+  ],
+  "common_mistakes": [
+   "Steps too short",
+   "Wobbling side to side"
+  ],
+  "regressions": [
+   "Forward lunge"
+  ],
+  "progressions": [
+   "Dumbbell walking lunge"
+  ],
+  "safety": "Clear a straight path free of trip hazards.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "latlunge",
+  "name": "Lateral lunge",
+  "aliases": [
+   "Side lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Unilateral",
+   "Mobility"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Step wide to one side and sit hips back into that leg.",
+   "Keep the other leg straight and both feet flat.",
+   "Push off the bent leg to return to centre."
+  ],
+  "common_mistakes": [
+   "Bent knee caving in",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Cossack squat"
+  ],
+  "safety": "Keep your toes pointing forward or slightly out.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "curtsy",
+  "name": "Curtsy lunge",
+  "aliases": [
+   "Curtsy squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Hip abductors"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–12 / side",
+  "form_cues": [
+   "Step one leg diagonally behind the other.",
+   "Lower until the front thigh is near parallel.",
+   "Push through the front heel to return."
+  ],
+  "common_mistakes": [
+   "Front knee collapsing inward",
+   "Twisting the hips too much"
+  ],
+  "regressions": [
+   "Reverse lunge"
+  ],
+  "progressions": [
+   "Dumbbell curtsy lunge"
+  ],
+  "safety": "Shorten the step if you feel strain in the knee.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bwcalf",
+  "name": "Bodyweight calf raise",
+  "aliases": [
+   "Standing calf raise (bodyweight)"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Ankle stabilisers"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Step (optional)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–25",
+  "form_cues": [
+   "Stand tall, feet hip-width, fingertips on a wall.",
+   "Rise as high onto the balls of the feet as possible.",
+   "Pause at the top, then lower slowly."
+  ],
+  "common_mistakes": [
+   "Bouncing quickly",
+   "Rolling onto the outer toes"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Single-leg calf raise"
+  ],
+  "safety": "Hold a wall or rail for balance.",
+  "video": null,
+  "notes": "Stand on a step edge for a bigger stretch."
+ },
+ {
+  "id": "slcalf",
+  "name": "Single-leg calf raise",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Ankle stabilisers"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Step"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–15 / side",
+  "form_cues": [
+   "Stand on one foot on a step edge, heel hanging off.",
+   "Lower the heel below the step for a full stretch.",
+   "Rise as high as you can, pause, and repeat."
+  ],
+  "common_mistakes": [
+   "Using the hand to pull yourself up",
+   "Bending the knee to cheat"
+  ],
+  "regressions": [
+   "Bodyweight calf raise"
+  ],
+  "progressions": [
+   "Dumbbell calf raise"
+  ],
+  "safety": "Keep a hand on a rail or wall for balance only.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "tibraise",
+  "name": "Tibialis raise",
+  "aliases": [
+   "Wall tib raise",
+   "Toe raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Rehab",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Tibialis anterior"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Wall"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–25",
+  "form_cues": [
+   "Lean your back on a wall with feet a step out in front.",
+   "Pull your toes up toward your shins as high as you can.",
+   "Lower slowly without touching down fully."
+  ],
+  "common_mistakes": [
+   "Feet too close to the wall",
+   "Rushing the reps"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Tib bar raise"
+  ],
+  "safety": "Step feet further out to make it harder.",
+  "video": null,
+  "notes": "Helps balance calf work and may ease shin splints."
+ },
+ {
+  "id": "revnordic",
+  "name": "Reverse Nordic",
+  "aliases": [
+   "Reverse Nordic curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Core"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Kneel tall with knees hip-width and toes flat.",
+   "Lean your straight body back by bending only at the knees.",
+   "Squeeze your quads to pull yourself upright."
+  ],
+  "common_mistakes": [
+   "Bending at the hips",
+   "Going deeper than you can control"
+  ],
+  "regressions": [
+   "Wall sit"
+  ],
+  "progressions": [
+   "Sissy squat"
+  ],
+  "safety": "Use a thick pad under the knees and start with a small range.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "nordic",
+  "name": "Nordic hamstring curl",
+  "aliases": [
+   "Nordic curl",
+   "Nordic ham curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Rehab",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Calves"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Anchor for the heels (sofa, partner) and a mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–6",
+  "form_cues": [
+   "Kneel with heels anchored under something solid.",
+   "Keep hips straight and lower your body forward as slowly as possible.",
+   "Catch yourself with your hands and push back up."
+  ],
+  "common_mistakes": [
+   "Bending at the hips to shorten the lever",
+   "Dropping fast at the start"
+  ],
+  "regressions": [
+   "Sliding leg curl"
+  ],
+  "progressions": [],
+  "safety": "Start with a few slow negatives; expect heavy soreness the first week.",
+  "video": null,
+  "notes": "Proven to reduce hamstring strain risk in sport. Can also be done with a GHD or a band for help."
+ },
+ {
+  "id": "slidecurl",
+  "name": "Sliding leg curl",
+  "aliases": [
+   "Towel hamstring curl",
+   "Slider leg curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Calves"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Towel or sliders on a smooth floor"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Lie on your back, heels on a towel, and lift hips into a bridge.",
+   "Slide heels out until legs are nearly straight.",
+   "Pull heels back under the knees, keeping hips high."
+  ],
+  "common_mistakes": [
+   "Letting hips sink as the heels slide out",
+   "Moving too fast"
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Single-leg sliding leg curl",
+   "Nordic hamstring curl"
+  ],
+  "safety": "Use on a smooth floor; stop if your hamstrings cramp.",
+  "video": null,
+  "notes": "Also done on a stability ball."
+ },
+ {
+  "id": "glutebridge",
+  "name": "Glute bridge",
+  "aliases": [
+   "Hip bridge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Rehab",
+   "Warm-up"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Mat (optional)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–20",
+  "form_cues": [
+   "Lie on your back, knees bent, feet flat and hip-width.",
+   "Drive through the heels to lift hips until body is straight.",
+   "Squeeze glutes hard at the top, then lower slowly."
+  ],
+  "common_mistakes": [
+   "Arching the lower back at the top",
+   "Pushing through the toes"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Single-leg glute bridge",
+   "Barbell hip thrust"
+  ],
+  "safety": "Keep ribs down to avoid low-back strain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "slbridge",
+  "name": "Single-leg glute bridge",
+  "aliases": [
+   "One-leg bridge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Unilateral",
+   "Rehab"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Mat (optional)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Lie on your back with one foot planted and the other leg raised.",
+   "Push through the planted heel to lift your hips.",
+   "Keep the pelvis level, pause, and lower."
+  ],
+  "common_mistakes": [
+   "Hips tilting to one side",
+   "Arching the lower back"
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Single-leg hip thrust"
+  ],
+  "safety": "Lower the range if you feel hamstring cramping.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bwhipthrust",
+  "name": "Bodyweight hip thrust",
+  "aliases": [
+   "Shoulder-elevated bridge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Quadriceps",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Bench or sofa"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Rest your upper back on a bench, feet flat and knees bent.",
+   "Drive hips up until shins are vertical and body is flat.",
+   "Tuck chin and squeeze glutes at the top."
+  ],
+  "common_mistakes": [
+   "Over-arching the back at the top",
+   "Feet too far away"
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Single-leg hip thrust",
+   "Barbell hip thrust"
+  ],
+  "safety": "Make sure the bench is against a wall so it can't slide.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "slhipthrust",
+  "name": "Single-leg hip thrust",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Bench or sofa"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–12 / side",
+  "form_cues": [
+   "Upper back on a bench, one foot planted, other knee pulled up.",
+   "Drive through the planted heel to lift hips level.",
+   "Lower with control without touching down."
+  ],
+  "common_mistakes": [
+   "Pelvis dropping on the free side",
+   "Pushing through the toes"
+  ],
+  "regressions": [
+   "Bodyweight hip thrust",
+   "Single-leg glute bridge"
+  ],
+  "progressions": [
+   "Barbell hip thrust"
+  ],
+  "safety": "Keep the bench stable and the movement slow.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "frogpump",
+  "name": "Frog pump",
+  "aliases": [
+   "Frog bridge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Mat (optional)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–30",
+  "form_cues": [
+   "Lie on your back with soles of the feet together, knees out.",
+   "Pull heels close and drive hips up.",
+   "Squeeze glutes hard at the top, then lower."
+  ],
+  "common_mistakes": [
+   "Arching the lower back",
+   "Lifting from the lower back instead of the glutes"
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Dumbbell frog pump"
+  ],
+  "safety": "Skip if the wide-knee position hurts your hips.",
+  "video": null,
+  "notes": "Popular high-rep glute finisher."
+ },
+ {
+  "id": "donkeykick",
+  "name": "Donkey kick",
+  "aliases": [
+   "Quadruped hip extension",
+   "Kickback (bodyweight)"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Isolation",
+   "Rehab"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Start on hands and knees with a flat back.",
+   "Keep the knee bent and push one heel toward the ceiling.",
+   "Stop when the thigh is level, then lower slowly."
+  ],
+  "common_mistakes": [
+   "Arching the lower back to lift higher",
+   "Rotating the hips open"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Banded donkey kick"
+  ],
+  "safety": "Keep the movement in the hip, not the lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "firehydrant",
+  "name": "Fire hydrant",
+  "aliases": [
+   "Quadruped hip abduction"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Isolation",
+   "Rehab"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glute medius"
+  ],
+  "secondary_muscles": [
+   "Glute maximus",
+   "Core"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Start on hands and knees, back flat.",
+   "Lift one bent knee out to the side to hip height.",
+   "Lower with control, keeping weight even on both hands."
+  ],
+  "common_mistakes": [
+   "Shifting the whole body sideways",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Clamshell"
+  ],
+  "progressions": [
+   "Banded fire hydrant"
+  ],
+  "safety": "Go only as high as you can without twisting the torso.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "clamshell",
+  "name": "Clamshell",
+  "aliases": [
+   "Clams"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Rehab",
+   "Isolation"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glute medius"
+  ],
+  "secondary_muscles": [
+   "Hip rotators"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "15–20 / side",
+  "form_cues": [
+   "Lie on your side, hips and knees bent, feet together.",
+   "Keep feet touching and lift the top knee.",
+   "Pause at the top and lower slowly."
+  ],
+  "common_mistakes": [
+   "Rolling the hips backward",
+   "Lifting the feet apart"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Banded clamshell",
+   "Fire hydrant"
+  ],
+  "safety": "A common rehab move for knee and hip pain.",
+  "video": null,
+  "notes": "Add a mini band above the knees to progress."
+ },
+ {
+  "id": "tablerow",
+  "name": "Table row",
+  "aliases": [
+   "Under-table inverted row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Sturdy table"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–12",
+  "form_cues": [
+   "Lie under a sturdy table and grip the edge, hands shoulder-width.",
+   "Keep your body straight from heels to head.",
+   "Pull your chest to the table edge, then lower slowly."
+  ],
+  "common_mistakes": [
+   "Hips sagging",
+   "Shrugging shoulders toward the ears"
+  ],
+  "regressions": [
+   "Doorway row"
+  ],
+  "progressions": [
+   "Inverted row"
+  ],
+  "safety": "Test the table first: it must not tip or slide when you pull.",
+  "video": null,
+  "notes": "Bend knees to make it easier."
+ },
+ {
+  "id": "doorrow",
+  "name": "Doorway row",
+  "aliases": [
+   "Door frame row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Upper back",
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Door frame"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Grip both sides of a door frame, feet close to the threshold.",
+   "Lean back with straight arms and a straight body.",
+   "Pull your chest toward the frame by squeezing shoulder blades."
+  ],
+  "common_mistakes": [
+   "Bending at the hips instead of staying straight",
+   "Shrugging up"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Table row",
+   "Inverted row"
+  ],
+  "safety": "Hold firmly; a slipping grip means a fall backward.",
+  "video": null,
+  "notes": "Walk feet closer to the frame to make it harder. One-arm version works too."
+ },
+ {
+  "id": "ytw",
+  "name": "Prone Y-T-W raise",
+  "aliases": [
+   "YTWs",
+   "Floor Y-T-W"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Rehab",
+   "Warm-up",
+   "Isolation"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts",
+   "Lower traps",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Rotator cuff"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8 / letter",
+  "form_cues": [
+   "Lie face down, forehead resting, arms out in a Y shape.",
+   "Lift arms a few centimetres, thumbs up, then lower.",
+   "Repeat with arms in a T, then elbows bent in a W."
+  ],
+  "common_mistakes": [
+   "Lifting the head and arching the back",
+   "Shrugging instead of squeezing shoulder blades"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Dumbbell Y-T-W raise"
+  ],
+  "safety": "Keep the lift small and pain-free.",
+  "video": null,
+  "notes": "Great for posture and shoulder health."
+ },
+ {
+  "id": "wallwalk",
+  "name": "Wall walk",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Upper chest",
+   "Core",
+   "Traps"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Wall"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–5",
+  "form_cues": [
+   "Start in a push-up with feet at the wall.",
+   "Walk feet up the wall and hands back toward it.",
+   "Stop with chest near the wall, then walk back down slowly."
+  ],
+  "common_mistakes": [
+   "Arching the lower back",
+   "Rushing the descent"
+  ],
+  "regressions": [
+   "Pike push-up"
+  ],
+  "progressions": [
+   "Wall handstand hold"
+  ],
+  "safety": "Clear the area and keep a soft surface around you.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "wallhs",
+  "name": "Wall handstand hold",
+  "aliases": [
+   "Chest-to-wall handstand",
+   "Wall handstand"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Balance"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core",
+   "Forearms"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Wall"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–45 sec",
+  "form_cues": [
+   "Walk up into a handstand facing the wall.",
+   "Push the floor away, ears covered by your arms.",
+   "Squeeze legs and glutes into a straight line."
+  ],
+  "common_mistakes": [
+   "Banana-shaped back",
+   "Bent arms or sunken shoulders"
+  ],
+  "regressions": [
+   "Wall walk",
+   "Pike hold on box"
+  ],
+  "progressions": [
+   "Freestanding handstand",
+   "Handstand push-up"
+  ],
+  "safety": "Practise on a soft floor; learn to roll or cartwheel out.",
+  "video": null,
+  "notes": "Chest-to-wall teaches better alignment than back-to-wall."
+ },
+ {
+  "id": "frogstand",
+  "name": "Frog stand",
+  "aliases": [
+   "Crow stand"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Balance",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Wrist flexors"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Triceps"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Mat"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–30 sec",
+  "form_cues": [
+   "Squat down and place hands flat, shoulder-width.",
+   "Rest knees on the backs of your bent elbows.",
+   "Lean forward until feet float, eyes slightly ahead."
+  ],
+  "common_mistakes": [
+   "Looking straight down and tipping over",
+   "Not leaning enough"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Tuck planche",
+   "Freestanding handstand"
+  ],
+  "safety": "Put a pillow in front of your face while learning.",
+  "video": null,
+  "notes": "Gateway to arm balances; yoga calls a similar pose crow."
+ },
+ {
+  "id": "handstand",
+  "name": "Freestanding handstand",
+  "aliases": [
+   "Handstand hold"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Balance"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core",
+   "Forearms"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "10–30 sec",
+  "form_cues": [
+   "Kick up softly with straight arms.",
+   "Balance using your fingertips and heels of the hands.",
+   "Squeeze legs together and keep a straight body line."
+  ],
+  "common_mistakes": [
+   "Over-arching the back",
+   "Bent elbows"
+  ],
+  "regressions": [
+   "Wall handstand hold"
+  ],
+  "progressions": [
+   "Freestanding handstand push-up",
+   "Press to handstand"
+  ],
+  "safety": "Practise bailing out (cartwheel or roll) before kicking up away from a wall.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hspu",
+  "name": "Handstand push-up",
+  "aliases": [
+   "HSPU",
+   "Wall handstand push-up"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Traps",
+   "Upper chest",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Wall"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–8",
+  "form_cues": [
+   "Kick up into a handstand with your back to the wall.",
+   "Lower your head to the floor with elbows angled forward.",
+   "Press back up to straight arms."
+  ],
+  "common_mistakes": [
+   "Crashing the head into the floor",
+   "Elbows flaring out wide"
+  ],
+  "regressions": [
+   "Elevated pike push-up",
+   "Wall handstand hold"
+  ],
+  "progressions": [
+   "Deficit handstand push-up",
+   "Freestanding handstand push-up"
+  ],
+  "safety": "Place a folded mat under your head; build up with negatives first.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "freehspu",
+  "name": "Freestanding handstand push-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Balance"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Traps",
+   "Core",
+   "Forearms"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "1–5",
+  "form_cues": [
+   "Hold a steady freestanding handstand first.",
+   "Lower in control, keeping balance over your hands.",
+   "Press up while staying stacked."
+  ],
+  "common_mistakes": [
+   "Losing balance at the bottom",
+   "Arching the back to press"
+  ],
+  "regressions": [
+   "Handstand push-up"
+  ],
+  "progressions": [],
+  "safety": "Elite skill: use a soft floor and know how to bail.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "presshs",
+  "name": "Press to handstand",
+  "aliases": [
+   "Straddle press",
+   "Press handstand"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Mobility"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Traps",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "1–3",
+  "form_cues": [
+   "Start with hands down, hips high, legs straight or straddled.",
+   "Lean shoulders forward until your feet lift without jumping.",
+   "Raise legs slowly into a straight handstand."
+  ],
+  "common_mistakes": [
+   "Jumping into it",
+   "Bending the arms"
+  ],
+  "regressions": [
+   "Freestanding handstand",
+   "L-sit"
+  ],
+  "progressions": [],
+  "safety": "Requires good hamstring flexibility; warm up wrists and hips.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "planchelean",
+  "name": "Planche lean",
+  "aliases": [
+   "Pseudo planche lean"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Biceps",
+   "Core",
+   "Wrist flexors"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–30 sec",
+  "form_cues": [
+   "From a push-up, turn fingers out and lean shoulders past your hands.",
+   "Keep arms locked and shoulder blades pushed apart.",
+   "Hold the lean without letting hips sag."
+  ],
+  "common_mistakes": [
+   "Bending the elbows",
+   "Leaning only a little"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Pseudo planche push-up",
+   "Tuck planche"
+  ],
+  "safety": "Warm wrists well and build lean distance slowly.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "tuckplanche",
+  "name": "Tuck planche",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Core",
+   "Serratus anterior",
+   "Triceps"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Floor or parallettes"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "8–15 sec",
+  "form_cues": [
+   "Hands under shoulders, knees tucked tight to the chest.",
+   "Lean forward until feet lift, arms locked.",
+   "Round the upper back and push the floor away."
+  ],
+  "common_mistakes": [
+   "Bending the elbows",
+   "Resting knees on the arms (that is a frog stand)"
+  ],
+  "regressions": [
+   "Frog stand",
+   "Planche lean"
+  ],
+  "progressions": [
+   "Advanced tuck planche"
+  ],
+  "safety": "Parallettes are kinder on the wrists.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "advtuckplanche",
+  "name": "Advanced tuck planche",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Core",
+   "Serratus anterior",
+   "Glutes"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Floor or parallettes"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "5–12 sec",
+  "form_cues": [
+   "Start from a tuck planche.",
+   "Open the hips so the back is flat and level.",
+   "Keep arms locked and hips at shoulder height."
+  ],
+  "common_mistakes": [
+   "Back rounding up like a regular tuck",
+   "Hips dropping"
+  ],
+  "regressions": [
+   "Tuck planche"
+  ],
+  "progressions": [
+   "Straddle planche"
+  ],
+  "safety": "Build up over months; stop with any elbow pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "straddleplanche",
+  "name": "Straddle planche",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Core",
+   "Glutes",
+   "Lower back"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Floor or parallettes"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–10 sec",
+  "form_cues": [
+   "Lean forward and lift legs straight and wide.",
+   "Keep the body parallel to the floor.",
+   "Lock arms and push the floor away."
+  ],
+  "common_mistakes": [
+   "Hips piking up",
+   "Bent knees"
+  ],
+  "regressions": [
+   "Advanced tuck planche"
+  ],
+  "progressions": [
+   "Full planche"
+  ],
+  "safety": "Elite skill; protect elbows and wrists with gradual volume.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "planche",
+  "name": "Full planche",
+  "aliases": [
+   "Planche"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Core",
+   "Glutes",
+   "Biceps"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Floor or parallettes"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "2–8 sec",
+  "form_cues": [
+   "Lean far forward with locked arms.",
+   "Hold legs together and straight behind you.",
+   "Keep the whole body level just above the floor."
+  ],
+  "common_mistakes": [
+   "Arched lower back",
+   "Bent arms"
+  ],
+  "regressions": [
+   "Straddle planche"
+  ],
+  "progressions": [
+   "Planche push-up"
+  ],
+  "safety": "One of the hardest bodyweight skills; train years, not weeks.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "lsit",
+  "name": "L-sit",
+  "aliases": [
+   "Floor L-sit"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Core",
+   "Strength"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Hip flexors",
+   "Abs"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Quads",
+   "Lats"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Floor, parallettes or dip bars"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "10–20 sec",
+  "form_cues": [
+   "Press hands down beside hips and lift your body.",
+   "Hold legs straight and level with the floor.",
+   "Keep shoulders pushed down away from the ears."
+  ],
+  "common_mistakes": [
+   "Shrugging shoulders",
+   "Bent knees"
+  ],
+  "regressions": [
+   "Tuck sit",
+   "One-leg L-sit"
+  ],
+  "progressions": [
+   "V-sit",
+   "L-sit pull-up"
+  ],
+  "safety": "Parallettes or dip bars make it easier than the floor.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "vsit",
+  "name": "V-sit",
+  "aliases": [
+   "V-sit hold"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Core",
+   "Strength",
+   "Mobility"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Hip flexors",
+   "Abs"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Shoulders"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Floor or parallettes"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–10 sec",
+  "form_cues": [
+   "From an L-sit, lean shoulders back.",
+   "Raise straight legs higher toward your face.",
+   "Push hard through the hands to keep hips high."
+  ],
+  "common_mistakes": [
+   "Bending the knees",
+   "Collapsing the shoulders"
+  ],
+  "regressions": [
+   "L-sit"
+  ],
+  "progressions": [
+   "Manna"
+  ],
+  "safety": "Needs strong hamstring flexibility; progress slowly.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "elbowlever",
+  "name": "Elbow lever",
+  "aliases": [
+   "Peacock pose"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Balance"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Abs",
+   "Wrist flexors"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Lower back",
+   "Glutes"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–20 sec",
+  "form_cues": [
+   "Tuck elbows into your belly near the hips.",
+   "Lean forward until the legs lift.",
+   "Hold the body straight and level."
+  ],
+  "common_mistakes": [
+   "Elbows sliding apart",
+   "Looking down and tipping"
+  ],
+  "regressions": [
+   "Frog stand"
+  ],
+  "progressions": [
+   "Tuck planche"
+  ],
+  "safety": "Put a cushion in front of your face while learning.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "deadhang",
+  "name": "Dead hang",
+  "aliases": [
+   "Bar hang"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Mobility",
+   "Rehab"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Forearms",
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Grip"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–60 sec",
+  "form_cues": [
+   "Grip the bar shoulder-width and hang with straight arms.",
+   "Relax your shoulders while keeping a firm grip.",
+   "Breathe steadily and let your spine lengthen."
+  ],
+  "common_mistakes": [
+   "Swinging",
+   "Holding your breath"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Flexed-arm hang",
+   "One-arm dead hang"
+  ],
+  "safety": "Step down instead of dropping; skip if you have a shoulder dislocation history.",
+  "video": null,
+  "notes": "Builds grip and decompresses the spine."
+ },
+ {
+  "id": "scappull",
+  "name": "Scapular pull-up",
+  "aliases": [
+   "Scap pull",
+   "Hanging scapular shrug"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Warm-up",
+   "Rehab"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lower traps",
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Grip"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Hang with straight arms.",
+   "Pull shoulder blades down and back to lift yourself slightly.",
+   "Lower back to a full hang with control."
+  ],
+  "common_mistakes": [
+   "Bending the elbows",
+   "Swinging"
+  ],
+  "regressions": [
+   "Dead hang"
+  ],
+  "progressions": [
+   "Pull-ups"
+  ],
+  "safety": "Keep arms straight the whole time.",
+  "video": null,
+  "notes": "Teaches the first part of every pull-up."
+ },
+ {
+  "id": "flexhang",
+  "name": "Flexed-arm hang",
+  "aliases": [
+   "Chin-up hold",
+   "Top hold"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Forearms",
+   "Rear delts"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–30 sec",
+  "form_cues": [
+   "Jump or step up so your chin is over the bar.",
+   "Hold, keeping shoulders down and chest up.",
+   "Lower slowly when you can't hold any longer."
+  ],
+  "common_mistakes": [
+   "Chin resting on the bar",
+   "Shoulders creeping up"
+  ],
+  "regressions": [
+   "Dead hang"
+  ],
+  "progressions": [
+   "Negative pull-up",
+   "Pull-ups"
+  ],
+  "safety": "Use a sturdy box to get into position.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "negpullup",
+  "name": "Negative pull-up",
+  "aliases": [
+   "Eccentric pull-up"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Forearms",
+   "Core"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar",
+   "Box or chair"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–6",
+  "form_cues": [
+   "Step up so your chin is above the bar.",
+   "Lower yourself as slowly as possible, 3–5 seconds.",
+   "Reach a full hang, then step back up."
+  ],
+  "common_mistakes": [
+   "Dropping fast at the bottom",
+   "Kicking the legs"
+  ],
+  "regressions": [
+   "Flexed-arm hang"
+  ],
+  "progressions": [
+   "Pull-ups"
+  ],
+  "safety": "Use a stable box to step up; expect soreness at first.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandpullup",
+  "name": "Band-assisted pull-up",
+  "aliases": [
+   "Banded pull-up"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Forearms",
+   "Core"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar",
+   "Resistance band"
+  ],
+  "req": "pullupbar,bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–8",
+  "form_cues": [
+   "Loop a band on the bar and put a foot or knee in it.",
+   "Pull until your chin passes the bar.",
+   "Lower slowly to a full hang."
+  ],
+  "common_mistakes": [
+   "Bouncing off the band at the bottom",
+   "Half reps"
+  ],
+  "regressions": [
+   "Negative pull-up"
+  ],
+  "progressions": [
+   "Pull-ups"
+  ],
+  "safety": "Check the band for nicks and step out carefully.",
+  "video": null,
+  "notes": "Use thinner bands as you get stronger."
+ },
+ {
+  "id": "pullup",
+  "name": "Pull-ups",
+  "aliases": [
+   "Overhand pull-up"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts",
+   "Rhomboids",
+   "Forearms",
+   "Core"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–10",
+  "form_cues": [
+   "Hang with an overhand grip just wider than shoulders.",
+   "Pull elbows down toward your ribs until your chin clears the bar.",
+   "Lower to a full hang with control."
+  ],
+  "common_mistakes": [
+   "Kipping or swinging",
+   "Not reaching a full hang"
+  ],
+  "regressions": [
+   "Band-assisted pull-up",
+   "Negative pull-up"
+  ],
+  "progressions": [
+   "Weighted pull-up",
+   "Archer pull-up",
+   "Muscle-up"
+  ],
+  "safety": "Avoid if you have a shoulder injury flaring up.",
+  "video": null,
+  "notes": "Add weight with a dip belt or vest once you can do 12+."
+ },
+ {
+  "id": "chinup",
+  "name": "Chin-ups",
+  "aliases": [
+   "Underhand pull-up"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Forearms",
+   "Core"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Grip the bar palms facing you, shoulder-width.",
+   "Pull your chest toward the bar, elbows down and in.",
+   "Lower slowly to straight arms."
+  ],
+  "common_mistakes": [
+   "Shrugging at the top",
+   "Half reps"
+  ],
+  "regressions": [
+   "Negative pull-up",
+   "Band-assisted pull-up"
+  ],
+  "progressions": [
+   "L-sit pull-up",
+   "One-arm chin-up"
+  ],
+  "safety": "Ease off if your elbows or wrists get sore.",
+  "video": null,
+  "notes": "Usually easier than pull-ups because the biceps help more."
+ },
+ {
+  "id": "neutralpull",
+  "name": "Neutral-grip pull-up",
+  "aliases": [
+   "Parallel-grip pull-up",
+   "Hammer-grip pull-up"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis",
+   "Rear delts",
+   "Forearms"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar with parallel handles"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Grip the parallel handles, palms facing each other.",
+   "Pull your chest up between the handles.",
+   "Lower to a full hang."
+  ],
+  "common_mistakes": [
+   "Swinging",
+   "Neck craning to reach the bar"
+  ],
+  "regressions": [
+   "Band-assisted pull-up"
+  ],
+  "progressions": [
+   "Pull-ups",
+   "Weighted pull-up"
+  ],
+  "safety": "Often the most shoulder-friendly grip.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "widepullup",
+  "name": "Wide-grip pull-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Teres major",
+   "Rear delts",
+   "Biceps"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–8",
+  "form_cues": [
+   "Grip the bar about one and a half shoulder-widths apart.",
+   "Pull your chest up toward the bar, elbows out and down.",
+   "Lower to straight arms."
+  ],
+  "common_mistakes": [
+   "Going so wide that range is tiny",
+   "Kipping"
+  ],
+  "regressions": [
+   "Pull-ups"
+  ],
+  "progressions": [
+   "Archer pull-up"
+  ],
+  "safety": "Don't go wider than is comfortable for your shoulders.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "commandopull",
+  "name": "Commando pull-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Forearms",
+   "Core"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4–6 / side",
+  "form_cues": [
+   "Stand under the bar and grip it with hands close, one in front of the other.",
+   "Pull up, moving your head to one side of the bar.",
+   "Lower and alternate sides each rep."
+  ],
+  "common_mistakes": [
+   "Swinging the hips",
+   "Hitting the head on the bar"
+  ],
+  "regressions": [
+   "Chin-ups"
+  ],
+  "progressions": [
+   "Archer pull-up"
+  ],
+  "safety": "Move your head clear of the bar on every rep.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "towelpull",
+  "name": "Towel pull-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Forearms"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Grip"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar",
+   "Two towels"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–6",
+  "form_cues": [
+   "Drape two strong towels over the bar.",
+   "Grip a towel in each hand and hang.",
+   "Pull up as high as you can, then lower slowly."
+  ],
+  "common_mistakes": [
+   "Loose towels sliding",
+   "Swinging"
+  ],
+  "regressions": [
+   "Pull-ups"
+  ],
+  "progressions": [
+   "One-arm chin-up"
+  ],
+  "safety": "Use thick, strong towels and check they won't slip off.",
+  "video": null,
+  "notes": "Brutal grip builder for climbers and grapplers."
+ },
+ {
+  "id": "ctbpull",
+  "name": "Chest-to-bar pull-up",
+  "aliases": [
+   "C2B pull-up"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts",
+   "Lower traps"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4–8",
+  "form_cues": [
+   "Start from a full hang.",
+   "Pull explosively until your chest touches the bar.",
+   "Lower with control."
+  ],
+  "common_mistakes": [
+   "Stopping at chin height",
+   "Over-arching the lower back"
+  ],
+  "regressions": [
+   "Pull-ups"
+  ],
+  "progressions": [
+   "Muscle-up"
+  ],
+  "safety": "Build up from strict pull-ups first.",
+  "video": null,
+  "notes": "Key strength step toward the muscle-up."
+ },
+ {
+  "id": "kippullup",
+  "name": "Kipping pull-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Endurance"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Hip flexors",
+   "Biceps",
+   "Shoulders"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–15",
+  "form_cues": [
+   "Swing between an arch and a hollow position under the bar.",
+   "Drive hips up at the end of the hollow and pull.",
+   "Push away from the bar to re-enter the swing."
+  ],
+  "common_mistakes": [
+   "Kipping before you can do strict pull-ups",
+   "Loose shoulders at the bottom"
+  ],
+  "regressions": [
+   "Pull-ups"
+  ],
+  "progressions": [
+   "Bar muscle-up"
+  ],
+  "safety": "Only kip once you have 5+ strict pull-ups; it is hard on the shoulders.",
+  "video": null,
+  "notes": "Common in CrossFit for high-rep sets."
+ },
+ {
+  "id": "archerpull",
+  "name": "Archer pull-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Unilateral"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Core",
+   "Forearms"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "3–5 / side",
+  "form_cues": [
+   "Use a very wide grip.",
+   "Pull up toward one hand while the other arm stays nearly straight.",
+   "Lower and switch sides."
+  ],
+  "common_mistakes": [
+   "Bending the straight arm",
+   "Swinging to the side"
+  ],
+  "regressions": [
+   "Wide-grip pull-up"
+  ],
+  "progressions": [
+   "One-arm chin-up"
+  ],
+  "safety": "Warm up elbows; the straight arm is under a lot of stress.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "typewriterpull",
+  "name": "Typewriter pull-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Core"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "2–4 / side",
+  "form_cues": [
+   "Pull up with a wide grip until the chin clears the bar.",
+   "Slide across to one hand, then the other, staying high.",
+   "Return to centre and lower."
+  ],
+  "common_mistakes": [
+   "Dropping down while moving across",
+   "Kicking the legs"
+  ],
+  "regressions": [
+   "Archer pull-up"
+  ],
+  "progressions": [
+   "One-arm chin-up"
+  ],
+  "safety": "Make sure your bar is solidly fixed; side-to-side force is high.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "lsitpull",
+  "name": "L-sit pull-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Core"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Abs"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Biceps"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4–8",
+  "form_cues": [
+   "Hang and lift your legs straight out level with the floor.",
+   "Pull up while keeping the L shape.",
+   "Lower slowly without dropping the legs."
+  ],
+  "common_mistakes": [
+   "Legs dropping during the pull",
+   "Bent knees"
+  ],
+  "regressions": [
+   "Pull-ups",
+   "L-sit"
+  ],
+  "progressions": [
+   "Muscle-up"
+  ],
+  "safety": "Tuck the knees if the full L is too hard.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "onearmchin",
+  "name": "One-arm chin-up",
+  "aliases": [
+   "One-arm pull-up"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Unilateral"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Forearms",
+   "Core",
+   "Rear delts"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "1–3 / side",
+  "form_cues": [
+   "Grip the bar with one hand, other arm by your side.",
+   "Brace your body and pull until your chin clears the bar.",
+   "Lower slowly to a full hang."
+  ],
+  "common_mistakes": [
+   "Spinning around the bar",
+   "Jerking up from a swing"
+  ],
+  "regressions": [
+   "Archer pull-up",
+   "Typewriter pull-up"
+  ],
+  "progressions": [],
+  "safety": "Train elbows with lots of submaximal volume first; high tendon stress.",
+  "video": null,
+  "notes": "Assist with a towel held lower by the free hand."
+ },
+ {
+  "id": "tuckfl",
+  "name": "Tuck front lever",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Core"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Abs",
+   "Rear delts",
+   "Rhomboids"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Pull-up bar or rings"
+  ],
+  "req": "pullupbar|rings",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "8–15 sec",
+  "form_cues": [
+   "Hang with straight arms and pull knees to your chest.",
+   "Press the bar down to lift hips to shoulder height.",
+   "Hold with your back horizontal."
+  ],
+  "common_mistakes": [
+   "Bending the arms",
+   "Hips below shoulders"
+  ],
+  "regressions": [
+   "Scapular pull-up",
+   "Inverted row"
+  ],
+  "progressions": [
+   "Advanced tuck front lever"
+  ],
+  "safety": "Warm up shoulders and elbows; stop if elbows hurt.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "advtuckfl",
+  "name": "Advanced tuck front lever",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Core"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Abs",
+   "Rear delts",
+   "Rhomboids",
+   "Glutes"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Pull-up bar or rings"
+  ],
+  "req": "pullupbar|rings",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "6–12 sec",
+  "form_cues": [
+   "From a tuck lever, open your hips so thighs are vertical.",
+   "Keep the back flat and level.",
+   "Press the bar down with straight arms."
+  ],
+  "common_mistakes": [
+   "Back rounding",
+   "Hips sagging"
+  ],
+  "regressions": [
+   "Tuck front lever"
+  ],
+  "progressions": [
+   "Straddle front lever"
+  ],
+  "safety": "Progress slowly to protect elbows and shoulders.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "straddlefl",
+  "name": "Straddle front lever",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Core"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Abs",
+   "Rear delts",
+   "Glutes"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Pull-up bar or rings"
+  ],
+  "req": "pullupbar|rings",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–10 sec",
+  "form_cues": [
+   "Hang and lift your body level with legs straight and wide.",
+   "Keep hips in line with your shoulders.",
+   "Press down hard through straight arms."
+  ],
+  "common_mistakes": [
+   "Pike at the hips",
+   "Bent elbows"
+  ],
+  "regressions": [
+   "Advanced tuck front lever"
+  ],
+  "progressions": [
+   "Front lever"
+  ],
+  "safety": "Elite skill; build up over months.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "frontlever",
+  "name": "Front lever",
+  "aliases": [
+   "Full front lever"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Core"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Abs",
+   "Rear delts",
+   "Glutes",
+   "Rhomboids"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Pull-up bar or rings"
+  ],
+  "req": "pullupbar|rings",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "2–8 sec",
+  "form_cues": [
+   "Hang and raise your straight body until horizontal, face up.",
+   "Keep legs together and glutes squeezed.",
+   "Pull the bar toward your hips with straight arms."
+  ],
+  "common_mistakes": [
+   "Hips sagging",
+   "Bent arms"
+  ],
+  "regressions": [
+   "Straddle front lever"
+  ],
+  "progressions": [
+   "Front lever row"
+  ],
+  "safety": "Very demanding on elbows and shoulders; warm up well.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "skinthecat",
+  "name": "Skin the cat",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Mobility",
+   "Strength"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Lats",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Abs",
+   "Biceps",
+   "Chest"
+  ],
+  "movement_pattern": "Mobility",
+  "equipment": [
+   "Rings or pull-up bar"
+  ],
+  "req": "rings|pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–5",
+  "form_cues": [
+   "Hang and tuck your knees up through your arms.",
+   "Rotate backwards until feet point to the floor (German hang).",
+   "Return slowly the same way."
+  ],
+  "common_mistakes": [
+   "Dropping into the bottom position",
+   "Bent arms twisted on a bar"
+  ],
+  "regressions": [
+   "German hang"
+  ],
+  "progressions": [
+   "Back lever"
+  ],
+  "safety": "Go only as deep as your shoulders allow; easier on rings than a bar.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "germanhang",
+  "name": "German hang",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Mobility"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Chest",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Lats"
+  ],
+  "movement_pattern": "Stretch",
+  "equipment": [
+   "Rings or pull-up bar"
+  ],
+  "req": "rings|pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–30 sec",
+  "form_cues": [
+   "From a skin the cat, lower into the back position.",
+   "Let shoulders open gently with straight arms.",
+   "Keep breathing and come out slowly."
+  ],
+  "common_mistakes": [
+   "Dropping in fast",
+   "Holding too long at first"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Back lever"
+  ],
+  "safety": "Start with a few seconds; it heavily stretches the shoulder capsule.",
+  "video": null,
+  "notes": "Prepares the shoulders for back lever."
+ },
+ {
+  "id": "tuckbl",
+  "name": "Tuck back lever",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Chest",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Abs",
+   "Lower back",
+   "Rear delts"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Rings or pull-up bar"
+  ],
+  "req": "rings|pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "8–15 sec",
+  "form_cues": [
+   "Enter through skin the cat with knees tucked.",
+   "Stop when your back is level, face down.",
+   "Keep arms straight and squeeze the chest down."
+  ],
+  "common_mistakes": [
+   "Bent arms",
+   "Hips too high or low"
+  ],
+  "regressions": [
+   "German hang",
+   "Skin the cat"
+  ],
+  "progressions": [
+   "Back lever"
+  ],
+  "safety": "Avoid if you have biceps tendon pain; straight-arm stress is high.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "backlever",
+  "name": "Back lever",
+  "aliases": [
+   "Full back lever"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Chest",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Abs",
+   "Glutes",
+   "Lower back",
+   "Rear delts"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Rings or pull-up bar"
+  ],
+  "req": "rings|pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–10 sec",
+  "form_cues": [
+   "Enter from skin the cat and extend legs behind.",
+   "Hold your straight body horizontal, face down.",
+   "Squeeze glutes and keep arms locked."
+  ],
+  "common_mistakes": [
+   "Piked hips",
+   "Elbows bending"
+  ],
+  "regressions": [
+   "Tuck back lever"
+  ],
+  "progressions": [],
+  "safety": "Build up through tuck and straddle versions to protect the biceps tendon.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "muscleup",
+  "name": "Bar muscle-up",
+  "aliases": [
+   "Muscle-up"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Power"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Core",
+   "Shoulders"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "2–5",
+  "form_cues": [
+   "Pull explosively, aiming the bar to your lower chest.",
+   "Lean over the bar and turn the wrists quickly.",
+   "Press out to a straight-arm support on top."
+  ],
+  "common_mistakes": [
+   "Chicken-winging one arm over",
+   "Using a false grip on a bar (not needed)"
+  ],
+  "regressions": [
+   "Chest-to-bar pull-up",
+   "Straight bar dip"
+  ],
+  "progressions": [
+   "Ring muscle-up"
+  ],
+  "safety": "Needs a high, solid bar with clearance above it.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "humanflag",
+  "name": "Human flag",
+  "aliases": [
+   "Flag"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Core"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Lats",
+   "Obliques",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Triceps",
+   "Grip"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Vertical pole or stall bars"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–10 sec",
+  "form_cues": [
+   "Grip a vertical pole with hands wide, top arm pulling, bottom arm pushing.",
+   "Lock both arms and lift your body sideways.",
+   "Hold your legs level with the floor."
+  ],
+  "common_mistakes": [
+   "Bending the bottom arm",
+   "Hips sagging"
+  ],
+  "regressions": [
+   "Tuck human flag",
+   "Side plank"
+  ],
+  "progressions": [],
+  "safety": "Use a fixed pole that cannot rotate; warm up shoulders well.",
+  "video": null,
+  "notes": "No exact gear id for a vertical pole; pullupbar used as nearest."
+ },
+ {
+  "id": "straightbardip",
+  "name": "Straight bar dip",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Straight bar at hip height"
+  ],
+  "req": "dipstation|pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Support yourself on top of a straight bar with straight arms.",
+   "Lean forward and lower until the bar touches your upper belly.",
+   "Press back up to straight arms."
+  ],
+  "common_mistakes": [
+   "Staying too upright and falling off",
+   "Shallow reps"
+  ],
+  "regressions": [
+   "Bench dips",
+   "Chest dips"
+  ],
+  "progressions": [
+   "Bar muscle-up"
+  ],
+  "safety": "Needs a solid bar at around hip height.",
+  "video": null,
+  "notes": "Essential for the muscle-up transition."
+ },
+ {
+  "id": "dipsupport",
+  "name": "Dip support hold",
+  "aliases": [
+   "Parallel bar support",
+   "Top dip hold"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Core"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Dip station or parallel bars"
+  ],
+  "req": "dipstation",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–30 sec",
+  "form_cues": [
+   "Jump up to support on the bars with straight arms.",
+   "Push shoulders down away from your ears.",
+   "Keep the body still and legs together."
+  ],
+  "common_mistakes": [
+   "Shrugging",
+   "Bent elbows"
+  ],
+  "regressions": [
+   "Bench dips"
+  ],
+  "progressions": [
+   "Chest dips",
+   "Ring support hold"
+  ],
+  "safety": "Start with short holds if your wrists are new to it.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "chestdips",
+  "name": "Chest dips",
+  "aliases": [
+   "Parallel bar dip"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Lower chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Dip station or parallel bars"
+  ],
+  "req": "dipstation",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–12",
+  "form_cues": [
+   "Support on the bars and lean your torso forward.",
+   "Lower until shoulders are just below elbows.",
+   "Press up, squeezing the chest."
+  ],
+  "common_mistakes": [
+   "Going too deep and straining the shoulders",
+   "Flaring elbows"
+  ],
+  "regressions": [
+   "Bench dips",
+   "Negative dip"
+  ],
+  "progressions": [
+   "Weighted dip",
+   "Ring dip"
+  ],
+  "safety": "Skip or shorten the range if you have shoulder pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "tridip",
+  "name": "Triceps dip",
+  "aliases": [
+   "Upright dip"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Front delts"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Dip station or parallel bars"
+  ],
+  "req": "dipstation",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–12",
+  "form_cues": [
+   "Support on the bars with your body upright.",
+   "Lower with elbows pointing straight back.",
+   "Press up until arms are locked."
+  ],
+  "common_mistakes": [
+   "Leaning forward (turns it into a chest dip)",
+   "Partial reps"
+  ],
+  "regressions": [
+   "Bench dips"
+  ],
+  "progressions": [
+   "Weighted dip",
+   "Korean dip"
+  ],
+  "safety": "Stop at 90° elbow bend if your shoulders are sensitive.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "koreandip",
+  "name": "Korean dip",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Mobility"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Biceps"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Straight bar at hip height"
+  ],
+  "req": "dipstation|pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–6",
+  "form_cues": [
+   "Stand with the bar behind you, gripping it overhand.",
+   "Jump to a support and lower as your hands go behind the body.",
+   "Push back up to the top."
+  ],
+  "common_mistakes": [
+   "Rushing into the deep stretch",
+   "Letting shoulders roll forward"
+  ],
+  "regressions": [
+   "Straight bar dip"
+  ],
+  "progressions": [],
+  "safety": "Needs good shoulder mobility; progress very gradually.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "parapush",
+  "name": "Parallette push-up",
+  "aliases": [
+   "Deep push-up"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Home-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Parallettes"
+  ],
+  "req": "parallettes",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Grip parallettes under your shoulders in a push-up.",
+   "Lower your chest below hand height for extra range.",
+   "Press back up to straight arms."
+  ],
+  "common_mistakes": [
+   "Going deeper than shoulders tolerate",
+   "Sagging hips"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Pseudo planche push-up"
+  ],
+  "safety": "Make sure the parallettes are on a non-slip surface.",
+  "video": null,
+  "notes": "Neutral grip is easy on the wrists."
+ },
+ {
+  "id": "bandpushup",
+  "name": "Banded push-up",
+  "aliases": [],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Loop a band across your upper back, ends under your hands.",
+   "Do a normal push-up against the band's pull.",
+   "Lock out hard at the top where tension is highest."
+  ],
+  "common_mistakes": [
+   "Band slipping off the shoulders",
+   "Losing body line"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Decline push-up"
+  ],
+  "safety": "Check the band for damage before each use.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "invrow",
+  "name": "Inverted row",
+  "aliases": [
+   "Australian pull-up",
+   "Bodyweight row"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Low bar (rack/Smith) or rings"
+  ],
+  "req": "powerrack|smith|rings",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Hang under a bar at waist height, body straight.",
+   "Pull your chest to the bar, squeezing shoulder blades.",
+   "Lower to straight arms with control."
+  ],
+  "common_mistakes": [
+   "Hips sagging",
+   "Shrugging shoulders"
+  ],
+  "regressions": [
+   "Table row"
+  ],
+  "progressions": [
+   "Archer row",
+   "Feet-elevated inverted row"
+  ],
+  "safety": "Make sure the bar is locked into the rack safety pins or Smith hooks.",
+  "video": null,
+  "notes": "Lower the bar or raise the feet to make it harder."
+ },
+ {
+  "id": "archerrow",
+  "name": "Archer row",
+  "aliases": [
+   "Archer inverted row"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Unilateral"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Low bar or rings"
+  ],
+  "req": "powerrack|smith|rings",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5–8 / side",
+  "form_cues": [
+   "Grip wide under a low bar.",
+   "Row toward one hand while the other arm stays straight.",
+   "Lower and switch sides."
+  ],
+  "common_mistakes": [
+   "Rotating the hips",
+   "Bending the straight arm"
+  ],
+  "regressions": [
+   "Inverted row"
+  ],
+  "progressions": [
+   "One-arm inverted row",
+   "Front lever row"
+  ],
+  "safety": "Secure the bar before loading one side.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ringpush",
+  "name": "Ring push-ups",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core",
+   "Serratus anterior"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Gymnastic rings"
+  ],
+  "req": "rings",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–12",
+  "form_cues": [
+   "Set rings a few centimetres off the floor and grip them.",
+   "Lower with rings close to your sides.",
+   "Press up and turn rings out slightly at the top."
+  ],
+  "common_mistakes": [
+   "Rings drifting apart",
+   "Sagging hips"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Ring dip",
+   "Ring fly"
+  ],
+  "safety": "Start with rings higher to reduce the instability.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ringsupport",
+  "name": "Ring support hold",
+  "aliases": [
+   "RTO support"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Biceps",
+   "Core"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Gymnastic rings"
+  ],
+  "req": "rings",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–30 sec",
+  "form_cues": [
+   "Jump up to support on the rings with straight arms.",
+   "Keep rings close to your hips.",
+   "Turn the rings out so palms face forward if you can."
+  ],
+  "common_mistakes": [
+   "Rings swaying out",
+   "Shrugging"
+  ],
+  "regressions": [
+   "Dip support hold"
+  ],
+  "progressions": [
+   "Ring dip",
+   "Ring L-sit"
+  ],
+  "safety": "Use a box to get in and out.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ringdip",
+  "name": "Ring dip",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core",
+   "Biceps"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Gymnastic rings"
+  ],
+  "req": "rings",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4–8",
+  "form_cues": [
+   "Start in a stable ring support.",
+   "Lower until shoulders are below elbows, rings close to the body.",
+   "Press back up and turn rings out at the top."
+  ],
+  "common_mistakes": [
+   "Rings flaring wide",
+   "Too deep too soon"
+  ],
+  "regressions": [
+   "Chest dips",
+   "Ring support hold"
+  ],
+  "progressions": [
+   "Ring muscle-up"
+  ],
+  "safety": "Master ring support holds first; instability is high.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ringfly",
+  "name": "Ring fly",
+  "aliases": [
+   "Ring chest fly"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Isolation"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Biceps",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Gymnastic rings"
+  ],
+  "req": "rings|trx",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Lean on the rings with arms nearly straight.",
+   "Open arms wide as you lower your chest.",
+   "Squeeze the rings back together."
+  ],
+  "common_mistakes": [
+   "Bending the arms into a push-up",
+   "Going wider than you can control"
+  ],
+  "regressions": [
+   "Ring push-ups"
+  ],
+  "progressions": [
+   "Iron cross"
+  ],
+  "safety": "Start with rings higher and a steep body angle.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ringtriext",
+  "name": "Ring triceps extension",
+  "aliases": [
+   "Bodyweight triceps extension"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Rings or suspension trainer"
+  ],
+  "req": "rings|trx",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Lean forward holding the rings at forehead height.",
+   "Bend only the elbows to bring hands beside your head.",
+   "Straighten the arms to push back up."
+  ],
+  "common_mistakes": [
+   "Moving at the shoulders",
+   "Hips sagging"
+  ],
+  "regressions": [
+   "Sphinx push-up"
+  ],
+  "progressions": [
+   "Tiger bend push-up"
+  ],
+  "safety": "Steeper body angle = harder; start nearly upright.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ringcurl",
+  "name": "Ring biceps curl",
+  "aliases": [
+   "Bodyweight curl",
+   "Suspension curl"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis",
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Rings or suspension trainer"
+  ],
+  "req": "rings|trx",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Hold the rings palms up and lean back with straight arms.",
+   "Curl your hands toward your forehead, elbows fixed.",
+   "Lower slowly back to straight arms."
+  ],
+  "common_mistakes": [
+   "Elbows dropping",
+   "Bending at the hips"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Chin-ups"
+  ],
+  "safety": "Walk feet forward to make it harder.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ringmu",
+  "name": "Ring muscle-up",
+  "aliases": [],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength",
+   "Power"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Core",
+   "Shoulders"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Gymnastic rings"
+  ],
+  "req": "rings",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "1–5",
+  "form_cues": [
+   "Hang using a false grip.",
+   "Pull rings to the chest and lean the shoulders forward over them.",
+   "Transition into a dip and press to support."
+  ],
+  "common_mistakes": [
+   "Losing the false grip",
+   "Pulling too far away from the rings"
+  ],
+  "regressions": [
+   "Ring dip",
+   "Chest-to-bar pull-up"
+  ],
+  "progressions": [],
+  "safety": "Build strong ring dips and false-grip pull-ups first.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ironcross",
+  "name": "Iron cross",
+  "aliases": [
+   "Cross"
+  ],
+  "training_type": "Calisthenics",
+  "tags": [
+   "Calisthenics",
+   "Strength"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Shoulders",
+   "Core"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Gymnastic rings"
+  ],
+  "req": "rings",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "2–5 sec",
+  "form_cues": [
+   "Start from ring support and spread arms out to the sides.",
+   "Keep arms straight and press rings down.",
+   "Hold the T shape with body upright."
+  ],
+  "common_mistakes": [
+   "Bending elbows",
+   "Dropping below horizontal"
+  ],
+  "regressions": [
+   "Ring fly"
+  ],
+  "progressions": [],
+  "safety": "Elite gymnastics skill; high tendon load, train with bands and spotting.",
+  "video": null,
+  "notes": ""
+ }
+]
