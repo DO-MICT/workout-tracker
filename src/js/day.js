@@ -1,8 +1,7 @@
 /* ---------- render ---------- */
-/* the old header menu moved into the bottom tab bar (tabs.js); the header keeps only the plan name */
-function renderWho(){
-  var w=document.getElementById("who"); if(w) w.innerHTML="";
-  if(typeof renderTabbar==="function") renderTabbar();
+/* the bottom tab bar (tabs.js) is the main menu; refresh it and the More page (reply dot, admin row) */
+function renderNav(){
+  renderTabbar();
   var m=document.getElementById("more"); if(m&&!m.hidden) renderMore();
 }
 function themePref(){var t=S.theme; if(t!=="light"&&t!=="dark"&&t!=="auto"){try{t=localStorage.getItem("split5-theme")||"auto";}catch(e){t="auto";}} return t;}
@@ -10,10 +9,6 @@ function applyTheme(){
   var t=themePref(), r=document.documentElement;
   if(t==="light"||t==="dark") r.setAttribute("data-theme",t); else r.removeAttribute("data-theme");
   try{localStorage.setItem("split5-theme",t);}catch(e){}
-}
-function setMenu(open){
-  var m=document.getElementById("menu"), b=document.getElementById("menuBtn"); if(!m||!b) return;
-  m.hidden=!open; b.setAttribute("aria-expanded",open?"true":"false");
 }
 /* one button with the full day name; tap it to pick another day of the plan */
 var DAY_CHEV='<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -166,24 +161,22 @@ function updateProgress(){
 function renderAll(){applyTheme();DAYS=buildDays();
   if(pickToday){var tid=WEEK[(new Date().getDay()+6)%7].id;day=0;DAYS.forEach(function(d,i){if(d.id===tid)day=i;});pickToday=false;}
   if(day>=DAYS.length) day=0;
-  renderPlanBtn();renderWho();renderTabs();renderDay();setStatus();}
+  renderPlanBtn();renderNav();renderTabs();renderDay();setStatus();}
 
 /* ---------- events ---------- */
 document.addEventListener("click",function(e){
   var gsum=e.target.closest("details.grp > summary"); if(gsum) GRPCLICK=gsum.parentElement;
-  if(e.target.closest("#menuBtn")){var m=document.getElementById("menu");setMenu(m&&m.hidden);return;}
-  if(!e.target.closest("#menu")) setMenu(false);
   if(!e.target.closest("#planMenu")&&!e.target.closest("#planBtn")) setPlanMenu(false);
   if(!e.target.closest("#dayLocMenu")&&!e.target.closest("#dayLocBtn")) setDayLocMenu(false);
-  if(e.target.closest("#dayBtn")){var dm=document.getElementById("dayMenu");setMenu(false);setPlanMenu(false);setDayMenu(dm&&dm.hidden);return;}
+  if(e.target.closest("#dayBtn")){var dm=document.getElementById("dayMenu");setPlanMenu(false);setDayMenu(dm&&dm.hidden);return;}
   if(!e.target.closest("#dayMenu")) setDayMenu(false);
   var t=e.target.closest("button"); if(!t) return;
   if(tabsClick(t)) return;
+  if(libraryClick(t)) return;
   if(statsClick(t)) return;
   if(t.dataset.note){e.preventDefault();openNote(t.dataset.note);return;}
-  if(t.id==="openSugg"){setMenu(false);openSugg();return;}
-  if(t.id==="openHistory"){setMenu(false);openHistory();return;}
-  if(t.id==="openFeedback"){setMenu(false);openFeedback();return;}
+  if(t.id==="openSugg"){openSugg();return;}
+  if(t.id==="openFeedback"){openFeedback();return;}
   if(t.id==="doneClose"){closeDone();var fb=document.getElementById("dayBtn");if(fb)fb.focus({preventScroll:true});return;}
   if(t.id==="doneHistory"){closeDone();openHistory();return;}
   if(historyClick(t)) return;
@@ -201,12 +194,10 @@ document.addEventListener("click",function(e){
   if(t.id==="nDelete"){saveNote(true);return;}
   if(builderClick(t)) return;
   if(t.dataset.themeset){S.theme=t.dataset.themeset;save();applyTheme();document.querySelectorAll("[data-themeset]").forEach(function(b){b.setAttribute("aria-pressed",b===t?"true":"false");});return;}
-  if(t.id==="openBuilder"){setMenu(false);openBuilder();return;}
   if(colesClick(t)) return;
   if(t.id==="editDay"||t.id==="editDay2"){openBuilder();return;}
   if(t.id==="dayLocSetup2"){setLoc(dayLoc(activePlan().id,DAYS[day].id).id);openEquip();return;}
-  if(t.id==="openProfile"){setMenu(false);openProfile();return;}
-  if(t.id==="openEquip"){setMenu(false);openEquip();return;}
+  if(t.id==="openProfile"){openProfile();return;}
   if(t.id==="closeEquip"){closeEquip();return;}
   if(t.dataset.gear){toggleGear(t.dataset.gear);return;}
   if(t.id==="clearSearch"){var q=document.getElementById("eqSearch");q.value="";renderGear();q.focus();return;}
@@ -216,8 +207,6 @@ document.addEventListener("click",function(e){
   if(t.dataset.tier){acct().tier=t.dataset.tier;save();document.querySelectorAll("[data-tier]").forEach(function(b){var on=b===t;b.classList.toggle("on",on);b.setAttribute("aria-checked",on);var c=b.querySelector(".tcur");if(on&&!c)b.insertAdjacentHTML("beforeend",'<span class="tcur">Current</span>');if(!on&&c)c.remove();});renderDay();toast(TIERS.filter(function(x){return x.id===t.dataset.tier;})[0].name+" (placeholder)");return;}
   if(t.id==="testPing"){schedulePing(3);return;}
   if(t.dataset.day!==undefined){day=+t.dataset.day;renderTabs();renderDay();window.scrollTo(0,0);var db=document.getElementById("dayBtn");if(db)db.focus({preventScroll:true});return;}
-  if(t.id==="editNames"){setMenu(false);var r=document.getElementById("rename");r.classList.toggle("open");document.getElementById("n0").value=S.names[0];if(r.classList.contains("open"))document.getElementById("n0").focus();return;}
-  if(t.id==="saveNames"){S.names=[document.getElementById("n0").value.trim()||"Lifter 1",S.names[1]||"Lifter 2"];document.getElementById("rename").classList.remove("open");save();renderAll();return;}
   if(t.dataset.tick){
     var ex=findEx(t.dataset.tick), arr=setsFor(ex), i=+t.dataset.i, s=arr[i];
     s.d=!s.d;
@@ -259,11 +248,11 @@ document.addEventListener("keydown",function(e){
   if(e.key==="Escape"&&BD){ if(BD.view==="pick"){BD.view="edit";renderBuilder();} else if(!BD.dirty) closeBuilder(); else toast("Tap Save workout or Cancel"); return; }
   if(e.key==="Escape"){var eq=document.getElementById("equip");if(eq&&!eq.hidden){closeEquip();return;}}
   if(e.key==="Escape"){var sh=document.getElementById("profile");if(sh&&!sh.hidden){closeProfile();return;}}
+  if(EL&&e.key==="Escape"){if(EL.view){document.getElementById("libBack").click();}else closeLibrary();return;}
   if(e.key==="Escape"){var mo=document.getElementById("more");if(mo&&!mo.hidden){closeMore();return;}}
-  if(e.key==="Escape"){var m=document.getElementById("menu");if(m&&!m.hidden){setMenu(false);var b=document.getElementById("menuBtn");if(b)b.focus();}}
 });
 document.addEventListener("input",function(e){
-  var el=e.target; if(builderInput(el)) return;
+  var el=e.target; if(builderInput(el)||libraryInput(el)) return;
   if(el.id==="eqSearch"){renderGear();return;}
   if(el.dataset&&el.dataset.pf){el.removeAttribute("aria-invalid");return;}
   if(!el.dataset||!el.dataset.ex) return;
@@ -273,6 +262,7 @@ document.addEventListener("input",function(e){
 });
 document.addEventListener("toggle",function(e){
   var el=e.target; if(!el||!el.classList) return;
+  if(el.classList.contains("eqfold")){if(!(document.getElementById("eqSearch")||{}).value) EQ_OPEN[el.dataset.eqg]=el.open; return;}
   if(el.classList.contains("ex")){OPEN[day+":"+el.dataset.ex]=el.open;}
   else if(el.classList.contains("grp")){
     OPEN[day+":g:"+el.dataset.gk]=el.open;

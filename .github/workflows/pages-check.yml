@@ -1,0 +1,14 @@
+name: Check index.html is built
+# GitHub Pages serves index.html, which is built from app.html. If it's stale, the live site shows old code.
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rebuild index.html and compare
+        run: |
+          python3 tools/build_pages.py
+          git diff --exit-code index.html || { echo "::error::index.html is out of date. Run: python3 tools/build_pages.py"; exit 1; }
+      - name: Syntax check the app scripts
+        run: for f in src/js/*.js; do node --check "$f"; done

@@ -14,6 +14,7 @@ function webStart(){
 function webReady(){
   try{ sb=window.supabase.createClient(SB_URL,SB_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}}); }
   catch(e){ sbOffline=true; setStatus(); if(!acct().signedIn) openWebAuth("signup"); return; }
+  catFetch();
   sb.auth.onAuthStateChange(function(ev){ if(ev==="PASSWORD_RECOVERY") openWebAuth("newpass"); });
   sb.auth.getSession().then(function(r){
     var ses=r&&r.data&&r.data.session;

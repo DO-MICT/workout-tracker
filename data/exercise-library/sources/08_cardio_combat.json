@@ -1824,7 +1824,7 @@
    "Swimming pool or open water",
    "Goggles"
   ],
-  "req": "",
+  "req": "pool",
   "equipment_tier": 0,
   "difficulty": "Intermediate",
   "tracking": "cardio",
@@ -1881,7 +1881,7 @@
    "Swimming pool or open water",
    "Goggles"
   ],
-  "req": "",
+  "req": "pool",
   "equipment_tier": 0,
   "difficulty": "Beginner",
   "tracking": "cardio",
@@ -2043,7 +2043,7 @@
    "Bicycle",
    "Helmet"
   ],
-  "req": "bike",
+  "req": "bicycle",
   "equipment_tier": 2,
   "difficulty": "Beginner",
   "tracking": "cardio",
@@ -2101,7 +2101,7 @@
    "Backpack or rucksack with weight",
    "Weighted vest (optional)"
   ],
-  "req": "weightvest",
+  "req": "backpack|weightvest",
   "equipment_tier": 1,
   "difficulty": "Intermediate",
   "tracking": "cardio",
@@ -3397,7 +3397,7 @@
   "equipment": [
    "Speed bag and platform"
   ],
-  "req": "bag",
+  "req": "speedbag",
   "equipment_tier": 3,
   "difficulty": "Intermediate",
   "tracking": "time",
@@ -3768,7 +3768,7 @@
   "equipment": [
    "Recumbent bike"
   ],
-  "req": "bike",
+  "req": "recumbent|bike",
   "equipment_tier": 2,
   "difficulty": "Beginner",
   "tracking": "time",
@@ -4469,7 +4469,7 @@
   "equipment": [
    "Upper body ergometer"
   ],
-  "req": "bike",
+  "req": "ube",
   "equipment_tier": 3,
   "difficulty": "Beginner",
   "tracking": "time",
@@ -4522,7 +4522,7 @@
   "equipment": [
    "VersaClimber"
   ],
-  "req": "stairs",
+  "req": "versaclimber",
   "equipment_tier": 3,
   "difficulty": "Advanced",
   "tracking": "time",

@@ -108,8 +108,9 @@ function closeEquip(){
   var sh=document.getElementById("equip"); if(!sh||sh.hidden) return;
   sh.hidden=true; sh.innerHTML=""; document.body.style.overflow="";
   if(BD&&BD.wizard){document.body.style.overflow="hidden";renderBuilder();return;}
-  var b=document.getElementById("menuBtn"); if(b) b.focus();
 }
+/* groups under All equipment fold away (441 items); remember which are open while you tap */
+var EQ_OPEN={};
 function renderGear(){
   var box=document.getElementById("eqLists"); if(!box) return;
   var qi=document.getElementById("eqSearch"), q=(qi?qi.value:"").trim().toLowerCase();
@@ -119,7 +120,7 @@ function renderGear(){
     var hit=G.items.filter(function(it){ return !q || (it[1]+" "+it[2]+" "+G.g).toLowerCase().indexOf(q)>=0; });
     var have=hit.filter(function(it){return mine.indexOf(it[0])>=0;}), rest=hit.filter(function(it){return mine.indexOf(it[0])<0;});
     if(have.length){ nMine+=have.length; mineH+='<div class="eqgrp"><h4>'+esc(G.g)+'</h4><div class="eqchips">'+have.map(function(it){return '<button class="eqchip mine" data-gear="'+it[0]+'" aria-label="Remove '+esc(it[1])+' from my gear"><span aria-hidden="true">✓</span>'+esc(it[1])+'<span class="x" aria-hidden="true">×</span></button>';}).join("")+'</div></div>'; }
-    if(rest.length){ nAll+=rest.length; allH+='<div class="eqgrp"><h4>'+esc(G.g)+'</h4><div class="eqchips">'+rest.map(function(it){return '<button class="eqchip" data-gear="'+it[0]+'" aria-label="Add '+esc(it[1])+' to my gear"><span aria-hidden="true">+</span>'+esc(it[1])+'</button>';}).join("")+'</div></div>'; }
+    if(rest.length){ nAll+=rest.length; allH+='<details class="eqgrp eqfold" data-eqg="'+esc(G.g)+'"'+(q||EQ_OPEN[G.g]?' open':'')+'><summary><h4>'+esc(G.g)+' <span class="eqn">'+rest.length+'</span></h4></summary><div class="eqchips">'+rest.map(function(it){return '<button class="eqchip" data-gear="'+it[0]+'" aria-label="Add '+esc(it[1])+' to my gear"><span aria-hidden="true">+</span>'+esc(it[1])+'</button>';}).join("")+'</div></details>'; }
   });
   var totalMine=mine.length;
   var h='<section class="eqsec mygear"><h3 class="psec">My gear at '+esc(curLoc().name)+' <span class="eqn">'+totalMine+'</span></h3>';

@@ -380,7 +380,7 @@
    "Weight plates",
    "Squat rack"
   ],
-  "req": "barbell,plates,powerrack",
+  "req": "ssb,plates,powerrack|squatstands|halfrack",
   "equipment_tier": 2,
   "difficulty": "Intermediate",
   "tracking": "w",
@@ -2773,7 +2773,7 @@
    "Weight plates",
    "High flat bench"
   ],
-  "req": "barbell,plates,flatbench",
+  "req": "barbell,plates,highbench",
   "equipment_tier": 2,
   "difficulty": "Intermediate",
   "tracking": "w",

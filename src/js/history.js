@@ -182,7 +182,6 @@ function openHistory(exId){
 function closeHistory(){
   var sh=document.getElementById("history"); if(!sh||sh.hidden) return;
   sh.hidden=true; sh.innerHTML=""; document.body.style.overflow=""; H=null;
-  var b=document.getElementById("menuBtn"); if(b) b.focus();
 }
 function histReload(){ if(!H) return; H.rows=null; H.more=false; H.err=""; H.dirty=false; histMore(); }
 function histMore(){

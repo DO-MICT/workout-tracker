@@ -7,7 +7,7 @@ function checkReplies(){
   if(!sb||!sbUser) return;
   sb.from("suggestions").select("user_id,replied_at").eq("user_id",sbUser.id).order("created_at",{ascending:false}).limit(50).then(function(r){
     var seen=S.sgSeen||"", n=((r&&r.data)||[]).filter(function(x){return x.user_id===sbUser.id&&x.replied_at&&x.replied_at>seen;}).length;
-    if(n!==SG_UNREAD){SG_UNREAD=n;renderWho();}
+    if(n!==SG_UNREAD){SG_UNREAD=n;renderNav();}
   },function(){});
 }
 document.addEventListener("visibilitychange",function(){ if(document.visibilityState==="visible"&&sbUser) checkReplies(); });
@@ -22,13 +22,12 @@ function closeSugg(){
   var sh=document.getElementById("sugg"); if(!sh||sh.hidden) return;
   if(SG&&SG.url) URL.revokeObjectURL(SG.url);
   sh.hidden=true; sh.innerHTML=""; document.body.style.overflow=""; SG=null;
-  var b=document.getElementById("menuBtn"); if(b) b.focus();
 }
 function loadPastSugg(){
   if(!sb||!sbUser) return;
   sb.from("suggestions").select("id,kind,message,status,created_at,screenshot_path,admin_reply,replied_at").eq("user_id",sbUser.id).order("created_at",{ascending:false}).limit(20).then(function(r){
     if(!SG) return; SG.past=(r&&r.data)||[]; renderSugg(true);
-    S.sgSeen=new Date().toISOString(); SG_UNREAD=0; save(); renderWho();
+    S.sgSeen=new Date().toISOString(); SG_UNREAD=0; save(); renderNav();
   },function(){ if(SG){SG.past=[];renderSugg(true);} });
 }
 function renderSugg(keepScroll){
@@ -134,7 +133,6 @@ function openFeedback(){
 function closeFeedback(){
   var sh=document.getElementById("feedback"); if(!sh||sh.hidden) return;
   sh.hidden=true; sh.innerHTML=""; document.body.style.overflow=""; FB=null;
-  var b=document.getElementById("menuBtn"); if(b) b.focus();
 }
 function loadFeedback(){
   if(!sb||!sbUser){ if(FB){FB.rows=[];FB.err="Sign in to see feedback.";renderFeedback(true);} return; }

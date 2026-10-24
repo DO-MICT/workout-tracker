@@ -4922,7 +4922,7 @@
   "equipment": [
    "Vertical pole or stall bars"
   ],
-  "req": "pullupbar",
+  "req": "pole|stallbars",
   "equipment_tier": 1,
   "difficulty": "Advanced",
   "tracking": "hold",

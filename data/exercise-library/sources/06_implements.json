@@ -4683,7 +4683,7 @@
   "equipment": [
    "Yoke"
   ],
-  "req": "barbell,plates,powerrack",
+  "req": "yoke",
   "equipment_tier": 3,
   "difficulty": "Advanced",
   "tracking": "w",
@@ -4945,7 +4945,7 @@
   "equipment": [
    "Large tyre"
   ],
-  "req": "sled",
+  "req": "tyre",
   "equipment_tier": 3,
   "difficulty": "Advanced",
   "tracking": "w",
@@ -4998,7 +4998,7 @@
    "Atlas stone",
    "Platform"
   ],
-  "req": "sandbag",
+  "req": "atlasstone|sandbag",
   "equipment_tier": 3,
   "difficulty": "Advanced",
   "tracking": "w",
@@ -5049,7 +5049,7 @@
   "equipment": [
    "Strongman log"
   ],
-  "req": "barbell",
+  "req": "log",
   "equipment_tier": 3,
   "difficulty": "Advanced",
   "tracking": "w",
