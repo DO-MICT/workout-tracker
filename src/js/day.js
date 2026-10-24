@@ -1,10 +1,9 @@
 /* ---------- render ---------- */
+/* the old header menu moved into the bottom tab bar (tabs.js); the header keeps only the plan name */
 function renderWho(){
-  var w=document.getElementById("who");
-  w.innerHTML='<button class="menu-btn" id="menuBtn" aria-label="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="menu"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>'+(SG_UNREAD?'<span class="mdot" aria-label="New reply"></span>':'')+'</button>'+
-    '<div class="menu" id="menu" hidden><button class="menu-item" id="openProfile">Profile</button><button class="menu-item" id="openPlans">Workout plans</button><button class="menu-item" id="openHistory">History</button><button class="menu-item" id="openBuilder">Edit this workout</button><button class="menu-item" id="openEquip">Equipment</button>'+(WEB_MODE?'<button class="menu-item" id="openSugg">Suggestions'+(SG_UNREAD?'<span class="replytag">'+SG_UNREAD+' new repl'+(SG_UNREAD>1?'ies':'y')+'</span>':'')+'</button>':'')+(WEB_MODE&&sbAdmin?'<button class="menu-item" id="openFeedback">Feedback <span class="admtag">Admin</span></button>':'')+''+
-    '<div class="menu-theme"><span>Appearance</span><div class="seg" role="group" aria-label="Appearance">'+
-    [["auto","Auto"],["light","Light"],["dark","Dark"]].map(function(o){return '<button data-themeset="'+o[0]+'" aria-pressed="'+(themePref()===o[0])+'">'+o[1]+'</button>';}).join("")+'</div></div></div>';
+  var w=document.getElementById("who"); if(w) w.innerHTML="";
+  if(typeof renderTabbar==="function") renderTabbar();
+  var m=document.getElementById("more"); if(m&&!m.hidden) renderMore();
 }
 function themePref(){var t=S.theme; if(t!=="light"&&t!=="dark"&&t!=="auto"){try{t=localStorage.getItem("split5-theme")||"auto";}catch(e){t="auto";}} return t;}
 function applyTheme(){
@@ -179,6 +178,8 @@ document.addEventListener("click",function(e){
   if(e.target.closest("#dayBtn")){var dm=document.getElementById("dayMenu");setMenu(false);setPlanMenu(false);setDayMenu(dm&&dm.hidden);return;}
   if(!e.target.closest("#dayMenu")) setDayMenu(false);
   var t=e.target.closest("button"); if(!t) return;
+  if(tabsClick(t)) return;
+  if(statsClick(t)) return;
   if(t.dataset.note){e.preventDefault();openNote(t.dataset.note);return;}
   if(t.id==="openSugg"){setMenu(false);openSugg();return;}
   if(t.id==="openHistory"){setMenu(false);openHistory();return;}
@@ -258,6 +259,7 @@ document.addEventListener("keydown",function(e){
   if(e.key==="Escape"&&BD){ if(BD.view==="pick"){BD.view="edit";renderBuilder();} else if(!BD.dirty) closeBuilder(); else toast("Tap Save workout or Cancel"); return; }
   if(e.key==="Escape"){var eq=document.getElementById("equip");if(eq&&!eq.hidden){closeEquip();return;}}
   if(e.key==="Escape"){var sh=document.getElementById("profile");if(sh&&!sh.hidden){closeProfile();return;}}
+  if(e.key==="Escape"){var mo=document.getElementById("more");if(mo&&!mo.hidden){closeMore();return;}}
   if(e.key==="Escape"){var m=document.getElementById("menu");if(m&&!m.hidden){setMenu(false);var b=document.getElementById("menuBtn");if(b)b.focus();}}
 });
 document.addEventListener("input",function(e){
