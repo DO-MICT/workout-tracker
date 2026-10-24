@@ -139,12 +139,12 @@ function confirmTap(t,label,again){
   return false;
 }
 function plansClick(t){
-  if(t.id==="planBtn"){var m=document.getElementById("planMenu");setMenu(false);setPlanMenu(m.hidden);return true;}
+  if(t.id==="planBtn"){var m=document.getElementById("planMenu");setPlanMenu(m.hidden);return true;}
   if(t.dataset.useplan){
     var inSheet=!!t.closest("#plans"); setPlanMenu(false); usePlan(t.dataset.useplan);
     if(inSheet) renderPlans(); toast("Now on: "+activePlan().name); return true;
   }
-  if(t.id==="openPlans"||t.id==="managePlans"){setPlanMenu(false);setMenu(false);openPlans();return true;}
+  if(t.id==="openPlans"||t.id==="managePlans"){setPlanMenu(false);openPlans();return true;}
   if(t.id==="closePlans"){closePlans();var b=document.getElementById("planBtn");if(b)b.focus();return true;}
   if(t.dataset.dupplan){
     var src=planById(t.dataset.dupplan), days={};

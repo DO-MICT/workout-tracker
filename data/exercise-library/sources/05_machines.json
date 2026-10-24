@@ -801,7 +801,7 @@
   "equipment": [
    "Decline press machine"
   ],
-  "req": "chestpress",
+  "req": "declinepressm|plateincline|chestpress",
   "equipment_tier": 3,
   "difficulty": "Beginner",
   "tracking": "w",
@@ -1057,7 +1057,7 @@
   "equipment": [
    "Seated dip machine"
   ],
-  "req": "tricepm",
+  "req": "dipm",
   "equipment_tier": 3,
   "difficulty": "Beginner",
   "tracking": "w",
@@ -1324,7 +1324,7 @@
    "Plate-loaded high row machine",
    "Weight plates"
   ],
-  "req": "rowmachine,plates",
+  "req": "highrowm,plates",
   "equipment_tier": 3,
   "difficulty": "Intermediate",
   "tracking": "w",
@@ -1592,7 +1592,7 @@
    "Chest-supported T-bar row machine",
    "Weight plates"
   ],
-  "req": "tbar,plates",
+  "req": "chesttbar,plates",
   "equipment_tier": 3,
   "difficulty": "Beginner",
   "tracking": "w",
@@ -1645,7 +1645,7 @@
    "Plate-loaded pulldown machine",
    "Weight plates"
   ],
-  "req": "latpulldown,plates",
+  "req": "leverpulldown,plates",
   "equipment_tier": 3,
   "difficulty": "Beginner",
   "tracking": "w",
@@ -1697,7 +1697,7 @@
   "equipment": [
    "Pullover machine"
   ],
-  "req": "latpulldown",
+  "req": "pulloverm",
   "equipment_tier": 3,
   "difficulty": "Intermediate",
   "tracking": "w",
@@ -2149,7 +2149,7 @@
   "equipment": [
    "Back extension machine"
   ],
-  "req": "romanchair",
+  "req": "backextm",
   "equipment_tier": 3,
   "difficulty": "Beginner",
   "tracking": "w",
@@ -2199,7 +2199,7 @@
   "equipment": [
    "Shrug machine"
   ],
-  "req": "uprightrowm",
+  "req": "shrugm|uprightrowm",
   "equipment_tier": 3,
   "difficulty": "Beginner",
   "tracking": "w",
@@ -3362,7 +3362,7 @@
   "equipment": [
    "Belt squat machine"
   ],
-  "req": "pendulum",
+  "req": "beltsquat|pendulum",
   "equipment_tier": 3,
   "difficulty": "Intermediate",
   "tracking": "w",
@@ -3413,7 +3413,7 @@
   "equipment": [
    "Belt squat machine"
   ],
-  "req": "pendulum",
+  "req": "beltsquat|pendulum",
   "equipment_tier": 3,
   "difficulty": "Intermediate",
   "tracking": "time",
@@ -3461,7 +3461,7 @@
   "equipment": [
    "V-squat machine"
   ],
-  "req": "hacksquat",
+  "req": "vsquat,plates",
   "equipment_tier": 3,
   "difficulty": "Intermediate",
   "tracking": "w",
@@ -3801,7 +3801,7 @@
   "equipment": [
    "Standing leg curl machine"
   ],
-  "req": "lyingcurl",
+  "req": "standlegcurl",
   "equipment_tier": 3,
   "difficulty": "Beginner",
   "tracking": "w",
@@ -3851,7 +3851,7 @@
   "equipment": [
    "Kneeling leg curl machine"
   ],
-  "req": "lyingcurl",
+  "req": "kneellegcurl",
   "equipment_tier": 3,
   "difficulty": "Beginner",
   "tracking": "w",
@@ -4086,7 +4086,7 @@
   "equipment": [
    "Donkey calf raise machine"
   ],
-  "req": "standcalf",
+  "req": "donkeycalfm",
   "equipment_tier": 3,
   "difficulty": "Intermediate",
   "tracking": "w",
@@ -4323,7 +4323,7 @@
   "equipment": [
    "Multi-hip machine"
   ],
-  "req": "abductor",
+  "req": "multihip|abductor",
   "equipment_tier": 3,
   "difficulty": "Beginner",
   "tracking": "w",
@@ -4371,7 +4371,7 @@
   "equipment": [
    "Multi-hip machine"
   ],
-  "req": "glutekick",
+  "req": "multihip|glutekick",
   "equipment_tier": 3,
   "difficulty": "Beginner",
   "tracking": "w",

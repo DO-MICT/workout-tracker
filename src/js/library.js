@@ -200,7 +200,6 @@ var LIB={};
   });});
   EXTRA.forEach(function(e){ if(!LIB[e[0]]) LIB[e[0]]={id:e[0],n:e[1],mg:e[2],req:e[3],f:e[4],sets:e[5],reps:e[6],lab:e[7],c:e[8]}; });
 })();
-function gearName(id){for(var i=0;i<EQUIP.length;i++)for(var j=0;j<EQUIP[i].items.length;j++)if(EQUIP[i].items[j][0]===id)return EQUIP[i].items[j][1];return id;}
 /* returns [] when you can do it, otherwise a list of missing "any of" groups */
 function missingFor(ex,g){
   g=g||gear(); if(!ex.req) return [];

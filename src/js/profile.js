@@ -103,7 +103,6 @@ function openProfile(){
 function closeProfile(){
   var sh=document.getElementById("profile"); if(!sh||sh.hidden) return;
   sh.hidden=true; sh.innerHTML=""; document.body.style.overflow="";
-  var b=document.getElementById("menuBtn"); if(b) b.focus();
 }
 function saveProfile(){
   var P=prof(), vals={}, bad=null;

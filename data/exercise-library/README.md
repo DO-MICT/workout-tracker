@@ -1,7 +1,7 @@
 # Exercise library
 
 1,032 exercises grouped by training type, from no equipment up to a full commercial gym.
-Nothing in the app reads these files yet; they are the data for growing the in-app library.
+The app reads them from the Supabase `exercises` table (loaded with `exercises.sql`); these files are the source.
 
 | File | What it is |
 | --- | --- |
@@ -31,4 +31,4 @@ Rebuild: `cd data/exercise-library && python3 tools/merge.py tools .`
 ## Caveats
 
 - Researched from expert knowledge, not checked line by line against outside sources. Worth a skim before shipping.
-- Some kit has no gear id yet (agility ladder and cones, pole, yoke, log, tyre, atlas stone, swimming pool, safety squat bar, VersaClimber, pullover and V-squat machines). Those entries use the nearest id and say so in `notes`. Adding the ids to `EQUIP` would make filtering exact.
+- The gear library (`data/gear-library/`) added ids for the kit that had none (agility ladder, cones, pole, yoke, log, tyre, atlas stone, pool, safety squat bar, VersaClimber and more); those 41 exercises now use the exact ids.

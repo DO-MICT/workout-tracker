@@ -2,7 +2,8 @@
 
 441 pieces of training equipment, from no equipment and household stand-ins up to a full commercial gym,
 linked to the 1,032-exercise library in `data/exercise-library/` (PR #2).
-Nothing in the app reads these files yet; they are the data for growing the Equipment screen.
+The app reads them from the Supabase `gear` table (loaded with `gear.sql`, which also sets the exact `req` for the 41 exercises below); these files are the source.
+Rebuild the SQL: `cd data/gear-library && python3 tools/to_sql.py`.
 
 | File | What it is |
 | --- | --- |
