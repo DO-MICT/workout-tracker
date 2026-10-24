@@ -1,0 +1,4802 @@
+{
+ "slice": "freeweights",
+ "items": [
+  {
+   "id": "dumbbells",
+   "name": "Dumbbells",
+   "aliases": [
+    "DBs",
+    "Pro-style dumbbells",
+    "Round dumbbells",
+    "Rubber dumbbells",
+    "Urethane dumbbells",
+    "Neoprene dumbbells"
+   ],
+   "category": "Dumbbells & kettlebells",
+   "subcategory": "Fixed dumbbells",
+   "app_group": "Full body",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "Hand-held weights with a short handle and a fixed load on each end. The most versatile free weight for presses, rows, curls, lunges and carries.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "1–50+ kg (2–120 lb) pairs, usually in 1–2.5 kg (2.5–5 lb) steps",
+   "adjustability": "Fixed per dumbbell; a full rack covers the range.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 60,
+    "height_cm": 90
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "adjdumbbells",
+    "kettlebells",
+    "spinlockdb"
+   ],
+   "signature_exercises": [
+    "Dumbbell bench press",
+    "One-arm dumbbell row",
+    "Dumbbell shoulder press",
+    "Goblet squat",
+    "Dumbbell curl",
+    "Dumbbell Romanian deadlift"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Rubber or urethane heads protect floors; knurled steel handles grip better than chrome. Buy pairs in the range you will actually use.",
+   "safety": "Set dumbbells down under control rather than dropping them.",
+   "keywords": "db free weights pro style round"
+  },
+  {
+   "id": "hexdumbbells",
+   "name": "Hex dumbbells",
+   "aliases": [
+    "Hexagonal dumbbells",
+    "Rubber hex dumbbells"
+   ],
+   "category": "Dumbbells & kettlebells",
+   "subcategory": "Fixed dumbbells",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Fixed dumbbells with six-sided rubber or iron heads that do not roll. Stable on the floor for push-ups, renegade rows and burpee complexes.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "1–50 kg (2.5–110 lb) pairs",
+   "adjustability": "Fixed.",
+   "footprint": null,
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "dumbbells",
+    "adjdumbbells"
+   ],
+   "signature_exercises": [
+    "Renegade row",
+    "Devil press",
+    "Man maker",
+    "Dumbbell pinch hold",
+    "Dumbbell push-up"
+   ],
+   "linked_exercise_ids": [
+    "renegade",
+    "dbpinchhold",
+    "dbdevilpress",
+    "manmaker"
+   ],
+   "buying_tips": "Rubber-coated hex heads are quieter and floor-friendly; check the head is bonded tightly to the handle.",
+   "safety": "Check heads are tight before putting body weight on them in push-up positions.",
+   "keywords": "hex hexagonal rubber dumbbell"
+  },
+  {
+   "id": "adjdumbbells",
+   "name": "Adjustable dumbbells",
+   "aliases": [
+    "Selectorised dumbbells",
+    "Dial dumbbells",
+    "Bowflex SelectTech",
+    "PowerBlock",
+    "NÜOBELL"
+   ],
+   "category": "Dumbbells & kettlebells",
+   "subcategory": "Adjustable dumbbells",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A pair of dumbbells whose load changes with a dial, pin or slide selector while sitting in a cradle. Replaces a whole rack in a small space.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Adjustable (dial/pin)",
+   "weight_options": "Typically 2–24 kg (5–52.5 lb) or 2.5–41 kg (5–90 lb) per hand",
+   "adjustability": "Dial, pin, slide or twist selector; 1–2.5 kg steps.",
+   "footprint": {
+    "length_cm": 45,
+    "width_cm": 25,
+    "height_cm": 25
+   },
+   "space": "S",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "dumbbells",
+    "spinlockdb"
+   ],
+   "signature_exercises": [
+    "Dumbbell bench press",
+    "Dumbbell row",
+    "Dumbbell shoulder press",
+    "Dumbbell lunge",
+    "Dumbbell curl"
+   ],
+   "linked_exercise_ids": [
+    "dbfloorfly",
+    "dbfloorpress",
+    "dbbentrow",
+    "dbtrap3",
+    "dbdeadlift",
+    "dbgorillarow",
+    "shrug",
+    "dbsuitcasedl",
+    "renegade",
+    "arnold",
+    "dbrearfly",
+    "dbcuban",
+    "frontraise",
+    "lateral",
+    "dbluraise",
+    "dbreardeltrow",
+    "dbscaption",
+    "dbuprightrow",
+    "dbzpress",
+    "dbhkpress",
+    "dbleanlateral",
+    "dbextrot",
+    "dbsapress",
+    "dbstandpress",
+    "dbconc",
+    "dbcrosshammer",
+    "dbcurl",
+    "dbpinchhold",
+    "dbpronsup",
+    "dbrevcurl",
+    "dbkickback",
+    "dbwaitercurl",
+    "hammer",
+    "dbohext",
+    "dbrevwrist",
+    "dbsaohext",
+    "fatgripcurl",
+    "fatgriphold",
+    "wristcurl",
+    "dbzottman",
+    "dbcalf",
+    "dbcossack",
+    "dbdefrevlunge",
+    "dblunge",
+    "dbfrontsquat",
+    "dblatlunge",
+    "dbohlunge",
+    "dbrevlunge",
+    "dbrdl",
+    "dbsplitsquat",
+    "dbsquat",
+    "dbsumo",
+    "dbtiptoewalk",
+    "dbwalklunge",
+    "kbcossack",
+    "kbgobrevlunge",
+    "goblet",
+    "dbheelsquat",
+    "dbohsquat",
+    "dbslcalf",
+    "dbbstance",
+    "dbcurtsy",
+    "dbfrogpump",
+    "dbglutebridge",
+    "dbsumodl",
+    "dbslbridge",
+    "slrdl",
+    "farmer",
+    "dbdeclinefly",
+    "dbdeclinepress",
+    "dbfly",
+    "dbpullover",
+    "dbsqueeze",
+    "flatdb",
+    "dbinclinefly",
+    "incdb",
+    "dbneutralpress",
+    "dbsabench",
+    "dbchestrow",
+    "dbinclineshrug",
+    "dbkroc",
+    "dbrow",
+    "dbinclinerevfly",
+    "dbincliney",
+    "dblyinglat",
+    "dbpress",
+    "dbcgpress",
+    "dbpreacher",
+    "dbskull",
+    "dbspidercurl",
+    "inclinecurl",
+    "dbinclinehammer",
+    "dbcrossext",
+    "preacherhammer",
+    "dbtate",
+    "dbboxover",
+    "dblatstepup",
+    "dblegcurl",
+    "dbstepup",
+    "dbffesplit",
+    "dbseatcalf",
+    "dbhipthrust",
+    "dbslhipthrust",
+    "dbsidebend",
+    "mbchop",
+    "plankpull",
+    "waitercarry",
+    "dbdevilpress",
+    "dbcleanpress",
+    "dbhighpull",
+    "dbpushpress",
+    "manmaker",
+    "dbcluster",
+    "dbhangclean",
+    "dbjumpsquat",
+    "dbsplitjump",
+    "dbsquatclean",
+    "dbsdhp",
+    "dbthruster",
+    "dbsnatch",
+    "suitcase"
+   ],
+   "buying_tips": "Check the minimum and maximum weight, step size, length at light settings and whether it tolerates drops (most do not).",
+   "safety": "Never drop selector dumbbells, and make sure the selector has fully locked before lifting.",
+   "keywords": "bowflex powerblock nuobell dial selectorized"
+  },
+  {
+   "id": "spinlockdb",
+   "name": "Spin-lock dumbbell handles",
+   "aliases": [
+    "Loadable dumbbells",
+    "Plate-loaded dumbbell handles",
+    "Olympic dumbbell handles"
+   ],
+   "category": "Dumbbells & kettlebells",
+   "subcategory": "Adjustable dumbbells",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "Threaded dumbbell handles you load with small plates and secure with spin-lock collars. A cheap way to build adjustable dumbbells.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Handle ~2 kg; sets load to 10–30 kg per hand (1-inch or Olympic 2-inch versions)",
+   "adjustability": "Add or remove plates; slow to change.",
+   "footprint": {
+    "length_cm": 40,
+    "width_cm": 20,
+    "height_cm": 20
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "standardplates"
+   ],
+   "substitutes": [
+    "adjdumbbells",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "Dumbbell bench press",
+    "Dumbbell row",
+    "Dumbbell curl",
+    "Dumbbell lunge"
+   ],
+   "linked_exercise_ids": [
+    "dbfloorfly",
+    "dbfloorpress",
+    "dbbentrow",
+    "dbtrap3",
+    "dbdeadlift",
+    "dbgorillarow",
+    "shrug",
+    "dbsuitcasedl",
+    "renegade",
+    "arnold",
+    "dbrearfly",
+    "dbcuban",
+    "frontraise",
+    "lateral",
+    "dbluraise",
+    "dbreardeltrow",
+    "dbscaption",
+    "dbuprightrow",
+    "dbzpress",
+    "dbhkpress",
+    "dbleanlateral",
+    "dbextrot",
+    "dbsapress",
+    "dbstandpress",
+    "dbconc",
+    "dbcrosshammer",
+    "dbcurl",
+    "dbpinchhold",
+    "dbpronsup",
+    "dbrevcurl",
+    "dbkickback",
+    "dbwaitercurl",
+    "hammer",
+    "dbohext",
+    "dbrevwrist",
+    "dbsaohext",
+    "fatgripcurl",
+    "fatgriphold",
+    "wristcurl",
+    "dbzottman",
+    "dbcalf",
+    "dbcossack",
+    "dbdefrevlunge",
+    "dblunge",
+    "dbfrontsquat",
+    "dblatlunge",
+    "dbohlunge",
+    "dbrevlunge",
+    "dbrdl",
+    "dbsplitsquat",
+    "dbsquat",
+    "dbsumo",
+    "dbtiptoewalk",
+    "dbwalklunge",
+    "kbcossack",
+    "kbgobrevlunge",
+    "goblet",
+    "dbheelsquat",
+    "dbohsquat",
+    "dbslcalf",
+    "dbbstance",
+    "dbcurtsy",
+    "dbfrogpump",
+    "dbglutebridge",
+    "dbsumodl",
+    "dbslbridge",
+    "slrdl",
+    "farmer",
+    "dbdeclinefly",
+    "dbdeclinepress",
+    "dbfly",
+    "dbpullover",
+    "dbsqueeze",
+    "flatdb",
+    "dbinclinefly",
+    "incdb",
+    "dbneutralpress",
+    "dbsabench",
+    "dbchestrow",
+    "dbinclineshrug",
+    "dbkroc",
+    "dbrow",
+    "dbinclinerevfly",
+    "dbincliney",
+    "dblyinglat",
+    "dbpress",
+    "dbcgpress",
+    "dbpreacher",
+    "dbskull",
+    "dbspidercurl",
+    "inclinecurl",
+    "dbinclinehammer",
+    "dbcrossext",
+    "preacherhammer",
+    "dbtate",
+    "dbboxover",
+    "dblatstepup",
+    "dblegcurl",
+    "dbstepup",
+    "dbffesplit",
+    "dbseatcalf",
+    "dbhipthrust",
+    "dbslhipthrust",
+    "dbsidebend",
+    "mbchop",
+    "plankpull",
+    "waitercarry",
+    "dbdevilpress",
+    "dbcleanpress",
+    "dbhighpull",
+    "dbpushpress",
+    "manmaker",
+    "dbcluster",
+    "dbhangclean",
+    "dbjumpsquat",
+    "dbsplitjump",
+    "dbsquatclean",
+    "dbsdhp",
+    "dbthruster",
+    "dbsnatch",
+    "suitcase"
+   ],
+   "buying_tips": "Olympic-diameter handles let you share plates with your barbell; long handles limit some movements.",
+   "safety": "Re-tighten the spin-lock collars every set; loose plates can slide off.",
+   "keywords": "loadable dumbbell handle spinlock"
+  },
+  {
+   "id": "kettlebells",
+   "name": "Kettlebells",
+   "aliases": [
+    "KB",
+    "Cast-iron kettlebell",
+    "Girya",
+    "Vinyl kettlebell"
+   ],
+   "category": "Dumbbells & kettlebells",
+   "subcategory": "Kettlebells",
+   "app_group": "Full body",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "Cast-iron balls with a thick handle, with the weight sitting below the grip. Built for swings, cleans, snatches, goblet squats and carries.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings",
+    "Shoulders",
+    "Core",
+    "Grip"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "4–48 kg; classic 8, 12, 16, 20, 24, 28, 32 kg",
+   "adjustability": "Fixed.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "adjkettlebell",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "Kettlebell swing",
+    "Turkish get-up",
+    "Goblet squat",
+    "Kettlebell clean",
+    "Kettlebell snatch",
+    "Kettlebell press"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Single-piece cast iron with a smooth, seamless handle; check the handle width fits two hands for swings.",
+   "safety": "Swing with your hips, not your lower back, and keep a clear space around you.",
+   "keywords": "kb kettlebell cast iron girya"
+  },
+  {
+   "id": "compkettlebell",
+   "name": "Competition kettlebell",
+   "aliases": [
+    "Pro-grade kettlebell",
+    "Sport kettlebell",
+    "Steel kettlebell"
+   ],
+   "category": "Dumbbells & kettlebells",
+   "subcategory": "Kettlebells",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Steel kettlebells that are the same size at every weight, with a uniform handle for kettlebell sport. Technique stays identical as weight goes up.",
+   "muscle_focus": [
+    "Glutes",
+    "Shoulders",
+    "Grip",
+    "Core"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "8–32 kg (sport), up to 48 kg; colour-coded",
+   "adjustability": "Fixed.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "kettlebells",
+    "adjkettlebell"
+   ],
+   "signature_exercises": [
+    "Kettlebell snatch",
+    "Kettlebell jerk",
+    "Long cycle clean and jerk",
+    "Kettlebell swing"
+   ],
+   "linked_exercise_ids": [
+    "kbsnatch",
+    "kbjerk",
+    "kbcleanpress",
+    "kbclean",
+    "kbswing",
+    "kbpushpress",
+    "kbpress"
+   ],
+   "buying_tips": "Pick a 33–35 mm handle for sport; cheaper \"pro-grade\" bells may not be true competition spec.",
+   "safety": "",
+   "keywords": "competition kettlebell sport girevoy steel"
+  },
+  {
+   "id": "adjkettlebell",
+   "name": "Adjustable kettlebell",
+   "aliases": [
+    "Plate-loaded kettlebell",
+    "Kettlebell handle",
+    "Dial kettlebell"
+   ],
+   "category": "Dumbbells & kettlebells",
+   "subcategory": "Kettlebells",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A kettlebell whose weight changes by adding plates or using a dial or pin selector. Saves buying a full set.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings",
+    "Shoulders",
+    "Core"
+   ],
+   "loading": "Adjustable (dial/pin)",
+   "weight_options": "Usually 4–18 kg or 12–32 kg; plate-loadable handles up to ~40 kg",
+   "adjustability": "Dial, pin or plate-loaded.",
+   "footprint": {
+    "length_cm": 25,
+    "width_cm": 20,
+    "height_cm": 30
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "kettlebells",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "Kettlebell swing",
+    "Goblet squat",
+    "Kettlebell clean",
+    "Kettlebell press"
+   ],
+   "linked_exercise_ids": [
+    "kbfloorpress",
+    "kbgorilla",
+    "kbhighpull",
+    "kbsdhp",
+    "kbbottomup",
+    "kbbentpress",
+    "kbcleanpress",
+    "kbhalo",
+    "kbjerk",
+    "kbwaiter",
+    "kbpress",
+    "kbpushpress",
+    "kbsnatch",
+    "kbwindmill",
+    "kbtgu",
+    "kbfrontsq",
+    "kbrdl",
+    "dbcossack",
+    "dblatlunge",
+    "dbsumo",
+    "kbcossack",
+    "kbgobrevlunge",
+    "goblet",
+    "kbdl",
+    "kbthruster",
+    "kbamswing",
+    "dbsumodl",
+    "kbclean",
+    "kbswing",
+    "kb1swing",
+    "slrdl",
+    "farmer",
+    "kbrackcarry",
+    "dbsidebend",
+    "plankpull",
+    "waitercarry",
+    "dbjumpsquat",
+    "dbsdhp",
+    "suitcase"
+   ],
+   "buying_tips": "Shell size at light settings matters for cleans and snatches; check locking mechanism quality.",
+   "safety": "Confirm the selector or plate lock is secure before swinging.",
+   "keywords": "adjustable kettlebell dial plate loaded"
+  },
+  {
+   "id": "clubbell",
+   "name": "Clubbells / Indian clubs",
+   "aliases": [
+    "Indian clubs",
+    "Steel clubs"
+   ],
+   "category": "Dumbbells & kettlebells",
+   "subcategory": "Clubs & maces",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Long bottle-shaped weights held at the thin end and swung in circles. Train rotational strength, grip and shoulder mobility.",
+   "muscle_focus": [
+    "Shoulders",
+    "Forearms",
+    "Core"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "Indian clubs 0.5–2 kg; clubbells 4–20 kg",
+   "adjustability": "Fixed.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "kettlebells"
+   ],
+   "signature_exercises": [
+    "Club mill",
+    "Club swipe",
+    "Front cast",
+    "Arm cast",
+    "Shield cast"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Start very light (Indian clubs or 4–7 kg) to learn patterns; check the handle has a knob so it cannot fly out.",
+   "safety": "Swing only in a clear area with plenty of ceiling height.",
+   "keywords": "club indian clubbell swing mill"
+  },
+  {
+   "id": "steelmace",
+   "name": "Steel mace",
+   "aliases": [
+    "Macebell",
+    "Gada"
+   ],
+   "category": "Dumbbells & kettlebells",
+   "subcategory": "Clubs & maces",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A long steel handle with a weighted ball on one end, swung around the body. Builds rotational strength, grip and shoulder control.",
+   "muscle_focus": [
+    "Shoulders",
+    "Core",
+    "Grip"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "4–15 kg (10–35 lb); 120–130 cm long",
+   "adjustability": "Fixed; some are adjustable.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "clubbell",
+    "landmine"
+   ],
+   "signature_exercises": [
+    "Mace 360",
+    "Mace 10-to-2",
+    "Mace squat",
+    "Mace barbell curl"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A 7 kg mace is plenty to start for most people; length changes leverage more than weight.",
+   "safety": "Needs a lot of overhead and side clearance.",
+   "keywords": "mace gada macebell 360"
+  },
+  {
+   "id": "dbrack",
+   "name": "Dumbbell rack",
+   "aliases": [
+    "Dumbbell storage",
+    "Dumbbell tree",
+    "Kettlebell rack"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Storage",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Two- or three-tier rack or tree that holds dumbbells or kettlebells off the floor. Keeps weights tidy and easy to grab.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "Holds 5–15 pairs",
+   "adjustability": "Some tiers angle-adjust.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 50,
+    "height_cm": 80
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [],
+   "linked_exercise_ids": [],
+   "buying_tips": "Match the saddle width to your dumbbell heads; A-frame trees suit small home sets.",
+   "safety": "",
+   "keywords": "dumbbell rack storage tree stand"
+  },
+  {
+   "id": "barbell",
+   "name": "Olympic barbell",
+   "aliases": [
+    "Men's Olympic bar",
+    "Multipurpose bar",
+    "20 kg bar",
+    "7 ft bar"
+   ],
+   "category": "Bars",
+   "subcategory": "Standard barbells",
+   "app_group": "Full body",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "A 2.2 m, 20 kg steel bar with 50 mm rotating sleeves that take Olympic plates. The base of squats, bench presses, deadlifts and Olympic lifts.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Bar 20 kg (44 lb), 2.2 m, 28–29 mm shaft; holds 300+ kg",
+   "adjustability": "Load with plates.",
+   "footprint": {
+    "length_cm": 220,
+    "width_cm": 30,
+    "height_cm": 30
+   },
+   "space": "L",
+   "price_band": "$$",
+   "requires": [
+    "plates",
+    "collars"
+   ],
+   "substitutes": [
+    "trapbar",
+    "ezbar",
+    "fixedbarbell"
+   ],
+   "signature_exercises": [
+    "Back squat",
+    "Bench press",
+    "Deadlift",
+    "Overhead press",
+    "Barbell row",
+    "Power clean"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A multipurpose 28.5 mm bar with bushings or bearings, dual knurl marks and ~190k PSI tensile strength suits most lifters.",
+   "safety": "Use collars and safeties, and never bench or squat heavy without a spotter or safety arms.",
+   "keywords": "bar oly olympic 20kg 2.2m"
+  },
+  {
+   "id": "womensbar",
+   "name": "Women's Olympic bar",
+   "aliases": [
+    "15 kg bar",
+    "25 mm bar"
+   ],
+   "category": "Bars",
+   "subcategory": "Standard barbells",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A 15 kg, 2.01 m Olympic bar with a thinner 25 mm shaft for smaller hands. Standard in women's weightlifting and good for any lifter with small hands.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "15 kg (33 lb), 25 mm shaft, 2.01 m",
+   "adjustability": "Load with plates.",
+   "footprint": {
+    "length_cm": 201,
+    "width_cm": 30,
+    "height_cm": 30
+   },
+   "space": "L",
+   "price_band": "$$",
+   "requires": [
+    "plates",
+    "collars"
+   ],
+   "substitutes": [
+    "barbell",
+    "techbar"
+   ],
+   "signature_exercises": [
+    "Snatch",
+    "Clean and jerk",
+    "Front squat",
+    "Overhead press",
+    "Deadlift"
+   ],
+   "linked_exercise_ids": [
+    "cleandl",
+    "cleanpress",
+    "musclesnatch",
+    "powerjerk",
+    "pushjerk",
+    "splitjerk",
+    "cleanjerk",
+    "cleanhighpull",
+    "cleanpull",
+    "hangclean",
+    "hangpowerclean",
+    "hangpowersnatch",
+    "hangsnatch",
+    "powerclean",
+    "powersnatch",
+    "snatch",
+    "snatchbalance",
+    "snatchhighpull",
+    "snatchpull",
+    "clean",
+    "sdhp",
+    "frontsquat",
+    "ohp",
+    "deadlift",
+    "backsquat"
+   ],
+   "buying_tips": "Bearing sleeves for Olympic lifts; no centre knurl is typical.",
+   "safety": "",
+   "keywords": "15kg womens bar 25mm"
+  },
+  {
+   "id": "techbar",
+   "name": "Technique / training bar",
+   "aliases": [
+    "Aluminium bar",
+    "Training bar",
+    "Junior bar",
+    "Youth bar"
+   ],
+   "category": "Bars",
+   "subcategory": "Standard barbells",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A light aluminium or steel bar (often 5–10 kg) with full-size sleeves, used for learning lifts and for beginners or youth.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "5–10 kg (10–25 lb); 1.5–2.0 m",
+   "adjustability": "Load with technique plates.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 30,
+    "height_cm": 30
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [
+    "techplates"
+   ],
+   "substitutes": [
+    "barbell",
+    "womensbar"
+   ],
+   "signature_exercises": [
+    "Snatch drills",
+    "Clean drills",
+    "Overhead squat",
+    "Front squat practice"
+   ],
+   "linked_exercise_ids": [
+    "cleandl",
+    "cleanpress",
+    "musclesnatch",
+    "powerjerk",
+    "pushjerk",
+    "splitjerk",
+    "cleanjerk",
+    "cleanhighpull",
+    "cleanpull",
+    "hangclean",
+    "hangpowerclean",
+    "hangpowersnatch",
+    "hangsnatch",
+    "powerclean",
+    "powersnatch",
+    "snatch",
+    "snatchbalance",
+    "snatchhighpull",
+    "snatchpull",
+    "clean",
+    "sdhp",
+    "ohsquat",
+    "frontsquat",
+    "backsquat"
+   ],
+   "buying_tips": "Look for a bar that takes 50 mm plates so it can grow with technique and bumper plates. Max load is usually low (~50–100 kg).",
+   "safety": "Respect the low load rating.",
+   "keywords": "technique bar aluminum training youth junior"
+  },
+  {
+   "id": "shortbar",
+   "name": "Short Olympic bar",
+   "aliases": [
+    "5 ft bar",
+    "6 ft bar",
+    "Compact bar"
+   ],
+   "category": "Bars",
+   "subcategory": "Standard barbells",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A 1.5–1.8 m bar with Olympic sleeves for small rooms. Fine for floor and bench work but too short for most standard racks.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "7–15 kg; 1.5–1.8 m (5–6 ft)",
+   "adjustability": "Load with plates.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 30,
+    "height_cm": 30
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [
+    "plates",
+    "collars"
+   ],
+   "substitutes": [
+    "barbell"
+   ],
+   "signature_exercises": [
+    "Bench press",
+    "Deadlift",
+    "Barbell row",
+    "Barbell curl",
+    "Floor press"
+   ],
+   "linked_exercise_ids": [
+    "bench",
+    "deadlift",
+    "bbrow",
+    "bbcurl",
+    "floorpress",
+    "rdl",
+    "hipthrust"
+   ],
+   "buying_tips": "Check it reaches across the uprights of your rack or bench before buying.",
+   "safety": "",
+   "keywords": "short bar 5ft 6ft compact"
+  },
+  {
+   "id": "powerbar",
+   "name": "Powerlifting bar",
+   "aliases": [
+    "Power bar",
+    "Squat bar"
+   ],
+   "category": "Bars",
+   "subcategory": "Standard barbells",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A stiff 20 kg, 29 mm bar with aggressive knurling and a centre knurl. Built for heavy squats, bench presses and deadlifts with minimal whip.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "20 kg, 29 mm shaft, 2.2 m",
+   "adjustability": "Load with plates.",
+   "footprint": {
+    "length_cm": 220,
+    "width_cm": 30,
+    "height_cm": 30
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates",
+    "collars"
+   ],
+   "substitutes": [
+    "barbell"
+   ],
+   "signature_exercises": [
+    "Back squat",
+    "Bench press",
+    "Deadlift",
+    "Low-bar squat"
+   ],
+   "linked_exercise_ids": [
+    "backsquat",
+    "lowbarsquat",
+    "bench",
+    "deadlift",
+    "sumodl",
+    "boxsquat",
+    "cgbench"
+   ],
+   "buying_tips": "Stiffness and grippy knurl are the point; IPF knurl marks matter for meet prep.",
+   "safety": "",
+   "keywords": "power bar powerlifting stiff 29mm"
+  },
+  {
+   "id": "deadliftbar",
+   "name": "Deadlift bar",
+   "aliases": [
+    "DL bar",
+    "Texas deadlift bar"
+   ],
+   "category": "Bars",
+   "subcategory": "Specialty barbells",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A longer, thinner (27 mm), whippier 20 kg bar that bends before the plates leave the floor, letting you pull more weight.",
+   "muscle_focus": [
+    "Hamstrings",
+    "Glutes",
+    "Back",
+    "Grip"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "20 kg, 27 mm, ~2.3 m",
+   "adjustability": "Load with plates.",
+   "footprint": {
+    "length_cm": 230,
+    "width_cm": 30,
+    "height_cm": 30
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "barbell",
+    "powerbar"
+   ],
+   "signature_exercises": [
+    "Deadlift",
+    "Sumo deadlift",
+    "Deficit deadlift"
+   ],
+   "linked_exercise_ids": [
+    "deadlift",
+    "sumodl",
+    "deficitdl",
+    "snatchgripdl"
+   ],
+   "buying_tips": "Only worth it for competitive powerlifters; don't use it for squats or bench.",
+   "safety": "Not rated for squatting or benching.",
+   "keywords": "deadlift bar whippy texas"
+  },
+  {
+   "id": "standardbar",
+   "name": "Standard 1-inch bar",
+   "aliases": [
+    "1-inch barbell",
+    "Standard barbell"
+   ],
+   "category": "Bars",
+   "subcategory": "Standard barbells",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A thin, cheap barbell with 25 mm (1-inch) ends that takes standard plates. Common in starter home sets.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "5–10 kg; 1.5–1.8 m; usually rated 100–150 kg",
+   "adjustability": "Load with standard plates.",
+   "footprint": {
+    "length_cm": 180,
+    "width_cm": 25,
+    "height_cm": 25
+   },
+   "space": "M",
+   "price_band": "$",
+   "requires": [
+    "standardplates"
+   ],
+   "substitutes": [
+    "barbell",
+    "fixedbarbell"
+   ],
+   "signature_exercises": [
+    "Barbell curl",
+    "Bench press",
+    "Barbell row",
+    "Overhead press"
+   ],
+   "linked_exercise_ids": [
+    "bbcurl",
+    "bbrow",
+    "ohp",
+    "bench",
+    "reversecurl",
+    "skull"
+   ],
+   "buying_tips": "Fine for light work; upgrade to an Olympic bar once lifts get heavier.",
+   "safety": "The thin bar bends and is not rated for heavy squats or deadlifts.",
+   "keywords": "standard bar 1 inch 25mm"
+  },
+  {
+   "id": "fixedbarbell",
+   "name": "Fixed-weight barbells",
+   "aliases": [
+    "Pro-style barbells",
+    "Fixed EZ bars",
+    "Preloaded barbells"
+   ],
+   "category": "Bars",
+   "subcategory": "Standard barbells",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Pre-loaded short barbells (straight or EZ) with welded or bolted plates, usually on a rack in commercial gyms. Grab-and-go for curls, extensions and rows.",
+   "muscle_focus": [
+    "Arms",
+    "Shoulders",
+    "Back"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "10–50 kg in 2.5–5 kg steps; straight and EZ versions",
+   "adjustability": "Fixed.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 25,
+    "height_cm": 25
+   },
+   "space": "L",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "barbell",
+    "ezbar"
+   ],
+   "signature_exercises": [
+    "Barbell curl",
+    "Skull crusher",
+    "Upright row",
+    "Reverse curl",
+    "Drag curl"
+   ],
+   "linked_exercise_ids": [
+    "bbcurl",
+    "reversecurl",
+    "skull",
+    "bbuprightrow",
+    "bbfrontraise",
+    "dragcurl",
+    "ezcurl",
+    "revwristcurl"
+   ],
+   "buying_tips": "For home, a few fixed EZ bars are a space-saving middle ground.",
+   "safety": "",
+   "keywords": "fixed barbell pro style preloaded straight ez"
+  },
+  {
+   "id": "ezbar",
+   "name": "EZ curl bar",
+   "aliases": [
+    "Curl bar",
+    "Cambered curl bar",
+    "Super curl bar"
+   ],
+   "category": "Bars",
+   "subcategory": "Curl bars",
+   "app_group": "Arms",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A short bar with zig-zag bends that let wrists sit at an angle. Easier on wrists for curls, skull crushers and upright rows.",
+   "muscle_focus": [
+    "Biceps",
+    "Triceps",
+    "Forearms"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "7–12 kg; 1.2–1.3 m; Olympic or standard sleeves",
+   "adjustability": "Load with plates.",
+   "footprint": {
+    "length_cm": 125,
+    "width_cm": 25,
+    "height_cm": 25
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "barbell",
+    "fixedbarbell",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "EZ-bar curl",
+    "Skull crusher",
+    "Preacher curl",
+    "Reverse curl",
+    "Upright row"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Olympic-sleeve EZ bars share plates with your barbell; \"super curl\" bars have a deeper bend.",
+   "safety": "",
+   "keywords": "ez curl bar skull crusher"
+  },
+  {
+   "id": "tricepbar",
+   "name": "Triceps / hammer bar",
+   "aliases": [
+    "Hammer curl bar",
+    "Tricep bar"
+   ],
+   "category": "Bars",
+   "subcategory": "Curl bars",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A rectangular bar with two parallel neutral-grip handles inside a frame. Used for hammer curls, neutral-grip extensions and close presses.",
+   "muscle_focus": [
+    "Triceps",
+    "Biceps",
+    "Forearms"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "~7–10 kg; ~85–90 cm",
+   "adjustability": "Load with plates.",
+   "footprint": {
+    "length_cm": 90,
+    "width_cm": 25,
+    "height_cm": 25
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "ezbar",
+    "swissbar",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "Hammer curl",
+    "Neutral-grip skull crusher",
+    "Overhead triceps extension",
+    "Close-grip press"
+   ],
+   "linked_exercise_ids": [
+    "skull",
+    "ezohext",
+    "dragcurl"
+   ],
+   "buying_tips": "Olympic sleeves and a 1.5 inch handle are the common spec.",
+   "safety": "",
+   "keywords": "tricep bar hammer curl bar neutral"
+  },
+  {
+   "id": "trapbar",
+   "name": "Trap / hex bar",
+   "aliases": [
+    "Hex bar",
+    "Diamond bar",
+    "Shrug bar"
+   ],
+   "category": "Bars",
+   "subcategory": "Trap bars",
+   "app_group": "Full body",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "A hexagonal bar you stand inside, with handles at your sides. Makes deadlifts, shrugs and carries easier on the lower back.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Hamstrings",
+    "Traps",
+    "Grip"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "20–30 kg; most have low and high handles",
+   "adjustability": "Dual-height handles on most.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 70,
+    "height_cm": 30
+   },
+   "space": "L",
+   "price_band": "$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "barbell",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "Trap bar deadlift",
+    "Trap bar shrug",
+    "Trap bar farmer carry",
+    "Trap bar jump"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Look for raised (high) handles and 60+ cm inside width; check sleeve length if you lift heavy.",
+   "safety": "",
+   "keywords": "hex bar trap bar diamond shrug bar"
+  },
+  {
+   "id": "openbar",
+   "name": "Open trap bar",
+   "aliases": [
+    "Open hex bar"
+   ],
+   "category": "Bars",
+   "subcategory": "Trap bars",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A trap bar with one side open, so you can step in and out. Also allows lunges, split squats and longer strides without hitting the frame.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Hamstrings",
+    "Traps"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "~25–30 kg",
+   "adjustability": "Dual-height handles; some have rack hooks.",
+   "footprint": {
+    "length_cm": 220,
+    "width_cm": 70,
+    "height_cm": 30
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "trapbar",
+    "barbell"
+   ],
+   "signature_exercises": [
+    "Trap bar deadlift",
+    "Trap bar split squat",
+    "Trap bar carry",
+    "Trap bar RDL"
+   ],
+   "linked_exercise_ids": [
+    "trapdl",
+    "trapshrug",
+    "traprdl",
+    "trapjump",
+    "farmer"
+   ],
+   "buying_tips": "More expensive than a closed hex bar; worth it if you want carries and lunges.",
+   "safety": "",
+   "keywords": "open trap bar open hex kabuki rogue tib"
+  },
+  {
+   "id": "ssb",
+   "name": "Safety squat bar",
+   "aliases": [
+    "SSB",
+    "Yoke bar"
+   ],
+   "category": "Bars",
+   "subcategory": "Specialty barbells",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A padded yoke bar with forward handles and cambered ends. Lets you squat with sore shoulders and loads the upper back and quads harder.",
+   "muscle_focus": [
+    "Quads",
+    "Upper back",
+    "Glutes"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Bar ~25–32 kg (55–70 lb)",
+   "adjustability": "Fixed; some have adjustable handles.",
+   "footprint": {
+    "length_cm": 220,
+    "width_cm": 60,
+    "height_cm": 30
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates",
+    "powerrack"
+   ],
+   "substitutes": [
+    "barbell",
+    "cambered"
+   ],
+   "signature_exercises": [
+    "Safety bar squat",
+    "SSB good morning",
+    "SSB split squat",
+    "SSB box squat",
+    "SSB lunge"
+   ],
+   "linked_exercise_ids": [
+    "safetybarsquat",
+    "goodmorning",
+    "boxsquat",
+    "bbsplitsquat",
+    "bbbss",
+    "bbrevlunge",
+    "bbfwdlunge",
+    "bbwalklunge",
+    "bbstepup",
+    "bbcalf",
+    "anderson"
+   ],
+   "buying_tips": "Check camber, pad comfort and whether it fits your rack's J-cups.",
+   "safety": "Rack it carefully; the pad shifts the balance forward.",
+   "keywords": "yoke bar safety squat ssb"
+  },
+  {
+   "id": "cambered",
+   "name": "Cambered bar",
+   "aliases": [
+    "Cambered squat bar",
+    "Camber bar"
+   ],
+   "category": "Bars",
+   "subcategory": "Specialty barbells",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A barbell whose ends drop down several inches below the shaft, so the weight swings and sits lower. Used for squats, good mornings and bench press.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Upper back",
+    "Chest"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "~25–35 kg; 14–16 inch drop",
+   "adjustability": "Fixed.",
+   "footprint": {
+    "length_cm": 220,
+    "width_cm": 40,
+    "height_cm": 40
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates",
+    "powerrack"
+   ],
+   "substitutes": [
+    "ssb",
+    "barbell"
+   ],
+   "signature_exercises": [
+    "Cambered bar squat",
+    "Cambered bar good morning",
+    "Cambered bar bench press"
+   ],
+   "linked_exercise_ids": [
+    "goodmorning",
+    "boxsquat"
+   ],
+   "buying_tips": "Rare in home gyms; check drop depth and that it fits your rack.",
+   "safety": "The swinging plates demand control; use safeties.",
+   "keywords": "cambered squat bar camber"
+  },
+  {
+   "id": "swissbar",
+   "name": "Swiss / multi-grip bar",
+   "aliases": [
+    "Football bar",
+    "Multi-grip bar",
+    "Neutral-grip barbell"
+   ],
+   "category": "Bars",
+   "subcategory": "Specialty barbells",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A barbell frame with several neutral and angled grips. Easier on shoulders and elbows for presses, rows and curls.",
+   "muscle_focus": [
+    "Chest",
+    "Triceps",
+    "Shoulders",
+    "Back"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "~15–25 kg; 1.9–2.1 m",
+   "adjustability": "Several grip widths built in.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 40,
+    "height_cm": 20
+   },
+   "space": "L",
+   "price_band": "$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "barbell",
+    "dumbbells",
+    "tricepbar"
+   ],
+   "signature_exercises": [
+    "Neutral-grip bench press",
+    "Football bar overhead press",
+    "Multi-grip row",
+    "Neutral-grip skull crusher",
+    "Hammer curl"
+   ],
+   "linked_exercise_ids": [
+    "cgbench",
+    "floorpress",
+    "ohp",
+    "skull",
+    "jmpress",
+    "bbrow",
+    "bench",
+    "pinpress"
+   ],
+   "buying_tips": "Angled grips feel better than straight neutral ones for most; check the bar fits your J-cups.",
+   "safety": "",
+   "keywords": "football bar swiss bar multi grip neutral"
+  },
+  {
+   "id": "axlebar",
+   "name": "Axle bar",
+   "aliases": [
+    "Fat bar",
+    "Thick bar",
+    "Apollon axle"
+   ],
+   "category": "Bars",
+   "subcategory": "Specialty barbells",
+   "app_group": "Strongman",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A thick (about 5 cm) bar with no rotating sleeves or knurl, used in strongman. Builds grip and makes deadlifts and cleans much harder to hold.",
+   "muscle_focus": [
+    "Grip",
+    "Forearms",
+    "Back",
+    "Shoulders"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "~11–20 kg; 1.9–2 inch shaft",
+   "adjustability": "Fixed.",
+   "footprint": {
+    "length_cm": 210,
+    "width_cm": 30,
+    "height_cm": 30
+   },
+   "space": "L",
+   "price_band": "$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "barbell",
+    "fatgrips"
+   ],
+   "signature_exercises": [
+    "Axle deadlift",
+    "Axle clean and press",
+    "Axle row",
+    "Axle curl"
+   ],
+   "linked_exercise_ids": [
+    "axledl",
+    "cleanpress",
+    "ohp",
+    "bbrow",
+    "bbcurl"
+   ],
+   "buying_tips": "Use with a belt-clean style; check the bar holds Olympic plates without slipping.",
+   "safety": "",
+   "keywords": "axle fat bar thick bar strongman apollon"
+  },
+  {
+   "id": "buffalobar",
+   "name": "Buffalo bar",
+   "aliases": [
+    "Bow squat bar",
+    "Curved squat bar"
+   ],
+   "category": "Bars",
+   "subcategory": "Specialty barbells",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A barbell with a gentle curve through the middle that wraps around the back. Easier on the shoulders for back squats and good mornings.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Upper back"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "~20–25 kg",
+   "adjustability": "Fixed.",
+   "footprint": {
+    "length_cm": 220,
+    "width_cm": 40,
+    "height_cm": 30
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates",
+    "powerrack"
+   ],
+   "substitutes": [
+    "barbell",
+    "ssb",
+    "cambered"
+   ],
+   "signature_exercises": [
+    "Buffalo bar squat",
+    "Buffalo bar good morning",
+    "Box squat"
+   ],
+   "linked_exercise_ids": [
+    "backsquat",
+    "lowbarsquat",
+    "boxsquat",
+    "goodmorning"
+   ],
+   "buying_tips": "Mainly a powerlifting accessory; check it fits your rack.",
+   "safety": "",
+   "keywords": "buffalo bar bent squat bar"
+  },
+  {
+   "id": "bowbar",
+   "name": "Duffalo / bow bar",
+   "aliases": [
+    "Duffalo bar",
+    "Bow bar",
+    "Bent bar"
+   ],
+   "category": "Bars",
+   "subcategory": "Specialty barbells",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A barbell with a deep bow in the centre, letting the hands go lower on bench or wrap around the back on squats.",
+   "muscle_focus": [
+    "Chest",
+    "Quads",
+    "Upper back"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "~20–25 kg",
+   "adjustability": "Fixed.",
+   "footprint": {
+    "length_cm": 220,
+    "width_cm": 40,
+    "height_cm": 35
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates",
+    "powerrack"
+   ],
+   "substitutes": [
+    "barbell",
+    "buffalobar"
+   ],
+   "signature_exercises": [
+    "Duffalo bar squat",
+    "Duffalo bar bench press",
+    "Duffalo bar good morning"
+   ],
+   "linked_exercise_ids": [
+    "bench",
+    "backsquat",
+    "goodmorning",
+    "boxsquat"
+   ],
+   "buying_tips": "Mainly for powerlifting gyms; the bend gives extra bench range of motion.",
+   "safety": "",
+   "keywords": "duffalo bow bar kabuki"
+  },
+  {
+   "id": "tsunamibar",
+   "name": "Flexible / tsunami bar",
+   "aliases": [
+    "Tsunami bar",
+    "Bamboo bar",
+    "Earthquake bar",
+    "Bandbell"
+   ],
+   "category": "Bars",
+   "subcategory": "Specialty barbells",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A bendy bar (composite or bamboo) with plates or kettlebells hung from bands, so the load oscillates. Trains stability for bench, squat and press.",
+   "muscle_focus": [
+    "Chest",
+    "Shoulders",
+    "Core"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Bar 2–7 kg; loaded with plates or hung kettlebells",
+   "adjustability": "Hang load from bands for more instability.",
+   "footprint": {
+    "length_cm": 220,
+    "width_cm": 30,
+    "height_cm": 30
+   },
+   "space": "L",
+   "price_band": "$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "barbell",
+    "bands"
+   ],
+   "signature_exercises": [
+    "Bamboo bar bench press",
+    "Bamboo bar squat",
+    "Bamboo bar overhead press",
+    "Earthquake bar hold"
+   ],
+   "linked_exercise_ids": [
+    "bench",
+    "backsquat",
+    "ohp"
+   ],
+   "buying_tips": "Bamboo bars with band-hung kettlebells are cheaper; tsunami bars take plates directly.",
+   "safety": "Use light weights; the oscillation makes sudden loss of control possible.",
+   "keywords": "tsunami bamboo earthquake bandbell oscillating flex bar"
+  },
+  {
+   "id": "plates",
+   "name": "Weight plates",
+   "aliases": [
+    "Iron plates",
+    "Olympic plates",
+    "Discs",
+    "Urethane plates"
+   ],
+   "category": "Plates & collars",
+   "subcategory": "Iron plates",
+   "app_group": "Full body",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "Cast-iron or urethane plates with a 50 mm hole that load Olympic bars, trap bars and plate-loaded machines.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "1.25, 2.5, 5, 10, 15, 20, 25 kg (2.5–45 lb)",
+   "adjustability": "Mix plates to set load.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 60,
+    "height_cm": 60
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "bumperplates",
+    "standardplates"
+   ],
+   "signature_exercises": [
+    "Plate front raise",
+    "Plate pinch hold",
+    "Loading any barbell lift"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Machined cast iron is cheapest per kg; urethane or rubber coated is quieter. Buy pairs.",
+   "safety": "Never drop iron plates from height; they crack floors and plates.",
+   "keywords": "discs iron plates olympic 50mm"
+  },
+  {
+   "id": "trigrip",
+   "name": "Tri-grip / handled plates",
+   "aliases": [
+    "Grip plates",
+    "Handled plates",
+    "Tri-grip plates"
+   ],
+   "category": "Plates & collars",
+   "subcategory": "Iron plates",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Olympic plates with three cut-out hand holes, so they are easier to carry and can be used for plate exercises like front raises and halos.",
+   "muscle_focus": [
+    "Shoulders",
+    "Grip",
+    "Core"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "2.5–25 kg (5–45 lb)",
+   "adjustability": "Mix to set load.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 60,
+    "height_cm": 60
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "plates"
+   ],
+   "signature_exercises": [
+    "Plate front raise",
+    "Plate halo",
+    "Plate squat",
+    "Plate loaded carries"
+   ],
+   "linked_exercise_ids": [
+    "platepinch"
+   ],
+   "buying_tips": "Handled rubber plates double as dumbbell substitutes for many moves.",
+   "safety": "",
+   "keywords": "tri grip handle plate grip plates"
+  },
+  {
+   "id": "standardplates",
+   "name": "Standard 1-inch plates",
+   "aliases": [
+    "1-inch plates",
+    "Vinyl plates",
+    "Concrete plates"
+   ],
+   "category": "Plates & collars",
+   "subcategory": "Iron plates",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "Plates with a 25–28 mm hole for standard bars and spin-lock dumbbell handles. Cheap and common in starter sets.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "0.5–20 kg (1.25–45 lb)",
+   "adjustability": "Mix to set load.",
+   "footprint": {
+    "length_cm": 45,
+    "width_cm": 45,
+    "height_cm": 45
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "plates"
+   ],
+   "signature_exercises": [
+    "Spin-lock dumbbell curl",
+    "Standard bar curl",
+    "Standard bar press"
+   ],
+   "linked_exercise_ids": [
+    "bbcurl",
+    "bbrow",
+    "ohp"
+   ],
+   "buying_tips": "They do not fit Olympic bars; buy Olympic plates if you might upgrade.",
+   "safety": "",
+   "keywords": "standard plates 1 inch 25mm vinyl"
+  },
+  {
+   "id": "bumperplates",
+   "name": "Bumper plates",
+   "aliases": [
+    "Rubber bumpers",
+    "Training bumpers",
+    "Hi-temp bumpers",
+    "Crumb bumpers"
+   ],
+   "category": "Plates & collars",
+   "subcategory": "Bumper plates",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Thick rubber plates all the same diameter, made to be dropped from overhead. Essential for Olympic lifting and CrossFit.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "5, 10, 15, 20, 25 kg (10–55 lb)",
+   "adjustability": "Mix to set load.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 60,
+    "height_cm": 60
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "plates"
+   ],
+   "signature_exercises": [
+    "Power clean",
+    "Snatch",
+    "Clean and jerk",
+    "Deadlift",
+    "Thruster"
+   ],
+   "linked_exercise_ids": [
+    "cleandl",
+    "cleanpress",
+    "musclesnatch",
+    "powerjerk",
+    "pushjerk",
+    "splitjerk",
+    "cleanjerk",
+    "cleanhighpull",
+    "cleanpull",
+    "hangclean",
+    "hangpowerclean",
+    "hangpowersnatch",
+    "hangsnatch",
+    "powerclean",
+    "powersnatch",
+    "snatch",
+    "snatchbalance",
+    "snatchhighpull",
+    "snatchpull",
+    "clean",
+    "sdhp",
+    "deadlift",
+    "sumodl",
+    "thruster"
+   ],
+   "buying_tips": "Low-bounce virgin rubber or urethane lasts longest; 10 kg bumpers are thick, so check bar sleeve space.",
+   "safety": "Drop only on a platform or rubber floor, and not with an empty bar.",
+   "keywords": "bumper rubber plates crossfit drop"
+  },
+  {
+   "id": "compplates",
+   "name": "Competition bumper plates",
+   "aliases": [
+    "IWF plates",
+    "Competition bumpers"
+   ],
+   "category": "Plates & collars",
+   "subcategory": "Bumper plates",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "IWF-spec calibrated bumper plates with steel hubs, thin profile and colour coding. Used in weightlifting meets and serious clubs.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "10–25 kg, ±10 g accuracy",
+   "adjustability": "Mix to set load.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 60,
+    "height_cm": 60
+   },
+   "space": "M",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "bumperplates"
+   ],
+   "signature_exercises": [
+    "Snatch",
+    "Clean and jerk",
+    "Power clean"
+   ],
+   "linked_exercise_ids": [
+    "cleandl",
+    "cleanpress",
+    "musclesnatch",
+    "powerjerk",
+    "pushjerk",
+    "splitjerk",
+    "cleanjerk",
+    "cleanhighpull",
+    "cleanpull",
+    "hangclean",
+    "hangpowerclean",
+    "hangpowersnatch",
+    "hangsnatch",
+    "powerclean",
+    "powersnatch",
+    "snatch",
+    "snatchbalance",
+    "snatchhighpull",
+    "snatchpull",
+    "clean",
+    "sdhp"
+   ],
+   "buying_tips": "Overkill for most home lifters; good training bumpers suffice.",
+   "safety": "",
+   "keywords": "competition bumper iwf calibrated eleiko"
+  },
+  {
+   "id": "techplates",
+   "name": "Technique plates",
+   "aliases": [
+    "Training plates",
+    "Plastic technique plates"
+   ],
+   "category": "Plates & collars",
+   "subcategory": "Bumper plates",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Light plastic or rubber plates at full bumper diameter, so a light bar sits at the right height for learning lifts.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "2.5–5 kg (5–10 lb)",
+   "adjustability": "Mix to set load.",
+   "footprint": {
+    "length_cm": 45,
+    "width_cm": 45,
+    "height_cm": 45
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "bumperplates"
+   ],
+   "signature_exercises": [
+    "Snatch drills",
+    "Clean drills",
+    "Deadlift practice"
+   ],
+   "linked_exercise_ids": [
+    "cleandl",
+    "cleanpress",
+    "musclesnatch",
+    "powerjerk",
+    "pushjerk",
+    "splitjerk",
+    "cleanjerk",
+    "cleanhighpull",
+    "cleanpull",
+    "hangclean",
+    "hangpowerclean",
+    "hangpowersnatch",
+    "hangsnatch",
+    "powerclean",
+    "powersnatch",
+    "snatch",
+    "snatchbalance",
+    "snatchhighpull",
+    "snatchpull",
+    "clean",
+    "sdhp",
+    "deadlift"
+   ],
+   "buying_tips": "Pair with a technique bar for beginners and kids.",
+   "safety": "",
+   "keywords": "technique plates training plastic full diameter"
+  },
+  {
+   "id": "calibrated",
+   "name": "Calibrated steel plates",
+   "aliases": [
+    "IPF plates",
+    "Powerlifting plates"
+   ],
+   "category": "Plates & collars",
+   "subcategory": "Iron plates",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Thin, precisely weighed steel plates used in powerlifting meets. Fit more weight on the bar and are accurate to a few grams.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "0.25–25 kg; ±10 g",
+   "adjustability": "Mix to set load.",
+   "footprint": {
+    "length_cm": 45,
+    "width_cm": 45,
+    "height_cm": 45
+   },
+   "space": "M",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "plates"
+   ],
+   "signature_exercises": [
+    "Back squat",
+    "Bench press",
+    "Deadlift"
+   ],
+   "linked_exercise_ids": [
+    "backsquat",
+    "lowbarsquat",
+    "bench",
+    "deadlift",
+    "sumodl"
+   ],
+   "buying_tips": "Only needed for meet-style heavy training or very heavy lifters running out of sleeve.",
+   "safety": "Do not drop; they are not designed for it.",
+   "keywords": "calibrated steel powerlifting ipf plates"
+  },
+  {
+   "id": "fractionalplates",
+   "name": "Fractional plates",
+   "aliases": [
+    "Change plates",
+    "Microplates",
+    "Micro-weights",
+    "PlateMates"
+   ],
+   "category": "Plates & collars",
+   "subcategory": "Change plates",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Small plates (0.25–2.5 kg, or 0.25–1.25 lb microplates) for tiny jumps in weight. Keep progress going on presses and curls.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Change plates 0.5–2.5 kg; microplates 0.25–1 kg (0.25–1.25 lb); magnetic versions for dumbbells",
+   "adjustability": "Mix to set load.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "plates"
+   ],
+   "signature_exercises": [
+    "Overhead press",
+    "Bench press",
+    "Barbell curl",
+    "Incline press"
+   ],
+   "linked_exercise_ids": [
+    "ohp",
+    "bench",
+    "inclinebb",
+    "cgbench",
+    "seatedohp",
+    "zpress",
+    "bbcurl",
+    "backsquat",
+    "deadlift"
+   ],
+   "buying_tips": "A 0.25–1 kg set is cheap and lets you progress 0.5 kg at a time; magnetic micro-weights also work on dumbbells.",
+   "safety": "",
+   "keywords": "fractional micro change plates small increments"
+  },
+  {
+   "id": "collars",
+   "name": "Barbell collars",
+   "aliases": [
+    "Clips",
+    "Spring clips",
+    "Lock-jaw collars",
+    "Competition collars"
+   ],
+   "category": "Plates & collars",
+   "subcategory": "Collars",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Clips or clamps that hold plates on the bar sleeves. Stop plates sliding off and keep load even.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "Spring clips, lock-jaw/clip collars, screw or lever competition collars (2.5 kg each)",
+   "adjustability": "Fit Olympic or standard sleeves.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "barbell"
+   ],
+   "substitutes": [],
+   "signature_exercises": [
+    "Any loaded barbell lift"
+   ],
+   "linked_exercise_ids": [
+    "bench",
+    "floorpress",
+    "declinebb",
+    "inclinebb",
+    "landminesqueeze",
+    "pinpress",
+    "revgripbench",
+    "widebench",
+    "bbrow",
+    "bbshrug",
+    "behindbackshrug",
+    "deadlift",
+    "deficitdl",
+    "meadows",
+    "pendlay",
+    "rackpull",
+    "sealrow",
+    "seatedgm",
+    "snatchgripdl",
+    "tbarrow",
+    "yatesrow",
+    "behindneckpress",
+    "landminelateral",
+    "landminepress",
+    "landminethruster",
+    "seatedohp",
+    "ohp",
+    "zpress",
+    "bbcurl",
+    "behindwristcurl",
+    "cgbench",
+    "dragcurl",
+    "jmpress",
+    "reversecurl",
+    "anderson",
+    "backsquat",
+    "boxsquat",
+    "bbbss",
+    "bbfwdlunge",
+    "bbhacksquat",
+    "bblatlunge",
+    "bbrevlunge",
+    "rdl",
+    "bbsplitsquat",
+    "bbcalf",
+    "bbstepup",
+    "bbwalklunge",
+    "cleandl",
+    "frontsquat",
+    "goodmorning",
+    "landminerevlunge",
+    "landminesquat",
+    "lowbarsquat",
+    "ohsquat",
+    "safetybarsquat",
+    "sldl",
+    "zerchersquat",
+    "bbglutebridge",
+    "hipthrust",
+    "landminerdl",
+    "sumodl",
+    "bbrollout",
+    "cleanpress",
+    "musclesnatch",
+    "powerjerk",
+    "pushjerk",
+    "pushpress",
+    "splitjerk",
+    "bbjumpsquat",
+    "thruster",
+    "cleanjerk",
+    "cleanhighpull",
+    "cleanpull",
+    "hangclean",
+    "hangpowerclean",
+    "hangpowersnatch",
+    "hangsnatch",
+    "powerclean",
+    "powersnatch",
+    "snatch",
+    "snatchbalance",
+    "snatchhighpull",
+    "snatchpull",
+    "clean",
+    "sdhp",
+    "axledl",
+    "yoke"
+   ],
+   "buying_tips": "Lock-jaw style is quick and reliable; spring clips loosen with wear.",
+   "safety": "Always use collars on moving or overhead lifts.",
+   "keywords": "collars clips spring clamp lockjaw"
+  },
+  {
+   "id": "platetree",
+   "name": "Plate tree",
+   "aliases": [
+    "Plate rack",
+    "Plate storage",
+    "Plate horns"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Storage",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A stand with pegs that holds weight plates, often with bar holders. Keeps plates off the floor and easy to reach.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "Holds 100–300 kg",
+   "adjustability": "Some are wheeled.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 60,
+    "height_cm": 120
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [],
+   "linked_exercise_ids": [],
+   "buying_tips": "Look for wheels and bar holders; rack-mounted plate horns save floor space.",
+   "safety": "Load evenly to avoid tipping.",
+   "keywords": "plate tree storage stand horns"
+  },
+  {
+   "id": "flatbench",
+   "name": "Flat bench",
+   "aliases": [
+    "Utility flat bench",
+    "Weight bench"
+   ],
+   "category": "Benches",
+   "subcategory": "Flat benches",
+   "app_group": "Chest",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A padded flat bench at about knee height. The base for bench presses, dumbbell rows, hip thrusts and step-ups.",
+   "muscle_focus": [
+    "Chest",
+    "Triceps",
+    "Back"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Holds 250–450 kg",
+   "adjustability": "Fixed.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 30,
+    "height_cm": 43
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "adjbench",
+    "foldingbench",
+    "step"
+   ],
+   "signature_exercises": [
+    "Bench press",
+    "Dumbbell bench press",
+    "One-arm dumbbell row",
+    "Hip thrust",
+    "Bulgarian split squat"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A rock-solid frame and grippy pad matter more than features; 43 cm height and 28–30 cm pad suit most.",
+   "safety": "",
+   "keywords": "bench press flat bench"
+  },
+  {
+   "id": "compbench",
+   "name": "Competition bench",
+   "aliases": [
+    "Powerlifting bench"
+   ],
+   "category": "Benches",
+   "subcategory": "Flat benches",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A heavy flat bench built to IPF spec (42–45 cm high, wide pad) for powerlifting bench press with stable leg drive.",
+   "muscle_focus": [
+    "Chest",
+    "Triceps"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Holds 500+ kg",
+   "adjustability": "Fixed.",
+   "footprint": {
+    "length_cm": 125,
+    "width_cm": 30,
+    "height_cm": 43
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [
+    "powerrack"
+   ],
+   "substitutes": [
+    "flatbench"
+   ],
+   "signature_exercises": [
+    "Bench press",
+    "Close-grip bench press",
+    "Pin press"
+   ],
+   "linked_exercise_ids": [
+    "bench",
+    "cgbench",
+    "widebench",
+    "revgripbench",
+    "pinpress"
+   ],
+   "buying_tips": "Wider 30 cm pad and grippy vinyl help; must fit inside your rack.",
+   "safety": "",
+   "keywords": "competition bench ipf powerlifting wide pad"
+  },
+  {
+   "id": "highbench",
+   "name": "High flat / row bench",
+   "aliases": [
+    "Seal row bench",
+    "Row bench",
+    "Prone row bench"
+   ],
+   "category": "Benches",
+   "subcategory": "Flat benches",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A tall flat bench that lets you lie face down and row a barbell or dumbbells without hitting the floor.",
+   "muscle_focus": [
+    "Upper back",
+    "Lats",
+    "Rear delts"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Pad 60–90 cm high",
+   "adjustability": "Fixed or adjustable height.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 40,
+    "height_cm": 75
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "inclinebench",
+    "adjbench",
+    "flatbench",
+    "plyobox"
+   ],
+   "signature_exercises": [
+    "Seal row",
+    "Chest-supported dumbbell row",
+    "Prone rear delt fly"
+   ],
+   "linked_exercise_ids": [
+    "sealrow",
+    "dbchestrow",
+    "dbinclinerevfly"
+   ],
+   "buying_tips": "Plyo boxes or a flat bench on blocks can stand in.",
+   "safety": "Get on and off carefully; it is high and narrow.",
+   "keywords": "seal row bench high bench row bench"
+  },
+  {
+   "id": "olybench",
+   "name": "Olympic bench with uprights",
+   "aliases": [
+    "Bench press station",
+    "Olympic flat bench"
+   ],
+   "category": "Benches",
+   "subcategory": "Flat benches",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A flat bench with built-in bar uprights (and often spotter catches) for bench pressing without a rack.",
+   "muscle_focus": [
+    "Chest",
+    "Triceps",
+    "Front delts"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Holds 200–450 kg",
+   "adjustability": "Adjustable upright heights.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 150,
+    "height_cm": 110
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "barbell",
+    "plates"
+   ],
+   "substitutes": [
+    "powerrack",
+    "flatbench",
+    "comborack"
+   ],
+   "signature_exercises": [
+    "Barbell bench press",
+    "Close-grip bench press",
+    "Wide-grip bench press"
+   ],
+   "linked_exercise_ids": [
+    "bench",
+    "cgbench",
+    "widebench",
+    "revgripbench",
+    "jmpress"
+   ],
+   "buying_tips": "Look for spotter catches; cheap home versions with leg attachments wobble.",
+   "safety": "Use spotter catches or a spotter; a fixed bench cannot save you from a failed rep.",
+   "keywords": "olympic bench press station uprights"
+  },
+  {
+   "id": "inclinebench",
+   "name": "Incline bench",
+   "aliases": [
+    "Olympic incline bench"
+   ],
+   "category": "Benches",
+   "subcategory": "Fixed benches",
+   "app_group": "Chest",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A fixed bench set at about 30–45 degrees, usually with bar uprights. For incline barbell and dumbbell presses.",
+   "muscle_focus": [
+    "Upper chest",
+    "Front delts",
+    "Triceps"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Fixed angle ~30–45°",
+   "adjustability": "Fixed angle; seat adjusts.",
+   "footprint": {
+    "length_cm": 160,
+    "width_cm": 150,
+    "height_cm": 130
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "adjbench"
+   ],
+   "signature_exercises": [
+    "Incline barbell press",
+    "Incline dumbbell press",
+    "Incline dumbbell fly",
+    "Incline curl"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "At home an adjustable bench covers this.",
+   "safety": "",
+   "keywords": "incline bench press olympic incline"
+  },
+  {
+   "id": "declinebench",
+   "name": "Decline bench",
+   "aliases": [
+    "Olympic decline bench"
+   ],
+   "category": "Benches",
+   "subcategory": "Fixed benches",
+   "app_group": "Chest",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A bench set head-down at about 15–30 degrees with leg rollers. For decline presses and decline sit-ups.",
+   "muscle_focus": [
+    "Lower chest",
+    "Triceps",
+    "Abs"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Fixed angle ~15–30°",
+   "adjustability": "Fixed or few angles.",
+   "footprint": {
+    "length_cm": 160,
+    "width_cm": 150,
+    "height_cm": 110
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "fidbench",
+    "abbench"
+   ],
+   "signature_exercises": [
+    "Decline bench press",
+    "Decline dumbbell press",
+    "Decline sit-up"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Make sure the leg rollers lock your feet securely.",
+   "safety": "Use a spotter for heavy barbell decline work.",
+   "keywords": "decline bench press"
+  },
+  {
+   "id": "adjbench",
+   "name": "Adjustable bench",
+   "aliases": [
+    "FI bench",
+    "Flat/incline bench"
+   ],
+   "category": "Benches",
+   "subcategory": "Adjustable benches",
+   "app_group": "Full body",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A bench whose back pad adjusts from flat to upright (flat/incline). The single most useful bench for home gyms.",
+   "muscle_focus": [
+    "Chest",
+    "Shoulders",
+    "Back",
+    "Arms"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Holds 250–450 kg",
+   "adjustability": "Back pad 0–85°; seat often adjusts.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 60,
+    "height_cm": 45
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "flatbench",
+    "inclinebench",
+    "fidbench"
+   ],
+   "signature_exercises": [
+    "Incline dumbbell press",
+    "Seated shoulder press",
+    "Chest-supported row",
+    "Incline curl"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Check the gap between seat and back pad at incline, the ladder angles and weight rating.",
+   "safety": "",
+   "keywords": "adjustable bench flat incline"
+  },
+  {
+   "id": "fidbench",
+   "name": "FID bench",
+   "aliases": [
+    "Flat/incline/decline bench"
+   ],
+   "category": "Benches",
+   "subcategory": "Adjustable benches",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "An adjustable bench that goes flat, incline and decline, usually with a leg holder for decline sit-ups and presses.",
+   "muscle_focus": [
+    "Chest",
+    "Shoulders",
+    "Abs"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Holds 250–400 kg",
+   "adjustability": "Decline to upright; leg holder.",
+   "footprint": {
+    "length_cm": 140,
+    "width_cm": 60,
+    "height_cm": 45
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "adjbench",
+    "declinebench",
+    "abbench"
+   ],
+   "signature_exercises": [
+    "Decline dumbbell press",
+    "Incline dumbbell press",
+    "Decline sit-up",
+    "Seated shoulder press"
+   ],
+   "linked_exercise_ids": [
+    "stepup",
+    "declinecablefly",
+    "dbdeclinefly",
+    "dbdeclinepress",
+    "dbfly",
+    "dbpullover",
+    "dbsqueeze",
+    "flatcablefly",
+    "flatcablepress",
+    "flatdb",
+    "inclinebb",
+    "inccablefly",
+    "incablepress",
+    "dbinclinefly",
+    "incdb",
+    "dbneutralpress",
+    "dbsabench",
+    "smithincline",
+    "dbchestrow",
+    "dbinclineshrug",
+    "dbkroc",
+    "cablepullover",
+    "dbrow",
+    "dbinclinerevfly",
+    "dbincliney",
+    "dblyinglat",
+    "seatedohp",
+    "dbpress",
+    "smithohp",
+    "dbcgpress",
+    "dbpreacher",
+    "dbskull",
+    "dbspidercurl",
+    "spidercurl",
+    "inclinecurl",
+    "dbinclinehammer",
+    "lyingcableext",
+    "dbcrossext",
+    "dbtate",
+    "dblatstepup",
+    "dblegcurl",
+    "dbstepup",
+    "dbseatcalf",
+    "dbhipthrust",
+    "dbslhipthrust",
+    "benchlegraise",
+    "dragonflag",
+    "benchlat",
+    "declinebb",
+    "declinecrunch",
+    "situp"
+   ],
+   "buying_tips": "Check stability in decline and that the leg holder doesn't get in the way flat.",
+   "safety": "",
+   "keywords": "fid flat incline decline bench"
+  },
+  {
+   "id": "utilitybench",
+   "name": "Utility / shoulder press bench",
+   "aliases": [
+    "Shoulder press bench",
+    "Military press bench",
+    "Upright bench"
+   ],
+   "category": "Benches",
+   "subcategory": "Fixed benches",
+   "app_group": "Shoulders",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A short fixed bench with an upright back (near 90 degrees) for seated dumbbell or barbell presses and curls.",
+   "muscle_focus": [
+    "Shoulders",
+    "Triceps",
+    "Biceps"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Fixed ~80–90°",
+   "adjustability": "Fixed back; some adjust seat.",
+   "footprint": {
+    "length_cm": 90,
+    "width_cm": 60,
+    "height_cm": 110
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "adjbench"
+   ],
+   "signature_exercises": [
+    "Seated dumbbell shoulder press",
+    "Seated barbell overhead press",
+    "Seated curl",
+    "Arnold press"
+   ],
+   "linked_exercise_ids": [
+    "dbpress",
+    "seatedohp",
+    "arnold",
+    "smithohp"
+   ],
+   "buying_tips": "An adjustable bench usually covers this at home.",
+   "safety": "",
+   "keywords": "utility bench shoulder press seat 90 degree"
+  },
+  {
+   "id": "preacher",
+   "name": "Preacher curl bench",
+   "aliases": [
+    "Scott curl bench",
+    "Preacher pad"
+   ],
+   "category": "Benches",
+   "subcategory": "Arm benches",
+   "app_group": "Arms",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "A seat with an angled arm pad that pins the upper arms for strict curls.",
+   "muscle_focus": [
+    "Biceps",
+    "Brachialis"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "Seat height adjusts.",
+   "footprint": {
+    "length_cm": 100,
+    "width_cm": 70,
+    "height_cm": 100
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "inclinebench",
+    "adjbench"
+   ],
+   "signature_exercises": [
+    "Preacher curl",
+    "Dumbbell preacher curl",
+    "Reverse preacher curl"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Some adjustable benches have a preacher attachment.",
+   "safety": "Don't let the bar crash at the bottom; control the stretch.",
+   "keywords": "preacher scott curl bench"
+  },
+  {
+   "id": "foldingbench",
+   "name": "Folding bench",
+   "aliases": [
+    "Foldable bench",
+    "Collapsible bench"
+   ],
+   "category": "Benches",
+   "subcategory": "Flat benches",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A flat or adjustable bench that folds flat or stands upright for storage. For small homes.",
+   "muscle_focus": [
+    "Chest",
+    "Back",
+    "Shoulders"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Holds 150–300 kg",
+   "adjustability": "Folds; some adjust angles.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 30,
+    "height_cm": 43
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "flatbench",
+    "adjbench"
+   ],
+   "signature_exercises": [
+    "Dumbbell bench press",
+    "Dumbbell row",
+    "Step-up"
+   ],
+   "linked_exercise_ids": [
+    "stepup",
+    "bench",
+    "dbfly",
+    "dbpullover",
+    "dbsqueeze",
+    "flatcablefly",
+    "flatcablepress",
+    "flatdb",
+    "dbneutralpress",
+    "pinpress",
+    "revgripbench",
+    "dbsabench",
+    "smithbench",
+    "widebench",
+    "bbpullover",
+    "dbkroc",
+    "cablepullover",
+    "dbrow",
+    "sealrow",
+    "seatedgm",
+    "dbpress",
+    "revwristcurl",
+    "cgbench",
+    "dbcgpress",
+    "dbskull",
+    "skull",
+    "jmpress",
+    "lyingcableext",
+    "dbcrossext",
+    "smithcgbench",
+    "dbtate",
+    "boxsquat",
+    "bbbss",
+    "dblatstepup",
+    "dblegcurl",
+    "dbstepup",
+    "dbseatcalf",
+    "smithbss",
+    "hipthrust",
+    "dbhipthrust",
+    "dbslhipthrust",
+    "smithhipthrust",
+    "benchlegraise",
+    "dragonflag",
+    "powerstepup",
+    "benchlat"
+   ],
+   "buying_tips": "Check weight rating and wobble; cheaper ones flex under heavy pressing.",
+   "safety": "",
+   "keywords": "folding bench foldable compact"
+  },
+  {
+   "id": "hipthrustbench",
+   "name": "Hip thrust bench",
+   "aliases": [
+    "Hip thrust box",
+    "Glute bench",
+    "Thrust box"
+   ],
+   "category": "Benches",
+   "subcategory": "Glute benches",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A low bench or box with a back pad at the right height for hip thrusts, often with band pegs or a foot plate.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Pad ~40–45 cm high",
+   "adjustability": "Some have adjustable foot plates.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 60,
+    "height_cm": 45
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [
+    "barbell"
+   ],
+   "substitutes": [
+    "flatbench",
+    "plyobox"
+   ],
+   "signature_exercises": [
+    "Barbell hip thrust",
+    "Dumbbell hip thrust",
+    "Single-leg hip thrust",
+    "Banded hip thrust"
+   ],
+   "linked_exercise_ids": [
+    "hipthrust",
+    "dbhipthrust",
+    "dbslhipthrust",
+    "slhipthrust",
+    "bwhipthrust",
+    "smithhipthrust"
+   ],
+   "buying_tips": "A flat bench placed against a wall works almost as well.",
+   "safety": "Brace the bench so it cannot slide back.",
+   "keywords": "hip thrust bench glute box thruster"
+  },
+  {
+   "id": "benchlegattach",
+   "name": "Bench leg attachment",
+   "aliases": [
+    "Leg developer",
+    "Leg extension/curl attachment"
+   ],
+   "category": "Benches",
+   "subcategory": "Bench attachments",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 1,
+   "setting": "home",
+   "description": "A leg extension and leg curl arm that bolts onto a home bench and takes plates.",
+   "muscle_focus": [
+    "Quads",
+    "Hamstrings"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Takes 20–100 kg of plates",
+   "adjustability": "Pivot arm with rollers.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "adjbench",
+    "plates"
+   ],
+   "substitutes": [
+    "legext",
+    "lyingcurl",
+    "multigym"
+   ],
+   "signature_exercises": [
+    "Leg extension",
+    "Lying leg curl",
+    "Seated leg curl"
+   ],
+   "linked_exercise_ids": [
+    "legext",
+    "legcurl",
+    "salegext",
+    "salyingcurl",
+    "dblegcurl"
+   ],
+   "buying_tips": "Check it fits your bench brand; many are model-specific.",
+   "safety": "",
+   "keywords": "leg developer extension curl attachment bench"
+  },
+  {
+   "id": "powerrack",
+   "name": "Squat rack / power rack",
+   "aliases": [
+    "Power cage",
+    "Squat cage"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Racks",
+   "app_group": "Legs & glutes",
+   "in_app": true,
+   "tier": 2,
+   "setting": "both",
+   "description": "A four-post cage with adjustable J-hooks and safety bars, letting you squat, bench and press heavy alone.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Holds 300–700 kg",
+   "adjustability": "Hole spacing for J-cups and safeties.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 120,
+    "height_cm": 215
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "barbell"
+   ],
+   "substitutes": [
+    "halfrack",
+    "squatstands",
+    "smith"
+   ],
+   "signature_exercises": [
+    "Back squat",
+    "Bench press",
+    "Overhead press",
+    "Rack pull",
+    "Pin press",
+    "Pull-up"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Check ceiling height, depth, hole spacing (Westside spacing near bench height) and attachment ecosystem.",
+   "safety": "Set safety bars just below the bottom of every rep.",
+   "keywords": "cage power rack squat rack"
+  },
+  {
+   "id": "halfrack",
+   "name": "Half rack",
+   "aliases": [
+    "Open rack"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Racks",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Two uprights with J-cups and short spotter arms, often with a pull-up bar. Takes less depth than a full cage.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Holds 300–500 kg",
+   "adjustability": "Adjustable J-cups and spotter arms.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 130,
+    "height_cm": 215
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "barbell"
+   ],
+   "substitutes": [
+    "powerrack",
+    "squatstands"
+   ],
+   "signature_exercises": [
+    "Back squat",
+    "Bench press",
+    "Overhead press",
+    "Rack pull"
+   ],
+   "linked_exercise_ids": [
+    "floorpress",
+    "pinpress",
+    "bbshrug",
+    "behindbackshrug",
+    "rackpull",
+    "seatedgm",
+    "behindneckpress",
+    "seatedohp",
+    "ohp",
+    "zpress",
+    "behindwristcurl",
+    "anderson",
+    "backsquat",
+    "boxsquat",
+    "bbbss",
+    "bbfwdlunge",
+    "bblatlunge",
+    "bbrevlunge",
+    "bbsplitsquat",
+    "bbcalf",
+    "bbstepup",
+    "bbwalklunge",
+    "frontsquat",
+    "goodmorning",
+    "lowbarsquat",
+    "ohsquat",
+    "safetybarsquat",
+    "zerchersquat",
+    "archerrow",
+    "invrow",
+    "powerjerk",
+    "pushjerk",
+    "pushpress",
+    "splitjerk",
+    "bbjumpsquat",
+    "thruster",
+    "snatchbalance"
+   ],
+   "buying_tips": "Spotter arms must be long enough to catch the bar where you bench and squat.",
+   "safety": "Set spotter arms for every heavy set.",
+   "keywords": "half rack open rack"
+  },
+  {
+   "id": "squatstands",
+   "name": "Squat stands",
+   "aliases": [
+    "Independent squat stands",
+    "Squat stand"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Racks",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Two independent or base-linked uprights with J-cups. The cheapest and smallest way to rack a barbell.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Holds 200–450 kg",
+   "adjustability": "Height-adjustable; some add spotter arms.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 60,
+    "height_cm": 180
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [
+    "barbell"
+   ],
+   "substitutes": [
+    "powerrack",
+    "halfrack"
+   ],
+   "signature_exercises": [
+    "Back squat",
+    "Bench press",
+    "Overhead press",
+    "Front squat"
+   ],
+   "linked_exercise_ids": [
+    "bbshrug",
+    "behindbackshrug",
+    "seatedgm",
+    "behindneckpress",
+    "seatedohp",
+    "ohp",
+    "zpress",
+    "behindwristcurl",
+    "anderson",
+    "backsquat",
+    "boxsquat",
+    "bbbss",
+    "bbfwdlunge",
+    "bblatlunge",
+    "bbrevlunge",
+    "bbsplitsquat",
+    "bbcalf",
+    "bbstepup",
+    "bbwalklunge",
+    "frontsquat",
+    "goodmorning",
+    "lowbarsquat",
+    "ohsquat",
+    "safetybarsquat",
+    "zerchersquat",
+    "powerjerk",
+    "pushjerk",
+    "pushpress",
+    "splitjerk",
+    "bbjumpsquat",
+    "thruster",
+    "snatchbalance"
+   ],
+   "buying_tips": "Base-linked stands are more stable; independent stands need careful spacing.",
+   "safety": "Add spotter arms or straps, or bench and squat with a spotter.",
+   "keywords": "squat stands independent stands"
+  },
+  {
+   "id": "foldingrack",
+   "name": "Folding wall rack",
+   "aliases": [
+    "Wall-mounted rack",
+    "Fold-away rack"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Racks",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 2,
+   "setting": "home",
+   "description": "A wall-mounted rack that swings out for training and folds flat against the wall afterwards. Ideal for garages.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Holds 300–450 kg",
+   "adjustability": "J-cups, folding uprights.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 120,
+    "height_cm": 215
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [
+    "barbell"
+   ],
+   "substitutes": [
+    "powerrack",
+    "squatstands"
+   ],
+   "signature_exercises": [
+    "Back squat",
+    "Bench press",
+    "Overhead press",
+    "Pull-up"
+   ],
+   "linked_exercise_ids": [
+    "floorpress",
+    "pinpress",
+    "bbshrug",
+    "behindbackshrug",
+    "rackpull",
+    "seatedgm",
+    "behindneckpress",
+    "seatedohp",
+    "ohp",
+    "zpress",
+    "behindwristcurl",
+    "anderson",
+    "backsquat",
+    "boxsquat",
+    "bbbss",
+    "bbfwdlunge",
+    "bblatlunge",
+    "bbrevlunge",
+    "bbsplitsquat",
+    "bbcalf",
+    "bbstepup",
+    "bbwalklunge",
+    "frontsquat",
+    "goodmorning",
+    "lowbarsquat",
+    "ohsquat",
+    "safetybarsquat",
+    "zerchersquat",
+    "archerrow",
+    "invrow",
+    "powerjerk",
+    "pushjerk",
+    "pushpress",
+    "splitjerk",
+    "bbjumpsquat",
+    "thruster",
+    "snatchbalance"
+   ],
+   "buying_tips": "Needs solid studs or masonry for mounting; check it folds past your car mirror.",
+   "safety": "Must be bolted into structural framing.",
+   "keywords": "folding rack wall mount garage pr-4100"
+  },
+  {
+   "id": "comborack",
+   "name": "Squat / bench combo rack",
+   "aliases": [
+    "Combo rack",
+    "Competition rack"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Racks",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A competition-style rack whose hooks adjust for both squats and bench press, with spotter catches and room for a bench.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Holds 400+ kg",
+   "adjustability": "Quick-adjust uprights.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 150,
+    "height_cm": 180
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "barbell",
+    "compbench"
+   ],
+   "substitutes": [
+    "powerrack",
+    "olybench"
+   ],
+   "signature_exercises": [
+    "Back squat",
+    "Bench press",
+    "Close-grip bench press"
+   ],
+   "linked_exercise_ids": [
+    "backsquat",
+    "lowbarsquat",
+    "frontsquat",
+    "bench",
+    "cgbench",
+    "widebench",
+    "revgripbench"
+   ],
+   "buying_tips": "Found in powerlifting gyms and meets.",
+   "safety": "Set spotter catches every time.",
+   "keywords": "combo rack squat bench powerlifting"
+  },
+  {
+   "id": "monolift",
+   "name": "Monolift",
+   "aliases": [
+    "Mono lift"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Racks",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A rack whose hooks swing away after unracking, so you squat without walking the bar out. Used for very heavy powerlifting squats.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Holds 500+ kg",
+   "adjustability": "Adjustable arm heights.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 150,
+    "height_cm": 220
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "barbell",
+    "plates"
+   ],
+   "substitutes": [
+    "powerrack"
+   ],
+   "signature_exercises": [
+    "Monolift squat",
+    "Box squat",
+    "Heavy walkout"
+   ],
+   "linked_exercise_ids": [
+    "backsquat",
+    "lowbarsquat",
+    "boxsquat"
+   ],
+   "buying_tips": "Rare outside powerlifting gyms.",
+   "safety": "Needs trained operators or spotters.",
+   "keywords": "monolift squat powerlifting"
+  },
+  {
+   "id": "rig",
+   "name": "Rig",
+   "aliases": [
+    "CrossFit rig",
+    "Functional rig",
+    "Training rig"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Racks",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "A long, modular steel frame joining several rack bays, pull-up bars and attachments. Standard in CrossFit and functional gyms.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Modular bays",
+   "adjustability": "Pull-up bars, J-cups, rings, attachments.",
+   "footprint": {
+    "length_cm": 600,
+    "width_cm": 200,
+    "height_cm": 275
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "barbell"
+   ],
+   "substitutes": [
+    "powerrack",
+    "halfrack",
+    "pullupbar"
+   ],
+   "signature_exercises": [
+    "Back squat",
+    "Pull-up",
+    "Kipping pull-up",
+    "Toes-to-bar",
+    "Ring muscle-up"
+   ],
+   "linked_exercise_ids": [
+    "floorpress",
+    "pinpress",
+    "bbshrug",
+    "behindbackshrug",
+    "rackpull",
+    "seatedgm",
+    "behindneckpress",
+    "seatedohp",
+    "ohp",
+    "zpress",
+    "behindwristcurl",
+    "anderson",
+    "backsquat",
+    "boxsquat",
+    "bbbss",
+    "bbfwdlunge",
+    "bblatlunge",
+    "bbrevlunge",
+    "bbsplitsquat",
+    "bbcalf",
+    "bbstepup",
+    "bbwalklunge",
+    "frontsquat",
+    "goodmorning",
+    "lowbarsquat",
+    "ohsquat",
+    "safetybarsquat",
+    "zerchersquat",
+    "archerrow",
+    "invrow",
+    "powerjerk",
+    "pushjerk",
+    "pushpress",
+    "splitjerk",
+    "bbjumpsquat",
+    "thruster",
+    "snatchbalance",
+    "yoke",
+    "pullup",
+    "kippullup",
+    "toestobar",
+    "ctbpull",
+    "chinup"
+   ],
+   "buying_tips": "Bolt to the floor or a platform; plan bay widths for barbell work.",
+   "safety": "",
+   "keywords": "rig crossfit functional rig monkey bars"
+  },
+  {
+   "id": "safetyarms",
+   "name": "Spotter arms / safety straps",
+   "aliases": [
+    "Safeties",
+    "Pin pipes",
+    "Safety straps",
+    "Spotter arms",
+    "Safety spotters"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Rack attachments",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Safety bars, pins, arms or nylon straps that catch a failed barbell. Make heavy squats and bench safe alone.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "Rated 300–700 kg",
+   "adjustability": "Height-adjustable on rack holes.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "powerrack"
+   ],
+   "substitutes": [],
+   "signature_exercises": [
+    "Pin press",
+    "Rack pull",
+    "Safety-set squat",
+    "Floor press"
+   ],
+   "linked_exercise_ids": [
+    "pinpress",
+    "rackpull",
+    "floorpress",
+    "backsquat",
+    "frontsquat",
+    "bench",
+    "inclinebb"
+   ],
+   "buying_tips": "Straps are quieter and kinder to bars; flip-down arms suit half racks and stands.",
+   "safety": "Set them every set just below your lowest bar position.",
+   "keywords": "spotter arms safety straps pins safeties"
+  },
+  {
+   "id": "jcups",
+   "name": "J-cups / J-hooks",
+   "aliases": [
+    "J-hooks",
+    "Rack hooks",
+    "Roller J-cups"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Rack attachments",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "The hooks that hang on rack uprights to hold the bar. Usually included with a rack; extra pairs or roller versions are common upgrades.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "Moved hole by hole.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "powerrack"
+   ],
+   "substitutes": [],
+   "signature_exercises": [
+    "Back squat",
+    "Bench press",
+    "Overhead press"
+   ],
+   "linked_exercise_ids": [
+    "backsquat",
+    "frontsquat",
+    "bench",
+    "ohp"
+   ],
+   "buying_tips": "Plastic-lined (UHMW) hooks protect bar knurling.",
+   "safety": "Seat both hooks fully before loading.",
+   "keywords": "j hooks j cups rack hooks"
+  },
+  {
+   "id": "dipattach",
+   "name": "Rack dip attachment",
+   "aliases": [
+    "Dip station attachment",
+    "Rack dip bars"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Rack attachments",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Dip handles that slot onto a rack upright for dips and knee raises.",
+   "muscle_focus": [
+    "Chest",
+    "Triceps"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Rated 150–300 kg",
+   "adjustability": "Height-adjustable on rack holes.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "powerrack"
+   ],
+   "substitutes": [
+    "dipstation",
+    "rings"
+   ],
+   "signature_exercises": [
+    "Chest dips",
+    "Triceps dips",
+    "Dip support hold",
+    "Weighted dips"
+   ],
+   "linked_exercise_ids": [
+    "chestdips",
+    "tridip",
+    "dipsupport",
+    "koreandip"
+   ],
+   "buying_tips": "Y-shaped handles allow different widths.",
+   "safety": "",
+   "keywords": "dip attachment rack dip bars station"
+  },
+  {
+   "id": "jammerarms",
+   "name": "Jammer / lever arms",
+   "aliases": [
+    "Lever arms",
+    "Jammer arms"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Rack attachments",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "Pivoting plate-loaded arms that attach to a rack, turning it into a press, row or squat machine.",
+   "muscle_focus": [
+    "Chest",
+    "Shoulders",
+    "Legs"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Plate loaded",
+   "adjustability": "Height-adjustable on rack.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$$",
+   "requires": [
+    "powerrack",
+    "plates"
+   ],
+   "substitutes": [
+    "landmine",
+    "chestpress"
+   ],
+   "signature_exercises": [
+    "Jammer press",
+    "Lever arm row",
+    "Lever arm squat",
+    "Lever chest press"
+   ],
+   "linked_exercise_ids": [
+    "landminepress",
+    "landminethruster",
+    "meadows"
+   ],
+   "buying_tips": "Check compatibility with your rack's upright size and hole spacing.",
+   "safety": "",
+   "keywords": "jammer arms lever arms rack"
+  },
+  {
+   "id": "landmine",
+   "name": "Landmine attachment",
+   "aliases": [
+    "Landmine",
+    "Barbell pivot"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Rack attachments",
+   "app_group": "Shoulders",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A pivoting sleeve that holds one end of a barbell on the floor or a rack. For angled presses, rows, rotations and squats.",
+   "muscle_focus": [
+    "Shoulders",
+    "Chest",
+    "Core",
+    "Legs"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "",
+   "adjustability": "Floor or rack mounted.",
+   "footprint": {
+    "length_cm": 220,
+    "width_cm": 40,
+    "height_cm": 40
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [
+    "barbell",
+    "plates"
+   ],
+   "substitutes": [
+    "tbar",
+    "jammerarms"
+   ],
+   "signature_exercises": [
+    "Landmine press",
+    "Meadows row",
+    "Landmine squat",
+    "Landmine rotation"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A rack-mounted landmine saves floor; a corner and a towel works as a stand-in.",
+   "safety": "",
+   "keywords": "landmine t-bar row pivot"
+  },
+  {
+   "id": "landminehandle",
+   "name": "Landmine handle",
+   "aliases": [
+    "T-bar row handle",
+    "Viking press handle",
+    "Landmine V-handle"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Rack attachments",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Handles that fit over the end of a landmine barbell: V-grip for T-bar rows or wide Viking press handles.",
+   "muscle_focus": [
+    "Back",
+    "Shoulders"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "landmine",
+    "barbell"
+   ],
+   "substitutes": [
+    "vhandle"
+   ],
+   "signature_exercises": [
+    "T-bar row",
+    "Viking press",
+    "Landmine press"
+   ],
+   "linked_exercise_ids": [
+    "tbarrow",
+    "landminepress",
+    "landminethruster"
+   ],
+   "buying_tips": "Rubber-coated handles are comfortable; check sleeve diameter.",
+   "safety": "",
+   "keywords": "landmine handle viking press t bar handle"
+  },
+  {
+   "id": "platform",
+   "name": "Lifting platform",
+   "aliases": [
+    "Deadlift platform",
+    "Weightlifting platform",
+    "Horse stall mats"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Platforms",
+   "app_group": "Full body",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "A wood centre with rubber side pads for deadlifts and Olympic lifts. Protects floors and lets you drop bumper plates.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "2.4 × 2.4 m (8 × 8 ft) typical; 30–40 mm thick",
+   "adjustability": "",
+   "footprint": {
+    "length_cm": 240,
+    "width_cm": 240,
+    "height_cm": 4
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "plates",
+    "bumperplates"
+   ],
+   "signature_exercises": [
+    "Deadlift",
+    "Snatch",
+    "Clean and jerk",
+    "Deficit deadlift"
+   ],
+   "linked_exercise_ids": [
+    "cleandl",
+    "cleanpress",
+    "musclesnatch",
+    "powerjerk",
+    "pushjerk",
+    "splitjerk",
+    "cleanjerk",
+    "cleanhighpull",
+    "cleanpull",
+    "hangclean",
+    "hangpowerclean",
+    "hangpowersnatch",
+    "hangsnatch",
+    "powerclean",
+    "powersnatch",
+    "snatch",
+    "snatchbalance",
+    "snatchhighpull",
+    "snatchpull",
+    "clean",
+    "sdhp",
+    "deadlift",
+    "sumodl",
+    "deficitdl",
+    "rdl",
+    "sldl",
+    "snatchgripdl"
+   ],
+   "buying_tips": "A DIY platform of plywood and horse-stall mats is the budget choice.",
+   "safety": "",
+   "keywords": "platform deadlift drop olympic lifting mats"
+  },
+  {
+   "id": "pullblocks",
+   "name": "Pulling blocks",
+   "aliases": [
+    "Lifting blocks",
+    "Pull blocks",
+    "Deadlift blocks"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Platforms",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "Stackable foam or wooden blocks that raise the plates to a set height for block pulls and hang-position Olympic lifts.",
+   "muscle_focus": [
+    "Back",
+    "Hamstrings",
+    "Glutes"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "10–45 cm heights; stackable",
+   "adjustability": "Stack for different heights.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 50,
+    "height_cm": 40
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [
+    "barbell",
+    "plates"
+   ],
+   "substitutes": [
+    "powerrack",
+    "safetyarms"
+   ],
+   "signature_exercises": [
+    "Block pull",
+    "Clean from blocks",
+    "Snatch from blocks"
+   ],
+   "linked_exercise_ids": [
+    "rackpull",
+    "cleanpull",
+    "snatchpull",
+    "hangpowerclean",
+    "hangpowersnatch",
+    "hangclean",
+    "hangsnatch"
+   ],
+   "buying_tips": "Foam blocks are quieter and safer to drop onto than wood.",
+   "safety": "",
+   "keywords": "blocks pulling blocks block pull deficit"
+  },
+  {
+   "id": "jerkblocks",
+   "name": "Jerk blocks",
+   "aliases": [
+    "Weightlifting jerk boxes"
+   ],
+   "category": "Racks & platforms",
+   "subcategory": "Platforms",
+   "app_group": "Shoulders",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Paired tall blocks at shoulder height. You jerk from them and can drop the bar back onto them safely.",
+   "muscle_focus": [
+    "Shoulders",
+    "Triceps",
+    "Legs"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Adjustable heights ~100–150 cm",
+   "adjustability": "Height adjusts.",
+   "footprint": {
+    "length_cm": 240,
+    "width_cm": 100,
+    "height_cm": 150
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "barbell",
+    "bumperplates"
+   ],
+   "substitutes": [
+    "powerrack"
+   ],
+   "signature_exercises": [
+    "Jerk from blocks",
+    "Push press from blocks",
+    "Split jerk"
+   ],
+   "linked_exercise_ids": [
+    "powerjerk",
+    "pushjerk",
+    "splitjerk",
+    "pushpress",
+    "cleanjerk"
+   ],
+   "buying_tips": "Weightlifting-club equipment.",
+   "safety": "",
+   "keywords": "jerk blocks weightlifting"
+  },
+  {
+   "id": "chains",
+   "name": "Lifting chains",
+   "aliases": [
+    "Lifting chains",
+    "Weight chains"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Accommodating resistance",
+   "app_group": "Lifting accessories",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "Heavy chains hung from the bar sleeves so load increases as you lift (more chain leaves the floor at lockout).",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Fixed weight",
+   "weight_options": "Pairs ~10–25 kg each",
+   "adjustability": "Add or remove chain links.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "barbell"
+   ],
+   "substitutes": [
+    "accombands"
+   ],
+   "signature_exercises": [
+    "Chain bench press",
+    "Chain squat",
+    "Chain deadlift",
+    "Box squat with chains"
+   ],
+   "linked_exercise_ids": [
+    "bench",
+    "backsquat",
+    "boxsquat",
+    "deadlift",
+    "floorpress"
+   ],
+   "buying_tips": "Lead chains with collars make adjustments easy.",
+   "safety": "Secure the chains so they do not swing off the sleeves.",
+   "keywords": "chains accommodating resistance westside"
+  },
+  {
+   "id": "accombands",
+   "name": "Barbell bands & band pegs",
+   "aliases": [
+    "Accommodating resistance bands",
+    "Reverse bands",
+    "Band pegs"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Accommodating resistance",
+   "app_group": "Lifting accessories",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "Heavy loop bands anchored to pegs or the rack and looped over the bar ends, to add load at lockout or help (reverse bands) at the bottom.",
+   "muscle_focus": [
+    "Full body"
+   ],
+   "loading": "Band / elastic",
+   "weight_options": "Light to monster bands (~5–100 kg)",
+   "adjustability": "Choose band and anchor point.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "barbell",
+    "powerrack"
+   ],
+   "substitutes": [
+    "chains",
+    "bands"
+   ],
+   "signature_exercises": [
+    "Banded squat",
+    "Banded bench press",
+    "Reverse-band bench",
+    "Banded deadlift"
+   ],
+   "linked_exercise_ids": [
+    "backsquat",
+    "bench",
+    "boxsquat",
+    "deadlift",
+    "sumodl"
+   ],
+   "buying_tips": "Rack band pegs or a band-peg platform keep bands from slipping.",
+   "safety": "Check bands for nicks; a snapped band whips hard.",
+   "keywords": "band pegs accommodating reverse band"
+  },
+  {
+   "id": "deadliftjack",
+   "name": "Deadlift jack",
+   "aliases": [
+    "Barbell jack",
+    "Bar jack",
+    "Plate wedge"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Tools",
+   "app_group": "Lifting accessories",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "A small lever that lifts a loaded barbell off the floor so plates can slide on and off easily.",
+   "muscle_focus": [],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "barbell"
+   ],
+   "substitutes": [
+    "plates"
+   ],
+   "signature_exercises": [],
+   "linked_exercise_ids": [
+    "deadlift",
+    "sumodl",
+    "snatchgripdl",
+    "deficitdl",
+    "rdl"
+   ],
+   "buying_tips": "Mini plate-ramp wedges are a cheaper alternative.",
+   "safety": "",
+   "keywords": "barbell jack deadlift jack plate loading"
+  },
+  {
+   "id": "dipbelt",
+   "name": "Dip belt",
+   "aliases": [
+    "Weight belt with chain",
+    "Pull-up belt"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Weighted bodyweight",
+   "app_group": "Chest",
+   "in_app": true,
+   "tier": 1,
+   "setting": "both",
+   "description": "A belt with a chain that hangs plates or a kettlebell from the hips, to add weight to dips, pull-ups and belt squats.",
+   "muscle_focus": [
+    "Chest",
+    "Triceps",
+    "Lats",
+    "Biceps"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds 50–150 kg",
+   "adjustability": "Chain length adjusts.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "weightvest"
+   ],
+   "signature_exercises": [
+    "Weighted dips",
+    "Weighted pull-ups",
+    "Weighted chin-ups",
+    "Belt squat"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Leather or nylon with a long chain; check it can take kettlebells too.",
+   "safety": "",
+   "keywords": "dip belt weighted pull up chain belt"
+  },
+  {
+   "id": "liftbelt",
+   "name": "Lifting belt",
+   "aliases": [
+    "Weightlifting belt",
+    "Powerlifting belt",
+    "Lever belt"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Supportive gear",
+   "app_group": "Lifting accessories",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A stiff belt worn around the waist to brace against during heavy squats, deadlifts and presses.",
+   "muscle_focus": [
+    "Core"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "10 mm or 13 mm leather; nylon/velcro versions",
+   "adjustability": "Prong, lever or velcro.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [
+    "Back squat",
+    "Deadlift",
+    "Overhead press",
+    "Front squat"
+   ],
+   "linked_exercise_ids": [
+    "backsquat",
+    "lowbarsquat",
+    "frontsquat",
+    "deadlift",
+    "sumodl",
+    "ohp",
+    "boxsquat",
+    "rackpull",
+    "pushpress",
+    "cleanjerk"
+   ],
+   "buying_tips": "A 10 mm single-prong belt suits most lifters; lever belts are quick but size-locked.",
+   "safety": "A belt helps bracing but does not replace it.",
+   "keywords": "lifting belt weight belt powerlifting lever"
+  },
+  {
+   "id": "liftstraps",
+   "name": "Lifting straps",
+   "aliases": [
+    "Wrist straps",
+    "Lifting hooks",
+    "Figure-8 straps",
+    "Versa Gripps"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Grip aids",
+   "app_group": "Lifting accessories",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Cotton, nylon or leather straps that wrap the bar and your wrist, so grip doesn't limit heavy pulls and rows.",
+   "muscle_focus": [
+    "Grip"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Lasso, figure-8 and hook styles",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [
+    "Deadlift",
+    "Rack pull",
+    "Barbell shrug",
+    "Barbell row",
+    "Snatch pull"
+   ],
+   "linked_exercise_ids": [
+    "deadlift",
+    "rackpull",
+    "snatchgripdl",
+    "rdl",
+    "sldl",
+    "bbshrug",
+    "trapshrug",
+    "bbrow",
+    "pendlay",
+    "yatesrow",
+    "meadows",
+    "tbarrow",
+    "cleanpull",
+    "snatchpull",
+    "snatchhighpull",
+    "farmer",
+    "trapdl",
+    "shrug"
+   ],
+   "buying_tips": "Lasso straps are versatile; figure-8 for max pulls; hooks are quick.",
+   "safety": "Don't use figure-8 straps for Olympic lifts; you can't bail.",
+   "keywords": "lifting straps hooks figure 8 versa grips"
+  },
+  {
+   "id": "chalk",
+   "name": "Chalk",
+   "aliases": [
+    "Liquid chalk",
+    "Chalk ball",
+    "Lifting chalk"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Grip aids",
+   "app_group": "Lifting accessories",
+   "in_app": false,
+   "tier": 0,
+   "setting": "both",
+   "description": "Magnesium carbonate (block, loose or liquid) that dries the hands for a better grip on bars and handles.",
+   "muscle_focus": [
+    "Grip"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Blocks, loose, balls or liquid",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "liftstraps"
+   ],
+   "signature_exercises": [
+    "Deadlift",
+    "Pull-ups",
+    "Snatch",
+    "Clean"
+   ],
+   "linked_exercise_ids": [
+    "deadlift",
+    "sumodl",
+    "rackpull",
+    "pullup",
+    "chinup",
+    "toestobar",
+    "snatch",
+    "clean",
+    "powerclean",
+    "cleanjerk",
+    "farmer",
+    "kbswing"
+   ],
+   "buying_tips": "Liquid chalk is less messy and allowed in many gyms that ban loose chalk.",
+   "safety": "",
+   "keywords": "chalk magnesium liquid grip"
+  },
+  {
+   "id": "wristwraps",
+   "name": "Wrist wraps",
+   "aliases": [
+    "Wrist supports"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Supportive gear",
+   "app_group": "Lifting accessories",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Elastic wraps with thumb loops that brace the wrist on heavy presses and front-rack positions.",
+   "muscle_focus": [
+    "Forearms"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "30–90 cm, soft to stiff",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [
+    "Bench press",
+    "Overhead press",
+    "Front squat",
+    "Jerk"
+   ],
+   "linked_exercise_ids": [
+    "bench",
+    "cgbench",
+    "ohp",
+    "inclinebb",
+    "frontsquat",
+    "pushpress",
+    "pushjerk",
+    "splitjerk"
+   ],
+   "buying_tips": "45–60 cm medium stiffness suits most lifters.",
+   "safety": "",
+   "keywords": "wrist wraps support"
+  },
+  {
+   "id": "kneesleeves",
+   "name": "Knee sleeves",
+   "aliases": [
+    "Neoprene knee sleeves"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Supportive gear",
+   "app_group": "Lifting accessories",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Neoprene sleeves that keep knees warm and add a little support in squats and Olympic lifts.",
+   "muscle_focus": [
+    "Quads"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "5–7 mm neoprene",
+   "adjustability": "Size to fit snug.",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "kneewraps"
+   ],
+   "signature_exercises": [
+    "Back squat",
+    "Front squat",
+    "Squat clean",
+    "Snatch"
+   ],
+   "linked_exercise_ids": [
+    "backsquat",
+    "lowbarsquat",
+    "frontsquat",
+    "ohsquat",
+    "clean",
+    "snatch",
+    "boxsquat"
+   ],
+   "buying_tips": "7 mm stiff sleeves for powerlifting; 5 mm for CrossFit and Olympic lifting.",
+   "safety": "",
+   "keywords": "knee sleeves neoprene sbd rehband"
+  },
+  {
+   "id": "kneewraps",
+   "name": "Knee wraps",
+   "aliases": [
+    "Squat wraps"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Supportive gear",
+   "app_group": "Lifting accessories",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Long, stiff elastic wraps wound tightly around the knees to store energy and add weight to heavy squats.",
+   "muscle_focus": [
+    "Quads"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "~2–2.5 m",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "kneesleeves"
+   ],
+   "signature_exercises": [
+    "Back squat",
+    "Low-bar back squat"
+   ],
+   "linked_exercise_ids": [
+    "backsquat",
+    "lowbarsquat",
+    "boxsquat"
+   ],
+   "buying_tips": "Only for equipped-style heavy squatting; not for daily training.",
+   "safety": "Wraps cut circulation; remove them between sets.",
+   "keywords": "knee wraps powerlifting"
+  },
+  {
+   "id": "elbowsleeves",
+   "name": "Elbow sleeves",
+   "aliases": [],
+   "category": "Lifting accessories",
+   "subcategory": "Supportive gear",
+   "app_group": "Lifting accessories",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Neoprene sleeves for the elbows that keep joints warm on heavy pressing and triceps work.",
+   "muscle_focus": [
+    "Triceps"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "5–7 mm neoprene",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [],
+   "signature_exercises": [
+    "Bench press",
+    "Skull crusher",
+    "Close-grip bench press"
+   ],
+   "linked_exercise_ids": [
+    "bench",
+    "cgbench",
+    "skull",
+    "jmpress"
+   ],
+   "buying_tips": "",
+   "safety": "",
+   "keywords": "elbow sleeves neoprene"
+  },
+  {
+   "id": "liftshoes",
+   "name": "Weightlifting shoes",
+   "aliases": [
+    "Lifting shoes",
+    "Squat shoes",
+    "Lifters"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Footwear",
+   "app_group": "Lifting accessories",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "Stiff shoes with a raised heel that help squat depth and stability in Olympic lifts and squats.",
+   "muscle_focus": [
+    "Quads"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Heel height 15–25 mm",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "squatwedge"
+   ],
+   "signature_exercises": [
+    "Snatch",
+    "Clean and jerk",
+    "Front squat",
+    "Overhead squat",
+    "High-bar squat"
+   ],
+   "linked_exercise_ids": [
+    "snatch",
+    "clean",
+    "cleanjerk",
+    "frontsquat",
+    "ohsquat",
+    "backsquat",
+    "snatchbalance"
+   ],
+   "buying_tips": "Flat, firm shoes suit low-bar squats and deadlifts better.",
+   "safety": "",
+   "keywords": "weightlifting shoes squat shoes lifters"
+  },
+  {
+   "id": "squatwedge",
+   "name": "Squat wedge / slant board",
+   "aliases": [
+    "Slant board",
+    "Heel wedge"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Tools",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "An angled wedge or slant board that raises the heels for deeper, more quad-focused squats and calf stretching.",
+   "muscle_focus": [
+    "Quads",
+    "Calves"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "5–20° angles",
+   "adjustability": "Some adjust angle.",
+   "footprint": {
+    "length_cm": 50,
+    "width_cm": 40,
+    "height_cm": 8
+   },
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "plates",
+    "liftshoes"
+   ],
+   "signature_exercises": [
+    "Heels-elevated goblet squat",
+    "Heels-elevated dumbbell squat",
+    "Sissy squat",
+    "Calf stretch"
+   ],
+   "linked_exercise_ids": [
+    "dbheelsquat",
+    "goblet",
+    "sissysquat",
+    "frontsquat"
+   ],
+   "buying_tips": "A pair of small plates under the heels works as a stand-in.",
+   "safety": "",
+   "keywords": "slant board squat wedge heel elevation"
+  },
+  {
+   "id": "barpad",
+   "name": "Bar pad",
+   "aliases": [
+    "Hip thrust pad",
+    "Barbell pad",
+    "Squat sponge"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Tools",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A foam sleeve that wraps a barbell to cushion the hips in hip thrusts and glute bridges.",
+   "muscle_focus": [
+    "Glutes"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "barbell"
+   ],
+   "substitutes": [],
+   "signature_exercises": [
+    "Barbell hip thrust",
+    "Barbell glute bridge",
+    "Smith hip thrust"
+   ],
+   "linked_exercise_ids": [
+    "hipthrust",
+    "bbglutebridge",
+    "smithhipthrust"
+   ],
+   "buying_tips": "Thick, dense foam is best; avoid using it for squats.",
+   "safety": "Don't use a pad for back squats; it makes the bar roll.",
+   "keywords": "bar pad hip thrust pad manta ray"
+  },
+  {
+   "id": "benchboards",
+   "name": "Bench press boards",
+   "aliases": [
+    "Board press boards",
+    "Bench block"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Tools",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "Stacked boards placed on the chest to shorten the range of motion for board presses and overload lockout.",
+   "muscle_focus": [
+    "Triceps",
+    "Chest"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "1- to 5-board heights",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "barbell",
+    "flatbench"
+   ],
+   "substitutes": [
+    "safetyarms"
+   ],
+   "signature_exercises": [
+    "Board press",
+    "2-board press",
+    "Close-grip board press"
+   ],
+   "linked_exercise_ids": [
+    "bench",
+    "cgbench"
+   ],
+   "buying_tips": "Foam bench blocks with straps (e.g. bench block) are easier to use alone.",
+   "safety": "Use a spotter; boards can shift.",
+   "keywords": "board press boards bench block"
+  },
+  {
+   "id": "slingshot",
+   "name": "Slingshot",
+   "aliases": [
+    "Bench slingshot"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Supportive gear",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "Elastic sleeves worn over the elbows that help bench press off the chest so you can handle overload.",
+   "muscle_focus": [
+    "Chest",
+    "Triceps"
+   ],
+   "loading": "None (support/tool)",
+   "weight_options": "Light to stiff",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [],
+   "substitutes": [
+    "benchboards"
+   ],
+   "signature_exercises": [
+    "Slingshot bench press",
+    "Slingshot push-up"
+   ],
+   "linked_exercise_ids": [
+    "bench",
+    "cgbench",
+    "pushup"
+   ],
+   "buying_tips": "",
+   "safety": "",
+   "keywords": "slingshot bench press overload"
+  },
+  {
+   "id": "neckharness",
+   "name": "Neck harness",
+   "aliases": [
+    "Head harness"
+   ],
+   "category": "Lifting accessories",
+   "subcategory": "Weighted bodyweight",
+   "app_group": "Lifting accessories",
+   "in_app": false,
+   "tier": 1,
+   "setting": "both",
+   "description": "A head harness with a chain for hanging plates, used to strengthen the neck.",
+   "muscle_focus": [
+    "Neck"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds 20–40 kg",
+   "adjustability": "",
+   "footprint": null,
+   "space": "S",
+   "price_band": "$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "bands"
+   ],
+   "signature_exercises": [
+    "Neck extension",
+    "Neck flexion",
+    "Neck lateral flexion"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Start very light and progress slowly.",
+   "safety": "Neck training must be light and slow; avoid jerking movements.",
+   "keywords": "neck harness head harness"
+  }
+ ]
+}

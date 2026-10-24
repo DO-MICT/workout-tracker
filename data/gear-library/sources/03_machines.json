@@ -1,0 +1,3359 @@
+{
+ "slice": "machines",
+ "items": [
+  {
+   "id": "chestpress",
+   "name": "Seated chest press machine",
+   "aliases": [
+    "Seated chest press",
+    "Converging chest press",
+    "Vertical chest press",
+    "Selectorised chest press"
+   ],
+   "category": "Chest machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Chest",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated machine that presses handles forward on a guided path; selectorised versions are the gym staple, plate-loaded and home-multi versions also exist.",
+   "muscle_focus": [
+    "Chest",
+    "Front delts",
+    "Triceps"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~90–150 kg (200–330 lb)",
+   "adjustability": "Seat height and start-position handle adjust; many have neutral and wide grips.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 130,
+    "height_cm": 160
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "platechest",
+    "dumbbells",
+    "smith"
+   ],
+   "signature_exercises": [
+    "Machine chest press",
+    "Single-arm machine chest press",
+    "Neutral-grip machine press"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Look for independent (iso-lateral) arms and a start-position adjuster so you can get a full stretch.",
+   "safety": "Set the seat so handles line up with mid-chest to protect the shoulders.",
+   "keywords": "chest press machine pecs"
+  },
+  {
+   "id": "lyingpress",
+   "name": "Lying chest press machine",
+   "aliases": [
+    "Supine chest press",
+    "Iso-lateral bench press",
+    "Lying bench press machine"
+   ],
+   "category": "Chest machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Chest",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Machine that mimics a bench press lying on your back, with lever arms you press up; usually plate loaded (Hammer Strength style), some selectorised.",
+   "muscle_focus": [
+    "Chest",
+    "Triceps",
+    "Front delts"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Plate-loaded arms; selectorised versions ~100–140 kg stack",
+   "adjustability": "Fixed bench; some have adjustable foot assist or handle positions.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 150,
+    "height_cm": 140
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "chestpress",
+    "barbell",
+    "smith"
+   ],
+   "signature_exercises": [
+    "Lying machine chest press",
+    "Iso-lateral bench press",
+    "Single-arm lying press"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Plate-loaded iso-lateral units let each side work independently and are easier to load heavy.",
+   "safety": "Use the stop/catch position before loading plates on one side.",
+   "keywords": "plate loaded supine bench press machine"
+  },
+  {
+   "id": "platechest",
+   "name": "Plate-loaded chest press",
+   "aliases": [
+    "Iso-lateral chest press",
+    "Hammer Strength chest press",
+    "Iso-lateral bench press (seated)"
+   ],
+   "category": "Chest machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated chest press driven by independent lever arms that you load with plates, giving a free-weight feel on a fixed arc.",
+   "muscle_focus": [
+    "Chest",
+    "Front delts",
+    "Triceps"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~100–200 kg of plates per arm",
+   "adjustability": "Seat height adjust; independent arms.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 150,
+    "height_cm": 160
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "chestpress",
+    "dumbbells",
+    "lyingpress"
+   ],
+   "signature_exercises": [
+    "Iso-lateral chest press",
+    "Single-arm plate-loaded press",
+    "Alternating iso press"
+   ],
+   "linked_exercise_ids": [
+    "isochestpress"
+   ],
+   "buying_tips": "Check the arms converge (move inward) as you press; that suits most people's shoulders.",
+   "safety": "Unload plates evenly so the arms don't swing when you get off.",
+   "keywords": "iso lateral chest press hammer strength"
+  },
+  {
+   "id": "inclinepressm",
+   "name": "Incline press machine",
+   "aliases": [
+    "Incline chest press machine",
+    "Iso-lateral incline press (selectorised)"
+   ],
+   "category": "Chest machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Chest",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Machine that presses up and forward at an incline to target the upper chest; selectorised or plate loaded.",
+   "muscle_focus": [
+    "Upper chest",
+    "Front delts",
+    "Triceps"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~90–150 kg (200–330 lb)",
+   "adjustability": "Seat height adjust; some have multiple grips.",
+   "footprint": {
+    "length_cm": 160,
+    "width_cm": 140,
+    "height_cm": 170
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "plateincline",
+    "inclinebench",
+    "smith"
+   ],
+   "signature_exercises": [
+    "Incline machine press",
+    "Single-arm incline machine press"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A seat-height adjustment matters most here: too low and it turns into a shoulder press.",
+   "safety": "Keep shoulder blades back against the pad as you press.",
+   "keywords": "incline press machine upper chest"
+  },
+  {
+   "id": "plateincline",
+   "name": "Plate-loaded incline press",
+   "aliases": [
+    "Iso-lateral incline press",
+    "Hammer Strength incline press"
+   ],
+   "category": "Chest machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Plate-loaded incline press with independent converging arms for upper-chest pressing.",
+   "muscle_focus": [
+    "Upper chest",
+    "Front delts",
+    "Triceps"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~100–200 kg of plates per arm",
+   "adjustability": "Seat height adjust; independent arms.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 150,
+    "height_cm": 170
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "inclinepressm",
+    "inclinebench",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "Iso-lateral incline press",
+    "Single-arm incline press"
+   ],
+   "linked_exercise_ids": [
+    "isoincline"
+   ],
+   "buying_tips": "Pick one with a foot-assist or low start so you can get into position under heavy load.",
+   "safety": "Load and unload alternating sides to keep the frame balanced.",
+   "keywords": "iso lateral incline hammer strength"
+  },
+  {
+   "id": "declinepressm",
+   "name": "Decline press machine",
+   "aliases": [
+    "Decline chest press",
+    "Iso-lateral decline press",
+    "Plate-loaded decline press"
+   ],
+   "category": "Chest machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Machine pressing on a downward path to bias the lower chest; plate-loaded iso-lateral and selectorised versions exist.",
+   "muscle_focus": [
+    "Lower chest",
+    "Triceps",
+    "Front delts"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Plate-loaded arms or ~100–140 kg stack",
+   "adjustability": "Seat and thigh pad adjust.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 150,
+    "height_cm": 160
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "chestpress",
+    "declinebench",
+    "dipm"
+   ],
+   "signature_exercises": [
+    "Decline machine press",
+    "Iso-lateral decline press",
+    "Single-arm decline press"
+   ],
+   "linked_exercise_ids": [
+    "declinemach",
+    "isodecline"
+   ],
+   "buying_tips": "Less common than flat or incline; check the thigh hold-down fits your leg length.",
+   "safety": "Set the seat so the handles start at lower-chest level.",
+   "keywords": "decline chest press lower chest"
+  },
+  {
+   "id": "widechestm",
+   "name": "Wide chest press machine",
+   "aliases": [
+    "Iso-lateral wide chest",
+    "Wide-grip chest press"
+   ],
+   "category": "Chest machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Plate-loaded press with wide-set handles and an outward arc that keeps more stretch on the chest.",
+   "muscle_focus": [
+    "Chest",
+    "Front delts"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~100–200 kg of plates per arm",
+   "adjustability": "Seat height adjust.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 170,
+    "height_cm": 160
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "platechest",
+    "chestpress",
+    "pecdeck"
+   ],
+   "signature_exercises": [
+    "Wide chest press",
+    "Single-arm wide press"
+   ],
+   "linked_exercise_ids": [
+    "widechestpress"
+   ],
+   "buying_tips": "Good second chest press if you already own a standard one; feels closer to a fly-press hybrid.",
+   "safety": "Do not let the handles drift behind the shoulders at the bottom.",
+   "keywords": "wide chest press hammer"
+  },
+  {
+   "id": "convchest",
+   "name": "Converging chest press",
+   "aliases": [
+    "Converging press",
+    "Iso-lateral converging chest press",
+    "Pec converging press"
+   ],
+   "category": "Chest machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Selectorised chest press whose arms move inward as you press, matching the natural adduction path of the chest.",
+   "muscle_focus": [
+    "Chest",
+    "Front delts",
+    "Triceps"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~90–150 kg (200–330 lb)",
+   "adjustability": "Seat height and start-position adjust; independent arms.",
+   "footprint": {
+    "length_cm": 160,
+    "width_cm": 150,
+    "height_cm": 160
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "chestpress",
+    "platechest",
+    "cablecross"
+   ],
+   "signature_exercises": [
+    "Converging chest press",
+    "Single-arm converging press"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Usually sold as the premium version of a brand's chest press; worth it if you only buy one.",
+   "safety": "Start light to learn the arc.",
+   "keywords": "converging chest press insignia"
+  },
+  {
+   "id": "pecdeck",
+   "name": "Pec deck / fly machine",
+   "aliases": [
+    "Pec fly machine",
+    "Butterfly machine",
+    "Pec deck / rear delt combo"
+   ],
+   "category": "Chest machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Chest",
+   "in_app": true,
+   "tier": 3,
+   "setting": "both",
+   "description": "Seated machine with arms or pads that sweep together in front of you for a chest fly; many double as a rear-delt reverse fly.",
+   "muscle_focus": [
+    "Chest",
+    "Front delts"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~70–110 kg; home multi versions lighter",
+   "adjustability": "Seat height, arm start position; combo units rotate for rear delts.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 150,
+    "height_cm": 200
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "cablecross",
+    "dumbbells",
+    "reardelt"
+   ],
+   "signature_exercises": [
+    "Pec deck fly",
+    "Single-arm pec deck fly",
+    "Reverse pec deck"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A pec deck / rear delt combo saves floor space and covers both movements.",
+   "safety": "Don't let the arms pull your shoulders past a comfortable stretch.",
+   "keywords": "butterfly pec fly"
+  },
+  {
+   "id": "multipress",
+   "name": "Multi-angle press machine",
+   "aliases": [
+    "Multi press",
+    "Adjustable-angle chest/shoulder press",
+    "Combo incline press"
+   ],
+   "category": "Chest machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Chest",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Press machine whose back pad or arms adjust from flat to incline to overhead, covering chest and shoulder pressing in one station.",
+   "muscle_focus": [
+    "Chest",
+    "Upper chest",
+    "Front delts",
+    "Triceps"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~100–140 kg or plate-loaded arms",
+   "adjustability": "Back angle and seat height adjust.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 150,
+    "height_cm": 170
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "chestpress",
+    "inclinepressm",
+    "shoulderpress"
+   ],
+   "signature_exercises": [
+    "Flat machine press",
+    "Incline machine press",
+    "Machine shoulder press"
+   ],
+   "linked_exercise_ids": [
+    "machinechest",
+    "inclinemach",
+    "shouldermach"
+   ],
+   "buying_tips": "Great space-saver for small gyms; check the angle change is quick and needs no tools.",
+   "safety": "Recheck seat height every time you change the angle.",
+   "keywords": "multi press combo incline"
+  },
+  {
+   "id": "rowmachine",
+   "name": "Chest-supported row machine",
+   "aliases": [
+    "Seated row machine (lever)",
+    "Chest-pad row",
+    "Iso row",
+    "MTS row"
+   ],
+   "category": "Back machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Back",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated row with a chest pad and lever handles you pull back; selectorised or plate loaded, with multiple grip options.",
+   "muscle_focus": [
+    "Mid back",
+    "Lats",
+    "Rear delts",
+    "Biceps"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~90–150 kg (200–330 lb)",
+   "adjustability": "Chest pad and seat height adjust; multiple handles.",
+   "footprint": {
+    "length_cm": 160,
+    "width_cm": 130,
+    "height_cm": 160
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "isorowm",
+    "seatedrow",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "Chest-supported machine row",
+    "Wide-grip machine row",
+    "Machine rear delt row"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Look for both neutral and wide handles so you can bias lats or upper back.",
+   "safety": "Keep the chest on the pad and avoid yanking with the lower back.",
+   "keywords": "iso row"
+  },
+  {
+   "id": "isorowm",
+   "name": "Plate-loaded row machine",
+   "aliases": [
+    "Iso-lateral row",
+    "Hammer Strength row",
+    "Plate-loaded seated row"
+   ],
+   "category": "Back machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Chest-supported row with independent plate-loaded lever arms for heavy unilateral or bilateral rowing.",
+   "muscle_focus": [
+    "Mid back",
+    "Lats",
+    "Rear delts",
+    "Biceps"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~100–200 kg of plates per arm",
+   "adjustability": "Seat height adjust; chest pad sometimes adjusts.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 150,
+    "height_cm": 150
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "rowmachine",
+    "dumbbells",
+    "chesttbar"
+   ],
+   "signature_exercises": [
+    "Iso-lateral row",
+    "Single-arm plate-loaded row"
+   ],
+   "linked_exercise_ids": [
+    "isorow"
+   ],
+   "buying_tips": "Independent arms let you fix side-to-side imbalances.",
+   "safety": "Keep the chest pressed into the pad on the final reps.",
+   "keywords": "iso lateral row hammer strength"
+  },
+  {
+   "id": "tbar",
+   "name": "T-bar row",
+   "aliases": [
+    "T-bar row station",
+    "Lever T-bar row",
+    "Standing T-bar row platform"
+   ],
+   "category": "Back machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Back",
+   "in_app": true,
+   "tier": 3,
+   "setting": "both",
+   "description": "Standing row on a pivoting bar anchored at one end and loaded with plates at the other, using a close or wide handle; a landmine is the home substitute.",
+   "muscle_focus": [
+    "Mid back",
+    "Lats",
+    "Lower back",
+    "Biceps"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~150–200 kg of plates",
+   "adjustability": "Fixed; some have swappable handles.",
+   "footprint": {
+    "length_cm": 210,
+    "width_cm": 80,
+    "height_cm": 50
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "landmine",
+    "chesttbar",
+    "barbell"
+   ],
+   "signature_exercises": [
+    "T-bar row",
+    "Close-grip T-bar row",
+    "Wide-grip T-bar row"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A landmine plus a V-handle covers most of what a dedicated T-bar station does.",
+   "safety": "Brace hard; the standing version loads the lower back.",
+   "keywords": "landmine row"
+  },
+  {
+   "id": "chesttbar",
+   "name": "Chest-supported T-bar row",
+   "aliases": [
+    "Incline lever row",
+    "Prone T-bar row machine",
+    "Supported T-bar row"
+   ],
+   "category": "Back machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Plate-loaded T-bar row where you lie face down on an inclined pad, taking the lower back out of the movement.",
+   "muscle_focus": [
+    "Mid back",
+    "Lats",
+    "Rear delts",
+    "Biceps"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~100–200 kg of plates",
+   "adjustability": "Foot platform or pad height adjust; wide and neutral grips.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 90,
+    "height_cm": 120
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "tbar",
+    "rowmachine",
+    "isorowm"
+   ],
+   "signature_exercises": [
+    "Chest-supported T-bar row",
+    "Wide-grip supported T-bar row"
+   ],
+   "linked_exercise_ids": [
+    "cstbar"
+   ],
+   "buying_tips": "Several home-gym brands make compact versions; check the pad height fits your torso length.",
+   "safety": "Keep the chin clear of the pad top when rowing.",
+   "keywords": "chest supported t bar incline row"
+  },
+  {
+   "id": "highrowm",
+   "name": "High row machine",
+   "aliases": [
+    "Iso-lateral high row",
+    "Plate-loaded high row"
+   ],
+   "category": "Back machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated machine pulling handles down and back from above, between a pulldown and a row, usually plate loaded with independent arms.",
+   "muscle_focus": [
+    "Lats",
+    "Upper back",
+    "Rear delts",
+    "Biceps"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Plate-loaded arms or ~100 kg stack",
+   "adjustability": "Seat height and thigh pad adjust.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 150,
+    "height_cm": 210
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "latpulldown",
+    "leverpulldown",
+    "seatedrow"
+   ],
+   "signature_exercises": [
+    "Iso-lateral high row",
+    "Single-arm high row"
+   ],
+   "linked_exercise_ids": [
+    "isohighrow"
+   ],
+   "buying_tips": "Pairs well with a low row if you want both lat and upper-back angles.",
+   "safety": "Lock your thighs under the pad before loading heavy.",
+   "keywords": "high row hammer strength"
+  },
+  {
+   "id": "lowrowm",
+   "name": "Low row machine",
+   "aliases": [
+    "Iso-lateral low row",
+    "Plate-loaded low row"
+   ],
+   "category": "Back machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated machine with handles pulled from low in front toward the hips, emphasising the lats.",
+   "muscle_focus": [
+    "Lats",
+    "Mid back",
+    "Biceps"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Plate-loaded arms or ~100–140 kg stack",
+   "adjustability": "Seat height and chest pad adjust.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 150,
+    "height_cm": 140
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "seatedrow",
+    "isorowm",
+    "rowmachine"
+   ],
+   "signature_exercises": [
+    "Iso-lateral low row",
+    "Single-arm low row"
+   ],
+   "linked_exercise_ids": [
+    "isolowrow"
+   ],
+   "buying_tips": "Check the chest pad stops you from leaning back to cheat.",
+   "safety": "Keep the spine neutral on the stretch.",
+   "keywords": "low row hammer strength lats"
+  },
+  {
+   "id": "dyrowm",
+   "name": "D.Y. row machine",
+   "aliases": [
+    "Iso-lateral D.Y. row",
+    "Dorian Yates row machine"
+   ],
+   "category": "Back machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Plate-loaded row whose arms follow the underhand, elbows-to-hips path made famous by Dorian Yates, biasing the lats.",
+   "muscle_focus": [
+    "Lats",
+    "Mid back",
+    "Biceps"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~100–200 kg of plates per arm",
+   "adjustability": "Seat and chest pad adjust.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 150,
+    "height_cm": 150
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "isorowm",
+    "lowrowm",
+    "barbell"
+   ],
+   "signature_exercises": [
+    "Iso-lateral D.Y. row",
+    "Single-arm D.Y. row"
+   ],
+   "linked_exercise_ids": [
+    "dyrow"
+   ],
+   "buying_tips": "Specialist piece; mostly found in Hammer Strength-equipped gyms.",
+   "safety": "Pull toward the hips, not the chest, to keep the shoulders happy.",
+   "keywords": "dy row yates"
+  },
+  {
+   "id": "leverpulldown",
+   "name": "Plate-loaded pulldown machine",
+   "aliases": [
+    "Iso-lateral front pulldown",
+    "Lever pulldown",
+    "Hammer Strength pulldown",
+    "Selectorised lever pulldown"
+   ],
+   "category": "Back machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated pulldown with independent lever arms rather than a cable and bar, usually plate loaded, letting each side pull on its own arc.",
+   "muscle_focus": [
+    "Lats",
+    "Upper back",
+    "Biceps"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Plate-loaded arms or ~100–140 kg stack",
+   "adjustability": "Seat height and thigh pad adjust.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 150,
+    "height_cm": 220
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "latpulldown",
+    "highrowm",
+    "assistpull"
+   ],
+   "signature_exercises": [
+    "Iso-lateral front pulldown",
+    "Single-arm machine pulldown",
+    "Neutral-grip machine pulldown"
+   ],
+   "linked_exercise_ids": [
+    "isopulldown"
+   ],
+   "buying_tips": "Different from a cable lat pulldown: no bar to clear your head and a fixed arc; nice for single-arm work.",
+   "safety": "Secure thighs before loading.",
+   "keywords": "iso lateral pulldown lats"
+  },
+  {
+   "id": "pulloverm",
+   "name": "Pullover machine",
+   "aliases": [
+    "Nautilus pullover",
+    "Machine pullover",
+    "Lat pullover machine"
+   ],
+   "category": "Back machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated machine where your elbows push a pad or bar in an arc from overhead down to the torso, isolating the lats without the biceps.",
+   "muscle_focus": [
+    "Lats",
+    "Teres major",
+    "Chest"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~90–130 kg; some plate loaded",
+   "adjustability": "Seat height adjust; foot lever to bring the bar into start position.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 120,
+    "height_cm": 190
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "cablecross",
+    "dumbbells",
+    "latpulldown"
+   ],
+   "signature_exercises": [
+    "Machine pullover",
+    "Single-arm machine pullover"
+   ],
+   "linked_exercise_ids": [
+    "pullovermach"
+   ],
+   "buying_tips": "Classic Nautilus design; check the shoulder pivot lines up with yours.",
+   "safety": "Use the foot assist to get into and out of the stretch.",
+   "keywords": "nautilus pullover lats"
+  },
+  {
+   "id": "assistpull",
+   "name": "Assisted pull-up / dip machine",
+   "aliases": [
+    "Gravitron",
+    "Assisted chin/dip",
+    "Counterbalanced pull-up machine",
+    "Assisted dip machine"
+   ],
+   "category": "Back machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Back",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Machine with a knee platform that counterweights your body so you can do pull-ups, chin-ups and dips with less than full bodyweight.",
+   "muscle_focus": [
+    "Lats",
+    "Biceps",
+    "Chest",
+    "Triceps"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Assist stack ~5–100 kg (10–220 lb)",
+   "adjustability": "Assistance level via stack pin; platform or knee pad.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 120,
+    "height_cm": 230
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "bands",
+    "pullupbar",
+    "dipstation"
+   ],
+   "signature_exercises": [
+    "Assisted pull-up",
+    "Assisted chin-up",
+    "Assisted dip"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "More assistance = more weight on the stack; it works backwards from other machines.",
+   "safety": "Step off the platform carefully; it moves up when unloaded.",
+   "keywords": "gravitron"
+  },
+  {
+   "id": "shrugm",
+   "name": "Shrug machine",
+   "aliases": [
+    "Plate-loaded shrug",
+    "Standing shrug machine",
+    "Seated shrug machine",
+    "Shrug / calf combo"
+   ],
+   "category": "Back machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Dedicated machine with handles or shoulder pads for heavy trap shrugs, often plate loaded and doubling as a standing calf raise.",
+   "muscle_focus": [
+    "Traps",
+    "Upper back",
+    "Forearms"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~200 kg+ of plates or ~150 kg stack",
+   "adjustability": "Handle height or pad height adjust.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 120,
+    "height_cm": 150
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "uprightrowm",
+    "trapbar",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "Machine shrug",
+    "Single-arm machine shrug"
+   ],
+   "linked_exercise_ids": [
+    "shrugmach"
+   ],
+   "buying_tips": "A trap bar does the same job if space is tight.",
+   "safety": "Keep the neck neutral; don't roll the shoulders.",
+   "keywords": "shrug traps"
+  },
+  {
+   "id": "backextm",
+   "name": "Back extension machine",
+   "aliases": [
+    "Seated back extension",
+    "Lower back machine",
+    "Selectorised back extension"
+   ],
+   "category": "Back machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated selectorised machine where you push a pad backward with your upper back to extend the spine against a stack, unlike a Roman chair.",
+   "muscle_focus": [
+    "Lower back",
+    "Glutes"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~70–110 kg",
+   "adjustability": "Seat height and start-angle adjust; foot plate.",
+   "footprint": {
+    "length_cm": 140,
+    "width_cm": 110,
+    "height_cm": 150
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "romanchair",
+    "reversehyper",
+    "abbackm"
+   ],
+   "signature_exercises": [
+    "Seated back extension",
+    "Machine lower-back extension"
+   ],
+   "linked_exercise_ids": [
+    "backextmach"
+   ],
+   "buying_tips": "A combo ab/back unit saves space if you want both movements.",
+   "safety": "Move slowly through a comfortable range; don't fling into extension.",
+   "keywords": "lower back extension seated"
+  },
+  {
+   "id": "lumbarext",
+   "name": "Lumbar extension machine",
+   "aliases": [
+    "MedX lumbar extension",
+    "Isolated lumbar machine",
+    "Pelvic-restraint back machine"
+   ],
+   "category": "Back machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Clinical-style machine that locks the pelvis with thigh and foot restraints so only the lumbar spine extends; used in rehab and strength testing.",
+   "muscle_focus": [
+    "Lower back (lumbar erectors)"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~10–250 kg with fine increments",
+   "adjustability": "Range-of-motion limiter; pelvic restraint adjust.",
+   "footprint": {
+    "length_cm": 180,
+    "width_cm": 120,
+    "height_cm": 150
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "backextm",
+    "romanchair",
+    "reversehyper"
+   ],
+   "signature_exercises": [
+    "Isolated lumbar extension",
+    "Lumbar strength test"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Mostly found in physio and specialist clinics; ask a trained operator for setup.",
+   "safety": "Set range limits to a pain-free zone before loading.",
+   "keywords": "medx lumbar rehab"
+  },
+  {
+   "id": "deadliftm",
+   "name": "Deadlift machine",
+   "aliases": [
+    "Lever deadlift",
+    "Ground-base deadlift",
+    "Plate-loaded deadlift / shrug"
+   ],
+   "category": "Back machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Back",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Plate-loaded lever machine you stand in and lift with handles, mimicking a deadlift or trap-bar pull on a fixed arc.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings",
+    "Lower back",
+    "Traps"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~200–300 kg of plates",
+   "adjustability": "Handle height or start pins adjust.",
+   "footprint": {
+    "length_cm": 180,
+    "width_cm": 130,
+    "height_cm": 120
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "trapbar",
+    "barbell"
+   ],
+   "signature_exercises": [
+    "Lever deadlift",
+    "Machine RDL",
+    "Machine shrug"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A trap bar is cheaper and nearly as versatile.",
+   "safety": "Brace as for a barbell deadlift; the machine doesn't hold your back.",
+   "keywords": "lever deadlift ground base"
+  },
+  {
+   "id": "shoulderpress",
+   "name": "Shoulder press machine",
+   "aliases": [
+    "Machine overhead press",
+    "Seated shoulder press",
+    "Selectorised shoulder press"
+   ],
+   "category": "Shoulder machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Shoulders",
+   "in_app": true,
+   "tier": 3,
+   "setting": "both",
+   "description": "Seated machine pressing handles overhead on a guided path; selectorised in most gyms, plate-loaded and home-multi versions exist.",
+   "muscle_focus": [
+    "Front delts",
+    "Side delts",
+    "Triceps"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~90–150 kg (200–330 lb)",
+   "adjustability": "Seat height adjust; neutral and wide grips.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 130,
+    "height_cm": 170
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "plateshoulder",
+    "dumbbells",
+    "smith"
+   ],
+   "signature_exercises": [
+    "Machine shoulder press",
+    "Single-arm machine press"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Look for a seat that adjusts low enough for tall users to get a full range.",
+   "safety": "Don't arch the low back off the pad.",
+   "keywords": "overhead press"
+  },
+  {
+   "id": "plateshoulder",
+   "name": "Plate-loaded shoulder press",
+   "aliases": [
+    "Iso-lateral shoulder press",
+    "Hammer Strength shoulder press"
+   ],
+   "category": "Shoulder machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Shoulders",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Overhead press with independent plate-loaded arms that converge slightly as you press.",
+   "muscle_focus": [
+    "Front delts",
+    "Side delts",
+    "Triceps"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~100–200 kg of plates per arm",
+   "adjustability": "Seat height adjust.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 150,
+    "height_cm": 180
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "shoulderpress",
+    "dumbbells",
+    "smith"
+   ],
+   "signature_exercises": [
+    "Iso-lateral shoulder press",
+    "Single-arm shoulder press"
+   ],
+   "linked_exercise_ids": [
+    "isoshoulder"
+   ],
+   "buying_tips": "Iso-lateral arms let you press one side at a time without a twist.",
+   "safety": "Keep the ribs down and back on the pad.",
+   "keywords": "iso lateral shoulder press"
+  },
+  {
+   "id": "lateralm",
+   "name": "Lateral raise machine",
+   "aliases": [
+    "Side raise machine",
+    "Deltoid raise machine",
+    "Standing lateral raise machine"
+   ],
+   "category": "Shoulder machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Shoulders",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated or standing machine where pads on the upper arms lift sideways to isolate the side delts.",
+   "muscle_focus": [
+    "Side delts",
+    "Traps"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~45–90 kg; some plate loaded",
+   "adjustability": "Seat height adjust; some have handle arms.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 120,
+    "height_cm": 150
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "cablecross",
+    "dumbbells",
+    "bands"
+   ],
+   "signature_exercises": [
+    "Machine lateral raise",
+    "Single-arm machine lateral raise"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Check that the pivot lines up with your shoulder joint; badly sized ones pinch.",
+   "safety": "Lead with elbows and stop around shoulder height.",
+   "keywords": "delts"
+  },
+  {
+   "id": "reardelt",
+   "name": "Rear delt machine",
+   "aliases": [
+    "Reverse pec deck",
+    "Rear delt fly machine",
+    "Reverse fly machine"
+   ],
+   "category": "Shoulder machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Shoulders",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated machine (often a reversed pec deck) where you push handles back and out to train the rear delts.",
+   "muscle_focus": [
+    "Rear delts",
+    "Upper back"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~70–110 kg",
+   "adjustability": "Seat height and arm start position adjust.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 150,
+    "height_cm": 200
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "pecdeck",
+    "cablecross",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "Rear delt machine fly",
+    "Single-arm reverse pec deck"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Most pec decks convert to this; a dedicated one is rarely needed.",
+   "safety": "Keep a slight elbow bend and don't shrug.",
+   "keywords": "reverse fly"
+  },
+  {
+   "id": "uprightrowm",
+   "name": "Shrug / upright row machine",
+   "aliases": [
+    "Upright row machine",
+    "Selectorised shrug",
+    "Shrug / upright row combo"
+   ],
+   "category": "Shoulder machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Shoulders",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Standing machine with handles that travel vertically for upright rows and shrugs; selectorised or plate loaded.",
+   "muscle_focus": [
+    "Traps",
+    "Side delts"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~90–150 kg",
+   "adjustability": "Handle start height adjust.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 110,
+    "height_cm": 180
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "shrugm",
+    "cablecross",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "Machine upright row",
+    "Machine shrug"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Fairly uncommon; a cable station does both movements too.",
+   "safety": "Use a wider grip on upright rows to spare the shoulders.",
+   "keywords": "traps"
+  },
+  {
+   "id": "jammer",
+   "name": "Jammer press",
+   "aliases": [
+    "Ground-base jammer",
+    "Iso-lateral jammer",
+    "Standing lever press"
+   ],
+   "category": "Shoulder machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Shoulders",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Standing plate-loaded machine with long angled lever arms you drive up and forward from the shoulders, used for athletic pushing power.",
+   "muscle_focus": [
+    "Front delts",
+    "Triceps",
+    "Chest",
+    "Legs"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~100–200 kg of plates per arm",
+   "adjustability": "Handle heights fixed; some have multiple grips.",
+   "footprint": {
+    "length_cm": 250,
+    "width_cm": 140,
+    "height_cm": 200
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "landmine",
+    "plateshoulder",
+    "barbell"
+   ],
+   "signature_exercises": [
+    "Jammer press",
+    "Single-arm jammer",
+    "Jammer squat-to-press"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Two landmines with handles are the budget version.",
+   "safety": "Drive from the legs and keep a braced trunk.",
+   "keywords": "jammer ground base athletic"
+  },
+  {
+   "id": "curlm",
+   "name": "Bicep curl machine",
+   "aliases": [
+    "Preacher curl machine",
+    "Machine curl",
+    "Selectorised biceps curl"
+   ],
+   "category": "Arm machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Arms",
+   "in_app": true,
+   "tier": 3,
+   "setting": "both",
+   "description": "Seated machine with a preacher-style arm pad and a cam-driven handle for isolated biceps curls.",
+   "muscle_focus": [
+    "Biceps",
+    "Forearms"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~45–90 kg; home units lighter",
+   "adjustability": "Seat height adjust; one- or two-arm handles.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 100,
+    "height_cm": 140
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "preacher",
+    "platecurlm",
+    "dumbbells",
+    "cablecross"
+   ],
+   "signature_exercises": [
+    "Machine curl",
+    "Single-arm machine curl",
+    "Machine hammer curl"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "If space is tight a preacher bench with an EZ bar covers most of this.",
+   "safety": "Don't let the arms snap straight at the bottom.",
+   "keywords": "biceps preacher"
+  },
+  {
+   "id": "platecurlm",
+   "name": "Plate-loaded curl machine",
+   "aliases": [
+    "Iso-lateral preacher curl",
+    "Standing biceps curl machine",
+    "Lever curl"
+   ],
+   "category": "Arm machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Plate-loaded biceps machine, preacher or standing style, with independent lever arms.",
+   "muscle_focus": [
+    "Biceps",
+    "Forearms"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~50–100 kg of plates",
+   "adjustability": "Seat or pad height adjust.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 110,
+    "height_cm": 140
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "curlm",
+    "preacher",
+    "ezbar"
+   ],
+   "signature_exercises": [
+    "Iso-lateral preacher curl",
+    "Standing machine curl"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Cheaper than selectorised but plate changes slow down drop sets.",
+   "safety": "Lower under control; the lever can drop fast.",
+   "keywords": "plate curl biceps"
+  },
+  {
+   "id": "tricepm",
+   "name": "Tricep extension machine",
+   "aliases": [
+    "Triceps press machine",
+    "Machine triceps extension",
+    "Seated triceps machine"
+   ],
+   "category": "Arm machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Arms",
+   "in_app": true,
+   "tier": 3,
+   "setting": "both",
+   "description": "Seated machine with arm pads where you extend the elbows against a cam to isolate the triceps.",
+   "muscle_focus": [
+    "Triceps"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~45–90 kg",
+   "adjustability": "Seat height adjust.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 100,
+    "height_cm": 140
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "cablecross",
+    "ezbar",
+    "dipm"
+   ],
+   "signature_exercises": [
+    "Machine triceps extension",
+    "Single-arm machine extension"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Combo biceps/triceps machines are a good space saver at home.",
+   "safety": "Keep the elbows on the pad.",
+   "keywords": "triceps"
+  },
+  {
+   "id": "ohtricepm",
+   "name": "Overhead triceps extension machine",
+   "aliases": [
+    "Overhead triceps machine",
+    "Seated overhead extension"
+   ],
+   "category": "Arm machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated machine where the arms extend from behind the head, stretching the long head of the triceps under load.",
+   "muscle_focus": [
+    "Triceps (long head)"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~45–90 kg or plate loaded",
+   "adjustability": "Seat height adjust.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 100,
+    "height_cm": 170
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "cablecross",
+    "dumbbells",
+    "tricepm"
+   ],
+   "signature_exercises": [
+    "Overhead triceps extension machine",
+    "Single-arm overhead machine extension"
+   ],
+   "linked_exercise_ids": [
+    "ohtricepmach"
+   ],
+   "buying_tips": "Newer machine type; check the elbow pivot lines up with yours.",
+   "safety": "Start light; the stretch position loads the elbow heavily.",
+   "keywords": "overhead tricep extension long head"
+  },
+  {
+   "id": "dipm",
+   "name": "Seated dip machine",
+   "aliases": [
+    "Triceps dip machine",
+    "Seated triceps press",
+    "Plate-loaded dip"
+   ],
+   "category": "Arm machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated machine where you push handles down beside the hips, mimicking a dip with the body supported.",
+   "muscle_focus": [
+    "Triceps",
+    "Lower chest",
+    "Front delts"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~90–150 kg or plate loaded",
+   "adjustability": "Seat height adjust.",
+   "footprint": {
+    "length_cm": 140,
+    "width_cm": 120,
+    "height_cm": 150
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "dipstation",
+    "assistpull",
+    "tricepm"
+   ],
+   "signature_exercises": [
+    "Seated machine dip",
+    "Single-arm machine dip"
+   ],
+   "linked_exercise_ids": [
+    "machinedip"
+   ],
+   "buying_tips": "Good for loading the dip pattern heavily without a dip belt.",
+   "safety": "Keep the shoulders down and back at the bottom.",
+   "keywords": "dip triceps seated"
+  },
+  {
+   "id": "armcombo",
+   "name": "Biceps / triceps combo machine",
+   "aliases": [
+    "Arm curl / extension combo",
+    "Dual arm machine"
+   ],
+   "category": "Arm machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Single-stack machine that switches between a preacher curl and a triceps extension by flipping the arm or handle.",
+   "muscle_focus": [
+    "Biceps",
+    "Triceps"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~45–90 kg",
+   "adjustability": "Seat height; arm converts between curl and extension.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 100,
+    "height_cm": 150
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "curlm",
+    "tricepm",
+    "cablecross"
+   ],
+   "signature_exercises": [
+    "Machine curl",
+    "Machine triceps extension"
+   ],
+   "linked_exercise_ids": [
+    "curlmach",
+    "tricepmach"
+   ],
+   "buying_tips": "Popular in home and hotel gyms; check the changeover is quick.",
+   "safety": "Recheck pin and arm position after switching.",
+   "keywords": "biceps triceps combo"
+  },
+  {
+   "id": "wristm",
+   "name": "Wrist / forearm machine",
+   "aliases": [
+    "Wrist curl machine",
+    "Forearm machine",
+    "Wrist roller machine"
+   ],
+   "category": "Arm machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Machine with a rotating handle or roller for loaded wrist flexion, extension and roll-ups.",
+   "muscle_focus": [
+    "Forearms",
+    "Grip"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Plate peg or small stack ~20–60 kg",
+   "adjustability": "Handle height adjust.",
+   "footprint": {
+    "length_cm": 90,
+    "width_cm": 70,
+    "height_cm": 120
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "wristroller",
+    "dumbbells",
+    "cablecross"
+   ],
+   "signature_exercises": [
+    "Machine wrist curl",
+    "Machine reverse wrist curl",
+    "Wrist roll-up"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A wrist roller or cable with a short bar does nearly the same job.",
+   "safety": "Use controlled reps; wrist tendons dislike jerks.",
+   "keywords": "forearm wrist curl"
+  },
+  {
+   "id": "gripm",
+   "name": "Grip machine",
+   "aliases": [
+    "Plate-loaded grip trainer",
+    "Hand gripper machine",
+    "Pinch grip machine"
+   ],
+   "category": "Arm machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Arms",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Plate-loaded lever you squeeze with the hand to train crushing grip, sometimes with pinch or wrist attachments.",
+   "muscle_focus": [
+    "Grip",
+    "Forearms"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Plate peg ~25–100 kg",
+   "adjustability": "Handle width adjust.",
+   "footprint": {
+    "length_cm": 70,
+    "width_cm": 50,
+    "height_cm": 110
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "gripper",
+    "fatgrips",
+    "wristroller"
+   ],
+   "signature_exercises": [
+    "Machine grip squeeze",
+    "Single-hand crush",
+    "Pinch hold"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Hand grippers are far cheaper; this suits gyms coaching climbers or strongmen.",
+   "safety": "Release slowly to protect the fingers.",
+   "keywords": "grip crush hand forearm"
+  },
+  {
+   "id": "legpress",
+   "name": "Leg press",
+   "aliases": [
+    "45-degree leg press",
+    "Plate-loaded leg press",
+    "Incline sled leg press",
+    "Linear leg press"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": true,
+   "tier": 3,
+   "setting": "both",
+   "description": "Seated angled sled you push up rails with the feet; the gym standard, usually plate loaded at about 45 degrees. Feet low on the plate also gives a leg-press calf raise.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Hamstrings",
+    "Calves"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Sled ~35–70 kg empty; holds 300–500 kg+",
+   "adjustability": "Back-pad angle and safety stops adjust.",
+   "footprint": {
+    "length_cm": 230,
+    "width_cm": 150,
+    "height_cm": 150
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "hacklegpress",
+    "seatlegpress",
+    "hacksquat",
+    "barbell"
+   ],
+   "signature_exercises": [
+    "Leg press",
+    "Single-leg leg press",
+    "Wide/narrow-stance leg press",
+    "Leg press calf raise"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Check the empty sled weight so you can log loads accurately.",
+   "safety": "Never lock the knees out under load and always set the safety stops.",
+   "keywords": "sled press"
+  },
+  {
+   "id": "vertlegpress",
+   "name": "Vertical leg press",
+   "aliases": [
+    "Vertical sled",
+    "Lying vertical press"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "You lie on your back and press a plate-loaded sled straight up; compact but hard on the lower back if you round.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~200–300 kg of plates",
+   "adjustability": "Safety stop; seat pad sometimes adjusts.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 110,
+    "height_cm": 220
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "legpress",
+    "seatlegpress"
+   ],
+   "signature_exercises": [
+    "Vertical leg press",
+    "Vertical leg press calf raise"
+   ],
+   "linked_exercise_ids": [
+    "verticalleg"
+   ],
+   "buying_tips": "Small footprint makes it popular in home gyms and as a Smith/rack add-on.",
+   "safety": "Keep the hips down on the pad; don't let the sled come too deep.",
+   "keywords": "vertical leg press"
+  },
+  {
+   "id": "seatlegpress",
+   "name": "Seated leg press machine",
+   "aliases": [
+    "Horizontal leg press",
+    "Selectorised leg press",
+    "Cybex/Life Fitness leg press"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "Upright seat with the footplate in front; you push horizontally against a weight stack. Lighter loads than a plate-loaded sled, quick to adjust.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Hamstrings"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~110–200 kg",
+   "adjustability": "Seat position and back angle adjust.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 100,
+    "height_cm": 150
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "legpress",
+    "multigym",
+    "hacklegpress"
+   ],
+   "signature_exercises": [
+    "Seated leg press",
+    "Single-leg seated leg press",
+    "Seated leg press calf raise"
+   ],
+   "linked_exercise_ids": [
+    "horlegpress"
+   ],
+   "buying_tips": "Common add-on for home multi-gyms; strong lifters may max out the stack.",
+   "safety": "Set the seat so knees don't fold past 90 degrees into the chest.",
+   "keywords": "horizontal leg press"
+  },
+  {
+   "id": "isolegpress",
+   "name": "Iso-lateral horizontal leg press",
+   "aliases": [
+    "Hammer Strength leg press",
+    "Plate-loaded horizontal leg press",
+    "Unilateral leg press"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Plate-loaded horizontal leg press with two independent footplates, so each leg can push separately on a curved path.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Hamstrings"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~150–200 kg of plates per side",
+   "adjustability": "Seat back angle adjust.",
+   "footprint": {
+    "length_cm": 220,
+    "width_cm": 160,
+    "height_cm": 150
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "legpress",
+    "seatlegpress"
+   ],
+   "signature_exercises": [
+    "Iso-lateral leg press",
+    "Single-leg leg press"
+   ],
+   "linked_exercise_ids": [
+    "salegpress"
+   ],
+   "buying_tips": "Great for unilateral work without the balance demand of split squats.",
+   "safety": "Load both sides evenly before getting in.",
+   "keywords": "iso lateral leg press"
+  },
+  {
+   "id": "hacklegpress",
+   "name": "Leg press / hack squat combo",
+   "aliases": [
+    "Hack squat leg press combo",
+    "2-in-1 leg sled"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 2,
+   "setting": "home",
+   "description": "Home-gym plate-loaded sled that converts between a 45-degree leg press and a hack squat by swapping the seat and shoulder pads.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Hamstrings",
+    "Calves"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Sled ~30–50 kg; holds ~300–450 kg",
+   "adjustability": "Converts press/hack; safety catches.",
+   "footprint": {
+    "length_cm": 220,
+    "width_cm": 140,
+    "height_cm": 150
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "legpress",
+    "hacksquat",
+    "powerrack"
+   ],
+   "signature_exercises": [
+    "Leg press",
+    "Hack squat",
+    "Reverse hack squat",
+    "Leg press calf raise"
+   ],
+   "linked_exercise_ids": [
+    "legpress",
+    "salegpress",
+    "widelegpress",
+    "narrowlegpress",
+    "highlegpress",
+    "legpresscalf",
+    "hacksq",
+    "revhack",
+    "hacksqcalf"
+   ],
+   "buying_tips": "The best value way to get a leg press at home; check conversion time and empty sled weight.",
+   "safety": "Engage the safety catches before every set.",
+   "keywords": "leg press hack squat combo home"
+  },
+  {
+   "id": "hacksquat",
+   "name": "Hack squat machine",
+   "aliases": [
+    "Plate-loaded hack squat",
+    "Selectorised hack squat",
+    "Reverse hack"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Angled sled with shoulder pads; you squat down and up along fixed rails with back supported, very quad focused.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Sled ~35–60 kg empty; holds 300 kg+",
+   "adjustability": "Foot platform angle on some; safety stops.",
+   "footprint": {
+    "length_cm": 230,
+    "width_cm": 140,
+    "height_cm": 180
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "hacklegpress",
+    "vsquat",
+    "pendulum",
+    "smith"
+   ],
+   "signature_exercises": [
+    "Hack squat",
+    "Reverse hack squat",
+    "Hack squat calf raise"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Check the platform angle; a steeper one shifts load to the quads.",
+   "safety": "Release the safety handles fully before descending and re-engage after.",
+   "keywords": "hack squat"
+  },
+  {
+   "id": "vsquat",
+   "name": "V-squat machine",
+   "aliases": [
+    "V squat",
+    "Power squat machine (V-style)"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Plate-loaded lever squat: shoulder pads on a pivoting arm with your back facing the frame; deep squatting with less spinal load than a barbell.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~200–300 kg of plates",
+   "adjustability": "Fixed; some have adjustable shoulder pads.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 130,
+    "height_cm": 170
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "hacksquat",
+    "pendulum",
+    "leversquat"
+   ],
+   "signature_exercises": [
+    "V-squat",
+    "Narrow-stance V-squat",
+    "V-squat calf raise"
+   ],
+   "linked_exercise_ids": [
+    "vsquat"
+   ],
+   "buying_tips": "Rarer than a hack squat but feels more natural; worth seeking out.",
+   "safety": "Control the bottom position; the lever accelerates on the way down.",
+   "keywords": "v squat"
+  },
+  {
+   "id": "beltsquat",
+   "name": "Belt squat machine",
+   "aliases": [
+    "Hip belt squat",
+    "Pit shark",
+    "Lever belt squat"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "both",
+   "description": "Machine that loads a belt round your hips so you can squat, march or lunge with zero load on the spine; plate-loaded lever or cable-driven.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Adductors"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~200–300 kg of plates",
+   "adjustability": "Belt chain length adjust; handles for balance.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 130,
+    "height_cm": 140
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "dipbelt",
+    "pendulum",
+    "legpress"
+   ],
+   "signature_exercises": [
+    "Belt squat",
+    "Belt squat march",
+    "Belt squat RDL"
+   ],
+   "linked_exercise_ids": [
+    "beltsquat",
+    "beltmarch"
+   ],
+   "buying_tips": "Home lifters can approximate with a dip belt between two boxes or a landmine belt-squat attachment.",
+   "safety": "Adjust chain length so you start standing tall with the load off the stops.",
+   "keywords": "belt squat hip belt spine"
+  },
+  {
+   "id": "pendulum",
+   "name": "Pendulum / belt squat machine",
+   "aliases": [
+    "Pendulum squat",
+    "Pendulum hack"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Plate-loaded squat where shoulder pads ride on a swinging pendulum arm, giving a deep, quad-heavy squat with a smooth strength curve. Belt squat machines are now listed separately.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~150–250 kg of plates",
+   "adjustability": "Foot platform and pad adjust; safety stops.",
+   "footprint": {
+    "length_cm": 220,
+    "width_cm": 130,
+    "height_cm": 200
+   },
+   "space": "XL",
+   "price_band": "$$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "hacksquat",
+    "vsquat",
+    "beltsquat"
+   ],
+   "signature_exercises": [
+    "Pendulum squat",
+    "Pendulum reverse lunge"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Getting more common; feels lighter than a hack squat at the same plate load.",
+   "safety": "Set the depth stop for your mobility.",
+   "keywords": "pendulum squat machine"
+  },
+  {
+   "id": "leversquat",
+   "name": "Leverage squat machine",
+   "aliases": [
+    "Super squat",
+    "Power squat",
+    "Ground-base squat / lunge",
+    "Lever squat"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Plate-loaded lever arm with shoulder pads that you squat or lunge under while standing on a platform; a Smith-like squat with a curved path, common in home gyms.",
+   "muscle_focus": [
+    "Quads",
+    "Glutes",
+    "Hamstrings"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~150–300 kg of plates",
+   "adjustability": "Pad height and safety stops adjust.",
+   "footprint": {
+    "length_cm": 200,
+    "width_cm": 120,
+    "height_cm": 170
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "smith",
+    "vsquat",
+    "powerrack"
+   ],
+   "signature_exercises": [
+    "Lever squat",
+    "Lever lunge",
+    "Lever calf raise",
+    "Lever shrug"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Many home versions double as a calf raise and shrug station.",
+   "safety": "Keep feet forward enough that knees stay comfortable at the bottom.",
+   "keywords": "lever squat super squat power squat"
+  },
+  {
+   "id": "sissym",
+   "name": "Sissy squat machine",
+   "aliases": [
+    "Sissy squat bench",
+    "Sissy squat station"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Bodyweight",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Small frame with a padded foot lock and calf pad that lets you lean back into a sissy squat safely; load with a plate held to the chest.",
+   "muscle_focus": [
+    "Quads"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Bodyweight; hold a plate to load",
+   "adjustability": "Foot and calf pad height adjust.",
+   "footprint": {
+    "length_cm": 100,
+    "width_cm": 60,
+    "height_cm": 70
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [],
+   "substitutes": [
+    "wall",
+    "smith"
+   ],
+   "signature_exercises": [
+    "Sissy squat",
+    "Weighted sissy squat"
+   ],
+   "linked_exercise_ids": [
+    "sissysquat"
+   ],
+   "buying_tips": "Cheap and compact; check the calf pad height suits your shin length.",
+   "safety": "Progress slowly; it loads the knee hard.",
+   "keywords": "sissy squat bench quads"
+  },
+  {
+   "id": "legext",
+   "name": "Leg extension machine",
+   "aliases": [
+    "Quad extension machine",
+    "Plate-loaded leg extension",
+    "Iso-lateral leg extension"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": true,
+   "tier": 3,
+   "setting": "both",
+   "description": "Seated machine with a shin pad you kick up to straighten the knees, isolating the quads.",
+   "muscle_focus": [
+    "Quads"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~70–130 kg; plate-loaded versions exist",
+   "adjustability": "Back pad, shin pad and start angle adjust.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 100,
+    "height_cm": 140
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "legextcurl",
+    "bands",
+    "cablecross"
+   ],
+   "signature_exercises": [
+    "Leg extension",
+    "Single-leg leg extension"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Line the knee joint up with the machine's pivot; look for a range-limiter.",
+   "safety": "Avoid snapping into lockout.",
+   "keywords": "quads"
+  },
+  {
+   "id": "legextcurl",
+   "name": "Leg extension / curl combo",
+   "aliases": [
+    "Leg developer",
+    "Bench leg attachment",
+    "Leg ext/curl station"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 2,
+   "setting": "home",
+   "description": "Home-gym unit (standalone or a bench attachment) that does both leg extensions and leg curls, plate loaded or selectorised.",
+   "muscle_focus": [
+    "Quads",
+    "Hamstrings"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Plate post ~100 kg capacity or ~70 kg stack",
+   "adjustability": "Pad positions adjust; seated or lying curl depending on model.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 70,
+    "height_cm": 110
+   },
+   "space": "M",
+   "price_band": "$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "legext",
+    "lyingcurl",
+    "seatedcurl"
+   ],
+   "signature_exercises": [
+    "Leg extension",
+    "Lying leg curl",
+    "Seated leg curl"
+   ],
+   "linked_exercise_ids": [
+    "legext",
+    "salegext",
+    "legcurl",
+    "salyingcurl",
+    "seatedlegcurl"
+   ],
+   "buying_tips": "Bench attachments are cheap but the pivot rarely lines up well; standalone units feel better.",
+   "safety": "Make sure the bench is rated for the load you'll use.",
+   "keywords": "leg extension leg curl home combo"
+  },
+  {
+   "id": "lyingcurl",
+   "name": "Lying leg curl machine",
+   "aliases": [
+    "Prone leg curl",
+    "Plate-loaded lying leg curl"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": true,
+   "tier": 3,
+   "setting": "both",
+   "description": "Machine where you lie face down and curl a pad toward your glutes to train the hamstrings.",
+   "muscle_focus": [
+    "Hamstrings",
+    "Calves"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~70–110 kg; plate-loaded versions",
+   "adjustability": "Ankle pad and range adjust.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 100,
+    "height_cm": 110
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "seatedcurl",
+    "legextcurl",
+    "nordicbench"
+   ],
+   "signature_exercises": [
+    "Lying leg curl",
+    "Single-leg lying leg curl"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Angled benches (hips higher) feel better than flat ones.",
+   "safety": "Keep hips down on the pad.",
+   "keywords": "hamstring"
+  },
+  {
+   "id": "seatedcurl",
+   "name": "Seated leg curl machine",
+   "aliases": [
+    "Seated hamstring curl"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Legs & glutes",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated machine with a thigh hold-down where you pull a pad down and back to curl the knees; trains hamstrings in a lengthened position.",
+   "muscle_focus": [
+    "Hamstrings"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~70–110 kg",
+   "adjustability": "Back pad, thigh pad and ankle pad adjust.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 100,
+    "height_cm": 140
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "lyingcurl",
+    "legextcurl",
+    "nordicbench"
+   ],
+   "signature_exercises": [
+    "Seated leg curl",
+    "Single-leg seated leg curl"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Many coaches prefer it to the lying curl for hamstring growth.",
+   "safety": "Lock the thigh pad down firmly before starting.",
+   "keywords": "hamstring"
+  },
+  {
+   "id": "kneellegcurl",
+   "name": "Kneeling leg curl machine",
+   "aliases": [
+    "Kneeling hamstring curl",
+    "Single-leg kneeling curl"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Machine where you kneel on one leg and curl the other against a pad, a one-leg-at-a-time hamstring isolation.",
+   "muscle_focus": [
+    "Hamstrings"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~45–90 kg or plate loaded",
+   "adjustability": "Pad positions adjust.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 80,
+    "height_cm": 120
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "standlegcurl",
+    "lyingcurl",
+    "cablecross"
+   ],
+   "signature_exercises": [
+    "Kneeling leg curl"
+   ],
+   "linked_exercise_ids": [
+    "kneelcurl"
+   ],
+   "buying_tips": "Mostly in older or European gyms (Gym80, Panatta).",
+   "safety": "Keep hips square; don't twist to finish the rep.",
+   "keywords": "kneeling hamstring curl"
+  },
+  {
+   "id": "standlegcurl",
+   "name": "Standing leg curl machine",
+   "aliases": [
+    "Standing hamstring curl",
+    "Single-leg standing curl"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Upright machine where you brace on a thigh pad and curl one leg back against a shin pad.",
+   "muscle_focus": [
+    "Hamstrings"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~45–90 kg",
+   "adjustability": "Thigh and ankle pad height adjust.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 80,
+    "height_cm": 150
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "kneellegcurl",
+    "lyingcurl",
+    "anklestrap"
+   ],
+   "signature_exercises": [
+    "Standing leg curl"
+   ],
+   "linked_exercise_ids": [
+    "standlegcurl"
+   ],
+   "buying_tips": "Takes less space than a lying curl; good for unilateral work.",
+   "safety": "Keep the standing knee soft and the hips still.",
+   "keywords": "standing hamstring curl"
+  },
+  {
+   "id": "standcalf",
+   "name": "Standing calf raise machine",
+   "aliases": [
+    "Standing calf machine",
+    "Shoulder-pad calf raise",
+    "Plate-loaded standing calf"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Machine with shoulder pads and a toe block for standing calf raises with heavy load.",
+   "muscle_focus": [
+    "Calves"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~110–180 kg; plate-loaded versions",
+   "adjustability": "Shoulder pad height adjust.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 90,
+    "height_cm": 210
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "leversquat",
+    "smith",
+    "legpress",
+    "dumbbells"
+   ],
+   "signature_exercises": [
+    "Standing calf raise",
+    "Single-leg calf raise"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A leg press or Smith machine with a block covers most needs.",
+   "safety": "Don't bounce out of the bottom stretch.",
+   "keywords": "calves"
+  },
+  {
+   "id": "seatcalf",
+   "name": "Seated calf raise machine",
+   "aliases": [
+    "Seated calf machine",
+    "Plate-loaded seated calf"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": true,
+   "tier": 3,
+   "setting": "both",
+   "description": "Seated machine with a knee pad pressing down on the thighs, training the soleus with bent-knee calf raises; usually plate loaded.",
+   "muscle_focus": [
+    "Calves (soleus)"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Holds ~100–150 kg of plates",
+   "adjustability": "Knee pad height adjust.",
+   "footprint": {
+    "length_cm": 110,
+    "width_cm": 60,
+    "height_cm": 100
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "dumbbells",
+    "smith"
+   ],
+   "signature_exercises": [
+    "Seated calf raise",
+    "Single-leg seated calf raise"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Compact home versions exist and are inexpensive.",
+   "safety": "Release the safety lever slowly.",
+   "keywords": "calves"
+  },
+  {
+   "id": "donkeycalfm",
+   "name": "Donkey calf raise machine",
+   "aliases": [
+    "Donkey calf machine",
+    "Bent-over calf raise"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Machine where you bend forward at the hips with a pad on the lower back and raise onto the toes, stretching the calves hard.",
+   "muscle_focus": [
+    "Calves"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Plate loaded or ~100–150 kg stack",
+   "adjustability": "Pad height adjust.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 80,
+    "height_cm": 120
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "standcalf",
+    "legpress",
+    "smith"
+   ],
+   "signature_exercises": [
+    "Donkey calf raise",
+    "Single-leg donkey calf raise"
+   ],
+   "linked_exercise_ids": [
+    "donkeycalf"
+   ],
+   "buying_tips": "Rare; a leg press calf raise gives a similar stretch.",
+   "safety": "Keep the back flat under the pad.",
+   "keywords": "donkey calf raise"
+  },
+  {
+   "id": "rotarycalf",
+   "name": "Rotary calf machine",
+   "aliases": [
+    "Seated calf extension",
+    "Calf press machine"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Selectorised seated machine where you push a footplate with the balls of your feet on an arc, training the calves with the legs straight.",
+   "muscle_focus": [
+    "Calves"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~90–150 kg",
+   "adjustability": "Seat position adjust.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 90,
+    "height_cm": 140
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "legpress",
+    "seatlegpress",
+    "standcalf"
+   ],
+   "signature_exercises": [
+    "Rotary calf raise",
+    "Seated calf press"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A leg press with feet low on the plate does nearly the same job.",
+   "safety": "Keep the knees soft, not locked.",
+   "keywords": "calf press rotary"
+  },
+  {
+   "id": "tibiam",
+   "name": "Tibia raise machine",
+   "aliases": [
+    "Tib bar",
+    "Tibialis machine",
+    "Tib raise station",
+    "Calf / tibia machine"
+   ],
+   "category": "Leg machines",
+   "subcategory": "Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Seated or standing device with a padded foot hook you load with plates to train the tibialis by pulling the toes up.",
+   "muscle_focus": [
+    "Tibialis",
+    "Shins"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Small plate post; ~2–50 kg",
+   "adjustability": "Foot pad position adjust on some.",
+   "footprint": {
+    "length_cm": 60,
+    "width_cm": 40,
+    "height_cm": 40
+   },
+   "space": "S",
+   "price_band": "$$",
+   "requires": [
+    "plates"
+   ],
+   "substitutes": [
+    "wall",
+    "bands",
+    "anklestrap"
+   ],
+   "signature_exercises": [
+    "Tibialis raise",
+    "Seated tib raise"
+   ],
+   "linked_exercise_ids": [
+    "tibraise"
+   ],
+   "buying_tips": "A cheap tib bar or band does most of the job; machines suit gyms.",
+   "safety": "Start light; the shins fatigue fast.",
+   "keywords": "tibialis tib bar shin"
+  },
+  {
+   "id": "hipthrustm",
+   "name": "Hip thrust machine",
+   "aliases": [
+    "Glute drive",
+    "Booty builder",
+    "Plate-loaded hip thrust",
+    "Glute bridge machine"
+   ],
+   "category": "Glute & hip machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": true,
+   "tier": 3,
+   "setting": "both",
+   "description": "Machine with a back pad and belt or lever pad over the hips so you can hip-thrust heavy without rolling a barbell on.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Plate loaded or ~100–150 kg stack",
+   "adjustability": "Back pad height and belt adjust.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 110,
+    "height_cm": 100
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "barbell",
+    "smith",
+    "standhipthrust"
+   ],
+   "signature_exercises": [
+    "Machine hip thrust",
+    "Single-leg machine hip thrust"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Look for quick in-and-out; belt systems are faster than barbell setups.",
+   "safety": "Keep the chin tucked and stop at full hip extension.",
+   "keywords": "glute bridge"
+  },
+  {
+   "id": "standhipthrust",
+   "name": "Standing hip thrust machine",
+   "aliases": [
+    "Standing glute drive",
+    "Standing hip extension machine"
+   ],
+   "category": "Glute & hip machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "You stand facing the machine with a belt or pad at the hips and drive them forward, loading the glutes at end range in an upright position.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings"
+   ],
+   "loading": "Plate loaded",
+   "weight_options": "Plate loaded or ~100 kg stack",
+   "adjustability": "Belt or pad height adjust.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 100,
+    "height_cm": 140
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "hipthrustm",
+    "cablecross"
+   ],
+   "signature_exercises": [
+    "Standing hip thrust",
+    "Standing glute drive"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Quicker to set up than a lying hip thrust; newer and less common.",
+   "safety": "Don't hyperextend the lower back at lockout.",
+   "keywords": "standing glute thrust"
+  },
+  {
+   "id": "glutekick",
+   "name": "Glute kickback machine",
+   "aliases": [
+    "Glute kickback machine",
+    "Plate-loaded kickback",
+    "Donkey kick machine"
+   ],
+   "category": "Glute & hip machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Kneeling or standing machine where you push one leg back against a foot plate or pad to train glute hip extension.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~45–90 kg or plate loaded",
+   "adjustability": "Chest pad and foot plate adjust.",
+   "footprint": {
+    "length_cm": 140,
+    "width_cm": 80,
+    "height_cm": 140
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "multihip",
+    "cablecross",
+    "anklestrap"
+   ],
+   "signature_exercises": [
+    "Glute kickback machine",
+    "Single-leg kickback"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A cable with an ankle strap is a cheaper alternative.",
+   "safety": "Don't arch the lower back to finish.",
+   "keywords": "glutes"
+  },
+  {
+   "id": "abductor",
+   "name": "Hip abductor / adductor machine",
+   "aliases": [
+    "Hip adduction machine",
+    "Hip abduction machine",
+    "Inner / outer thigh machine",
+    "Dual adductor / abductor"
+   ],
+   "category": "Glute & hip machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Legs & glutes",
+   "in_app": true,
+   "tier": 3,
+   "setting": "both",
+   "description": "Seated machine with leg pads you push apart (abduction) or squeeze together (adduction) to train the outer glutes and inner thighs.",
+   "muscle_focus": [
+    "Glute medius",
+    "Adductors"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~70–110 kg",
+   "adjustability": "Start-width adjust; converts between in and out.",
+   "footprint": {
+    "length_cm": 150,
+    "width_cm": 80,
+    "height_cm": 140
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "multihip",
+    "miniband",
+    "cablecross"
+   ],
+   "signature_exercises": [
+    "Hip abduction machine",
+    "Hip adduction machine",
+    "Leaning hip abduction"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Dual units save space; check the changeover is quick.",
+   "safety": "Set a start width within your comfortable range.",
+   "keywords": "inner outer thigh"
+  },
+  {
+   "id": "multihip",
+   "name": "Multi-hip machine",
+   "aliases": [
+    "4-way hip machine",
+    "Hip machine",
+    "Rotary hip machine"
+   ],
+   "category": "Glute & hip machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Standing machine with a rotating lever pad at thigh height that trains hip extension, flexion, abduction and adduction one leg at a time.",
+   "muscle_focus": [
+    "Glutes",
+    "Glute medius",
+    "Adductors",
+    "Hip flexors"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~45–90 kg",
+   "adjustability": "Platform height and lever start angle adjust.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 100,
+    "height_cm": 150
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "cablecross",
+    "anklestrap",
+    "abductor",
+    "glutekick"
+   ],
+   "signature_exercises": [
+    "Multi-hip abduction",
+    "Multi-hip glute extension",
+    "Multi-hip adduction",
+    "Multi-hip flexion"
+   ],
+   "linked_exercise_ids": [
+    "multihipabd",
+    "multihipext"
+   ],
+   "buying_tips": "One machine covers four hip movements; great for small rehab or PT studios.",
+   "safety": "Raise the platform so your hip joint lines up with the lever's pivot.",
+   "keywords": "4 way hip abduction adduction"
+  },
+  {
+   "id": "hipextm",
+   "name": "Hip extension machine",
+   "aliases": [
+    "Rotary hip extension",
+    "Duo hip and back",
+    "Prone hip extension machine"
+   ],
+   "category": "Glute & hip machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Selectorised machine (Nautilus Duo Hip & Back style) where you lie or stand and push a roller pad down with the thigh, training glutes and hamstrings through hip extension.",
+   "muscle_focus": [
+    "Glutes",
+    "Hamstrings"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~70–110 kg",
+   "adjustability": "Back pad and start angle adjust.",
+   "footprint": {
+    "length_cm": 170,
+    "width_cm": 100,
+    "height_cm": 130
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "glutekick",
+    "multihip",
+    "reversehyper"
+   ],
+   "signature_exercises": [
+    "Machine hip extension",
+    "Single-leg hip extension"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Mostly in older Nautilus-equipped gyms; a multi-hip covers the same movement.",
+   "safety": "Keep the lower back neutral as the leg drives down.",
+   "keywords": "rotary hip extension nautilus"
+  },
+  {
+   "id": "hipflexm",
+   "name": "Hip flexion machine",
+   "aliases": [
+    "Hip flexor machine",
+    "Standing knee raise machine"
+   ],
+   "category": "Glute & hip machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Legs & glutes",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Machine with a thigh pad you lift toward the chest, loading the hip flexors directly; useful for sprinters and kickers.",
+   "muscle_focus": [
+    "Hip flexors",
+    "Abs"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~45–90 kg or plate loaded",
+   "adjustability": "Pad height adjust.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 90,
+    "height_cm": 140
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "multihip",
+    "anklestrap",
+    "captain"
+   ],
+   "signature_exercises": [
+    "Machine hip flexion",
+    "Single-leg knee drive"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Specialist piece; a multi-hip machine or cable with ankle strap covers it.",
+   "safety": "Avoid arching the back to lift the leg higher.",
+   "keywords": "hip flexor psoas sprint"
+  },
+  {
+   "id": "abcrunchm",
+   "name": "Ab crunch machine",
+   "aliases": [
+    "Ab machine",
+    "Seated crunch machine",
+    "Plate-loaded crunch"
+   ],
+   "category": "Core & neck machines",
+   "subcategory": "Selectorised / Plate loaded",
+   "app_group": "Core",
+   "in_app": true,
+   "tier": 3,
+   "setting": "both",
+   "description": "Seated machine with chest pads or handles you curl forward against a stack, loading the abs through a crunch.",
+   "muscle_focus": [
+    "Abs"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~45–110 kg",
+   "adjustability": "Seat height adjust.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 110,
+    "height_cm": 140
+   },
+   "space": "L",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "cablecross",
+    "abbench",
+    "abbackm"
+   ],
+   "signature_exercises": [
+    "Machine crunch",
+    "Weighted ab crunch"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Pick one where your hips stay put and only the spine flexes.",
+   "safety": "Exhale and curl; don't pull with the arms.",
+   "keywords": "abs"
+  },
+  {
+   "id": "torso",
+   "name": "Rotary torso machine",
+   "aliases": [
+    "Torso rotation machine",
+    "Oblique machine",
+    "Rotary torso"
+   ],
+   "category": "Core & neck machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Core",
+   "in_app": true,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated machine where you twist the upper body against a stack to train the obliques.",
+   "muscle_focus": [
+    "Obliques",
+    "Abs"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~45–90 kg",
+   "adjustability": "Start rotation angle adjust.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 110,
+    "height_cm": 140
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "cablecross",
+    "functional",
+    "bands"
+   ],
+   "signature_exercises": [
+    "Rotary torso",
+    "Seated twist"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Cable woodchops and Pallof presses cover much of this.",
+   "safety": "Rotate slowly through a comfortable range.",
+   "keywords": "obliques"
+  },
+  {
+   "id": "abbackm",
+   "name": "Ab / back combo machine",
+   "aliases": [
+    "Abdominal / lower back machine",
+    "Dual ab-back"
+   ],
+   "category": "Core & neck machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 2,
+   "setting": "both",
+   "description": "Single-stack machine that switches between a seated crunch and a seated back extension.",
+   "muscle_focus": [
+    "Abs",
+    "Lower back"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~45–90 kg",
+   "adjustability": "Converts via seat or lever position.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 110,
+    "height_cm": 140
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "abcrunchm",
+    "backextm",
+    "romanchair"
+   ],
+   "signature_exercises": [
+    "Machine crunch",
+    "Seated back extension"
+   ],
+   "linked_exercise_ids": [
+    "abmach",
+    "backextmach"
+   ],
+   "buying_tips": "Common in home and hotel gyms; saves a second machine.",
+   "safety": "Check the pin and lever after switching modes.",
+   "keywords": "ab back combo dual"
+  },
+  {
+   "id": "abcoaster",
+   "name": "Ab coaster",
+   "aliases": [
+    "Ab glider",
+    "Knee-tuck rail machine"
+   ],
+   "category": "Core & neck machines",
+   "subcategory": "Bodyweight",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 2,
+   "setting": "home",
+   "description": "Curved rail with a sliding knee seat; you hold handles and pull the knees up the rail for a reverse crunch.",
+   "muscle_focus": [
+    "Abs",
+    "Hip flexors"
+   ],
+   "loading": "Bodyweight",
+   "weight_options": "Bodyweight; some add a plate peg",
+   "adjustability": "Some have resistance settings or plate pegs.",
+   "footprint": {
+    "length_cm": 130,
+    "width_cm": 70,
+    "height_cm": 110
+   },
+   "space": "M",
+   "price_band": "$$$",
+   "requires": [],
+   "substitutes": [
+    "abwheel",
+    "captain",
+    "trx",
+    "sliders"
+   ],
+   "signature_exercises": [
+    "Ab coaster tuck",
+    "Oblique tuck"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "Mostly a home fitness product; hanging knee raises do similar work for free.",
+   "safety": "Move slowly; don't let momentum swing the seat.",
+   "keywords": "ab coaster glider reverse crunch"
+  },
+  {
+   "id": "neckm",
+   "name": "4-way neck machine",
+   "aliases": [
+    "Neck machine",
+    "Multi-neck machine",
+    "Neck flexion / extension machine"
+   ],
+   "category": "Core & neck machines",
+   "subcategory": "Selectorised stack",
+   "app_group": "Core",
+   "in_app": false,
+   "tier": 3,
+   "setting": "commercial",
+   "description": "Seated machine with a padded head piece that trains neck flexion, extension and side bending against a stack; found in sports and combat gyms.",
+   "muscle_focus": [
+    "Neck",
+    "Upper traps"
+   ],
+   "loading": "Selectorised stack",
+   "weight_options": "Stack ~20–70 kg",
+   "adjustability": "Seat height and head-pad position adjust; rotates for each direction.",
+   "footprint": {
+    "length_cm": 120,
+    "width_cm": 100,
+    "height_cm": 140
+   },
+   "space": "L",
+   "price_band": "$$$$",
+   "requires": [],
+   "substitutes": [
+    "bands",
+    "plates"
+   ],
+   "signature_exercises": [
+    "Neck flexion",
+    "Neck extension",
+    "Lateral neck flexion"
+   ],
+   "linked_exercise_ids": [],
+   "buying_tips": "A neck harness and plates are far cheaper.",
+   "safety": "Use very light weights and slow controlled reps.",
+   "keywords": "neck 4 way rugby wrestling"
+  }
+ ]
+}

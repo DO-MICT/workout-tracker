@@ -1,0 +1,252 @@
+{
+ "note": "Proposed req values for exercises that used the nearest gear id because the exact kit had no id. Apply to exercises.json / app-extra.json when these gear ids go into EQUIP.",
+ "count": 41,
+ "updates": [
+  {
+   "id": "sealrow",
+   "name": "Seal row",
+   "old_req": "barbell,plates,flatbench",
+   "new_req": "barbell,plates,highbench"
+  },
+  {
+   "id": "safetybarsquat",
+   "name": "Safety squat bar squat",
+   "old_req": "barbell,plates,powerrack",
+   "new_req": "ssb,plates,powerrack|squatstands|halfrack"
+  },
+  {
+   "id": "declinemach",
+   "name": "Decline chest press machine",
+   "old_req": "chestpress",
+   "new_req": "declinepressm|plateincline|chestpress"
+  },
+  {
+   "id": "isopulldown",
+   "name": "Iso-lateral front lat pulldown",
+   "old_req": "latpulldown,plates",
+   "new_req": "leverpulldown,plates"
+  },
+  {
+   "id": "isohighrow",
+   "name": "Iso-lateral high row",
+   "old_req": "rowmachine,plates",
+   "new_req": "highrowm,plates"
+  },
+  {
+   "id": "pullovermach",
+   "name": "Pullover machine",
+   "old_req": "latpulldown",
+   "new_req": "pulloverm"
+  },
+  {
+   "id": "backextmach",
+   "name": "Seated back extension machine",
+   "old_req": "romanchair",
+   "new_req": "backextm"
+  },
+  {
+   "id": "machinedip",
+   "name": "Seated dip machine",
+   "old_req": "tricepm",
+   "new_req": "dipm"
+  },
+  {
+   "id": "donkeycalf",
+   "name": "Donkey calf raise",
+   "old_req": "standcalf",
+   "new_req": "donkeycalfm"
+  },
+  {
+   "id": "kneelcurl",
+   "name": "Kneeling leg curl",
+   "old_req": "lyingcurl",
+   "new_req": "kneellegcurl"
+  },
+  {
+   "id": "standlegcurl",
+   "name": "Standing leg curl",
+   "old_req": "lyingcurl",
+   "new_req": "standlegcurl"
+  },
+  {
+   "id": "vsquat",
+   "name": "V-squat",
+   "old_req": "hacksquat",
+   "new_req": "vsquat,plates"
+  },
+  {
+   "id": "multihipabd",
+   "name": "Multi-hip abduction",
+   "old_req": "abductor",
+   "new_req": "multihip|abductor"
+  },
+  {
+   "id": "multihipext",
+   "name": "Multi-hip glute extension",
+   "old_req": "glutekick",
+   "new_req": "multihip|glutekick"
+  },
+  {
+   "id": "cstbar",
+   "name": "Chest-supported T-bar row",
+   "old_req": "tbar,plates",
+   "new_req": "chesttbar,plates"
+  },
+  {
+   "id": "beltsquat",
+   "name": "Belt squat",
+   "old_req": "pendulum",
+   "new_req": "beltsquat|pendulum"
+  },
+  {
+   "id": "beltmarch",
+   "name": "Belt squat march",
+   "old_req": "pendulum",
+   "new_req": "beltsquat|pendulum"
+  },
+  {
+   "id": "shrugmach",
+   "name": "Machine shrug",
+   "old_req": "uprightrowm",
+   "new_req": "shrugm|uprightrowm"
+  },
+  {
+   "id": "humanflag",
+   "name": "Human flag",
+   "old_req": "pullupbar",
+   "new_req": "pole|stallbars"
+  },
+  {
+   "id": "parachute",
+   "name": "Parachute sprint",
+   "old_req": "",
+   "new_req": "parachute"
+  },
+  {
+   "id": "tdrill",
+   "name": "T-drill",
+   "old_req": "",
+   "new_req": "cones"
+  },
+  {
+   "id": "hurdlehop",
+   "name": "Hurdle hops",
+   "old_req": "",
+   "new_req": "hurdles|cones"
+  },
+  {
+   "id": "laddersinglehop",
+   "name": "Agility ladder: single-leg hops",
+   "old_req": "",
+   "new_req": "agilityladder"
+  },
+  {
+   "id": "laddercross",
+   "name": "Agility ladder crossover",
+   "old_req": "",
+   "new_req": "agilityladder"
+  },
+  {
+   "id": "ladderhopscotch",
+   "name": "Agility ladder: hopscotch",
+   "old_req": "",
+   "new_req": "agilityladder"
+  },
+  {
+   "id": "ladderlateral",
+   "name": "Agility ladder: lateral in-in-out-out",
+   "old_req": "",
+   "new_req": "agilityladder"
+  },
+  {
+   "id": "ladderone",
+   "name": "Agility ladder: one foot in each",
+   "old_req": "",
+   "new_req": "agilityladder"
+  },
+  {
+   "id": "laddertwo",
+   "name": "Agility ladder: two feet in each",
+   "old_req": "",
+   "new_req": "agilityladder"
+  },
+  {
+   "id": "ickyshuffle",
+   "name": "Icky shuffle",
+   "old_req": "",
+   "new_req": "agilityladder"
+  },
+  {
+   "id": "atlas",
+   "name": "Atlas stone load",
+   "old_req": "sandbag",
+   "new_req": "atlasstone|sandbag"
+  },
+  {
+   "id": "logpress",
+   "name": "Log press",
+   "old_req": "barbell",
+   "new_req": "log"
+  },
+  {
+   "id": "tyreflip",
+   "name": "Tyre flip",
+   "old_req": "sled",
+   "new_req": "tyre"
+  },
+  {
+   "id": "yoke",
+   "name": "Yoke carry",
+   "old_req": "barbell,plates,powerrack",
+   "new_req": "yoke"
+  },
+  {
+   "id": "swimbreast",
+   "name": "Breaststroke",
+   "old_req": "",
+   "new_req": "pool"
+  },
+  {
+   "id": "swimfree",
+   "name": "Freestyle swimming",
+   "old_req": "",
+   "new_req": "pool"
+  },
+  {
+   "id": "ruck",
+   "name": "Rucking",
+   "old_req": "weightvest",
+   "new_req": "backpack|weightvest"
+  },
+  {
+   "id": "cycle",
+   "name": "Outdoor cycling",
+   "old_req": "bike",
+   "new_req": "bicycle"
+  },
+  {
+   "id": "recumbent",
+   "name": "Recumbent bike",
+   "old_req": "bike",
+   "new_req": "recumbent|bike"
+  },
+  {
+   "id": "ube",
+   "name": "Arm bike",
+   "old_req": "bike",
+   "new_req": "ube"
+  },
+  {
+   "id": "versaclimb",
+   "name": "VersaClimber",
+   "old_req": "stairs",
+   "new_req": "versaclimber"
+  },
+  {
+   "id": "speedbag",
+   "name": "Speed bag",
+   "old_req": "bag",
+   "new_req": "speedbag"
+  }
+ ]
+}
