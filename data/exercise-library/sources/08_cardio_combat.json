@@ -1,0 +1,4549 @@
+[
+ {
+  "id": "walk",
+  "name": "Brisk walking",
+  "aliases": [
+   "Power walking",
+   "Walk"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Home-friendly",
+   "Recovery",
+   "Warm-up"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves",
+   "Glutes",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "30 min",
+  "form_cues": [
+   "Walk tall with your eyes ahead, not at your feet.",
+   "Swing your arms naturally from the shoulders.",
+   "Pick a pace where you can talk but not sing."
+  ],
+  "common_mistakes": [
+   "Strolling too slowly to raise your heart rate",
+   "Overstriding and landing hard on the heel"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Hiking",
+   "Rucking",
+   "Jogging"
+  ],
+  "safety": "Wear supportive shoes and start with shorter walks if you're new to exercise.",
+  "video": null,
+  "notes": "Great daily base for fat loss and recovery days. Count your walk to the gym here."
+ },
+ {
+  "id": "jog",
+  "name": "Jogging",
+  "aliases": [
+   "Easy run",
+   "Recovery run"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Hamstrings",
+   "Glutes",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "20–30 min",
+  "form_cues": [
+   "Keep an easy, conversational pace.",
+   "Land lightly with your foot under your hips.",
+   "Relax your shoulders and keep your hands loose."
+  ],
+  "common_mistakes": [
+   "Starting too fast and fading early",
+   "Long, heavy heel-striking strides"
+  ],
+  "regressions": [
+   "Brisk walking",
+   "Run-walk intervals"
+  ],
+  "progressions": [
+   "Running",
+   "Tempo run"
+  ],
+  "safety": "Build weekly distance gradually (about 10% a week) to avoid shin and knee niggles.",
+  "video": null,
+  "notes": "Couch-to-5K beginners can alternate 1 min jog / 2 min walk."
+ },
+ {
+  "id": "runwalk",
+  "name": "Run-walk intervals",
+  "aliases": [
+   "Jeffing",
+   "Walk-run",
+   "Couch to 5K intervals"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Hamstrings",
+   "Glutes",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "20–30 min",
+  "form_cues": [
+   "Jog for a set time, then walk briskly to recover.",
+   "Keep the jog easy enough to repeat every round.",
+   "Walk with purpose; don't stop completely."
+  ],
+  "common_mistakes": [
+   "Running the jog bits too hard",
+   "Cutting walk breaks short before you've recovered"
+  ],
+  "regressions": [
+   "Brisk walking"
+  ],
+  "progressions": [
+   "Jogging"
+  ],
+  "safety": "Ease off if you feel sharp pain in shins, knees or feet.",
+  "video": null,
+  "notes": "Classic start: 1 min jog / 1–2 min walk, repeated 8–10 times. Lengthen the jog each week."
+ },
+ {
+  "id": "run",
+  "name": "Running",
+  "aliases": [
+   "Outdoor run",
+   "Road run"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Hamstrings",
+   "Glutes",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "5 km",
+  "form_cues": [
+   "Stand tall with a slight forward lean from the ankles.",
+   "Take quick, light steps landing under your hips.",
+   "Drive your elbows back and keep your hands relaxed."
+  ],
+  "common_mistakes": [
+   "Overstriding and braking with each step",
+   "Tensing the shoulders and clenching fists",
+   "Running every run hard"
+  ],
+  "regressions": [
+   "Jogging",
+   "Run-walk intervals"
+  ],
+  "progressions": [
+   "Tempo run",
+   "Trail running",
+   "Sprint intervals"
+  ],
+  "safety": "Increase distance slowly and replace worn-out shoes to protect knees and shins.",
+  "video": null,
+  "notes": "Log distance and time; the app can work out your pace."
+ },
+ {
+  "id": "temporun",
+  "name": "Tempo run",
+  "aliases": [
+   "Threshold run",
+   "Comfortably hard run"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Hamstrings",
+   "Glutes",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "20 min",
+  "form_cues": [
+   "Warm up with 10 minutes of easy jogging first.",
+   "Hold a pace you could keep for about an hour—comfortably hard.",
+   "Breathe rhythmically and stay relaxed."
+  ],
+  "common_mistakes": [
+   "Turning it into a race",
+   "Skipping the warm-up and cool-down"
+  ],
+  "regressions": [
+   "Jogging"
+  ],
+  "progressions": [
+   "Interval repeats (400 m)"
+  ],
+  "safety": "Only do tempo work once or twice a week, with easy days in between.",
+  "video": null,
+  "notes": "You should be able to speak a few words, not full sentences."
+ },
+ {
+  "id": "fartlek",
+  "name": "Fartlek run",
+  "aliases": [
+   "Speed play"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Hamstrings",
+   "Glutes",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "25–30 min",
+  "form_cues": [
+   "Mix fast bursts with easy running, no fixed plan needed.",
+   "Pick landmarks: surge to the next lamppost, then recover.",
+   "Keep the easy bits genuinely easy."
+  ],
+  "common_mistakes": [
+   "Making every surge an all-out sprint",
+   "Stopping to walk instead of jogging the recovery"
+  ],
+  "regressions": [
+   "Run-walk intervals"
+  ],
+  "progressions": [
+   "Interval repeats (400 m)"
+  ],
+  "safety": "Warm up well before surges to protect your hamstrings and calves.",
+  "video": null,
+  "notes": "Swedish for 'speed play'. A fun way to add speed without a track."
+ },
+ {
+  "id": "run400",
+  "name": "Interval repeats (400 m)",
+  "aliases": [
+   "Track repeats",
+   "400s",
+   "Quarter-mile repeats"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Power"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Hamstrings",
+   "Glutes",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 6,
+  "reps": "400 m",
+  "form_cues": [
+   "Run each repeat at a hard but even pace.",
+   "Jog or walk 200 m (or 90 sec) between repeats.",
+   "Aim to run the last repeat as fast as the first."
+  ],
+  "common_mistakes": [
+   "Blasting the first repeat and dying on the rest",
+   "Too little recovery between repeats"
+  ],
+  "regressions": [
+   "Fartlek run",
+   "Tempo run"
+  ],
+  "progressions": [
+   "Sprint intervals"
+  ],
+  "safety": "Warm up for 10–15 minutes first; skip if you have a calf or hamstring strain.",
+  "video": null,
+  "notes": "Log each repeat as a set. Works on a track, road or treadmill."
+ },
+ {
+  "id": "sprint",
+  "name": "Sprint intervals",
+  "aliases": [
+   "Sprints",
+   "Flat sprints",
+   "100 m sprints"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Power",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hip flexors",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 8,
+  "reps": "20 sec",
+  "form_cues": [
+   "Drive your knees up and arms hard, elbows at 90°.",
+   "Stay on the balls of your feet.",
+   "Walk back slowly to recover fully before the next one."
+  ],
+  "common_mistakes": [
+   "Sprinting without a proper warm-up",
+   "Leaning back and reaching with the feet",
+   "Resting too little so quality drops"
+  ],
+  "regressions": [
+   "Fartlek run",
+   "High knees"
+  ],
+  "progressions": [
+   "Hill sprints"
+  ],
+  "safety": "Warm up thoroughly with jogging and drills; hamstring pulls are common with cold sprints.",
+  "video": null,
+  "notes": "Typical session: 6–10 × 15–30 sec all-out, 1–2 min walk recovery."
+ },
+ {
+  "id": "hillsprint",
+  "name": "Hill sprints",
+  "aliases": [
+   "Hill repeats",
+   "Incline sprints"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Power",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Hip flexors",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 8,
+  "reps": "1",
+  "form_cues": [
+   "Lean slightly into the hill from your ankles.",
+   "Take short, powerful steps and pump your arms.",
+   "Walk back down slowly as your recovery."
+  ],
+  "common_mistakes": [
+   "Running back down fast and pounding the knees",
+   "Looking at your feet instead of up the hill"
+  ],
+  "regressions": [
+   "Sprint intervals",
+   "Hiking"
+  ],
+  "progressions": [],
+  "safety": "Choose a moderate grade (5–10%) and a non-slippery surface.",
+  "video": null,
+  "notes": "Sprint 10–20 sec up; count each climb as one rep. Easier on the hamstrings than flat sprints."
+ },
+ {
+  "id": "stairrun",
+  "name": "Stair runs",
+  "aliases": [
+   "Stadium stairs",
+   "Stair sprints",
+   "Bleacher runs"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Power",
+   "Endurance",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Flight of stairs"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 6,
+  "reps": "1 flight",
+  "form_cues": [
+   "Run up every step, landing on the balls of your feet.",
+   "Pump your arms and keep your chest up.",
+   "Walk down carefully, holding the rail if needed."
+  ],
+  "common_mistakes": [
+   "Rushing the way down",
+   "Hunching over and looking at your feet"
+  ],
+  "regressions": [
+   "Stair climber"
+  ],
+  "progressions": [
+   "Hill sprints"
+  ],
+  "safety": "Use dry, well-lit stairs and always walk—never run—back down.",
+  "video": null,
+  "notes": "Take every second step for a glute-focused version."
+ },
+ {
+  "id": "highknees",
+  "name": "High knees",
+  "aliases": [
+   "Running in place with high knees"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Warm-up",
+   "Home-friendly",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Hip flexors",
+   "Quadriceps",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Glutes",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec",
+  "form_cues": [
+   "Drive each knee up to hip height.",
+   "Stay light on the balls of your feet.",
+   "Pump your arms in time with your legs."
+  ],
+  "common_mistakes": [
+   "Leaning back to lift the knees",
+   "Landing heavy on the heels"
+  ],
+  "regressions": [
+   "March in place"
+  ],
+  "progressions": [
+   "Sprint intervals"
+  ],
+  "safety": "Use a softer surface or march instead if you have knee or ankle pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "buttkick",
+  "name": "Butt kicks",
+  "aliases": [
+   "Heel flicks",
+   "Butt kickers"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Hamstrings",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Hip flexors",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec",
+  "form_cues": [
+   "Flick your heels up toward your glutes.",
+   "Keep your knees pointing down at the floor.",
+   "Stay quick and light on your toes."
+  ],
+  "common_mistakes": [
+   "Knees swinging forward",
+   "Leaning the torso forward"
+  ],
+  "regressions": [
+   "March in place"
+  ],
+  "progressions": [
+   "High knees"
+  ],
+  "safety": "Stop if you feel a cramp or pull in the hamstring.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "marchplace",
+  "name": "March in place",
+  "aliases": [
+   "Marching on the spot",
+   "Standing march"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Warm-up",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Hip flexors",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "1 min",
+  "form_cues": [
+   "Lift each knee to a comfortable height.",
+   "Swing your opposite arm with each step.",
+   "Stand tall and breathe steadily."
+  ],
+  "common_mistakes": [
+   "Slouching forward",
+   "Shuffling with tiny lifts"
+  ],
+  "regressions": [],
+  "progressions": [
+   "High knees"
+  ],
+  "safety": "Hold a counter or wall for balance if you're unsteady.",
+  "video": null,
+  "notes": "Zero-impact option for beginners, older adults or small spaces."
+ },
+ {
+  "id": "jumpjack",
+  "name": "Jumping jacks",
+  "aliases": [
+   "Star jumps (low)",
+   "Side-straddle hop"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Warm-up",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Adductors",
+   "Abductors",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–50",
+  "form_cues": [
+   "Jump feet wide as your arms sweep overhead.",
+   "Land softly with knees slightly bent.",
+   "Keep a steady rhythm and breathe."
+  ],
+  "common_mistakes": [
+   "Landing stiff-legged",
+   "Half-reaching with the arms"
+  ],
+  "regressions": [
+   "Step jacks"
+  ],
+  "progressions": [
+   "Plank jacks"
+  ],
+  "safety": "Step side to side instead of jumping if you have knee, ankle or pelvic floor issues.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "stepjack",
+  "name": "Step jacks",
+  "aliases": [
+   "Low-impact jumping jacks",
+   "Side step jacks"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Warm-up",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Abductors"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Glutes",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–40",
+  "form_cues": [
+   "Step one foot out to the side as arms rise overhead.",
+   "Bring the foot back in and lower the arms.",
+   "Alternate sides at a brisk tempo."
+  ],
+  "common_mistakes": [
+   "Moving too slowly to raise the heart rate",
+   "Shrugging the shoulders"
+  ],
+  "regressions": [
+   "March in place"
+  ],
+  "progressions": [
+   "Jumping jacks"
+  ],
+  "safety": "Fine for most joint issues since there's no jumping.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "plankjack",
+  "name": "Plank jacks",
+  "aliases": [
+   "Plank jumping jacks"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Core",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Abductors",
+   "Calves",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–30",
+  "form_cues": [
+   "Hold a straight plank on your hands.",
+   "Hop your feet wide, then back together.",
+   "Keep hips level and don't bounce them."
+  ],
+  "common_mistakes": [
+   "Hips piking up",
+   "Sagging lower back"
+  ],
+  "regressions": [
+   "Plank"
+  ],
+  "progressions": [
+   "Burpees"
+  ],
+  "safety": "Step feet out one at a time if your wrists or shoulders complain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "squatthrust",
+  "name": "Squat thrusts",
+  "aliases": [
+   "Half burpee",
+   "No-jump burpee"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Core",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Chest",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Squat down and plant your hands outside your feet.",
+   "Jump both feet back into a plank, then back in.",
+   "Stand up tall to finish each rep."
+  ],
+  "common_mistakes": [
+   "Hips sagging in the plank",
+   "Rounding the back when you squat"
+  ],
+  "regressions": [
+   "Step-back burpee"
+  ],
+  "progressions": [
+   "Burpees"
+  ],
+  "safety": "Step back instead of jumping to protect wrists and lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "stepburpee",
+  "name": "Step-back burpee",
+  "aliases": [
+   "Low-impact burpee",
+   "Walk-out burpee"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Core",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Chest",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Squat and place your hands on the floor.",
+   "Step one foot back, then the other, into a plank.",
+   "Step back in and stand up tall."
+  ],
+  "common_mistakes": [
+   "Rushing and letting the hips sag",
+   "Not standing all the way up"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Squat thrusts",
+   "Burpees"
+  ],
+  "safety": "Put your hands on a bench or step to shorten the range if needed.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "burpee",
+  "name": "Burpees",
+  "aliases": [
+   "Burpee",
+   "Jumping burpee"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Home-friendly",
+   "Compound",
+   "Endurance",
+   "Plyometric"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Chest",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Shoulders",
+   "Triceps",
+   "Calves",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Squat, hands down, jump feet back to a plank.",
+   "Jump feet back in, then jump up with arms overhead.",
+   "Land softly and flow into the next rep."
+  ],
+  "common_mistakes": [
+   "Belly flopping with a saggy back",
+   "Landing stiff-legged from the jump"
+  ],
+  "regressions": [
+   "Squat thrusts",
+   "Step-back burpee"
+  ],
+  "progressions": [
+   "Push-up burpee",
+   "Burpee broad jump"
+  ],
+  "safety": "Scale to stepping if you have wrist, shoulder or low-back pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "burpeepu",
+  "name": "Push-up burpee",
+  "aliases": [
+   "Chest-to-floor burpee",
+   "Full burpee",
+   "Military burpee"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Home-friendly",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Chest",
+   "Quadriceps",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Shoulders",
+   "Glutes",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Jump back to a plank and do a full push-up.",
+   "Keep your body in a straight line on the push-up.",
+   "Jump feet in, stand, and jump with a clap overhead."
+  ],
+  "common_mistakes": [
+   "Worming up from the floor hips-first",
+   "Skipping the push-up range"
+  ],
+  "regressions": [
+   "Burpees"
+  ],
+  "progressions": [
+   "Burpee broad jump"
+  ],
+  "safety": "Drop the push-up when form slips; protect your shoulders and lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "burpeebroad",
+  "name": "Burpee broad jump",
+  "aliases": [
+   "Burpee long jump"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Plyometric",
+   "Endurance",
+   "Compound"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Hamstrings",
+   "Calves",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Do a burpee, then jump forward as far as you can.",
+   "Swing your arms and land softly on both feet.",
+   "Go straight into the next burpee where you land."
+  ],
+  "common_mistakes": [
+   "Landing with knees caving in",
+   "Rushing so the burpee gets sloppy"
+  ],
+  "regressions": [
+   "Burpees"
+  ],
+  "progressions": [],
+  "safety": "Needs clear space ahead and a non-slip surface.",
+  "video": null,
+  "notes": "Popular in CrossFit and HYROX training; can also be logged by distance."
+ },
+ {
+  "id": "sprawl",
+  "name": "Sprawls",
+  "aliases": [
+   "Sprawl drill",
+   "Wrestler sprawl"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Core",
+   "Hip flexors",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Shoulders",
+   "Glutes",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "From a fighting stance, drop hands to the floor.",
+   "Shoot your legs back and drive hips down to the mat.",
+   "Snap your feet back under you and return to stance."
+  ],
+  "common_mistakes": [
+   "Landing on straight arms and jarring the elbows",
+   "Hips staying high instead of pressing down"
+  ],
+  "regressions": [
+   "Squat thrusts"
+  ],
+  "progressions": [
+   "Push-up burpee"
+  ],
+  "safety": "Use a mat; build speed only once the movement is smooth.",
+  "video": null,
+  "notes": "Takedown defence from wrestling/MMA and a brutal conditioning drill."
+ },
+ {
+  "id": "mtnclimb",
+  "name": "Mountain climbers",
+  "aliases": [
+   "Running plank"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Core",
+   "Hip flexors",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Chest",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec",
+  "form_cues": [
+   "Hold a strong plank, hands under shoulders.",
+   "Drive one knee to your chest, then switch quickly.",
+   "Keep your hips low and level."
+  ],
+  "common_mistakes": [
+   "Hips bouncing up high",
+   "Shoulders drifting behind the hands"
+  ],
+  "regressions": [
+   "Plank",
+   "March in place"
+  ],
+  "progressions": [
+   "Cross-body mountain climbers",
+   "Burpees"
+  ],
+  "safety": "Put hands on a bench or step to ease wrist and shoulder load.",
+  "video": null,
+  "notes": "Can also be counted as reps (each knee drive = 1)."
+ },
+ {
+  "id": "xmtnclimb",
+  "name": "Cross-body mountain climbers",
+  "aliases": [
+   "Cross-over mountain climbers",
+   "Twisting mountain climbers"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Obliques",
+   "Core",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Quadriceps",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec",
+  "form_cues": [
+   "Start in a high plank.",
+   "Drive each knee toward the opposite elbow.",
+   "Keep your shoulders over your hands throughout."
+  ],
+  "common_mistakes": [
+   "Twisting the hips up high",
+   "Moving so fast the knee barely moves"
+  ],
+  "regressions": [
+   "Mountain climbers"
+  ],
+  "progressions": [
+   "Burpees"
+  ],
+  "safety": "Slow down if your lower back starts to arch.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bearcrawl",
+  "name": "Bear crawl",
+  "aliases": [
+   "Bear walk"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Core",
+   "Home-friendly",
+   "Calisthenics"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Core",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Triceps",
+   "Hip flexors",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec",
+  "form_cues": [
+   "Hands under shoulders, knees under hips, knees hovering just off the floor.",
+   "Move opposite hand and foot together.",
+   "Keep your back flat like a tabletop."
+  ],
+  "common_mistakes": [
+   "Hips shooting up high",
+   "Big, sloppy steps"
+  ],
+  "regressions": [
+   "Bear plank hold"
+  ],
+  "progressions": [
+   "Lateral bear crawl"
+  ],
+  "safety": "Use a clear, non-slip floor and stop if wrists hurt.",
+  "video": null,
+  "notes": "Crawl forward and backward, or log distance (e.g. 4 × 10 m) in notes."
+ },
+ {
+  "id": "latshuffle",
+  "name": "Lateral shuffle",
+  "aliases": [
+   "Side shuffle",
+   "Defensive slide"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Warm-up",
+   "Home-friendly",
+   "Balance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Abductors",
+   "Glutes",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Calves",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec",
+  "form_cues": [
+   "Sink into a half squat with your chest up.",
+   "Push off the trailing foot and slide sideways.",
+   "Don't let your feet click together."
+  ],
+  "common_mistakes": [
+   "Standing up tall between steps",
+   "Crossing the feet"
+  ],
+  "regressions": [
+   "Step jacks"
+  ],
+  "progressions": [],
+  "safety": "Wear shoes with lateral support; avoid slippery floors.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "shadowbox",
+  "name": "Shadowboxing",
+  "aliases": [
+   "Shadow boxing"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Home-friendly",
+   "Warm-up"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Triceps",
+   "Calves",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3 min",
+  "form_cues": [
+   "Stay in stance with hands up guarding your chin.",
+   "Throw crisp punches and snap them back.",
+   "Keep moving your feet between combinations."
+  ],
+  "common_mistakes": [
+   "Dropping the hands after punching",
+   "Fully locking the elbows on every punch",
+   "Standing flat-footed"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Shadow kickboxing",
+   "Punching bag rounds"
+  ],
+  "safety": "Don't snap your elbows straight; keep a tiny bend at full extension.",
+  "video": null,
+  "notes": "Rounds are usually 3 min work / 1 min rest. Light hand weights are optional but go easy."
+ },
+ {
+  "id": "shadowkick",
+  "name": "Shadow kickboxing",
+  "aliases": [
+   "Cardio kickboxing",
+   "Shadow Muay Thai"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Core",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Quadriceps",
+   "Obliques",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3 min",
+  "form_cues": [
+   "Mix punches with kicks and knees, hands always up.",
+   "Turn your hips over on every kick.",
+   "Return to stance after each combination."
+  ],
+  "common_mistakes": [
+   "Leaning way back on kicks",
+   "Dropping the guard while kicking"
+  ],
+  "regressions": [
+   "Shadowboxing"
+  ],
+  "progressions": [
+   "Kickboxing bag rounds"
+  ],
+  "safety": "Kick only as high as your hips allow; warm up the hips first.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "speedpunch",
+  "name": "Speed punches",
+  "aliases": [
+   "Punch-outs",
+   "Speed bag punches (shadow)"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Home-friendly",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Triceps",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "30 sec",
+  "form_cues": [
+   "Square up with a slight bend in the knees.",
+   "Punch straight ahead, alternating as fast as you can.",
+   "Keep your core tight and shoulders down."
+  ],
+  "common_mistakes": [
+   "Shrugging the shoulders up",
+   "Locking the elbows hard"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Shadowboxing"
+  ],
+  "safety": "Keep a soft bend in the elbows to protect the joints.",
+  "video": null,
+  "notes": "Common finisher in cardio kickboxing classes; works well as 20–30 sec intervals."
+ },
+ {
+  "id": "frontkick",
+  "name": "Front kick",
+  "aliases": [
+   "Teep",
+   "Push kick"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Balance",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Hip flexors",
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Calves"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Lift the knee high, then push through the ball of the foot.",
+   "Lean back only slightly and keep your guard up.",
+   "Retract the leg quickly back to stance."
+  ],
+  "common_mistakes": [
+   "Snapping the knee straight",
+   "Letting the hands drop"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Heavy bag front kick"
+  ],
+  "safety": "Don't lock out the knee hard on air kicks.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "roundkick",
+  "name": "Roundhouse kick",
+  "aliases": [
+   "Round kick",
+   "Muay Thai kick"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Balance",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Obliques",
+   "Glutes",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Adductors",
+   "Core"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Pivot on the ball of your standing foot.",
+   "Swing the hip through and strike with the shin.",
+   "Bring the leg back to stance with your hands up."
+  ],
+  "common_mistakes": [
+   "Not pivoting the standing foot",
+   "Kicking with just the leg, no hip turn"
+  ],
+  "regressions": [
+   "Front kick"
+  ],
+  "progressions": [
+   "Heavy bag roundhouse kicks"
+  ],
+  "safety": "Warm up hips and hamstrings first; kick low until mobility allows higher.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kneestrike",
+  "name": "Knee strikes",
+  "aliases": [
+   "Standing knees",
+   "Muay Thai knees"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Hip flexors",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Calves",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20",
+  "form_cues": [
+   "Reach your hands forward as if gripping a head.",
+   "Drive the knee up and forward, hips through.",
+   "Rise onto the toes of the standing foot."
+  ],
+  "common_mistakes": [
+   "Leaning back away from the knee",
+   "Lifting the knee without driving the hips"
+  ],
+  "regressions": [
+   "March in place"
+  ],
+  "progressions": [
+   "Heavy bag knees"
+  ],
+  "safety": "Keep the standing knee soft; alternate legs to balance the load.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trailrun",
+  "name": "Trail running",
+  "aliases": [
+   "Off-road running"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Balance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Hamstrings",
+   "Glutes",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Hip flexors",
+   "Ankles",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Trail shoes"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "5–10 km",
+  "form_cues": [
+   "Shorten your stride on uneven ground.",
+   "Look 2–3 metres ahead, not at your feet.",
+   "Power-hike steep climbs; it's often just as fast."
+  ],
+  "common_mistakes": [
+   "Overstriding downhill",
+   "Chasing road pace on rough terrain"
+  ],
+  "regressions": [
+   "Hiking",
+   "Running"
+  ],
+  "progressions": [],
+  "safety": "Tell someone your route, carry water, and watch for roots and rocks.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hike",
+  "name": "Hiking",
+  "aliases": [
+   "Hillwalking",
+   "Trekking"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Balance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Hiking boots or trail shoes"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "5–15 km",
+  "form_cues": [
+   "Take shorter steps going uphill.",
+   "Lean slightly forward on climbs and use your glutes.",
+   "Go slow and controlled on descents."
+  ],
+  "common_mistakes": [
+   "Locking the knees on descents",
+   "Starting too fast up the first climb"
+  ],
+  "regressions": [
+   "Brisk walking"
+  ],
+  "progressions": [
+   "Rucking",
+   "Trail running"
+  ],
+  "safety": "Check weather, carry water, and use poles if your knees struggle downhill.",
+  "video": null,
+  "notes": "Log elevation gain in notes if your watch tracks it."
+ },
+ {
+  "id": "swimfree",
+  "name": "Freestyle swimming",
+  "aliases": [
+   "Front crawl",
+   "Freestyle"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Recovery"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Latissimus dorsi",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core",
+   "Glutes",
+   "Hip flexors",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Swimming pool or open water",
+   "Goggles"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "1 km",
+  "form_cues": [
+   "Keep your head down and body long and flat.",
+   "Rotate your body and reach long with each stroke.",
+   "Breathe to the side every 2–3 strokes."
+  ],
+  "common_mistakes": [
+   "Lifting the head to breathe so the legs sink",
+   "Kicking from the knees instead of the hips",
+   "Crossing hands over the midline"
+  ],
+  "regressions": [
+   "Kickboard kicks",
+   "Breaststroke"
+  ],
+  "progressions": [
+   "Butterfly"
+  ],
+  "safety": "Swim in supervised areas; avoid open water alone.",
+  "video": null,
+  "notes": "No app gear id exists for a pool, so 'req' is left empty—needs pool access."
+ },
+ {
+  "id": "swimbreast",
+  "name": "Breaststroke",
+  "aliases": [
+   "Breaststroke swimming"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Recovery"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Pectorals",
+   "Adductors",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Glutes",
+   "Latissimus dorsi",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Swimming pool or open water",
+   "Goggles"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "500 m",
+  "form_cues": [
+   "Pull, breathe, kick, glide—in that order.",
+   "Snap your heels round in a whip kick.",
+   "Glide with arms extended before the next stroke."
+  ],
+  "common_mistakes": [
+   "Skipping the glide",
+   "Keeping the head up the whole time"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Freestyle swimming"
+  ],
+  "safety": "Breaststroke kick can strain the inner knee; ease in if you have knee issues.",
+  "video": null,
+  "notes": "Needs pool access; no app gear id for a pool."
+ },
+ {
+  "id": "swimback",
+  "name": "Backstroke",
+  "aliases": [
+   "Back crawl"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Recovery"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Latissimus dorsi",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Glutes",
+   "Hip flexors",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Swimming pool",
+   "Goggles"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "500 m",
+  "form_cues": [
+   "Lie flat with your ears in the water, eyes up.",
+   "Enter little-finger first, arms straight overhead.",
+   "Kick steadily from the hips with loose ankles."
+  ],
+  "common_mistakes": [
+   "Sitting in the water with hips low",
+   "Bending the knees too much on the kick"
+  ],
+  "regressions": [
+   "Freestyle swimming"
+  ],
+  "progressions": [
+   "Butterfly"
+  ],
+  "safety": "Count strokes from the flags so you don't hit the wall.",
+  "video": null,
+  "notes": "Good for posture: opens the chest. Needs pool access."
+ },
+ {
+  "id": "swimfly",
+  "name": "Butterfly",
+  "aliases": [
+   "Butterfly stroke",
+   "Fly"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Power"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Latissimus dorsi",
+   "Shoulders",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Triceps",
+   "Glutes",
+   "Lower back",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Swimming pool",
+   "Goggles"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "50 m",
+  "form_cues": [
+   "Move in a wave from chest to hips to feet.",
+   "Sweep both arms together, out of the water and forward.",
+   "Use two dolphin kicks per arm stroke."
+  ],
+  "common_mistakes": [
+   "Lifting the head too high to breathe",
+   "Bending the knees for a big kick instead of a body wave"
+  ],
+  "regressions": [
+   "Freestyle swimming"
+  ],
+  "progressions": [],
+  "safety": "Very demanding on the shoulders and lower back—build up slowly.",
+  "video": null,
+  "notes": "Needs pool access."
+ },
+ {
+  "id": "cycle",
+  "name": "Outdoor cycling",
+  "aliases": [
+   "Road cycling",
+   "Bike ride",
+   "Cycling"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Recovery"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Bicycle",
+   "Helmet"
+  ],
+  "req": "bike",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "20 km",
+  "form_cues": [
+   "Set saddle height so your knee is slightly bent at the bottom.",
+   "Spin smoothly; shift gears to keep your cadence up.",
+   "Relax your grip and keep elbows soft."
+  ],
+  "common_mistakes": [
+   "Grinding a big gear at low cadence",
+   "Saddle too low causing knee pain"
+  ],
+  "regressions": [
+   "Stationary bike"
+  ],
+  "progressions": [
+   "Spin bike intervals"
+  ],
+  "safety": "Always wear a helmet and use lights in low visibility.",
+  "video": null,
+  "notes": "No outdoor-bike gear id exists, so 'bike' (stationary bike) is used as the nearest match. Counts commuting too."
+ },
+ {
+  "id": "ruck",
+  "name": "Rucking",
+  "aliases": [
+   "Ruck march",
+   "Weighted walking",
+   "Backpack walk"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Strength"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings",
+   "Core",
+   "Trapezius",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Carry",
+  "equipment": [
+   "Backpack or rucksack with weight",
+   "Weighted vest (optional)"
+  ],
+  "req": "weightvest",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "5 km",
+  "form_cues": [
+   "Wear the pack high and tight on your back.",
+   "Walk tall; don't lean far forward.",
+   "Keep a brisk, steady pace."
+  ],
+  "common_mistakes": [
+   "Starting with a pack that's too heavy",
+   "Loose straps letting the load bounce"
+  ],
+  "regressions": [
+   "Brisk walking"
+  ],
+  "progressions": [
+   "Hiking"
+  ],
+  "safety": "Start around 10% of body weight and add load slowly to protect your back and feet.",
+  "video": null,
+  "notes": "A loaded backpack works fine; 'weightvest' is the nearest app gear id."
+ },
+ {
+  "id": "rope",
+  "name": "Jump rope",
+  "aliases": [
+   "Skipping",
+   "Basic bounce",
+   "Skip rope"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Home-friendly",
+   "Endurance",
+   "Warm-up"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Forearms",
+   "Quadriceps",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Jump rope"
+  ],
+  "req": "jumprope",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "1 min",
+  "form_cues": [
+   "Turn the rope with your wrists, elbows close to your sides.",
+   "Jump just high enough to clear the rope.",
+   "Land softly on the balls of your feet."
+  ],
+  "common_mistakes": [
+   "Jumping too high",
+   "Swinging the rope from the shoulders",
+   "Landing flat-footed"
+  ],
+  "regressions": [
+   "Jumping jacks"
+  ],
+  "progressions": [
+   "Boxer skip",
+   "Double unders"
+  ],
+  "safety": "Use a rope sized to your height and jump on a forgiving surface, not concrete.",
+  "video": null,
+  "notes": "Can also be logged as reps (skips)."
+ },
+ {
+  "id": "ropeboxer",
+  "name": "Boxer skip",
+  "aliases": [
+   "Boxer step",
+   "Boxer shuffle"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Combat",
+   "Home-friendly",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Forearms",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Jump rope"
+  ],
+  "req": "jumprope",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "2 min",
+  "form_cues": [
+   "Shift your weight side to side, one foot lightly tapping.",
+   "Keep the bounce tiny and rhythmic.",
+   "Stay relaxed so you can go for full rounds."
+  ],
+  "common_mistakes": [
+   "Landing on both feet evenly so it's just a basic bounce",
+   "Tense shoulders"
+  ],
+  "regressions": [
+   "Jump rope"
+  ],
+  "progressions": [
+   "Alternate-foot jump rope",
+   "Double unders"
+  ],
+  "safety": "Ease in if your calves or Achilles are tight.",
+  "video": null,
+  "notes": "Boxers' staple: lets you skip for 3-min rounds with less fatigue."
+ },
+ {
+  "id": "ropealt",
+  "name": "Alternate-foot jump rope",
+  "aliases": [
+   "Running step",
+   "Jogging step",
+   "Alternate foot step"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Home-friendly",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Shoulders",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Jump rope"
+  ],
+  "req": "jumprope",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "1 min",
+  "form_cues": [
+   "Jog in place, one foot per rope turn.",
+   "Keep the knees low and the steps light.",
+   "Turn the rope from the wrists."
+  ],
+  "common_mistakes": [
+   "Lifting the knees too high and catching the rope",
+   "Rushing the rope speed"
+  ],
+  "regressions": [
+   "Boxer skip"
+  ],
+  "progressions": [
+   "High-knee jump rope"
+  ],
+  "safety": "Wear supportive shoes and build up time gradually.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ropehk",
+  "name": "High-knee jump rope",
+  "aliases": [
+   "High knees skipping"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Home-friendly",
+   "Power"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Hip flexors",
+   "Calves",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Shoulders",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Jump rope"
+  ],
+  "req": "jumprope",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "30 sec",
+  "form_cues": [
+   "Drive each knee up to hip height as the rope passes.",
+   "Turn the rope fast to keep up with your feet.",
+   "Stay tall and land on the balls of your feet."
+  ],
+  "common_mistakes": [
+   "Leaning back",
+   "Slowing the rope so the knees can't lift"
+  ],
+  "regressions": [
+   "Alternate-foot jump rope"
+  ],
+  "progressions": [
+   "Double unders"
+  ],
+  "safety": "Stop if your hip flexors or calves feel strained.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ropeside",
+  "name": "Side-to-side jump rope",
+  "aliases": [
+   "Skier jump rope",
+   "Lateral jump rope"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves",
+   "Abductors"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Jump rope"
+  ],
+  "req": "jumprope",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec",
+  "form_cues": [
+   "Jump a few centimetres side to side with feet together.",
+   "Keep your shoulders square to the front.",
+   "Stay light and quick."
+  ],
+  "common_mistakes": [
+   "Jumping too wide",
+   "Rolling the ankles on landing"
+  ],
+  "regressions": [
+   "Jump rope"
+  ],
+  "progressions": [
+   "Criss-cross jump rope"
+  ],
+  "safety": "Avoid if you have unstable ankles.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ropecross",
+  "name": "Criss-cross jump rope",
+  "aliases": [
+   "Cross-over",
+   "Crossovers"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Home-friendly"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Forearms",
+   "Chest",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Jump rope"
+  ],
+  "req": "jumprope",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–30",
+  "form_cues": [
+   "Cross your arms at the waist on every second turn.",
+   "Push your hands past your hips when crossed.",
+   "Jump slightly higher on the crossing turn."
+  ],
+  "common_mistakes": [
+   "Crossing the arms too high at the chest",
+   "Hands not wide enough so the loop is too small"
+  ],
+  "regressions": [
+   "Jump rope"
+  ],
+  "progressions": [
+   "Double unders"
+  ],
+  "safety": "Use a slightly longer rope while learning.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ropesl",
+  "name": "Single-leg jump rope",
+  "aliases": [
+   "One-foot hop",
+   "Single-leg skipping"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Home-friendly",
+   "Balance",
+   "Unilateral"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Jump rope"
+  ],
+  "req": "jumprope",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "20 sec / side",
+  "form_cues": [
+   "Hop on one foot with the other knee lifted slightly.",
+   "Keep the hops small and springy.",
+   "Hold your hips level."
+  ],
+  "common_mistakes": [
+   "Hips dropping to one side",
+   "Landing heavy on the heel"
+  ],
+  "regressions": [
+   "Jump rope"
+  ],
+  "progressions": [
+   "Double unders"
+  ],
+  "safety": "Build up slowly to avoid overloading the Achilles.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "doubleunder",
+  "name": "Double unders",
+  "aliases": [
+   "DUs",
+   "Double jumps"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Plyometric",
+   "Power"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Forearms",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Jump rope"
+  ],
+  "req": "jumprope",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "20–50",
+  "form_cues": [
+   "Jump a little higher with straight, tight legs.",
+   "Flick the wrists hard so the rope passes twice.",
+   "Keep elbows in and hands at hip height."
+  ],
+  "common_mistakes": [
+   "Piking or kicking the feet back",
+   "Swinging the arms wide",
+   "Jumping far too high"
+  ],
+  "regressions": [
+   "Jump rope",
+   "Criss-cross jump rope"
+  ],
+  "progressions": [],
+  "safety": "Use a speed rope and expect whipped shins while learning.",
+  "video": null,
+  "notes": "Practise with single-double-single combinations."
+ },
+ {
+  "id": "battle",
+  "name": "Battle rope alternating waves",
+  "aliases": [
+   "Battle rope waves",
+   "Alternating waves"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Power"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Forearms"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Biceps",
+   "Quadriceps",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Battle ropes"
+  ],
+  "req": "battleropes",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "30 sec",
+  "form_cues": [
+   "Sit back in a half squat, chest up.",
+   "Drive one arm up as the other goes down, fast.",
+   "Keep the waves travelling all the way to the anchor."
+  ],
+  "common_mistakes": [
+   "Standing up straight and using only arms",
+   "Waves dying halfway down the rope"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Battle rope double waves",
+   "Battle rope slams"
+  ],
+  "safety": "Anchor the rope securely and keep a neutral spine.",
+  "video": null,
+  "notes": "Classic 20–30 sec on / 30–40 sec off."
+ },
+ {
+  "id": "battledouble",
+  "name": "Battle rope double waves",
+  "aliases": [
+   "Double-arm waves"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Power"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Latissimus dorsi"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Forearms",
+   "Glutes",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Battle ropes"
+  ],
+  "req": "battleropes",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "30 sec",
+  "form_cues": [
+   "Hold a half squat with a braced core.",
+   "Raise and lower both arms together.",
+   "Make big, even waves to the anchor."
+  ],
+  "common_mistakes": [
+   "Rounding the lower back",
+   "Small, choppy waves"
+  ],
+  "regressions": [
+   "Battle rope alternating waves"
+  ],
+  "progressions": [
+   "Battle rope slams"
+  ],
+  "safety": "Hinge at the hips rather than bending through the back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "battleslam",
+  "name": "Battle rope slams",
+  "aliases": [
+   "Power slams",
+   "Rope slams"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Power",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Latissimus dorsi",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Triceps",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Battle ropes"
+  ],
+  "req": "battleropes",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "15–20",
+  "form_cues": [
+   "Raise both ropes overhead as you rise onto your toes.",
+   "Slam them down hard, dropping into a squat.",
+   "Reset quickly and repeat."
+  ],
+  "common_mistakes": [
+   "Only using the arms with no leg drive",
+   "Rounding the back on the slam"
+  ],
+  "regressions": [
+   "Battle rope double waves"
+  ],
+  "progressions": [],
+  "safety": "Keep your back neutral; don't overreach the arms behind the head.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "battlecircle",
+  "name": "Battle rope circles",
+  "aliases": [
+   "Rope circles",
+   "Inside/outside circles"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Rotator cuff"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Upper back",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Battle ropes"
+  ],
+  "req": "battleropes",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "30 sec",
+  "form_cues": [
+   "Make big circles with both arms, in sync.",
+   "Switch direction—inward, then outward.",
+   "Keep your stance athletic and core tight."
+  ],
+  "common_mistakes": [
+   "Tiny circles from the wrists",
+   "Shrugging the shoulders"
+  ],
+  "regressions": [
+   "Battle rope alternating waves"
+  ],
+  "progressions": [
+   "Battle rope grappler throws"
+  ],
+  "safety": "Reduce range if you feel shoulder pinching.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "battlegrap",
+  "name": "Battle rope grappler throws",
+  "aliases": [
+   "Grappler toss",
+   "Hip toss"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Power",
+   "Core"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Obliques",
+   "Core",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Forearms",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Battle ropes"
+  ],
+  "req": "battleropes",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "10 / side",
+  "form_cues": [
+   "Hold both rope ends together at one hip.",
+   "Pivot and swing them across to the other hip in an arc.",
+   "Drive the turn from your legs and hips."
+  ],
+  "common_mistakes": [
+   "Twisting the lower back without pivoting the feet",
+   "Using only the arms"
+  ],
+  "regressions": [
+   "Battle rope circles"
+  ],
+  "progressions": [],
+  "safety": "Pivot your back foot to protect your knees and lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bagrounds",
+  "name": "Punching bag rounds",
+  "aliases": [
+   "Heavy bag rounds",
+   "Bag work"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Triceps",
+   "Obliques",
+   "Calves",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Punching bag",
+   "Gloves or hand wraps"
+  ],
+  "req": "bag",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3 min",
+  "form_cues": [
+   "Wrap your hands and stand at arm's length from the bag.",
+   "Throw combinations, then move around the bag.",
+   "Return your hands to your face after every punch."
+  ],
+  "common_mistakes": [
+   "Pushing the bag instead of snapping punches",
+   "Hands dropping as you tire",
+   "Holding your breath"
+  ],
+  "regressions": [
+   "Shadowboxing"
+  ],
+  "progressions": [
+   "Kickboxing bag rounds",
+   "Heavy bag punch-outs"
+  ],
+  "safety": "Always wear wraps and gloves; build intensity gradually to protect wrists.",
+  "video": null,
+  "notes": "Typical: 3 × 3 min rounds with 1 min rest."
+ },
+ {
+  "id": "bagjabcross",
+  "name": "Heavy bag jab-cross",
+  "aliases": [
+   "1-2 combo",
+   "One-two"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Power"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Punching bag",
+   "Gloves or hand wraps"
+  ],
+  "req": "bag",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20",
+  "form_cues": [
+   "Snap the lead hand straight out, then back to the chin.",
+   "Pivot the back foot and turn the hip for the cross.",
+   "Keep the non-punching hand guarding your face."
+  ],
+  "common_mistakes": [
+   "Winding up before punching",
+   "Not rotating the back foot on the cross"
+  ],
+  "regressions": [
+   "Shadowboxing"
+  ],
+  "progressions": [
+   "Heavy bag jab-cross-hook"
+  ],
+  "safety": "Punch with the first two knuckles and a straight wrist.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "baghook",
+  "name": "Heavy bag hooks",
+  "aliases": [
+   "Lead and rear hooks"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Power",
+   "Core"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Obliques",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Biceps",
+   "Core"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Punching bag",
+   "Gloves or hand wraps"
+  ],
+  "req": "bag",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Bend the arm about 90° and keep the elbow up.",
+   "Turn the hips and pivot the lead foot into the punch.",
+   "Bring the hand straight back to guard."
+  ],
+  "common_mistakes": [
+   "Swinging wide with an open arm",
+   "Punching with arm only, no hip turn"
+  ],
+  "regressions": [
+   "Heavy bag jab-cross"
+  ],
+  "progressions": [
+   "Heavy bag jab-cross-hook"
+  ],
+  "safety": "Keep the wrist straight to avoid sprains.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "baguppercut",
+  "name": "Heavy bag uppercuts",
+  "aliases": [
+   "Uppercuts"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Power"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Quadriceps",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Punching bag",
+   "Gloves or hand wraps"
+  ],
+  "req": "bag",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Dip slightly with the knees, then drive up.",
+   "Punch upward with the palm facing you.",
+   "Keep the other hand guarding your chin."
+  ],
+  "common_mistakes": [
+   "Dropping the hand low before punching",
+   "Leaning back as you punch"
+  ],
+  "regressions": [
+   "Heavy bag jab-cross"
+  ],
+  "progressions": [
+   "Heavy bag jab-cross-hook"
+  ],
+  "safety": "An uppercut bag or teardrop bag is best; go lighter on a straight hanging bag.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bag123",
+  "name": "Heavy bag jab-cross-hook",
+  "aliases": [
+   "1-2-3 combo",
+   "Jab-cross-hook combo"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Power",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Obliques",
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core",
+   "Calves",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Punching bag",
+   "Gloves or hand wraps"
+  ],
+  "req": "bag",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15",
+  "form_cues": [
+   "Jab, cross, then lead hook in one smooth flow.",
+   "Let the cross's hip turn load the hook.",
+   "Reset to stance with hands up after each combo."
+  ],
+  "common_mistakes": [
+   "Pausing between punches",
+   "Dropping the rear hand during the hook"
+  ],
+  "regressions": [
+   "Heavy bag jab-cross"
+  ],
+  "progressions": [
+   "Punching bag rounds"
+  ],
+  "safety": "Stay in range so you don't overreach and strain the shoulder.",
+  "video": null,
+  "notes": "Count each full combination as one rep."
+ },
+ {
+  "id": "bagpunchout",
+  "name": "Heavy bag punch-outs",
+  "aliases": [
+   "Bag sprints",
+   "Bag blitz"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Endurance",
+   "Power"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Triceps",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Punching bag",
+   "Gloves or hand wraps"
+  ],
+  "req": "bag",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "20 sec",
+  "form_cues": [
+   "Square up close to the bag.",
+   "Throw fast, straight punches non-stop.",
+   "Keep punches short and snappy, not wild."
+  ],
+  "common_mistakes": [
+   "Wild, looping punches that hurt wrists",
+   "Leaning on the bag"
+  ],
+  "regressions": [
+   "Speed punches"
+  ],
+  "progressions": [
+   "Punching bag rounds"
+  ],
+  "safety": "Use proper gloves and wraps; stop if a wrist or knuckle hurts.",
+  "video": null,
+  "notes": "Great finisher: 20 sec all-out / 40 sec rest."
+ },
+ {
+  "id": "bagkick",
+  "name": "Heavy bag roundhouse kicks",
+  "aliases": [
+   "Bag round kicks",
+   "Thai kicks on the bag"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Power"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Obliques",
+   "Glutes",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Adductors",
+   "Core"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Punching bag (long/standing)",
+   "Shin guards (optional)"
+  ],
+  "req": "bag",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Step out, pivot on the standing foot, and turn the hip over.",
+   "Strike with the shin, not the foot.",
+   "Return quickly to a guarded stance."
+  ],
+  "common_mistakes": [
+   "Kicking with the foot and hurting the instep",
+   "Leaning too far back"
+  ],
+  "regressions": [
+   "Roundhouse kick"
+  ],
+  "progressions": [
+   "Kickboxing bag rounds"
+  ],
+  "safety": "Start light; shins need time to condition.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bagfront",
+  "name": "Heavy bag front kick",
+  "aliases": [
+   "Bag teep",
+   "Push kick on bag"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Power",
+   "Balance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Hip flexors",
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Calves"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Punching bag (long/standing)"
+  ],
+  "req": "bag",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Chamber the knee high before extending.",
+   "Push through the ball of the foot into the bag.",
+   "Keep your hands up and recover to stance."
+  ],
+  "common_mistakes": [
+   "Kicking with toes and jamming them",
+   "Locking out the knee hard"
+  ],
+  "regressions": [
+   "Front kick"
+  ],
+  "progressions": [
+   "Heavy bag roundhouse kicks"
+  ],
+  "safety": "Strike with the ball of the foot, toes pulled back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bagknee",
+  "name": "Heavy bag knees",
+  "aliases": [
+   "Clinch knees",
+   "Bag knee strikes"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Core",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Hip flexors",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Shoulders",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Punching bag"
+  ],
+  "req": "bag",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20",
+  "form_cues": [
+   "Grip the top of the bag as if clinching.",
+   "Pull the bag in as you drive the knee up and through.",
+   "Rise onto the toes of your standing foot."
+  ],
+  "common_mistakes": [
+   "Kneeing with hips pushed back",
+   "Not alternating sides"
+  ],
+  "regressions": [
+   "Knee strikes"
+  ],
+  "progressions": [
+   "Kickboxing bag rounds"
+  ],
+  "safety": "Keep a firm grip; a swinging bag can catch you off balance.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kickbagrounds",
+  "name": "Kickboxing bag rounds",
+  "aliases": [
+   "Muay Thai bag rounds"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Endurance",
+   "Power"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Obliques",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Quadriceps",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Punching bag (long/standing)",
+   "Gloves or hand wraps"
+  ],
+  "req": "bag",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3 min",
+  "form_cues": [
+   "Mix punches, kicks and knees in combinations.",
+   "Finish each combo with a step or angle change.",
+   "Pace yourself to last the full round."
+  ],
+  "common_mistakes": [
+   "Throwing single strikes with no flow",
+   "Dropping the guard on kicks"
+  ],
+  "regressions": [
+   "Punching bag rounds",
+   "Shadow kickboxing"
+  ],
+  "progressions": [],
+  "safety": "Wrap hands, warm up the hips, and start with light kicks.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "speedbag",
+  "name": "Speed bag",
+  "aliases": [
+   "Speedball"
+  ],
+  "training_type": "Combat",
+  "tags": [
+   "Combat",
+   "Cardio",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Forearms"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Triceps"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Speed bag and platform"
+  ],
+  "req": "bag",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "2 min",
+  "form_cues": [
+   "Set the bag at mouth or chin height.",
+   "Hit in a steady rhythm with small circular motions.",
+   "Let the bag rebound three times before the next hit."
+  ],
+  "common_mistakes": [
+   "Hitting too hard and losing rhythm",
+   "Arms too far from the bag"
+  ],
+  "regressions": [
+   "Shadowboxing"
+  ],
+  "progressions": [],
+  "safety": "Wear light gloves or wraps to protect your knuckles.",
+  "video": null,
+  "notes": "No speed-bag gear id exists; 'bag' (punching bag) is used as nearest. Mostly a timing and shoulder endurance drill."
+ },
+ {
+  "id": "treadwalk",
+  "name": "Treadmill walk",
+  "aliases": [
+   "Treadmill walking"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Recovery",
+   "Warm-up"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves",
+   "Glutes",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Treadmill"
+  ],
+  "req": "treadmill",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "20–30 min",
+  "form_cues": [
+   "Walk tall in the middle of the belt.",
+   "Swing your arms; let go of the handrails.",
+   "Use a brisk pace, around 5–6 km/h."
+  ],
+  "common_mistakes": [
+   "Holding the handrails the whole time",
+   "Walking too close to the front"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Incline treadmill walk",
+   "Treadmill run"
+  ],
+  "safety": "Clip on the safety key and straddle the belt before starting.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "inclinewalk",
+  "name": "Incline treadmill walk",
+  "aliases": [
+   "Uphill walk",
+   "Treadmill incline walking"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Glutes"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Glutes",
+   "Calves",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Treadmill"
+  ],
+  "req": "treadmill",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "20–30 min",
+  "form_cues": [
+   "Set an incline of 5–15% and a steady pace.",
+   "Stand upright and push through the whole foot.",
+   "Hands off the rails, arms swinging."
+  ],
+  "common_mistakes": [
+   "Leaning back on the handrails",
+   "Cranking the incline so high you hunch"
+  ],
+  "regressions": [
+   "Treadmill walk"
+  ],
+  "progressions": [
+   "12-3-30 treadmill workout",
+   "Stair climber"
+  ],
+  "safety": "Lower the incline if your lower back or Achilles feel strained.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "w12330",
+  "name": "12-3-30 treadmill workout",
+  "aliases": [
+   "12-3-30 workout"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Glutes"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Glutes",
+   "Calves",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Treadmill"
+  ],
+  "req": "treadmill",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "30 min",
+  "form_cues": [
+   "Set the incline to 12% and speed to about 5 km/h.",
+   "Walk for 30 minutes without holding the rails.",
+   "Keep your chest up and strides natural."
+  ],
+  "common_mistakes": [
+   "Gripping the handrails",
+   "Jumping straight in without building up"
+  ],
+  "regressions": [
+   "Incline treadmill walk"
+  ],
+  "progressions": [],
+  "safety": "Build up from shorter durations or lower incline; stop if calves or shins ache.",
+  "video": null,
+  "notes": "Popular viral protocol: 12% incline, 3 mph (~4.8 km/h), 30 minutes."
+ },
+ {
+  "id": "treadrun",
+  "name": "Treadmill run",
+  "aliases": [
+   "Treadmill jog",
+   "Treadmill running"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Hamstrings",
+   "Glutes",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Treadmill"
+  ],
+  "req": "treadmill",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "5 km",
+  "form_cues": [
+   "Set a 1% incline to mimic outdoor running.",
+   "Run in the middle of the belt with quick, light steps.",
+   "Look ahead, not down at the console."
+  ],
+  "common_mistakes": [
+   "Holding the rails",
+   "Overstriding and landing far in front"
+  ],
+  "regressions": [
+   "Treadmill walk"
+  ],
+  "progressions": [
+   "Treadmill intervals"
+  ],
+  "safety": "Use the safety key and step onto the side rails to stop.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "treadint",
+  "name": "Treadmill intervals",
+  "aliases": [
+   "Treadmill HIIT",
+   "Treadmill sprints"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Power"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Hamstrings",
+   "Glutes",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Treadmill"
+  ],
+  "req": "treadmill",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "20 min",
+  "form_cues": [
+   "Alternate fast running with easy jogging or walking.",
+   "Change speed with the buttons, not by jumping off.",
+   "Keep form tall and relaxed at speed."
+  ],
+  "common_mistakes": [
+   "Straddling the belt on/off at high speed",
+   "Setting the sprint speed beyond control"
+  ],
+  "regressions": [
+   "Treadmill run"
+  ],
+  "progressions": [
+   "Curved treadmill sprints"
+  ],
+  "safety": "Use the safety key; build sprint speed gradually.",
+  "video": null,
+  "notes": "Example: 1 min fast / 1–2 min easy × 8."
+ },
+ {
+  "id": "bikeride",
+  "name": "Stationary bike",
+  "aliases": [
+   "Exercise bike",
+   "Upright bike"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Recovery"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Stationary bike"
+  ],
+  "req": "bike|spinbike",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "20–30 min",
+  "form_cues": [
+   "Set the saddle at hip height when standing beside it.",
+   "Keep a slight knee bend at the bottom of the pedal stroke.",
+   "Pedal smoothly at 80–100 rpm."
+  ],
+  "common_mistakes": [
+   "Saddle too low so knees ache",
+   "Bouncing on the saddle at high cadence"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Spin bike intervals",
+   "Tabata bike"
+  ],
+  "safety": "Easy on knees and great for rehab—adjust the seat properly first.",
+  "video": null,
+  "notes": "Log distance too if your bike shows it."
+ },
+ {
+  "id": "recumbent",
+  "name": "Recumbent bike",
+  "aliases": [
+   "Recumbent cycle",
+   "Seated bike"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Recovery",
+   "Rehab"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Recumbent bike"
+  ],
+  "req": "bike",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "20–30 min",
+  "form_cues": [
+   "Slide the seat so your knee is slightly bent at full reach.",
+   "Sit back against the backrest.",
+   "Push through the whole foot smoothly."
+  ],
+  "common_mistakes": [
+   "Seat too close so knees come up high",
+   "Pedalling with no resistance"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Stationary bike"
+  ],
+  "safety": "Good option for back pain or balance issues since you're supported.",
+  "video": null,
+  "notes": "No separate gear id; uses 'bike'."
+ },
+ {
+  "id": "spinint",
+  "name": "Spin bike intervals",
+  "aliases": [
+   "Spin class",
+   "Indoor cycling",
+   "Spinning"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Power"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Spin bike"
+  ],
+  "req": "spinbike|bike",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "30–45 min",
+  "form_cues": [
+   "Alternate seated sprints with standing climbs.",
+   "Add resistance rather than spinning out of control.",
+   "Keep hips steady and core engaged out of the saddle."
+  ],
+  "common_mistakes": [
+   "Too little resistance so you bounce",
+   "Bobbing the upper body when standing"
+  ],
+  "regressions": [
+   "Stationary bike"
+  ],
+  "progressions": [
+   "Tabata bike"
+  ],
+  "safety": "Set up the bike properly and use clipped or caged pedals.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "tabatabike",
+  "name": "Tabata bike",
+  "aliases": [
+   "Tabata intervals on the bike",
+   "20/10 bike intervals"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Power",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Air bike, spin bike or stationary bike"
+  ],
+  "req": "airbike|spinbike|bike",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "4 min",
+  "form_cues": [
+   "Sprint all-out for 20 seconds.",
+   "Pedal easy for 10 seconds.",
+   "Repeat 8 rounds without stopping."
+  ],
+  "common_mistakes": [
+   "Pacing it like steady cardio",
+   "Skipping a proper warm-up"
+  ],
+  "regressions": [
+   "Spin bike intervals"
+  ],
+  "progressions": [],
+  "safety": "Very intense—skip if you have heart or blood pressure concerns without medical clearance.",
+  "video": null,
+  "notes": "Original Tabata protocol: 8 × 20 sec all-out / 10 sec rest. Warm up for 5–10 min first."
+ },
+ {
+  "id": "airbike",
+  "name": "Air bike",
+  "aliases": [
+   "Assault bike",
+   "Fan bike",
+   "Echo bike",
+   "Airdyne"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Back",
+   "Triceps",
+   "Hamstrings",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Air bike"
+  ],
+  "req": "airbike",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "15–20 min",
+  "form_cues": [
+   "Push and pull the handles while you pedal.",
+   "Sit tall and keep a steady rhythm.",
+   "Remember: the harder you go, the harder it gets."
+  ],
+  "common_mistakes": [
+   "Using only the legs",
+   "Starting too hard and blowing up"
+  ],
+  "regressions": [
+   "Stationary bike"
+  ],
+  "progressions": [
+   "Air bike intervals"
+  ],
+  "safety": "Fan resistance rises fast—build up gradually.",
+  "video": null,
+  "notes": "Can also log calories in notes."
+ },
+ {
+  "id": "airbikeint",
+  "name": "Air bike intervals",
+  "aliases": [
+   "Assault bike sprints",
+   "Fan bike intervals"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Power",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Back",
+   "Hamstrings",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Air bike"
+  ],
+  "req": "airbike",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "10–15 min",
+  "form_cues": [
+   "Sprint hard using arms and legs together.",
+   "Recover with slow, easy pedalling.",
+   "Keep each sprint the same quality."
+  ],
+  "common_mistakes": [
+   "Going too hard on the first sprint",
+   "Hunching over the handles"
+  ],
+  "regressions": [
+   "Air bike"
+  ],
+  "progressions": [
+   "Tabata bike"
+  ],
+  "safety": "Extremely demanding—warm up well and stop if dizzy.",
+  "video": null,
+  "notes": "Examples: 10 sec on / 50 sec off × 10, or 30/30."
+ },
+ {
+  "id": "row",
+  "name": "Rowing machine",
+  "aliases": [
+   "Rower",
+   "Erg",
+   "Indoor rowing",
+   "Concept2"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Compound"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Upper back",
+   "Latissimus dorsi"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Biceps",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Rowing machine"
+  ],
+  "req": "rower",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "5 km",
+  "form_cues": [
+   "Legs, hips, then arms on the drive.",
+   "Arms, hips, then legs on the return.",
+   "Keep the handle level and wrists flat."
+  ],
+  "common_mistakes": [
+   "Pulling with the arms first",
+   "Rounding the back at the catch",
+   "Damper set to 10"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Rowing intervals",
+   "2,000 m row test"
+  ],
+  "safety": "Keep a neutral spine; set the damper around 3–5.",
+  "video": null,
+  "notes": "Roughly 60% legs, 20% hips/back, 20% arms."
+ },
+ {
+  "id": "rowint",
+  "name": "Rowing intervals",
+  "aliases": [
+   "500 m repeats",
+   "Row sprints"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Power"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Upper back",
+   "Latissimus dorsi"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Rowing machine"
+  ],
+  "req": "rower",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "500 m",
+  "form_cues": [
+   "Row each piece at a hard, steady split.",
+   "Keep your stroke rate controlled (26–32).",
+   "Rest 1–2 min between pieces."
+  ],
+  "common_mistakes": [
+   "Spiking the stroke rate and losing power",
+   "Collapsing posture when tired"
+  ],
+  "regressions": [
+   "Rowing machine"
+  ],
+  "progressions": [
+   "2,000 m row test"
+  ],
+  "safety": "Keep a neutral back throughout; stop if your lower back aches.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "row2k",
+  "name": "2,000 m row test",
+  "aliases": [
+   "2K row",
+   "2K erg test"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Upper back",
+   "Latissimus dorsi"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Rowing machine"
+  ],
+  "req": "rower",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "2,000 m",
+  "form_cues": [
+   "Plan an even split and stick to it.",
+   "Settle into rhythm after a strong first 10 strokes.",
+   "Empty the tank in the last 250 m."
+  ],
+  "common_mistakes": [
+   "Going out way too fast",
+   "Losing technique in the middle 1,000 m"
+  ],
+  "regressions": [
+   "Rowing intervals"
+  ],
+  "progressions": [],
+  "safety": "A maximal effort—only do it when fully warmed up and healthy.",
+  "video": null,
+  "notes": "Benchmark test for rowing fitness; repeat every 6–8 weeks."
+ },
+ {
+  "id": "ellip",
+  "name": "Elliptical",
+  "aliases": [
+   "Cross trainer",
+   "Elliptical trainer"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Recovery"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Chest",
+   "Back",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Elliptical / cross trainer"
+  ],
+  "req": "elliptical",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "20–30 min",
+  "form_cues": [
+   "Stand tall with your weight through the whole foot.",
+   "Push and pull the handles to involve the upper body.",
+   "Use resistance so you're not just gliding."
+  ],
+  "common_mistakes": [
+   "Leaning on the handles",
+   "Zero resistance, high speed"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Stair climber"
+  ],
+  "safety": "A low-impact choice for sore knees or hips.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "stair",
+  "name": "Stair climber",
+  "aliases": [
+   "StairMaster",
+   "Stepmill",
+   "Stair machine"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Glutes"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Stair climber"
+  ],
+  "req": "stairs",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "15–20 min",
+  "form_cues": [
+   "Stand tall and step through the whole foot.",
+   "Hold the rails lightly for balance only.",
+   "Pick a speed you can sustain without leaning."
+  ],
+  "common_mistakes": [
+   "Hunching and leaning on the rails",
+   "Taking tiny steps on the toes"
+  ],
+  "regressions": [
+   "Incline treadmill walk"
+  ],
+  "progressions": [],
+  "safety": "Use the stop button rather than jumping off a moving machine.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ski",
+  "name": "Ski erg",
+  "aliases": [
+   "SkiErg",
+   "Ski ergometer"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Compound"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Latissimus dorsi",
+   "Triceps",
+   "Core"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Glutes",
+   "Hamstrings",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Ski erg"
+  ],
+  "req": "skierg",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "2 km",
+  "form_cues": [
+   "Reach tall, then drive the handles down by hinging hips.",
+   "Finish with hands past your hips.",
+   "Let the arms float back up as you stand tall."
+  ],
+  "common_mistakes": [
+   "Squatting deep instead of hinging",
+   "Pulling with arms only"
+  ],
+  "regressions": [],
+  "progressions": [],
+  "safety": "Hinge with a neutral back; don't crunch your spine forward.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "curvedrun",
+  "name": "Curved treadmill run",
+  "aliases": [
+   "Assault Runner",
+   "Manual treadmill run",
+   "Woodway Curve"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Quadriceps",
+   "Hamstrings",
+   "Glutes",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Curved / manual treadmill"
+  ],
+  "req": "curvedtread",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "cardio",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "3 km",
+  "form_cues": [
+   "Move forward on the curve to speed up, back to slow down.",
+   "Run tall with quick, light steps.",
+   "Stay near the middle to hold a steady pace."
+  ],
+  "common_mistakes": [
+   "Drifting too far forward and accelerating",
+   "Heavy heel-striking"
+  ],
+  "regressions": [
+   "Treadmill run"
+  ],
+  "progressions": [
+   "Curved treadmill sprints"
+  ],
+  "safety": "Use the handrails to get on and off safely; the belt keeps moving.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "curvedsprint",
+  "name": "Curved treadmill sprints",
+  "aliases": [
+   "Assault Runner sprints",
+   "Curve sprints"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Power",
+   "Endurance"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hip flexors",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Curved / manual treadmill"
+  ],
+  "req": "curvedtread",
+  "equipment_tier": 3,
+  "difficulty": "Advanced",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 8,
+  "reps": "20 sec",
+  "form_cues": [
+   "Lean into the curve and drive hard with your arms.",
+   "Stay on the balls of your feet.",
+   "Step back onto the rails to stop and rest."
+  ],
+  "common_mistakes": [
+   "Sprinting cold without warm-up",
+   "Looking down at the belt"
+  ],
+  "regressions": [
+   "Curved treadmill run"
+  ],
+  "progressions": [],
+  "safety": "Hold the rails when stepping off; the belt freewheels for a few seconds.",
+  "video": null,
+  "notes": "Example: 8 × 20 sec all-out / 40 sec rest."
+ },
+ {
+  "id": "ube",
+  "name": "Arm bike",
+  "aliases": [
+   "Upper body ergometer",
+   "UBE",
+   "Arm ergometer"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Rehab"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Shoulders",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Triceps",
+   "Chest",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Upper body ergometer"
+  ],
+  "req": "bike",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "10 min",
+  "form_cues": [
+   "Sit tall with the crank at shoulder height.",
+   "Pedal smoothly with your hands.",
+   "Switch direction halfway through."
+  ],
+  "common_mistakes": [
+   "Hunching forward",
+   "Too much resistance so you jerk the cranks"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Air bike"
+  ],
+  "safety": "Useful when legs are injured; keep resistance low if shoulders are sore.",
+  "video": null,
+  "notes": "No arm-ergometer gear id; 'bike' used as nearest."
+ },
+ {
+  "id": "versaclimb",
+  "name": "VersaClimber",
+  "aliases": [
+   "Vertical climber",
+   "Climbing machine"
+  ],
+  "training_type": "Cardio",
+  "tags": [
+   "Cardio",
+   "Endurance",
+   "Compound"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Latissimus dorsi",
+   "Calves",
+   "Core",
+   "Heart and lungs"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "VersaClimber"
+  ],
+  "req": "stairs",
+  "equipment_tier": 3,
+  "difficulty": "Advanced",
+  "tracking": "time",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "10 min",
+  "form_cues": [
+   "Move opposite arm and leg together.",
+   "Use long, full strokes before speeding up.",
+   "Stay upright, close to the machine."
+  ],
+  "common_mistakes": [
+   "Short, choppy strokes",
+   "Leaning back away from the machine"
+  ],
+  "regressions": [
+   "Stair climber"
+  ],
+  "progressions": [],
+  "safety": "Brutally intense; start with short intervals.",
+  "video": null,
+  "notes": "No VersaClimber gear id; 'stairs' (stair climber) used as nearest."
+ }
+]

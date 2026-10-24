@@ -1,0 +1,4780 @@
+[
+ {
+  "id": "crossfly",
+  "name": "Cable crossover fly",
+  "aliases": [
+   "High-to-low cable fly",
+   "Standing cable fly",
+   "Cable crossover"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Biceps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handles"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Set pulleys high and take a staggered stance.",
+   "Keep a soft bend in the elbows throughout.",
+   "Sweep hands down and together in a hugging arc."
+  ],
+  "common_mistakes": [
+   "Bending the elbows and turning it into a press.",
+   "Letting the handles yank the shoulders back at the top."
+  ],
+  "regressions": [
+   "Pec deck fly"
+  ],
+  "progressions": [
+   "Single-arm cable fly"
+  ],
+  "safety": "Use a weight you can control at the stretch to protect the shoulder joint.",
+  "video": null,
+  "notes": "High-to-low angle biases the lower chest."
+ },
+ {
+  "id": "midfly",
+  "name": "Mid-height cable fly",
+  "aliases": [
+   "Cable chest fly",
+   "Straight cable fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handles"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Set pulleys at chest height.",
+   "Lead with the elbows, not the hands.",
+   "Squeeze the chest hard as the handles meet."
+  ],
+  "common_mistakes": [
+   "Shrugging the shoulders up.",
+   "Using too much weight and losing the arc."
+  ],
+  "regressions": [
+   "Pec deck fly"
+  ],
+  "progressions": [
+   "Single-arm cable fly"
+  ],
+  "safety": "Stop the stretch where the shoulders still feel stable.",
+  "video": null,
+  "notes": "Targets the middle of the chest."
+ },
+ {
+  "id": "lowhighfly",
+  "name": "Low-to-high cable fly",
+  "aliases": [
+   "Low cable crossover",
+   "Upward cable fly",
+   "Incline cable fly (standing)"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Upper chest"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handles"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Set pulleys at the lowest notch.",
+   "Scoop the handles up to chin height.",
+   "Keep chest proud and elbows softly bent."
+  ],
+  "common_mistakes": [
+   "Turning it into a front raise.",
+   "Arching the lower back to lift the weight."
+  ],
+  "regressions": [
+   "Incline dumbbell fly"
+  ],
+  "progressions": [
+   "Single-arm cable fly"
+  ],
+  "safety": "Keep the load light enough that the shoulders don't roll forward.",
+  "video": null,
+  "notes": "Biases the upper (clavicular) chest."
+ },
+ {
+  "id": "kneelcablefly",
+  "name": "Kneeling cable crossover",
+  "aliases": [
+   "Kneeling cable fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handles"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Kneel tall in the middle of the crossover.",
+   "Brace your core so the hips don't move.",
+   "Bring hands together in front of your belly button."
+  ],
+  "common_mistakes": [
+   "Rocking the torso to cheat the weight.",
+   "Letting elbows drop too low."
+  ],
+  "regressions": [
+   "Mid-height cable fly"
+  ],
+  "progressions": [
+   "Cable crossover fly"
+  ],
+  "safety": "Use a mat under the knees.",
+  "video": null,
+  "notes": "Kneeling removes leg drive and keeps the work strict."
+ },
+ {
+  "id": "sacablefly",
+  "name": "Single-arm cable fly",
+  "aliases": [
+   "One-arm cable crossover",
+   "Unilateral cable fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Stand side-on with the handle at shoulder height.",
+   "Sweep the arm across past the midline.",
+   "Keep hips and shoulders square."
+  ],
+  "common_mistakes": [
+   "Rotating the torso to finish the rep.",
+   "Bending the elbow too much."
+  ],
+  "regressions": [
+   "Mid-height cable fly"
+  ],
+  "progressions": [
+   "Low-to-high cable fly"
+  ],
+  "safety": "Control the return so the shoulder isn't pulled into a deep stretch.",
+  "video": null,
+  "notes": "Crossing past the midline gives a stronger peak contraction."
+ },
+ {
+  "id": "cablepress",
+  "name": "Standing cable chest press",
+  "aliases": [
+   "Cable chest press",
+   "Standing cable press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Cable machine",
+   "Single handles"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Set pulleys at chest height and step forward.",
+   "Press the handles straight out and slightly together.",
+   "Brace your core so you don't lean."
+  ],
+  "common_mistakes": [
+   "Leaning too far forward.",
+   "Flaring elbows straight out to the sides."
+  ],
+  "regressions": [
+   "Band chest press"
+  ],
+  "progressions": [
+   "Single-arm cable chest press"
+  ],
+  "safety": "Use a staggered stance for balance.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sacablepress",
+  "name": "Single-arm cable chest press",
+  "aliases": [
+   "One-arm cable press",
+   "Unilateral cable press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Compound",
+   "Hypertrophy",
+   "Unilateral",
+   "Core"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Front delts",
+   "Obliques"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Stand facing away with the handle at chest height.",
+   "Press forward without letting the torso twist.",
+   "Use the opposite leg forward for a stable base."
+  ],
+  "common_mistakes": [
+   "Rotating the hips to push the weight.",
+   "Shrugging the pressing shoulder."
+  ],
+  "regressions": [
+   "Standing cable chest press"
+  ],
+  "progressions": [
+   "Low-to-high cable press"
+  ],
+  "safety": "Start light; the anti-rotation demand is bigger than it looks.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "lowhighpress",
+  "name": "Low-to-high cable press",
+  "aliases": [
+   "Incline standing cable press",
+   "Upward cable press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Upper chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Cable machine",
+   "Single handles"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Set pulleys low and stand in a split stance.",
+   "Press up and out at about 30 degrees.",
+   "Finish with hands at eye level."
+  ],
+  "common_mistakes": [
+   "Turning it into a shoulder press.",
+   "Arching the lower back."
+  ],
+  "regressions": [
+   "Standing cable chest press"
+  ],
+  "progressions": [
+   "Incline bench cable press"
+  ],
+  "safety": "Keep ribs down to protect the lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "flatcablepress",
+  "name": "Flat bench cable press",
+  "aliases": [
+   "Cable bench press",
+   "Lying cable press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Cable machine",
+   "Flat bench",
+   "Single handles"
+  ],
+  "req": "cablecross|functional,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Place the bench between low pulleys.",
+   "Press up and slightly together over the chest.",
+   "Lower until hands are level with your chest."
+  ],
+  "common_mistakes": [
+   "Bench not centred so tension is uneven.",
+   "Bouncing at the bottom."
+  ],
+  "regressions": [
+   "Standing cable chest press"
+  ],
+  "progressions": [
+   "Incline bench cable press"
+  ],
+  "safety": "Have handles in place before lying down so you don't twist to grab them.",
+  "video": null,
+  "notes": "Constant tension compared to dumbbells."
+ },
+ {
+  "id": "incablepress",
+  "name": "Incline bench cable press",
+  "aliases": [
+   "Incline cable press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Upper chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Cable machine",
+   "Adjustable bench",
+   "Single handles"
+  ],
+  "req": "cablecross|functional,adjbench|inclinebench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Set the bench to 30–45 degrees between low pulleys.",
+   "Press up over the upper chest.",
+   "Keep shoulder blades pinned to the bench."
+  ],
+  "common_mistakes": [
+   "Bench set too steep, turning it into a shoulder press.",
+   "Elbows flared to 90 degrees."
+  ],
+  "regressions": [
+   "Low-to-high cable press"
+  ],
+  "progressions": [
+   "Incline barbell press"
+  ],
+  "safety": "Grab handles before reclining to avoid twisting under load.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "flatcablefly",
+  "name": "Flat bench cable fly",
+  "aliases": [
+   "Lying cable fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Flat bench",
+   "Single handles"
+  ],
+  "req": "cablecross|functional,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Lie on a bench between low pulleys.",
+   "Open the arms wide with soft elbows.",
+   "Hug the handles together over your chest."
+  ],
+  "common_mistakes": [
+   "Dropping the hands too low below the bench.",
+   "Pressing instead of flying."
+  ],
+  "regressions": [
+   "Dumbbell fly"
+  ],
+  "progressions": [
+   "Incline bench cable fly"
+  ],
+  "safety": "Keep the stretch controlled to protect the shoulder.",
+  "video": null,
+  "notes": "Keeps tension at the top, unlike dumbbell flies."
+ },
+ {
+  "id": "inccablefly",
+  "name": "Incline bench cable fly",
+  "aliases": [
+   "Incline cable fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Upper chest"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Adjustable bench",
+   "Single handles"
+  ],
+  "req": "cablecross|functional,adjbench|inclinebench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Set the bench to about 30 degrees between low pulleys.",
+   "Keep a slight bend in the elbows.",
+   "Bring hands together over the upper chest."
+  ],
+  "common_mistakes": [
+   "Bench too steep.",
+   "Letting elbows bend and press."
+  ],
+  "regressions": [
+   "Low-to-high cable fly"
+  ],
+  "progressions": [
+   "Single-arm cable fly"
+  ],
+  "safety": "Use moderate weight; deep stretch under load stresses the shoulder.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "declinecablefly",
+  "name": "Decline cable fly",
+  "aliases": [
+   "Decline bench cable fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Chest",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Lower chest"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Decline bench",
+   "Single handles"
+  ],
+  "req": "cablecross|functional,declinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Set a decline bench between low pulleys.",
+   "Lock in your feet before taking the handles.",
+   "Sweep the handles together over the lower chest."
+  ],
+  "common_mistakes": [
+   "Bending the elbows too much.",
+   "Letting the head hang off the bench."
+  ],
+  "regressions": [
+   "Cable crossover fly"
+  ],
+  "progressions": [
+   "Single-arm cable fly"
+  ],
+  "safety": "Avoid if lying head-down makes you dizzy or you have high blood pressure.",
+  "video": null,
+  "notes": "High-to-low standing fly is an easier substitute."
+ },
+ {
+  "id": "widepull",
+  "name": "Wide-grip lat pulldown",
+  "aliases": [
+   "Lat pulldown",
+   "Front lat pulldown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts",
+   "Rhomboids"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Lat pulldown machine",
+   "Long lat bar"
+  ],
+  "req": "latpulldown|cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Grip the bar just outside shoulder width.",
+   "Pull your elbows down toward your back pockets.",
+   "Bring the bar to the top of your chest."
+  ],
+  "common_mistakes": [
+   "Leaning way back and turning it into a row.",
+   "Pulling with the arms only and shrugging."
+  ],
+  "regressions": [
+   "Assisted pull-up"
+  ],
+  "progressions": [
+   "Pull-ups"
+  ],
+  "safety": "Lock thighs under the pad and control the bar on the way up.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cgpull",
+  "name": "Close-grip lat pulldown",
+  "aliases": [
+   "V-bar pulldown",
+   "Neutral close-grip pulldown",
+   "V-handle lat pulldown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rhomboids",
+   "Lower traps"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Lat pulldown machine",
+   "V-handle"
+  ],
+  "req": "latpulldown|cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Attach a V-handle and sit tall.",
+   "Lean back slightly and pull to the upper chest.",
+   "Squeeze the shoulder blades down and back."
+  ],
+  "common_mistakes": [
+   "Rounding forward on the way up.",
+   "Yanking with momentum."
+  ],
+  "regressions": [
+   "Wide-grip lat pulldown"
+  ],
+  "progressions": [
+   "Chin-ups"
+  ],
+  "safety": "Keep the movement smooth; don't let the stack slam.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "revpull",
+  "name": "Reverse-grip lat pulldown",
+  "aliases": [
+   "Underhand lat pulldown",
+   "Supinated pulldown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rhomboids"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Lat pulldown machine",
+   "Lat bar"
+  ],
+  "req": "latpulldown|cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Grip the bar palms-up at shoulder width.",
+   "Drive the elbows down to your sides.",
+   "Touch the bar to your upper chest."
+  ],
+  "common_mistakes": [
+   "Curling the bar down with the biceps.",
+   "Leaning back too far."
+  ],
+  "regressions": [
+   "Close-grip lat pulldown"
+  ],
+  "progressions": [
+   "Chin-ups"
+  ],
+  "safety": "Avoid a very narrow grip if your wrists or elbows complain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "neutralpull",
+  "name": "Neutral-grip lat pulldown",
+  "aliases": [
+   "Parallel-grip pulldown",
+   "Wide neutral-grip pulldown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Brachialis",
+   "Teres major"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Lat pulldown machine",
+   "Neutral-grip (MAG) bar"
+  ],
+  "req": "latpulldown|cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Hold the parallel handles palms facing each other.",
+   "Pull the elbows straight down to your ribs.",
+   "Pause briefly with the chest up."
+  ],
+  "common_mistakes": [
+   "Shrugging at the top.",
+   "Partial reps without a full stretch."
+  ],
+  "regressions": [
+   "Wide-grip lat pulldown"
+  ],
+  "progressions": [
+   "Neutral-grip pull-up"
+  ],
+  "safety": "Shoulder-friendly grip; good if wide grip bothers your shoulders.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "behindneckpull",
+  "name": "Behind-the-neck lat pulldown",
+  "aliases": [
+   "Behind-the-head pulldown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Rear delts",
+   "Biceps"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Lat pulldown machine",
+   "Long lat bar"
+  ],
+  "req": "latpulldown|cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Lean your head slightly forward under the bar.",
+   "Pull only to the base of your skull.",
+   "Keep the movement slow and controlled."
+  ],
+  "common_mistakes": [
+   "Jutting the head forward to clear the bar.",
+   "Using heavy weight with poor shoulder mobility."
+  ],
+  "regressions": [
+   "Wide-grip lat pulldown"
+  ],
+  "progressions": [],
+  "safety": "Only use if you have good shoulder external rotation; skip it if it pinches.",
+  "video": null,
+  "notes": "Front pulldowns train the same muscles with less shoulder stress."
+ },
+ {
+  "id": "sapulldown",
+  "name": "Single-arm lat pulldown",
+  "aliases": [
+   "One-arm lat pulldown",
+   "Unilateral pulldown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Teres major"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Lat pulldown machine",
+   "Single handle"
+  ],
+  "req": "latpulldown|cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Use a single D-handle and sit tall.",
+   "Pull the elbow down to your hip.",
+   "Let the arm reach high for a full stretch."
+  ],
+  "common_mistakes": [
+   "Twisting the torso to cheat.",
+   "Shrugging the working shoulder."
+  ],
+  "regressions": [
+   "Wide-grip lat pulldown"
+  ],
+  "progressions": [
+   "Kneeling single-arm cable pulldown"
+  ],
+  "safety": "Keep the free hand on the thigh pad for stability.",
+  "video": null,
+  "notes": "Great for fixing side-to-side imbalances."
+ },
+ {
+  "id": "kneelsapull",
+  "name": "Kneeling single-arm cable pulldown",
+  "aliases": [
+   "Half-kneeling one-arm pulldown",
+   "Single-arm high cable pulldown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Core"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Set the pulley high and kneel in front of it.",
+   "Drive the elbow down toward your hip.",
+   "Keep ribs down and hips square."
+  ],
+  "common_mistakes": [
+   "Leaning sideways to finish the rep.",
+   "Pulling the hand past the shoulder line."
+  ],
+  "regressions": [
+   "Single-arm lat pulldown"
+  ],
+  "progressions": [
+   "Cross-body cable lat pulldown"
+  ],
+  "safety": "Use a mat under the knee.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "crossbodypull",
+  "name": "Cross-body cable lat pulldown",
+  "aliases": [
+   "Cross-body single-arm pulldown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Teres major",
+   "Biceps"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Set the pulley high and reach across to the opposite handle.",
+   "Pull the elbow down and in toward your side.",
+   "Feel a big stretch at the top."
+  ],
+  "common_mistakes": [
+   "Turning it into a straight-arm pulldown.",
+   "Rotating the whole torso."
+  ],
+  "regressions": [
+   "Single-arm lat pulldown"
+  ],
+  "progressions": [],
+  "safety": "Use a weight you can control through the full arc.",
+  "video": null,
+  "notes": "Works well in a cable crossover with the far pulley."
+ },
+ {
+  "id": "straightarm",
+  "name": "Straight-arm pulldown",
+  "aliases": [
+   "Lat pushdown",
+   "Straight-arm lat pulldown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Teres major",
+   "Triceps (long head)",
+   "Core"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "Straight bar"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Hinge slightly with arms long and soft elbows.",
+   "Sweep the bar down to your thighs.",
+   "Keep the chest up and ribs down."
+  ],
+  "common_mistakes": [
+   "Bending elbows into a tricep pushdown.",
+   "Using the hips to swing the weight."
+  ],
+  "regressions": [
+   "Band straight-arm pulldown"
+  ],
+  "progressions": [
+   "Lying cable pullover"
+  ],
+  "safety": "Keep the weight moderate; it's a feel exercise.",
+  "video": null,
+  "notes": "Great lat warm-up before pull-ups or pulldowns."
+ },
+ {
+  "id": "ropestraightarm",
+  "name": "Rope straight-arm pulldown",
+  "aliases": [
+   "Rope lat pulldown (straight-arm)",
+   "Rope pullover"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Teres major",
+   "Core"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "Rope attachment"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Hinge forward with arms long.",
+   "Pull the rope to your hips and flare the ends apart.",
+   "Return slowly until you feel the lats stretch."
+  ],
+  "common_mistakes": [
+   "Bending at the elbows.",
+   "Shrugging toward the ears."
+  ],
+  "regressions": [
+   "Straight-arm pulldown"
+  ],
+  "progressions": [
+   "Lying cable pullover"
+  ],
+  "safety": "Keep the spine neutral as you hinge.",
+  "video": null,
+  "notes": "The rope allows a slightly longer range than the bar."
+ },
+ {
+  "id": "cablepullover",
+  "name": "Lying cable pullover",
+  "aliases": [
+   "Cable pullover"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Triceps (long head)",
+   "Core"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "Flat bench",
+   "Straight bar or rope"
+  ],
+  "req": "cablecross|functional,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie on a bench with head toward a low pulley.",
+   "Arms long, pull the bar over to your thighs.",
+   "Keep your lower back flat on the bench."
+  ],
+  "common_mistakes": [
+   "Bending the elbows a lot.",
+   "Arching the back at the stretch."
+  ],
+  "regressions": [
+   "Straight-arm pulldown"
+  ],
+  "progressions": [],
+  "safety": "Keep the stretch overhead within a pain-free range.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kayakrow",
+  "name": "Kayak row",
+  "aliases": [
+   "Lat pulldown kayak row",
+   "Paddle pulldown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Biceps",
+   "Rear delts"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Lat pulldown machine",
+   "Long lat bar"
+  ],
+  "req": "latpulldown|cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Hold the bar wide and pull one end down to the hip.",
+   "Rotate slightly toward the working side.",
+   "Alternate sides like paddling a kayak."
+  ],
+  "common_mistakes": [
+   "Using too much weight and losing control of the bar.",
+   "Not returning to full stretch between sides."
+  ],
+  "regressions": [
+   "Single-arm lat pulldown"
+  ],
+  "progressions": [],
+  "safety": "Keep the movement controlled; the bar can swing.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cablerow",
+  "name": "Seated cable row",
+  "aliases": [
+   "Seated row",
+   "V-handle cable row",
+   "Low row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids",
+   "Middle traps"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts",
+   "Erector spinae"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Seated row machine",
+   "V-handle"
+  ],
+  "req": "seatedrow|cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Sit tall with a slight bend in the knees.",
+   "Pull the handle to your lower ribs.",
+   "Squeeze shoulder blades together, then reach forward."
+  ],
+  "common_mistakes": [
+   "Rocking back and forth with the torso.",
+   "Rounding the back on the return."
+  ],
+  "regressions": [
+   "Chest-supported row machine"
+  ],
+  "progressions": [
+   "Single-arm seated cable row"
+  ],
+  "safety": "Keep a neutral spine; don't let the stack pull you into a rounded back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "widecablerow",
+  "name": "Wide-grip seated cable row",
+  "aliases": [
+   "Wide-grip cable row",
+   "Lat bar seated row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Upper back",
+   "Rhomboids",
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Lats",
+   "Biceps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Seated row machine",
+   "Lat bar"
+  ],
+  "req": "seatedrow|cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold a lat bar wide, palms down.",
+   "Pull the bar to your lower chest, elbows out.",
+   "Pinch the shoulder blades together."
+  ],
+  "common_mistakes": [
+   "Shrugging up.",
+   "Leaning back to finish the rep."
+  ],
+  "regressions": [
+   "Seated cable row"
+  ],
+  "progressions": [
+   "Barbell bent-over row"
+  ],
+  "safety": "Keep the torso steady; don't swing.",
+  "video": null,
+  "notes": "Elbows-out pulling biases the upper back and rear delts."
+ },
+ {
+  "id": "revcablerow",
+  "name": "Reverse-grip seated cable row",
+  "aliases": [
+   "Underhand cable row",
+   "Supinated cable row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rhomboids"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Seated row machine",
+   "Straight bar"
+  ],
+  "req": "seatedrow|cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Grip a straight bar palms-up at shoulder width.",
+   "Drive elbows back close to your sides.",
+   "Pull to the belly button."
+  ],
+  "common_mistakes": [
+   "Curling with the biceps.",
+   "Leaning back excessively."
+  ],
+  "regressions": [
+   "Seated cable row"
+  ],
+  "progressions": [
+   "Single-arm seated cable row"
+  ],
+  "safety": "Use a grip width that's comfortable for your wrists.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sacablerow",
+  "name": "Single-arm seated cable row",
+  "aliases": [
+   "One-arm cable row",
+   "Unilateral seated row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts",
+   "Obliques"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Seated row machine",
+   "Single handle"
+  ],
+  "req": "seatedrow|cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Sit tall holding one D-handle.",
+   "Pull the elbow back past your ribs.",
+   "Allow a little reach forward for a stretch."
+  ],
+  "common_mistakes": [
+   "Twisting a lot to move the weight.",
+   "Shrugging the shoulder up."
+  ],
+  "regressions": [
+   "Seated cable row"
+  ],
+  "progressions": [
+   "Single-arm standing cable row"
+  ],
+  "safety": "Brace the free hand on the platform or thigh.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "standcablerow",
+  "name": "Standing cable row",
+  "aliases": [
+   "Standing two-arm cable row",
+   "Mid cable row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids",
+   "Middle traps"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Rear delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Cable machine",
+   "V-handle or rope"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Set the pulley at chest height.",
+   "Stand in a quarter squat with chest up.",
+   "Row to the lower ribs, then reach long."
+  ],
+  "common_mistakes": [
+   "Leaning back to use body weight.",
+   "Letting knees lock out."
+  ],
+  "regressions": [
+   "Seated cable row"
+  ],
+  "progressions": [
+   "Single-arm standing cable row"
+  ],
+  "safety": "Hold a stable athletic stance so you don't get pulled forward.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sastandrow",
+  "name": "Single-arm standing cable row",
+  "aliases": [
+   "One-arm standing cable row",
+   "Split-stance cable row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy",
+   "Unilateral",
+   "Core"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Obliques",
+   "Rear delts"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Stand in a split stance, opposite leg forward.",
+   "Row the handle to your hip.",
+   "Keep the hips facing the machine."
+  ],
+  "common_mistakes": [
+   "Over-rotating the torso.",
+   "Rushing the lowering phase."
+  ],
+  "regressions": [
+   "Standing cable row"
+  ],
+  "progressions": [],
+  "safety": "Start light to learn the anti-rotation control.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bentcablerow",
+  "name": "Bent-over cable row",
+  "aliases": [
+   "Cable bent-over row",
+   "Low-pulley bent row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Erector spinae",
+   "Rear delts"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Cable machine",
+   "Straight bar"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hinge forward with a flat back, knees soft.",
+   "Row the bar to your belly button.",
+   "Keep the torso angle fixed."
+  ],
+  "common_mistakes": [
+   "Standing up during each rep.",
+   "Rounding the lower back."
+  ],
+  "regressions": [
+   "Seated cable row"
+  ],
+  "progressions": [
+   "Barbell bent-over row"
+  ],
+  "safety": "Keep the spine neutral; skip if your lower back is irritated.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "highrow",
+  "name": "Cable high row",
+  "aliases": [
+   "Kneeling high row",
+   "High cable row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids",
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Lower traps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Cable machine",
+   "Rope or two handles"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Set the pulley high and kneel or sit facing it.",
+   "Pull handles toward your upper chest, elbows wide.",
+   "Squeeze shoulder blades down and together."
+  ],
+  "common_mistakes": [
+   "Leaning back to pull.",
+   "Shrugging toward the ears."
+  ],
+  "regressions": [
+   "Seated cable row"
+  ],
+  "progressions": [
+   "Single-arm high cable row"
+  ],
+  "safety": "Use a mat if kneeling.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sahighrow",
+  "name": "Single-arm high cable row",
+  "aliases": [
+   "One-arm high row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Compound",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Rhomboids"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Set the pulley high and stand in a split stance.",
+   "Row the elbow down and back toward the hip.",
+   "Reach up fully between reps."
+  ],
+  "common_mistakes": [
+   "Twisting the torso.",
+   "Using short partial reps."
+  ],
+  "regressions": [
+   "Cable high row"
+  ],
+  "progressions": [],
+  "safety": "Keep the shoulder down away from the ear.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cableshrug",
+  "name": "Cable shrug",
+  "aliases": [
+   "Straight-bar cable shrug"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Upper traps"
+  ],
+  "secondary_muscles": [
+   "Forearms",
+   "Levator scapulae"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Straight bar"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand close to a low pulley holding the bar.",
+   "Shrug the shoulders straight up to the ears.",
+   "Pause, then lower slowly."
+  ],
+  "common_mistakes": [
+   "Rolling the shoulders in circles.",
+   "Bending the elbows."
+  ],
+  "regressions": [
+   "Dumbbell shrug"
+  ],
+  "progressions": [
+   "Single-arm cable shrug"
+  ],
+  "safety": "Keep the neck relaxed and chin neutral.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sacableshrug",
+  "name": "Single-arm cable shrug",
+  "aliases": [
+   "One-arm cable shrug",
+   "Side cable shrug"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Back",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Upper traps"
+  ],
+  "secondary_muscles": [
+   "Levator scapulae",
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Stand side-on to a low pulley holding one handle.",
+   "Shrug up and slightly back.",
+   "Lower slowly to a full stretch."
+  ],
+  "common_mistakes": [
+   "Leaning away from the cable.",
+   "Jerking the weight."
+  ],
+  "regressions": [
+   "Cable shrug"
+  ],
+  "progressions": [],
+  "safety": "Keep the neck neutral and avoid tilting the head.",
+  "video": null,
+  "notes": "The angled pull lines up well with the upper trap fibres."
+ },
+ {
+  "id": "facepull",
+  "name": "Rope face pull",
+  "aliases": [
+   "Face pull",
+   "Cable face pull"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Hypertrophy",
+   "Rehab",
+   "Warm-up"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts",
+   "Middle traps"
+  ],
+  "secondary_muscles": [
+   "Rotator cuff",
+   "Rhomboids"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Cable machine",
+   "Rope attachment"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Set the rope at forehead height.",
+   "Pull toward your face, splitting the rope.",
+   "Finish with hands beside your ears, thumbs back."
+  ],
+  "common_mistakes": [
+   "Pulling to the chest instead of the face.",
+   "Using heavy weight and leaning back."
+  ],
+  "regressions": [
+   "Band pull-apart"
+  ],
+  "progressions": [
+   "Cable rear delt row"
+  ],
+  "safety": "Keep it light and smooth; it's a shoulder-health move.",
+  "video": null,
+  "notes": "Great for posture and shoulder health; kneeling version reduces cheating."
+ },
+ {
+  "id": "cablelat",
+  "name": "Cable lateral raise",
+  "aliases": [
+   "Single-arm cable lateral raise",
+   "One-arm cable side raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Upper traps",
+   "Supraspinatus"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Stand side-on to a low pulley, handle in the far hand.",
+   "Raise the arm out to shoulder height.",
+   "Lead with the elbow and lower slowly."
+  ],
+  "common_mistakes": [
+   "Swinging the body.",
+   "Raising above shoulder height with shrugged traps."
+  ],
+  "regressions": [
+   "Dumbbell lateral raise"
+  ],
+  "progressions": [
+   "Cable lean-away lateral raise"
+  ],
+  "safety": "Keep the weight light enough for strict reps.",
+  "video": null,
+  "notes": "Constant tension at the bottom, where dumbbells go slack."
+ },
+ {
+  "id": "leanawaylat",
+  "name": "Cable lean-away lateral raise",
+  "aliases": [
+   "Leaning cable lateral raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Supraspinatus"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Hold the machine and lean away from a low pulley.",
+   "Raise the arm out to the side.",
+   "Keep a slight bend in the elbow."
+  ],
+  "common_mistakes": [
+   "Changing the lean during the set.",
+   "Letting the wrist lead above the elbow."
+  ],
+  "regressions": [
+   "Cable lateral raise"
+  ],
+  "progressions": [
+   "Behind-the-back cable lateral raise"
+  ],
+  "safety": "Keep a firm grip on the machine with the free hand.",
+  "video": null,
+  "notes": "Leaning away increases tension at the bottom of the range."
+ },
+ {
+  "id": "behindbacklat",
+  "name": "Behind-the-back cable lateral raise",
+  "aliases": [
+   "Behind-the-body cable lateral raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Rear delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handle or ankle strap"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Stand side-on with the cable running behind your back.",
+   "Raise the arm out to the side.",
+   "Keep the torso still and upright."
+  ],
+  "common_mistakes": [
+   "Turning the hips.",
+   "Using too much weight."
+  ],
+  "regressions": [
+   "Cable lateral raise"
+  ],
+  "progressions": [],
+  "safety": "Keep it light; the start position stretches the shoulder.",
+  "video": null,
+  "notes": "An ankle strap around the wrist removes grip from the movement."
+ },
+ {
+  "id": "twoarmcablelat",
+  "name": "Two-arm cable lateral raise",
+  "aliases": [
+   "Crossover lateral raise",
+   "Cable Y-cross lateral raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Upper traps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handles"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand in the middle of a crossover with low pulleys.",
+   "Hold opposite handles crossed in front.",
+   "Raise both arms out to shoulder height."
+  ],
+  "common_mistakes": [
+   "Shrugging up.",
+   "Letting the handles cross unevenly."
+  ],
+  "regressions": [
+   "Cable lateral raise"
+  ],
+  "progressions": [],
+  "safety": "Use light weights and focus on smooth tempo.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cableyraise",
+  "name": "Cable Y-raise",
+  "aliases": [
+   "Cable Y raise",
+   "Low cable Y-raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Hypertrophy",
+   "Rehab"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts",
+   "Lower traps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Rotator cuff"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handles"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Hold opposite low handles crossed in front of you.",
+   "Raise the arms up and out into a Y.",
+   "Stop when arms are just above head height."
+  ],
+  "common_mistakes": [
+   "Arching the lower back.",
+   "Shrugging the traps."
+  ],
+  "regressions": [
+   "Cable lateral raise"
+  ],
+  "progressions": [],
+  "safety": "Keep it light; stop if you feel pinching overhead.",
+  "video": null,
+  "notes": "Good for upper-back and shoulder balance."
+ },
+ {
+  "id": "frontcable",
+  "name": "Cable front raise",
+  "aliases": [
+   "Rope front raise",
+   "Bar cable front raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts"
+  ],
+  "secondary_muscles": [
+   "Upper chest",
+   "Serratus"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Rope or straight bar"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand facing away from a low pulley.",
+   "Raise the attachment to eye level with straight arms.",
+   "Lower slowly without swinging."
+  ],
+  "common_mistakes": [
+   "Leaning back to lift.",
+   "Raising too high and shrugging."
+  ],
+  "regressions": [
+   "Dumbbell front raise"
+  ],
+  "progressions": [
+   "Single-arm cable front raise"
+  ],
+  "safety": "Keep the core tight to protect the lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sacablefront",
+  "name": "Single-arm cable front raise",
+  "aliases": [
+   "One-arm cable front raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts"
+  ],
+  "secondary_muscles": [
+   "Upper chest"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Stand facing away with the cable between your legs.",
+   "Raise the arm straight to eye level.",
+   "Keep the torso square."
+  ],
+  "common_mistakes": [
+   "Rotating the torso.",
+   "Locking the elbow hard."
+  ],
+  "regressions": [
+   "Cable front raise"
+  ],
+  "progressions": [],
+  "safety": "Keep the weight light; front delts already get lots of pressing work.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "revfly",
+  "name": "Reverse cable fly",
+  "aliases": [
+   "Cable rear delt fly",
+   "Standing reverse crossover"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Middle traps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "No attachment or single handles"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Set pulleys at shoulder height and cross the cables.",
+   "Pull arms out wide with soft elbows.",
+   "Keep the chest tall and don't shrug."
+  ],
+  "common_mistakes": [
+   "Squeezing shoulder blades too hard and using traps.",
+   "Bending the elbows into a row."
+  ],
+  "regressions": [
+   "Rear delt machine"
+  ],
+  "progressions": [
+   "Single-arm cable reverse fly"
+  ],
+  "safety": "Use light weight; rear delts are small muscles.",
+  "video": null,
+  "notes": "Hold the cable ends directly or use handles."
+ },
+ {
+  "id": "sacablerevfly",
+  "name": "Single-arm cable reverse fly",
+  "aliases": [
+   "One-arm cable rear delt fly"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Middle traps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Stand side-on with the pulley at shoulder height.",
+   "Reach across and pull the arm out wide.",
+   "Stop when the arm is in line with your body."
+  ],
+  "common_mistakes": [
+   "Rotating the torso.",
+   "Overextending behind the body."
+  ],
+  "regressions": [
+   "Reverse cable fly"
+  ],
+  "progressions": [
+   "Bent-over cable rear delt raise"
+  ],
+  "safety": "Keep the movement smooth and light.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bentcablerear",
+  "name": "Bent-over cable rear delt raise",
+  "aliases": [
+   "Bent-over cable reverse fly",
+   "Low cable rear delt raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Middle traps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handles"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Hinge forward with crossed low cables.",
+   "Raise arms out to the sides.",
+   "Hold the hinge without bouncing."
+  ],
+  "common_mistakes": [
+   "Standing up as you lift.",
+   "Rounding the lower back."
+  ],
+  "regressions": [
+   "Reverse cable fly"
+  ],
+  "progressions": [],
+  "safety": "Keep a neutral spine; use a bench for chest support if needed.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "reardeltrow",
+  "name": "Cable rear delt row",
+  "aliases": [
+   "Rope rear delt row",
+   "Wide cable row to face"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rear delts"
+  ],
+  "secondary_muscles": [
+   "Rhomboids",
+   "Middle traps",
+   "Biceps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Cable machine",
+   "Rope attachment"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Set the pulley at chest height.",
+   "Row with elbows high and wide.",
+   "Pull to the upper chest, not the face."
+  ],
+  "common_mistakes": [
+   "Dropping the elbows.",
+   "Leaning back to cheat."
+  ],
+  "regressions": [
+   "Rope face pull"
+  ],
+  "progressions": [],
+  "safety": "Keep shoulders down and away from ears.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "uprightrow",
+  "name": "Cable upright row",
+  "aliases": [
+   "Straight-bar cable upright row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts",
+   "Upper traps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Biceps"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Cable machine",
+   "Straight or EZ bar"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold the bar shoulder-width at a low pulley.",
+   "Lead with the elbows up to chest height.",
+   "Keep the bar close to your body."
+  ],
+  "common_mistakes": [
+   "Pulling the hands higher than the elbows.",
+   "Using a very narrow grip."
+  ],
+  "regressions": [
+   "Cable lateral raise"
+  ],
+  "progressions": [
+   "Rope cable upright row"
+  ],
+  "safety": "Stop at chest height if you feel shoulder pinching.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ropeupright",
+  "name": "Rope cable upright row",
+  "aliases": [
+   "Rope upright row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts",
+   "Upper traps"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Cable machine",
+   "Rope attachment"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold the rope ends at a low pulley.",
+   "Pull up and apart, elbows leading.",
+   "Stop at chest height."
+  ],
+  "common_mistakes": [
+   "Raising elbows above shoulders.",
+   "Leaning back."
+  ],
+  "regressions": [
+   "Cable upright row"
+  ],
+  "progressions": [],
+  "safety": "The rope lets wrists move freely; stop if shoulders pinch.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cableohpress",
+  "name": "Cable shoulder press",
+  "aliases": [
+   "Standing cable overhead press",
+   "Seated cable shoulder press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts",
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Upper traps",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Cable machine",
+   "Single handles"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Set pulleys low and stand or sit between them.",
+   "Press the handles overhead.",
+   "Keep ribs down and avoid arching."
+  ],
+  "common_mistakes": [
+   "Leaning back.",
+   "Letting elbows drift behind the body."
+  ],
+  "regressions": [
+   "Seated dumbbell shoulder press"
+  ],
+  "progressions": [
+   "Single-arm half-kneeling cable press"
+  ],
+  "safety": "Brace your core so the lower back doesn't arch.",
+  "video": null,
+  "notes": "Single-arm half-kneeling version adds core work."
+ },
+ {
+  "id": "cableexrot",
+  "name": "Cable external rotation",
+  "aliases": [
+   "Cable shoulder external rotation",
+   "Cable ER"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral",
+   "Rehab",
+   "Warm-up"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rotator cuff (infraspinatus, teres minor)"
+  ],
+  "secondary_muscles": [
+   "Rear delts"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "15 / side",
+  "form_cues": [
+   "Set the pulley at elbow height, stand side-on.",
+   "Keep elbow tucked, rotate the forearm outward.",
+   "Return slowly."
+  ],
+  "common_mistakes": [
+   "Letting the elbow drift away from the side.",
+   "Using too much weight."
+  ],
+  "regressions": [
+   "Band external rotation"
+  ],
+  "progressions": [],
+  "safety": "Use very light weight; stop if you feel sharp pain.",
+  "video": null,
+  "notes": "Place a rolled towel between elbow and side."
+ },
+ {
+  "id": "cableinrot",
+  "name": "Cable internal rotation",
+  "aliases": [
+   "Cable shoulder internal rotation"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Shoulders",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral",
+   "Rehab",
+   "Warm-up"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Rotator cuff (subscapularis)"
+  ],
+  "secondary_muscles": [
+   "Chest"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 2,
+  "reps": "15 / side",
+  "form_cues": [
+   "Stand side-on with the pulley at elbow height.",
+   "Keep the elbow at your side.",
+   "Rotate the forearm across your stomach."
+  ],
+  "common_mistakes": [
+   "Twisting the torso.",
+   "Lifting the elbow."
+  ],
+  "regressions": [
+   "Band internal rotation"
+  ],
+  "progressions": [],
+  "safety": "Light weight only; this is a rehab and prehab move.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cablecurlbar",
+  "name": "Cable bar curl",
+  "aliases": [
+   "Straight-bar cable curl",
+   "Cable curl",
+   "EZ-bar cable curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis",
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Straight or EZ bar"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Stand close to a low pulley.",
+   "Keep elbows pinned to your sides.",
+   "Curl to shoulder height and lower slowly."
+  ],
+  "common_mistakes": [
+   "Swinging the hips.",
+   "Letting elbows drift forward."
+  ],
+  "regressions": [
+   "Band curl"
+  ],
+  "progressions": [
+   "Cable preacher curl"
+  ],
+  "safety": "Use a weight you can lower under control.",
+  "video": null,
+  "notes": "An EZ bar is easier on the wrists."
+ },
+ {
+  "id": "ropecurl",
+  "name": "Rope hammer curl",
+  "aliases": [
+   "Cable rope hammer curl",
+   "Cable hammer curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Brachialis",
+   "Brachioradialis"
+  ],
+  "secondary_muscles": [
+   "Biceps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Rope attachment"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold the rope with palms facing each other.",
+   "Curl up keeping elbows still.",
+   "Lower all the way down."
+  ],
+  "common_mistakes": [
+   "Rocking the torso.",
+   "Half reps at the top."
+  ],
+  "regressions": [
+   "Hammer curl"
+  ],
+  "progressions": [
+   "Cross-body cable hammer curl"
+  ],
+  "safety": "Keep wrists straight, not bent back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sacablecurl",
+  "name": "Single-arm cable curl",
+  "aliases": [
+   "One-arm cable curl",
+   "D-handle cable curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Hold a D-handle at a low pulley.",
+   "Curl with the palm turning up.",
+   "Squeeze at the top, lower slowly."
+  ],
+  "common_mistakes": [
+   "Leaning away to help.",
+   "Elbow moving forward."
+  ],
+  "regressions": [
+   "Cable bar curl"
+  ],
+  "progressions": [
+   "Bayesian cable curl"
+  ],
+  "safety": "Keep the shoulder still.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "highcablecurl",
+  "name": "High cable curl",
+  "aliases": [
+   "Overhead cable curl",
+   "Double-biceps cable curl",
+   "Cable crossover curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handles"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand between high pulleys, arms out to the sides.",
+   "Curl the handles toward your ears.",
+   "Keep upper arms level with the shoulders."
+  ],
+  "common_mistakes": [
+   "Dropping the elbows.",
+   "Using too much weight."
+  ],
+  "regressions": [
+   "Single-arm cable curl"
+  ],
+  "progressions": [],
+  "safety": "Use light weight; shoulders are in an exposed position.",
+  "video": null,
+  "notes": "Hits the biceps in a shortened, peak-contraction position."
+ },
+ {
+  "id": "bayesian",
+  "name": "Bayesian cable curl",
+  "aliases": [
+   "Behind-the-body cable curl",
+   "Face-away cable curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps (long head)"
+  ],
+  "secondary_muscles": [
+   "Brachialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Stand facing away from a low pulley.",
+   "Let the arm hang slightly behind you.",
+   "Curl without letting the elbow drift forward."
+  ],
+  "common_mistakes": [
+   "Bringing the elbow forward to finish.",
+   "Leaning to shorten the stretch."
+  ],
+  "regressions": [
+   "Single-arm cable curl"
+  ],
+  "progressions": [],
+  "safety": "Ease into the stretch if your front shoulder feels tight.",
+  "video": null,
+  "notes": "Trains the biceps in a lengthened position."
+ },
+ {
+  "id": "cablepreacher",
+  "name": "Cable preacher curl",
+  "aliases": [
+   "Preacher cable curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Preacher bench",
+   "Straight or EZ bar"
+  ],
+  "req": "cablecross|functional,preacher",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Set a preacher bench in front of a low pulley.",
+   "Rest the upper arms flat on the pad.",
+   "Curl up and lower to nearly straight."
+  ],
+  "common_mistakes": [
+   "Lifting the elbows off the pad.",
+   "Dropping fast at the bottom."
+  ],
+  "regressions": [
+   "Cable bar curl"
+  ],
+  "progressions": [],
+  "safety": "Don't snap the elbows straight at the bottom.",
+  "video": null,
+  "notes": "Single-handle version works one arm at a time."
+ },
+ {
+  "id": "lyingcablecurl",
+  "name": "Lying cable curl",
+  "aliases": [
+   "Supine cable curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Straight bar",
+   "Floor or bench"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie on your back with feet toward a low pulley.",
+   "Keep upper arms on the floor.",
+   "Curl the bar toward your forehead."
+  ],
+  "common_mistakes": [
+   "Lifting elbows off the floor.",
+   "Using momentum."
+  ],
+  "regressions": [
+   "Cable bar curl"
+  ],
+  "progressions": [],
+  "safety": "Use a mat for comfort.",
+  "video": null,
+  "notes": "Locks out body swing for very strict reps."
+ },
+ {
+  "id": "cablerevcurl",
+  "name": "Cable reverse curl",
+  "aliases": [
+   "Reverse-grip cable curl",
+   "Overhand cable curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Brachioradialis",
+   "Brachialis"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Forearm extensors"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Straight or EZ bar"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Grip the bar palms down.",
+   "Curl up with wrists straight.",
+   "Lower slowly."
+  ],
+  "common_mistakes": [
+   "Letting wrists bend back.",
+   "Too heavy a weight."
+  ],
+  "regressions": [
+   "Cable bar curl"
+  ],
+  "progressions": [],
+  "safety": "Use an EZ bar if straight-bar wrists ache.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "crossbodycurl",
+  "name": "Cross-body cable hammer curl",
+  "aliases": [
+   "Cross-body cable curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Brachialis",
+   "Brachioradialis"
+  ],
+  "secondary_muscles": [
+   "Biceps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Rope or single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Stand side-on to a low pulley.",
+   "Curl the handle across toward the opposite shoulder.",
+   "Keep the elbow tight to the side."
+  ],
+  "common_mistakes": [
+   "Swinging the arm.",
+   "Twisting the torso."
+  ],
+  "regressions": [
+   "Rope hammer curl"
+  ],
+  "progressions": [],
+  "safety": "Keep wrist neutral.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cableconcurl",
+  "name": "Cable concentration curl",
+  "aliases": [
+   "Kneeling cable concentration curl",
+   "Seated cable concentration curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Brachialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Kneel or sit with the elbow braced on the thigh.",
+   "Curl the handle up slowly.",
+   "Squeeze hard at the top."
+  ],
+  "common_mistakes": [
+   "Lifting the elbow off the thigh.",
+   "Short range."
+  ],
+  "regressions": [
+   "Single-arm cable curl"
+  ],
+  "progressions": [],
+  "safety": "Choose a weight you can control.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cabledrag",
+  "name": "Cable drag curl",
+  "aliases": [
+   "Drag curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps (long head)"
+  ],
+  "secondary_muscles": [
+   "Brachialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Straight bar"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Stand close to a low pulley.",
+   "Drag the bar up your body, elbows going back.",
+   "Keep the bar touching your torso."
+  ],
+  "common_mistakes": [
+   "Letting elbows come forward.",
+   "Shrugging."
+  ],
+  "regressions": [
+   "Cable bar curl"
+  ],
+  "progressions": [],
+  "safety": "Stand close so the cable runs vertically.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cablewristcurl",
+  "name": "Cable wrist curl",
+  "aliases": [
+   "Cable forearm curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Forearm flexors"
+  ],
+  "secondary_muscles": [
+   "Grip"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Straight bar",
+   "Bench"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Kneel or sit with forearms on a bench, palms up.",
+   "Let the bar roll to your fingers.",
+   "Curl the wrists up and squeeze."
+  ],
+  "common_mistakes": [
+   "Lifting forearms off the bench.",
+   "Bouncing the weight."
+  ],
+  "regressions": [
+   "Wrist curl"
+  ],
+  "progressions": [],
+  "safety": "Use light weight; wrist tendons get sore easily.",
+  "video": null,
+  "notes": "Flip palms down for a reverse wrist curl."
+ },
+ {
+  "id": "ropepush",
+  "name": "Rope pushdown",
+  "aliases": [
+   "Rope tricep pushdown",
+   "Cable rope pushdown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "Rope attachment"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Set the rope high and pin elbows to your sides.",
+   "Push down and spread the rope at the bottom.",
+   "Let forearms rise only to parallel."
+  ],
+  "common_mistakes": [
+   "Elbows drifting forward.",
+   "Leaning over to use body weight."
+  ],
+  "regressions": [
+   "Band pushdown"
+  ],
+  "progressions": [
+   "Overhead rope extension"
+  ],
+  "safety": "Keep wrists neutral and shoulders down.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "barpush",
+  "name": "Straight-bar pushdown",
+  "aliases": [
+   "Cable tricep pushdown",
+   "Bar pushdown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "Straight bar"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Grip the bar palms down, shoulder width.",
+   "Elbows tight, push until arms are straight.",
+   "Control the bar back up."
+  ],
+  "common_mistakes": [
+   "Flaring elbows.",
+   "Using shoulders to push."
+  ],
+  "regressions": [
+   "Band pushdown"
+  ],
+  "progressions": [
+   "V-bar pushdown"
+  ],
+  "safety": "Avoid locking out hard if elbows ache.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "vbarpush",
+  "name": "V-bar pushdown",
+  "aliases": [
+   "V-handle tricep pushdown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "V-handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold the V-handle with thumbs up top.",
+   "Keep elbows at your sides.",
+   "Press down to full extension."
+  ],
+  "common_mistakes": [
+   "Rocking the body.",
+   "Short range at the top."
+  ],
+  "regressions": [
+   "Straight-bar pushdown"
+  ],
+  "progressions": [
+   "Single-arm cable pushdown"
+  ],
+  "safety": "Use a weight you can lower slowly.",
+  "video": null,
+  "notes": "Usually allows the heaviest loads of the pushdown variations."
+ },
+ {
+  "id": "revpush",
+  "name": "Reverse-grip tricep pushdown",
+  "aliases": [
+   "Underhand pushdown",
+   "Supinated pushdown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "Straight or EZ bar"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Grip the bar palms up.",
+   "Keep elbows locked in place at your sides.",
+   "Push down until arms are straight."
+  ],
+  "common_mistakes": [
+   "Bending the wrists.",
+   "Going too heavy."
+  ],
+  "regressions": [
+   "Straight-bar pushdown"
+  ],
+  "progressions": [],
+  "safety": "Keep it light; wrists are in a weaker position.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sapush",
+  "name": "Single-arm cable pushdown",
+  "aliases": [
+   "One-arm tricep pushdown"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Hold a D-handle from a high pulley.",
+   "Pin the elbow and press down to straight.",
+   "Control the return."
+  ],
+  "common_mistakes": [
+   "Twisting the torso.",
+   "Elbow drifting out."
+  ],
+  "regressions": [
+   "Rope pushdown"
+  ],
+  "progressions": [
+   "Cross-body cable tricep extension"
+  ],
+  "safety": "Keep the shoulder down and still.",
+  "video": null,
+  "notes": "Underhand or overhand grip both work."
+ },
+ {
+  "id": "ohext",
+  "name": "Overhead rope extension",
+  "aliases": [
+   "Overhead cable tricep extension",
+   "Rope overhead extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps (long head)"
+  ],
+  "secondary_muscles": [
+   "Core"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "Rope attachment"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Face away from the pulley, rope behind your head.",
+   "Keep elbows pointing forward.",
+   "Extend until arms are straight."
+  ],
+  "common_mistakes": [
+   "Elbows flaring wide.",
+   "Arching the lower back."
+  ],
+  "regressions": [
+   "Rope pushdown"
+  ],
+  "progressions": [
+   "Single-arm overhead cable extension"
+  ],
+  "safety": "Use a split stance and brace to protect the lower back.",
+  "video": null,
+  "notes": "A straight bar works too; stretches the long head."
+ },
+ {
+  "id": "saohext",
+  "name": "Single-arm overhead cable extension",
+  "aliases": [
+   "One-arm overhead cable extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps (long head)"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Face away from a low pulley, handle behind the head.",
+   "Keep the upper arm by your ear.",
+   "Extend up until straight."
+  ],
+  "common_mistakes": [
+   "Upper arm moving.",
+   "Leaning sideways."
+  ],
+  "regressions": [
+   "Overhead rope extension"
+  ],
+  "progressions": [],
+  "safety": "Ease into the bottom stretch.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cablekickback",
+  "name": "Cable tricep kickback",
+  "aliases": [
+   "Cable kickback (triceps)",
+   "Single-arm cable kickback"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Rear delts"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "Single handle or no attachment"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Hinge forward holding a low cable.",
+   "Keep upper arm parallel to the floor.",
+   "Straighten the arm back and squeeze."
+  ],
+  "common_mistakes": [
+   "Swinging the upper arm.",
+   "Rounding the back."
+  ],
+  "regressions": [
+   "Dumbbell kickback"
+  ],
+  "progressions": [],
+  "safety": "Keep a flat back in the hinge.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "crossbodyext",
+  "name": "Cross-body cable tricep extension",
+  "aliases": [
+   "Cross cable tricep extension",
+   "Cable X tricep extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps (lateral head)"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "No attachment or single handles"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Hold opposite high cables crossed in front of your face.",
+   "Extend arms out and down to the sides.",
+   "Keep elbows at shoulder height."
+  ],
+  "common_mistakes": [
+   "Dropping elbows.",
+   "Turning it into a fly."
+  ],
+  "regressions": [
+   "Single-arm cable pushdown"
+  ],
+  "progressions": [],
+  "safety": "Use light weight; focus on squeezing the triceps.",
+  "video": null,
+  "notes": "Can be done one arm at a time."
+ },
+ {
+  "id": "lyingcableext",
+  "name": "Lying cable tricep extension",
+  "aliases": [
+   "Cable skull crusher"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Arms",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "Flat bench",
+   "Straight or EZ bar"
+  ],
+  "req": "cablecross|functional,flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie on a bench, head toward a low pulley.",
+   "Upper arms angled slightly back.",
+   "Extend the bar up, bend back toward your forehead."
+  ],
+  "common_mistakes": [
+   "Elbows flaring.",
+   "Moving the upper arms."
+  ],
+  "regressions": [
+   "Rope pushdown"
+  ],
+  "progressions": [
+   "EZ-bar skull crusher"
+  ],
+  "safety": "Control the bar near the head.",
+  "video": null,
+  "notes": "Constant tension version of a skull crusher."
+ },
+ {
+  "id": "kickback",
+  "name": "Cable glute kickback",
+  "aliases": [
+   "Standing cable kickback",
+   "Ankle-strap kickback"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Glutes",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "Ankle strap"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Attach the strap and hold the frame.",
+   "Kick the leg back with a slight knee bend.",
+   "Squeeze the glute without arching your back."
+  ],
+  "common_mistakes": [
+   "Swinging the leg.",
+   "Arching the lower back."
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Cable donkey kickback"
+  ],
+  "safety": "Keep core braced to protect the lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cablehipext",
+  "name": "Straight-leg cable hip extension",
+  "aliases": [
+   "Standing cable hip extension"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Glutes",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Lower back"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "Ankle strap"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Face the pulley with the strap on one ankle.",
+   "Keep the leg straight and push it back.",
+   "Stop before your lower back arches."
+  ],
+  "common_mistakes": [
+   "Leaning forward a lot.",
+   "Using momentum."
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Cable glute kickback"
+  ],
+  "safety": "Hold the frame for balance.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "donkeykick",
+  "name": "Cable donkey kickback",
+  "aliases": [
+   "Quadruped cable kickback"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Glutes",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [
+   "Cable machine",
+   "Ankle strap",
+   "Mat"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Get on all fours facing a low pulley.",
+   "Drive the heel up toward the ceiling.",
+   "Keep the hips square and back flat."
+  ],
+  "common_mistakes": [
+   "Rotating the hips.",
+   "Arching the lower back."
+  ],
+  "regressions": [
+   "Cable glute kickback"
+  ],
+  "progressions": [],
+  "safety": "Use a mat for your knees.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cablefirehydrant",
+  "name": "Cable fire hydrant",
+  "aliases": [
+   "Quadruped cable hip abduction"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Glutes",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glute medius"
+  ],
+  "secondary_muscles": [
+   "Glute max"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Ankle strap",
+   "Mat"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "On all fours, side-on to a low pulley.",
+   "Lift the bent knee out to the side.",
+   "Keep the torso still."
+  ],
+  "common_mistakes": [
+   "Leaning the body away.",
+   "Rushing the reps."
+  ],
+  "regressions": [
+   "Banded lateral walk"
+  ],
+  "progressions": [],
+  "safety": "Light weight; slow control matters more.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cableabduct",
+  "name": "Standing cable hip abduction",
+  "aliases": [
+   "Cable hip abduction",
+   "Ankle-strap leg raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Glutes",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glute medius",
+   "Glute minimus"
+  ],
+  "secondary_muscles": [
+   "TFL"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Ankle strap"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Stand side-on with the strap on the far ankle.",
+   "Lift the leg out to the side.",
+   "Keep the toes pointing forward."
+  ],
+  "common_mistakes": [
+   "Leaning the torso sideways.",
+   "Swinging the leg."
+  ],
+  "regressions": [
+   "Hip abduction machine"
+  ],
+  "progressions": [],
+  "safety": "Hold the frame for balance.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cableadduct",
+  "name": "Standing cable hip adduction",
+  "aliases": [
+   "Cable hip adduction",
+   "Cable inner thigh"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Hip flexors"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Ankle strap"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Stand side-on with the strap on the near ankle.",
+   "Pull the leg across your body.",
+   "Return slowly to the start."
+  ],
+  "common_mistakes": [
+   "Twisting the hips.",
+   "Too big a stretch out to the side."
+  ],
+  "regressions": [
+   "Hip adduction machine"
+  ],
+  "progressions": [],
+  "safety": "Ease into the outward stretch to avoid groin strains.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cablehipflex",
+  "name": "Standing cable hip flexion",
+  "aliases": [
+   "Cable knee drive",
+   "Cable hip flexor raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral",
+   "Rehab"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Cable machine",
+   "Ankle strap"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12 / side",
+  "form_cues": [
+   "Face away from a low pulley, strap on the ankle.",
+   "Drive the knee up to hip height.",
+   "Keep standing tall."
+  ],
+  "common_mistakes": [
+   "Leaning back.",
+   "Swinging the leg."
+  ],
+  "regressions": [],
+  "progressions": [],
+  "safety": "Hold the frame for balance.",
+  "video": null,
+  "notes": "Useful for runners and kicking sports."
+ },
+ {
+  "id": "cablelegcurl",
+  "name": "Standing cable hamstring curl",
+  "aliases": [
+   "Cable leg curl",
+   "Standing cable leg curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Isolation",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Cable machine",
+   "Ankle strap"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Face the pulley with the strap on the ankle.",
+   "Curl the heel toward the glute.",
+   "Keep the thigh still."
+  ],
+  "common_mistakes": [
+   "Moving the thigh forward and back.",
+   "Arching the back."
+  ],
+  "regressions": [
+   "Lying leg curl"
+  ],
+  "progressions": [],
+  "safety": "Hold the frame and keep hips steady.",
+  "video": null,
+  "notes": "Home-gym substitute for a leg curl machine."
+ },
+ {
+  "id": "pullthrough",
+  "name": "Cable pull-through",
+  "aliases": [
+   "Rope pull-through",
+   "Glute pull-through"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Glutes",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Erector spinae",
+   "Adductors"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Cable machine",
+   "Rope attachment"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Face away from a low pulley, rope between legs.",
+   "Push hips back with a flat back.",
+   "Drive hips forward and squeeze the glutes."
+  ],
+  "common_mistakes": [
+   "Squatting instead of hinging.",
+   "Pulling with the arms."
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Cable Romanian deadlift"
+  ],
+  "safety": "Walk far enough out that the stack doesn't touch at the top.",
+  "video": null,
+  "notes": "Good way to learn the hip hinge."
+ },
+ {
+  "id": "cablerdl",
+  "name": "Cable Romanian deadlift",
+  "aliases": [
+   "Cable RDL",
+   "Cable stiff-leg deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Erector spinae",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Cable machine",
+   "Straight bar or rope"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Stand close to a low pulley holding the bar.",
+   "Push the hips back, bar sliding down the thighs.",
+   "Stand up by squeezing the glutes."
+  ],
+  "common_mistakes": [
+   "Rounding the back.",
+   "Bending knees into a squat."
+  ],
+  "regressions": [
+   "Cable pull-through"
+  ],
+  "progressions": [
+   "Barbell Romanian deadlift"
+  ],
+  "safety": "Stop at mid-shin or when your back starts to round.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cableslrdl",
+  "name": "Single-leg cable Romanian deadlift",
+  "aliases": [
+   "Single-leg cable RDL"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Glutes",
+   "Compound",
+   "Hypertrophy",
+   "Unilateral",
+   "Balance"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Glute medius"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Hold the handle in the hand opposite the standing leg.",
+   "Hinge forward as the free leg goes back.",
+   "Keep hips level."
+  ],
+  "common_mistakes": [
+   "Opening the hips.",
+   "Rounding the spine."
+  ],
+  "regressions": [
+   "Cable Romanian deadlift"
+  ],
+  "progressions": [
+   "Single-leg Romanian deadlift"
+  ],
+  "safety": "Touch the frame with the free hand for balance if needed.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cablesquat",
+  "name": "Cable squat",
+  "aliases": [
+   "Cable goblet squat",
+   "Rope cable squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Cable machine",
+   "Rope or straight bar"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Hold the attachment at chest, lean back slightly.",
+   "Sit down between your heels.",
+   "Drive up through the whole foot."
+  ],
+  "common_mistakes": [
+   "Knees caving in.",
+   "Heels lifting."
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Goblet squat"
+  ],
+  "safety": "Keep the cable taut and stand far enough back.",
+  "video": null,
+  "notes": "The counterbalance helps beginners squat deeper."
+ },
+ {
+  "id": "cablesumo",
+  "name": "Cable sumo squat",
+  "aliases": [
+   "Wide-stance cable squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Adductors",
+   "Glutes",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Cable machine",
+   "Rope or straight bar"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand wide over a low pulley, toes out.",
+   "Squat straight down with the chest up.",
+   "Push knees out over toes."
+  ],
+  "common_mistakes": [
+   "Knees collapsing in.",
+   "Leaning forward."
+  ],
+  "regressions": [
+   "Cable squat"
+  ],
+  "progressions": [
+   "Sumo deadlift"
+  ],
+  "safety": "Stand on boxes for a deeper range if the stack hits the floor.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cablesplit",
+  "name": "Cable split squat",
+  "aliases": [
+   "Cable static lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Compound",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Cable machine",
+   "Single handles or rope"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Stand in a long split stance holding low cables.",
+   "Drop the back knee straight down.",
+   "Push through the front heel."
+  ],
+  "common_mistakes": [
+   "Front knee caving in.",
+   "Stance too short."
+  ],
+  "regressions": [
+   "Bodyweight split squat"
+  ],
+  "progressions": [
+   "Bulgarian split squat"
+  ],
+  "safety": "Keep the back knee off the floor.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cablerevlunge",
+  "name": "Cable reverse lunge",
+  "aliases": [
+   "Reverse cable lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Compound",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Face the pulley holding a handle at the chest.",
+   "Step back and lower the back knee.",
+   "Drive through the front foot to return."
+  ],
+  "common_mistakes": [
+   "Short steps.",
+   "Leaning forward too much."
+  ],
+  "regressions": [
+   "Cable split squat"
+  ],
+  "progressions": [
+   "Walking lunge"
+  ],
+  "safety": "Move slowly and keep balance.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cablelatlunge",
+  "name": "Cable lateral lunge",
+  "aliases": [
+   "Cable side lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Legs",
+   "Compound",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Adductors",
+   "Glutes",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Cable machine",
+   "Single handle"
+  ],
+  "req": "cablecross|functional",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Stand side-on holding a handle at the chest.",
+   "Step out wide and sit back into the hip.",
+   "Push back to the start."
+  ],
+  "common_mistakes": [
+   "Knee travelling past the toes inward.",
+   "Rounding the back."
+  ],
+  "regressions": [
+   "Cable squat"
+  ],
+  "progressions": [],
+  "safety": "Keep the trailing leg straight and the heel down.",
+  "video": null,
+  "notes": ""
+ }
+]

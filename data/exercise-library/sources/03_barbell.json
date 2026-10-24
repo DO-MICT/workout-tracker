@@ -1,0 +1,5948 @@
+[
+ {
+  "id": "backsquat",
+  "name": "Barbell back squat",
+  "aliases": [
+   "Back squat",
+   "High-bar squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Hamstrings",
+   "Lower back",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "5–8",
+  "form_cues": [
+   "Bar sits on your upper traps, hands just outside shoulders",
+   "Brace hard, then sit down between your heels",
+   "Drive up through mid-foot, chest and hips rising together"
+  ],
+  "common_mistakes": [
+   "Knees caving inward",
+   "Heels lifting off the floor",
+   "Cutting depth short as the weight climbs"
+  ],
+  "regressions": [
+   "Goblet squat",
+   "Box squat",
+   "Smith machine squat"
+  ],
+  "progressions": [
+   "Pause squat",
+   "Front squat",
+   "Low-bar back squat"
+  ],
+  "safety": "Squat inside a rack with safety pins set just below your bottom position.",
+  "video": null,
+  "notes": "Add a 2–3 sec pause at the bottom for a tougher, technique-focused variation."
+ },
+ {
+  "id": "lowbarsquat",
+  "name": "Low-bar back squat",
+  "aliases": [
+   "Low-bar squat",
+   "Powerlifting squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Lower back",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–6",
+  "form_cues": [
+   "Rest the bar on the shelf of your rear delts, below the traps",
+   "Push hips back and lean your chest forward more than high-bar",
+   "Keep wrists straight and elbows driving up out of the hole"
+  ],
+  "common_mistakes": [
+   "Bar rolling down the back",
+   "Wrists bent back taking the load",
+   "Turning the lift into a good morning"
+  ],
+  "regressions": [
+   "Barbell back squat",
+   "Box squat"
+  ],
+  "progressions": [
+   "Pause squat",
+   "Anderson squat"
+  ],
+  "safety": "Use safety pins and warm your shoulders up first; stop if elbows or wrists ache.",
+  "video": null,
+  "notes": "Common in powerlifting because the shorter lever lets you move more weight."
+ },
+ {
+  "id": "frontsquat",
+  "name": "Front squat",
+  "aliases": [
+   "Barbell front squat",
+   "Clean-grip front squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Power"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Core",
+   "Adductors"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "4–8",
+  "form_cues": [
+   "Rest the bar on your front delts with elbows high",
+   "Keep your torso upright as you sit straight down",
+   "Lead with the elbows as you drive up"
+  ],
+  "common_mistakes": [
+   "Elbows dropping and bar rolling forward",
+   "Rounding the upper back",
+   "Rising onto the toes"
+  ],
+  "regressions": [
+   "Goblet squat",
+   "Barbell back squat"
+  ],
+  "progressions": [
+   "Pause front squat",
+   "Squat clean"
+  ],
+  "safety": "Use safety pins; if the bar slips forward, push it away and step back.",
+  "video": null,
+  "notes": "Use a cross-arm grip or straps if wrist mobility limits the clean grip."
+ },
+ {
+  "id": "boxsquat",
+  "name": "Barbell box squat",
+  "aliases": [
+   "Box squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Rehab"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Lower back"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack",
+   "Box or bench"
+  ],
+  "req": "barbell,plates,powerrack,plyobox|flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–6",
+  "form_cues": [
+   "Set a box at or just below parallel",
+   "Sit back until you lightly touch the box, staying tight",
+   "Drive up hard without rocking off the box"
+  ],
+  "common_mistakes": [
+   "Crashing down onto the box",
+   "Relaxing completely on the box",
+   "Rocking forward to get up"
+  ],
+  "regressions": [
+   "Goblet squat",
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Barbell back squat",
+   "Pause squat"
+  ],
+  "safety": "Never drop onto the box under load; sit with control.",
+  "video": null,
+  "notes": "Great for teaching depth and hip drive, and easier on the knees."
+ },
+ {
+  "id": "zerchersquat",
+  "name": "Zercher squat",
+  "aliases": [
+   "Zercher barbell squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Core",
+   "Biceps",
+   "Adductors"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–8",
+  "form_cues": [
+   "Cradle the bar in the crooks of your elbows, hands together",
+   "Stay tall and brace as you squat between your knees",
+   "Keep elbows up so the bar doesn't drag you forward"
+  ],
+  "common_mistakes": [
+   "Rounding the upper back",
+   "Letting the elbows drop",
+   "Going too heavy before the arms adapt"
+  ],
+  "regressions": [
+   "Goblet squat",
+   "Front squat"
+  ],
+  "progressions": [
+   "Zercher deadlift",
+   "Zercher carry"
+  ],
+  "safety": "Pad the bar or wear long sleeves; set the rack hooks at mid-chest height.",
+  "video": null,
+  "notes": "Builds a strong upper back and brace; a favourite of strongmen."
+ },
+ {
+  "id": "ohsquat",
+  "name": "Overhead squat",
+  "aliases": [
+   "Barbell overhead squat",
+   "OHS"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Power",
+   "Mobility",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Upper back",
+   "Core",
+   "Triceps"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–5",
+  "form_cues": [
+   "Lock the bar overhead with a wide snatch grip",
+   "Push up into the bar and keep it over mid-foot",
+   "Sit straight down with your chest tall"
+  ],
+  "common_mistakes": [
+   "Bar drifting forward",
+   "Soft elbows",
+   "Heels lifting"
+  ],
+  "regressions": [
+   "PVC overhead squat",
+   "Front squat"
+  ],
+  "progressions": [
+   "Snatch balance",
+   "Snatch"
+  ],
+  "safety": "Practise with an empty bar; learn to dump the bar forward or back safely.",
+  "video": null,
+  "notes": "A key snatch accessory that builds overhead stability and mobility."
+ },
+ {
+  "id": "safetybarsquat",
+  "name": "Safety squat bar squat",
+  "aliases": [
+   "SSB squat",
+   "Yoke bar squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Rehab"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Core",
+   "Adductors"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Safety squat bar",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "5–8",
+  "form_cues": [
+   "Hold the handles lightly and keep elbows down",
+   "Brace and fight to keep your chest up",
+   "Sit down between your heels and drive straight up"
+  ],
+  "common_mistakes": [
+   "Letting the bar tip you forward",
+   "Pulling the handles too hard",
+   "Cutting depth"
+  ],
+  "regressions": [
+   "Box squat",
+   "Goblet squat"
+  ],
+  "progressions": [
+   "Barbell back squat",
+   "Pause squat"
+  ],
+  "safety": "Use safety pins; the bar's camber pushes you forward, so start lighter than your back squat.",
+  "video": null,
+  "notes": "Needs a safety squat bar (no app gear id; nearest is barbell). Shoulder-friendly squat option."
+ },
+ {
+  "id": "anderson",
+  "name": "Anderson squat",
+  "aliases": [
+   "Pin squat",
+   "Bottom-up squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–5",
+  "form_cues": [
+   "Set the pins at your sticking point and start under the bar",
+   "Get tight and brace before you push",
+   "Drive the bar off the pins without bouncing"
+  ],
+  "common_mistakes": [
+   "Loose start position",
+   "Bouncing the bar off the pins",
+   "Hips shooting up first"
+  ],
+  "regressions": [
+   "Box squat",
+   "Barbell back squat"
+  ],
+  "progressions": [
+   "Pause squat"
+  ],
+  "safety": "Pins must be secure and level; lower each rep back to the pins with control.",
+  "video": null,
+  "notes": "Starts from a dead stop to build strength out of the bottom."
+ },
+ {
+  "id": "bbhacksquat",
+  "name": "Barbell hack squat",
+  "aliases": [
+   "Behind-the-back deadlift",
+   "Rear deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Forearms",
+   "Traps"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Hold the bar behind your legs, arms straight",
+   "Squat down keeping your chest up and the bar close",
+   "Stand tall by pushing through the whole foot"
+  ],
+  "common_mistakes": [
+   "Bar scraping the calves",
+   "Leaning too far forward",
+   "Rounding the back at the bottom"
+  ],
+  "regressions": [
+   "Goblet squat"
+  ],
+  "progressions": [
+   "Hack squat"
+  ],
+  "safety": "Raise the plates on small blocks if the bar hits your heels.",
+  "video": null,
+  "notes": "Different from the machine hack squat; great quad builder with just a barbell."
+ },
+ {
+  "id": "bbsplitsquat",
+  "name": "Barbell split squat",
+  "aliases": [
+   "Barbell static lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Take a long split stance with feet hip-width apart",
+   "Drop the back knee straight down toward the floor",
+   "Push through the front foot to rise"
+  ],
+  "common_mistakes": [
+   "Feet in a straight line, causing wobble",
+   "Front heel lifting",
+   "Leaning far forward"
+  ],
+  "regressions": [
+   "Bodyweight split squat",
+   "Dumbbell split squat"
+  ],
+  "progressions": [
+   "Barbell Bulgarian split squat",
+   "Barbell walking lunge"
+  ],
+  "safety": "Start light to find balance; unrack and rerack with both feet together.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bbbss",
+  "name": "Barbell Bulgarian split squat",
+  "aliases": [
+   "Barbell rear-foot-elevated split squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Compound",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack",
+   "Flat bench"
+  ],
+  "req": "barbell,plates,powerrack,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "6–8 / side",
+  "form_cues": [
+   "Rest the back foot laces-down on a bench",
+   "Lower straight down until the back knee nearly touches",
+   "Drive up through the front heel"
+  ],
+  "common_mistakes": [
+   "Front foot too close to the bench",
+   "Bouncing off the back leg",
+   "Losing balance under the bar"
+  ],
+  "regressions": [
+   "Bulgarian split squat",
+   "Barbell split squat"
+  ],
+  "progressions": [
+   "Smith machine Bulgarian split squat"
+  ],
+  "safety": "Master the dumbbell version first; balance is the limiter with a bar on your back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bbrevlunge",
+  "name": "Barbell reverse lunge",
+  "aliases": [
+   "Barbell back lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Adductors",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Step back far enough that the front shin stays fairly upright",
+   "Lower the back knee under control",
+   "Push off the front foot to return to standing"
+  ],
+  "common_mistakes": [
+   "Short step putting pressure on the front knee",
+   "Torso folding forward",
+   "Wobbly side-to-side steps"
+  ],
+  "regressions": [
+   "Reverse lunge",
+   "Barbell split squat"
+  ],
+  "progressions": [
+   "Barbell walking lunge",
+   "Deficit reverse lunge"
+  ],
+  "safety": "Use a lighter load than your squat and keep the area around you clear.",
+  "video": null,
+  "notes": "Usually kinder on the knees than forward lunges."
+ },
+ {
+  "id": "bbfwdlunge",
+  "name": "Barbell forward lunge",
+  "aliases": [
+   "Barbell lunge",
+   "Barbell front lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Adductors",
+   "Calves"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Step forward and land heel first",
+   "Drop the back knee straight down",
+   "Push firmly back to the start"
+  ],
+  "common_mistakes": [
+   "Knee shooting far past toes with heel lifting",
+   "Stepping too narrow",
+   "Slamming the knee down"
+  ],
+  "regressions": [
+   "Barbell reverse lunge",
+   "Bodyweight lunge"
+  ],
+  "progressions": [
+   "Barbell walking lunge"
+  ],
+  "safety": "Requires good balance and deceleration; start with an empty bar.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bbwalklunge",
+  "name": "Barbell walking lunge",
+  "aliases": [
+   "Walking lunge with barbell"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Adductors",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Take long, steady steps with feet hip-width apart",
+   "Lightly kiss the back knee to the floor",
+   "Drive through the front foot into the next step"
+  ],
+  "common_mistakes": [
+   "Rushing the steps",
+   "Narrow tightrope stance",
+   "Leaning forward under the bar"
+  ],
+  "regressions": [
+   "Walking lunge",
+   "Barbell reverse lunge"
+  ],
+  "progressions": [
+   "Barbell front-rack walking lunge"
+  ],
+  "safety": "Need a clear path; set the bar down if you lose balance rather than fighting it.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bblatlunge",
+  "name": "Barbell lateral lunge",
+  "aliases": [
+   "Barbell side lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Mobility"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Adductors",
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Step wide to the side and sit back into that hip",
+   "Keep the trailing leg straight and both feet flat",
+   "Push off the bent leg to return"
+  ],
+  "common_mistakes": [
+   "Knee caving in on the working leg",
+   "Rounding the back",
+   "Heel lifting"
+  ],
+  "regressions": [
+   "Bodyweight lateral lunge",
+   "Goblet lateral lunge"
+  ],
+  "progressions": [
+   "Barbell walking lunge"
+  ],
+  "safety": "Go light; the side-to-side load is harder to control under a bar.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bbstepup",
+  "name": "Barbell step-up",
+  "aliases": [
+   "Barbell box step-up"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack",
+   "Box"
+  ],
+  "req": "barbell,plates,powerrack,plyobox",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Plant your whole foot on a knee-height box",
+   "Drive up through the top heel, not the back toe",
+   "Lower slowly to the floor"
+  ],
+  "common_mistakes": [
+   "Pushing off with the bottom leg",
+   "Box too high",
+   "Knee caving in"
+  ],
+  "regressions": [
+   "Box step-up"
+  ],
+  "progressions": [
+   "Barbell walking lunge"
+  ],
+  "safety": "Use a sturdy, non-slip box and keep the height modest when loaded.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bbcalf",
+  "name": "Barbell standing calf raise",
+  "aliases": [
+   "Barbell calf raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Ankles"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "10–15",
+  "form_cues": [
+   "Stand tall with the bar on your back",
+   "Rise as high as you can onto the balls of your feet",
+   "Lower slowly to a full stretch"
+  ],
+  "common_mistakes": [
+   "Bouncing reps",
+   "Bending the knees",
+   "Short range of motion"
+  ],
+  "regressions": [
+   "Standing calf raise"
+  ],
+  "progressions": [
+   "Smith machine calf raise"
+  ],
+  "safety": "Stand on a plate edge for more range only once balance is solid.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bbjumpsquat",
+  "name": "Barbell jump squat",
+  "aliases": [
+   "Loaded jump squat"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Plyometric",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–5",
+  "form_cues": [
+   "Use a light bar, around 20–30% of your squat",
+   "Dip quickly and jump as high as you can",
+   "Land softly and reset before the next rep"
+  ],
+  "common_mistakes": [
+   "Going too heavy",
+   "Landing stiff-legged",
+   "Bar bouncing on the neck"
+  ],
+  "regressions": [
+   "Jump squat",
+   "Trap bar jump"
+  ],
+  "progressions": [
+   "Power clean"
+  ],
+  "safety": "Hold the bar tightly to your back; stop if your landings get sloppy.",
+  "video": null,
+  "notes": "Trap bar jumps are safer for most people."
+ },
+ {
+  "id": "deadlift",
+  "name": "Deadlift",
+  "aliases": [
+   "Conventional deadlift",
+   "Barbell deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Lower back"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Traps",
+   "Lats",
+   "Forearms",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–6",
+  "form_cues": [
+   "Bar over mid-foot, shins close, hands just outside legs",
+   "Pull the slack out, brace, then push the floor away",
+   "Lock out by squeezing glutes, not leaning back"
+  ],
+  "common_mistakes": [
+   "Rounding the lower back",
+   "Bar drifting away from the legs",
+   "Jerking the bar off the floor"
+  ],
+  "regressions": [
+   "Trap bar deadlift",
+   "Kettlebell deadlift",
+   "Rack pull"
+  ],
+  "progressions": [
+   "Deficit deadlift",
+   "Pause deadlift"
+  ],
+  "safety": "Keep a neutral spine; use bumper plates or pads if you might drop it.",
+  "video": null,
+  "notes": "Reset each rep for cleaner technique."
+ },
+ {
+  "id": "sumodl",
+  "name": "Sumo deadlift",
+  "aliases": [
+   "Wide-stance deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Adductors",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Lower back",
+   "Traps",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–6",
+  "form_cues": [
+   "Take a wide stance with toes turned out, hands inside the knees",
+   "Push knees out over the toes and keep chest up",
+   "Spread the floor with your feet and stand tall"
+  ],
+  "common_mistakes": [
+   "Knees caving in",
+   "Hips rising before the bar moves",
+   "Stance so wide you can't push"
+  ],
+  "regressions": [
+   "Sumo kettlebell deadlift",
+   "Trap bar deadlift"
+  ],
+  "progressions": [
+   "Deficit sumo deadlift",
+   "Pause sumo deadlift"
+  ],
+  "safety": "Warm up hips and adductors well before heavy sets.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "rdl",
+  "name": "Barbell Romanian deadlift",
+  "aliases": [
+   "RDL",
+   "Romanian deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Forearms",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Start standing and soften the knees slightly",
+   "Push your hips back, sliding the bar down your thighs",
+   "Stop when hamstrings are stretched, then drive hips forward"
+  ],
+  "common_mistakes": [
+   "Rounding the back to reach lower",
+   "Bending the knees into a squat",
+   "Bar drifting away from the legs"
+  ],
+  "regressions": [
+   "Dumbbell Romanian deadlift",
+   "Kettlebell deadlift"
+  ],
+  "progressions": [
+   "Stiff-leg deadlift",
+   "Snatch-grip Romanian deadlift"
+  ],
+  "safety": "Only go as low as you can keep a flat back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sldl",
+  "name": "Stiff-leg deadlift",
+  "aliases": [
+   "Straight-leg deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Start from the floor with knees nearly straight",
+   "Hinge at the hips with a long, flat back",
+   "Pull the bar up close to your legs"
+  ],
+  "common_mistakes": [
+   "Rounding the lower back",
+   "Bending the knees too much",
+   "Yanking from the floor"
+  ],
+  "regressions": [
+   "Barbell Romanian deadlift"
+  ],
+  "progressions": [
+   "Deficit stiff-leg deadlift"
+  ],
+  "safety": "Use a weight you can control with a flat back; skip if you have a lower-back injury.",
+  "video": null,
+  "notes": "Unlike the RDL, each rep starts from the floor."
+ },
+ {
+  "id": "deficitdl",
+  "name": "Deficit deadlift",
+  "aliases": [
+   "Deadlift off a plate"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Traps",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Low platform"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–5",
+  "form_cues": [
+   "Stand on a 2–5 cm platform or plate",
+   "Set your hips a little lower than a normal deadlift",
+   "Push the floor away and keep the bar close"
+  ],
+  "common_mistakes": [
+   "Platform too high",
+   "Rounding the back to reach the bar",
+   "Hips shooting up"
+  ],
+  "regressions": [
+   "Deadlift"
+  ],
+  "progressions": [
+   "Snatch-grip deadlift"
+  ],
+  "safety": "Use a stable platform; reduce weight by about 10–20% versus your regular pull.",
+  "video": null,
+  "notes": "Builds speed and strength off the floor."
+ },
+ {
+  "id": "rackpull",
+  "name": "Rack pull",
+  "aliases": [
+   "Block pull",
+   "Partial deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Glutes",
+   "Lower back",
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Lats",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–6",
+  "form_cues": [
+   "Set the bar on pins just below or above the knee",
+   "Wedge into the bar and brace before pulling",
+   "Finish tall with glutes squeezed and shoulders back"
+  ],
+  "common_mistakes": [
+   "Hyperextending at the top",
+   "Starting loose",
+   "Using it as an ego lift with poor form"
+  ],
+  "regressions": [
+   "Barbell Romanian deadlift"
+  ],
+  "progressions": [
+   "Deadlift",
+   "Deficit deadlift"
+  ],
+  "safety": "Lower the bar under control so it doesn't bounce on the pins.",
+  "video": null,
+  "notes": "Can also be done off blocks."
+ },
+ {
+  "id": "snatchgripdl",
+  "name": "Snatch-grip deadlift",
+  "aliases": [
+   "Wide-grip deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Power"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Upper back",
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Traps",
+   "Lower back",
+   "Quadriceps",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–6",
+  "form_cues": [
+   "Take a wide snatch grip with hips set lower than usual",
+   "Keep your chest up and the bar close",
+   "Push through the floor, squeezing the upper back"
+  ],
+  "common_mistakes": [
+   "Rounding the upper back",
+   "Grip too narrow",
+   "Hips rising first"
+  ],
+  "regressions": [
+   "Deadlift"
+  ],
+  "progressions": [
+   "Snatch pull",
+   "Deficit snatch-grip deadlift"
+  ],
+  "safety": "Use straps if grip fails before the back; start lighter than your deadlift.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "goodmorning",
+  "name": "Good morning",
+  "aliases": [
+   "Barbell good morning"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings",
+   "Lower back",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Upper back"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Bar on upper traps, knees softly bent",
+   "Push hips back and bow forward with a flat back",
+   "Stop at about parallel and drive hips forward"
+  ],
+  "common_mistakes": [
+   "Rounding the lower back",
+   "Going too heavy",
+   "Turning it into a squat"
+  ],
+  "regressions": [
+   "Band good morning",
+   "Barbell Romanian deadlift"
+  ],
+  "progressions": [
+   "Seated good morning"
+  ],
+  "safety": "Start very light; stop the descent the moment your back starts to round.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "seatedgm",
+  "name": "Seated good morning",
+  "aliases": [
+   "Seated barbell good morning"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lower back",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack",
+   "Flat bench"
+  ],
+  "req": "barbell,plates,powerrack,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Sit astride a bench with the bar on your upper back",
+   "Lean forward from the hips with a flat back",
+   "Rise back up by squeezing glutes and back"
+  ],
+  "common_mistakes": [
+   "Rounding to get lower",
+   "Using heavy loads too soon",
+   "Bouncing at the bottom"
+  ],
+  "regressions": [
+   "Good morning",
+   "Back extension"
+  ],
+  "progressions": [],
+  "safety": "Light loads only; skip if you have lower-back problems.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hipthrust",
+  "name": "Barbell hip thrust",
+  "aliases": [
+   "Hip thrust"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Quadriceps",
+   "Adductors"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Flat bench",
+   "Bar pad"
+  ],
+  "req": "barbell,plates,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Upper back on the bench edge, bar padded over your hips",
+   "Tuck your chin and drive through your heels",
+   "Squeeze glutes hard at the top with shins vertical"
+  ],
+  "common_mistakes": [
+   "Arching the lower back at the top",
+   "Feet too far away or too close",
+   "Pushing through the toes"
+  ],
+  "regressions": [
+   "Glute bridge",
+   "Barbell glute bridge"
+  ],
+  "progressions": [
+   "Pause hip thrust",
+   "Single-leg hip thrust"
+  ],
+  "safety": "Always use a pad or folded mat under the bar.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bbglutebridge",
+  "name": "Barbell glute bridge",
+  "aliases": [
+   "Floor hip thrust"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Home-friendly"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Bar pad"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Lie on your back, bar padded across your hips",
+   "Plant feet close and drive hips up",
+   "Pause and squeeze at the top"
+  ],
+  "common_mistakes": [
+   "Overarching the lower back",
+   "Pushing through the toes",
+   "Rushing the reps"
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Barbell hip thrust"
+  ],
+  "safety": "Pad the bar; use bumper plates so the bar can roll over your legs.",
+  "video": null,
+  "notes": "Shorter range than the hip thrust but easier to set up."
+ },
+ {
+  "id": "bench",
+  "name": "Barbell bench press",
+  "aliases": [
+   "Bench press",
+   "Flat bench press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Flat bench"
+  ],
+  "req": "barbell,plates,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "5–8",
+  "form_cues": [
+   "Eyes under the bar, shoulder blades pinched, feet planted",
+   "Lower the bar to your mid-chest with elbows at about 45°",
+   "Press up and slightly back over your shoulders"
+  ],
+  "common_mistakes": [
+   "Bouncing the bar off the chest",
+   "Flaring elbows to 90°",
+   "Lifting hips off the bench"
+  ],
+  "regressions": [
+   "Push-ups",
+   "Flat dumbbell press",
+   "Smith machine bench press"
+  ],
+  "progressions": [
+   "Pause bench press",
+   "Pin press"
+  ],
+  "safety": "Use a spotter or safety arms; never use a thumbless grip.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "inclinebb",
+  "name": "Incline barbell press",
+  "aliases": [
+   "Incline bench press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Upper chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Incline bench"
+  ],
+  "req": "barbell,plates,inclinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "6–10",
+  "form_cues": [
+   "Set the bench to 30–45°",
+   "Lower the bar to your upper chest",
+   "Press up over your shoulders, shoulder blades tucked"
+  ],
+  "common_mistakes": [
+   "Bench set too steep",
+   "Bar touching the neck",
+   "Hips coming off the seat"
+  ],
+  "regressions": [
+   "Incline dumbbell press"
+  ],
+  "progressions": [
+   "Smith machine incline bench press"
+  ],
+  "safety": "Use a spotter or safeties; keep your back pinned to the pad.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "declinebb",
+  "name": "Decline bench press",
+  "aliases": [
+   "Decline barbell bench press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Lower chest"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Decline bench"
+  ],
+  "req": "barbell,plates,declinebench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Lock your legs under the pads",
+   "Lower the bar to your lower chest",
+   "Press straight up over your shoulders"
+  ],
+  "common_mistakes": [
+   "Bouncing the bar",
+   "Bar drifting toward the face",
+   "Flaring elbows"
+  ],
+  "regressions": [
+   "Barbell bench press"
+  ],
+  "progressions": [
+   "Weighted dips"
+  ],
+  "safety": "Always use a spotter; it's hard to bail out of a decline press.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cgbench",
+  "name": "Close-grip bench press",
+  "aliases": [
+   "CGBP",
+   "Narrow-grip bench press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Flat bench"
+  ],
+  "req": "barbell,plates,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Grip about shoulder-width, not much closer",
+   "Keep elbows tucked near your sides",
+   "Touch the lower chest and press to lockout"
+  ],
+  "common_mistakes": [
+   "Hands so close it hurts the wrists",
+   "Elbows flaring out",
+   "Bouncing off the chest"
+  ],
+  "regressions": [
+   "Diamond push-ups",
+   "Floor press"
+  ],
+  "progressions": [
+   "JM press"
+  ],
+  "safety": "Use a spotter; wrists should stay stacked over elbows.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "widebench",
+  "name": "Wide-grip bench press",
+  "aliases": [
+   "Wide bench press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Flat bench"
+  ],
+  "req": "barbell,plates,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Grip about one-and-a-half times shoulder-width",
+   "Lower under control to mid-chest",
+   "Press up without letting shoulders roll forward"
+  ],
+  "common_mistakes": [
+   "Going wider than the rings allow",
+   "Bouncing the bar",
+   "Shoulders lifting off the bench"
+  ],
+  "regressions": [
+   "Barbell bench press"
+  ],
+  "progressions": [],
+  "safety": "Avoid if you have shoulder pain; stay within competition grip width (index finger on the rings).",
+  "video": null,
+  "notes": "Shorter range and more chest emphasis than a standard grip."
+ },
+ {
+  "id": "revgripbench",
+  "name": "Reverse-grip bench press",
+  "aliases": [
+   "Underhand bench press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Upper chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Flat bench"
+  ],
+  "req": "barbell,plates,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Take an underhand grip just outside shoulder-width",
+   "Lower the bar to your lower chest, elbows tucked",
+   "Press back toward your face in an arc"
+  ],
+  "common_mistakes": [
+   "Losing grip on the unrack",
+   "Too heavy too soon",
+   "Wrists bent back"
+  ],
+  "regressions": [
+   "Barbell bench press"
+  ],
+  "progressions": [],
+  "safety": "Always use a spotter for the hand-off; the grip is easy to lose.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "floorpress",
+  "name": "Barbell floor press",
+  "aliases": [
+   "Floor press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Home-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–8",
+  "form_cues": [
+   "Lie under the bar in a rack with knees bent",
+   "Lower until your upper arms rest on the floor",
+   "Pause, then press back to lockout"
+  ],
+  "common_mistakes": [
+   "Slamming elbows into the floor",
+   "Bouncing out of the bottom",
+   "Flared elbows"
+  ],
+  "regressions": [
+   "Dumbbell floor press"
+  ],
+  "progressions": [
+   "Barbell bench press",
+   "Pin press"
+  ],
+  "safety": "Set rack pins low enough to unrack, and use safeties.",
+  "video": null,
+  "notes": "Shoulder-friendly; good lockout builder."
+ },
+ {
+  "id": "pinpress",
+  "name": "Pin press",
+  "aliases": [
+   "Dead bench",
+   "Bench press from pins"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack",
+   "Flat bench"
+  ],
+  "req": "barbell,plates,powerrack,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–5",
+  "form_cues": [
+   "Set pins just above your chest or at a sticking point",
+   "Get tight under the bar before every rep",
+   "Press explosively off the pins"
+  ],
+  "common_mistakes": [
+   "Losing tightness between reps",
+   "Bouncing off pins",
+   "Bench not centred in the rack"
+  ],
+  "regressions": [
+   "Barbell bench press"
+  ],
+  "progressions": [],
+  "safety": "Make sure the pins are level and the bench is centred.",
+  "video": null,
+  "notes": "Builds strength from a dead stop."
+ },
+ {
+  "id": "bbpullover",
+  "name": "Barbell pullover",
+  "aliases": [
+   "Lying barbell pullover",
+   "EZ-bar pullover"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Flat bench"
+  ],
+  "req": "barbell|ezbar,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie on a bench holding the bar over your chest, elbows soft",
+   "Lower it back over your head in an arc",
+   "Pull it back over your chest using lats and chest"
+  ],
+  "common_mistakes": [
+   "Bending elbows too much",
+   "Arching the lower back",
+   "Going too heavy"
+  ],
+  "regressions": [
+   "Dumbbell pullover"
+  ],
+  "progressions": [],
+  "safety": "Use a light load and stop if your shoulders pinch overhead.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "landminesqueeze",
+  "name": "Landmine squeeze press",
+  "aliases": [
+   "Landmine chest press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Landmine",
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "landmine,barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold the bar end with both palms pressed together",
+   "Squeeze your hands hard into the bar",
+   "Press up and out from your chest"
+  ],
+  "common_mistakes": [
+   "Losing the squeeze",
+   "Leaning back",
+   "Using the legs to push"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Landmine press"
+  ],
+  "safety": "Keep the landmine anchored so it can't slide.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ohp",
+  "name": "Standing barbell overhead press",
+  "aliases": [
+   "Overhead press",
+   "Military press",
+   "Strict press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Upper chest",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "5–8",
+  "form_cues": [
+   "Bar on front delts, hands just outside shoulders",
+   "Squeeze glutes, move your head back and press straight up",
+   "Push your head through at the top"
+  ],
+  "common_mistakes": [
+   "Leaning back and turning it into an incline press",
+   "Pressing the bar around the face",
+   "Soft knees adding leg drive"
+  ],
+  "regressions": [
+   "Seated dumbbell shoulder press",
+   "Landmine press"
+  ],
+  "progressions": [
+   "Push press",
+   "Z press"
+  ],
+  "safety": "Keep ribs down to protect your lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "seatedohp",
+  "name": "Seated barbell overhead press",
+  "aliases": [
+   "Seated military press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Upper chest"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack",
+   "Adjustable bench"
+  ],
+  "req": "barbell,plates,powerrack,adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Set the bench upright, back against the pad",
+   "Lower the bar to your upper chest",
+   "Press straight up past your face"
+  ],
+  "common_mistakes": [
+   "Arching hard off the pad",
+   "Bar drifting forward",
+   "Half reps"
+  ],
+  "regressions": [
+   "Seated dumbbell shoulder press",
+   "Smith machine shoulder press"
+  ],
+  "progressions": [
+   "Standing barbell overhead press"
+  ],
+  "safety": "Use a rack or spotter for unracking.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "behindneckpress",
+  "name": "Behind-the-neck press",
+  "aliases": [
+   "Behind-the-neck barbell press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts",
+   "Front delts"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Traps"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Take a wider grip with the bar on your traps",
+   "Press straight up with head neutral",
+   "Lower only as far as shoulders comfortably allow"
+  ],
+  "common_mistakes": [
+   "Forcing range you don't have",
+   "Craning the head forward",
+   "Going heavy"
+  ],
+  "regressions": [
+   "Standing barbell overhead press"
+  ],
+  "progressions": [],
+  "safety": "Only for people with good shoulder mobility and no shoulder pain.",
+  "video": null,
+  "notes": "Also useful as a jerk accessory for weightlifters."
+ },
+ {
+  "id": "zpress",
+  "name": "Z press",
+  "aliases": [
+   "Seated floor press overhead"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Mobility"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core",
+   "Upper back"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–8",
+  "form_cues": [
+   "Sit on the floor with legs straight out in front",
+   "Brace hard and press the bar straight up",
+   "Keep your torso tall without leaning back"
+  ],
+  "common_mistakes": [
+   "Rounding the lower back",
+   "Leaning back to finish",
+   "Too much weight"
+  ],
+  "regressions": [
+   "Standing barbell overhead press"
+  ],
+  "progressions": [],
+  "safety": "Set the rack low so you can unrack seated; use light weights.",
+  "video": null,
+  "notes": "Removes the legs and lower back from the press, exposing weak spots."
+ },
+ {
+  "id": "bbfrontraise",
+  "name": "Barbell front raise",
+  "aliases": [
+   "Front plate raise alternative"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Front delts"
+  ],
+  "secondary_muscles": [
+   "Upper chest",
+   "Traps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "barbell|ezbar",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold the bar at your thighs, shoulder-width grip",
+   "Raise it to eye level with soft elbows",
+   "Lower slowly, no swinging"
+  ],
+  "common_mistakes": [
+   "Swinging with the hips",
+   "Raising too high",
+   "Shrugging"
+  ],
+  "regressions": [
+   "Dumbbell front raise"
+  ],
+  "progressions": [],
+  "safety": "Keep it light; the long lever stresses the shoulders.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bbuprightrow",
+  "name": "Barbell upright row",
+  "aliases": [
+   "Upright row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts",
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Front delts"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "barbell|ezbar",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Grip slightly wider than shoulders",
+   "Lead with your elbows up to chest height",
+   "Lower slowly"
+  ],
+  "common_mistakes": [
+   "Narrow grip pinching the shoulders",
+   "Pulling above chest height",
+   "Swinging the body"
+  ],
+  "regressions": [
+   "Cable upright row"
+  ],
+  "progressions": [],
+  "safety": "Stop at chest height and skip it if you feel shoulder pinching.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bbshrug",
+  "name": "Barbell shrug",
+  "aliases": [
+   "Shrug"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Forearms",
+   "Neck"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Hold the bar at your thighs, arms straight",
+   "Lift your shoulders straight up to your ears",
+   "Pause, then lower slowly"
+  ],
+  "common_mistakes": [
+   "Rolling the shoulders",
+   "Bending the elbows",
+   "Bouncing the weight"
+  ],
+  "regressions": [
+   "Dumbbell shrug"
+  ],
+  "progressions": [
+   "Behind-the-back barbell shrug"
+  ],
+  "safety": "Use straps for heavy sets to spare your grip.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "behindbackshrug",
+  "name": "Behind-the-back barbell shrug",
+  "aliases": [
+   "Behind-the-back shrug"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Hold the bar behind your thighs",
+   "Shrug up and slightly back",
+   "Hold the top for a second"
+  ],
+  "common_mistakes": [
+   "Bar dragging on the legs",
+   "Using momentum",
+   "Short reps"
+  ],
+  "regressions": [
+   "Barbell shrug"
+  ],
+  "progressions": [],
+  "safety": "Unrack from mid-thigh height in a rack.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bbrow",
+  "name": "Barbell bent-over row",
+  "aliases": [
+   "Bent-over row",
+   "Barbell row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps",
+   "Lower back"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "6–10",
+  "form_cues": [
+   "Hinge until your torso is about 45° or lower",
+   "Pull the bar to your lower ribs",
+   "Lower under control without standing up"
+  ],
+  "common_mistakes": [
+   "Standing up more each rep",
+   "Jerking with the hips",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "One-arm dumbbell row",
+   "Inverted row"
+  ],
+  "progressions": [
+   "Pendlay row"
+  ],
+  "safety": "Keep your back flat; stop if your lower back fatigues first.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pendlay",
+  "name": "Pendlay row",
+  "aliases": [
+   "Dead-stop barbell row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Power",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Upper back",
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps",
+   "Lower back"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "5–8",
+  "form_cues": [
+   "Start each rep with the bar on the floor, back flat",
+   "Torso near parallel to the floor",
+   "Pull explosively to your lower chest, then set it down"
+  ],
+  "common_mistakes": [
+   "Hips rising to help",
+   "Back rounding",
+   "Not resting the bar each rep"
+  ],
+  "regressions": [
+   "Barbell bent-over row"
+  ],
+  "progressions": [],
+  "safety": "Needs good hamstring mobility to keep a flat back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "yatesrow",
+  "name": "Underhand barbell row",
+  "aliases": [
+   "Yates row",
+   "Reverse-grip barbell row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Biceps",
+   "Upper back",
+   "Rear delts"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Underhand grip, shoulder-width",
+   "Lean over to about 70°",
+   "Pull the bar to your belly button"
+  ],
+  "common_mistakes": [
+   "Standing too upright",
+   "Curling with the arms",
+   "Jerking the weight"
+  ],
+  "regressions": [
+   "Barbell bent-over row"
+  ],
+  "progressions": [],
+  "safety": "Avoid if supinated grip bothers your elbows.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sealrow",
+  "name": "Seal row",
+  "aliases": [
+   "Bench barbell row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Upper back",
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "High flat bench"
+  ],
+  "req": "barbell,plates,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Lie chest-down on a raised bench",
+   "Pull the bar to the underside of the bench",
+   "Lower to full stretch"
+  ],
+  "common_mistakes": [
+   "Lifting the chest off the bench",
+   "Short range",
+   "Kicking legs"
+  ],
+  "regressions": [
+   "Chest-supported row machine"
+  ],
+  "progressions": [],
+  "safety": "Bench must be stable and raised on blocks or a frame.",
+  "video": null,
+  "notes": "Removes the lower back from rowing. Needs a raised bench (no specific gear id)."
+ },
+ {
+  "id": "tbarrow",
+  "name": "T-bar row",
+  "aliases": [
+   "Landmine row",
+   "Corner row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Upper back",
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps",
+   "Lower back"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Landmine or T-bar row",
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "tbar|landmine,barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Straddle the bar and hinge to about 45°",
+   "Pull the handle to your chest",
+   "Lower slowly to full stretch"
+  ],
+  "common_mistakes": [
+   "Rounding the back",
+   "Standing up too much",
+   "Using momentum"
+  ],
+  "regressions": [
+   "Seated cable row"
+  ],
+  "progressions": [
+   "Pendlay row"
+  ],
+  "safety": "Keep your back flat; use a V-handle under the bar.",
+  "video": null,
+  "notes": "The machine version needs only the tbar gear."
+ },
+ {
+  "id": "meadows",
+  "name": "Meadows row",
+  "aliases": [
+   "Landmine single-arm row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Unilateral"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps",
+   "Forearms"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Landmine",
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "landmine,barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Stand side-on to the bar end and stagger your stance",
+   "Grip the thick end overhand",
+   "Pull your elbow up and back"
+  ],
+  "common_mistakes": [
+   "Twisting the torso",
+   "Shrugging",
+   "Too heavy"
+  ],
+  "regressions": [
+   "One-arm dumbbell row"
+  ],
+  "progressions": [],
+  "safety": "Rest your free forearm on your knee for support.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bbcurl",
+  "name": "Barbell curl",
+  "aliases": [
+   "Standing barbell curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Hands shoulder-width, elbows tucked",
+   "Curl without swinging",
+   "Lower slowly to full extension"
+  ],
+  "common_mistakes": [
+   "Swinging the hips",
+   "Elbows drifting forward",
+   "Half reps"
+  ],
+  "regressions": [
+   "Dumbbell curl"
+  ],
+  "progressions": [
+   "Drag curl"
+  ],
+  "safety": "Stop if your wrists hurt; switch to an EZ bar.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ezcurl",
+  "name": "EZ-bar curl",
+  "aliases": [
+   "EZ curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "EZ curl bar",
+   "Weight plates"
+  ],
+  "req": "ezbar,plates",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Grip the angled handles",
+   "Keep elbows by your sides",
+   "Squeeze at the top, then lower slowly"
+  ],
+  "common_mistakes": [
+   "Using momentum",
+   "Lifting elbows",
+   "Partial reps"
+  ],
+  "regressions": [
+   "Dumbbell curl"
+  ],
+  "progressions": [
+   "EZ-bar preacher curl"
+  ],
+  "safety": "Wrist-friendlier than a straight bar.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "reversecurl",
+  "name": "Reverse barbell curl",
+  "aliases": [
+   "Reverse-grip curl",
+   "EZ-bar reverse curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Brachioradialis",
+   "Forearms"
+  ],
+  "secondary_muscles": [
+   "Biceps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "barbell|ezbar,plates",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Overhand grip, shoulder-width",
+   "Curl while keeping wrists straight",
+   "Lower slowly"
+  ],
+  "common_mistakes": [
+   "Wrists flexing",
+   "Swinging",
+   "Heavy weight"
+  ],
+  "regressions": [
+   "Hammer curl"
+  ],
+  "progressions": [],
+  "safety": "Use an EZ bar if the straight bar hurts the wrists.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dragcurl",
+  "name": "Drag curl",
+  "aliases": [
+   "Barbell drag curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Pull your elbows back as you curl",
+   "Drag the bar up your torso",
+   "Lower the same path"
+  ],
+  "common_mistakes": [
+   "Elbows drifting forward",
+   "Using momentum",
+   "Shrugging"
+  ],
+  "regressions": [
+   "Barbell curl"
+  ],
+  "progressions": [],
+  "safety": "Use moderate weights.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "preachercurl",
+  "name": "Preacher curl",
+  "aliases": [
+   "EZ-bar preacher curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "EZ curl bar",
+   "Weight plates",
+   "Preacher bench"
+  ],
+  "req": "ezbar|barbell,preacher",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Armpits snug on the pad",
+   "Curl up without lifting elbows",
+   "Lower to nearly straight arms"
+  ],
+  "common_mistakes": [
+   "Bouncing at the bottom",
+   "Lifting off the pad",
+   "Dropping fast"
+  ],
+  "regressions": [
+   "EZ-bar curl"
+  ],
+  "progressions": [
+   "Spider curl"
+  ],
+  "safety": "Don't lock out hard at the bottom under heavy loads.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "spidercurl",
+  "name": "EZ-bar spider curl",
+  "aliases": [
+   "Spider curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Biceps"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "EZ curl bar",
+   "Weight plates",
+   "Incline bench"
+  ],
+  "req": "ezbar,inclinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie chest-down on an incline bench",
+   "Let arms hang straight down",
+   "Curl up and squeeze hard"
+  ],
+  "common_mistakes": [
+   "Swinging",
+   "Elbows moving forward",
+   "Heavy loads"
+  ],
+  "regressions": [
+   "Preacher curl"
+  ],
+  "progressions": [],
+  "safety": "Use light weight; can also use dumbbells.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "skull",
+  "name": "EZ-bar skull crusher",
+  "aliases": [
+   "Lying triceps extension",
+   "Skull crusher"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "EZ curl bar",
+   "Weight plates",
+   "Flat bench"
+  ],
+  "req": "ezbar|barbell,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Lie on a bench, bar over your eyes",
+   "Lower the bar to your forehead by bending elbows",
+   "Extend back without moving upper arms"
+  ],
+  "common_mistakes": [
+   "Elbows flaring",
+   "Moving shoulders",
+   "Too heavy"
+  ],
+  "regressions": [
+   "Rope pushdown"
+  ],
+  "progressions": [
+   "JM press"
+  ],
+  "safety": "Control the bar; use a spotter if heavy.",
+  "video": null,
+  "notes": "Can be done with a straight bar too."
+ },
+ {
+  "id": "ezohext",
+  "name": "EZ-bar overhead triceps extension",
+  "aliases": [
+   "Overhead EZ-bar extension",
+   "French press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Core"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "EZ curl bar",
+   "Weight plates"
+  ],
+  "req": "ezbar,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Hold the bar overhead, elbows pointed forward",
+   "Lower behind your head",
+   "Extend back up"
+  ],
+  "common_mistakes": [
+   "Elbows flaring",
+   "Arching back",
+   "Heavy loads"
+  ],
+  "regressions": [
+   "Overhead dumbbell extension"
+  ],
+  "progressions": [],
+  "safety": "Sit on a bench for support if needed.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "jmpress",
+  "name": "JM press",
+  "aliases": [
+   "JM bench press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Front delts"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Flat bench"
+  ],
+  "req": "barbell,plates,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–10",
+  "form_cues": [
+   "Grip close and tuck elbows",
+   "Lower bar toward your chin",
+   "Press back up"
+  ],
+  "common_mistakes": [
+   "Bar hitting the face",
+   "Elbows flaring",
+   "Too heavy"
+  ],
+  "regressions": [
+   "Close-grip bench press"
+  ],
+  "progressions": [],
+  "safety": "Learn with an empty bar and a spotter.",
+  "video": null,
+  "notes": "A hybrid between a close-grip bench and a skull crusher."
+ },
+ {
+  "id": "revwristcurl",
+  "name": "Barbell reverse wrist curl",
+  "aliases": [
+   "Reverse wrist curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation",
+   "Rehab"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Forearm extensors"
+  ],
+  "secondary_muscles": [
+   "Brachioradialis"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Flat bench"
+  ],
+  "req": "barbell|ezbar,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Rest forearms on a bench, palms down",
+   "Lift the back of your hands up",
+   "Lower slowly"
+  ],
+  "common_mistakes": [
+   "Heavy weight",
+   "Moving the forearms",
+   "Short range"
+  ],
+  "regressions": [
+   "Band wrist extension"
+  ],
+  "progressions": [],
+  "safety": "Light loads; good for elbow health.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "behindwristcurl",
+  "name": "Behind-the-back barbell wrist curl",
+  "aliases": [
+   "Standing wrist curl"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Isolation"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Forearm flexors"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Hold the bar behind your thighs",
+   "Curl your wrists up",
+   "Lower to fingertips"
+  ],
+  "common_mistakes": [
+   "Bending elbows",
+   "Jerking",
+   "Too heavy"
+  ],
+  "regressions": [
+   "Wrist curl"
+  ],
+  "progressions": [],
+  "safety": "Unrack from a rack at hip height.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trapdl",
+  "name": "Trap bar deadlift",
+  "aliases": [
+   "Hex bar deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound",
+   "Power"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Traps",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Trap / hex bar",
+   "Weight plates"
+  ],
+  "req": "trapbar,plates",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–8",
+  "form_cues": [
+   "Stand in the centre of the bar, handles in line with your ankles",
+   "Sit hips down and grip the handles",
+   "Push the floor away and stand tall"
+  ],
+  "common_mistakes": [
+   "Rounding the back",
+   "Hips too high",
+   "Leaning back at lockout"
+  ],
+  "regressions": [
+   "Kettlebell deadlift"
+  ],
+  "progressions": [
+   "Deadlift",
+   "Trap bar jump"
+  ],
+  "safety": "Easier on the lower back than a straight bar; still keep a neutral spine.",
+  "video": null,
+  "notes": "Use the high handles to shorten the range for beginners."
+ },
+ {
+  "id": "traprdl",
+  "name": "Trap bar Romanian deadlift",
+  "aliases": [
+   "Hex bar RDL"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Trap / hex bar",
+   "Weight plates"
+  ],
+  "req": "trapbar,plates",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Start standing, knees soft",
+   "Push your hips back as the bar slides down",
+   "Stop at a hamstring stretch and stand back up"
+  ],
+  "common_mistakes": [
+   "Rounding the back",
+   "Squatting the weight",
+   "Bar drifting forward"
+  ],
+  "regressions": [
+   "Kettlebell deadlift"
+  ],
+  "progressions": [
+   "Barbell Romanian deadlift"
+  ],
+  "safety": "Only go as low as you can keep a flat back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trapshrug",
+  "name": "Trap bar shrug",
+  "aliases": [
+   "Hex bar shrug"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Trap / hex bar",
+   "Weight plates"
+  ],
+  "req": "trapbar,plates",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Stand in the bar with arms straight",
+   "Shrug straight up to your ears",
+   "Pause and lower slowly"
+  ],
+  "common_mistakes": [
+   "Rolling the shoulders",
+   "Bending the elbows",
+   "Bouncing"
+  ],
+  "regressions": [
+   "Dumbbell shrug"
+  ],
+  "progressions": [
+   "Barbell shrug"
+  ],
+  "safety": "Use straps for heavy sets.",
+  "video": null,
+  "notes": "Neutral grip keeps the load at your sides like dumbbells."
+ },
+ {
+  "id": "trapjump",
+  "name": "Trap bar jump",
+  "aliases": [
+   "Hex bar jump",
+   "Loaded jump"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Plyometric",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [
+   "Trap / hex bar",
+   "Weight plates"
+  ],
+  "req": "trapbar,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–5",
+  "form_cues": [
+   "Use about 20–30% of your trap bar deadlift",
+   "Dip quickly and jump as high as possible",
+   "Land softly, reset and repeat"
+  ],
+  "common_mistakes": [
+   "Going too heavy",
+   "Stiff landings",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Jump squat"
+  ],
+  "progressions": [
+   "Power clean"
+  ],
+  "safety": "Land with soft knees and keep the bar under control.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "landminepress",
+  "name": "Landmine press",
+  "aliases": [
+   "Single-arm landmine press",
+   "Half-kneeling landmine press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Rehab"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Upper chest"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Landmine",
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "landmine,barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Hold the bar end at your shoulder",
+   "Press up and forward",
+   "Lower slowly back to the shoulder"
+  ],
+  "common_mistakes": [
+   "Leaning back",
+   "Shrugging",
+   "Twisting"
+  ],
+  "regressions": [
+   "Band chest press"
+  ],
+  "progressions": [
+   "Standing barbell overhead press"
+  ],
+  "safety": "Shoulder-friendly; keep your ribs down.",
+  "video": null,
+  "notes": "Do it half-kneeling or standing."
+ },
+ {
+  "id": "landminesquat",
+  "name": "Landmine squat",
+  "aliases": [
+   "Landmine goblet squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Adductors"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Landmine",
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "landmine,barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Hold the bar end at your chest",
+   "Sit down between your heels",
+   "Drive up through mid-foot"
+  ],
+  "common_mistakes": [
+   "Knees caving",
+   "Leaning onto the bar",
+   "Heels lifting"
+  ],
+  "regressions": [
+   "Goblet squat"
+  ],
+  "progressions": [
+   "Front squat"
+  ],
+  "safety": "Good beginner squat; the arc supports the torso.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "landminethruster",
+  "name": "Landmine thruster",
+  "aliases": [
+   "Landmine squat to press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Power",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Landmine",
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "landmine,barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Squat with the bar end at your chest",
+   "Drive up and press in one motion",
+   "Lower back to the chest"
+  ],
+  "common_mistakes": [
+   "Pressing before standing",
+   "Leaning back",
+   "Losing balance"
+  ],
+  "regressions": [
+   "Landmine squat"
+  ],
+  "progressions": [
+   "Barbell thruster"
+  ],
+  "safety": "Moderate loads; keep your core braced.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "landminerdl",
+  "name": "Single-leg landmine Romanian deadlift",
+  "aliases": [
+   "Landmine single-leg RDL"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Balance"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Adductors"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Landmine",
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "landmine,barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Hold the bar end in the opposite hand",
+   "Hinge on one leg, reaching the other leg back",
+   "Return by driving hips forward"
+  ],
+  "common_mistakes": [
+   "Rounding the back",
+   "Opening the hips",
+   "Knee locked"
+  ],
+  "regressions": [
+   "Single-leg Romanian deadlift"
+  ],
+  "progressions": [],
+  "safety": "The landmine offers extra stability.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "landminerevlunge",
+  "name": "Landmine reverse lunge",
+  "aliases": [
+   "Landmine lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Core",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Landmine",
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "landmine,barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Hold the bar end at your chest",
+   "Step back and lower the knee",
+   "Drive through the front foot to stand"
+  ],
+  "common_mistakes": [
+   "Short step",
+   "Torso collapsing",
+   "Wobbly knees"
+  ],
+  "regressions": [
+   "Reverse lunge"
+  ],
+  "progressions": [
+   "Barbell reverse lunge"
+  ],
+  "safety": "Stable loading for beginners.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "landminelateral",
+  "name": "Landmine lateral raise",
+  "aliases": [
+   "Landmine side raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation",
+   "Unilateral"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Side delts"
+  ],
+  "secondary_muscles": [
+   "Traps"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Landmine",
+   "Olympic barbell",
+   "Weight plates"
+  ],
+  "req": "landmine,barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Stand side-on, holding the bar end low across your body",
+   "Raise it out to shoulder height",
+   "Lower slowly"
+  ],
+  "common_mistakes": [
+   "Shrugging",
+   "Swinging",
+   "Too heavy"
+  ],
+  "regressions": [
+   "Dumbbell lateral raise"
+  ],
+  "progressions": [],
+  "safety": "Light loads.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "smithsquat",
+  "name": "Smith machine squat",
+  "aliases": [
+   "Smith squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Smith machine"
+  ],
+  "req": "smith",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Feet slightly in front of the bar",
+   "Sit down under control",
+   "Drive up through mid-foot"
+  ],
+  "common_mistakes": [
+   "Feet too far back",
+   "Knees caving",
+   "Half reps"
+  ],
+  "regressions": [
+   "Goblet squat"
+  ],
+  "progressions": [
+   "Barbell back squat"
+  ],
+  "safety": "Set the safety stops just below your bottom position.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "smithbench",
+  "name": "Smith machine bench press",
+  "aliases": [
+   "Smith bench"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Smith machine",
+   "Flat bench"
+  ],
+  "req": "smith,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Line the bar up with your mid-chest",
+   "Lower under control",
+   "Press up and lock out"
+  ],
+  "common_mistakes": [
+   "Bench misaligned",
+   "Bouncing",
+   "Flaring elbows"
+  ],
+  "regressions": [
+   "Push-ups"
+  ],
+  "progressions": [
+   "Barbell bench press"
+  ],
+  "safety": "Set safety stops above your chest.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "smithincline",
+  "name": "Smith machine incline bench press",
+  "aliases": [
+   "Smith incline press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Upper chest"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Triceps"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Smith machine",
+   "Incline bench"
+  ],
+  "req": "smith,inclinebench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Set the bench at 30–45°",
+   "Lower to your upper chest",
+   "Press straight up"
+  ],
+  "common_mistakes": [
+   "Bar touching the neck",
+   "Bench too steep",
+   "Bouncing"
+  ],
+  "regressions": [
+   "Incline dumbbell press"
+  ],
+  "progressions": [
+   "Incline barbell press"
+  ],
+  "safety": "Set safety stops.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "smithohp",
+  "name": "Smith machine shoulder press",
+  "aliases": [
+   "Smith overhead press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Triceps"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Smith machine",
+   "Adjustable bench"
+  ],
+  "req": "smith,adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Sit upright with the bar just in front of your face",
+   "Lower to chin level",
+   "Press up to lockout"
+  ],
+  "common_mistakes": [
+   "Arching off the pad",
+   "Lowering behind the neck",
+   "Half reps"
+  ],
+  "regressions": [
+   "Seated dumbbell shoulder press"
+  ],
+  "progressions": [
+   "Standing barbell overhead press"
+  ],
+  "safety": "Set the bench so the bar clears your face.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "smithrow",
+  "name": "Smith machine bent-over row",
+  "aliases": [
+   "Smith row"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Lats",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Rear delts",
+   "Biceps"
+  ],
+  "movement_pattern": "Horizontal pull",
+  "equipment": [
+   "Smith machine"
+  ],
+  "req": "smith",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Hinge to about 45°",
+   "Pull the bar to your lower ribs",
+   "Lower slowly"
+  ],
+  "common_mistakes": [
+   "Rounding the back",
+   "Jerking",
+   "Standing up"
+  ],
+  "regressions": [
+   "Inverted row"
+  ],
+  "progressions": [
+   "Barbell bent-over row"
+  ],
+  "safety": "Keep a flat back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "smithshrug",
+  "name": "Smith machine shrug",
+  "aliases": [
+   "Smith shrug"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Back",
+  "primary_muscles": [
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Forearms"
+  ],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Smith machine"
+  ],
+  "req": "smith",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand tall with arms straight",
+   "Shrug straight up",
+   "Pause and lower"
+  ],
+  "common_mistakes": [
+   "Rolling shoulders",
+   "Bending elbows",
+   "Bouncing"
+  ],
+  "regressions": [
+   "Dumbbell shrug"
+  ],
+  "progressions": [
+   "Barbell shrug"
+  ],
+  "safety": "Use straps if needed.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "smithrdl",
+  "name": "Smith machine Romanian deadlift",
+  "aliases": [
+   "Smith RDL"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Lower back"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Smith machine"
+  ],
+  "req": "smith",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Stand close with feet under the bar",
+   "Push hips back keeping the bar close",
+   "Stand up by driving hips forward"
+  ],
+  "common_mistakes": [
+   "Rounding the back",
+   "Bending knees too much",
+   "Bar too far forward"
+  ],
+  "regressions": [
+   "Dumbbell Romanian deadlift"
+  ],
+  "progressions": [
+   "Barbell Romanian deadlift"
+  ],
+  "safety": "Only go as low as your back stays flat.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "smithhipthrust",
+  "name": "Smith machine hip thrust",
+  "aliases": [
+   "Smith hip thrust"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Smith machine",
+   "Flat bench",
+   "Bar pad"
+  ],
+  "req": "smith,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Upper back on the bench",
+   "Bar over the hips, padded",
+   "Drive hips up and squeeze"
+  ],
+  "common_mistakes": [
+   "Overarching",
+   "Pushing through toes",
+   "Rushing"
+  ],
+  "regressions": [
+   "Glute bridge"
+  ],
+  "progressions": [
+   "Barbell hip thrust"
+  ],
+  "safety": "Pad the bar.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "smithsplit",
+  "name": "Smith machine split squat",
+  "aliases": [
+   "Smith split squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Smith machine"
+  ],
+  "req": "smith",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Long split stance under the bar",
+   "Lower the back knee",
+   "Push up through the front foot"
+  ],
+  "common_mistakes": [
+   "Short stance",
+   "Front heel lifting",
+   "Leaning"
+  ],
+  "regressions": [
+   "Bodyweight split squat"
+  ],
+  "progressions": [
+   "Smith machine Bulgarian split squat"
+  ],
+  "safety": "Set safety stops.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "smithbss",
+  "name": "Smith machine Bulgarian split squat",
+  "aliases": [
+   "Smith rear-foot-elevated split squat"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Adductors"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Smith machine",
+   "Flat bench"
+  ],
+  "req": "smith,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8 / side",
+  "form_cues": [
+   "Rear foot on a bench",
+   "Lower straight down",
+   "Drive up through the front heel"
+  ],
+  "common_mistakes": [
+   "Foot too close",
+   "Bouncing",
+   "Leaning"
+  ],
+  "regressions": [
+   "Smith machine split squat"
+  ],
+  "progressions": [
+   "Barbell Bulgarian split squat"
+  ],
+  "safety": "Set safety stops.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "smithcalf",
+  "name": "Smith machine calf raise",
+  "aliases": [
+   "Smith calf raise"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy",
+   "Isolation"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [],
+  "movement_pattern": "Isolation",
+  "equipment": [
+   "Smith machine",
+   "Step or plate"
+  ],
+  "req": "smith",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "12–15",
+  "form_cues": [
+   "Stand on a plate",
+   "Rise high on your toes",
+   "Lower to a full stretch"
+  ],
+  "common_mistakes": [
+   "Bouncing",
+   "Bent knees",
+   "Short reps"
+  ],
+  "regressions": [
+   "Standing calf raise"
+  ],
+  "progressions": [],
+  "safety": "Use a stable step.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "smithcgbench",
+  "name": "Smith machine close-grip bench press",
+  "aliases": [
+   "Smith close-grip press"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Arms",
+  "primary_muscles": [
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Chest"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Smith machine",
+   "Flat bench"
+  ],
+  "req": "smith,flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Shoulder-width grip",
+   "Tuck elbows",
+   "Press to lockout"
+  ],
+  "common_mistakes": [
+   "Hands too close",
+   "Elbows flaring",
+   "Bouncing"
+  ],
+  "regressions": [
+   "Diamond push-ups"
+  ],
+  "progressions": [
+   "Close-grip bench press"
+  ],
+  "safety": "Set safety stops.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "smithrevlunge",
+  "name": "Smith machine reverse lunge",
+  "aliases": [
+   "Smith lunge"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Smith machine"
+  ],
+  "req": "smith",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10 / side",
+  "form_cues": [
+   "Step back under the bar",
+   "Lower the back knee",
+   "Drive back to standing"
+  ],
+  "common_mistakes": [
+   "Short step",
+   "Leaning",
+   "Knee crashing"
+  ],
+  "regressions": [
+   "Reverse lunge"
+  ],
+  "progressions": [
+   "Barbell reverse lunge"
+  ],
+  "safety": "Stable option for beginners.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "snatch",
+  "name": "Snatch",
+  "aliases": [
+   "Squat snatch",
+   "Full snatch"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps",
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Upper back",
+   "Core",
+   "Calves",
+   "Triceps"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "1–3",
+  "form_cues": [
+   "Wide grip, bar over mid-foot, chest up and back flat",
+   "Push the floor away, then explode through hips and knees",
+   "Pull yourself under and catch in a deep overhead squat"
+  ],
+  "common_mistakes": [
+   "Pulling early with the arms",
+   "Bar swinging away from the body",
+   "Soft elbows in the catch"
+  ],
+  "regressions": [
+   "Power snatch",
+   "Hang snatch",
+   "Overhead squat"
+  ],
+  "progressions": [],
+  "safety": "Learn from a qualified coach and use bumper plates on a platform; drop the bar forward if you miss.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "powersnatch",
+  "name": "Power snatch",
+  "aliases": [
+   "Power snatch from floor"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps",
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Upper back",
+   "Core",
+   "Calves",
+   "Triceps"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "2–3",
+  "form_cues": [
+   "Start like a snatch with a wide grip",
+   "Extend fully, then pull under fast",
+   "Catch above parallel with arms locked"
+  ],
+  "common_mistakes": [
+   "Catching with bent arms (press-out)",
+   "Jumping forward",
+   "Starting the pull too fast off the floor"
+  ],
+  "regressions": [
+   "Hang power snatch",
+   "Muscle snatch"
+  ],
+  "progressions": [
+   "Snatch"
+  ],
+  "safety": "Use bumpers and a clear platform; miss by pushing the bar away and stepping back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hangsnatch",
+  "name": "Hang snatch",
+  "aliases": [
+   "Hang squat snatch"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps",
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Upper back",
+   "Core",
+   "Calves",
+   "Triceps"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "2–3",
+  "form_cues": [
+   "Start standing, lower the bar to just above the knees",
+   "Stay over the bar, then extend explosively",
+   "Drop into a full overhead squat to catch"
+  ],
+  "common_mistakes": [
+   "Bending the arms early",
+   "Hips hitting the bar out forward",
+   "Slow pull under"
+  ],
+  "regressions": [
+   "Hang power snatch"
+  ],
+  "progressions": [
+   "Snatch"
+  ],
+  "safety": "Use bumpers on a platform; reset your back before each rep.",
+  "video": null,
+  "notes": "Hang position can be mid-thigh, above knee or below knee."
+ },
+ {
+  "id": "hangpowersnatch",
+  "name": "Hang power snatch",
+  "aliases": [
+   "HPS"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps",
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Upper back",
+   "Core",
+   "Calves",
+   "Triceps"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "3–5",
+  "form_cues": [
+   "Lower the bar to mid-thigh with a flat back",
+   "Jump and shrug hard",
+   "Punch under and catch high with locked arms"
+  ],
+  "common_mistakes": [
+   "Pressing out the catch",
+   "Reverse-curling the bar up",
+   "Landing with feet too wide"
+  ],
+  "regressions": [
+   "Muscle snatch",
+   "Snatch high pull"
+  ],
+  "progressions": [
+   "Hang snatch",
+   "Power snatch"
+  ],
+  "safety": "Use bumpers and drop the bar forward on a miss.",
+  "video": null,
+  "notes": "A great first snatch variation to learn timing and speed."
+ },
+ {
+  "id": "musclesnatch",
+  "name": "Muscle snatch",
+  "aliases": [],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Traps",
+   "Upper back"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Triceps"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "3–5",
+  "form_cues": [
+   "Extend fully on your toes first",
+   "Pull elbows high and out, then turn the bar over",
+   "Punch overhead without rebending your knees"
+  ],
+  "common_mistakes": [
+   "Dipping under the bar",
+   "Bar swinging out",
+   "Rushing the turnover"
+  ],
+  "regressions": [
+   "Snatch high pull"
+  ],
+  "progressions": [
+   "Power snatch"
+  ],
+  "safety": "Light weights only; it's a technique and upper-back builder.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "snatchpull",
+  "name": "Snatch pull",
+  "aliases": [],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps",
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Upper back",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "3–5",
+  "form_cues": [
+   "Set up exactly like your snatch",
+   "Push the floor away keeping the bar close",
+   "Finish fully extended with a shrug, arms straight"
+  ],
+  "common_mistakes": [
+   "Bending the arms",
+   "Leaning back excessively",
+   "Hips rising first"
+  ],
+  "regressions": [
+   "Snatch-grip deadlift"
+  ],
+  "progressions": [
+   "Snatch high pull",
+   "Snatch"
+  ],
+  "safety": "Use straps if needed; keep the bar close.",
+  "video": null,
+  "notes": "Often done at 90–110% of your best snatch."
+ },
+ {
+  "id": "snatchhighpull",
+  "name": "Snatch high pull",
+  "aliases": [
+   "Snatch-grip high pull"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Traps",
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Upper back",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "3–5",
+  "form_cues": [
+   "Snatch grip, start from floor or hang",
+   "Extend fully, then pull elbows high and out",
+   "Keep the bar close to your body"
+  ],
+  "common_mistakes": [
+   "Pulling with the arms too early",
+   "Bar swinging out",
+   "Not finishing the extension"
+  ],
+  "regressions": [
+   "Snatch pull"
+  ],
+  "progressions": [
+   "Power snatch"
+  ],
+  "safety": "Control the bar on the way down.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "snatchbalance",
+  "name": "Snatch balance",
+  "aliases": [],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Shoulders",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Upper back",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "2–3",
+  "form_cues": [
+   "Bar on your back with a snatch grip",
+   "Dip slightly, then push yourself under the bar fast",
+   "Catch in a full overhead squat with locked arms"
+  ],
+  "common_mistakes": [
+   "Pressing the bar instead of dropping under",
+   "Bar drifting forward",
+   "Feet landing too wide"
+  ],
+  "regressions": [
+   "Overhead squat",
+   "Drop snatch"
+  ],
+  "progressions": [
+   "Snatch"
+  ],
+  "safety": "Practise bailing; use bumpers and a platform.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "clean",
+  "name": "Squat clean",
+  "aliases": [
+   "Clean",
+   "Full clean"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps",
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Core",
+   "Calves",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "1–3",
+  "form_cues": [
+   "Bar over mid-foot, shoulder-width grip, back flat",
+   "Explode through the legs and hips, keeping the bar close",
+   "Pull under and catch in a deep front squat"
+  ],
+  "common_mistakes": [
+   "Pulling with the arms early",
+   "Catching with elbows down",
+   "Bar crashing on the shoulders"
+  ],
+  "regressions": [
+   "Power clean",
+   "Hang clean",
+   "Front squat"
+  ],
+  "progressions": [
+   "Clean and jerk"
+  ],
+  "safety": "Learn with a coach on a platform with bumpers; drop forward on a miss.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "powerclean",
+  "name": "Power clean",
+  "aliases": [],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps",
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Core",
+   "Calves",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "2–3",
+  "form_cues": [
+   "Start like a deadlift with a flat back",
+   "Jump when the bar passes your knees",
+   "Fast elbows and catch high in a quarter squat"
+  ],
+  "common_mistakes": [
+   "Reverse-curling the bar",
+   "Catching with low elbows",
+   "Hips going forward early"
+  ],
+  "regressions": [
+   "Hang power clean"
+  ],
+  "progressions": [
+   "Squat clean",
+   "Clean and jerk"
+  ],
+  "safety": "Use bumper plates and a platform.",
+  "video": null,
+  "notes": "Popular with athletes for explosive power."
+ },
+ {
+  "id": "hangclean",
+  "name": "Hang clean",
+  "aliases": [
+   "Hang squat clean"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps",
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Core",
+   "Calves",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "2–3",
+  "form_cues": [
+   "Start standing, hinge to just above the knees",
+   "Explode up and pull under",
+   "Catch in a full front squat"
+  ],
+  "common_mistakes": [
+   "Arms bending early",
+   "Hips swinging into the bar",
+   "Slow elbows"
+  ],
+  "regressions": [
+   "Hang power clean"
+  ],
+  "progressions": [
+   "Squat clean"
+  ],
+  "safety": "Use bumpers; drop forward on a miss.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hangpowerclean",
+  "name": "Hang power clean",
+  "aliases": [
+   "HPC"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps",
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Upper back",
+   "Core",
+   "Calves",
+   "Forearms"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "3–5",
+  "form_cues": [
+   "Hinge with the bar at mid-thigh",
+   "Jump and shrug",
+   "Whip elbows forward and catch above parallel"
+  ],
+  "common_mistakes": [
+   "Using the arms to lift",
+   "Wrists catching the bar",
+   "Leaning back"
+  ],
+  "regressions": [
+   "Clean high pull"
+  ],
+  "progressions": [
+   "Power clean",
+   "Hang clean"
+  ],
+  "safety": "Bumpers and a clear platform.",
+  "video": null,
+  "notes": "Great entry point to Olympic lifting."
+ },
+ {
+  "id": "cleanpull",
+  "name": "Clean pull",
+  "aliases": [],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps",
+   "Traps"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Forearms",
+   "Upper back"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "3–5",
+  "form_cues": [
+   "Set up like your clean",
+   "Push the floor away and keep the bar close",
+   "Finish tall with a strong shrug"
+  ],
+  "common_mistakes": [
+   "Bending the arms",
+   "Hips rising first",
+   "Leaning back"
+  ],
+  "regressions": [
+   "Deadlift"
+  ],
+  "progressions": [
+   "Clean high pull",
+   "Power clean"
+  ],
+  "safety": "Use straps if grip limits you.",
+  "video": null,
+  "notes": "Usually loaded at 90–110% of your best clean."
+ },
+ {
+  "id": "cleanhighpull",
+  "name": "Clean high pull",
+  "aliases": [
+   "High pull"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Traps",
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Upper back",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "3–5",
+  "form_cues": [
+   "Clean grip, start from floor or hang",
+   "Extend fully, then drive elbows high",
+   "Bar rises close to chest height"
+  ],
+  "common_mistakes": [
+   "Pulling early with arms",
+   "Bar swinging out",
+   "Not finishing hips"
+  ],
+  "regressions": [
+   "Clean pull"
+  ],
+  "progressions": [
+   "Power clean"
+  ],
+  "safety": "Control the lowering.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cleandl",
+  "name": "Clean deadlift",
+  "aliases": [
+   "Clean-grip deadlift"
+  ],
+  "training_type": "Strength",
+  "tags": [
+   "Strength",
+   "Power",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Upper back",
+   "Traps"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–5",
+  "form_cues": [
+   "Set up exactly like your clean",
+   "Lift slowly with the chest up and the bar close",
+   "Keep shoulders over the bar past the knees"
+  ],
+  "common_mistakes": [
+   "Hips shooting up",
+   "Bar drifting away",
+   "Rounding"
+  ],
+  "regressions": [
+   "Deadlift"
+  ],
+  "progressions": [
+   "Clean pull"
+  ],
+  "safety": "Keep a flat back.",
+  "video": null,
+  "notes": "Strength exercise that grooves the first pull of the clean."
+ },
+ {
+  "id": "cleanjerk",
+  "name": "Clean and jerk",
+  "aliases": [
+   "C&J"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Hamstrings",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Traps",
+   "Triceps",
+   "Core",
+   "Upper back"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "1–2",
+  "form_cues": [
+   "Clean the bar to a front squat and stand up",
+   "Reset your grip and breath",
+   "Dip, drive and split under to lock the bar overhead"
+  ],
+  "common_mistakes": [
+   "Rushing the jerk",
+   "Dipping forward",
+   "Soft elbows overhead"
+  ],
+  "regressions": [
+   "Power clean",
+   "Push press"
+  ],
+  "progressions": [],
+  "safety": "Learn from a coach; drop the bar forward on a missed jerk.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "splitjerk",
+  "name": "Split jerk",
+  "aliases": [
+   "Jerk"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core",
+   "Upper back",
+   "Calves"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "1–3",
+  "form_cues": [
+   "Dip straight down with the bar on your shoulders",
+   "Drive up hard, then split your feet",
+   "Lock the arms and recover feet together"
+  ],
+  "common_mistakes": [
+   "Pressing out",
+   "Dipping forward",
+   "Short split"
+  ],
+  "regressions": [
+   "Push press",
+   "Push jerk"
+  ],
+  "progressions": [
+   "Clean and jerk"
+  ],
+  "safety": "Use a rack and bumpers; miss forward.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pushjerk",
+  "name": "Push jerk",
+  "aliases": [],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core",
+   "Upper back",
+   "Calves"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "2–3",
+  "form_cues": [
+   "Dip and drive like a push press",
+   "Drop under into a partial squat",
+   "Catch with locked arms, then stand"
+  ],
+  "common_mistakes": [
+   "Pressing the bar out",
+   "Heels rising early",
+   "Leaning forward"
+  ],
+  "regressions": [
+   "Push press"
+  ],
+  "progressions": [
+   "Split jerk"
+  ],
+  "safety": "Use a rack and bumpers.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "powerjerk",
+  "name": "Power jerk",
+  "aliases": [],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core",
+   "Upper back",
+   "Calves"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "2–3",
+  "form_cues": [
+   "Dip and drive hard",
+   "Jump feet out to squat stance",
+   "Catch with locked arms in a quarter squat"
+  ],
+  "common_mistakes": [
+   "Pressing out",
+   "Feet too wide",
+   "Lazy drive"
+  ],
+  "regressions": [
+   "Push press"
+  ],
+  "progressions": [
+   "Split jerk"
+  ],
+  "safety": "Use a rack and bumpers.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pushpress",
+  "name": "Push press",
+  "aliases": [],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Shoulders",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "3–6",
+  "form_cues": [
+   "Bar on front delts, short dip",
+   "Drive with the legs",
+   "Press to lockout"
+  ],
+  "common_mistakes": [
+   "Deep dip",
+   "Leaning back",
+   "Slow transfer"
+  ],
+  "regressions": [
+   "Standing barbell overhead press"
+  ],
+  "progressions": [
+   "Push jerk"
+  ],
+  "safety": "Use a rack; keep ribs down.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "thruster",
+  "name": "Barbell thruster",
+  "aliases": [
+   "Thruster"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core",
+   "Upper back"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Olympic barbell",
+   "Weight plates",
+   "Squat rack"
+  ],
+  "req": "barbell,plates,powerrack",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "5–10",
+  "form_cues": [
+   "Front-rack the bar",
+   "Squat to depth",
+   "Drive up and press overhead in one motion"
+  ],
+  "common_mistakes": [
+   "Pressing too early",
+   "Elbows dropping",
+   "Heels lifting"
+  ],
+  "regressions": [
+   "Landmine thruster"
+  ],
+  "progressions": [],
+  "safety": "Moderate loads.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sdhp",
+  "name": "Sumo deadlift high pull",
+  "aliases": [
+   "SDHP"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Traps",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Hamstrings",
+   "Adductors"
+  ],
+  "movement_pattern": "Vertical pull",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "8–12",
+  "form_cues": [
+   "Wide stance, narrow grip",
+   "Drive up with legs",
+   "Pull elbows high"
+  ],
+  "common_mistakes": [
+   "Pulling early",
+   "Rounding",
+   "Elbows low"
+  ],
+  "regressions": [
+   "Sumo deadlift"
+  ],
+  "progressions": [],
+  "safety": "Moderate loads.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cleanpress",
+  "name": "Clean and press",
+  "aliases": [
+   "Barbell clean and press"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strength",
+   "Compound"
+  ],
+  "muscle_group": "Shoulders",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Traps",
+   "Triceps",
+   "Core"
+  ],
+  "movement_pattern": "Vertical push",
+  "equipment": [
+   "Olympic barbell",
+   "Bumper plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 5,
+  "reps": "3–6",
+  "form_cues": [
+   "Power clean to front rack",
+   "Stand and brace",
+   "Strictly press overhead"
+  ],
+  "common_mistakes": [
+   "Leaning back",
+   "Reverse-curling",
+   "Rushing"
+  ],
+  "regressions": [
+   "Hang power clean"
+  ],
+  "progressions": [
+   "Clean and jerk"
+  ],
+  "safety": "Moderate loads.",
+  "video": null,
+  "notes": ""
+ }
+]

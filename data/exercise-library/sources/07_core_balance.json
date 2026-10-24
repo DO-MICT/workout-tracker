@@ -1,0 +1,4698 @@
+[
+ {
+  "id": "plank",
+  "name": "Plank",
+  "aliases": [
+   "Forearm plank",
+   "Front plank",
+   "Elbow plank"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Endurance",
+   "Rehab"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Glutes",
+   "Shoulders"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–60 sec",
+  "form_cues": [
+   "Stack elbows under shoulders and push the floor away",
+   "Squeeze glutes and brace like you're about to be poked",
+   "Keep one straight line from head to heels"
+  ],
+  "common_mistakes": [
+   "Hips sagging toward the floor",
+   "Hips piked high to make it easier",
+   "Holding the breath"
+  ],
+  "regressions": [
+   "Kneeling plank",
+   "Incline plank"
+  ],
+  "progressions": [
+   "Plank shoulder taps",
+   "Body saw",
+   "Weighted plank"
+  ],
+  "safety": "Stop if you feel it in your lower back rather than your abs.",
+  "video": null,
+  "notes": "Quality beats time: end the set when your hips start to drop."
+ },
+ {
+  "id": "highplank",
+  "name": "High plank",
+  "aliases": [
+   "Straight-arm plank",
+   "Push-up plank",
+   "Full plank"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Warm-up"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Chest",
+   "Triceps"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–45 sec",
+  "form_cues": [
+   "Hands under shoulders, arms straight but not locked",
+   "Spread your fingers and push the floor away",
+   "Tuck pelvis slightly and keep a straight line"
+  ],
+  "common_mistakes": [
+   "Shoulders sinking toward the floor",
+   "Hips sagging"
+  ],
+  "regressions": [
+   "Kneeling high plank",
+   "Incline plank on a bench"
+  ],
+  "progressions": [
+   "Plank shoulder taps",
+   "Plank up-down"
+  ],
+  "safety": "Go to fists or forearms if your wrists hurt.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sideplank",
+  "name": "Side plank",
+  "aliases": [
+   "Forearm side plank",
+   "Lateral plank"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Rehab",
+   "Unilateral"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Quadratus lumborum"
+  ],
+  "secondary_muscles": [
+   "Glute medius",
+   "Transverse abdominis",
+   "Shoulders"
+  ],
+  "movement_pattern": "Anti-lateral flexion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "20–45 sec / side",
+  "form_cues": [
+   "Elbow directly under shoulder, feet stacked or staggered",
+   "Lift hips so ankles, hips and shoulders line up",
+   "Push the floor away and don't let the top hip roll back"
+  ],
+  "common_mistakes": [
+   "Hips sagging down",
+   "Rolling forward or back",
+   "Shoulder shrugged up to the ear"
+  ],
+  "regressions": [
+   "Kneeling side plank"
+  ],
+  "progressions": [
+   "Side plank hip dips",
+   "Side plank with rotation",
+   "Copenhagen plank"
+  ],
+  "safety": "Bend the bottom knee to shorten the lever if your shoulder complains.",
+  "video": null,
+  "notes": "Stagger the feet for more stability; stack them for more challenge."
+ },
+ {
+  "id": "sideplankdip",
+  "name": "Side plank hip dips",
+  "aliases": [
+   "Side plank dips",
+   "Oblique hip dips"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Quadratus lumborum",
+   "Glute medius"
+  ],
+  "movement_pattern": "Anti-lateral flexion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Start in a strong side plank on your forearm",
+   "Lower the hip a few centimetres toward the floor",
+   "Drive it back up past level and pause"
+  ],
+  "common_mistakes": [
+   "Rushing and bouncing the hip off the floor",
+   "Twisting the torso instead of moving sideways"
+  ],
+  "regressions": [
+   "Side plank"
+  ],
+  "progressions": [
+   "Side plank with rotation",
+   "Copenhagen plank"
+  ],
+  "safety": "Keep the shoulder packed down; stop if it pinches.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "sideplankrot",
+  "name": "Side plank with rotation",
+  "aliases": [
+   "Side plank thread the needle",
+   "Side plank reach-through"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Transverse abdominis",
+   "Shoulders",
+   "Glute medius"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Hold a tall side plank with the top arm reaching to the ceiling",
+   "Rotate and thread the top arm under your body",
+   "Return slowly without letting the hips drop"
+  ],
+  "common_mistakes": [
+   "Hips sinking as you rotate",
+   "Moving fast and losing control"
+  ],
+  "regressions": [
+   "Side plank"
+  ],
+  "progressions": [
+   "Side plank with a light dumbbell reach-through"
+  ],
+  "safety": "Keep the supporting shoulder stacked over the elbow.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "copenhagen",
+  "name": "Copenhagen plank",
+  "aliases": [
+   "Copenhagen side plank",
+   "Copenhagen adductor plank"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Rehab",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Adductors",
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Quadratus lumborum",
+   "Glute medius"
+  ],
+  "movement_pattern": "Anti-lateral flexion",
+  "equipment": [
+   "Bench or chair"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "15–30 sec / side",
+  "form_cues": [
+   "Top leg rests on a bench or chair, bottom leg hangs free",
+   "Lift hips into a straight side plank line",
+   "Squeeze the top leg down into the bench the whole time"
+  ],
+  "common_mistakes": [
+   "Hips sagging",
+   "Too much leg on the bench too soon"
+  ],
+  "regressions": [
+   "Short-lever Copenhagen (knee on bench)",
+   "Side plank"
+  ],
+  "progressions": [
+   "Copenhagen plank with bottom-leg raise"
+  ],
+  "safety": "Start with the knee on the bench to protect the groin; stop with sharp adductor pain.",
+  "video": null,
+  "notes": "Great for groin injury prevention in field sports. A chair works if you have no bench."
+ },
+ {
+  "id": "reverseplank",
+  "name": "Reverse plank",
+  "aliases": [
+   "Back plank",
+   "Supine plank"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Erector spinae"
+  ],
+  "secondary_muscles": [
+   "Transverse abdominis",
+   "Shoulders",
+   "Triceps"
+  ],
+  "movement_pattern": "Extension",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–40 sec",
+  "form_cues": [
+   "Sit with legs long, hands behind hips, fingers toward feet",
+   "Drive hips up until your body is one straight line",
+   "Squeeze glutes and keep the chin neutral"
+  ],
+  "common_mistakes": [
+   "Hips sagging",
+   "Dropping the head back"
+  ],
+  "regressions": [
+   "Tabletop hold (knees bent)"
+  ],
+  "progressions": [
+   "Reverse plank with leg lift"
+  ],
+  "safety": "Do it on forearms if your wrists or shoulders object.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bearhold",
+  "name": "Bear plank hold",
+  "aliases": [
+   "Bear hold",
+   "Hover plank",
+   "Quadruped hover"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Warm-up"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Transverse abdominis",
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Quadriceps",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–45 sec",
+  "form_cues": [
+   "On hands and knees, hands under shoulders, knees under hips",
+   "Lift knees about 3 cm off the floor",
+   "Keep your back flat like a table"
+  ],
+  "common_mistakes": [
+   "Hips rising high",
+   "Rounding or arching the back"
+  ],
+  "regressions": [
+   "Bird dog"
+  ],
+  "progressions": [
+   "Bear plank shoulder taps",
+   "Bear crawl"
+  ],
+  "safety": "Keep breathing; go to fists if wrists hurt.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "plankshoulder",
+  "name": "Plank shoulder taps",
+  "aliases": [
+   "Shoulder tap plank",
+   "High plank shoulder taps"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Transverse abdominis",
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Chest"
+  ],
+  "movement_pattern": "Anti-rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20 taps",
+  "form_cues": [
+   "Start in a high plank with feet a bit wider than hips",
+   "Tap the opposite shoulder with one hand at a time",
+   "Keep the hips still, like a glass of water is on your back"
+  ],
+  "common_mistakes": [
+   "Hips swaying side to side",
+   "Rushing the taps"
+  ],
+  "regressions": [
+   "Kneeling shoulder taps",
+   "High plank"
+  ],
+  "progressions": [
+   "Plank up-down",
+   "Renegade row"
+  ],
+  "safety": "Widen your feet if you can't stop the hips rocking.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "plankupdown",
+  "name": "Plank up-down",
+  "aliases": [
+   "Up-down plank",
+   "Plank walk-ups",
+   "Commando plank"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Endurance"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Transverse abdominis",
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Shoulders",
+   "Chest"
+  ],
+  "movement_pattern": "Anti-rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Start on forearms in a plank",
+   "Press up to hands one arm at a time, then lower back down",
+   "Alternate the leading arm and keep the hips level"
+  ],
+  "common_mistakes": [
+   "Hips rocking side to side",
+   "Hips piking up"
+  ],
+  "regressions": [
+   "Plank shoulder taps",
+   "Plank"
+  ],
+  "progressions": [
+   "Weighted plank up-down"
+  ],
+  "safety": "Widen the feet for stability; skip if you have wrist pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "spiderplank",
+  "name": "Spiderman plank",
+  "aliases": [
+   "Spiderman plank crunch",
+   "Knee-to-elbow plank"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Shoulders"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Start in a forearm or high plank",
+   "Bring one knee out to the same-side elbow",
+   "Return the leg with control and switch sides"
+  ],
+  "common_mistakes": [
+   "Hips hiking up to reach",
+   "Lower back sagging"
+  ],
+  "regressions": [
+   "Plank"
+  ],
+  "progressions": [
+   "Cross-body mountain climber"
+  ],
+  "safety": "Move slowly; it is a strength drill, not cardio.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bodysaw",
+  "name": "Body saw",
+  "aliases": [
+   "Plank body saw",
+   "Slider body saw"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Lats",
+   "Serratus anterior"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [
+   "Sliders or towel"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Forearm plank with feet on sliders or a towel",
+   "Push your body back so elbows go in front of your face",
+   "Pull back to the start without letting hips sag"
+  ],
+  "common_mistakes": [
+   "Lower back arching as you push back",
+   "Sliding too far too soon"
+  ],
+  "regressions": [
+   "Plank"
+  ],
+  "progressions": [
+   "Ab wheel rollout",
+   "Stability ball rollout"
+  ],
+  "safety": "Only go as far as you can keep the ribs down.",
+  "video": null,
+  "notes": "A towel on a hard floor or socks on wood work as sliders."
+ },
+ {
+  "id": "floorcrunch",
+  "name": "Crunch",
+  "aliases": [
+   "Basic crunch",
+   "Floor crunch",
+   "Abdominal crunch"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Isolation"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Lie on your back, knees bent, feet flat",
+   "Curl your ribs toward your hips until shoulder blades lift",
+   "Lower slowly and keep a fist-sized gap under the chin"
+  ],
+  "common_mistakes": [
+   "Yanking on the neck",
+   "Swinging up with momentum",
+   "Lifting the whole back off the floor (that's a sit-up)"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Weighted crunch",
+   "Stability ball crunch",
+   "Decline crunch"
+  ],
+  "safety": "Support the head lightly with fingertips; don't pull.",
+  "video": null,
+  "notes": "Hold a plate on the chest to add load."
+ },
+ {
+  "id": "bicycle",
+  "name": "Bicycle crunch",
+  "aliases": [
+   "Bicycle kick crunch",
+   "Bicycles",
+   "Elbow-to-knee crunch"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Hip flexors"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20 (10 / side)",
+  "form_cues": [
+   "Hands lightly behind the head, shoulders off the floor",
+   "Rotate one shoulder toward the opposite knee as the other leg extends",
+   "Slow down and pause on each twist"
+  ],
+  "common_mistakes": [
+   "Flapping elbows instead of rotating the ribs",
+   "Racing through reps",
+   "Lower back peeling up"
+  ],
+  "regressions": [
+   "Dead bug",
+   "Heel touches"
+  ],
+  "progressions": [
+   "Weighted Russian twist"
+  ],
+  "safety": "Keep the extended leg higher if your back arches.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "revcrunch",
+  "name": "Reverse crunch",
+  "aliases": [
+   "Lying reverse crunch",
+   "Floor reverse crunch"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Isolation"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Lie down, knees bent at 90°, hands by your sides",
+   "Curl your hips off the floor toward your ribs",
+   "Lower slowly without the feet crashing down"
+  ],
+  "common_mistakes": [
+   "Swinging the legs for momentum",
+   "Only moving the legs, not the pelvis"
+  ],
+  "regressions": [
+   "Dead bug"
+  ],
+  "progressions": [
+   "Bench leg raise",
+   "Hanging knee raise",
+   "Decline reverse crunch"
+  ],
+  "safety": "Keep it slow to protect the lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "obliquecrunch",
+  "name": "Oblique crunch",
+  "aliases": [
+   "Side crunch",
+   "Cross-body crunch"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Isolation"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Rectus abdominis"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Lie on your back with one ankle on the other knee",
+   "Curl and rotate the opposite shoulder toward the raised knee",
+   "Lower slowly and finish all reps before switching"
+  ],
+  "common_mistakes": [
+   "Pulling on the neck",
+   "Only moving the elbow"
+  ],
+  "regressions": [
+   "Heel touches"
+  ],
+  "progressions": [
+   "Bicycle crunch",
+   "Cable woodchop"
+  ],
+  "safety": "Keep the movement small and controlled.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "heeltap",
+  "name": "Heel touches",
+  "aliases": [
+   "Alternating heel touches",
+   "Heel taps",
+   "Side-to-side oblique reach"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Rectus abdominis"
+  ],
+  "movement_pattern": "Anti-lateral flexion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20 (10 / side)",
+  "form_cues": [
+   "Lie with knees bent, feet a bit wider than hips",
+   "Lift shoulders and reach one hand to the same-side heel",
+   "Stay curled up as you tap side to side"
+  ],
+  "common_mistakes": [
+   "Dropping the head between reps",
+   "Pulling the chin into the chest"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Oblique crunch",
+   "Bicycle crunch"
+  ],
+  "safety": "Fine for most people; rest the head between sets if the neck tires.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "toetouch",
+  "name": "Toe touch crunch",
+  "aliases": [
+   "Vertical toe touches",
+   "Toe reaches",
+   "Leg-up crunch"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Lie down with legs pointing to the ceiling",
+   "Reach your hands toward your toes, lifting shoulder blades",
+   "Lower slowly and keep the legs still"
+  ],
+  "common_mistakes": [
+   "Throwing the arms instead of curling the trunk",
+   "Letting the legs drift down"
+  ],
+  "regressions": [
+   "Crunch"
+  ],
+  "progressions": [
+   "V-up",
+   "Weighted toe touch"
+  ],
+  "safety": "Bend the knees slightly if your hamstrings are tight.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "floorsitup",
+  "name": "Sit-up",
+  "aliases": [
+   "Full sit-up",
+   "Floor sit-up",
+   "Bent-knee sit-up"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–20",
+  "form_cues": [
+   "Knees bent, feet flat, arms crossed on chest",
+   "Curl up one vertebra at a time until you're upright",
+   "Lower with control rather than flopping back"
+  ],
+  "common_mistakes": [
+   "Jerking up with the arms or neck",
+   "Feet flying up"
+  ],
+  "regressions": [
+   "Crunch"
+  ],
+  "progressions": [
+   "Butterfly sit-up",
+   "Decline sit-up",
+   "Weighted sit-up"
+  ],
+  "safety": "Skip or swap for crunches if sit-ups aggravate a disc problem.",
+  "video": null,
+  "notes": "Anchor the feet under a sofa if needed."
+ },
+ {
+  "id": "butterflysitup",
+  "name": "Butterfly sit-up",
+  "aliases": [
+   "AbMat sit-up",
+   "Frog sit-up"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Endurance"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Mat (optional AbMat)"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–25",
+  "form_cues": [
+   "Soles of feet together, knees out wide",
+   "Reach arms overhead and swing up to touch your feet",
+   "Roll back down and touch the floor behind you"
+  ],
+  "common_mistakes": [
+   "Using only arm swing",
+   "Slamming back onto the floor"
+  ],
+  "regressions": [
+   "Sit-up"
+  ],
+  "progressions": [
+   "Decline sit-up",
+   "GHD sit-up"
+  ],
+  "safety": "Use a rolled towel under the lower back if it feels uncomfortable.",
+  "video": null,
+  "notes": "Common in CrossFit; the knees-out position limits hip flexor pull."
+ },
+ {
+  "id": "lyinglegraise",
+  "name": "Lying leg raise",
+  "aliases": [
+   "Leg raise",
+   "Floor leg raise",
+   "Straight-leg raise"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Lie flat, hands under hips or by your sides",
+   "Press the lower back into the floor and raise straight legs to vertical",
+   "Lower slowly until just before the back lifts"
+  ],
+  "common_mistakes": [
+   "Lower back arching off the floor",
+   "Dropping the legs fast"
+  ],
+  "regressions": [
+   "Bent-knee leg raise",
+   "Reverse crunch"
+  ],
+  "progressions": [
+   "Bench leg raise",
+   "Hanging leg raise"
+  ],
+  "safety": "Bend the knees or shorten the range if your lower back lifts.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "flutter",
+  "name": "Flutter kicks",
+  "aliases": [
+   "Flutters",
+   "Straight-leg flutter kicks"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Endurance"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 kicks",
+  "form_cues": [
+   "Lie down, hands under hips, lower back pressed down",
+   "Lift legs a few centimetres off the floor",
+   "Kick small, quick up-and-down alternations"
+  ],
+  "common_mistakes": [
+   "Lower back arching",
+   "Kicks too big and sloppy"
+  ],
+  "regressions": [
+   "Dead bug"
+  ],
+  "progressions": [
+   "Hollow body hold",
+   "Scissor kicks"
+  ],
+  "safety": "Raise the legs higher if your back arches.",
+  "video": null,
+  "notes": "Can also be tracked as time (30–45 sec)."
+ },
+ {
+  "id": "scissor",
+  "name": "Scissor kicks",
+  "aliases": [
+   "Scissors",
+   "Cross-over kicks"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Endurance"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Obliques"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20 crosses",
+  "form_cues": [
+   "Lie down, lower back pressed into the floor",
+   "Hold legs just off the floor",
+   "Cross one leg over the other, then switch, keeping legs straight"
+  ],
+  "common_mistakes": [
+   "Arching the back",
+   "Legs dropping onto the floor"
+  ],
+  "regressions": [
+   "Flutter kicks"
+  ],
+  "progressions": [
+   "Hollow body hold"
+  ],
+  "safety": "Keep the legs higher to make it easier on the back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "deadbug",
+  "name": "Dead bug",
+  "aliases": [
+   "Deadbug",
+   "Contralateral dead bug"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Rehab",
+   "Warm-up"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Transverse abdominis",
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Lie on your back, arms to ceiling, knees at 90°",
+   "Lower the opposite arm and leg toward the floor",
+   "Keep the lower back flat and breathe out as you reach"
+  ],
+  "common_mistakes": [
+   "Lower back arching",
+   "Moving too fast"
+  ],
+  "regressions": [
+   "Heel taps (legs only)"
+  ],
+  "progressions": [
+   "Weighted dead bug",
+   "Band dead bug",
+   "Hollow body hold"
+  ],
+  "safety": "A good choice for sensitive backs; shorten the range if the back lifts.",
+  "video": null,
+  "notes": "Hold a dumbbell or press into a band to progress."
+ },
+ {
+  "id": "birddog",
+  "name": "Bird dog",
+  "aliases": [
+   "Quadruped arm and leg raise",
+   "Pointer"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Rehab",
+   "Warm-up",
+   "Balance"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Erector spinae",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Shoulders",
+   "Obliques"
+  ],
+  "movement_pattern": "Anti-rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Hands under shoulders, knees under hips, back flat",
+   "Reach the opposite arm and leg out long",
+   "Pause for 2 seconds without the hips tilting, then switch"
+  ],
+  "common_mistakes": [
+   "Arching the back as the leg lifts",
+   "Hips rotating open"
+  ],
+  "regressions": [
+   "Bird dog arm or leg only"
+  ],
+  "progressions": [
+   "Bird dog elbow-to-knee crunch",
+   "Banded bird dog"
+  ],
+  "safety": "Keep it small and controlled if you have back pain.",
+  "video": null,
+  "notes": "One of McGill's 'Big 3' back-health moves."
+ },
+ {
+  "id": "hollowhold",
+  "name": "Hollow body hold",
+  "aliases": [
+   "Hollow hold",
+   "Hollow position",
+   "Dish hold"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Calisthenics"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Obliques"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–40 sec",
+  "form_cues": [
+   "Press your lower back into the floor",
+   "Lift shoulders and legs, arms reaching past your ears",
+   "Hold the banana shape and keep breathing"
+  ],
+  "common_mistakes": [
+   "Lower back lifting off the floor",
+   "Holding the breath"
+  ],
+  "regressions": [
+   "Tuck hollow hold",
+   "Dead bug"
+  ],
+  "progressions": [
+   "Hollow body rock"
+  ],
+  "safety": "Tuck the knees or bring arms forward if your back lifts.",
+  "video": null,
+  "notes": "A foundation for gymnastics and calisthenics skills."
+ },
+ {
+  "id": "hollowrock",
+  "name": "Hollow body rock",
+  "aliases": [
+   "Hollow rocks",
+   "Hollow rock"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Calisthenics"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Obliques"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Get into a tight hollow hold",
+   "Rock from shoulders to hips without changing shape",
+   "Keep arms by the ears and legs together"
+  ],
+  "common_mistakes": [
+   "Bending at the hips to make the rock",
+   "Losing the low-back contact"
+  ],
+  "regressions": [
+   "Hollow body hold"
+  ],
+  "progressions": [
+   "Weighted hollow rock"
+  ],
+  "safety": "Only rock if you can hold the hollow position for 30 sec first.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "vup",
+  "name": "V-up",
+  "aliases": [
+   "Jackknife V-up",
+   "Full V-up"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Calisthenics"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie flat with arms overhead and legs straight",
+   "Lift arms and legs together to meet over your hips",
+   "Lower slowly back to a hovering hollow position"
+  ],
+  "common_mistakes": [
+   "Bending the knees a lot",
+   "Flopping back down"
+  ],
+  "regressions": [
+   "Tuck-up",
+   "Jackknife sit-up"
+  ],
+  "progressions": [
+   "Weighted V-up",
+   "Stability ball pass"
+  ],
+  "safety": "Build up through tuck-ups if your back arches.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "tuckup",
+  "name": "Tuck-up",
+  "aliases": [
+   "V-sit tuck",
+   "Crunchy frog",
+   "Seated knee tuck-up"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Lie flat with arms overhead",
+   "Sit up as you pull your knees to your chest",
+   "Hug the shins briefly, then lower with control"
+  ],
+  "common_mistakes": [
+   "Swinging with momentum",
+   "Crashing back down"
+  ],
+  "regressions": [
+   "Seated knee tuck"
+  ],
+  "progressions": [
+   "V-up"
+  ],
+  "safety": "Keep the motion controlled to protect the lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "jackknife",
+  "name": "Jackknife sit-up",
+  "aliases": [
+   "Jackknife",
+   "Single-leg V-up"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie flat, arms overhead",
+   "Raise one straight leg as you reach both hands to that foot",
+   "Lower back down and alternate legs"
+  ],
+  "common_mistakes": [
+   "Pulling with the neck",
+   "Bending the reaching leg a lot"
+  ],
+  "regressions": [
+   "Toe touch crunch"
+  ],
+  "progressions": [
+   "V-up"
+  ],
+  "safety": "Keep the non-working leg on the floor for support.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "seatedtuck",
+  "name": "Seated knee tuck",
+  "aliases": [
+   "Seated in-and-outs",
+   "Knee tucks",
+   "Seated crunch"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Sit leaning back on your hands, feet off the floor",
+   "Pull your knees toward your chest as your chest moves toward them",
+   "Extend the legs out long without touching the floor"
+  ],
+  "common_mistakes": [
+   "Rounding the shoulders forward",
+   "Letting the feet drop"
+  ],
+  "regressions": [
+   "Reverse crunch"
+  ],
+  "progressions": [
+   "Tuck-up",
+   "V-sit hold"
+  ],
+  "safety": "Lean back on forearms if you feel it in your lower back.",
+  "video": null,
+  "notes": "Can also be done on a bench edge."
+ },
+ {
+  "id": "vsit",
+  "name": "V-sit hold",
+  "aliases": [
+   "V-hold",
+   "Boat hold",
+   "Seated V hold"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Calisthenics"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–30 sec",
+  "form_cues": [
+   "Sit tall and lean back slightly",
+   "Lift your legs to make a V with your body",
+   "Keep the chest open and spine long"
+  ],
+  "common_mistakes": [
+   "Rounding the back",
+   "Holding the breath"
+  ],
+  "regressions": [
+   "Tuck V-sit hold"
+  ],
+  "progressions": [
+   "Hollow body hold",
+   "V-up"
+  ],
+  "safety": "Bend the knees if you can't keep your back straight.",
+  "video": null,
+  "notes": "Yoga's boat pose is a similar shape."
+ },
+ {
+  "id": "russian",
+  "name": "Russian twist",
+  "aliases": [
+   "Seated twist",
+   "Medicine ball Russian twist",
+   "Weighted Russian twist"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Optional plate, dumbbell or medicine ball"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20 (10 / side)",
+  "form_cues": [
+   "Sit leaning back about 45° with a tall chest",
+   "Turn your shoulders, not just your arms, side to side",
+   "Lift the feet for a harder version"
+  ],
+  "common_mistakes": [
+   "Swinging the arms while the torso stays still",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Feet-down Russian twist"
+  ],
+  "progressions": [
+   "Weighted Russian twist",
+   "Landmine rotation"
+  ],
+  "safety": "Skip with disc problems that dislike loaded twisting.",
+  "video": null,
+  "notes": "Add a medicine ball, plate or dumbbell for load."
+ },
+ {
+  "id": "mtnclimber",
+  "name": "Mountain climbers",
+  "aliases": [
+   "Mountain climber",
+   "Running plank"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Cardio",
+   "Home-friendly",
+   "Endurance",
+   "Warm-up"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 (15 / side)",
+  "form_cues": [
+   "Start in a high plank, hands under shoulders",
+   "Drive one knee toward your chest, then switch quickly",
+   "Keep the hips level and shoulders over the hands"
+  ],
+  "common_mistakes": [
+   "Hips bouncing high",
+   "Shoulders drifting behind the hands"
+  ],
+  "regressions": [
+   "Slow mountain climbers",
+   "Incline mountain climbers on a bench"
+  ],
+  "progressions": [
+   "Cross-body mountain climber",
+   "Suspension mountain climbers"
+  ],
+  "safety": "Slow down if your wrists or lower back complain.",
+  "video": null,
+  "notes": "Track as time (30–45 sec) for conditioning work."
+ },
+ {
+  "id": "crossmtn",
+  "name": "Cross-body mountain climber",
+  "aliases": [
+   "Cross-body climbers",
+   "Twisting mountain climbers",
+   "Oblique mountain climbers"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Cardio",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Shoulders"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20 (10 / side)",
+  "form_cues": [
+   "Start in a strong high plank",
+   "Drive each knee toward the opposite elbow",
+   "Keep the hips low and shoulders still"
+  ],
+  "common_mistakes": [
+   "Hips piking up",
+   "Rushing and losing the twist"
+  ],
+  "regressions": [
+   "Mountain climbers"
+  ],
+  "progressions": [
+   "Spiderman plank"
+  ],
+  "safety": "Keep the pace controlled if your back sags.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "lyingwiper",
+  "name": "Lying windshield wipers",
+  "aliases": [
+   "Floor windshield wipers",
+   "Lying leg rotations"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Lie on your back with arms out in a T, legs up at 90°",
+   "Lower your legs to one side while shoulders stay down",
+   "Pull them back to centre and go to the other side"
+  ],
+  "common_mistakes": [
+   "Shoulders lifting off the floor",
+   "Dropping the legs too fast"
+  ],
+  "regressions": [
+   "Bent-knee windshield wipers"
+  ],
+  "progressions": [
+   "Hanging windshield wipers"
+  ],
+  "safety": "Bend the knees to shorten the lever if your back aches.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "vacuum",
+  "name": "Stomach vacuum",
+  "aliases": [
+   "Abdominal vacuum",
+   "Ab vacuum",
+   "Drawing-in manoeuvre"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Diaphragm"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20 sec",
+  "form_cues": [
+   "Breathe out fully through your mouth",
+   "Pull your belly button in toward your spine",
+   "Hold while taking small, shallow breaths"
+  ],
+  "common_mistakes": [
+   "Holding the breath until dizzy",
+   "Sucking in the chest instead of the belly"
+  ],
+  "regressions": [
+   "Supine vacuum (lying down)"
+  ],
+  "progressions": [
+   "Kneeling or standing vacuum"
+  ],
+  "safety": "Avoid if you are pregnant or have high blood pressure.",
+  "video": null,
+  "notes": "Popular in physique and rehab circles for deep-core awareness."
+ },
+ {
+  "id": "slstand",
+  "name": "Single-leg stand",
+  "aliases": [
+   "Single-leg balance",
+   "Stork stand",
+   "One-leg stand"
+  ],
+  "training_type": "Balance",
+  "tags": [
+   "Balance",
+   "Home-friendly",
+   "Rehab",
+   "Unilateral",
+   "Warm-up"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Ankle stabilisers",
+   "Glute medius"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "30 sec / side",
+  "form_cues": [
+   "Stand tall and lift one foot just off the floor",
+   "Spread your toes and keep a slight bend in the standing knee",
+   "Fix your eyes on a point ahead"
+  ],
+  "common_mistakes": [
+   "Locking the standing knee",
+   "Hip dropping on the lifted side"
+  ],
+  "regressions": [
+   "Tandem stance hold",
+   "Fingertip support on a wall"
+  ],
+  "progressions": [
+   "Single-leg stand, eyes closed",
+   "BOSU single-leg balance"
+  ],
+  "safety": "Stand near a wall or counter in case you lose balance.",
+  "video": null,
+  "notes": "Great for ankle sprain rehab and fall prevention."
+ },
+ {
+  "id": "slstandeyes",
+  "name": "Single-leg stand, eyes closed",
+  "aliases": [
+   "Eyes-closed single-leg balance",
+   "Blind stork stand"
+  ],
+  "training_type": "Balance",
+  "tags": [
+   "Balance",
+   "Home-friendly",
+   "Rehab",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Ankle stabilisers",
+   "Glute medius"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "15–30 sec / side",
+  "form_cues": [
+   "Get steady on one leg with eyes open first",
+   "Close your eyes and keep the standing knee soft",
+   "Let the ankle make small corrections"
+  ],
+  "common_mistakes": [
+   "Locking the knee",
+   "Grabbing for support too early"
+  ],
+  "regressions": [
+   "Single-leg stand"
+  ],
+  "progressions": [
+   "Single-leg stand on a BOSU"
+  ],
+  "safety": "Always do this next to a wall or sturdy support.",
+  "video": null,
+  "notes": "Removing vision makes the ankle and inner ear work harder."
+ },
+ {
+  "id": "tandemstance",
+  "name": "Tandem stance hold",
+  "aliases": [
+   "Heel-to-toe stance",
+   "Tightrope stance",
+   "Romberg tandem stance"
+  ],
+  "training_type": "Balance",
+  "tags": [
+   "Balance",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Ankle stabilisers"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core",
+   "Hip abductors"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec each foot forward",
+  "form_cues": [
+   "Place one heel directly in front of the other foot's toes",
+   "Stand tall with arms relaxed",
+   "Hold, then switch which foot is in front"
+  ],
+  "common_mistakes": [
+   "Looking down at the feet",
+   "Leaning to one side"
+  ],
+  "regressions": [
+   "Semi-tandem stance (feet staggered)"
+  ],
+  "progressions": [
+   "Heel-to-toe walk",
+   "Single-leg stand"
+  ],
+  "safety": "Stand in a corner or by a counter for safety.",
+  "video": null,
+  "notes": "Common in falls-prevention programmes for older adults."
+ },
+ {
+  "id": "heeltoewalk",
+  "name": "Heel-to-toe walk",
+  "aliases": [
+   "Tandem walk",
+   "Tightrope walk",
+   "Line walk"
+  ],
+  "training_type": "Balance",
+  "tags": [
+   "Balance",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Ankle stabilisers"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core",
+   "Hip abductors"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20 steps",
+  "form_cues": [
+   "Walk in a straight line, heel touching the toes of the back foot",
+   "Keep your eyes forward, not on your feet",
+   "Move slowly and steadily"
+  ],
+  "common_mistakes": [
+   "Rushing the steps",
+   "Arms flailing for balance"
+  ],
+  "regressions": [
+   "Tandem stance hold"
+  ],
+  "progressions": [
+   "Heel-to-toe walk backwards",
+   "Heel-to-toe walk, eyes closed"
+  ],
+  "safety": "Walk beside a wall or counter until confident.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "starexc",
+  "name": "Star excursion balance",
+  "aliases": [
+   "Star excursion",
+   "Single-leg clock reach",
+   "Single-leg reach"
+  ],
+  "training_type": "Balance",
+  "tags": [
+   "Balance",
+   "Home-friendly",
+   "Rehab",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glute medius",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Ankle stabilisers",
+   "Core",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "1 round of 8 directions / side",
+  "form_cues": [
+   "Balance on one leg in a quarter squat",
+   "Reach the free toe as far as you can along each direction like a clock",
+   "Tap lightly, return to the centre and keep the standing heel down"
+  ],
+  "common_mistakes": [
+   "Putting weight on the reaching foot",
+   "Standing knee caving inward"
+  ],
+  "regressions": [
+   "Single-leg stand"
+  ],
+  "progressions": [
+   "Y-balance reach",
+   "Star excursion on a BOSU"
+  ],
+  "safety": "Keep reaches within a range you can control.",
+  "video": null,
+  "notes": "Used by physios to test and train ankle and knee stability."
+ },
+ {
+  "id": "ybalance",
+  "name": "Y-balance reach",
+  "aliases": [
+   "Y-balance",
+   "Y-balance test drill",
+   "Three-way single-leg reach"
+  ],
+  "training_type": "Balance",
+  "tags": [
+   "Balance",
+   "Rehab",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glute medius",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Ankle stabilisers",
+   "Core",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5 / direction / side",
+  "form_cues": [
+   "Stand on one leg at the centre of a Y",
+   "Reach the free foot forward, then back-left, then back-right",
+   "Touch lightly and return without losing balance"
+  ],
+  "common_mistakes": [
+   "Leaning heavily on the reaching foot",
+   "Standing heel lifting"
+  ],
+  "regressions": [
+   "Single-leg stand",
+   "Star excursion balance"
+  ],
+  "progressions": [
+   "Y-balance reach on a BOSU"
+  ],
+  "safety": "Mark the lines with tape; stay near support if needed.",
+  "video": null,
+  "notes": "Compare reach distances side to side to spot imbalances."
+ },
+ {
+  "id": "sltoetouch",
+  "name": "Single-leg toe touch",
+  "aliases": [
+   "Single-leg reach to floor",
+   "Single-leg balance reach",
+   "Single-leg touchdown"
+  ],
+  "training_type": "Balance",
+  "tags": [
+   "Balance",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Ankle stabilisers",
+   "Core"
+  ],
+  "movement_pattern": "Hinge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Stand on one leg with a soft knee",
+   "Hinge forward and reach your hand toward the floor",
+   "Squeeze the glute to stand back up tall"
+  ],
+  "common_mistakes": [
+   "Rounding the back to reach",
+   "Standing knee caving in"
+  ],
+  "regressions": [
+   "Single-leg stand"
+  ],
+  "progressions": [
+   "Single-leg Romanian deadlift",
+   "Single-leg airplane"
+  ],
+  "safety": "Reach to a box or chair if the floor is too far.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hipairplane",
+  "name": "Single-leg airplane",
+  "aliases": [
+   "Hip airplane",
+   "Airplane balance",
+   "Standing airplane"
+  ],
+  "training_type": "Balance",
+  "tags": [
+   "Balance",
+   "Mobility",
+   "Unilateral",
+   "Home-friendly"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Glute medius"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core",
+   "Ankle stabilisers"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5–6 / side",
+  "form_cues": [
+   "Hinge forward on one leg until your torso is near horizontal",
+   "Rotate your pelvis open toward the ceiling",
+   "Rotate back down so hips face the floor, staying balanced"
+  ],
+  "common_mistakes": [
+   "Rotating the shoulders instead of the hips",
+   "Losing the hinge and standing up"
+  ],
+  "regressions": [
+   "Single-leg toe touch",
+   "Hand-on-wall airplane"
+  ],
+  "progressions": [],
+  "safety": "Hold a wall or rack with one hand until you've mastered it.",
+  "video": null,
+  "notes": "Builds hip control for running and lifting."
+ },
+ {
+  "id": "abwheel",
+  "name": "Ab wheel rollout",
+  "aliases": [
+   "Kneeling ab wheel rollout",
+   "Ab roller",
+   "Rollout"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Lats",
+   "Shoulders",
+   "Obliques"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [
+   "Ab wheel",
+   "Mat"
+  ],
+  "req": "abwheel",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Kneel and hold the wheel under your shoulders",
+   "Roll forward with ribs down and glutes squeezed",
+   "Pull back with your abs, not by sitting the hips back"
+  ],
+  "common_mistakes": [
+   "Lower back sagging at the bottom",
+   "Going further than you can control"
+  ],
+  "regressions": [
+   "Stability ball rollout",
+   "Body saw"
+  ],
+  "progressions": [
+   "Standing ab wheel rollout",
+   "Barbell rollout"
+  ],
+  "safety": "Use a short range to start; stop if you feel your lower back.",
+  "video": null,
+  "notes": "Roll toward a wall to cap the range while learning."
+ },
+ {
+  "id": "standabwheel",
+  "name": "Standing ab wheel rollout",
+  "aliases": [
+   "Standing rollout",
+   "Full ab wheel rollout"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Calisthenics"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Lats",
+   "Shoulders",
+   "Obliques"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [
+   "Ab wheel"
+  ],
+  "req": "abwheel",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–6",
+  "form_cues": [
+   "From standing, fold and place the wheel on the floor",
+   "Roll out to full extension with a hollow body",
+   "Pull back up to a pike without the back arching"
+  ],
+  "common_mistakes": [
+   "Lower back collapsing",
+   "Bending the knees to cheat back up"
+  ],
+  "regressions": [
+   "Ab wheel rollout"
+  ],
+  "progressions": [],
+  "safety": "Master 15+ kneeling rollouts first; very demanding on the lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hangleg",
+  "name": "Hanging leg raise",
+  "aliases": [
+   "Straight-leg hanging raise",
+   "Hanging straight leg raise"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Calisthenics"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Forearms",
+   "Lats"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar|captain|abstraps",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Hang with active shoulders and legs together",
+   "Raise straight legs to hip height or higher by curling the pelvis",
+   "Lower slowly without swinging"
+  ],
+  "common_mistakes": [
+   "Swinging for momentum",
+   "Only lifting with hip flexors, no pelvic curl"
+  ],
+  "regressions": [
+   "Hanging knee raise",
+   "Captain's chair knee raise"
+  ],
+  "progressions": [
+   "Toes-to-bar",
+   "Hanging windshield wipers"
+  ],
+  "safety": "Use ab straps if grip or shoulders give out first.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "hangknee",
+  "name": "Hanging knee raise",
+  "aliases": [
+   "Hanging knee tuck",
+   "Hanging knee-up"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Calisthenics"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Forearms"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar|abstraps",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Hang from the bar with shoulders engaged",
+   "Bring knees up toward the chest, curling the hips",
+   "Lower under control and stop the swing"
+  ],
+  "common_mistakes": [
+   "Kipping and swinging",
+   "Dropping the legs fast"
+  ],
+  "regressions": [
+   "Captain's chair knee raise",
+   "Reverse crunch"
+  ],
+  "progressions": [
+   "Hanging leg raise",
+   "Toes-to-bar"
+  ],
+  "safety": "Use ab straps if your grip fails before your abs.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "toestobar",
+  "name": "Toes-to-bar",
+  "aliases": [
+   "T2B",
+   "Hanging toes to bar"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Calisthenics"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors",
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Forearms"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–10",
+  "form_cues": [
+   "Hang with a shoulder-width grip and press the bar down",
+   "Lift straight legs until your toes touch the bar",
+   "Lower with control between reps (or kip if training CrossFit style)"
+  ],
+  "common_mistakes": [
+   "Bending the knees a lot",
+   "Uncontrolled swing"
+  ],
+  "regressions": [
+   "Hanging leg raise",
+   "Hanging knee raise"
+  ],
+  "progressions": [
+   "Hanging windshield wipers"
+  ],
+  "safety": "Warm up the shoulders and hamstrings first.",
+  "video": null,
+  "notes": "Strict and kipping versions exist; kipping is for conditioning."
+ },
+ {
+  "id": "hangwiper",
+  "name": "Hanging windshield wipers",
+  "aliases": [
+   "Hanging wipers",
+   "Windshield wipers"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Calisthenics"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Lats",
+   "Forearms"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Pull-up bar"
+  ],
+  "req": "pullupbar",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–8 / side",
+  "form_cues": [
+   "Hang and raise straight legs up to the bar",
+   "Rotate the legs side to side like a wiper",
+   "Keep the upper body still and controlled"
+  ],
+  "common_mistakes": [
+   "Bending the knees",
+   "Swinging the whole body"
+  ],
+  "regressions": [
+   "Lying windshield wipers",
+   "Hanging leg raise"
+  ],
+  "progressions": [],
+  "safety": "Only attempt once strict toes-to-bar feel easy.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbsidebend",
+  "name": "Dumbbell side bend",
+  "aliases": [
+   "Side bend",
+   "Standing oblique bend",
+   "Weighted side bend"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Isolation",
+   "Home-friendly",
+   "Unilateral"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Quadratus lumborum"
+  ],
+  "secondary_muscles": [
+   "Erector spinae"
+  ],
+  "movement_pattern": "Anti-lateral flexion",
+  "equipment": [
+   "Dumbbell"
+  ],
+  "req": "dumbbells|kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "12–15 / side",
+  "form_cues": [
+   "Stand tall with one dumbbell at your side",
+   "Bend sideways toward the weight, keeping hips still",
+   "Pull back up with the opposite obliques"
+  ],
+  "common_mistakes": [
+   "Twisting or leaning forward",
+   "Holding weights in both hands (they cancel out)"
+  ],
+  "regressions": [
+   "Side plank"
+  ],
+  "progressions": [
+   "Cable side bend",
+   "45-degree side bend"
+  ],
+  "safety": "Move slowly; avoid with lower back pain on side bending.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "suitcase",
+  "name": "Suitcase carry",
+  "aliases": [
+   "Single-arm farmer's carry",
+   "One-arm carry",
+   "Offset carry"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Strength",
+   "Unilateral",
+   "Compound"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Quadratus lumborum"
+  ],
+  "secondary_muscles": [
+   "Forearms",
+   "Traps",
+   "Glute medius"
+  ],
+  "movement_pattern": "Carry",
+  "equipment": [
+   "Dumbbell or kettlebell"
+  ],
+  "req": "dumbbells|kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "30–40 m / side",
+  "form_cues": [
+   "Hold a heavy weight in one hand by your side",
+   "Walk tall without leaning toward or away from it",
+   "Take short, steady steps and keep the shoulders level"
+  ],
+  "common_mistakes": [
+   "Leaning toward the weight",
+   "Shrugging the loaded shoulder"
+  ],
+  "regressions": [
+   "Single-arm farmer's hold (standing)"
+  ],
+  "progressions": [
+   "Heavier suitcase carry",
+   "Waiter's carry"
+  ],
+  "safety": "Set the weight down with a flat back, bending the knees.",
+  "video": null,
+  "notes": "Track distance in the reps field; works for anti-lateral flexion."
+ },
+ {
+  "id": "waitercarry",
+  "name": "Waiter's carry",
+  "aliases": [
+   "Overhead carry",
+   "Single-arm overhead carry"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Strength",
+   "Unilateral"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Traps",
+   "Triceps",
+   "Transverse abdominis"
+  ],
+  "movement_pattern": "Carry",
+  "equipment": [
+   "Dumbbell or kettlebell"
+  ],
+  "req": "dumbbells|kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "20–30 m / side",
+  "form_cues": [
+   "Press a weight overhead and lock the arm by your ear",
+   "Brace and walk tall with ribs down",
+   "Keep the bicep near the ear the whole walk"
+  ],
+  "common_mistakes": [
+   "Arching the lower back",
+   "Arm drifting forward"
+  ],
+  "regressions": [
+   "Suitcase carry"
+  ],
+  "progressions": [
+   "Bottoms-up kettlebell carry"
+  ],
+  "safety": "Only go overhead if your shoulder has pain-free mobility.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "plankpull",
+  "name": "Plank pull-through",
+  "aliases": [
+   "Kettlebell plank pull-through",
+   "Dumbbell drag"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Transverse abdominis",
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Lats"
+  ],
+  "movement_pattern": "Anti-rotation",
+  "equipment": [
+   "Kettlebell or dumbbell"
+  ],
+  "req": "kettlebells|dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "High plank with a weight beside your ribs",
+   "Reach under with the opposite hand and drag it across",
+   "Keep the hips square and still"
+  ],
+  "common_mistakes": [
+   "Hips twisting",
+   "Feet too close together"
+  ],
+  "regressions": [
+   "Plank shoulder taps"
+  ],
+  "progressions": [
+   "Renegade row"
+  ],
+  "safety": "Use a light weight first; widen the feet for stability.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kbwindmill",
+  "name": "Kettlebell windmill",
+  "aliases": [
+   "Windmill",
+   "Overhead windmill"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Mobility",
+   "Unilateral"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Hamstrings",
+   "Glutes"
+  ],
+  "movement_pattern": "Anti-lateral flexion",
+  "equipment": [
+   "Kettlebell"
+  ],
+  "req": "kettlebells|dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5–6 / side",
+  "form_cues": [
+   "Press the bell overhead and turn your feet away from it",
+   "Push the hips out and hinge down to touch the floor",
+   "Keep eyes on the bell and arm locked the whole time"
+  ],
+  "common_mistakes": [
+   "Bending the overhead elbow",
+   "Rounding the spine instead of hinging"
+  ],
+  "regressions": [
+   "Bodyweight windmill"
+  ],
+  "progressions": [
+   "Heavier kettlebell windmill"
+  ],
+  "safety": "Learn it with no weight; stop if the shoulder feels unstable.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bandpallof",
+  "name": "Band Pallof press",
+  "aliases": [
+   "Resistance band Pallof press",
+   "Band anti-rotation press"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Rectus abdominis",
+   "Shoulders"
+  ],
+  "movement_pattern": "Anti-rotation",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Anchor a band at chest height and stand side-on",
+   "Press the band straight out from your chest",
+   "Resist the twist, pause, then bring it back"
+  ],
+  "common_mistakes": [
+   "Letting the torso rotate",
+   "Standing too close (no tension)"
+  ],
+  "regressions": [
+   "Pallof hold (no press)"
+  ],
+  "progressions": [
+   "Cable Pallof press",
+   "Half-kneeling Pallof press"
+  ],
+  "safety": "Check the anchor is secure before loading the band.",
+  "video": null,
+  "notes": "Kneeling or split stance versions shift the challenge."
+ },
+ {
+  "id": "bandchop",
+  "name": "Band woodchop",
+  "aliases": [
+   "Resistance band woodchop",
+   "Band chop"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Rectus abdominis",
+   "Shoulders",
+   "Glutes"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Resistance band"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Anchor the band high and stand side-on",
+   "Pull diagonally across your body to the opposite hip",
+   "Pivot the back foot and rotate through the trunk"
+  ],
+  "common_mistakes": [
+   "Pulling only with the arms",
+   "Rounding the back"
+  ],
+  "regressions": [
+   "Band Pallof press"
+  ],
+  "progressions": [
+   "Cable woodchop"
+  ],
+  "safety": "Use a band you can control on the way back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "mbchop",
+  "name": "Medicine ball woodchop",
+  "aliases": [
+   "Med ball chop",
+   "Medicine ball wood chop"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Warm-up"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Glutes",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Medicine ball"
+  ],
+  "req": "medball|dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Hold the ball high over one shoulder",
+   "Chop down diagonally to the outside of the opposite knee",
+   "Squat a little and pivot the back foot as you rotate"
+  ],
+  "common_mistakes": [
+   "Arms-only movement",
+   "Releasing the ball (this is not a throw)"
+  ],
+  "regressions": [
+   "Band woodchop"
+  ],
+  "progressions": [
+   "Cable woodchop"
+  ],
+  "safety": "Keep the back long as you squat down.",
+  "video": null,
+  "notes": "A dumbbell held by the ends works too."
+ },
+ {
+  "id": "stabcrunch",
+  "name": "Stability ball crunch",
+  "aliases": [
+   "Swiss ball crunch",
+   "Exercise ball crunch"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Isolation"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Stability ball"
+  ],
+  "req": "stabball",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Sit then walk out until the ball is under your mid-back",
+   "Let the back stretch over the ball, then curl up",
+   "Lower slowly back into the stretch"
+  ],
+  "common_mistakes": [
+   "Rolling the ball rather than curling",
+   "Pulling the neck"
+  ],
+  "regressions": [
+   "Crunch"
+  ],
+  "progressions": [
+   "Weighted stability ball crunch",
+   "Cable rope crunch"
+  ],
+  "safety": "Keep feet wide for stability.",
+  "video": null,
+  "notes": "The ball allows a bigger range than a floor crunch."
+ },
+ {
+  "id": "stabrollout",
+  "name": "Stability ball rollout",
+  "aliases": [
+   "Swiss ball rollout",
+   "Ball rollout"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Lats",
+   "Shoulders"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [
+   "Stability ball"
+  ],
+  "req": "stabball",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Kneel with forearms on the ball",
+   "Roll it forward as your body straightens",
+   "Pull it back with your abs, keeping ribs down"
+  ],
+  "common_mistakes": [
+   "Lower back sagging",
+   "Hips staying back"
+  ],
+  "regressions": [
+   "Plank"
+  ],
+  "progressions": [
+   "Stir the pot",
+   "Ab wheel rollout"
+  ],
+  "safety": "Stop the roll before your back starts to arch.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "stirpot",
+  "name": "Stir the pot",
+  "aliases": [
+   "Stability ball stir the pot",
+   "Ball circles plank"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis",
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Lats"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [
+   "Stability ball"
+  ],
+  "req": "stabball",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–8 each direction",
+  "form_cues": [
+   "Hold a forearm plank on the ball",
+   "Draw small circles with your elbows",
+   "Keep the hips and lower back totally still"
+  ],
+  "common_mistakes": [
+   "Hips swaying with the ball",
+   "Circles too big"
+  ],
+  "regressions": [
+   "Stability ball plank"
+  ],
+  "progressions": [
+   "Stir the pot with feet together"
+  ],
+  "safety": "Keep circles small; stop if the lower back sags.",
+  "video": null,
+  "notes": "Popularised by Dr. Stuart McGill for spine-friendly core work."
+ },
+ {
+  "id": "stabplank",
+  "name": "Stability ball plank",
+  "aliases": [
+   "Swiss ball plank",
+   "Forearm plank on ball"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Obliques"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [
+   "Stability ball"
+  ],
+  "req": "stabball",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–40 sec",
+  "form_cues": [
+   "Place forearms on the ball, legs straight behind",
+   "Brace hard so the ball doesn't wobble",
+   "Keep a straight line from head to heels"
+  ],
+  "common_mistakes": [
+   "Hips sagging",
+   "Ball rolling side to side"
+  ],
+  "regressions": [
+   "Plank"
+  ],
+  "progressions": [
+   "Stir the pot"
+  ],
+  "safety": "Put the ball against a wall the first few times.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "stabpike",
+  "name": "Stability ball pike",
+  "aliases": [
+   "Swiss ball pike",
+   "Ball pike-up"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly",
+   "Calisthenics"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Serratus anterior"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Stability ball"
+  ],
+  "req": "stabball",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Start in a push-up position with shins on the ball",
+   "Lift your hips high, rolling the ball to your toes",
+   "Lower with control back to a flat plank"
+  ],
+  "common_mistakes": [
+   "Bending the knees",
+   "Sagging hips at the bottom"
+  ],
+  "regressions": [
+   "Stability ball knee tuck"
+  ],
+  "progressions": [
+   "Suspension pike"
+  ],
+  "safety": "Keep shoulders over hands; strong wrists required.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "stabtuck",
+  "name": "Stability ball knee tuck",
+  "aliases": [
+   "Swiss ball jackknife",
+   "Ball knee tuck",
+   "Stability ball jackknife"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Transverse abdominis"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Stability ball"
+  ],
+  "req": "stabball",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Start in a push-up position with shins on the ball",
+   "Pull your knees toward your chest, rolling the ball in",
+   "Push it back to a straight plank without sagging"
+  ],
+  "common_mistakes": [
+   "Hips dropping at the start",
+   "Shoulders drifting behind hands"
+  ],
+  "regressions": [
+   "Mountain climbers"
+  ],
+  "progressions": [
+   "Stability ball pike",
+   "Suspension knee tuck"
+  ],
+  "safety": "Keep the ball close to start; further out is harder.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "stabpass",
+  "name": "Stability ball pass",
+  "aliases": [
+   "Swiss ball V-up pass",
+   "Ball pass",
+   "Ball exchange"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Home-friendly"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Adductors"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Stability ball"
+  ],
+  "req": "stabball",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Lie flat holding the ball overhead",
+   "Lift arms and legs to pass the ball to your feet",
+   "Lower both, then bring it back to your hands"
+  ],
+  "common_mistakes": [
+   "Lower back arching when lowering",
+   "Dropping the ball"
+  ],
+  "regressions": [
+   "Dead bug"
+  ],
+  "progressions": [
+   "V-up"
+  ],
+  "safety": "Don't lower your legs further than you can keep the back flat.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "stabseated",
+  "name": "Stability ball seated balance",
+  "aliases": [
+   "Swiss ball seated march",
+   "Seated ball balance"
+  ],
+  "training_type": "Balance",
+  "tags": [
+   "Balance",
+   "Core",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Transverse abdominis",
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Erector spinae"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Stability ball"
+  ],
+  "req": "stabball",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30–45 sec",
+  "form_cues": [
+   "Sit tall on the ball, feet hip-width, knees at 90°",
+   "Lift one foot slightly off the floor and hold",
+   "Switch feet without wobbling; progress to marching"
+  ],
+  "common_mistakes": [
+   "Slouching",
+   "Feet too close together"
+  ],
+  "regressions": [],
+  "progressions": [
+   "Stability ball kneeling balance"
+  ],
+  "safety": "Use a ball sized so your hips are level with your knees.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "stabkneel",
+  "name": "Stability ball kneeling balance",
+  "aliases": [
+   "Kneeling on Swiss ball",
+   "Ball kneel"
+  ],
+  "training_type": "Balance",
+  "tags": [
+   "Balance",
+   "Core"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Transverse abdominis",
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "Stability ball"
+  ],
+  "req": "stabball",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–45 sec",
+  "form_cues": [
+   "Start with hands and knees on the ball beside a wall",
+   "Lift your hands off and kneel upright",
+   "Keep hips forward and eyes on a fixed point"
+  ],
+  "common_mistakes": [
+   "Sitting back on the heels",
+   "Tensing up and over-correcting"
+  ],
+  "regressions": [
+   "Stability ball seated balance"
+  ],
+  "progressions": [],
+  "safety": "Clear the area and use a wall or partner nearby; falls are possible.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bosusl",
+  "name": "BOSU single-leg balance",
+  "aliases": [
+   "Single-leg stand on BOSU",
+   "BOSU stork stand"
+  ],
+  "training_type": "Balance",
+  "tags": [
+   "Balance",
+   "Rehab",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Ankle stabilisers",
+   "Glute medius"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Hold",
+  "equipment": [
+   "BOSU ball"
+  ],
+  "req": "bosu",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "20–30 sec / side",
+  "form_cues": [
+   "Step onto the centre of the dome with one foot",
+   "Keep a soft knee and lift the other foot",
+   "Look ahead and let the ankle make small corrections"
+  ],
+  "common_mistakes": [
+   "Locking the knee",
+   "Knee caving inward"
+  ],
+  "regressions": [
+   "Single-leg stand"
+  ],
+  "progressions": [
+   "BOSU single-leg balance, eyes closed",
+   "Star excursion on a BOSU"
+  ],
+  "safety": "Start next to a wall or rack for support.",
+  "video": null,
+  "notes": "A foam balance pad is a good alternative."
+ },
+ {
+  "id": "bosusquat",
+  "name": "BOSU squat",
+  "aliases": [
+   "Squat on BOSU",
+   "Dome squat"
+  ],
+  "training_type": "Balance",
+  "tags": [
+   "Balance",
+   "Legs",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Ankle stabilisers",
+   "Core"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "BOSU ball"
+  ],
+  "req": "bosu",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Stand on the dome with feet hip-width",
+   "Sit back into a squat with knees tracking over toes",
+   "Stand back up without wobbling"
+  ],
+  "common_mistakes": [
+   "Knees caving in",
+   "Going too deep and losing balance"
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "BOSU squat on the flat side (dome down)"
+  ],
+  "safety": "Use the dome side up; standing on the flat side is advanced.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bosuplank",
+  "name": "BOSU plank",
+  "aliases": [
+   "Plank on BOSU",
+   "Forearm BOSU plank"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Balance"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Obliques"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [
+   "BOSU ball"
+  ],
+  "req": "bosu",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "hold",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20–40 sec",
+  "form_cues": [
+   "Forearms on the dome, legs straight behind you",
+   "Brace and squeeze glutes to hold a straight line",
+   "Keep the platform still and breathe"
+  ],
+  "common_mistakes": [
+   "Hips sagging",
+   "Shoulders shrugged"
+  ],
+  "regressions": [
+   "Plank"
+  ],
+  "progressions": [
+   "BOSU plank with feet on dome",
+   "Stability ball plank"
+  ],
+  "safety": "Hold the edges if forearms slip.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bosucrunch",
+  "name": "BOSU crunch",
+  "aliases": [
+   "Crunch on BOSU",
+   "BOSU ball sit-up"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Isolation"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "BOSU ball"
+  ],
+  "req": "bosu",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Sit with the dome under your lower back",
+   "Lean back into the stretch, then curl up",
+   "Lower slowly and keep feet planted"
+  ],
+  "common_mistakes": [
+   "Yanking the neck",
+   "Bouncing off the dome"
+  ],
+  "regressions": [
+   "Crunch"
+  ],
+  "progressions": [
+   "Stability ball crunch"
+  ],
+  "safety": "Keep feet wide to stay stable.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dragonflag",
+  "name": "Dragon flag",
+  "aliases": [
+   "Bruce Lee dragon flag"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Calisthenics"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Lats",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [
+   "Flat bench"
+  ],
+  "req": "flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–6",
+  "form_cues": [
+   "Lie on a bench and grip it behind your head",
+   "Lift your body to vertical, resting on the upper back",
+   "Lower as one straight line, then raise back up"
+  ],
+  "common_mistakes": [
+   "Bending at the hips",
+   "Lower back arching on the way down"
+  ],
+  "regressions": [
+   "Tuck dragon flag",
+   "Dragon flag negatives",
+   "Bench leg raise"
+  ],
+  "progressions": [],
+  "safety": "Very demanding; build up with negatives and stop if your neck takes the load.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "benchlegraise",
+  "name": "Bench leg raise",
+  "aliases": [
+   "Flat bench leg raise",
+   "Bench lying leg raise"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Flat bench"
+  ],
+  "req": "flatbench|adjbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Lie on a bench gripping it behind your head",
+   "Raise your legs and curl the hips off the bench",
+   "Lower slowly past bench level without arching"
+  ],
+  "common_mistakes": [
+   "Swinging the legs",
+   "Lower back lifting"
+  ],
+  "regressions": [
+   "Lying leg raise",
+   "Reverse crunch"
+  ],
+  "progressions": [
+   "Dragon flag"
+  ],
+  "safety": "Bend the knees if your lower back arches.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "situp",
+  "name": "Decline sit-up",
+  "aliases": [
+   "Decline bench sit-up",
+   "Weighted decline sit-up"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Decline / ab bench"
+  ],
+  "req": "abbench|declinebench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Hook feet under the pads, arms crossed on chest",
+   "Curl up until your torso is near vertical",
+   "Lower slowly to just above the bench"
+  ],
+  "common_mistakes": [
+   "Yanking up with the neck",
+   "Dropping back fast"
+  ],
+  "regressions": [
+   "Sit-up"
+  ],
+  "progressions": [
+   "Weighted decline sit-up",
+   "GHD sit-up"
+  ],
+  "safety": "Lower the bench angle to make it easier.",
+  "video": null,
+  "notes": "Hold a plate on your chest to add load."
+ },
+ {
+  "id": "declinecrunch",
+  "name": "Decline crunch",
+  "aliases": [
+   "Decline bench crunch"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Isolation"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Decline / ab bench"
+  ],
+  "req": "abbench|declinebench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "12–15",
+  "form_cues": [
+   "Secure your feet and lie back on the decline bench",
+   "Curl your shoulders up without sitting all the way",
+   "Lower with control, keeping tension"
+  ],
+  "common_mistakes": [
+   "Pulling the head forward",
+   "Using momentum"
+  ],
+  "regressions": [
+   "Crunch"
+  ],
+  "progressions": [
+   "Weighted decline crunch",
+   "Decline sit-up"
+  ],
+  "safety": "Start at a shallow angle.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "crunch",
+  "name": "Cable rope crunch",
+  "aliases": [
+   "Kneeling cable crunch",
+   "Cable crunch",
+   "Rope crunch"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Cable machine",
+   "Rope attachment"
+  ],
+  "req": "functional|cablecross|multigym",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Kneel facing the stack, rope beside your head",
+   "Curl your ribs toward your hips, rounding the spine",
+   "Keep the hips still and return slowly"
+  ],
+  "common_mistakes": [
+   "Sitting back with the hips instead of crunching",
+   "Pulling with the arms"
+  ],
+  "regressions": [
+   "Stability ball crunch"
+  ],
+  "progressions": [
+   "Heavier cable crunch"
+  ],
+  "safety": "Keep the weight moderate so you can feel the abs, not the hips.",
+  "video": null,
+  "notes": "One of the best ways to load the abs progressively."
+ },
+ {
+  "id": "woodchop",
+  "name": "Cable woodchop",
+  "aliases": [
+   "High-to-low cable woodchop",
+   "Cable chop"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Compound"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Rectus abdominis",
+   "Shoulders",
+   "Glutes"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Cable machine",
+   "D-handle or rope"
+  ],
+  "req": "functional|cablecross",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Set the pulley high and stand side-on",
+   "Pull diagonally down across your body to the opposite hip",
+   "Rotate through the torso and pivot the back foot"
+  ],
+  "common_mistakes": [
+   "Arms doing all the work",
+   "Rounding the lower back"
+  ],
+  "regressions": [
+   "Band woodchop"
+  ],
+  "progressions": [
+   "Low-to-high cable woodchop",
+   "Landmine rotation"
+  ],
+  "safety": "Use a load you can control on the way back up.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "lowhighchop",
+  "name": "Low-to-high cable woodchop",
+  "aliases": [
+   "Reverse woodchop",
+   "Cable lift",
+   "Low-to-high chop"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Compound"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Glutes"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Cable machine",
+   "D-handle or rope"
+  ],
+  "req": "functional|cablecross",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Set the pulley low and stand side-on",
+   "Pull up diagonally across your body to above the opposite shoulder",
+   "Drive from the hips and keep arms long"
+  ],
+  "common_mistakes": [
+   "Lifting with the arms only",
+   "Leaning back"
+  ],
+  "regressions": [
+   "Band woodchop"
+  ],
+  "progressions": [
+   "Half-kneeling cable lift"
+  ],
+  "safety": "Keep the spine long; don't round to grab the handle.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pallof",
+  "name": "Pallof press",
+  "aliases": [
+   "Cable Pallof press",
+   "Cable anti-rotation press"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Rehab"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Rectus abdominis",
+   "Shoulders"
+  ],
+  "movement_pattern": "Anti-rotation",
+  "equipment": [
+   "Cable machine",
+   "D-handle"
+  ],
+  "req": "functional|cablecross",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Stand side-on with the handle at chest",
+   "Press it straight out and resist the pull",
+   "Hold 2 seconds, then bring it back slowly"
+  ],
+  "common_mistakes": [
+   "Torso twisting toward the stack",
+   "Feet too narrow"
+  ],
+  "regressions": [
+   "Band Pallof press"
+  ],
+  "progressions": [
+   "Half-kneeling Pallof press",
+   "Pallof press with overhead reach"
+  ],
+  "safety": "Start light; it's harder than it looks.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "cablerot",
+  "name": "Standing cable rotation",
+  "aliases": [
+   "Horizontal cable woodchop",
+   "Cable trunk rotation",
+   "Cable twist"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Rectus abdominis",
+   "Shoulders"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Cable machine",
+   "D-handle"
+  ],
+  "req": "functional|cablecross",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Set the pulley at chest height, stand side-on",
+   "Rotate away from the stack with arms straight",
+   "Return slowly without letting it yank you back"
+  ],
+  "common_mistakes": [
+   "Bending the arms",
+   "Hips locked so the lower back twists"
+  ],
+  "regressions": [
+   "Band woodchop"
+  ],
+  "progressions": [
+   "Landmine rotation"
+  ],
+  "safety": "Let the hips turn a little to spare the lower back.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "landminerot",
+  "name": "Landmine rotation",
+  "aliases": [
+   "Landmine 180",
+   "Landmine rainbow",
+   "Landmine twist"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Power"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Rectus abdominis",
+   "Glutes"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Barbell",
+   "Landmine attachment"
+  ],
+  "req": "landmine,barbell",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Hold the bar end at arm's length above your head",
+   "Rotate it down in an arc to one hip, pivoting the feet",
+   "Bring it back over the top and go to the other side"
+  ],
+  "common_mistakes": [
+   "Bending the arms",
+   "Twisting from the lower back with locked hips"
+  ],
+  "regressions": [
+   "Russian twist",
+   "Cable woodchop"
+  ],
+  "progressions": [
+   "Heavier landmine rotation"
+  ],
+  "safety": "Start with the empty bar; use a corner if you have no landmine.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "bbrollout",
+  "name": "Barbell rollout",
+  "aliases": [
+   "Barbell ab rollout",
+   "Kneeling barbell rollout"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Lats",
+   "Shoulders"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [
+   "Barbell",
+   "Plates"
+  ],
+  "req": "barbell,plates",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Load small round plates and kneel behind the bar",
+   "Roll forward with ribs down and glutes tight",
+   "Pull back with your abs"
+  ],
+  "common_mistakes": [
+   "Arching the back",
+   "Hips staying behind"
+  ],
+  "regressions": [
+   "Ab wheel rollout"
+  ],
+  "progressions": [
+   "Standing ab wheel rollout"
+  ],
+  "safety": "Use plates with round edges so the bar rolls smoothly.",
+  "video": null,
+  "notes": "Wider grip than an ab wheel; good gym substitute."
+ },
+ {
+  "id": "trxpike",
+  "name": "Suspension pike",
+  "aliases": [
+   "TRX pike",
+   "Suspension trainer pike"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Calisthenics"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Serratus anterior"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx|rings",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Feet in the straps, start in a high plank",
+   "Lift hips high keeping legs straight",
+   "Lower slowly back to a flat plank"
+  ],
+  "common_mistakes": [
+   "Bending the knees",
+   "Sagging hips at the bottom"
+  ],
+  "regressions": [
+   "Suspension knee tuck"
+  ],
+  "progressions": [],
+  "safety": "Keep shoulders stacked over hands.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trxtuck",
+  "name": "Suspension knee tuck",
+  "aliases": [
+   "TRX knee tuck",
+   "Suspension crunch",
+   "TRX crunch"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Transverse abdominis"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx|rings",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–12",
+  "form_cues": [
+   "Feet in the straps, high plank position",
+   "Pull knees in toward your chest",
+   "Extend back to a straight plank"
+  ],
+  "common_mistakes": [
+   "Hips sagging",
+   "Shoulders drifting back"
+  ],
+  "regressions": [
+   "Mountain climbers"
+  ],
+  "progressions": [
+   "Suspension pike"
+  ],
+  "safety": "Keep the straps at mid-calf height.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trxfallout",
+  "name": "Suspension fallout",
+  "aliases": [
+   "TRX fallout",
+   "TRX rollout",
+   "Suspension body saw"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Transverse abdominis"
+  ],
+  "secondary_muscles": [
+   "Lats",
+   "Shoulders"
+  ],
+  "movement_pattern": "Anti-extension",
+  "equipment": [
+   "Suspension trainer"
+  ],
+  "req": "trx|rings",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Hold handles facing away from the anchor, body leaning forward",
+   "Let arms rise overhead as you fall forward",
+   "Pull back up with your abs, not the arms"
+  ],
+  "common_mistakes": [
+   "Lower back arching",
+   "Bending the elbows"
+  ],
+  "regressions": [
+   "Plank"
+  ],
+  "progressions": [
+   "Ab wheel rollout"
+  ],
+  "safety": "A steeper body angle is harder; start more upright.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "abmach",
+  "name": "Ab crunch machine",
+  "aliases": [
+   "Machine crunch",
+   "Seated ab crunch"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Isolation",
+   "Hypertrophy"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Ab crunch machine"
+  ],
+  "req": "abcrunchm",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Set the seat so the pads sit on your chest or shoulders",
+   "Curl down by bringing ribs to hips",
+   "Return slowly without letting the stack slam"
+  ],
+  "common_mistakes": [
+   "Pulling with the arms",
+   "Using too much weight and hip-flexing"
+  ],
+  "regressions": [
+   "Crunch"
+  ],
+  "progressions": [
+   "Cable rope crunch"
+  ],
+  "safety": "Start light and keep the motion in the abs.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "torsorot",
+  "name": "Rotary torso machine",
+  "aliases": [
+   "Seated torso rotation",
+   "Torso twist machine",
+   "Oblique machine"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Isolation"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques"
+  ],
+  "secondary_muscles": [
+   "Rectus abdominis"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Rotary torso machine"
+  ],
+  "req": "torso",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–15 / side",
+  "form_cues": [
+   "Sit tall with legs locked in",
+   "Rotate through your trunk, not your arms",
+   "Return slowly to centre"
+  ],
+  "common_mistakes": [
+   "Jerking the weight",
+   "Too much range"
+  ],
+  "regressions": [
+   "Russian twist"
+  ],
+  "progressions": [
+   "Cable woodchop"
+  ],
+  "safety": "Use a moderate load; avoid with disc issues aggravated by twisting.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "kneeraise",
+  "name": "Captain's chair knee raise",
+  "aliases": [
+   "Vertical knee raise",
+   "Roman chair knee raise",
+   "Captain's chair leg raise"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Captain's chair"
+  ],
+  "req": "captain",
+  "equipment_tier": 3,
+  "difficulty": "Beginner",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10–15",
+  "form_cues": [
+   "Back against the pad, forearms on the rests",
+   "Lift knees to chest by curling the hips up",
+   "Lower with control without swinging"
+  ],
+  "common_mistakes": [
+   "Swinging the legs",
+   "Only lifting to 90° without curling the pelvis"
+  ],
+  "regressions": [
+   "Reverse crunch"
+  ],
+  "progressions": [
+   "Hanging knee raise",
+   "Hanging leg raise"
+  ],
+  "safety": "Keep shoulders down, not shrugged.",
+  "video": null,
+  "notes": "Straighten the legs for a harder leg raise version."
+ },
+ {
+  "id": "ghdsitup",
+  "name": "GHD sit-up",
+  "aliases": [
+   "Glute-ham developer sit-up"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Rectus abdominis",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Obliques"
+  ],
+  "movement_pattern": "Flexion",
+  "equipment": [
+   "Glute-ham developer"
+  ],
+  "req": "ghd",
+  "equipment_tier": 3,
+  "difficulty": "Advanced",
+  "tracking": "bw",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–15",
+  "form_cues": [
+   "Sit on the pad with feet locked, hips just past it",
+   "Lower back to parallel, then reach behind if trained",
+   "Kick the knees straight to sit up and reach for your feet"
+  ],
+  "common_mistakes": [
+   "Going too far back too soon",
+   "Doing high volume on the first try"
+  ],
+  "regressions": [
+   "Decline sit-up"
+  ],
+  "progressions": [],
+  "safety": "Start with low reps and a short range; overuse can cause rhabdo or back strain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "romanside",
+  "name": "45-degree side bend",
+  "aliases": [
+   "Roman chair side bend",
+   "Hyperextension side bend",
+   "Lateral back extension"
+  ],
+  "training_type": "Core",
+  "tags": [
+   "Core",
+   "Unilateral"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Quadratus lumborum"
+  ],
+  "secondary_muscles": [
+   "Glute medius"
+  ],
+  "movement_pattern": "Anti-lateral flexion",
+  "equipment": [
+   "Back extension bench"
+  ],
+  "req": "romanchair",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "bw",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "10–12 / side",
+  "form_cues": [
+   "Lie sideways on the bench, hip on the pad, feet locked",
+   "Lower your torso sideways toward the floor",
+   "Raise back up past level using the top-side obliques"
+  ],
+  "common_mistakes": [
+   "Rotating forward or back",
+   "Bouncing at the bottom"
+  ],
+  "regressions": [
+   "Dumbbell side bend",
+   "Side plank"
+  ],
+  "progressions": [
+   "Weighted 45-degree side bend"
+  ],
+  "safety": "Use a short range first; stop with sharp back pain.",
+  "video": null,
+  "notes": ""
+ }
+]

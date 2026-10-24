@@ -1,0 +1,4079 @@
+[
+ {
+  "id": "jumpsquat",
+  "name": "Jump squat",
+  "aliases": [
+   "Squat jump",
+   "Bodyweight jump squat"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Home-friendly",
+   "Compound",
+   "Cardio"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Sit back to a quarter or half squat, arms swinging back.",
+   "Drive through the whole foot and jump straight up.",
+   "Land softly and sink straight into the next rep."
+  ],
+  "common_mistakes": [
+   "Landing stiff-legged with a loud thud",
+   "Knees caving in on take-off or landing",
+   "Rushing reps and losing height"
+  ],
+  "regressions": [
+   "Bodyweight squat",
+   "Squat to calf raise"
+  ],
+  "progressions": [
+   "Tuck jump",
+   "Dumbbell jump squat",
+   "Box jump"
+  ],
+  "safety": "Land softly with knees soft and tracking over toes; skip if you have acute knee or ankle pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "staticsquatjump",
+  "name": "Pause squat jump",
+  "aliases": [
+   "Static squat jump",
+   "Non-countermovement jump"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "5",
+  "form_cues": [
+   "Lower to a half squat and hold still for 2–3 seconds.",
+   "Explode straight up without dipping first.",
+   "Stick the landing, reset, then repeat."
+  ],
+  "common_mistakes": [
+   "Dipping before the jump, which defeats the pause",
+   "Holding too deep a squat"
+  ],
+  "regressions": [
+   "Jump squat"
+  ],
+  "progressions": [
+   "Dumbbell jump squat",
+   "Seated box jump"
+  ],
+  "safety": "Land softly with knees soft and tracking over toes; skip if you have acute knee or ankle pain.",
+  "video": null,
+  "notes": "Trains starting strength by removing the stretch-shortening cycle."
+ },
+ {
+  "id": "verticaljump",
+  "name": "Countermovement jump",
+  "aliases": [
+   "Vertical jump",
+   "CMJ",
+   "Max vertical jump"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings",
+   "Core",
+   "Shoulders"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–5",
+  "form_cues": [
+   "Dip quickly into a quarter squat while swinging arms back.",
+   "Throw arms up hard and extend hips, knees and ankles together.",
+   "Reach as high as you can, then land quietly."
+  ],
+  "common_mistakes": [
+   "Dipping too deep and slowly",
+   "Not using the arm swing"
+  ],
+  "regressions": [
+   "Jump squat"
+  ],
+  "progressions": [
+   "Depth jump",
+   "Box jump"
+  ],
+  "safety": "Land softly with knees soft and tracking over toes; skip if you have acute knee or ankle pain.",
+  "video": null,
+  "notes": "Rest fully between reps; quality over fatigue. Jump-and-reach against a wall to measure progress."
+ },
+ {
+  "id": "tuckjump",
+  "name": "Tuck jump",
+  "aliases": [
+   "Knee tuck jump"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Cardio",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–8",
+  "form_cues": [
+   "Jump straight up from a quick dip.",
+   "Pull your knees up toward your chest at the top.",
+   "Untuck before landing and land softly on the balls of your feet."
+  ],
+  "common_mistakes": [
+   "Landing while still tucked",
+   "Leaning forward instead of jumping vertically",
+   "Pausing too long between reps"
+  ],
+  "regressions": [
+   "Jump squat"
+  ],
+  "progressions": [
+   "Pike jump",
+   "Depth jump"
+  ],
+  "safety": "Land softly with knees soft and tracking over toes; skip if you have acute knee or ankle pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "pikejump",
+  "name": "Pike jump",
+  "aliases": [
+   "Pike tuck jump"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Core"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core",
+   "Calves"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–6",
+  "form_cues": [
+   "Jump straight up with a strong arm drive.",
+   "Lift straight legs forward and reach hands toward toes.",
+   "Drop legs back under you before you land."
+  ],
+  "common_mistakes": [
+   "Bending the knees instead of piking",
+   "Landing off balance"
+  ],
+  "regressions": [
+   "Tuck jump"
+  ],
+  "progressions": [],
+  "safety": "Needs good hamstring flexibility; land softly with knees soft and tracking over toes; skip if you have acute knee or ankle pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "frogjump",
+  "name": "Frog jump",
+  "aliases": [
+   "Frog hop"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Glutes",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–8",
+  "form_cues": [
+   "Start in a wide, deep squat with fingers near the floor.",
+   "Jump up and forward, swinging arms overhead.",
+   "Land back in the deep squat and go again."
+  ],
+  "common_mistakes": [
+   "Knees caving in when landing",
+   "Rounding the back at the bottom"
+  ],
+  "regressions": [
+   "Sumo squat",
+   "Jump squat"
+  ],
+  "progressions": [
+   "Broad jump"
+  ],
+  "safety": "Only squat as deep as you can with a flat back; land softly with knees soft and tracking over toes; skip if you have acute knee or ankle pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "jump180",
+  "name": "180-degree jump squat",
+  "aliases": [
+   "180 jump",
+   "Rotational jump squat",
+   "Half-turn jump"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Agility",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–8 (alternate direction)",
+  "form_cues": [
+   "Squat down and swing arms to start the turn.",
+   "Jump and rotate 180 degrees in the air.",
+   "Land facing the other way in a soft squat, then reverse."
+  ],
+  "common_mistakes": [
+   "Twisting the knees on landing instead of turning fully in the air",
+   "Landing with feet too narrow"
+  ],
+  "regressions": [
+   "Jump squat"
+  ],
+  "progressions": [
+   "Lateral box jump"
+  ],
+  "safety": "Land with feet and knees pointing the same way; land softly with knees soft and tracking over toes; skip if you have acute knee or ankle pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "splitjump",
+  "name": "Split jump",
+  "aliases": [
+   "Jumping lunge",
+   "Plyo lunge",
+   "Lunge jump",
+   "Scissor jump"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Unilateral",
+   "Cardio",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–8 / side",
+  "form_cues": [
+   "Start in a lunge, chest up, front knee over mid-foot.",
+   "Jump up and switch legs in the air.",
+   "Land softly back into a lunge and go straight away."
+  ],
+  "common_mistakes": [
+   "Back knee slamming the floor",
+   "Front knee caving inward",
+   "Short, choppy stance on landing"
+  ],
+  "regressions": [
+   "Reverse lunge",
+   "Split squat"
+  ],
+  "progressions": [
+   "Dumbbell split jump",
+   "Bulgarian split jump"
+  ],
+  "safety": "Land softly with knees soft and tracking over toes; skip if you have acute knee or ankle pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "broadjump",
+  "name": "Broad jump",
+  "aliases": [
+   "Standing long jump",
+   "Standing broad jump"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Glutes",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Lower back",
+   "Shoulders"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–5",
+  "form_cues": [
+   "Swing arms back and hinge at the hips.",
+   "Drive arms forward and jump as far out as you can.",
+   "Land in a quarter squat and hold the landing for a second."
+  ],
+  "common_mistakes": [
+   "Landing with straight legs",
+   "Falling forward or backward on landing",
+   "Jumping too high instead of out"
+  ],
+  "regressions": [
+   "Jump squat"
+  ],
+  "progressions": [
+   "Consecutive broad jumps",
+   "Single-leg broad jump",
+   "Broad jump into sprint"
+  ],
+  "safety": "Land softly with knees soft and tracking over toes; skip if you have acute knee or ankle pain.",
+  "video": null,
+  "notes": "Measure distance from toes to heels to track progress."
+ },
+ {
+  "id": "contbroad",
+  "name": "Consecutive broad jumps",
+  "aliases": [
+   "Continuous broad jumps",
+   "Bunny hops",
+   "Repeated broad jumps"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Glutes"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–5 jumps",
+  "form_cues": [
+   "Do one broad jump, then rebound straight into the next.",
+   "Spend as little time on the ground as possible.",
+   "Keep the arm swing rhythmic and powerful."
+  ],
+  "common_mistakes": [
+   "Stopping fully between jumps",
+   "Collapsing knees on each landing"
+  ],
+  "regressions": [
+   "Broad jump"
+  ],
+  "progressions": [
+   "Bounds",
+   "Hurdle hops"
+  ],
+  "safety": "Use a flat, non-slip surface; land softly with knees soft and tracking over toes; skip if you have acute knee or ankle pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "slbroad",
+  "name": "Single-leg broad jump",
+  "aliases": [
+   "Single-leg standing long jump",
+   "Single-leg forward hop for distance"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Unilateral",
+   "Balance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core",
+   "Adductors"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "3 / side",
+  "form_cues": [
+   "Stand on one leg, hinge and swing arms back.",
+   "Jump forward off one leg as far as you can.",
+   "Land on the same leg and hold it for two seconds."
+  ],
+  "common_mistakes": [
+   "Knee caving on landing",
+   "Jumping further than you can control"
+  ],
+  "regressions": [
+   "Broad jump",
+   "Single-leg hop"
+  ],
+  "progressions": [
+   "Bounds"
+  ],
+  "safety": "Master two-leg landings first; stop if knee feels unstable.",
+  "video": null,
+  "notes": "Common return-to-sport hop test."
+ },
+ {
+  "id": "lateralbound",
+  "name": "Lateral bound",
+  "aliases": [
+   "Skater bound",
+   "Heiden",
+   "Side-to-side bound"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Glutes",
+   "Unilateral",
+   "Agility",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Abductors",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5 / side",
+  "form_cues": [
+   "Load on one leg and push hard sideways off it.",
+   "Jump as far as you can to the side.",
+   "Land on the opposite leg and stick it for a second."
+  ],
+  "common_mistakes": [
+   "Landing with knee caving inward",
+   "Jumping up instead of out",
+   "Not controlling the landing"
+  ],
+  "regressions": [
+   "Skater hop (small)",
+   "Lateral lunge"
+  ],
+  "progressions": [
+   "Continuous lateral bounds",
+   "Single-leg lateral hop"
+  ],
+  "safety": "Land softly with knees soft and tracking over toes; skip if you have acute knee or ankle pain.",
+  "video": null,
+  "notes": "Make it continuous for conditioning; stick each landing for strength and control."
+ },
+ {
+  "id": "bounds",
+  "name": "Alternate-leg bounding",
+  "aliases": [
+   "Bounds",
+   "Bounding",
+   "Power bounds"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Speed",
+   "Legs",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hip flexors",
+   "Core"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "20–30 m",
+  "form_cues": [
+   "Push off one leg and drive the other knee forward and up.",
+   "Swing the opposite arm hard with each stride.",
+   "Cover as much ground per bound as you can, landing under hips."
+  ],
+  "common_mistakes": [
+   "Turning it into a run with short strides",
+   "Landing heel-first far ahead of the body"
+  ],
+  "regressions": [
+   "Power skip",
+   "A-skip"
+  ],
+  "progressions": [
+   "Straight-leg bound",
+   "Single-leg hop"
+  ],
+  "safety": "Use grass or a track; build up volume slowly to protect shins and Achilles.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "straightlegbound",
+  "name": "Straight-leg bound",
+  "aliases": [
+   "Straight-leg run",
+   "Scissor bound"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Speed",
+   "Warm-up",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20 m",
+  "form_cues": [
+   "Keep knees nearly straight and stay tall.",
+   "Sweep each leg down and back, striking under your hips.",
+   "Pull the ground behind you with quick, active feet."
+  ],
+  "common_mistakes": [
+   "Leaning back",
+   "Reaching the foot out in front"
+  ],
+  "regressions": [
+   "A-skip"
+  ],
+  "progressions": [
+   "Bounds"
+  ],
+  "safety": "Warm up well first; stop if you feel any hamstring tightness.",
+  "video": null,
+  "notes": "Sprint drill that teaches a fast, backward-pulling foot strike."
+ },
+ {
+  "id": "pogo",
+  "name": "Pogo jumps",
+  "aliases": [
+   "Pogo hops",
+   "Ankle hops",
+   "Ankling hops"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Warm-up",
+   "Legs",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Ankles",
+   "Quadriceps",
+   "Feet"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20",
+  "form_cues": [
+   "Stand tall with almost-straight knees.",
+   "Bounce off the balls of your feet using only your ankles.",
+   "Keep ground contact quick and stiff, like a spring."
+  ],
+  "common_mistakes": [
+   "Bending the knees too much",
+   "Landing on the heels",
+   "Letting the ankles collapse"
+  ],
+  "regressions": [
+   "Jump rope",
+   "Calf raise"
+  ],
+  "progressions": [
+   "Single-leg hop",
+   "Hurdle hops",
+   "Depth jump"
+  ],
+  "safety": "Build up slowly if you have Achilles or calf issues.",
+  "video": null,
+  "notes": "Great warm-up for running and jumping; builds ankle stiffness."
+ },
+ {
+  "id": "slhop",
+  "name": "Single-leg hop",
+  "aliases": [
+   "Single-leg forward hops",
+   "One-leg hops"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Legs",
+   "Unilateral",
+   "Balance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves",
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core",
+   "Feet"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Balance on one leg with a soft knee.",
+   "Hop forward a short distance and land on the same foot.",
+   "Keep the knee over the toes and hips level."
+  ],
+  "common_mistakes": [
+   "Knee caving inward",
+   "Hip dropping on the free-leg side"
+  ],
+  "regressions": [
+   "Pogo jumps",
+   "Single-leg balance"
+  ],
+  "progressions": [
+   "Single-leg broad jump",
+   "Single-leg lateral hop"
+  ],
+  "safety": "Stop if the landing knee wobbles or hurts.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "lathop",
+  "name": "Lateral line hops",
+  "aliases": [
+   "Side-to-side hops",
+   "Two-foot lateral hops",
+   "Lateral hops"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Agility",
+   "Warm-up",
+   "Legs",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Adductors",
+   "Abductors",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20 sec",
+  "form_cues": [
+   "Stand beside a line with feet together.",
+   "Hop side to side over it as fast as you can.",
+   "Stay on the balls of your feet with quick, light contacts."
+  ],
+  "common_mistakes": [
+   "Hopping too high",
+   "Looking down and hunching over"
+  ],
+  "regressions": [
+   "Pogo jumps"
+  ],
+  "progressions": [
+   "Single-leg lateral hop",
+   "Lateral box jump"
+  ],
+  "safety": "Use a non-slip surface; ease in if ankles are stiff.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "linehop",
+  "name": "Forward-backward line hops",
+  "aliases": [
+   "Front-back line hops",
+   "Line jumps"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Agility",
+   "Warm-up",
+   "Legs",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20 sec",
+  "form_cues": [
+   "Stand behind a line with feet together.",
+   "Hop forward and back over it quickly.",
+   "Keep knees soft and contacts short."
+  ],
+  "common_mistakes": [
+   "Landing heavy on the heels",
+   "Leaning too far forward"
+  ],
+  "regressions": [
+   "Pogo jumps"
+  ],
+  "progressions": [
+   "Single-leg line hops",
+   "Dot drill"
+  ],
+  "safety": "Use a non-slip surface.",
+  "video": null,
+  "notes": "Do single-leg for more challenge."
+ },
+ {
+  "id": "sllathop",
+  "name": "Single-leg lateral hop",
+  "aliases": [
+   "Single-leg side hops",
+   "Lateral single-leg hop"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Agility",
+   "Legs",
+   "Unilateral",
+   "Balance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Abductors",
+   "Adductors",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "8–10 / side",
+  "form_cues": [
+   "Stand on one leg beside a line.",
+   "Hop sideways over it and back on the same leg.",
+   "Land quietly with the knee tracking over the toes."
+  ],
+  "common_mistakes": [
+   "Knee wobbling inward",
+   "Losing balance between hops"
+  ],
+  "regressions": [
+   "Lateral line hops"
+  ],
+  "progressions": [
+   "Lateral bound"
+  ],
+  "safety": "Stop if the ankle or knee feels unstable.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "snapdown",
+  "name": "Snap down",
+  "aliases": [
+   "Drop squat",
+   "Snap-down drill",
+   "Drop and stick"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Warm-up",
+   "Legs",
+   "Home-friendly",
+   "Rehab"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–6",
+  "form_cues": [
+   "Rise onto your toes with arms overhead.",
+   "Snap arms down and drop fast into an athletic quarter squat.",
+   "Freeze in the landing: chest up, hips back, knees over toes."
+  ],
+  "common_mistakes": [
+   "Landing with knees caving",
+   "Too deep and slow a drop"
+  ],
+  "regressions": [
+   "Bodyweight squat"
+  ],
+  "progressions": [
+   "Depth drop",
+   "Depth jump"
+  ],
+  "safety": "Teaches safe landing mechanics; keep the drop quick but controlled.",
+  "video": null,
+  "notes": "Use as a warm-up before any jumping session."
+ },
+ {
+  "id": "askip",
+  "name": "A-skip",
+  "aliases": [
+   "A skips",
+   "High-knee skip"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Speed",
+   "Warm-up",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hip flexors",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20 m",
+  "form_cues": [
+   "Skip forward, driving one knee to hip height.",
+   "Pull the foot down to strike under your hips.",
+   "Opposite arm drives with each knee; stay tall."
+  ],
+  "common_mistakes": [
+   "Leaning back",
+   "Reaching the foot out in front",
+   "Arms crossing the body"
+  ],
+  "regressions": [
+   "A-march"
+  ],
+  "progressions": [
+   "B-skip",
+   "Power skip"
+  ],
+  "safety": "Use a flat surface and warm up first.",
+  "video": null,
+  "notes": "Classic sprint mechanics drill; walk it as an A-march to learn it."
+ },
+ {
+  "id": "bskip",
+  "name": "B-skip",
+  "aliases": [
+   "B skips"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Speed",
+   "Warm-up",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20 m",
+  "form_cues": [
+   "Start like an A-skip, knee up to hip height.",
+   "Extend the lower leg forward, then paw it down and back.",
+   "Strike under your hips and keep a steady rhythm."
+  ],
+  "common_mistakes": [
+   "Kicking the leg out and landing in front",
+   "Losing the skip rhythm",
+   "Slumping forward"
+  ],
+  "regressions": [
+   "A-skip",
+   "B-march"
+  ],
+  "progressions": [
+   "Straight-leg bound"
+  ],
+  "safety": "Stop if you feel hamstring tightness; warm up first.",
+  "video": null,
+  "notes": "Teaches the active pull-back of the foot used in sprinting."
+ },
+ {
+  "id": "powerskip",
+  "name": "Power skip",
+  "aliases": [
+   "Skip for height",
+   "Power skips"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Speed",
+   "Warm-up",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Calves",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Hip flexors",
+   "Core",
+   "Shoulders"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "20 m",
+  "form_cues": [
+   "Skip, pushing hard off the ground for height.",
+   "Drive the knee and opposite arm up together.",
+   "Land softly and go straight into the next skip."
+  ],
+  "common_mistakes": [
+   "Skipping low and fast instead of high",
+   "Weak arm drive"
+  ],
+  "regressions": [
+   "A-skip"
+  ],
+  "progressions": [
+   "Bounds"
+  ],
+  "safety": "Use a non-slip surface and build up gradually.",
+  "video": null,
+  "notes": "Do it for distance instead of height as a variation."
+ },
+ {
+  "id": "carioca",
+  "name": "Carioca",
+  "aliases": [
+   "Grapevine",
+   "Karaoke drill"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Agility",
+   "Warm-up",
+   "Mobility",
+   "Cardio"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hip flexors",
+   "Adductors",
+   "Abductors"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Calves",
+   "Glutes"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 2,
+  "reps": "20 m / direction",
+  "form_cues": [
+   "Move sideways, crossing the trail leg in front then behind.",
+   "Rotate the hips while the shoulders stay square.",
+   "Stay on the balls of your feet and speed up as you get it."
+  ],
+  "common_mistakes": [
+   "Turning the shoulders with the hips",
+   "Tripping over crossing feet by going too fast too soon"
+  ],
+  "regressions": [
+   "Lateral shuffle"
+  ],
+  "progressions": [
+   "Agility ladder crossover"
+  ],
+  "safety": "Start slowly; use a flat, clear surface.",
+  "video": null,
+  "notes": "Great dynamic warm-up for field and court sports."
+ },
+ {
+  "id": "inclineplyopush",
+  "name": "Incline plyo push-up",
+  "aliases": [
+   "Wall plyo push-up",
+   "Bench plyometric push-up"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Chest",
+   "Home-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Bench or wall"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–8",
+  "form_cues": [
+   "Hands on a wall, bench or counter, body straight.",
+   "Lower quickly, then push hard so your hands leave the surface.",
+   "Catch yourself with soft elbows and go again."
+  ],
+  "common_mistakes": [
+   "Sagging hips",
+   "Landing with locked elbows"
+  ],
+  "regressions": [
+   "Incline push-up"
+  ],
+  "progressions": [
+   "Kneeling plyo push-up",
+   "Plyo push-up"
+  ],
+  "safety": "Use a stable surface that will not slide.",
+  "video": null,
+  "notes": "The higher the hands, the easier it is."
+ },
+ {
+  "id": "kneelplyopush",
+  "name": "Kneeling plyo push-up",
+  "aliases": [
+   "Kneeling explosive push-up"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Chest",
+   "Home-friendly"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–8",
+  "form_cues": [
+   "Kneel with hands under shoulders and a straight line knees to head.",
+   "Lower, then push explosively so hands leave the floor.",
+   "Land with soft elbows and flow into the next rep."
+  ],
+  "common_mistakes": [
+   "Hips piking up",
+   "Flaring elbows wide"
+  ],
+  "regressions": [
+   "Incline plyo push-up"
+  ],
+  "progressions": [
+   "Plyo push-up"
+  ],
+  "safety": "Use a mat for the knees; stop if wrists hurt.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "plyopush",
+  "name": "Plyo push-up",
+  "aliases": [
+   "Explosive push-up",
+   "Plyometric push-up",
+   "Pop-up push-up"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Chest",
+   "Calisthenics",
+   "Home-friendly",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–8",
+  "form_cues": [
+   "Start in a strong plank, hands under shoulders.",
+   "Lower under control, then push hard so hands leave the floor.",
+   "Land with soft elbows and go straight into the next rep."
+  ],
+  "common_mistakes": [
+   "Hips sagging or piking",
+   "Landing on locked elbows",
+   "Rushing with poor depth"
+  ],
+  "regressions": [
+   "Kneeling plyo push-up",
+   "Push-ups"
+  ],
+  "progressions": [
+   "Clap push-up",
+   "Depth push-up",
+   "Medicine ball chest pass"
+  ],
+  "safety": "Warm up wrists and shoulders; stop if you land with pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "clappush",
+  "name": "Clap push-up",
+  "aliases": [
+   "Clapping push-up"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Chest",
+   "Calisthenics"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4–6",
+  "form_cues": [
+   "Lower to just above the floor with a tight body.",
+   "Explode up high enough to clap once.",
+   "Get hands back under shoulders and land softly."
+  ],
+  "common_mistakes": [
+   "Not getting enough height and landing on the face",
+   "Body sagging in the air"
+  ],
+  "regressions": [
+   "Plyo push-up"
+  ],
+  "progressions": [
+   "Depth push-up"
+  ],
+  "safety": "Practise on a soft mat; only progress once plyo push-ups are high and controlled.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "wallsprintdrill",
+  "name": "Wall drill",
+  "aliases": [
+   "Acceleration wall drill",
+   "Wall march",
+   "Wall run"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Speed",
+   "Warm-up",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hip flexors",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Wall"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "3–5 switches",
+  "form_cues": [
+   "Lean into a wall at about 45 degrees, hands on it.",
+   "Hold one knee up, toe pulled up, body in a straight line.",
+   "Switch legs explosively, striking down under your hips."
+  ],
+  "common_mistakes": [
+   "Bending at the hips instead of leaning as a straight line",
+   "Feet drifting forward under the wall"
+  ],
+  "regressions": [
+   "Wall march (slow)"
+  ],
+  "progressions": [
+   "Falling start sprint"
+  ],
+  "safety": "Wear shoes with grip so your feet do not slip.",
+  "video": null,
+  "notes": "Teaches the body angle and leg action of acceleration."
+ },
+ {
+  "id": "accelsprint",
+  "name": "Acceleration sprint",
+  "aliases": [
+   "10 m sprint",
+   "20 m sprint",
+   "Short sprint"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Speed",
+   "Legs",
+   "Cardio"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hip flexors",
+   "Core"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "6 × 10–20 m",
+  "form_cues": [
+   "Start from a split stance, leaning forward.",
+   "Push the ground back hard with powerful, full strides.",
+   "Rise gradually to upright over the first 10–15 m."
+  ],
+  "common_mistakes": [
+   "Popping upright immediately",
+   "Short choppy steps",
+   "Starting cold without a warm-up"
+  ],
+  "regressions": [
+   "Wall drill",
+   "Falling start sprint"
+  ],
+  "progressions": [
+   "Hill sprint",
+   "Sled sprint",
+   "Broad jump into sprint"
+  ],
+  "safety": "Warm up thoroughly; rest 1–2 min between reps to stay fast.",
+  "video": null,
+  "notes": "Track times if you can; stop when speed drops."
+ },
+ {
+  "id": "fallingstart",
+  "name": "Falling start sprint",
+  "aliases": [
+   "Lean and go",
+   "Falling sprint start"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Speed",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "5 × 10 m",
+  "form_cues": [
+   "Stand tall and lean forward from the ankles as one straight line.",
+   "When you feel you will fall, explode into a sprint.",
+   "Keep the lean for the first few strong steps."
+  ],
+  "common_mistakes": [
+   "Bending at the waist",
+   "Stepping out too far in front of the body"
+  ],
+  "regressions": [
+   "Wall drill"
+  ],
+  "progressions": [
+   "Acceleration sprint"
+  ],
+  "safety": "Warm up first; use a surface with good grip.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "flyingsprint",
+  "name": "Flying sprint",
+  "aliases": [
+   "Flying 20",
+   "Flying 10",
+   "Fly-in sprint"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Speed",
+   "Legs",
+   "Cardio"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Hamstrings",
+   "Glutes",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Quadriceps",
+   "Core"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "4 × 20 m (after 20 m build-up)",
+  "form_cues": [
+   "Build up over 20–30 m to near top speed.",
+   "Sprint the marked zone at full speed, running tall.",
+   "Stay relaxed in face and shoulders; strike under your hips."
+  ],
+  "common_mistakes": [
+   "Tensing up and over-striding",
+   "Too short a build-up zone"
+  ],
+  "regressions": [
+   "Acceleration sprint"
+  ],
+  "progressions": [],
+  "safety": "Only do these fresh and fully warmed up; hamstring strains happen at top speed.",
+  "video": null,
+  "notes": "Trains maximum velocity; rest 3+ min between reps."
+ },
+ {
+  "id": "hillsprint",
+  "name": "Hill sprint",
+  "aliases": [
+   "Uphill sprint",
+   "Incline sprint"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Speed",
+   "Legs",
+   "Cardio",
+   "Glutes"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hip flexors",
+   "Core"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "6–8 × 10–15 sec",
+  "form_cues": [
+   "Lean into the hill from the ankles, not the waist.",
+   "Drive knees forward and pump arms hard.",
+   "Walk back down to recover fully between reps."
+  ],
+  "common_mistakes": [
+   "Bending at the hips",
+   "Shortening stride and arm swing as you tire"
+  ],
+  "regressions": [
+   "Acceleration sprint"
+  ],
+  "progressions": [
+   "Sled sprint"
+  ],
+  "safety": "Choose a moderate, even slope; the incline is easier on hamstrings than flat sprints.",
+  "video": null,
+  "notes": "A treadmill set to a steep incline can substitute."
+ },
+ {
+  "id": "broadsprint",
+  "name": "Broad jump into sprint",
+  "aliases": [
+   "Broad jump to sprint",
+   "Jump and sprint"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Plyometric",
+   "Speed",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "5 × jump + 10 m",
+  "form_cues": [
+   "Do one maximal broad jump.",
+   "Land in an athletic stance with a forward lean.",
+   "Immediately sprint out 10 m, pushing hard on the first steps."
+  ],
+  "common_mistakes": [
+   "Stalling or standing up after the landing",
+   "Landing off balance"
+  ],
+  "regressions": [
+   "Broad jump",
+   "Falling start sprint"
+  ],
+  "progressions": [
+   "Hurdle hops"
+  ],
+  "safety": "Land softly with knees soft and tracking over toes; skip if you have acute knee or ankle pain.",
+  "video": null,
+  "notes": "Links jumping power to acceleration."
+ },
+ {
+  "id": "backpedalsprint",
+  "name": "Backpedal to sprint",
+  "aliases": [
+   "Backpedal and turn",
+   "Backpedal transition"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Agility",
+   "Speed",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "6 × 5 m back + 10 m",
+  "form_cues": [
+   "Backpedal low with weight on the balls of your feet.",
+   "On the cue or line, open the hips and turn.",
+   "Accelerate forward hard for 10 m."
+  ],
+  "common_mistakes": [
+   "Standing tall while backpedalling",
+   "Slow, rounded turn"
+  ],
+  "regressions": [
+   "Backpedal"
+  ],
+  "progressions": [
+   "T-drill"
+  ],
+  "safety": "Use a clear, flat area; start slowly.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "latshuffle",
+  "name": "Lateral shuffle",
+  "aliases": [
+   "Defensive slide",
+   "Side shuffle"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Agility",
+   "Warm-up",
+   "Cardio",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Abductors"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Calves"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "10 m / direction",
+  "form_cues": [
+   "Get into a low athletic stance, chest up.",
+   "Push off the trail leg and step sideways without crossing feet.",
+   "Keep your hips low and level."
+  ],
+  "common_mistakes": [
+   "Bouncing up and down",
+   "Clicking feet together"
+  ],
+  "regressions": [
+   "Banded lateral walk"
+  ],
+  "progressions": [
+   "Box drill",
+   "T-drill"
+  ],
+  "safety": "Use a flat, non-slip surface.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dotdrill",
+  "name": "Dot drill",
+  "aliases": [
+   "Five-dot drill",
+   "Dot hops"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Agility",
+   "Legs",
+   "Home-friendly"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [
+   "Marked floor"
+  ],
+  "req": "",
+  "equipment_tier": 0,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "30 sec",
+  "form_cues": [
+   "Mark five dots like the five on a die.",
+   "Hop between dots in the set pattern as fast as you can.",
+   "Stay on the balls of your feet with quick contacts."
+  ],
+  "common_mistakes": [
+   "Looking down at your feet",
+   "Big, slow hops"
+  ],
+  "regressions": [
+   "Line hops"
+  ],
+  "progressions": [
+   "Agility ladder hopscotch"
+  ],
+  "safety": "Use tape on a non-slip floor.",
+  "video": null,
+  "notes": "Do two-foot, then single-foot patterns."
+ },
+ {
+  "id": "shuttlerun",
+  "name": "Shuttle run",
+  "aliases": [
+   "Suicides",
+   "Line drills",
+   "10 m shuttle"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Agility",
+   "Speed",
+   "Cardio",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings",
+   "Adductors"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Cones or lines"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "6 × 4 × 10 m",
+  "form_cues": [
+   "Sprint to the line and touch it with your hand.",
+   "Drop your hips and plant the outside foot to turn.",
+   "Push off hard and accelerate back."
+  ],
+  "common_mistakes": [
+   "Turning tall and slow",
+   "Rounding wide turns instead of planting"
+  ],
+  "regressions": [
+   "Jog shuttles"
+  ],
+  "progressions": [
+   "5-10-5 pro agility drill"
+  ],
+  "safety": "Wear grippy shoes on a non-slip surface.",
+  "video": null,
+  "notes": "No cones? Use court or field lines. No gear id for cones, so req is empty."
+ },
+ {
+  "id": "proagility",
+  "name": "5-10-5 pro agility drill",
+  "aliases": [
+   "5-10-5 shuttle",
+   "Pro agility shuttle",
+   "20-yard shuttle"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Agility",
+   "Speed",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Cones or lines"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "5–6 reps",
+  "form_cues": [
+   "Start straddling the middle line in a low stance.",
+   "Sprint 5 m one way, touch, then 10 m the other way.",
+   "Touch and sprint 5 m back through the middle."
+  ],
+  "common_mistakes": [
+   "Standing up during the turns",
+   "Crossing the feet on the first step"
+  ],
+  "regressions": [
+   "Shuttle run"
+  ],
+  "progressions": [
+   "L-drill"
+  ],
+  "safety": "Use a grippy surface; rest fully between timed reps.",
+  "video": null,
+  "notes": "Standard combine test (5-10-5 yards); metres work fine."
+ },
+ {
+  "id": "tdrill",
+  "name": "T-drill",
+  "aliases": [
+   "T-test agility drill"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Agility",
+   "Speed",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Abductors",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "4 cones"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "4–6 reps",
+  "form_cues": [
+   "Sprint forward 10 m to the middle cone.",
+   "Shuffle 5 m left, 10 m right, 5 m back to the middle.",
+   "Backpedal to the start, staying low throughout."
+  ],
+  "common_mistakes": [
+   "Crossing feet while shuffling",
+   "Standing tall in the shuffle"
+  ],
+  "regressions": [
+   "Lateral shuffle"
+  ],
+  "progressions": [
+   "Box drill"
+  ],
+  "safety": "Use a flat, non-slip surface.",
+  "video": null,
+  "notes": "Cones laid out in a T; no gear id for cones, so req is empty."
+ },
+ {
+  "id": "ldrill",
+  "name": "L-drill",
+  "aliases": [
+   "3-cone drill",
+   "Three-cone drill"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Agility",
+   "Speed",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "3 cones"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "4–6 reps",
+  "form_cues": [
+   "Set three cones in an L, 5 m apart.",
+   "Sprint out and back, then go round the far cone in a figure eight.",
+   "Stay low and tight round the cones; sprint home."
+  ],
+  "common_mistakes": [
+   "Running wide round the cones",
+   "Standing tall through the bends"
+  ],
+  "regressions": [
+   "5-10-5 pro agility drill"
+  ],
+  "progressions": [],
+  "safety": "Use a grippy surface; rest fully between reps.",
+  "video": null,
+  "notes": "NFL combine 3-cone drill."
+ },
+ {
+  "id": "boxdrill",
+  "name": "Box drill",
+  "aliases": [
+   "Four-cone box drill",
+   "Square drill"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Agility",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Adductors",
+   "Abductors",
+   "Hamstrings"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "4 cones"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "4–6 reps",
+  "form_cues": [
+   "Set four cones in a 5 m square.",
+   "Sprint forward, shuffle sideways, backpedal, then shuffle back.",
+   "Stay low and keep your hips facing forward."
+  ],
+  "common_mistakes": [
+   "Crossing the feet in the shuffle",
+   "Rising up at each cone"
+  ],
+  "regressions": [
+   "Lateral shuffle"
+  ],
+  "progressions": [
+   "T-drill"
+  ],
+  "safety": "Use a non-slip surface.",
+  "video": null,
+  "notes": "Trains changes between forward, lateral and backward movement."
+ },
+ {
+  "id": "zigzag",
+  "name": "Zig-zag cone drill",
+  "aliases": [
+   "Zigzag sprint",
+   "Cone weave"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Agility",
+   "Speed",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Abductors"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "5–6 cones"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "6 reps",
+  "form_cues": [
+   "Set cones 3–5 m apart in a zig-zag.",
+   "Sprint to each cone and cut sharply off the outside foot.",
+   "Lower your hips before each cut."
+  ],
+  "common_mistakes": [
+   "Rounding off the cuts",
+   "Leaning the body the wrong way on the cut"
+  ],
+  "regressions": [
+   "Shuttle run"
+  ],
+  "progressions": [
+   "L-drill"
+  ],
+  "safety": "Use a grippy surface; build up speed gradually.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "ladderone",
+  "name": "Agility ladder: one foot in each",
+  "aliases": [
+   "Quick feet ladder",
+   "Ladder run-through",
+   "One-in ladder"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Agility",
+   "Cardio",
+   "Warm-up",
+   "Legs"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Core"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Agility ladder"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4 lengths",
+  "form_cues": [
+   "Run through, placing one foot in each square.",
+   "Stay on the balls of your feet, arms pumping.",
+   "Speed up only as long as you stay clean."
+  ],
+  "common_mistakes": [
+   "Stepping on the rungs",
+   "Looking straight down the whole time"
+  ],
+  "regressions": [
+   "Walk-through"
+  ],
+  "progressions": [
+   "Agility ladder: two feet in each"
+  ],
+  "safety": "Lay the ladder flat on a non-slip surface so it cannot slide.",
+  "video": null,
+  "notes": "Agility ladder has no gear id, so req is empty; tape on the floor works too."
+ },
+ {
+  "id": "laddertwo",
+  "name": "Agility ladder: two feet in each",
+  "aliases": [
+   "Two-in ladder",
+   "Two feet in each square"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Agility",
+   "Cardio",
+   "Warm-up",
+   "Legs"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves",
+   "Hip flexors"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Core"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Agility ladder"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4 lengths",
+  "form_cues": [
+   "Step both feet into each square, one after the other.",
+   "Keep steps short, light and fast.",
+   "Drive arms in rhythm with your feet."
+  ],
+  "common_mistakes": [
+   "Heavy, flat-footed steps",
+   "Rushing and kicking the ladder"
+  ],
+  "regressions": [
+   "Agility ladder: one foot in each"
+  ],
+  "progressions": [
+   "Agility ladder: lateral in-in-out-out"
+  ],
+  "safety": "Lay the ladder flat on a non-slip surface so it cannot slide.",
+  "video": null,
+  "notes": "Agility ladder has no gear id, so req is empty; tape on the floor works too."
+ },
+ {
+  "id": "ladderlateral",
+  "name": "Agility ladder: lateral in-in-out-out",
+  "aliases": [
+   "Lateral in and out",
+   "Lateral two-in ladder"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Agility",
+   "Cardio",
+   "Warm-up",
+   "Legs"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves",
+   "Abductors",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Agility ladder"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4 lengths",
+  "form_cues": [
+   "Face the side of the ladder.",
+   "Step in, in, then out, out, moving down one square each time.",
+   "Keep your hips low and facing forward."
+  ],
+  "common_mistakes": [
+   "Crossing the feet",
+   "Standing too tall"
+  ],
+  "regressions": [
+   "Agility ladder: two feet in each"
+  ],
+  "progressions": [
+   "Icky shuffle"
+  ],
+  "safety": "Lay the ladder flat on a non-slip surface so it cannot slide.",
+  "video": null,
+  "notes": "Agility ladder has no gear id, so req is empty; tape on the floor works too."
+ },
+ {
+  "id": "ickyshuffle",
+  "name": "Icky shuffle",
+  "aliases": [
+   "Ickey shuffle",
+   "In-in-out ladder"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Agility",
+   "Cardio",
+   "Warm-up",
+   "Legs"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves",
+   "Abductors",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Quadriceps",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Agility ladder"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4 lengths",
+  "form_cues": [
+   "Step in-in, then out to the side, moving forward each square.",
+   "Alternate the outside step from side to side.",
+   "Stay light and rhythmic, eyes up."
+  ],
+  "common_mistakes": [
+   "Losing the in-in-out rhythm",
+   "Big slow steps"
+  ],
+  "regressions": [
+   "Agility ladder: lateral in-in-out-out"
+  ],
+  "progressions": [
+   "Agility ladder crossover"
+  ],
+  "safety": "Lay the ladder flat on a non-slip surface so it cannot slide.",
+  "video": null,
+  "notes": "Agility ladder has no gear id, so req is empty; tape on the floor works too."
+ },
+ {
+  "id": "ladderhopscotch",
+  "name": "Agility ladder: hopscotch",
+  "aliases": [
+   "Hopscotch ladder",
+   "Ladder in-out hops"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Agility",
+   "Cardio",
+   "Warm-up",
+   "Legs"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [
+   "Agility ladder"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4 lengths",
+  "form_cues": [
+   "Hop with both feet into a square, then land one foot either side of the next.",
+   "Alternate in and out all the way down.",
+   "Keep contacts quick and quiet."
+  ],
+  "common_mistakes": [
+   "Landing heavy on the heels",
+   "Losing rhythm halfway"
+  ],
+  "regressions": [
+   "Agility ladder: two feet in each"
+  ],
+  "progressions": [
+   "Agility ladder: single-leg hops"
+  ],
+  "safety": "Lay the ladder flat on a non-slip surface so it cannot slide.",
+  "video": null,
+  "notes": "Agility ladder has no gear id, so req is empty; tape on the floor works too."
+ },
+ {
+  "id": "laddersinglehop",
+  "name": "Agility ladder: single-leg hops",
+  "aliases": [
+   "Single-leg ladder hops",
+   "One-foot ladder hops"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Agility",
+   "Legs",
+   "Unilateral",
+   "Balance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Glutes",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [
+   "Agility ladder"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "2 lengths / leg",
+  "form_cues": [
+   "Hop on one foot into each square.",
+   "Land softly on the ball of the foot, knee slightly bent.",
+   "Keep the hip level and the knee over the toes."
+  ],
+  "common_mistakes": [
+   "Knee caving on landing",
+   "Hopping too far and losing control"
+  ],
+  "regressions": [
+   "Agility ladder: hopscotch"
+  ],
+  "progressions": [
+   "Single-leg lateral hop"
+  ],
+  "safety": "Lay the ladder flat on a non-slip surface so it cannot slide.",
+  "video": null,
+  "notes": "Agility ladder has no gear id, so req is empty; tape on the floor works too."
+ },
+ {
+  "id": "laddercross",
+  "name": "Agility ladder crossover",
+  "aliases": [
+   "Ladder carioca",
+   "Crossover ladder step"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Agility",
+   "Cardio",
+   "Warm-up",
+   "Legs"
+  ],
+  "muscle_group": "Cardio",
+  "primary_muscles": [
+   "Calves",
+   "Hip flexors",
+   "Adductors"
+  ],
+  "secondary_muscles": [
+   "Obliques",
+   "Abductors"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Agility ladder"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4 lengths",
+  "form_cues": [
+   "Move sideways along the ladder.",
+   "Cross the trail foot over into each square, then step out.",
+   "Turn the hips, keep the shoulders square."
+  ],
+  "common_mistakes": [
+   "Turning the whole body",
+   "Stepping on rungs"
+  ],
+  "regressions": [
+   "Carioca"
+  ],
+  "progressions": [],
+  "safety": "Lay the ladder flat on a non-slip surface so it cannot slide.",
+  "video": null,
+  "notes": "Agility ladder has no gear id, so req is empty; tape on the floor works too."
+ },
+ {
+  "id": "hurdlehop",
+  "name": "Hurdle hops",
+  "aliases": [
+   "Mini hurdle hops",
+   "Hurdle jumps"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Calves",
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [
+   "Mini hurdles or cones"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5–6 hurdles",
+  "form_cues": [
+   "Line up 4–6 low hurdles about a stride apart.",
+   "Jump over each with both feet, tucking knees slightly.",
+   "Rebound quickly off each landing, staying tall."
+  ],
+  "common_mistakes": [
+   "Long, sinking ground contacts",
+   "Clipping hurdles by not lifting the knees"
+  ],
+  "regressions": [
+   "Pogo jumps",
+   "Consecutive broad jumps"
+  ],
+  "progressions": [
+   "Depth jump"
+  ],
+  "safety": "Use collapsible hurdles or cones that fall over if clipped.",
+  "video": null,
+  "notes": "No gear id for hurdles; req is empty."
+ },
+ {
+  "id": "bandsprint",
+  "name": "Band-resisted sprint",
+  "aliases": [
+   "Resisted band sprint",
+   "Partner-resisted sprint"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Speed",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Long resistance band or harness",
+   "Partner or anchor"
+  ],
+  "req": "bands",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "6 × 10–15 m",
+  "form_cues": [
+   "Loop the band round your waist with a partner holding behind.",
+   "Lean forward and drive hard with powerful steps.",
+   "Keep strong arm drive and a straight body line."
+  ],
+  "common_mistakes": [
+   "Bending at the waist",
+   "Partner pulling so hard your form breaks"
+  ],
+  "regressions": [
+   "Acceleration sprint"
+  ],
+  "progressions": [
+   "Sled sprint"
+  ],
+  "safety": "Check the band for wear and anchor it securely.",
+  "video": null,
+  "notes": "Can also be done in place against an anchored band."
+ },
+ {
+  "id": "parachute",
+  "name": "Parachute sprint",
+  "aliases": [
+   "Speed chute sprint",
+   "Resistance parachute run"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Speed",
+   "Legs",
+   "Cardio"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Speed parachute"
+  ],
+  "req": "",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "6 × 20–30 m",
+  "form_cues": [
+   "Clip the chute on and start with a strong forward lean.",
+   "Sprint hard so the chute opens behind you.",
+   "Keep your form tall and relaxed once the chute fills."
+  ],
+  "common_mistakes": [
+   "Leaning back against the pull",
+   "Over-striding"
+  ],
+  "regressions": [
+   "Acceleration sprint"
+  ],
+  "progressions": [
+   "Sled sprint"
+  ],
+  "safety": "Use only in open space with no wind gusts that could yank you.",
+  "video": null,
+  "notes": "No gear id for a speed chute; req is empty."
+ },
+ {
+  "id": "mbchest",
+  "name": "Medicine ball chest pass",
+  "aliases": [
+   "Med ball chest throw",
+   "Chest pass"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Chest",
+   "Upper body",
+   "Compound"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Throw",
+  "equipment": [
+   "Medicine ball",
+   "Wall or partner"
+  ],
+  "req": "medball",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Stand in an athletic stance, ball at your chest.",
+   "Step and throw the ball hard and straight at the wall.",
+   "Catch on the rebound and go again with control."
+  ],
+  "common_mistakes": [
+   "Pushing slowly instead of throwing",
+   "Throwing with only the arms and no leg drive"
+  ],
+  "regressions": [
+   "Kneeling chest pass",
+   "Plyo push-up"
+  ],
+  "progressions": [
+   "Medicine ball supine chest throw",
+   "Rotational medicine ball throw"
+  ],
+  "safety": "Use a ball that bounces (not a slam ball) for wall throws; keep your face clear on the rebound.",
+  "video": null,
+  "notes": "3–5 kg suits most people."
+ },
+ {
+  "id": "mbrotthrow",
+  "name": "Rotational medicine ball throw",
+  "aliases": [
+   "Med ball side throw",
+   "Rotational scoop toss",
+   "Hip toss"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Core",
+   "Rotation",
+   "Compound"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Chest",
+   "Core"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Medicine ball",
+   "Wall"
+  ],
+  "req": "medball",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "6–8 / side",
+  "form_cues": [
+   "Stand side-on to a wall, ball at the back hip.",
+   "Drive the back hip round and let the arms follow.",
+   "Release hard into the wall and catch the rebound."
+  ],
+  "common_mistakes": [
+   "Throwing with the arms instead of the hips",
+   "Rounding the lower back"
+  ],
+  "regressions": [
+   "Cable woodchop"
+  ],
+  "progressions": [
+   "Medicine ball shot-put throw"
+  ],
+  "safety": "Use a soft or rebounding ball; check the wall can take impact.",
+  "video": null,
+  "notes": "Great for golf, tennis, baseball and combat sports."
+ },
+ {
+  "id": "mbshotput",
+  "name": "Medicine ball shot-put throw",
+  "aliases": [
+   "Med ball shot put",
+   "Single-arm rotational put"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Core",
+   "Rotation",
+   "Unilateral"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Glutes"
+  ],
+  "movement_pattern": "Throw",
+  "equipment": [
+   "Medicine ball",
+   "Wall"
+  ],
+  "req": "medball",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5 / side",
+  "form_cues": [
+   "Hold the ball at your shoulder, side-on to the wall.",
+   "Rotate the hips and push the ball out with one arm.",
+   "Follow through fully and reset each rep."
+  ],
+  "common_mistakes": [
+   "Pushing with the arm before the hips turn",
+   "Elbow dropping under the ball"
+  ],
+  "regressions": [
+   "Rotational medicine ball throw"
+  ],
+  "progressions": [],
+  "safety": "Keep the wrist behind the ball; use a soft ball.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "medslam",
+  "name": "Medicine ball slam",
+  "aliases": [
+   "Med ball slam",
+   "Overhead slam",
+   "Slam ball"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Core",
+   "Cardio",
+   "Compound"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Lats",
+   "Abs"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Glutes",
+   "Triceps"
+  ],
+  "movement_pattern": "Throw",
+  "equipment": [
+   "Medicine ball",
+   "Slam ball"
+  ],
+  "req": "medball",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–12",
+  "form_cues": [
+   "Lift the ball overhead, rising onto your toes.",
+   "Slam it down hard in front of your feet using your abs and lats.",
+   "Squat to pick it up with a flat back."
+  ],
+  "common_mistakes": [
+   "Using a ball that bounces back into the face",
+   "Rounding the back to pick it up"
+  ],
+  "regressions": [
+   "Band pulldown"
+  ],
+  "progressions": [
+   "Rotational medicine ball slam"
+  ],
+  "safety": "Use a dead (non-bounce) slam ball and keep the face away from the bounce.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "mbrotslam",
+  "name": "Rotational medicine ball slam",
+  "aliases": [
+   "Side slam",
+   "Lateral med ball slam"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Core",
+   "Rotation",
+   "Cardio"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Obliques",
+   "Lats"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Glutes"
+  ],
+  "movement_pattern": "Rotation",
+  "equipment": [
+   "Medicine ball",
+   "Slam ball"
+  ],
+  "req": "medball",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "6–8 / side",
+  "form_cues": [
+   "Lift the ball overhead, then rotate towards one side.",
+   "Slam it down outside your foot, pivoting the back foot.",
+   "Pick up and alternate sides."
+  ],
+  "common_mistakes": [
+   "Twisting through the lower back only",
+   "Not pivoting the back foot"
+  ],
+  "regressions": [
+   "Medicine ball slam"
+  ],
+  "progressions": [
+   "Rotational medicine ball throw"
+  ],
+  "safety": "Use a dead slam ball; keep the spine long.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "wallball",
+  "name": "Wall ball",
+  "aliases": [
+   "Wall ball shot",
+   "Wall balls",
+   "Med ball thruster"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Cardio",
+   "Legs",
+   "Compound",
+   "Endurance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Shoulders"
+  ],
+  "secondary_muscles": [
+   "Triceps",
+   "Core",
+   "Calves"
+  ],
+  "movement_pattern": "Squat",
+  "equipment": [
+   "Medicine ball",
+   "Wall"
+  ],
+  "req": "medball",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "15–20",
+  "form_cues": [
+   "Hold the ball at your chest and squat to parallel.",
+   "Drive up and throw it to a target about 3 m high.",
+   "Catch it and go straight into the next squat."
+  ],
+  "common_mistakes": [
+   "Partial squats",
+   "Throwing with the arms only",
+   "Catching with locked arms"
+  ],
+  "regressions": [
+   "Goblet squat",
+   "Medicine ball chest pass"
+  ],
+  "progressions": [],
+  "safety": "Use a soft wall ball; stand about an arm's length from the wall.",
+  "video": null,
+  "notes": "CrossFit standard: 9 kg / 6 kg to 3 m / 2.7 m."
+ },
+ {
+  "id": "mbbackthrow",
+  "name": "Overhead backward medicine ball throw",
+  "aliases": [
+   "Backward med ball toss",
+   "Granny toss",
+   "Reverse scoop throw"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Posterior chain",
+   "Glutes",
+   "Compound"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Lower back",
+   "Shoulders",
+   "Quadriceps"
+  ],
+  "movement_pattern": "Throw",
+  "equipment": [
+   "Medicine ball",
+   "Open space"
+  ],
+  "req": "medball",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5",
+  "form_cues": [
+   "Hold the ball low between your legs, hips hinged.",
+   "Explode through the hips and throw the ball up and back over your head.",
+   "Let arms follow straight through."
+  ],
+  "common_mistakes": [
+   "Squatting instead of hinging",
+   "Throwing with bent arms only"
+  ],
+  "regressions": [
+   "Kettlebell swing"
+  ],
+  "progressions": [],
+  "safety": "Make sure the area behind you is completely clear.",
+  "video": null,
+  "notes": "Excellent hip-extension power drill; measure throw distance."
+ },
+ {
+  "id": "mbscoop",
+  "name": "Underhand forward medicine ball throw",
+  "aliases": [
+   "Forward scoop toss",
+   "Underhand med ball toss",
+   "Forward granny throw"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Posterior chain",
+   "Glutes"
+  ],
+  "muscle_group": "Glutes",
+  "primary_muscles": [
+   "Glutes",
+   "Hamstrings",
+   "Quadriceps"
+  ],
+  "secondary_muscles": [
+   "Shoulders",
+   "Lower back"
+  ],
+  "movement_pattern": "Throw",
+  "equipment": [
+   "Medicine ball",
+   "Open space"
+  ],
+  "req": "medball",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5",
+  "form_cues": [
+   "Hinge with the ball held low between your legs.",
+   "Drive hips forward and throw the ball out and up.",
+   "Let the throw pull you into a step or jump forward."
+  ],
+  "common_mistakes": [
+   "Using arms instead of hips",
+   "Rounding the back at the bottom"
+  ],
+  "regressions": [
+   "Kettlebell swing"
+  ],
+  "progressions": [
+   "Overhead backward medicine ball throw",
+   "Broad jump"
+  ],
+  "safety": "Throw into open space away from people.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "mbsoccer",
+  "name": "Overhead medicine ball throw",
+  "aliases": [
+   "Soccer throw",
+   "Overhead forward throw",
+   "Med ball overhead pass"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Core",
+   "Shoulders"
+  ],
+  "muscle_group": "Core",
+  "primary_muscles": [
+   "Lats",
+   "Abs",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Chest",
+   "Shoulders"
+  ],
+  "movement_pattern": "Throw",
+  "equipment": [
+   "Medicine ball",
+   "Wall or partner"
+  ],
+  "req": "medball",
+  "equipment_tier": 1,
+  "difficulty": "Beginner",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "8–10",
+  "form_cues": [
+   "Stand or kneel with the ball overhead, arms long.",
+   "Brace the abs and pull the ball forward hard.",
+   "Release in front of the head into a wall or partner."
+  ],
+  "common_mistakes": [
+   "Arching the lower back to wind up",
+   "Throwing with elbows only"
+  ],
+  "regressions": [
+   "Kneeling overhead throw"
+  ],
+  "progressions": [
+   "Medicine ball slam"
+  ],
+  "safety": "Keep ribs down; use a soft ball for wall throws.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbjumpsquat",
+  "name": "Dumbbell jump squat",
+  "aliases": [
+   "Weighted jump squat",
+   "Kettlebell jump squat",
+   "Loaded squat jump"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Plyometric",
+   "Legs",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [
+   "Dumbbells or kettlebell"
+  ],
+  "req": "dumbbells|kettlebells",
+  "equipment_tier": 1,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "5–6",
+  "form_cues": [
+   "Hold light dumbbells at your sides or a kettlebell at your chest.",
+   "Dip to a quarter squat and jump as high as you can.",
+   "Land softly and reset before the next rep."
+  ],
+  "common_mistakes": [
+   "Going too heavy so jumps barely leave the floor",
+   "Landing stiff-legged"
+  ],
+  "regressions": [
+   "Jump squat"
+  ],
+  "progressions": [
+   "Trap bar jump"
+  ],
+  "safety": "Keep the load light (10–30% of body weight); land softly with knees soft and tracking over toes; skip if you have acute knee or ankle pain.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "dbsplitjump",
+  "name": "Dumbbell split jump",
+  "aliases": [
+   "Weighted jumping lunge",
+   "Loaded split jump"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Plyometric",
+   "Legs",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Dumbbells"
+  ],
+  "req": "dumbbells",
+  "equipment_tier": 1,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5 / side",
+  "form_cues": [
+   "Hold light dumbbells at your sides in a lunge stance.",
+   "Jump up, switching legs in the air.",
+   "Land softly in a lunge with the front knee over the foot."
+  ],
+  "common_mistakes": [
+   "Using weights that are too heavy",
+   "Back knee hitting the floor"
+  ],
+  "regressions": [
+   "Split jump"
+  ],
+  "progressions": [],
+  "safety": "Keep loads light and stop when landings get sloppy.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "boxjump",
+  "name": "Box jump",
+  "aliases": [
+   "Plyo box jump"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [
+   "Plyo box"
+  ],
+  "req": "plyobox",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "4–6",
+  "form_cues": [
+   "Stand a foot from the box, swing arms back and dip.",
+   "Jump and land softly on the box in a quarter squat.",
+   "Stand tall, then step down rather than jumping off."
+  ],
+  "common_mistakes": [
+   "Choosing a box so high you land in a deep squat",
+   "Jumping down repeatedly",
+   "Knees caving on landing"
+  ],
+  "regressions": [
+   "Jump squat",
+   "Step-up"
+  ],
+  "progressions": [
+   "Seated box jump",
+   "Depth jump",
+   "Single-leg box jump"
+  ],
+  "safety": "Use a stable box; step down to protect Achilles and knees.",
+  "video": null,
+  "notes": "Height of jump, not box, is the goal."
+ },
+ {
+  "id": "seatedboxjump",
+  "name": "Seated box jump",
+  "aliases": [
+   "Seated jump to box"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [
+   "Plyo box",
+   "Bench"
+  ],
+  "req": "plyobox",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–5",
+  "form_cues": [
+   "Sit on a bench facing the box, feet flat.",
+   "Swing arms and explode up off the seat onto the box.",
+   "Land softly and step down."
+  ],
+  "common_mistakes": [
+   "Rocking back for momentum",
+   "Choosing too high a box"
+  ],
+  "regressions": [
+   "Box jump"
+  ],
+  "progressions": [
+   "Depth jump"
+  ],
+  "safety": "Start with a low box; step down after each rep.",
+  "video": null,
+  "notes": "Removes the countermovement to build starting strength."
+ },
+ {
+  "id": "depthdrop",
+  "name": "Depth drop",
+  "aliases": [
+   "Drop landing",
+   "Box drop"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Legs",
+   "Rehab"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [
+   "Plyo box"
+  ],
+  "req": "plyobox",
+  "equipment_tier": 2,
+  "difficulty": "Beginner",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "5",
+  "form_cues": [
+   "Step off a low box, do not jump off.",
+   "Land on both feet at once in an athletic quarter squat.",
+   "Freeze the landing for two seconds."
+  ],
+  "common_mistakes": [
+   "Landing loudly on the heels",
+   "Knees caving in",
+   "Stepping off a box too high"
+  ],
+  "regressions": [
+   "Snap down"
+  ],
+  "progressions": [
+   "Depth jump"
+  ],
+  "safety": "Start at 30–45 cm; stop if knees ache.",
+  "video": null,
+  "notes": "Teaches landing before you add depth jumps."
+ },
+ {
+  "id": "depthjump",
+  "name": "Depth jump",
+  "aliases": [
+   "Drop jump",
+   "Reactive jump"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Calves"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [
+   "Plyo box"
+  ],
+  "req": "plyobox",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4–5",
+  "form_cues": [
+   "Step off a low box and land on both feet.",
+   "Spend as little time on the ground as possible.",
+   "Rebound straight up as high as you can."
+  ],
+  "common_mistakes": [
+   "Sinking too deep on landing",
+   "Box too high so you cannot rebound quickly",
+   "Jumping off the box instead of stepping"
+  ],
+  "regressions": [
+   "Depth drop",
+   "Pogo jumps"
+  ],
+  "progressions": [
+   "Depth jump to broad jump"
+  ],
+  "safety": "Advanced shock drill: do it fresh, low volume, with a 30–60 cm box and good landing mechanics first.",
+  "video": null,
+  "notes": "Rest 1–2 min between reps."
+ },
+ {
+  "id": "slboxjump",
+  "name": "Single-leg box jump",
+  "aliases": [
+   "One-leg box jump"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Unilateral",
+   "Balance"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [
+   "Plyo box"
+  ],
+  "req": "plyobox",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "3–4 / side",
+  "form_cues": [
+   "Stand on one leg facing a low box.",
+   "Swing arms and jump onto the box off one leg.",
+   "Land on the same leg, stabilise, step down."
+  ],
+  "common_mistakes": [
+   "Using too high a box",
+   "Knee caving on landing"
+  ],
+  "regressions": [
+   "Box jump",
+   "Single-leg hop"
+  ],
+  "progressions": [],
+  "safety": "Use a low box; step down every rep.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "latboxjump",
+  "name": "Lateral box jump",
+  "aliases": [
+   "Side box jump",
+   "Lateral jump onto box"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Agility",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Abductors"
+  ],
+  "secondary_muscles": [
+   "Adductors",
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [
+   "Plyo box"
+  ],
+  "req": "plyobox",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4 / side",
+  "form_cues": [
+   "Stand side-on to a low box.",
+   "Dip and jump sideways onto it, landing with both feet.",
+   "Step down and repeat, switching sides each set."
+  ],
+  "common_mistakes": [
+   "Clipping the box edge",
+   "Landing with feet too narrow"
+  ],
+  "regressions": [
+   "Lateral line hops"
+  ],
+  "progressions": [
+   "Lateral bound"
+  ],
+  "safety": "Start with a low box; step down each rep.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "powerstepup",
+  "name": "Power step-up",
+  "aliases": [
+   "Explosive step-up",
+   "Plyo step-up",
+   "Box step-up jump"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Legs",
+   "Glutes",
+   "Unilateral"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Hamstrings",
+   "Calves",
+   "Hip flexors"
+  ],
+  "movement_pattern": "Lunge",
+  "equipment": [
+   "Plyo box or bench"
+  ],
+  "req": "plyobox|flatbench",
+  "equipment_tier": 2,
+  "difficulty": "Intermediate",
+  "tracking": "count",
+  "unilateral": true,
+  "sets": 3,
+  "reps": "5–6 / side",
+  "form_cues": [
+   "Place one foot fully on a knee-height box.",
+   "Drive through that foot to jump up, swinging the other knee high.",
+   "Land softly with the same foot on the box and repeat."
+  ],
+  "common_mistakes": [
+   "Pushing off the back foot",
+   "Box too high so the hip sinks below the knee"
+  ],
+  "regressions": [
+   "Box step-up"
+  ],
+  "progressions": [
+   "Single-leg box jump"
+  ],
+  "safety": "Use a stable box that won't tip; keep the working knee over the foot.",
+  "video": null,
+  "notes": "Alternating version switches feet in the air."
+ },
+ {
+  "id": "depthpush",
+  "name": "Depth push-up",
+  "aliases": [
+   "Drop push-up",
+   "Box drop push-up"
+  ],
+  "training_type": "Plyometric",
+  "tags": [
+   "Plyometric",
+   "Power",
+   "Chest",
+   "Calisthenics"
+  ],
+  "muscle_group": "Chest",
+  "primary_muscles": [
+   "Chest",
+   "Triceps"
+  ],
+  "secondary_muscles": [
+   "Front delts",
+   "Core"
+  ],
+  "movement_pattern": "Horizontal push",
+  "equipment": [
+   "Two low boxes or plates"
+  ],
+  "req": "plyobox|plates",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "count",
+  "unilateral": false,
+  "sets": 3,
+  "reps": "4–6",
+  "form_cues": [
+   "Hold a plank with hands on two low boxes.",
+   "Drop hands to the floor between them, landing with soft elbows.",
+   "Push explosively back up onto the boxes."
+  ],
+  "common_mistakes": [
+   "Landing on locked elbows",
+   "Hips sagging on the drop"
+  ],
+  "regressions": [
+   "Clap push-up"
+  ],
+  "progressions": [],
+  "safety": "Only attempt once clap push-ups are solid; keep the boxes low.",
+  "video": null,
+  "notes": ""
+ },
+ {
+  "id": "trapbarjump",
+  "name": "Trap bar jump",
+  "aliases": [
+   "Hex bar jump",
+   "Trap bar jump squat"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Legs",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Traps",
+   "Core"
+  ],
+  "movement_pattern": "Jump",
+  "equipment": [
+   "Trap bar",
+   "Plates"
+  ],
+  "req": "trapbar",
+  "equipment_tier": 2,
+  "difficulty": "Advanced",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "3–5",
+  "form_cues": [
+   "Stand in the bar, grab the handles, chest up.",
+   "Dip quickly and jump as high as you can.",
+   "Land softly with knees bent, absorbing the bar."
+  ],
+  "common_mistakes": [
+   "Loading too heavy",
+   "Rounding the back on landing"
+  ],
+  "regressions": [
+   "Dumbbell jump squat"
+  ],
+  "progressions": [],
+  "safety": "Use 10–30% of your deadlift; land with soft knees and a flat back.",
+  "video": null,
+  "notes": "A safer loaded jump than barbell jump squats."
+ },
+ {
+  "id": "sledsprint",
+  "name": "Sled sprint",
+  "aliases": [
+   "Resisted sled sprint",
+   "Sled tow sprint",
+   "Sled drag sprint"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Speed",
+   "Legs"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Glutes",
+   "Quadriceps",
+   "Hamstrings"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Core"
+  ],
+  "movement_pattern": "Gait",
+  "equipment": [
+   "Sled",
+   "Harness"
+  ],
+  "req": "sled",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 1,
+  "reps": "6 × 15–20 m",
+  "form_cues": [
+   "Attach the harness at the waist and lean forward.",
+   "Sprint with powerful pushes and strong arm drive.",
+   "Keep the load light enough to keep good sprint form."
+  ],
+  "common_mistakes": [
+   "Loading so heavy it becomes a walk",
+   "Bending at the waist"
+  ],
+  "regressions": [
+   "Acceleration sprint"
+  ],
+  "progressions": [],
+  "safety": "Use a harness at the waist and a light load; rest fully between reps.",
+  "video": null,
+  "notes": "Light (10–20% body weight) for speed; heavier for acceleration strength."
+ },
+ {
+  "id": "sledpush",
+  "name": "Sled push",
+  "aliases": [
+   "Prowler push",
+   "Sled sprint push"
+  ],
+  "training_type": "Power",
+  "tags": [
+   "Power",
+   "Strongman",
+   "Cardio",
+   "Legs",
+   "Compound"
+  ],
+  "muscle_group": "Legs",
+  "primary_muscles": [
+   "Quadriceps",
+   "Glutes"
+  ],
+  "secondary_muscles": [
+   "Calves",
+   "Hamstrings",
+   "Shoulders",
+   "Core"
+  ],
+  "movement_pattern": "Locomotion",
+  "equipment": [
+   "Sled"
+  ],
+  "req": "sled",
+  "equipment_tier": 3,
+  "difficulty": "Intermediate",
+  "tracking": "w",
+  "unilateral": false,
+  "sets": 4,
+  "reps": "20 m",
+  "form_cues": [
+   "Grip the poles with arms extended and lean at 45 degrees.",
+   "Drive with short, powerful steps through the balls of the feet.",
+   "Keep your back flat and hips low."
+  ],
+  "common_mistakes": [
+   "Standing too upright",
+   "Taking long, reaching steps"
+  ],
+  "regressions": [
+   "Walking sled push (light)"
+  ],
+  "progressions": [
+   "Sled sprint"
+  ],
+  "safety": "Use a lane with good grip; stop if back rounds.",
+  "video": null,
+  "notes": "Light and fast for power; heavy for strength and conditioning."
+ }
+]
