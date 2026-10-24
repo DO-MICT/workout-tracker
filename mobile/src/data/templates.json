@@ -1,0 +1,391 @@
+[
+ {
+  "id": "split5",
+  "name": "5-day split",
+  "desc": "Chest & arms, back & shoulders, legs, then repeat.",
+  "days": null
+ },
+ {
+  "id": "bro",
+  "name": "Bro split",
+  "desc": "One muscle group a day: chest, back, shoulders, legs, arms.",
+  "days": {
+   "mon": {
+    "title": "Chest",
+    "ex": [
+     {
+      "id": "bench",
+      "sets": 4,
+      "reps": "6–8",
+      "link": false
+     },
+     {
+      "id": "incdb",
+      "sets": 3,
+      "reps": "8–10",
+      "link": false
+     },
+     {
+      "id": "lyingpress",
+      "sets": 3,
+      "reps": "10–12",
+      "link": false
+     },
+     {
+      "id": "crossfly",
+      "sets": 3,
+      "reps": "12–15",
+      "link": false
+     },
+     {
+      "id": "pushup",
+      "sets": 2,
+      "reps": "max",
+      "link": false
+     }
+    ]
+   },
+   "tue": {
+    "title": "Back",
+    "ex": [
+     {
+      "id": "bbrow",
+      "sets": 4,
+      "reps": "6–8",
+      "link": false
+     },
+     {
+      "id": "widepull",
+      "sets": 3,
+      "reps": "10–12",
+      "link": false
+     },
+     {
+      "id": "cablerow",
+      "sets": 3,
+      "reps": "10–12",
+      "link": false
+     },
+     {
+      "id": "dbrow",
+      "sets": 3,
+      "reps": "10 / side",
+      "link": false
+     },
+     {
+      "id": "straightarm",
+      "sets": 3,
+      "reps": "12–15",
+      "link": false
+     },
+     {
+      "id": "backext",
+      "sets": 3,
+      "reps": "12",
+      "link": false
+     }
+    ]
+   },
+   "wed": {
+    "title": "Shoulders",
+    "ex": [
+     {
+      "id": "ohp",
+      "sets": 4,
+      "reps": "6–8",
+      "link": false
+     },
+     {
+      "id": "shouldermach",
+      "sets": 3,
+      "reps": "8–10",
+      "link": false
+     },
+     {
+      "id": "lateral",
+      "sets": 3,
+      "reps": "12–15",
+      "link": true
+     },
+     {
+      "id": "revfly",
+      "sets": 3,
+      "reps": "15",
+      "link": false
+     },
+     {
+      "id": "cablelat",
+      "sets": 3,
+      "reps": "12 / side",
+      "link": false
+     },
+     {
+      "id": "facepull",
+      "sets": 3,
+      "reps": "15",
+      "link": false
+     }
+    ]
+   },
+   "thu": {
+    "title": "Legs",
+    "ex": [
+     {
+      "id": "goblet",
+      "sets": 4,
+      "reps": "10–12",
+      "link": false
+     },
+     {
+      "id": "rdl",
+      "sets": 4,
+      "reps": "8",
+      "link": false
+     },
+     {
+      "id": "bss",
+      "sets": 3,
+      "reps": "8–10 / leg",
+      "link": false
+     },
+     {
+      "id": "hipthrust",
+      "sets": 3,
+      "reps": "10",
+      "link": false
+     },
+     {
+      "id": "legext",
+      "sets": 3,
+      "reps": "12",
+      "link": true
+     },
+     {
+      "id": "legcurl",
+      "sets": 3,
+      "reps": "12",
+      "link": false
+     },
+     {
+      "id": "calf",
+      "sets": 4,
+      "reps": "12–15",
+      "link": false
+     }
+    ]
+   },
+   "fri": {
+    "title": "Arms",
+    "ex": [
+     {
+      "id": "ezcurl",
+      "sets": 3,
+      "reps": "8–10",
+      "link": true
+     },
+     {
+      "id": "skull",
+      "sets": 3,
+      "reps": "10",
+      "link": false
+     },
+     {
+      "id": "hammer",
+      "sets": 3,
+      "reps": "10–12",
+      "link": true
+     },
+     {
+      "id": "ropepush",
+      "sets": 3,
+      "reps": "10–12",
+      "link": false
+     },
+     {
+      "id": "cablecurlbar",
+      "sets": 3,
+      "reps": "12",
+      "link": true
+     },
+     {
+      "id": "ohext",
+      "sets": 3,
+      "reps": "12",
+      "link": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "fb3",
+  "name": "Full body 3-day + cardio",
+  "desc": "Full body on Monday, Wednesday and Friday. Cardio on Tuesday and Thursday.",
+  "days": {
+   "mon": {
+    "title": "Full body A",
+    "ex": [
+     {
+      "id": "goblet",
+      "sets": 3,
+      "reps": "10–12",
+      "link": false
+     },
+     {
+      "id": "bench",
+      "sets": 3,
+      "reps": "6–8",
+      "link": false
+     },
+     {
+      "id": "widepull",
+      "sets": 3,
+      "reps": "10–12",
+      "link": false
+     },
+     {
+      "id": "shouldermach",
+      "sets": 3,
+      "reps": "8–10",
+      "link": false
+     },
+     {
+      "id": "plank",
+      "sets": 3,
+      "reps": "45 s",
+      "link": false
+     }
+    ]
+   },
+   "tue": {
+    "title": "Cardio",
+    "ex": [
+     {
+      "id": "inclinewalk",
+      "sets": 1,
+      "reps": "30 min",
+      "link": false
+     },
+     {
+      "id": "plank",
+      "sets": 3,
+      "reps": "45 s",
+      "link": false
+     }
+    ]
+   },
+   "wed": {
+    "title": "Full body B",
+    "ex": [
+     {
+      "id": "rdl",
+      "sets": 3,
+      "reps": "8",
+      "link": false
+     },
+     {
+      "id": "bss",
+      "sets": 3,
+      "reps": "8 / leg",
+      "link": false
+     },
+     {
+      "id": "incdb",
+      "sets": 3,
+      "reps": "8–10",
+      "link": false
+     },
+     {
+      "id": "cablerow",
+      "sets": 3,
+      "reps": "10–12",
+      "link": false
+     },
+     {
+      "id": "lateral",
+      "sets": 3,
+      "reps": "12–15",
+      "link": false
+     },
+     {
+      "id": "situp",
+      "sets": 3,
+      "reps": "12",
+      "link": false
+     }
+    ]
+   },
+   "thu": {
+    "title": "Cardio",
+    "ex": [
+     {
+      "id": "treadrun",
+      "sets": 1,
+      "reps": "20 min",
+      "link": false
+     },
+     {
+      "id": "inclinewalk",
+      "sets": 1,
+      "reps": "10 min",
+      "link": false
+     },
+     {
+      "id": "sideplank",
+      "sets": 2,
+      "reps": "30 s / side",
+      "link": false
+     }
+    ]
+   },
+   "fri": {
+    "title": "Full body C",
+    "ex": [
+     {
+      "id": "hipthrust",
+      "sets": 3,
+      "reps": "10",
+      "link": false
+     },
+     {
+      "id": "lyingpress",
+      "sets": 3,
+      "reps": "10",
+      "link": false
+     },
+     {
+      "id": "cgpull",
+      "sets": 3,
+      "reps": "10–12",
+      "link": false
+     },
+     {
+      "id": "ohp",
+      "sets": 3,
+      "reps": "8–10",
+      "link": false
+     },
+     {
+      "id": "hammer",
+      "sets": 2,
+      "reps": "12",
+      "link": true
+     },
+     {
+      "id": "skull",
+      "sets": 2,
+      "reps": "10",
+      "link": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "coles",
+  "name": "Cole’s Sessions",
+  "desc": "A random session from the gear at your location. Pick full body, upper, lower, core or cardio, how many exercises and how many sets.",
+  "days": null,
+  "random": true
+ }
+]
