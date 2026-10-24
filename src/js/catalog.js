@@ -4,7 +4,7 @@
    so the next start has them straight away. Exercises already built into the app keep their name,
    cues, gear and diagram (plans and history depend on them); the database adds the details. */
 var CAT_KEY="gfd-catalog-v1", CAT={sig:"",ex:0,gear:0,loaded:false};
-var EX_COLS="id,name,aliases,training_type,muscle_group,primary_muscles,secondary_muscles,equipment,req,equipment_tier,difficulty,tracking,sets,reps,form_cues,common_mistakes,regressions,progressions,safety,video,diagram,updated_at";
+var EX_COLS="id,name,aliases,training_type,muscle_group,primary_muscles,secondary_muscles,equipment,req,equipment_tier,difficulty,tracking,sets,reps,form_cues,common_mistakes,regressions,progressions,safety,diagram,updated_at";
 var GEAR_COLS="id,name,aliases,keywords,category,app_group,group_order,sort_order,tier,setting,description,muscle_focus,loading,weight_options,space,price_band,buying_tips,safety,updated_at";
 var BUILTIN_IDS=Object.keys(LIB).reduce(function(o,k){o[k]=1;return o;},{});
 var GEAR_INFO={};
@@ -17,7 +17,7 @@ function catApply(ex,gr){
   if(ex&&ex.length){
     ex.forEach(function(r){
       var x={tt:r.training_type,diff:r.difficulty,tier:r.equipment_tier,pm:r.primary_muscles||[],sm:r.secondary_muscles||[],eq:r.equipment||[],
-        mist:r.common_mistakes||[],reg:r.regressions||[],prog:r.progressions||[],safety:r.safety||"",video:r.video||"",al:r.aliases||[]};
+        mist:r.common_mistakes||[],reg:r.regressions||[],prog:r.progressions||[],safety:r.safety||"",al:r.aliases||[]};
       var L=LIB[r.id];
       if(L&&BUILTIN_IDS[r.id]){ L.x=x; return; }
       LIB[r.id]={id:r.id,n:r.name,mg:r.muscle_group,req:r.req||"",f:r.diagram||"",sets:r.sets||3,reps:r.reps||"10",lab:r.tracking||"w",c:r.form_cues||[],x:x};
@@ -82,7 +82,6 @@ function gearName(id){
 /* ---------- Exercise library page (More › Exercise library) ---------- */
 var EL=null; /* {q, mg, can, show, view} */
 var EL_TIER=["No equipment","Minimal home kit","Home gym","Full gym"];
-function ytSearch(n){ return "https://www.youtube.com/results?search_query="+encodeURIComponent(n+" exercise form"); }
 function openLibrary(exId){
   EL={q:"",mg:"",can:false,show:60,view:exId||null};
   var sh=document.getElementById("exlib"); sh.hidden=false; document.body.style.overflow="hidden";
@@ -131,7 +130,7 @@ function libDetailHtml(L){
     '<h2 id="eltitle" class="eltitle">'+esc(L.n)+'</h2>'+
     '<div class="eltags"><span>'+esc(L.mg)+'</span>'+(x.tt&&x.tt!==L.mg?'<span>'+esc(x.tt)+'</span>':'')+(x.diff?'<span>'+esc(x.diff)+'</span>':'')+(x.tier!=null?'<span>'+EL_TIER[x.tier]+'</span>':'')+'</div>'+
     (x.al&&x.al.length?'<p class="sub">Also called '+esc(x.al.join(", "))+'.</p>':'');
-  if(L.f&&figure(L.f)) h+='<div class="fig elfig">'+figure(L.f)+'</div>';
+  h+=exFigure(L.id,L.f,"elfig");
   if(x.pm&&(x.pm.length||x.sm.length)) h+='<section class="elsec"><h3 class="psec">Muscles</h3><p class="elmus"><b>Main:</b> '+esc(x.pm.join(", "))+(x.sm.length?'<br><b>Helpers:</b> '+esc(x.sm.join(", ")):'')+'</p></section>';
   h+='<section class="elsec"><h3 class="psec">Gear</h3><p class="elmus">'+(need.length?esc(need.join(", ")):'No equipment needed')+'</p>'+
     (miss.length?'<p class="elwarn">Not at '+esc(curLoc().name)+': '+esc(needsText(L,gear()))+'.</p>':(gear().length&&need.length?'<p class="elok">You have this at '+esc(curLoc().name)+'.</p>':''))+'</section>';
@@ -140,7 +139,6 @@ function libDetailHtml(L){
   if(x.mist&&x.mist.length) h+='<section class="elsec"><h3 class="psec">Common mistakes</h3>'+li(x.mist)+'</section>';
   if(x.safety) h+='<section class="elsec"><h3 class="psec">Safety</h3><p class="elmus">'+esc(x.safety)+'</p></section>';
   if(x.reg&&(x.reg.length||x.prog.length)) h+='<section class="elsec"><h3 class="psec">Make it easier or harder</h3><p class="elmus">'+(x.reg.length?'<b>Easier:</b> '+esc(x.reg.join(", ")):'')+(x.reg.length&&x.prog.length?'<br>':'')+(x.prog.length?'<b>Harder:</b> '+esc(x.prog.join(", ")):'')+'</p></section>';
-  h+='<a class="ghost ellink" href="'+esc(x.video||ytSearch(L.n))+'" target="_blank" rel="noopener">'+(x.video?'Watch a demo':'Find a demo video')+'</a>';
   return h+'</div>';
 }
 function libraryClick(t){
