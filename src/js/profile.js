@@ -87,7 +87,7 @@ function openProfile(){
     '<h3 class="psec">Default rest timer</h3><p class="sub">Used by the built-in plans. Plans you set up can have their own. Saves as you scroll.</p>'+
     wheelHtml()+
     '<button class="linkbtn" id="testPing">Play the start sound</button>'+
-    '<h3 class="psec">Measurements</h3><p class="sub">'+(lastS?'Last saved '+esc(fmtDay(lastS.d))+'.':'Nothing saved yet.')+'</p><div class="pgrid">';
+    '<h3 class="psec" id="pMeas">Measurements</h3><p class="sub">'+(lastS?'Last saved '+esc(fmtDay(lastS.d))+'.':'Nothing saved yet.')+'</p><div class="pgrid">';
   PF.forEach(function(f){
     var v=P.vals[f[0]]; v=(v===undefined?"":v);
     var delta="";

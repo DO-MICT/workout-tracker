@@ -33,6 +33,8 @@ function setStatus(msg){
    with localStorage as a fast local copy. */
 (function initCloud(){
   if(!window.claude||!claude.use) return;
+  /* wait until every script has loaded: the answer can arrive before later files define their functions */
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initCloud);return;}
   Promise.all([claude.use("db"),claude.use("user")]).then(function(r){
     var db=r[0],user=r[1]; if(!db||!user) return null;
     return user.id().then(function(id){

@@ -176,7 +176,7 @@ function openHistory(exId){
   H={rows:null,more:false,loading:false,err:"",sets:{},open:{},del:null,ex:exId||null,exRows:null,fromEx:!!exId,cache:{},dirty:false};
   var sh=document.getElementById("history"); sh.hidden=false; document.body.style.overflow="hidden";
   renderHistory(); sh.scrollTop=0; sh.focus();
-  if(exId) histLoadEx(exId); else histReload();
+  if(exId) histLoadEx(exId); else { histReload(); statsLoad(); }
   histFlush();
 }
 function closeHistory(){
@@ -225,9 +225,10 @@ function renderHistory(keepScroll){
   var st=sh.scrollTop, h='<div class="sheet-in">';
   if(H.ex) h+=histExHtml();
   else {
-    h+='<div class="sheet-top"><h2 id="htitle">History</h2><button class="chip" id="closeHistory">Close</button></div>';
+    h+='<div class="sheet-top"><h2 id="htitle">Your progress</h2>'+statsStreakChip()+'</div>';
+    h+=statsHtml();
     var rows=histRows(), np=WEB_MODE?wout().length:0;
-    h+='<p class="sub">Every workout you complete is saved here. Tap one to see the sets, or an exercise to see your progress.</p>';
+    h+='<h3 class="stsec">Workouts</h3><p class="sub">Tap a workout to see the sets, or an exercise to see your progress.</p>';
     if(np) h+='<p class="hpend" role="status">'+np+' workout'+(np>1?'s':'')+' waiting to sync. '+(sbUser?'It’ll upload when you’re online.':'Sign in to upload.')+'</p>';
     if(H.err) h+='<p class="wzerr" role="alert">'+esc(H.err)+'</p>';
     if(H.rows===null&&!rows.length) h+='<p class="eqempty">Loading…</p>';
