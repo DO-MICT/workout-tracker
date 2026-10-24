@@ -9,6 +9,7 @@ function applyTheme(){
   var t=themePref(), r=document.documentElement;
   if(t==="light"||t==="dark") r.setAttribute("data-theme",t); else r.removeAttribute("data-theme");
   try{localStorage.setItem("split5-theme",t);}catch(e){}
+  if(window.artRetheme) artRetheme();
 }
 /* one button with the full day name; tap it to pick another day of the plan */
 var DAY_CHEV='<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -85,7 +86,7 @@ function exHtml(ex){
   }
   h+='<div class="last">'+esc(lastText(ex))+'</div><button class="linkbtn hlink" data-hex="'+ex.id+'">See history and progress</button>';
   if(DAYS[day]&&DAYS[day].coles) h+='<button class="chip sm colesswap" data-colesswap="'+ex.id+'">↻ Different '+esc((LIB[ex.id]||{}).mg||"").toLowerCase()+' exercise</button>';
-  h+='<details class="how"><summary>How to do it safely</summary><div class="fig">'+figure(ex.f)+'</div><ul class="cues">'+ex.c.map(function(c){return '<li>'+esc(c)+'</li>';}).join("")+'</ul></details>';
+  h+='<details class="how"><summary>How to do it safely</summary>'+exFigure(ex.id,ex.f)+'<ul class="cues">'+ex.c.map(function(c){return '<li>'+esc(c)+'</li>';}).join("")+'</ul></details>';
   var lb=labOf(ex);
   h+='<div class="sets"><div class="setrow" aria-hidden="true"><span></span><span class="lbl">'+lb[0]+'</span><span class="lbl">'+lb[1]+'</span><span></span></div>';
   arr.slice(0,ex.sets).forEach(function(s,i){
