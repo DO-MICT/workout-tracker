@@ -43,7 +43,18 @@ var ART_GYM={
   pecdeckfly:["Pec deck fly", ["Elbows out at shoulder height, forearms on the pads", "Pads squeezed together in front of the chest"]],
   sapecdeck:["Single-arm pec deck fly", ["One forearm on its pad, out at shoulder height", "That pad brought across to the middle"]],
   crunch:["Cable rope crunch", ["Kneeling with the back to a high pulley, rope held by the ears", "Crunched down, hands still by the head, hips still"]],
-  romanside:["45-degree side bend", ["Side-on over the 45° bench, hip on the pad, bent down sideways", "Side bent up until the body is in one line"]]
+  romanside:["45-degree side bend", ["Side-on over the 45° bench, hip on the pad, bent down sideways", "Side bent up until the body is in one line"]],
+  powerjerk:["Power jerk", ["Bar on the front of the shoulders, standing", "Driven up, feet jumped out, caught overhead in a quarter squat"]],
+  pushjerk:["Push jerk", ["Bar on the front of the shoulders, standing", "Driven up and caught overhead in a shallow squat"]],
+  pushpress:["Push press", ["Bar on the front of the shoulders, standing", "Short dip and drive, bar pressed overhead"]],
+  splitjerk:["Split jerk", ["Bar on the front of the shoulders, standing", "Driven up and caught overhead in a split stance"]],
+  bbjumpsquat:["Barbell jump squat", ["Bar on the upper back, elbows down, squatted deep", "Jumped straight up, feet off the floor"]],
+  thruster:["Barbell thruster", ["Bar on the front of the shoulders, standing", "Front squat, then driven straight up into a press"]],
+  snatchbalance:["Snatch balance", ["Bar on the upper back, wide grip, standing", "Dropped under into a deep squat, bar locked out overhead"]],
+  axledl:["Axle deadlift", ["Hips down, thick axle bar over the middle of the feet", "Stood up tall with the bar at the thighs"]],
+  sledpull:["Sled rope pull", ["Staggered stance, one hand reaching forward on the rope", "Pulled back to the hip as the other hand reaches"]],
+  logpress:["Log press", ["Log on the chest, hands on its handles, elbows up", "Dip and drive, log pressed overhead"]],
+  tyreflip:["Tyre flip", ["Squatting low, fingers under the edge of the tyre, chest on it", "Stepped in and pushed it over, tyre tipping past upright"]]
 };
 var ART_GYM_SRC="src/js/gfd-exercise-art-gym.js", ART_GYM_WAIT=null;
 function hasArt(id){return !!((window.GFDArt&&GFDArt.EX[id])||ART_GYM.hasOwnProperty(id));}
