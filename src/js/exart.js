@@ -3,7 +3,8 @@
    it is drawn once it scrolls into view (a closed <details> never does), then loops start -> end -> start.
    Frames are rendered once per exercise and theme and shown as cached SVG images. Tap to pause. */
 var ART_STEPS=12, ART_MS=110, ART_HOLD=5, ART_CACHE={}, ART_LIVE=[], ART_TIMER=null, ART_IO=null;
-/* approved commercial gym illustrations, drawn by the newer generator (gfd-exercise-art-gym.js, loaded on first use).
+/* approved commercial gym illustrations, drawn by the newer generator (gfd-exercise-art-gym.js, loaded on first use;
+   rebuild it with tools/build_gym_art.js when approved redraws come from the spec generator).
    Only ids listed here are shown; add an id once Deon approves it. [name, [start, end]] for the label before the script loads. */
 var ART_GYM={
   assistdip:["Assisted dip", ["Knees on the pad, arms straight on the dip handles", "Lowered with a slight forward lean until the elbows reach about 90°"]],
@@ -29,7 +30,18 @@ var ART_GYM={
   sledback:["Backward sled drag", ["Facing the sled, straps in the hands, sitting back", "Stepping backward, arms long"]],
   sledfwd:["Forward sled drag", ["Straps over the shoulders, sled behind, leaning forward", "Walking forward step by step"]],
   sledpush:["Sled push", ["Leaning into the sled posts, arms bent, one knee driving", "Driving through the other leg"]],
-  yoke:["Yoke carry", ["Yoke on the upper back, hands on the uprights, one step", "Short quick step with the other leg"]]
+  yoke:["Yoke carry", ["Yoke on the upper back, hands on the uprights, one step", "Short quick step with the other leg"]],
+  flatcablefly:["Flat bench cable fly", ["Lying on a bench between low pulleys, arms open", "Hands brought together over the chest"]],
+  inccablefly:["Incline bench cable fly", ["Reclined on an incline bench, arms open", "Hands brought together over the upper chest"]],
+  incablepress:["Incline bench cable press", ["Reclined on an incline bench, handles beside the upper chest", "Pressed up over the upper chest"]],
+  midfly:["Mid-height cable fly", ["Split stance between the pulleys, arms open at chest height", "Hands brought together in front of the chest"]],
+  sacablefly:["Single-arm cable fly", ["Side-on to one pulley, arm open at chest height", "Hand swept across to the middle of the chest"]],
+  declinemach:["Decline chest press machine", ["Handles level with the lower chest", "Pressed forward and down"]],
+  isodecline:["Iso-lateral decline press", ["Handles level with the lower chest", "Pressed forward and down"]],
+  inclinemach:["Incline press machine", ["Leaning back, handles by the upper chest", "Pressed up and forward"]],
+  isoincline:["Iso-lateral incline press", ["Leaning back, handles by the upper chest", "Pressed up and forward"]],
+  pecdeckfly:["Pec deck fly", ["Elbows out at shoulder height, forearms on the pads", "Pads squeezed together in front of the chest"]],
+  sapecdeck:["Single-arm pec deck fly", ["One forearm on its pad, out at shoulder height", "That pad brought across to the middle"]]
 };
 var ART_GYM_SRC="src/js/gfd-exercise-art-gym.js", ART_GYM_WAIT=null;
 function hasArt(id){return !!((window.GFDArt&&GFDArt.EX[id])||ART_GYM.hasOwnProperty(id));}
