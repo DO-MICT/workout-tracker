@@ -20,7 +20,10 @@ var ART_GYM={
   sachestpress:["Single-arm machine chest press", ["One handle beside the chest, other hand on the thigh", "One arm pressed forward, hips square"]],
   smithbench:["Smith machine bench press", ["Bar unracked, arms straight over the chest", "Bar lowered straight down to mid-chest"]],
   smithincline:["Smith machine incline bench press", ["On an incline bench, bar locked out over the upper chest", "Bar lowered straight down to the upper chest"]],
-  widechestpress:["Wide chest press machine", ["Wide grip, handles level with the chest", "Pressed forward, elbows still wide"]]
+  widechestpress:["Wide chest press machine", ["Wide grip, handles level with the chest", "Pressed forward, elbows still wide"]],
+  cablerot:["Standing cable rotation", ["Side-on to a chest-height pulley, arms straight toward it", "Turned away through the trunk, arms still straight"]],
+  kneeraise:["Captain's chair knee raise", ["Forearms on the arm pads, back on the pad, legs hanging", "Knees raised to hip height"]],
+  ghdsitup:["GHD sit-up", ["Sitting on the GHD pad, feet locked, leaning back below level", "Sat up past upright"]]
 };
 var ART_GYM_SRC="src/js/gfd-exercise-art-gym.js", ART_GYM_WAIT=null;
 function hasArt(id){return !!((window.GFDArt&&GFDArt.EX[id])||ART_GYM.hasOwnProperty(id));}
