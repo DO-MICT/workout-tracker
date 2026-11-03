@@ -41,7 +41,9 @@ var ART_GYM={
   inclinemach:["Incline press machine", ["Leaning back, handles by the upper chest", "Pressed up and forward"]],
   isoincline:["Iso-lateral incline press", ["Leaning back, handles by the upper chest", "Pressed up and forward"]],
   pecdeckfly:["Pec deck fly", ["Elbows out at shoulder height, forearms on the pads", "Pads squeezed together in front of the chest"]],
-  sapecdeck:["Single-arm pec deck fly", ["One forearm on its pad, out at shoulder height", "That pad brought across to the middle"]]
+  sapecdeck:["Single-arm pec deck fly", ["One forearm on its pad, out at shoulder height", "That pad brought across to the middle"]],
+  crunch:["Cable rope crunch", ["Kneeling with the back to a high pulley, rope held by the ears", "Crunched down, hands still by the head, hips still"]],
+  romanside:["45-degree side bend", ["Side-on over the 45° bench, hip on the pad, bent down sideways", "Side bent up until the body is in one line"]]
 };
 var ART_GYM_SRC="src/js/gfd-exercise-art-gym.js", ART_GYM_WAIT=null;
 function hasArt(id){return !!((window.GFDArt&&GFDArt.EX[id])||ART_GYM.hasOwnProperty(id));}
