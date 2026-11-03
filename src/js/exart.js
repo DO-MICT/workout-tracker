@@ -23,7 +23,13 @@ var ART_GYM={
   widechestpress:["Wide chest press machine", ["Wide grip, handles level with the chest", "Pressed forward, elbows still wide"]],
   cablerot:["Standing cable rotation", ["Side-on to a chest-height pulley, arms straight toward it", "Turned away through the trunk, arms still straight"]],
   kneeraise:["Captain's chair knee raise", ["Forearms on the arm pads, back on the pad, legs hanging", "Knees raised to hip height"]],
-  ghdsitup:["GHD sit-up", ["Sitting on the GHD pad, feet locked, leaning back below level", "Sat up past upright"]]
+  ghdsitup:["GHD sit-up", ["Sitting on the GHD pad, feet locked, leaning back below level", "Sat up past upright"]],
+  sledsprint:["Sled sprint", ["Harness round the waist, sprinting, one knee up", "The other knee up, sled dragging behind"]],
+  atlas:["Atlas stone load", ["Squatting over the stone, arms wrapped round it", "Stood up and extended the hips, stone over the platform edge"]],
+  sledback:["Backward sled drag", ["Facing the sled, straps in the hands, sitting back", "Stepping backward, arms long"]],
+  sledfwd:["Forward sled drag", ["Straps over the shoulders, sled behind, leaning forward", "Walking forward step by step"]],
+  sledpush:["Sled push", ["Leaning into the sled posts, arms bent, one knee driving", "Driving through the other leg"]],
+  yoke:["Yoke carry", ["Yoke on the upper back, hands on the uprights, one step", "Short quick step with the other leg"]]
 };
 var ART_GYM_SRC="src/js/gfd-exercise-art-gym.js", ART_GYM_WAIT=null;
 function hasArt(id){return !!((window.GFDArt&&GFDArt.EX[id])||ART_GYM.hasOwnProperty(id));}
@@ -64,12 +70,14 @@ function artFrames(id,theme,done){
   if(c){c.wait.push(done);return;}
   c=ART_CACHE[k]={ready:false,wait:[done],anim:[],still:[]};
   artEngine(id,function(G){
-    var fr=G.framesOf(id), i=0;
+    /* a cycle (sled drags, carries) runs t over 0..2, one full stride, and loops forward without easing or holds */
+    var fr=G.framesOf(id), i=0, cyc=!!G.EX[id].cycle, last=cyc?2*ART_STEPS-1:ART_STEPS;
+    c.cycle=cyc;
     c.still=fr.map(function(f){return artUrl(G.render(id,theme,f.t,{view:f.view}));});
     function more(){
-      var end=Math.min(i+3,ART_STEPS+1);
+      var end=Math.min(i+3,last+1);
       for(;i<end;i++) c.anim.push(i===0?c.still[0]:artUrl(G.render(id,theme,i/ART_STEPS,{view:fr[0].view})));
-      if(i<=ART_STEPS) return setTimeout(more,0);
+      if(i<=last) return setTimeout(more,0);
       c.ready=true; c.wait.forEach(function(fn){fn(c);}); c.wait=[];
     }
     more();
@@ -87,12 +95,12 @@ function artDraw(el){
     }
     el.classList.remove("still");
     el.innerHTML='<img alt="" src="'+c.anim[0]+'">';
-    el._art={img:el.firstChild,frames:c.anim,pos:0,paused:false,vis:true};
+    el._art={img:el.firstChild,frames:c.anim,cycle:c.cycle,pos:0,paused:false,vis:true};
     if(ART_LIVE.indexOf(el)<0) ART_LIVE.push(el);
     artRun();
   });
 }
-/* one timer drives every visible animation: 0..ART_STEPS, a short hold, back down, a short hold */
+/* one timer drives every visible animation: 0..ART_STEPS, a short hold, back down, a short hold (a cycle just loops) */
 function artRun(){
   if(ART_TIMER) return;
   ART_TIMER=setInterval(function(){
@@ -101,6 +109,7 @@ function artRun(){
     var cyc=2*(ART_STEPS+ART_HOLD);
     ART_LIVE.forEach(function(el){
       var a=el._art; if(a.paused||!a.vis) return;
+      if(a.cycle){a.pos=(a.pos+1)%a.frames.length;a.img.src=a.frames[a.pos];return;}
       a.pos=(a.pos+1)%cyc;
       var p=a.pos, n=p<=ART_STEPS?p:p<ART_STEPS+ART_HOLD?ART_STEPS:p<=2*ART_STEPS+ART_HOLD?2*ART_STEPS+ART_HOLD-p:0;
       if(a.n!==n){a.n=n;a.img.src=a.frames[n];}
