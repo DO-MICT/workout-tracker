@@ -1,9 +1,43 @@
 /* ---------- exercise animations (GFD illustrations, gfd-exercise-art.js) ----------
-   The 30 exercises of the default 5-day split have drawn start and end poses. artHtml(id) gives a placeholder;
+   The 30 exercises of the default 5-day split and the approved gym exercises (ART_GYM) have drawn start and end poses. artHtml(id) gives a placeholder;
    it is drawn once it scrolls into view (a closed <details> never does), then loops start -> end -> start.
    Frames are rendered once per exercise and theme and shown as cached SVG images. Tap to pause. */
 var ART_STEPS=12, ART_MS=110, ART_HOLD=5, ART_CACHE={}, ART_LIVE=[], ART_TIMER=null, ART_IO=null;
-function hasArt(id){return !!(window.GFDArt&&GFDArt.EX[id]);}
+/* approved commercial gym illustrations, drawn by the newer generator (gfd-exercise-art-gym.js, loaded on first use).
+   Only ids listed here are shown; add an id once Deon approves it. [name, [start, end]] for the label before the script loads. */
+var ART_GYM={
+  assistdip:["Assisted dip", ["Knees on the pad, arms straight on the dip handles", "Lowered with a slight forward lean until the elbows reach about 90°"]],
+  declinecablefly:["Decline cable fly", ["Head down on a decline bench, arms open", "Hands brought together over the lower chest"]],
+  flatcablepress:["Flat bench cable press", ["Lying between low pulleys, handles beside the chest", "Pressed straight up over the chest"]],
+  floorpress:["Barbell floor press", ["Lying on the floor in the rack, knees bent, bar locked out over the chest", "Bar lowered until the upper arms rest on the floor"]],
+  isochestpress:["Iso-lateral chest press", ["Back on the pad, handles beside the chest", "Both arms pressed forward together"]],
+  lowhighpress:["Low-to-high cable press", ["Back to low pulleys, handles beside the hips", "Pressed up and forward to eye level"]],
+  machinechest:["Seated chest press machine", ["Sitting tall, back on the pad, handles beside the chest", "Handles pressed forward, arms nearly straight"]],
+  multigymfly:["Multi-gym pec fly", ["Elbows out at shoulder height, forearms on the pads", "Pads squeezed together in front of the chest"]],
+  multigympress:["Multi-gym chest press", ["Back on the pad, handles beside the chest", "Handles pressed forward"]],
+  pinpress:["Pin press", ["Bar resting on the safety pins just above the chest", "Pressed up off the pins to straight arms"]],
+  sacablepress:["Single-arm cable chest press", ["Back to the pulley, split stance, handle beside the chest", "One arm pressed straight forward"]],
+  sachestpress:["Single-arm machine chest press", ["One handle beside the chest, other hand on the thigh", "One arm pressed forward, hips square"]],
+  smithbench:["Smith machine bench press", ["Bar unracked, arms straight over the chest", "Bar lowered straight down to mid-chest"]],
+  smithincline:["Smith machine incline bench press", ["On an incline bench, bar locked out over the upper chest", "Bar lowered straight down to the upper chest"]],
+  widechestpress:["Wide chest press machine", ["Wide grip, handles level with the chest", "Pressed forward, elbows still wide"]]
+};
+var ART_GYM_SRC="src/js/gfd-exercise-art-gym.js", ART_GYM_WAIT=null;
+function hasArt(id){return !!((window.GFDArt&&GFDArt.EX[id])||ART_GYM.hasOwnProperty(id));}
+/* the generator that draws this exercise; calls back once it is loaded */
+function artEngine(id,done){
+  if(window.GFDArt&&GFDArt.EX[id]) return done(GFDArt);
+  if(window.GFDArtGym) return done(GFDArtGym);
+  if(!ART_GYM_WAIT){
+    ART_GYM_WAIT=[];
+    var s=document.createElement("script");
+    s.src=ART_GYM_SRC;
+    s.onload=function(){var w=ART_GYM_WAIT; ART_GYM_WAIT=null; w.forEach(function(fn){fn(GFDArtGym);});};
+    s.onerror=function(){ART_GYM_WAIT=null;};
+    document.head.appendChild(s);
+  }
+  ART_GYM_WAIT.push(done);
+}
 function artTheme(){
   var t=document.documentElement.getAttribute("data-theme");
   if(t==="light"||t==="dark") return t;
@@ -11,7 +45,7 @@ function artTheme(){
 }
 function artStill(){return window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;}
 function artHtml(id,cls){
-  var ex=GFDArt.EX[id];
+  var ex=GFDArt.EX[id]||{name:ART_GYM[id][0],frames:ART_GYM[id][1]};
   return '<div class="exart'+(cls?" "+cls:"")+'" data-art="'+id+'" role="img" aria-label="'+esc(ex.name+": "+ex.frames[0]+", then "+ex.frames[1].charAt(0).toLowerCase()+ex.frames[1].slice(1))+'"></div>';
 }
 /* the illustration for an exercise, or the old stick figure for exercises without one */
@@ -26,15 +60,17 @@ function artFrames(id,theme,done){
   if(c&&c.ready) return done(c);
   if(c){c.wait.push(done);return;}
   c=ART_CACHE[k]={ready:false,wait:[done],anim:[],still:[]};
-  var fr=GFDArt.framesOf(id), i=0;
-  c.still=fr.map(function(f){return artUrl(GFDArt.render(id,theme,f.t,{view:f.view}));});
-  function more(){
-    var end=Math.min(i+3,ART_STEPS+1);
-    for(;i<end;i++) c.anim.push(i===0?c.still[0]:artUrl(GFDArt.render(id,theme,i/ART_STEPS,{view:fr[0].view})));
-    if(i<=ART_STEPS) return setTimeout(more,0);
-    c.ready=true; c.wait.forEach(function(fn){fn(c);}); c.wait=[];
-  }
-  more();
+  artEngine(id,function(G){
+    var fr=G.framesOf(id), i=0;
+    c.still=fr.map(function(f){return artUrl(G.render(id,theme,f.t,{view:f.view}));});
+    function more(){
+      var end=Math.min(i+3,ART_STEPS+1);
+      for(;i<end;i++) c.anim.push(i===0?c.still[0]:artUrl(G.render(id,theme,i/ART_STEPS,{view:fr[0].view})));
+      if(i<=ART_STEPS) return setTimeout(more,0);
+      c.ready=true; c.wait.forEach(function(fn){fn(c);}); c.wait=[];
+    }
+    more();
+  });
 }
 function artDraw(el){
   var id=el.dataset.art, theme=artTheme();
