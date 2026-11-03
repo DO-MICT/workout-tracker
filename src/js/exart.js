@@ -1,9 +1,77 @@
 /* ---------- exercise animations (GFD illustrations, gfd-exercise-art.js) ----------
-   The 30 exercises of the default 5-day split have drawn start and end poses. artHtml(id) gives a placeholder;
+   The 30 exercises of the default 5-day split and the approved gym exercises (ART_GYM) have drawn start and end poses. artHtml(id) gives a placeholder;
    it is drawn once it scrolls into view (a closed <details> never does), then loops start -> end -> start.
    Frames are rendered once per exercise and theme and shown as cached SVG images. Tap to pause. */
 var ART_STEPS=12, ART_MS=110, ART_HOLD=5, ART_CACHE={}, ART_LIVE=[], ART_TIMER=null, ART_IO=null;
-function hasArt(id){return !!(window.GFDArt&&GFDArt.EX[id]);}
+/* approved commercial gym illustrations, drawn by the newer generator (gfd-exercise-art-gym.js, loaded on first use;
+   rebuild it with tools/build_gym_art.js when approved redraws come from the spec generator).
+   Only ids listed here are shown; add an id once Deon approves it. [name, [start, end]] for the label before the script loads. */
+var ART_GYM={
+  assistdip:["Assisted dip", ["Knees on the pad, arms straight on the dip handles", "Lowered with a slight forward lean until the elbows reach about 90°"]],
+  declinecablefly:["Decline cable fly", ["Head down on a decline bench, arms open", "Hands brought together over the lower chest"]],
+  flatcablepress:["Flat bench cable press", ["Lying between low pulleys, handles beside the chest", "Pressed straight up over the chest"]],
+  floorpress:["Barbell floor press", ["Lying on the floor in the rack, knees bent, bar locked out over the chest", "Bar lowered until the upper arms rest on the floor"]],
+  isochestpress:["Iso-lateral chest press", ["Back on the pad, handles beside the chest", "Both arms pressed forward together"]],
+  lowhighpress:["Low-to-high cable press", ["Back to low pulleys, handles beside the hips", "Pressed up and forward to eye level"]],
+  machinechest:["Seated chest press machine", ["Sitting tall, back on the pad, handles beside the chest", "Handles pressed forward, arms nearly straight"]],
+  multigymfly:["Multi-gym pec fly", ["Elbows out at shoulder height, forearms on the pads", "Pads squeezed together in front of the chest"]],
+  multigympress:["Multi-gym chest press", ["Back on the pad, handles beside the chest", "Handles pressed forward"]],
+  pinpress:["Pin press", ["Bar resting on the safety pins just above the chest", "Pressed up off the pins to straight arms"]],
+  sacablepress:["Single-arm cable chest press", ["Back to the pulley, split stance, handle beside the chest", "One arm pressed straight forward"]],
+  sachestpress:["Single-arm machine chest press", ["One handle beside the chest, other hand on the thigh", "One arm pressed forward, hips square"]],
+  smithbench:["Smith machine bench press", ["Bar unracked, arms straight over the chest", "Bar lowered straight down to mid-chest"]],
+  smithincline:["Smith machine incline bench press", ["On an incline bench, bar locked out over the upper chest", "Bar lowered straight down to the upper chest"]],
+  widechestpress:["Wide chest press machine", ["Wide grip, handles level with the chest", "Pressed forward, elbows still wide"]],
+  cablerot:["Standing cable rotation", ["Side-on to a chest-height pulley, arms straight toward it", "Turned away through the trunk, arms still straight"]],
+  kneeraise:["Captain's chair knee raise", ["Forearms on the arm pads, back on the pad, legs hanging", "Knees raised to hip height"]],
+  ghdsitup:["GHD sit-up", ["Sitting on the GHD pad, feet locked, leaning back below level", "Sat up past upright"]],
+  sledsprint:["Sled sprint", ["Harness round the waist, sprinting, one knee up", "The other knee up, sled dragging behind"]],
+  atlas:["Atlas stone load", ["Squatting over the stone, arms wrapped round it", "Stood up and extended the hips, stone over the platform edge"]],
+  sledback:["Backward sled drag", ["Facing the sled, straps in the hands, sitting back", "Stepping backward, arms long"]],
+  sledfwd:["Forward sled drag", ["Straps over the shoulders, sled behind, leaning forward", "Walking forward step by step"]],
+  sledpush:["Sled push", ["Leaning into the sled posts, arms bent, one knee driving", "Driving through the other leg"]],
+  yoke:["Yoke carry", ["Yoke on the upper back, hands on the uprights, one step", "Short quick step with the other leg"]],
+  flatcablefly:["Flat bench cable fly", ["Lying on a bench between low pulleys, arms open", "Hands brought together over the chest"]],
+  inccablefly:["Incline bench cable fly", ["Reclined on an incline bench, arms open", "Hands brought together over the upper chest"]],
+  incablepress:["Incline bench cable press", ["Reclined on an incline bench, handles beside the upper chest", "Pressed up over the upper chest"]],
+  midfly:["Mid-height cable fly", ["Split stance between the pulleys, arms open at chest height", "Hands brought together in front of the chest"]],
+  sacablefly:["Single-arm cable fly", ["Side-on to one pulley, arm open at chest height", "Hand swept across to the middle of the chest"]],
+  declinemach:["Decline chest press machine", ["Handles level with the lower chest", "Pressed forward and down"]],
+  isodecline:["Iso-lateral decline press", ["Handles level with the lower chest", "Pressed forward and down"]],
+  inclinemach:["Incline press machine", ["Leaning back, handles by the upper chest", "Pressed up and forward"]],
+  isoincline:["Iso-lateral incline press", ["Leaning back, handles by the upper chest", "Pressed up and forward"]],
+  pecdeckfly:["Pec deck fly", ["Elbows out at shoulder height, forearms on the pads", "Pads squeezed together in front of the chest"]],
+  sapecdeck:["Single-arm pec deck fly", ["One forearm on its pad, out at shoulder height", "That pad brought across to the middle"]],
+  crunch:["Cable rope crunch", ["Kneeling with the back to a high pulley, rope held by the ears", "Crunched down, hands still by the head, hips still"]],
+  romanside:["45-degree side bend", ["Side-on over the 45° bench, hip on the pad, bent down sideways", "Side bent up until the body is in one line"]],
+  powerjerk:["Power jerk", ["Bar on the front of the shoulders, standing", "Driven up, feet jumped out, caught overhead in a quarter squat"]],
+  pushjerk:["Push jerk", ["Bar on the front of the shoulders, standing", "Driven up and caught overhead in a shallow squat"]],
+  pushpress:["Push press", ["Bar on the front of the shoulders, standing", "Short dip and drive, bar pressed overhead"]],
+  splitjerk:["Split jerk", ["Bar on the front of the shoulders, standing", "Driven up and caught overhead in a split stance"]],
+  bbjumpsquat:["Barbell jump squat", ["Bar on the upper back, elbows down, squatted deep", "Jumped straight up, feet off the floor"]],
+  thruster:["Barbell thruster", ["Bar on the front of the shoulders, standing", "Front squat, then driven straight up into a press"]],
+  snatchbalance:["Snatch balance", ["Bar on the upper back, wide grip, standing", "Dropped under into a deep squat, bar locked out overhead"]],
+  axledl:["Axle deadlift", ["Hips down, thick axle bar over the middle of the feet", "Stood up tall with the bar at the thighs"]],
+  sledpull:["Sled rope pull", ["Staggered stance, one hand reaching forward on the rope", "Pulled back to the hip as the other hand reaches"]],
+  logpress:["Log press", ["Log on the chest, hands on its handles, elbows up", "Dip and drive, log pressed overhead"]],
+  tyreflip:["Tyre flip", ["Squatting low, fingers under the edge of the tyre, chest on it", "Stepped in and pushed it over, tyre tipping past upright"]]
+};
+var ART_GYM_SRC="src/js/gfd-exercise-art-gym.js", ART_GYM_WAIT=null;
+function hasArt(id){return !!((window.GFDArt&&GFDArt.EX[id])||ART_GYM.hasOwnProperty(id));}
+/* the generator that draws this exercise; calls back once it is loaded */
+function artEngine(id,done){
+  if(window.GFDArt&&GFDArt.EX[id]) return done(GFDArt);
+  if(window.GFDArtGym) return done(GFDArtGym);
+  if(!ART_GYM_WAIT){
+    ART_GYM_WAIT=[];
+    var s=document.createElement("script");
+    s.src=ART_GYM_SRC;
+    s.onload=function(){var w=ART_GYM_WAIT; ART_GYM_WAIT=null; w.forEach(function(fn){fn(GFDArtGym);});};
+    s.onerror=function(){ART_GYM_WAIT=null;};
+    document.head.appendChild(s);
+  }
+  ART_GYM_WAIT.push(done);
+}
 function artTheme(){
   var t=document.documentElement.getAttribute("data-theme");
   if(t==="light"||t==="dark") return t;
@@ -11,7 +79,7 @@ function artTheme(){
 }
 function artStill(){return window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;}
 function artHtml(id,cls){
-  var ex=GFDArt.EX[id];
+  var ex=GFDArt.EX[id]||{name:ART_GYM[id][0],frames:ART_GYM[id][1]};
   return '<div class="exart'+(cls?" "+cls:"")+'" data-art="'+id+'" role="img" aria-label="'+esc(ex.name+": "+ex.frames[0]+", then "+ex.frames[1].charAt(0).toLowerCase()+ex.frames[1].slice(1))+'"></div>';
 }
 /* the illustration for an exercise, or the old stick figure for exercises without one */
@@ -26,15 +94,19 @@ function artFrames(id,theme,done){
   if(c&&c.ready) return done(c);
   if(c){c.wait.push(done);return;}
   c=ART_CACHE[k]={ready:false,wait:[done],anim:[],still:[]};
-  var fr=GFDArt.framesOf(id), i=0;
-  c.still=fr.map(function(f){return artUrl(GFDArt.render(id,theme,f.t,{view:f.view}));});
-  function more(){
-    var end=Math.min(i+3,ART_STEPS+1);
-    for(;i<end;i++) c.anim.push(i===0?c.still[0]:artUrl(GFDArt.render(id,theme,i/ART_STEPS,{view:fr[0].view})));
-    if(i<=ART_STEPS) return setTimeout(more,0);
-    c.ready=true; c.wait.forEach(function(fn){fn(c);}); c.wait=[];
-  }
-  more();
+  artEngine(id,function(G){
+    /* a cycle (sled drags, carries) runs t over 0..2, one full stride, and loops forward without easing or holds */
+    var fr=G.framesOf(id), i=0, cyc=!!G.EX[id].cycle, last=cyc?2*ART_STEPS-1:ART_STEPS;
+    c.cycle=cyc;
+    c.still=fr.map(function(f){return artUrl(G.render(id,theme,f.t,{view:f.view}));});
+    function more(){
+      var end=Math.min(i+3,last+1);
+      for(;i<end;i++) c.anim.push(i===0?c.still[0]:artUrl(G.render(id,theme,i/ART_STEPS,{view:fr[0].view})));
+      if(i<=last) return setTimeout(more,0);
+      c.ready=true; c.wait.forEach(function(fn){fn(c);}); c.wait=[];
+    }
+    more();
+  });
 }
 function artDraw(el){
   var id=el.dataset.art, theme=artTheme();
@@ -48,12 +120,12 @@ function artDraw(el){
     }
     el.classList.remove("still");
     el.innerHTML='<img alt="" src="'+c.anim[0]+'">';
-    el._art={img:el.firstChild,frames:c.anim,pos:0,paused:false,vis:true};
+    el._art={img:el.firstChild,frames:c.anim,cycle:c.cycle,pos:0,paused:false,vis:true};
     if(ART_LIVE.indexOf(el)<0) ART_LIVE.push(el);
     artRun();
   });
 }
-/* one timer drives every visible animation: 0..ART_STEPS, a short hold, back down, a short hold */
+/* one timer drives every visible animation: 0..ART_STEPS, a short hold, back down, a short hold (a cycle just loops) */
 function artRun(){
   if(ART_TIMER) return;
   ART_TIMER=setInterval(function(){
@@ -62,6 +134,7 @@ function artRun(){
     var cyc=2*(ART_STEPS+ART_HOLD);
     ART_LIVE.forEach(function(el){
       var a=el._art; if(a.paused||!a.vis) return;
+      if(a.cycle){a.pos=(a.pos+1)%a.frames.length;a.img.src=a.frames[a.pos];return;}
       a.pos=(a.pos+1)%cyc;
       var p=a.pos, n=p<=ART_STEPS?p:p<ART_STEPS+ART_HOLD?ART_STEPS:p<=2*ART_STEPS+ART_HOLD?2*ART_STEPS+ART_HOLD-p:0;
       if(a.n!==n){a.n=n;a.img.src=a.frames[n];}
