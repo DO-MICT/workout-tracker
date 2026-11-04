@@ -240,13 +240,13 @@ document.addEventListener("keydown",function(e){
   if(e.key==="Enter"&&e.target.id==="locName"){var ls=document.getElementById("locSave");if(ls)ls.click();return;}
   if(e.key==="Escape"&&LOC_MODE){LOC_MODE=null;renderLocBar();return;}
   if(e.key==="Enter"&&e.target.id==="plName"){var sb=document.querySelector("[data-saveren]");if(sb)sb.click();return;}
-  if(e.key==="Escape"&&WZ){var eqs=document.getElementById("equip"); if(eqs&&!eqs.hidden) return; if(BD&&BD.wizard&&BD.view==="pick"){BD.view="edit";renderBuilder();} else toast("Tap Cancel to leave setup"); return;}
+  if(e.key==="Escape"&&WZ){var eqs=document.getElementById("equip"); if(eqs&&!eqs.hidden) return; if(BD&&BD.wizard&&BD.view==="peek"){peekBack(BD.peek);} else if(BD&&BD.wizard&&BD.view==="pick"){BD.view="edit";renderBuilder();} else toast("Tap Cancel to leave setup"); return;}
   if(e.key==="Escape"){var dym=document.getElementById("dayMenu");if(dym&&!dym.hidden){setDayMenu(false);document.getElementById("dayBtn").focus();return;}}
   if(e.key==="Escape"){var dlm=document.getElementById("dayLocMenu");if(dlm&&!dlm.hidden){setDayLocMenu(false);document.getElementById("dayLocBtn").focus();return;}}
   if(e.key==="Escape"){var pm=document.getElementById("planMenu");if(pm&&!pm.hidden){setPlanMenu(false);document.getElementById("planBtn").focus();return;}}
   if(e.key==="Escape"){var ps=document.getElementById("plans");if(ps&&!ps.hidden){if(PL_REN){PL_REN=null;renderPlans();}else closePlans();return;}}
   if(e.key==="Escape"){var ns=document.getElementById("notesheet");if(ns&&!ns.hidden){closeNote();return;}}
-  if(e.key==="Escape"&&BD){ if(BD.view==="pick"){BD.view="edit";renderBuilder();} else if(!BD.dirty) closeBuilder(); else toast("Tap Save workout or Cancel"); return; }
+  if(e.key==="Escape"&&BD){ if(BD.view==="peek") peekBack(BD.peek); else if(BD.view==="pick"){BD.view="edit";renderBuilder();} else if(!BD.dirty) closeBuilder(); else toast("Tap Save workout or Cancel"); return; }
   if(e.key==="Escape"){var eq=document.getElementById("equip");if(eq&&!eq.hidden){closeEquip();return;}}
   if(e.key==="Escape"){var sh=document.getElementById("profile");if(sh&&!sh.hidden){closeProfile();return;}}
   if(EL&&e.key==="Escape"){if(EL.view){document.getElementById("libBack").click();}else closeLibrary();return;}

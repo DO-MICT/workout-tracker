@@ -123,23 +123,27 @@ function renderLibrary(keep){
   if(focusQ){var i=document.getElementById("libSearch");i.focus();i.setSelectionRange(i.value.length,i.value.length);}
 }
 function libDetailHtml(L){
+  return '<div class="sheet-in"><div class="sheet-top"><button class="chip" id="libBack">‹ Back</button><button class="chip" id="closeLib">Close</button></div>'+
+    '<h2 id="eltitle" class="eltitle">'+esc(L.n)+'</h2>'+exDetailBody(L,gear(),curLoc().name)+'</div>';
+}
+/* everything about one exercise below its name: tags, illustration, muscles, gear, how-to.
+   Shared by the library and the "add exercise" preview, which checks the builder's location instead. */
+function exDetailBody(L,g,locName){
   var x=L.x||{}, li=function(a){return '<ul class="cues">'+a.map(function(c){return '<li>'+esc(c)+'</li>';}).join("")+'</ul>';};
   var need=L.req?L.req.split(",").map(function(alt){return alt.split("|").map(gearName).join(" or ");}):[];
-  var miss=gear().length?missingFor(L,gear()):[];
-  var h='<div class="sheet-in"><div class="sheet-top"><button class="chip" id="libBack">‹ Back</button><button class="chip" id="closeLib">Close</button></div>'+
-    '<h2 id="eltitle" class="eltitle">'+esc(L.n)+'</h2>'+
-    '<div class="eltags"><span>'+esc(L.mg)+'</span>'+(x.tt&&x.tt!==L.mg?'<span>'+esc(x.tt)+'</span>':'')+(x.diff?'<span>'+esc(x.diff)+'</span>':'')+(x.tier!=null?'<span>'+EL_TIER[x.tier]+'</span>':'')+'</div>'+
+  var miss=g.length?missingFor(L,g):[];
+  var h='<div class="eltags"><span>'+esc(L.mg)+'</span>'+(x.tt&&x.tt!==L.mg?'<span>'+esc(x.tt)+'</span>':'')+(x.diff?'<span>'+esc(x.diff)+'</span>':'')+(x.tier!=null?'<span>'+EL_TIER[x.tier]+'</span>':'')+'</div>'+
     (x.al&&x.al.length?'<p class="sub">Also called '+esc(x.al.join(", "))+'.</p>':'');
   h+=exFigure(L.id,L.f,"elfig");
+  if(L.c&&L.c.length) h+='<section class="elsec"><h3 class="psec">How to do it</h3>'+li(L.c)+'</section>';
   if(x.pm&&(x.pm.length||x.sm.length)) h+='<section class="elsec"><h3 class="psec">Muscles</h3><p class="elmus"><b>Main:</b> '+esc(x.pm.join(", "))+(x.sm.length?'<br><b>Helpers:</b> '+esc(x.sm.join(", ")):'')+'</p></section>';
   h+='<section class="elsec"><h3 class="psec">Gear</h3><p class="elmus">'+(need.length?esc(need.join(", ")):'No equipment needed')+'</p>'+
-    (miss.length?'<p class="elwarn">Not at '+esc(curLoc().name)+': '+esc(needsText(L,gear()))+'.</p>':(gear().length&&need.length?'<p class="elok">You have this at '+esc(curLoc().name)+'.</p>':''))+'</section>';
+    (miss.length?'<p class="elwarn">Not at '+esc(locName)+': '+esc(needsText(L,g))+'.</p>':(g.length&&need.length?'<p class="elok">You have this at '+esc(locName)+'.</p>':''))+'</section>';
   h+='<section class="elsec"><h3 class="psec">Default</h3><p class="elmus">'+L.sets+' sets × '+esc(L.reps)+'</p></section>';
-  if(L.c&&L.c.length) h+='<section class="elsec"><h3 class="psec">How to do it</h3>'+li(L.c)+'</section>';
   if(x.mist&&x.mist.length) h+='<section class="elsec"><h3 class="psec">Common mistakes</h3>'+li(x.mist)+'</section>';
   if(x.safety) h+='<section class="elsec"><h3 class="psec">Safety</h3><p class="elmus">'+esc(x.safety)+'</p></section>';
   if(x.reg&&(x.reg.length||x.prog.length)) h+='<section class="elsec"><h3 class="psec">Make it easier or harder</h3><p class="elmus">'+(x.reg.length?'<b>Easier:</b> '+esc(x.reg.join(", ")):'')+(x.reg.length&&x.prog.length?'<br>':'')+(x.prog.length?'<b>Harder:</b> '+esc(x.prog.join(", ")):'')+'</p></section>';
-  return h+'</div>';
+  return h;
 }
 function libraryClick(t){
   if(!EL) return false;

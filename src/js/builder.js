@@ -44,6 +44,7 @@ function closeBuilder(){
 function bSheet(){return document.getElementById(BD&&BD.wizard?"wizard":"builder");}
 function renderBuilder(){
   var sh=bSheet(); if(!sh||!BD) return;
+  if(BD.view==="peek"&&LIB[BD.peek]){ renderPeek(sh); return; }
   if(BD.view==="pick"){ renderPicker(sh); return; }
   var d=BD.wizard?null:DAYS[BD.day], h;
   if(BD.wizard) h=wzBuilderChrome();
@@ -95,13 +96,29 @@ function renderPicker(sh){
     h+='<h4 class="pgh">'+m+'</h4>';
     part.forEach(function(r){
       var L=r.L;
-      h+='<div class="prow'+(r.ok?'':' na')+'"><div class="bn"><b>'+esc(L.n)+'</b>'+(r.ok?'':'<em>Needs '+esc(needsText(L,bGear()))+'</em>')+'</div>'+
+      h+='<div class="prow'+(r.ok?'':' na')+'"><button class="pview" data-pview="'+L.id+'" aria-label="'+esc(L.n)+': see how to do it"><span class="bn"><b>'+esc(L.n)+'</b>'+(L.x&&L.x.pm.length?'<span>'+esc(L.x.pm.slice(0,3).join(", "))+'</span>':'')+(r.ok?'':'<em>Needs '+esc(needsText(L,bGear()))+'</em>')+'</span>'+PINFO_SVG+'</button>'+
         (r.added?'<span class="padded">Added</span>':r.ok?'<button class="chip sm" data-padd="'+L.id+'" aria-label="Add '+esc(L.n)+'">Add</button>':'')+'</div>';
     });
   });
   h+='</div>';
   var st=sh.scrollTop; sh.innerHTML=h; sh.scrollTop=st;
   if(keepFocus){var i=document.getElementById("pSearch");i.focus();i.setSelectionRange(i.value.length,i.value.length);}
+}
+var PINFO_SVG='<svg class="pinfo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="7.4" r="1.4" fill="currentColor"/></svg>';
+/* a look at one exercise before adding it: the same details as the library, with Add at the bottom */
+function renderPeek(sh){
+  var L=LIB[BD.peek], bg=bGear(), added=BD.ex.some(function(x){return x.id===L.id;}), ok=!bg.length||!missingFor(L,bg).length;
+  var h='<div class="sheet-in peek"><div class="sheet-top"><button class="chip" id="pkBack">‹ Back</button></div>'+
+    '<h2 id="btitle" class="eltitle">'+esc(L.n)+'</h2>'+exDetailBody(L,bg,bLoc().name)+
+    '<div class="pkbar">'+(added?'<button class="primary" id="pkBack2">Already in this workout · back to list</button>':
+      ok?'<button class="primary" data-pkadd="'+L.id+'">Add to '+(BD.wizard?esc(weekLong(BD.dayId)):'workout')+'</button>':
+      '<p class="elwarn">You can’t add this here: '+esc(bLoc().name)+' needs '+esc(needsText(L,bg))+'.</p><button class="ghost" id="pkBack2">Back to list</button>')+'</div></div>';
+  sh.innerHTML=h; sh.scrollTop=0;
+}
+function peekBack(id){
+  BD.view="pick"; renderBuilder();
+  var sh=bSheet(); if(BD.pickTop!=null) sh.scrollTop=BD.pickTop;
+  var b=document.querySelector('[data-pview="'+id+'"]'); if(b) b.focus({preventScroll:true});
 }
 function bUpdateLinksAfterMove(){ var n=BD.ex.length; if(n) BD.ex[n-1].link=false; }
 function builderClick(t){
@@ -114,6 +131,9 @@ function builderClick(t){
   if(t.id==="bAdd"){BD.view="pick";BD.q="";renderBuilder();bSheet().scrollTop=0;return true;}
   if(t.id==="pBack"){BD.view="edit";renderBuilder();var sh=bSheet();sh.scrollTop=sh.scrollHeight;return true;}
   if(t.dataset.pmg!==undefined){BD.mg=t.dataset.pmg;renderBuilder();return true;}
+  if(t.dataset.pview){BD.pickTop=bSheet().scrollTop;BD.peek=t.dataset.pview;BD.view="peek";renderBuilder();var pb=document.getElementById("pkBack");if(pb)pb.focus();return true;}
+  if(t.id==="pkBack"||t.id==="pkBack2"){peekBack(BD.peek);return true;}
+  if(t.dataset.pkadd){var P=LIB[t.dataset.pkadd];BD.ex.push({id:P.id,sets:P.sets,reps:P.reps,link:false});BD.dirty=true;peekBack(P.id);toast(P.n+" added");return true;}
   if(t.dataset.padd){var L=LIB[t.dataset.padd];BD.ex.push({id:L.id,sets:L.sets,reps:L.reps,link:false});BD.dirty=true;renderBuilder();toast(L.n+" added");return true;}
   var k;
   if(t.dataset.bup!==undefined){k=+t.dataset.bup;var a=BD.ex[k];BD.ex[k]=BD.ex[k-1];BD.ex[k-1]=a;bUpdateLinksAfterMove();BD.dirty=true;renderBuilder();var b=document.querySelector('[data-bup="'+(k-1)+'"]')||document.querySelector('[data-bdown="'+(k-1)+'"]');if(b)b.focus();return true;}
