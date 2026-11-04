@@ -56,7 +56,7 @@ function renderLocBar(){
   if(LOC_MODE){var i=document.getElementById("locName"); if(i){i.focus(); if(LOC_MODE==="rename") i.select();}}
 }
 function locClick(t){
-  if(t.dataset.loc){setLoc(t.dataset.loc);LOC_MODE=null;renderLocBar();renderGear();var b=document.querySelector('[data-loc="'+t.dataset.loc+'"]');if(b)b.focus();return true;}
+  if(t.dataset.loc){setLoc(t.dataset.loc);LOC_MODE=null;gearChanged();var b=document.querySelector('[data-loc="'+t.dataset.loc+'"]');if(b)b.focus();return true;}
   if(t.dataset.bdloc&&BD){BD.loc=t.dataset.bdloc;BD.dirty=true;if(BD.wizard&&WZ)WZ.locs[WZ.cur]=BD.loc;renderBuilder();var b2=document.querySelector('[data-bdloc="'+BD.loc+'"]');if(b2)b2.focus();return true;}
   if(t.dataset.dayloc){setDayLoc(activePlan().id,DAYS[day].id,t.dataset.dayloc);save();setDayLocMenu(false);renderDay();toast(weekLong(DAYS[day].id)+": training at "+dayLoc(activePlan().id,DAYS[day].id).name);var db=document.getElementById("dayLocBtn");if(db)db.focus();return true;}
   if(t.id==="dayLocBtn"){var dm=document.getElementById("dayLocMenu");setDayLocMenu(dm&&dm.hidden);return true;}
@@ -78,20 +78,26 @@ function locClick(t){
     if(L.list.some(function(l){return l.name.toLowerCase()===v.toLowerCase()&&!(LOC_MODE==="rename"&&l.id===cur.id);})){err.textContent="You already have a location with that name.";return true;}
     if(LOC_MODE==="add"){var nl={id:"l"+Date.now().toString(36),name:v,gear:[]};L.list.push(nl);L.active=nl.id;toast(v+" added. Pick its equipment");}
     else {cur.name=v;toast("Renamed");}
-    LOC_MODE=null; save(); renderLocBar(); renderGear(); return true;
+    LOC_MODE=null; save(); gearChanged(); return true;
   }
   if(t.id==="locDel"){
     if(!confirmTap(t,"Delete "+curLoc().name,"Tap again to delete")) return true;
     var L2=locState(), gone=curLoc().name; L2.list=L2.list.filter(function(l){return l.id!==L2.active;}); L2.active=L2.list[0].id;
-    save(); renderLocBar(); renderGear(); toast(gone+" deleted"); return true;
+    save(); gearChanged(); toast(gone+" deleted"); return true;
   }
-  if(t.dataset.loccopy){var from=null;locState().list.forEach(function(l){if(l.id===t.dataset.loccopy)from=l;}); if(from){curLoc().gear=from.gear.slice();save();renderLocBar();renderGear();toast("Copied "+from.gear.length+" items from "+from.name);} return true;}
+  if(t.dataset.loccopy){var from=null;locState().list.forEach(function(l){if(l.id===t.dataset.loccopy)from=l;}); if(from){curLoc().gear=from.gear.slice();save();gearChanged();toast("Copied "+from.gear.length+" items from "+from.name);} return true;}
   return false;
+}
+/* gear or locations changed: redraw the sheet, the location counts and today's workout behind it,
+   so the gear check and swap suggestions are right without switching locations */
+function gearChanged(){
+  renderLocBar(); renderGear();
+  if(document.getElementById("day")&&typeof DAYS!=="undefined"&&DAYS&&DAYS[day]) renderDay();
 }
 function toggleGear(id){
   var g=gear(), k=g.indexOf(id);
   if(k>=0) g.splice(k,1); else g.push(id);
-  save(); renderGear();
+  save(); gearChanged();
   var b=document.querySelector('[data-gear="'+id+'"]'); if(b) b.focus({preventScroll:true});
 }
 function openEquip(){

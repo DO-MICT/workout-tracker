@@ -333,6 +333,19 @@ details.grp .ex{margin-bottom:8px}
 .prow{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--card);border-radius:12px;padding:10px 12px;margin-bottom:6px}
 .prow.na{opacity:.6}
 .padded{font-size:.85rem;color:var(--done);font-weight:700}
+.prow{padding:4px 12px 4px 4px}
+.pview{flex:1;min-width:0;display:flex;align-items:center;gap:8px;border:0;background:transparent;color:var(--ink);text-align:left;padding:6px 8px;min-height:48px;border-radius:10px;cursor:pointer;font:inherit}
+.pview .bn{flex:1}
+.pview .bn>span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pview .pinfo{flex:none;color:var(--muted)}
+.pview:hover .pinfo{color:var(--ink)}
+.pview:focus-visible{outline:3px solid var(--blue);outline-offset:0}
+.peek{padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))}
+.pkbar{position:fixed;left:0;right:0;bottom:0;z-index:2;background:linear-gradient(to bottom,transparent,var(--bg) 22px);padding:26px 14px calc(14px + env(safe-area-inset-bottom,0px))}
+.pkbar>*{display:block;max-width:612px;margin-left:auto;margin-right:auto}
+.sheet .pkbar .primary{width:100%;margin-top:0}
+.pkbar .ghost{width:100%;margin-top:8px}
+.pkbar .elwarn{background:var(--card);border-radius:10px;padding:10px 12px;margin:0}
 .cntrow{display:flex;align-items:center;gap:4px}
 .notebtn{display:inline-grid;place-items:center;width:30px;height:30px;flex:none;border:0;border-radius:8px;background:transparent;color:var(--muted);cursor:pointer;padding:0}
 .notebtn.has{background:#F6C445;border-color:#F6C445;color:#3A2A00}
