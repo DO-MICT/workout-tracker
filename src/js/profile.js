@@ -143,16 +143,19 @@ function advanceFrom(ex){
 function groupOf(ex){var gs=groupsOf(DAYS[day]);for(var k=0;k<gs.length;k++){if(gs[k].kind!=="single"&&gs[k].items.indexOf(ex)>=0)return gs[k];}return null;}
 function findEx(id){var d=DAYS[day];for(var i=0;i<d.ex.length;i++)if(d.ex[i].id===id)return d.ex[i];return null;}
 function finishWorkout(){
-  var d=DAYS[day], c=cur(), L=last(), saved=0, now=new Date().toISOString(), rec=buildWorkout(d), wins={prs:[],up:[]};
+  var d=DAYS[day], c=cur(), L=last(), saved=0, now=new Date().toISOString(), rec=buildWorkout(d), wins={prs:[],up:[],prevCardio:{}};
   d.ex.forEach(function(ex){
     var arr=setsFor(ex).slice(0,ex.sets).filter(function(s){return s.w||s.r;});
     /* before overwriting: compare with the PR and with last time (weighted exercises only) */
     var top=0; arr.forEach(function(s){var v=parseFloat(s.w); if(v>top) top=v;});
+    /* cardio: keep last time's distance and minutes so the summary can compare pace */
+    if(ex.lab==="cardio"&&L[ex.id]&&L[ex.id].sets) wins.prevCardio[ex.id]=cardioSum(L[ex.id].sets.map(function(s){return {weight:parseFloat(s.w),reps:parseFloat(s.r)};}));
     if(top>0&&labOf(ex)[0]){
+      var unit=ex.lab==="cardio"?"km":"kg";
       var oldPr=parseFloat(prFor(ex))||0, prev=L[ex.id], prevTop=0;
       if(prev&&prev.sets) prev.sets.forEach(function(s){var v=parseFloat(s.w); if(v>prevTop) prevTop=v;});
-      if(oldPr>0&&top>oldPr) wins.prs.push({n:ex.n,now:top,was:oldPr});
-      else if(prevTop>0&&top>prevTop) wins.up.push({n:ex.n,by:Math.round((top-prevTop)*100)/100});
+      if(oldPr>0&&top>oldPr) wins.prs.push({n:ex.n,now:top,was:oldPr,u:unit});
+      else if(prevTop>0&&top>prevTop) wins.up.push({n:ex.n,by:Math.round((top-prevTop)*100)/100,u:unit});
     }
     if(arr.length){L[ex.id]={date:now,sets:arr.map(function(s){return {w:s.w,r:s.r};})};saved++;}
     arr.forEach(function(s){var v=parseFloat(s.w); if(v>(parseFloat(prs()[ex.id])||0)) prs()[ex.id]=String(v);});

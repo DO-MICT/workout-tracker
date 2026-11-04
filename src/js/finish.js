@@ -1,3 +1,27 @@
+/* ---------- cardio on the summary: distance, time and pace ---------- */
+function cardioSum(sets){var km=0,min=0;sets.forEach(function(s){var w=+s.weight,r=+s.reps;if(isFinite(w)&&w>0)km+=w;if(isFinite(r)&&r>0)min+=r;});return {km:Math.round(km*1000)/1000,min:Math.round(min*100)/100};}
+/* rowers and ski ergs show time per 500 m, runs and walks time per km, everything else km/h */
+function cardioKind(name){name=String(name||"").toLowerCase(); return /row|ski|erg/.test(name)?"500":/run|jog|walk|tread|sprint|hike|track/.test(name)?"km":"kmh";}
+function fmtPace(sec){sec=Math.round(sec);return Math.floor(sec/60)+":"+String(sec%60).padStart(2,"0");}
+/* {v:"2:05", u:"/500 m", sec:125, fast:-1 means lower is faster} or null when distance or time is missing */
+function cardioPace(name,c){
+  if(!(c&&c.km>0&&c.min>0)) return null;
+  var k=cardioKind(name);
+  if(k==="500"){var a=c.min*60/(c.km*2);return {v:fmtPace(a),u:"/500 m",n:a,lowFast:true};}
+  if(k==="km"){var b=c.min*60/c.km;return {v:fmtPace(b),u:"/km",n:b,lowFast:true};}
+  var h=c.km/(c.min/60);return {v:fmtNum(Math.round(h*10)/10),u:"km/h",n:h,lowFast:false};
+}
+function fmtMin(m){ if(!(m>0)) return ""; var sec=Math.round(m*60); return sec%60?fmtPace(sec)+" min":fmtNum(sec/60)+" min"; }
+function fmtKm(km){ return km>=10?fmtNum(Math.round(km*10)/10)+" km":fmtNum(Math.round(km*100)/100)+" km"; }
+function cardioBlocks(rec,prev){
+  var by={},order=[];
+  rec.sets.forEach(function(x){ if(x.measure!=="cardio") return; var k=x.exercise_order; if(!by[k]){by[k]={id:x.exercise_id,n:x.exercise_name,sets:[]};order.push(k);} by[k].sets.push(x); });
+  return order.map(function(k){
+    var b=by[k], c=cardioSum(b.sets), p=cardioPace(b.n,c), was=prev&&prev[b.id]?cardioPace(b.n,prev[b.id]):null;
+    var cmp=null; if(p&&was&&was.n>0&&Math.abs(p.n-was.n)/was.n>0.005) cmp=(p.lowFast?p.n<was.n:p.n>was.n)?"up":"down";
+    return {n:b.n,km:c.km,min:c.min,pace:p,was:was,cmp:cmp};
+  }).filter(function(b){return b.km>0||b.min>0;});
+}
 /* ---------- the "well done" popup after Complete workout ---------- */
 var DONE_CHEERS=["Well done!","High five!","Look at you go!","Crushed it!","Strong work!","That’s how it’s done!","Another one in the bank!","Beast mode: complete!","Nailed it!","You showed up and smashed it!"];
 var DONE_PR_CHEERS=["New PR! Look at you go!","PR day! High five!","Stronger than ever!","New record. Take a bow!"];
@@ -9,13 +33,22 @@ function showDone(rec,d,wins){
   var exN={}; rec.sets.forEach(function(x){exN[x.exercise_order]=1;});
   var nEx=Object.keys(exN).length, vol=histVolume(rec), done=rec.sets.filter(function(x){return x.done;}).length;
   var stats=[[fmtDur(rec.duration_sec)||"–","Time"],[String(rec.sets.length),"Sets"+(done&&done<rec.sets.length?" ("+done+" ticked)":"")],[String(nEx),"Exercise"+(nEx===1?"":"s")]];
+  var cardio=cardioBlocks(rec,wins.prevCardio), cKm=0; cardio.forEach(function(b){cKm+=b.km;});
   if(vol>0) stats.push([fmtKg(vol),"Lifted"]);
+  else if(cKm>0) stats.push([fmtKm(cKm),"Distance"]);
   var h='<div class="donecard" role="dialog" aria-modal="true" aria-labelledby="doneTitle"><div class="confetti" aria-hidden="true">'+Array.apply(null,Array(18)).map(function(_,i){return '<i style="--i:'+i+'"></i>';}).join("")+'</div>'+
     DONE_SVG+'<h2 id="doneTitle">'+esc(donePick(wins.prs.length?DONE_PR_CHEERS:DONE_CHEERS))+'</h2>'+
     '<p class="donesub">'+esc(d.title)+' · '+esc(hDate(rec.performed_at))+'</p>'+
     '<div class="donestats">'+stats.map(function(x){return '<div><b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div>';}).join("")+'</div>';
-  if(wins.prs.length) h+='<div class="donewins"><h3>New PR'+(wins.prs.length>1?'s':'')+'</h3><ul>'+wins.prs.map(function(p){return '<li><span>'+esc(p.n)+'</span><b>'+fmtNum(p.now)+' kg</b><em>was '+fmtNum(p.was)+'</em></li>';}).join("")+'</ul></div>';
-  if(wins.up.length) h+='<div class="donewins up"><h3>Up on last time</h3><ul>'+wins.up.map(function(p){return '<li><span>'+esc(p.n)+'</span><b>+'+fmtNum(p.by)+' kg</b></li>';}).join("")+'</ul></div>';
+  if(cardio.length) h+='<div class="donecardio"><h3>Cardio</h3>'+cardio.map(function(b){
+    var bits=[b.km>0?fmtKm(b.km):"",b.min>0?fmtMin(b.min):""].filter(Boolean).join(" in ");
+    return '<div class="dcrow"><div class="dcname"><span>'+esc(b.n)+'</span><em>'+esc(bits)+'</em></div>'+
+      (b.pace?'<div class="dcpace"><b>'+esc(b.pace.v)+'<small>'+esc(b.pace.u)+'</small></b>'+
+        (b.was?'<em class="'+(b.cmp||"")+'">'+(b.cmp==="up"?"Faster than":b.cmp==="down"?"Slower than":"Same as")+' last time ('+esc(b.was.v)+')</em>':'')+'</div>'
+      :'<div class="dcpace"><em>Add '+(b.km>0?'minutes':'distance')+' to see your pace</em></div>')+'</div>';
+  }).join("")+'</div>';
+  if(wins.prs.length) h+='<div class="donewins"><h3>New PR'+(wins.prs.length>1?'s':'')+'</h3><ul>'+wins.prs.map(function(p){return '<li><span>'+esc(p.n)+'</span><b>'+fmtNum(p.now)+' '+(p.u||'kg')+'</b><em>was '+fmtNum(p.was)+'</em></li>';}).join("")+'</ul></div>';
+  if(wins.up.length) h+='<div class="donewins up"><h3>Up on last time</h3><ul>'+wins.up.map(function(p){return '<li><span>'+esc(p.n)+'</span><b>+'+fmtNum(p.by)+' '+(p.u||'kg')+'</b></li>';}).join("")+'</ul></div>';
   h+='<div class="donebtns"><button class="ghost" id="doneHistory">See in History</button><button class="primary" id="doneClose">Done</button></div></div>';
   el.innerHTML=h; el.hidden=false; document.body.style.overflow="hidden";
   var b=document.getElementById("doneClose"); if(b) b.focus();
