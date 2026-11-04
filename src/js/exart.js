@@ -86,7 +86,8 @@ var ART_GYM={
   legswinglat:["Lateral leg swing", ["On one leg, the free leg swung across in front of the body", "Swung out to the side, hips stay square"]],
   wgs:["World's greatest stretch", ["Deep lunge, far hand planted, inside elbow dropped to the front instep", "Inside arm turned up to the ceiling, chest open to the front knee"]],
   kneelcablefly:["Kneeling cable crossover", ["Kneeling between high pulleys, arms up and out", "Hands brought down and together in front of the belly"]],
-  hipcars:["Hip CARs", ["Standing on one leg, hands on the hips, knee lifted in front", "Knee circled out to the side and back behind the body"]]
+  hipcars:["Hip CARs", ["Standing on one leg, hands on the hips, knee lifted in front", "Knee circled out to the side and back behind the body"]],
+  adductrock:["Adductor rock-back", ["On hands and one knee, the other leg straight out to the side", "Hips rocked back toward the heel, back long"]]
 };
 var ART_GYM_SRC="src/js/gfd-exercise-art-gym.js", ART_GYM_WAIT=null;
 function hasArt(id){return !!((window.GFDArt&&GFDArt.EX[id])||ART_GYM.hasOwnProperty(id));}
