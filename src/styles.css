@@ -227,6 +227,17 @@ details.how[open] summary::before{content:"−"}
 .donestats div{background:var(--card);border-radius:12px;padding:10px 8px}
 .donestats b{display:block;font-family:Archivo,sans-serif;font-size:1.6rem;line-height:1.1;white-space:nowrap}
 .donestats span{font-size:.8rem;color:var(--muted)}
+.donecardio{text-align:left;background:var(--card);border-radius:12px;padding:10px 12px;margin-bottom:10px}
+.donecardio h3{margin:0 0 4px;font-size:.95rem}
+.dcrow{display:flex;align-items:center;gap:10px;padding:6px 0}
+.dcrow+.dcrow{border-top:1px solid var(--line)}
+.dcname{flex:1;min-width:0}
+.dcname span{display:block;font-size:.92rem}
+.dcname em,.dcpace em{display:block;font-style:normal;font-size:.8rem;color:var(--muted)}
+.dcpace{text-align:right;max-width:55%}
+.dcpace b{font-family:Archivo,sans-serif;font-size:1.35rem;line-height:1.1;white-space:nowrap}
+.dcpace b small{font-family:inherit;font-size:.75rem;font-weight:600;color:var(--muted);margin-left:3px}
+.dcpace em.up{color:var(--done)}
 .donewins{text-align:left;background:var(--done-bg);border-radius:12px;padding:10px 12px;margin-bottom:10px}
 .donewins.up{background:var(--card)}
 .donewins h3{margin:0 0 4px;font-size:.95rem}
