@@ -82,7 +82,10 @@ var ART_GYM={
   lowhighchop:["Low-to-high cable woodchop", ["Side-on to a low pulley, hands low by the near knee", "Pulled up and across above the opposite shoulder"]],
   pallof:["Pallof press", ["Side-on to a chest-height pulley, handle at the chest", "Pressed straight out, trunk not turning"]],
   abmach:["Ab crunch machine", ["Seated, hands on the handles beside the head", "Crunched forward, hands still by the head, arms riding with the chest"]],
-  torsorot:["Rotary torso machine", ["Seated, hands on the pad in front of the chest, turned to one side", "Turned through the trunk to the other side, hands still in front of the chest"]]
+  torsorot:["Rotary torso machine", ["Seated, hands on the pad in front of the chest, turned to one side", "Turned through the trunk to the other side, hands still in front of the chest"]],
+  legswinglat:["Lateral leg swing", ["On one leg, the free leg swung across in front of the body", "Swung out to the side, hips stay square"]],
+  wgs:["World's greatest stretch", ["Deep lunge, far hand planted, inside elbow dropped to the front instep", "Inside arm turned up to the ceiling, chest open to the front knee"]],
+  kneelcablefly:["Kneeling cable crossover", ["Kneeling between high pulleys, arms up and out", "Hands brought down and together in front of the belly"]]
 };
 var ART_GYM_SRC="src/js/gfd-exercise-art-gym.js", ART_GYM_WAIT=null;
 function hasArt(id){return !!((window.GFDArt&&GFDArt.EX[id])||ART_GYM.hasOwnProperty(id));}
