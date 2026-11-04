@@ -69,8 +69,9 @@ function statsHtml(){
   if(all===null) return seg+'<p class="eqempty">Loading…</p>';
   var hasSample=all.some(function(w){return w.sample;});
   if(!all.length){
-    return '<div class="hempty stempty"><b>Your charts start with your first workout</b><p>Log your sets and tap <b>Complete workout</b>. Volume, streaks and your best lifts show up here.</p>'+
-      (!WEB_MODE?'<button class="chip" data-stats="sample">Try it with sample workouts</button>':'')+'</div>';
+    return msDueHtml("stats")+'<div class="hempty stempty"><b>Your charts start with your first workout</b><p>Log your sets and tap <b>Complete workout</b>. Volume, streaks and your best lifts show up here.</p>'+
+      (!WEB_MODE?'<button class="chip" data-stats="sample">Try it with sample workouts</button>':'')+'</div>'+
+      '<button class="ghost ms-wide ms-stlink" data-ms="progress">Body progress: every measurement and your goals</button>';
   }
   var p=stPeriod(range,0), pp=stPeriod(range,1), h=seg;
 
@@ -88,7 +89,8 @@ function statsHtml(){
     '</div></div><div class="stax">'+[max,max*2/3,max/3,0].map(function(v){return '<span>'+stK(v)+'</span>';}).join("")+'</div>'+
     '<div class="stlabels" style="grid-template-columns:repeat('+p.b.length+',minmax(0,1fr))">'+p.b.map(function(b){return '<span>'+esc(b.l)+'</span>';}).join("")+'</div></div></section>';
 
-  /* body weight from Profile › Measurements */
+  /* body weight from the body check-in (measure.js) */
+  h+=msDueHtml("stats");
   var pts=prof().hist.filter(function(x){return x.v&&parseFloat(x.v.weight)>0&&stIn(x.d,p);}).map(function(x){return {t:new Date(x.d),v:parseFloat(x.v.weight)};});
   if(pts.length){
     var vs=pts.map(function(x){return x.v;}), lo=Math.floor(Math.min.apply(null,vs)-0.5), hi=Math.ceil(Math.max.apply(null,vs)+0.5), span=p.e-p.s;
@@ -103,8 +105,9 @@ function statsHtml(){
       '</div><div class="stax three">'+[hi,(hi+lo)/2,lo].map(function(v){return '<span>'+fmtNum(v)+'</span>';}).join("")+'</div>'+
       '<div class="stlabels" style="grid-template-columns:repeat('+p.b.length+',minmax(0,1fr))">'+p.b.map(function(b){return '<span>'+esc(b.l)+'</span>';}).join("")+'</div></div></section>';
   } else {
-    h+='<section class="stcard stnowt"><div><span class="stlbl">Body weight</span><p>No weight saved '+ST_THIS[range]+'. Capture your measurements to see the trend.</p></div><button class="chip" id="openMeasure">Capture</button></section>';
+    h+='<section class="stcard stnowt"><div><span class="stlbl">Body weight</span><p>No weight saved '+ST_THIS[range]+'. Weigh in to see the trend.</p></div><button class="chip" data-ms="weigh">Weigh in</button></section>';
   }
+  h+='<button class="ghost ms-wide ms-stlink" data-ms="progress">Body progress: every measurement and your goals</button>';
 
   /* streak + weekly goal */
   var streak=stStreak(all), wk=stPeriod("week",0), done=all.filter(function(w){return stIn(w.at,wk);}).length;
