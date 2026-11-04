@@ -1,9 +1,9 @@
 /* ---------- exercise animations (GFD illustrations, gfd-exercise-art.js) ----------
-   The 30 exercises of the default 5-day split and the approved gym exercises (ART_GYM) have drawn start and end poses. artHtml(id) gives a placeholder;
+   The 30 exercises of the default 5-day split and the approved gym and mobility exercises (ART_GYM) have drawn start and end poses. artHtml(id) gives a placeholder;
    it is drawn once it scrolls into view (a closed <details> never does), then loops start -> end -> start.
    Frames are rendered once per exercise and theme and shown as cached SVG images. Tap to pause. */
 var ART_STEPS=12, ART_MS=110, ART_HOLD=5, ART_CACHE={}, ART_LIVE=[], ART_TIMER=null, ART_IO=null;
-/* approved commercial gym illustrations, drawn by the newer generator (gfd-exercise-art-gym.js, loaded on first use;
+/* approved illustrations (commercial gym and mobility) drawn by the newer generator (gfd-exercise-art-gym.js, loaded on first use;
    rebuild it with tools/build_gym_art.js when approved redraws come from the spec generator).
    Only ids listed here are shown; add an id once Deon approves it. [name, [start, end]] for the label before the script loads. */
 var ART_GYM={
@@ -54,7 +54,40 @@ var ART_GYM={
   axledl:["Axle deadlift", ["Hips down, thick axle bar over the middle of the feet", "Stood up tall with the bar at the thighs"]],
   sledpull:["Sled rope pull", ["Staggered stance, one hand reaching forward on the rope", "Pulled back to the hip as the other hand reaches"]],
   logpress:["Log press", ["Log on the chest, hands on its handles, elbows up", "Dip and drive, log pressed overhead"]],
-  tyreflip:["Tyre flip", ["Squatting low, fingers under the edge of the tyre, chest on it", "Stepped in and pushed it over, tyre tipping past upright"]]
+  tyreflip:["Tyre flip", ["Squatting low, fingers under the edge of the tyre, chest on it", "Stepped in and pushed it over, tyre tipping past upright"]],
+  ninetyswitch:["90/90 hip switch", ["Sitting tall, both knees bent to 90 degrees and dropped to one side", "Knees swung over and dropped to the other side"]],
+  activeslr:["Active straight leg raise", ["On your back, both legs long", "One straight leg lifted as high as it goes, the other stays flat"]],
+  anklecircle:["Ankle circles", ["Standing on one leg, knee lifted, toes pointed", "Toes drawn round in a slow circle"]],
+  armcircle:["Arm circles", ["Standing, arms straight out to the sides", "Hands drawn round in small circles"]],
+  deepsquat:["Deep squat hold", ["Standing, feet a little wider than the hips", "Sitting deep between the heels, chest up, palms together"]],
+  frankenstein:["Frankenstein walk", ["Standing tall, arms straight out in front", "One straight leg kicked up toward the hands"]],
+  legswing:["Front-to-back leg swing", ["Standing on one leg, the other swung back", "Leg swung forward and up, knee soft"]],
+  inchworm:["Inchworm", ["Folded forward, hands on the floor in front of the feet", "Hands walked out to a straight-arm plank"]],
+  kneewall:["Knee-to-wall ankle mobilization", ["Facing the wall, front toes a hand from it, hands on the wall", "Front knee driven forward to touch the wall, heel stays down"]],
+  wristrock:["Quadruped wrist rocks", ["Hands and knees, palms flat, fingers forward", "Shoulders rocked forward past the wrists, palms stay flat"]],
+  kneedrop:["Lumbar rotations", ["On your back, knees bent, feet flat, arms out wide", "Both knees lowered to one side, shoulders stay down"]],
+  scorpion:["Scorpion stretch", ["Face down, arms out wide, legs long", "One leg swung up and over the back, foot reaching toward the other hand"]],
+  shouldercars:["Shoulder CARs", ["Arm long by the side, other hand on the hip", "Arm circled as wide as it goes, overhead and behind"]],
+  spiderlunge:["Spiderman lunge", ["High plank, hands under the shoulders", "One foot stepped up outside the hand, hips sinking low"]],
+  spinecars:["Spinal CARs", ["Spine rolled forward, chin to chest", "Spine arched back, chest lifted"]],
+  hipcircle:["Standing hip circles", ["Hands on the hips, feet apart, hips pushed out to one side", "Hips circled round to the other side"]],
+  hipgate:["Walking hip opener and closer", ["On one leg, knee lifted in front to hip height", "Knee opened out to the side, then lowered"]],
+  kneehug:["Walking knee hug", ["Standing tall, arms by the sides", "One knee hugged to the chest, up on the toes of the other foot"]],
+  quadpull:["Walking quad pull", ["Standing tall, arms by the sides", "Heel pulled to the seat, other arm reaching up"]],
+  wallslide:["Wall slide", ["Facing the wall, forearms on it, elbows at shoulder height", "Forearms slid up the wall, arms reaching high"]],
+  wristcircle:["Wrist circles", ["Forearms forward, hands bent back", "Hands circled round and bent down"]],
+  banddisloc:["Band shoulder dislocate", ["Band held wide in front of the hips, arms straight", "Band taken up overhead and back behind the hips"]],
+  lowhighfly:["Low-to-high cable fly", ["Pulleys low, arms down and out", "Hands swept up and together at upper chest height"]],
+  woodchop:["Cable woodchop", ["Side-on to a high pulley, arms up toward it", "Pulled down and across to the opposite knee, turning through the trunk"]],
+  lowhighchop:["Low-to-high cable woodchop", ["Side-on to a low pulley, hands low by the near knee", "Pulled up and across above the opposite shoulder"]],
+  pallof:["Pallof press", ["Side-on to a chest-height pulley, handle at the chest", "Pressed straight out, trunk not turning"]],
+  abmach:["Ab crunch machine", ["Seated, hands on the handles beside the head", "Crunched forward, hands still by the head, arms riding with the chest"]],
+  torsorot:["Rotary torso machine", ["Seated, hands on the pad in front of the chest, turned to one side", "Turned through the trunk to the other side, hands still in front of the chest"]],
+  legswinglat:["Lateral leg swing", ["On one leg, the free leg swung across in front of the body", "Swung out to the side, hips stay square"]],
+  wgs:["World's greatest stretch", ["Deep lunge, far hand planted, inside elbow dropped to the front instep", "Inside arm turned up to the ceiling, chest open to the front knee"]],
+  kneelcablefly:["Kneeling cable crossover", ["Kneeling between high pulleys, arms up and out", "Hands brought down and together in front of the belly"]],
+  hipcars:["Hip CARs", ["Standing on one leg, hands on the hips, knee lifted in front", "Knee circled out to the side and back behind the body"]],
+  adductrock:["Adductor rock-back", ["On hands and one knee, the other leg straight out to the side", "Hips rocked back toward the heel, back long"]]
 };
 var ART_GYM_SRC="src/js/gfd-exercise-art-gym.js", ART_GYM_WAIT=null;
 function hasArt(id){return !!((window.GFDArt&&GFDArt.EX[id])||ART_GYM.hasOwnProperty(id));}
@@ -97,7 +130,7 @@ function artFrames(id,theme,done){
   artEngine(id,function(G){
     /* a cycle (sled drags, carries) runs t over 0..2, one full stride, and loops forward without easing or holds */
     var fr=G.framesOf(id), i=0, cyc=!!G.EX[id].cycle, last=cyc?2*ART_STEPS-1:ART_STEPS;
-    c.cycle=cyc;
+    c.cycle=cyc; c.hold=!!G.EX[id].hold;
     c.still=fr.map(function(f){return artUrl(G.render(id,theme,f.t,{view:f.view}));});
     function more(){
       var end=Math.min(i+3,last+1);
@@ -120,12 +153,12 @@ function artDraw(el){
     }
     el.classList.remove("still");
     el.innerHTML='<img alt="" src="'+c.anim[0]+'">';
-    el._art={img:el.firstChild,frames:c.anim,cycle:c.cycle,pos:0,paused:false,vis:true};
+    el._art={img:el.firstChild,frames:c.anim,cycle:c.cycle,hold:c.hold,pos:0,paused:false,vis:true};
     if(ART_LIVE.indexOf(el)<0) ART_LIVE.push(el);
     artRun();
   });
 }
-/* one timer drives every visible animation: 0..ART_STEPS, a short hold, back down, a short hold (a cycle just loops) */
+/* one timer drives every visible animation: 0..ART_STEPS, a short hold, back down, a short hold (a cycle just loops; a held pose goes in, holds, and starts again) */
 function artRun(){
   if(ART_TIMER) return;
   ART_TIMER=setInterval(function(){
@@ -135,6 +168,7 @@ function artRun(){
     ART_LIVE.forEach(function(el){
       var a=el._art; if(a.paused||!a.vis) return;
       if(a.cycle){a.pos=(a.pos+1)%a.frames.length;a.img.src=a.frames[a.pos];return;}
+      if(a.hold){a.pos=(a.pos+1)%(3*ART_STEPS);var h=Math.min(a.pos,ART_STEPS);if(a.n!==h){a.n=h;a.img.src=a.frames[h];}return;}
       a.pos=(a.pos+1)%cyc;
       var p=a.pos, n=p<=ART_STEPS?p:p<ART_STEPS+ART_HOLD?ART_STEPS:p<=2*ART_STEPS+ART_HOLD?2*ART_STEPS+ART_HOLD-p:0;
       if(a.n!==n){a.n=n;a.img.src=a.frames[n];}
