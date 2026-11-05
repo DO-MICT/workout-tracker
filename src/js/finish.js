@@ -1,5 +1,5 @@
 /* ---------- cardio on the summary: distance, time and pace ---------- */
-function cardioSum(sets){var km=0,min=0;sets.forEach(function(s){var w=+s.weight,r=+s.reps;if(isFinite(w)&&w>0)km+=w;if(isFinite(r)&&r>0)min+=r;});return {km:Math.round(km*1000)/1000,min:Math.round(min*100)/100};}
+function cardioSum(sets){return GFDRules.cardioSum(sets);}
 /* rowers and ski ergs show time per 500 m, runs and walks time per km, everything else km/h */
 function cardioKind(name){name=String(name||"").toLowerCase(); return /row|ski|erg/.test(name)?"500":/run|jog|walk|tread|sprint|hike|track/.test(name)?"km":"kmh";}
 function fmtPace(sec){sec=Math.round(sec);return Math.floor(sec/60)+":"+String(sec%60).padStart(2,"0");}

@@ -45,7 +45,7 @@ function buildWorkout(d){
   Object.keys(HIST_LIMITS).forEach(function(f){w[f]=clip(w[f],HIST_LIMITS[f]);});
   return w;
 }
-function histVolume(w){var v=0;w.sets.forEach(function(s){if(s.measure==="w"&&s.weight!=null&&s.reps!=null)v+=s.weight*s.reps;});return Math.round(v*100)/100;}
+function histVolume(w){return GFDRules.workoutVolume(w.sets);}
 function recordWorkout(w){
   if(!w) return;
   if(WEB_MODE){ wout().push(w); histFlush(); }

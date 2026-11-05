@@ -6,7 +6,7 @@ const SHELL = [
   './', 'index.html', 'manifest.webmanifest', 'src/styles.css',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'icons/favicon-32.png',
   'vendor/supabase.js',
-  'src/js/diagrams.js', 'src/js/gfd-exercise-art.js', 'src/js/exart.js', 'src/js/library.js',
+  'src/js/rules.js', 'src/js/diagrams.js', 'src/js/gfd-exercise-art.js', 'src/js/exart.js', 'src/js/library.js',
   'src/js/state.js', 'src/js/day.js', 'src/js/plans.js', 'src/js/onboarding.js', 'src/js/signin.js',
   'src/js/history.js', 'src/js/feedback.js', 'src/js/backup.js', 'src/js/coles.js', 'src/js/builder.js',
   'src/js/equipment.js', 'src/js/catalog.js', 'src/js/profile.js', 'src/js/finish.js', 'src/js/stats.js',

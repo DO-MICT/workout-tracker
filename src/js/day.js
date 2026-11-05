@@ -38,8 +38,7 @@ function setDayMenu(open){
 }
 function lastText(ex){
   var L=last()[ex.id]; if(!L||!L.sets||!L.sets.length) return labOf(ex)[0]==="kg"?"First time: pick a weight you can do with good form.":"First time: start easy and log what you do.";
-  var lb=labOf(ex), u2=lb[1]==="reps"?"":" "+lb[1];
-  var parts=L.sets.map(function(s){return (s.w&&lb[0]?s.w+" "+lb[0].replace("+",""):"")+(s.w&&lb[0]&&s.r?" × ":"")+(s.r?s.r+u2:"");}).filter(Boolean);
+  var parts=GFDRules.lastSetParts(L.sets,labOf(ex));
   var dt=new Date(L.date); var ds=isNaN(dt)?"":" ("+dt.toLocaleDateString(undefined,{weekday:"short",day:"numeric",month:"short"})+")";
   return "Last time"+ds+": "+parts.join(", ");
 }
@@ -56,11 +55,8 @@ function groupsOf(d){
 }
 /* grey hints: copy the nearest earlier set logged today; before that, PR (kg) and last session / target (reps) */
 function phFor(ex,i){
-  var arr=setsFor(ex), lb=labOf(ex), L=last()[ex.id], wp="", rp="";
-  for(var j=i-1;j>=0;j--){ if(!wp&&arr[j].w) wp=arr[j].w; if(!rp&&arr[j].r) rp=arr[j].r; }
-  if(!wp) wp=prFor(ex)||lb[0];
-  if(!rp){var ls=L&&L.sets?(L.sets[i]||L.sets[L.sets.length-1]):null; rp=ls&&ls.r?ls.r:(ex.reps==="max"?"max":String(ex.reps).split(/[–\s]/)[0]);}
-  return [wp,rp];
+  var L=last()[ex.id];
+  return GFDRules.setHint(setsFor(ex),i,L&&L.sets,parseFloat(prFor(ex))||0,labOf(ex),ex.reps);
 }
 function refreshPh(ex){
   for(var i=0;i<ex.sets;i++){

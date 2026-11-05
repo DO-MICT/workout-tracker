@@ -12,3 +12,6 @@ jobs:
           git diff --exit-code index.html || { echo "::error::index.html is out of date. Run: python3 tools/build_pages.py"; exit 1; }
       - name: Syntax check the app scripts
         run: for f in src/js/*.js; do node --check "$f"; done
+      - name: Training rules tests
+        # src/js/rules.js; tests marked todo are known bugs and don't fail the run
+        run: node --test tests/*.test.js

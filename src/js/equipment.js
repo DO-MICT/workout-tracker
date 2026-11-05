@@ -32,9 +32,7 @@ function setDayLoc(pid,did,id){var P=plansState(); if(!P.dayLoc) P.dayLoc={}; if
 function bLoc(){return (BD&&BD.loc&&locById(BD.loc))||curLoc();}
 function bGear(){return bLoc().gear;}
 function swapsFor(exId,g,inDay){
-  var L=LIB[exId]; if(!L) return [];
-  return Object.keys(LIB).map(function(k){return LIB[k];}).filter(function(o){return o.mg===L.mg&&o.id!==exId&&inDay.indexOf(o.id)<0&&!missingFor(o,g).length;})
-    .sort(function(a,b){return (a.lab===L.lab?0:1)-(b.lab===L.lab?0:1);}).slice(0,3);
+  return GFDRules.swapCandidates(LIB,exId,g||gear(),inDay,3);
 }
 function locChips(attr,sel){
   var L=locState(); sel=sel||L.active;
