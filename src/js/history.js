@@ -32,7 +32,7 @@ function buildWorkout(d){
   var sets=[], first=0, now=Date.now();
   d.ex.forEach(function(ex,k){
     setsFor(ex).slice(0,ex.sets).forEach(function(s,i){
-      if(!(s.w||s.r)) return;
+      if(!GFDRules.loggedSets([s]).length) return;
       if(s.at&&(!first||s.at<first)) first=s.at;
       sets.push(histSet(ex,k,i,s));
     });
@@ -50,28 +50,37 @@ function recordWorkout(w){
   if(!w) return;
   if(WEB_MODE){ wout().push(w); histFlush(); }
   else { var L=wlog(); if(!L.some(function(x){return x.id===w.id;})) L.push(w); if(L.length>2000) L.splice(0,L.length-2000); }
+  recDirty();
   if(H) H.dirty=true;
 }
 
-/* send waiting workouts to the database, oldest first */
+/* send waiting workouts to the database, oldest first. New ones go through save_workout, edits
+   (op "update") through update_workout. One that the database turns down stays waiting and the rest carry on;
+   a dropped connection stops the run until the next try. */
 var histBusy=false;
 function histFlush(){
   if(!WEB_MODE||!sb||!sbUser||histBusy||!wout().length) return Promise.resolve();
   histBusy=true;
+  var queue=wout().slice();
   var step=function(){
-    var w=wout()[0]; if(!w){histBusy=false;return;}
-    var body=JSON.parse(JSON.stringify(w)); delete body.who; delete body.err;
-    return sb.rpc("save_workout",{w:body}).then(function(r){
+    var w=queue.shift(); if(!w) return;
+    if(wout().indexOf(w)<0) return step();
+    var body=JSON.parse(JSON.stringify(w)), op=body.op; delete body.who; delete body.err; delete body.op;
+    return sb.rpc(op==="update"?"update_workout":"save_workout",{w:body}).then(function(r){
       if(r&&r.error){
         w.err=(w.err||0)+1;
-        /* a rejected record (not a connection problem) would block the queue: move it to the back */
-        if(/^(22|23)/.test(r.error.code||"")&&wout().length>1){wout().push(wout().shift());}
-        throw r.error;
+        if(!r.error.code) throw r.error;   /* no answer from the database: try again later */
+        return step();
       }
-      wout().shift(); if(H){H.dirty=true;H.cache[w.id]=w;} save(); return step();
+      var k=wout().indexOf(w);
+      if(k>=0) wout().splice(k,1);
+      /* edited while it was uploading: the newer copy now has to replace the saved one */
+      else wout().forEach(function(x){ if(x.id===w.id&&!x.op) x.op="update"; });
+      rcApply(w);
+      if(H){H.dirty=true;H.cache[w.id]=w;} save(); return step();
     });
   };
-  return Promise.resolve(step()).catch(function(){histBusy=false;save();}).then(function(){histBusy=false; if(H&&H.dirty&&!H.ex) histReload();});
+  return Promise.resolve(step()).catch(function(){histBusy=false;save();}).then(function(){histBusy=false; if(H&&H.dirty&&!H.ex&&!H.edit) histReload();});
 }
 window.addEventListener("online",function(){histFlush();});
 document.addEventListener("visibilitychange",function(){ if(document.visibilityState==="visible") histFlush(); });
@@ -106,7 +115,7 @@ function histImport(){
   if(!WEB_MODE) wlog().sort(function(a,b){return a.performed_at<b.performed_at?-1:1;});
   S.histImportV1=1; save(); histFlush();
 }
-function histInit(){ try{ histImport(); }catch(e){} histFlush(); }
+function histInit(){ try{ histImport(); }catch(e){} histFlush().then(recFetch); }
 
 /* ---------- reading history (same calls whether it comes from the database or the device) ---------- */
 var HIST_PAGE=20;
@@ -134,21 +143,38 @@ function histSets(ids){
 /* every logged set of one exercise, newest first: [{workout_id, performed_at, set_no, measure, weight, reps}] */
 function histExercise(exId){
   var mine=function(list){var out=[];list.forEach(function(w){w.sets.forEach(function(s){if(s.exercise_id===exId)out.push({workout_id:w.id,performed_at:w.performed_at,set_no:s.set_no,measure:s.measure,weight:s.weight,reps:s.reps,pending:WEB_MODE});});});return out;};
-  var pend=WEB_MODE?mine(wout()):[];
+  var pend=WEB_MODE?mine(wout()):[], waiting={};
+  wout().forEach(function(w){waiting[w.id]=1;});
   if(!WEB_MODE) return Promise.resolve(mine(localWorkouts()).sort(byNewest));
   if(!sb||!sbUser) return Promise.resolve(pend.sort(byNewest));
   return sb.from("workout_sets").select("workout_id,performed_at,set_no,measure,weight,reps").eq("exercise_id",exId)
     .order("performed_at",{ascending:false}).limit(600).then(function(r){
       if(r&&r.error) throw r.error;
-      return pend.concat((r&&r.data)||[]).sort(byNewest);
+      /* a workout edited on this phone and not uploaded yet: show the edited sets, not the saved ones */
+      return pend.concat(((r&&r.data)||[]).filter(function(x){return !waiting[x.workout_id];})).sort(byNewest);
     });
 }
 function byNewest(a,b){return a.performed_at<b.performed_at?1:a.performed_at>b.performed_at?-1:(a.set_no||0)-(b.set_no||0);}
 function histDelete(id){
   var q=wout().filter(function(w){return w.id===id;})[0];
-  if(q){ S.wout=wout().filter(function(w){return w.id!==id;}); save(); return Promise.resolve(); }
-  if(!WEB_MODE){ S.wlog=wlog().filter(function(w){return w.id!==id;}); save(); return Promise.resolve(); }
-  return sb.from("workouts").delete().eq("id",id).then(function(r){ if(r&&r.error) throw r.error; });
+  if(q&&q.op!=="update"){ S.wout=wout().filter(function(w){return w.id!==id;}); save(); recDirty(); return Promise.resolve(); }
+  if(!WEB_MODE){ S.wlog=wlog().filter(function(w){return w.id!==id;}); save(); recDirty(); return Promise.resolve(); }
+  /* saved in the database (maybe with an edit waiting): delete it there, then drop the waiting edit */
+  return sb.from("workouts").delete().eq("id",id).then(function(r){
+    if(r&&r.error) throw r.error;
+    S.wout=wout().filter(function(w){return w.id!==id;}); save(); rcRemove(id);
+  });
+}
+/* save changes made to a past workout. Not uploaded yet: change it in place. Saved in the database: queue
+   an edit (op "update") that waits in the outbox like a new workout, so it works offline too. */
+function histSaveEdit(row,sets){
+  var id=row.id, q=wout().filter(function(w){return w.id===id;})[0];
+  if(q){ var k=wout().indexOf(q); wout()[k]=Object.assign({},q,{sets:sets}); }
+  else if(!WEB_MODE){ var lw=wlog().filter(function(w){return w.id===id;})[0]; if(lw) lw.sets=sets; }
+  else wout().push({op:"update",id:id,performed_at:row.performed_at,started_at:row.started_at||null,duration_sec:row.duration_sec||null,
+    plan_id:row.plan_id||null,plan_name:row.plan_name||null,day_id:row.day_id||null,day_title:row.day_title||null,location_name:row.location_name||null,
+    source:row.source||"app",who:S.who||0,sets:sets});
+  save(); recDirty(); histFlush();
 }
 
 /* ---------- formatting ---------- */
@@ -208,9 +234,12 @@ function histOpenSets(id){
 }
 function histRows(){
   /* waiting-to-sync workouts first (web), then what the database or device returned */
-  var pend=WEB_MODE?wout().slice().reverse().map(function(w){return Object.assign({},w,{pending:true,set_count:w.sets.length,volume_kg:histVolume(w)});}):[];
+  var shown=function(w){return Object.assign({},w,{pending:true,set_count:w.sets.length,volume_kg:histVolume(w)});};
+  var pend=WEB_MODE?wout().filter(function(w){return w.op!=="update";}).reverse().map(shown):[];
+  var edits={}; if(WEB_MODE) wout().forEach(function(w){ if(w.op==="update") edits[w.id]=w; });
   var seen={}; pend.forEach(function(w){seen[w.id]=1;});
   return pend.concat((H.rows||[]).filter(function(w){return !seen[w.id];}).map(function(w){
+    if(edits[w.id]) return Object.assign({},w,{pending:true,edited:true,set_count:edits[w.id].sets.length,volume_kg:histVolume(edits[w.id])});
     if(!WEB_MODE) return Object.assign({},w,{set_count:w.sets.length,volume_kg:histVolume(w)}); return w;
   }));
 }
@@ -239,25 +268,78 @@ function renderHistory(keepScroll){
       var meta=[w.plan_name,w.location_name,(w.set_count||0)+' set'+(w.set_count===1?'':'s'),+w.volume_kg>0?fmtKg(w.volume_kg):"",fmtDur(w.duration_sec)].filter(Boolean).join(" · ");
       var open=!!H.open[w.id];
       h+='<details class="hcard" data-hw="'+esc(w.id)+'"'+(open?' open':'')+'><summary><div class="hdate"><b>'+esc(hDate(w.performed_at,{day:"numeric"}))+'</b><span>'+esc(hDate(w.performed_at,{weekday:"short"}))+'</span></div>'+
-        '<div class="hmain"><b>'+esc(w.day_title||"Workout")+'</b><span>'+esc(meta)+'</span>'+(w.pending?'<em class="htag">Waiting to sync</em>':'')+(w.source==="import"?'<em class="htag imp">From before history</em>':'')+'</div>'+DAY_CHEV+'</summary>';
+        '<div class="hmain"><b>'+esc(w.day_title||"Workout")+'</b><span>'+esc(meta)+'</span>'+(w.pending?'<em class="htag">'+(w.edited?'Edit waiting to sync':'Waiting to sync')+'</em>':'')+(w.source==="import"?'<em class="htag imp">From before history</em>':'')+'</div>'+DAY_CHEV+'</summary>';
       if(open){
         var sets=H.sets[w.id];
         if(sets===undefined) h+='<p class="eqempty">Loading…</p>';
         else if(sets===null) h+='<p class="eqempty">Couldn’t load the sets.</p>';
+        else if(H.edit&&H.edit.id===w.id) h+=histEditHtml();
         else {
           h+='<ol class="hex">'+histExerciseList(sets).map(function(e){
             return '<li'+(e.tag?' class="g"':'')+'><button class="linkbtn hexname" data-hex="'+esc(e.id)+'">'+esc(e.name)+'</button><span>'+e.sets.map(function(s){return esc(fmtSet(s)||"–");}).join(", ")+'</span></li>';
           }).join("")+'</ol>';
           if(w.started_at) h+='<p class="hsmall">Started '+esc(new Date(w.started_at).toLocaleTimeString(undefined,{hour:"2-digit",minute:"2-digit"}))+', finished '+esc(new Date(w.performed_at).toLocaleTimeString(undefined,{hour:"2-digit",minute:"2-digit"}))+'</p>';
         }
-        h+=H.del===w.id?'<div class="hdel"><span>Delete this workout? Your PRs stay.</span><button class="ghost" data-hdelno="1">Keep</button><button class="primary danger" data-hdelyes="'+esc(w.id)+'">Delete</button></div>'
-          :'<button class="linkbtn hdelbtn" data-hdel="'+esc(w.id)+'">Delete workout</button>';
+        if(H.edit&&H.edit.id===w.id){}
+        else if(H.del===w.id) h+='<div class="hdel"><span>Delete this workout? Your records and last time will update to match.</span><button class="ghost" data-hdelno="1">Keep</button><button class="primary danger" data-hdelyes="'+esc(w.id)+'">Delete</button></div>';
+        else h+='<div class="hacts">'+(sets&&sets.length?'<button class="chip" data-hedit="'+esc(w.id)+'">Edit workout</button>':'')+'<button class="linkbtn hdelbtn" data-hdel="'+esc(w.id)+'">Delete workout</button></div>';
       }
       h+='</details>';
     });
     if(H.more) h+='<button class="ghost hmore" id="histMore"'+(H.loading?' disabled':'')+'>'+(H.loading?'Loading…':'Show older workouts')+'</button>';
   }
   sh.innerHTML=h+'</div>'; if(keepScroll) sh.scrollTop=st;
+}
+/* ---------- edit a past workout (F1) ---------- */
+function histEditStart(id){
+  var row=histRows().filter(function(w){return w.id===id;})[0], sets=H.sets[id]; if(!row||!sets) return;
+  H.del=null;
+  H.edit={id:id,row:row,err:"",ex:histExerciseList(sets).map(function(e){
+    var s0=e.sets[0]||{};
+    return {id:e.id,name:e.name,mg:s0.muscle_group||null,measure:s0.measure||"w",tag:e.tag||null,order:e.order,
+      sets:e.sets.map(function(s){return {w:s.weight==null?"":fmtNum(+s.weight),r:s.reps==null?"":fmtNum(+s.reps),done:s.done!==false};})};
+  })};
+}
+function histEditHtml(){
+  var E=H.edit, h='<div class="hedit"><p class="sub">Change any number, add a set or remove one. Records and last time update to match.</p>';
+  E.ex.forEach(function(e,k){
+    var lb=LABS[e.measure]||LABS.w;
+    h+='<div class="hedex"><b>'+esc(e.name)+'</b>';
+    if(e.sets.length) h+='<div class="setrow hedrow" aria-hidden="true"><span></span><span class="lbl">'+esc(lb[0])+'</span><span class="lbl">'+esc(lb[1])+'</span><span></span></div>';
+    e.sets.forEach(function(s,j){
+      h+='<div class="setrow hedrow"><span class="n">'+(j+1)+'</span>'+
+        (lb[0]?'<input inputmode="decimal" aria-label="'+esc(e.name)+' set '+(j+1)+' '+esc(lb[0])+'" data-hed="'+k+'|'+j+'|w" value="'+esc(s.w)+'" placeholder="'+esc(lb[0])+'">':'<span></span>')+
+        '<input inputmode="decimal" aria-label="'+esc(e.name)+' set '+(j+1)+' '+esc(lb[1])+'" data-hed="'+k+'|'+j+'|r" value="'+esc(s.r)+'" placeholder="'+esc(lb[1])+'">'+
+        '<button class="setdel hsetdel" data-hedel="'+k+'|'+j+'" aria-label="Remove '+esc(e.name)+' set '+(j+1)+'">'+DEL_SVG+'</button></div>';
+    });
+    if(!e.sets.length) h+='<p class="hsmall">No sets: this exercise will be removed.</p>';
+    h+='<button class="linkbtn headd" data-headd="'+k+'">+ Add set</button></div>';
+  });
+  if(E.err) h+='<p class="wzerr" role="alert">'+esc(E.err)+'</p>';
+  h+='<div class="hdel"><button class="ghost" data-hedcancel="1">Cancel</button><button class="primary" data-hedsave="1">Save changes</button></div></div>';
+  return h;
+}
+function historyInput(el){
+  if(!H||!H.edit||!el.dataset||!el.dataset.hed) return false;
+  var p=el.dataset.hed.split("|"), s=H.edit.ex[+p[0]].sets[+p[1]];
+  s[p[2]]=el.value.replace(",",".").slice(0,7);
+  return true;
+}
+function histEditSave(){
+  var E=H.edit, sets=[];
+  E.ex.forEach(function(e){
+    var n=0;
+    e.sets.forEach(function(s){
+      if(!(s.w||s.r)) return;
+      n++;
+      sets.push({exercise_id:e.id,exercise_name:e.name,muscle_group:e.mg,exercise_order:e.order,set_no:Math.min(n,50),
+        measure:e.measure,weight:numOrNull(s.w,-1000,5000),reps:numOrNull(s.r,0,100000),done:s.done,group_tag:e.tag});
+    });
+  });
+  if(!sets.length){ E.err="Every set is empty. To remove the whole workout, use Delete workout instead."; renderHistory(true); return; }
+  histSaveEdit(E.row,sets);
+  H.sets[E.id]=sets; H.cache[E.id]=Object.assign({},E.row,{sets:sets}); H.edit=null;
+  renderHistory(true); statsLoad(); recChanged(); toast("Workout updated");
 }
 /* progress for one exercise: chart of the best set per workout + every session */
 function histExHtml(){
@@ -271,13 +353,16 @@ function histExHtml(){
   var by={}, order=[];
   rows.forEach(function(r){ if(!by[r.workout_id]){by[r.workout_id]={at:r.performed_at,sets:[],pending:r.pending};order.push(r.workout_id);} by[r.workout_id].sets.push(r); });
   var sessions=order.map(function(id){var s=by[id]; s.sets.sort(function(a,b){return a.set_no-b.set_no;}); var v=null; s.sets.forEach(function(x){var n=x[m[2]]; if(n!=null&&(v===null||n>v)) v=+n;}); s.best=v; return s;});
-  var vals=sessions.filter(function(s){return s.best!=null;}), top=null;
-  vals.forEach(function(s){ if(!top||s.best>top.best) top=s; });
+  var vals=sessions.filter(function(s){return s.best!=null;}), top=null, reset=prResets()[H.ex];
+  /* the record counts from the reset date, if there is one; the chart and list keep everything */
+  vals.forEach(function(s){ if((!reset||s.at>reset)&&(!top||s.best>top.best)) top=s; });
   var first=vals.length?vals[vals.length-1]:null, lastS=vals.length?vals[0]:null;
-  h+='<div class="hstats"><div><span>'+esc(m[0])+'</span><b>'+(top?fmtNum(top.best)+' '+m[1]:'–')+'</b>'+(top?'<em>'+esc(hDate(top.at,{day:"numeric",month:"short"}))+'</em>':'')+'</div>'+
+  h+='<div class="hstats"><div><span>'+esc(reset?m[0]+' since reset':m[0])+'</span><b>'+(top?fmtNum(top.best)+' '+m[1]:'–')+'</b>'+(top?'<em>'+esc(hDate(top.at,{day:"numeric",month:"short"}))+'</em>':'')+'</div>'+
     '<div><span>Workouts</span><b>'+sessions.length+'</b><em>since '+esc(hDate(sessions[sessions.length-1].at,{day:"numeric",month:"short"}))+'</em></div>'+
     (first&&lastS&&vals.length>1?'<div><span>Change</span><b>'+((lastS.best-first.best)>=0?'+':'')+fmtNum(lastS.best-first.best)+' '+m[1]+'</b><em>first to latest</em></div>':'')+'</div>';
   if(vals.length>1) h+=histChart(vals.slice(0,24).reverse(),m);
+  h+='<p class="hsmall hreset">'+(reset?'Record reset on '+esc(hDate(reset,{day:"numeric",month:"short",year:"numeric"}))+'. ':'')+
+    '<button class="linkbtn" data-prreset="'+esc(H.ex)+'">Reset record</button> Start your record fresh, for example after a long break or injury. Your history stays.</p>';
   h+='<h3 class="psec">Every workout</h3><ul class="hsess">'+sessions.map(function(s){
     return '<li><div><b>'+esc(hDate(s.at))+'</b>'+(s.pending?'<em class="htag">Waiting to sync</em>':'')+'</div><span>'+s.sets.map(function(x){return esc(fmtSet(x)||"–");}).join(", ")+'</span></li>';
   }).join("")+'</ul>';
@@ -305,11 +390,20 @@ function historyClick(t){
   if(t.id==="histBack"){H.ex=null;H.exRows=null;H.err="";renderHistory();var y=H.backY||0;document.getElementById("history").scrollTop=y;if(H.dirty)histReload();return true;}
   if(t.id==="histMore"){histMore();return true;}
   if(t.dataset.hex){H.backY=document.getElementById("history").scrollTop;H.fromEx=false;histLoadEx(t.dataset.hex);var b=document.getElementById("histBack");if(b)b.focus();return true;}
+  if(t.dataset.hedit){histEditStart(t.dataset.hedit);renderHistory(true);var f=document.querySelector("[data-hed]");if(f)f.focus();return true;}
+  if(t.dataset.hedcancel){var ide=H.edit&&H.edit.id;H.edit=null;renderHistory(true);var eb=document.querySelector('[data-hedit="'+ide+'"]');if(eb)eb.focus();return true;}
+  if(t.dataset.hedsave){histEditSave();return true;}
+  if(t.dataset.headd!==undefined&&H.edit){var ex=H.edit.ex[+t.dataset.headd], ls=ex.sets[ex.sets.length-1]; ex.sets.push(ls?{w:ls.w,r:ls.r,done:true}:{w:"",r:"",done:true}); renderHistory(true); var ins=document.querySelectorAll('[data-hed^="'+t.dataset.headd+'|'+(ex.sets.length-1)+'|"]'); if(ins.length) ins[0].focus(); return true;}
+  if(t.dataset.hedel&&H.edit){var pq=t.dataset.hedel.split("|"); H.edit.ex[+pq[0]].sets.splice(+pq[1],1); renderHistory(true); var ab=document.querySelector('[data-headd="'+pq[0]+'"]'); if(ab) ab.focus(); return true;}
+  if(t.dataset.prreset){
+    if(!confirmTap(t,"Reset record","Tap again to reset")) return true;
+    resetRecord(t.dataset.prreset); renderHistory(true); toast("Record reset. Your history is kept."); return true;
+  }
   if(t.dataset.hdel){H.del=t.dataset.hdel;renderHistory(true);var y2=document.querySelector("[data-hdelyes]");if(y2)y2.focus();return true;}
   if(t.dataset.hdelno){var id0=H.del;H.del=null;renderHistory(true);var d0=document.querySelector('[data-hdel="'+id0+'"]');if(d0)d0.focus();return true;}
   if(t.dataset.hdelyes){
     var id=t.dataset.hdelyes; t.disabled=true;
-    histDelete(id).then(function(){ if(!H) return; H.rows=(H.rows||[]).filter(function(w){return w.id!==id;}); H.del=null; delete H.open[id]; renderHistory(true); toast("Workout deleted"); })
+    histDelete(id).then(function(){ recChanged(); if(!H) return; H.rows=(H.rows||[]).filter(function(w){return w.id!==id;}); H.del=null; delete H.open[id]; renderHistory(true); statsLoad(); toast("Workout deleted"); })
       .catch(function(){ if(!H) return; t.disabled=false; toast("Couldn’t delete. Check your connection"); });
     return true;
   }
@@ -320,7 +414,7 @@ document.addEventListener("toggle",function(e){
   var d=e.target; if(!H||!d.dataset||!d.dataset.hw) return;
   var id=d.dataset.hw, was=!!H.open[id];
   if(d.open===was) return;
-  if(d.open){H.open[id]=true;histOpenSets(id);} else {delete H.open[id]; if(H.del===id) H.del=null;}
+  if(d.open){H.open[id]=true;histOpenSets(id);} else {delete H.open[id]; if(H.del===id) H.del=null; if(H.edit&&H.edit.id===id) H.edit=null;}
   var hadFocus=document.activeElement&&d.contains(document.activeElement);
   renderHistory(true);
   if(hadFocus){var sm=document.querySelector('[data-hw="'+id+'"] > summary'); if(sm) sm.focus({preventScroll:true});}

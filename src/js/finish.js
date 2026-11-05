@@ -54,7 +54,14 @@ function showDone(rec,d,wins){
   var b=document.getElementById("doneClose"); if(b) b.focus();
 }
 function closeDone(){var el=document.getElementById("donepop"); if(!el||el.hidden) return; el.hidden=true; el.innerHTML=""; document.body.style.overflow="";}
-function toast(m){var t=document.getElementById("toast");t.textContent=m;t.classList.add("on");clearTimeout(toast._t);toast._t=setTimeout(function(){t.classList.remove("on");},2600);}
+function toast(m){var t=document.getElementById("toast");toast._act=null;t.textContent=m;t.classList.add("on");clearTimeout(toast._t);toast._t=setTimeout(function(){t.classList.remove("on");},2600);}
+/* a toast with one button, e.g. Undo */
+function toastAction(m,label,fn){
+  var t=document.getElementById("toast");
+  t.innerHTML='<span>'+esc(m)+'</span><button id="toastAct" class="toastbtn">'+esc(label)+'</button>';
+  t.classList.add("on"); toast._act=fn; clearTimeout(toast._t);
+  toast._t=setTimeout(function(){t.classList.remove("on");toast._act=null;},6000);
+}
 
 /* ---------- on-screen keyboard ----------
    iPhone keeps full-screen panels at full height when the keyboard opens, so the bottom half

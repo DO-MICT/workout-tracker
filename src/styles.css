@@ -166,6 +166,29 @@ details.how[open] summary::before{content:"−"}
 .tick{border:2px solid var(--line);background:transparent;border-radius:8px;height:42px;cursor:pointer;font-weight:700;font-size:1.1rem}
 .tick[aria-pressed="true"]{background:var(--accent);border-color:var(--accent-ink);color:var(--accent-ink)}
 .setrow.isdone input{background:var(--done-bg);border-color:transparent}
+/* F1: a ticked set shows a bin while you edit it */
+.setrow .n b{font-weight:inherit}
+.setdel{display:none;align-items:center;justify-content:center;width:100%;height:42px;padding:0;border:0;border-radius:8px;background:transparent;color:#C0392B;cursor:pointer}
+.setrow.editing{grid-template-columns:40px minmax(0,1fr) minmax(0,1fr) 52px}
+.setrow.editing .n b{display:none}
+.setrow.editing .setdel{display:flex}
+/* F1: edit a past workout in History */
+.hacts{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:2px 0 12px}
+.hacts .hdelbtn{padding:6px 0}
+.hedit{padding-bottom:4px}
+.hedit .sub{margin:0 0 8px}
+.hedex{background:var(--bg);border-radius:12px;padding:10px;margin-bottom:8px}
+.hedex>b{display:block;margin-bottom:6px}
+.hedrow{margin-bottom:6px}
+.hedrow .setdel.hsetdel{display:flex;border:1px solid var(--line)}
+.linkbtn.headd{padding:6px 0}
+.hreset{margin:4px 0 14px}
+.hreset .linkbtn{color:#C0392B;font-size:.82rem;padding:0;min-height:0}
+/* F1: "850 kg? Check this set" */
+.askcard h2{font-size:1.9rem}
+.asksub{color:var(--muted);margin:0 0 8px}
+.asktext{font-size:1.1rem;font-weight:600;margin:0 0 14px}
+.toast .toastbtn{margin-left:12px;border:0;background:transparent;color:inherit;font-weight:800;text-decoration:underline;cursor:pointer;padding:4px 2px;font-size:1rem}
 .fin{border:2px dashed var(--steel);background:transparent}
 .fin .row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:8px}
 .actions{display:grid;gap:10px;margin:22px 0}
