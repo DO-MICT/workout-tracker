@@ -1,7 +1,7 @@
 """Build index.html (GitHub Pages) from app.html (the page shell; code lives in src/).
 
 Usage:  python3 tools/build_pages.py
-Adds the web title, home-screen install tags and icons. The app switches to Supabase
+Adds the web title, home-screen install tags, icons and the offline service worker (sw.js). The app switches to Supabase
 sign-in automatically when it runs outside Claude, so no other changes are needed.
 """
 from pathlib import Path
@@ -19,7 +19,8 @@ head_tags = """<title>GFD · Get Fit Daily</title>
 <meta name="apple-mobile-web-app-title" content="GFD">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">"""
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})});</script>"""
 
 assert src.count("<title>5-day split</title>") == 1, "title tag not found in app.html"
 out = src.replace("<title>5-day split</title>", head_tags, 1)

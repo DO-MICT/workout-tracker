@@ -11,6 +11,7 @@ The web app is the source of truth; the earlier Expo app (`mobile/`) was removed
 ## Rules
 
 - `index.html` is built from `app.html`: run `python3 tools/build_pages.py` after changing `app.html` (CI fails otherwise).
+- `sw.js` gives the live site offline support (network first, so no cache bump is needed). Add any new `src/js` file to its `SHELL` list.
 - Keep exercise and gear ids stable; saved plans, history and gear lists point at them.
 - On Windows, set `PYTHONUTF8=1` before running the Python tools.
 - Don't read the large generated files whole (`data/**/exercises.json`, `gear.json`, `*.sql`, `src/js/gfd-exercise-art.js`).
