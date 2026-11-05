@@ -1,7 +1,7 @@
 # GFD · Get Fit Daily
 
-Workout planner and logger: web MVP (`app.html` + `src/`, live on GitHub Pages) and an Expo app (`mobile/`, see `mobile/HANDOVER.md`),
-both on the Supabase project in `supabase/migrations/`. Background and next steps: `docs/context.md`.
+Workout planner and logger: a web app (`app.html` + `src/`, live on GitHub Pages) on the Supabase project in `supabase/migrations/`.
+The web app is the source of truth; the earlier Expo app (`mobile/`) was removed in Nov 2026. Background and next steps: `docs/context.md`.
 
 ## Read the brief for the area you're working in, not old threads
 

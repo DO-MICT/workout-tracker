@@ -47,7 +47,7 @@ Tiers exist only as placeholders today; nothing is gated yet.
 
 ## Next steps (agreed direction)
 1. Supabase Auth settings: Site URL + redirect URL for GitHub Pages; decide on email confirmation (built-in email sending is rate-limited — fine for a handful of testers, use custom SMTP before launch).
-2. Expo / React Native app (TypeScript, expo-router, EAS cloud builds because there's no Mac) using the same Supabase project and the same `user_state` shape.
+2. Native store app: an Expo / React Native attempt (`mobile/`) didn't work out and was removed in Nov 2026. The web app is the source of truth; any future store build should wrap or port it, using the same Supabase project and `user_state` shape.
 3. TestFlight + Play internal testing.
 4. RevenueCat for subscriptions (entitlements for Pro/Tester, webhook sets `profiles.tier`). No ads.
 5. Privacy policy (POPIA), in-app account deletion and data export, store listings.
