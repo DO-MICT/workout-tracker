@@ -25,21 +25,34 @@ function cardioBlocks(rec,prev){
 /* ---------- the "well done" popup after Complete workout ---------- */
 var DONE_CHEERS=["Well done!","High five!","Look at you go!","Crushed it!","Strong work!","That’s how it’s done!","Another one in the bank!","Beast mode: complete!","Nailed it!","You showed up and smashed it!"];
 var DONE_PR_CHEERS=["New PR! Look at you go!","PR day! High five!","Stronger than ever!","New record. Take a bow!"];
+/* Calm style (Profile): quieter words for a studio, and no confetti */
+var DONE_CALM=["Nice practice","Good session","Well practised","Session complete","Time well spent"];
+var DONE_CALM_PR=["Nice practice, and a new personal best","Good session, with a new best"];
 var DONE_SVG='<svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="var(--accent)"/><path d="M22 18h20v8a10 10 0 0 1-20 0z" fill="var(--accent-ink)"/><path d="M22 21h-5a5 5 0 0 0 5 7M42 21h5a5 5 0 0 1-5 7" fill="none" stroke="var(--accent-ink)" stroke-width="2.6" stroke-linecap="round"/><path d="M32 36v6M25 46h14" stroke="var(--accent-ink)" stroke-width="3.2" stroke-linecap="round"/></svg>';
 var DONE_LAST=null;
 function donePick(a){var i=Math.floor(Math.random()*a.length); if(a.length>1&&a[i]===DONE_LAST) i=(i+1)%a.length; DONE_LAST=a[i]; return a[i];}
+function celebStyle(){ return S.celebrate==="calm"?"calm":"energetic"; }
+/* a record's number with its unit: "100 kg", "about 112.5 kg", "18 reps", "5:12 /km" */
+function winText(p){ return p.u==="/km"?fmtPace(p.now)+" /km":(p.about?"about ":"")+fmtNum(p.now)+" "+(p.u||"kg"); }
+function wasText(p){ return "was "+(p.u==="/km"?fmtPace(p.was):fmtNum(p.was)); }
 function showDone(rec,d,wins){
   var el=document.getElementById("donepop"); if(!el) return;
+  var calm=celebStyle()==="calm", miles=wins.miles||[], missed=wins.missed||[];
   var exN={}; rec.sets.forEach(function(x){exN[x.exercise_order]=1;});
   var nEx=Object.keys(exN).length, vol=histVolume(rec), done=rec.sets.filter(function(x){return x.done;}).length;
   var stats=[[fmtDur(rec.duration_sec)||"–","Time"],[String(rec.sets.length),"Sets"+(done&&done<rec.sets.length?" ("+done+" ticked)":"")],[String(nEx),"Exercise"+(nEx===1?"":"s")]];
   var cardio=cardioBlocks(rec,wins.prevCardio), cKm=0; cardio.forEach(function(b){cKm+=b.km;});
   if(vol>0) stats.push([fmtKg(vol),"Lifted"]);
   else if(cKm>0) stats.push([fmtKm(cKm),"Distance"]);
-  var h='<div class="donecard" role="dialog" aria-modal="true" aria-labelledby="doneTitle"><div class="confetti" aria-hidden="true">'+Array.apply(null,Array(18)).map(function(_,i){return '<i style="--i:'+i+'"></i>';}).join("")+'</div>'+
-    DONE_SVG+'<h2 id="doneTitle">'+esc(donePick(wins.prs.length?DONE_PR_CHEERS:DONE_CHEERS))+'</h2>'+
+  /* confetti only for a real win, never in Calm, and only above the numbers */
+  var party=!calm&&(wins.prs.length||wins.up.length||miles.length);
+  var title=calm?donePick(wins.prs.length?DONE_CALM_PR:DONE_CALM):donePick(wins.prs.length?DONE_PR_CHEERS:DONE_CHEERS);
+  var h='<div class="donecard'+(calm?' calm':'')+'" role="dialog" aria-modal="true" aria-labelledby="doneTitle">'+
+    (party?'<div class="confetti" aria-hidden="true">'+Array.apply(null,Array(18)).map(function(_,i){return '<i style="--i:'+i+'"></i>';}).join("")+'</div>':'')+
+    DONE_SVG+'<h2 id="doneTitle">'+esc(title)+'</h2>'+
     '<p class="donesub">'+esc(d.title)+' · '+esc(hDate(rec.performed_at))+'</p>'+
     '<div class="donestats">'+stats.map(function(x){return '<div><b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div>';}).join("")+'</div>';
+  if(miles.length) h+='<ul class="donemiles">'+miles.map(function(m){return '<li class="dm-'+esc(m.key)+'">'+esc(m.text)+'</li>';}).join("")+'</ul>';
   if(cardio.length) h+='<div class="donecardio"><h3>Cardio</h3>'+cardio.map(function(b){
     var bits=[b.km>0?fmtKm(b.km):"",b.min>0?fmtMin(b.min):""].filter(Boolean).join(" in ");
     return '<div class="dcrow"><div class="dcname"><span>'+esc(b.n)+'</span><em>'+esc(bits)+'</em></div>'+
@@ -47,8 +60,9 @@ function showDone(rec,d,wins){
         (b.was?'<em class="'+(b.cmp||"")+'">'+(b.cmp==="up"?"Faster than":b.cmp==="down"?"Slower than":"Same as")+' last time ('+esc(b.was.v)+')</em>':'')+'</div>'
       :'<div class="dcpace"><em>Add '+(b.km>0?'minutes':'distance')+' to see your pace</em></div>')+'</div>';
   }).join("")+'</div>';
-  if(wins.prs.length) h+='<div class="donewins"><h3>New PR'+(wins.prs.length>1?'s':'')+'</h3><ul>'+wins.prs.map(function(p){return '<li><span>'+esc(p.n)+'</span><b>'+fmtNum(p.now)+' '+(p.u||'kg')+'</b><em>was '+fmtNum(p.was)+'</em></li>';}).join("")+'</ul></div>';
+  if(wins.prs.length) h+='<div class="donewins"><h3>'+(calm?'Personal best'+(wins.prs.length>1?'s':''):'New PR'+(wins.prs.length>1?'s':''))+'</h3><ul>'+wins.prs.map(function(p){return '<li><span>'+esc(p.n)+(p.what?'<small>'+esc(p.what)+'</small>':'')+'</span><b>'+esc(winText(p))+'</b><em>'+esc(wasText(p))+'</em></li>';}).join("")+'</ul></div>';
   if(wins.up.length) h+='<div class="donewins up"><h3>Up on last time</h3><ul>'+wins.up.map(function(p){return '<li><span>'+esc(p.n)+'</span><b>+'+fmtNum(p.by)+' '+(p.u||'kg')+'</b></li>';}).join("")+'</ul></div>';
+  if(missed.length) h+='<p class="donemissed">'+esc(missed.length===1?missed[0].n+", set "+missed[0].set+" was short of its target.":missed.length+" sets were short of their target.")+' They’re saved, just not counted as wins.</p>';
   h+='<div class="donebtns"><button class="ghost" id="doneHistory">See in History</button><button class="primary" id="doneClose">Done</button></div></div>';
   el.innerHTML=h; el.hidden=false; document.body.style.overflow="hidden";
   var b=document.getElementById("doneClose"); if(b) b.focus();

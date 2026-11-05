@@ -37,7 +37,7 @@ function setDayMenu(open){
   if(open){var c=m.querySelector('[aria-pressed="true"]')||m.querySelector(".dm-item"); if(c) c.focus();}
 }
 function lastText(ex){
-  var L=lastFor(ex.id); if(!L||!L.sets||!L.sets.length) return labOf(ex)[0]==="kg"?"First time: pick a weight you can do with good form.":"First time: start easy and log what you do.";
+  var L=lastFor(ex.id,ex); if(!L||!L.sets||!L.sets.length) return labOf(ex)[0]==="kg"?"First time: pick a weight you can do with good form.":"First time: start easy and log what you do.";
   var parts=GFDRules.lastSetParts(L.sets,labOf(ex));
   var dt=new Date(L.date); var ds=isNaN(dt)?"":" ("+dt.toLocaleDateString(undefined,{weekday:"short",day:"numeric",month:"short"})+")";
   return "Last time"+ds+": "+parts.join(", ");
@@ -94,15 +94,22 @@ function exHtml(ex){
   h+='<details class="how"><summary>How to do it safely</summary>'+exFigure(ex.id,ex.f)+'<ul class="cues">'+ex.c.map(function(c){return '<li>'+esc(c)+'</li>';}).join("")+'</ul></details>';
   var lb=labOf(ex);
   h+='<div class="sets"><div class="setrow" aria-hidden="true"><span></span><span class="lbl">'+lb[0]+'</span><span class="lbl">'+lb[1]+'</span><span></span></div>';
+  var missed=[];
   arr.slice(0,ex.sets).forEach(function(s,i){
-    var ph=phFor(ex), wp=ph[0], rp=ph[1];
-    h+='<div class="setrow'+(s.d?' isdone':'')+'"><span class="n">'+setNumHtml(ex,i,s.d)+'</span>'+
+    var ph=phFor(ex), wp=ph[0], rp=ph[1], ms=s.d&&GFDRules.isMissed(lb,s,ex.reps);
+    if(ms) missed.push(i+1);
+    h+='<div class="setrow'+(s.d?' isdone':'')+(ms?' missed':'')+'"><span class="n">'+setNumHtml(ex,i,s.d)+'</span>'+
       (lb[0]?'<input inputmode="decimal" aria-label="Set '+(i+1)+' '+lb[0]+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="w" value="'+esc(s.w)+'" placeholder="'+esc(wp)+'">':'<span></span>')+
       '<input inputmode="decimal" aria-label="Set '+(i+1)+' '+lb[1]+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="r" value="'+esc(s.r)+'" placeholder="'+esc(rp)+'">'+
       '<button class="tick" aria-label="Mark set '+(i+1)+' done" aria-pressed="'+!!s.d+'" data-tick="'+ex.id+'" data-i="'+i+'">✓</button></div>';
   });
-  h+='</div></details>';
+  h+='</div>'+missNote(ex,missed)+'</details>';
   return h;
+}
+/* ticked sets short of the planned reps: saved, but never counted as a win (F2) */
+function missNote(ex,missed){
+  if(!missed.length) return '<p class="missnote" data-miss="'+esc(ex.id)+'" hidden></p>';
+  return '<p class="missnote" data-miss="'+esc(ex.id)+'">'+(missed.length===1?'Set '+missed[0]:'Sets '+missed.join(", "))+' missed the target of '+esc(ex.reps)+'. That’s fine: '+(missed.length===1?'it’s':'they’re')+' saved, just not counted as a record.</p>';
 }
 function grpHtml(g){
   var first=g.items[0], tot=0, nd=0;
@@ -213,6 +220,7 @@ document.addEventListener("click",function(e){
   if(t.id==="saveAcct"){saveAcct();return;}
   if(t.dataset.tier){acct().tier=t.dataset.tier;save();document.querySelectorAll("[data-tier]").forEach(function(b){var on=b===t;b.classList.toggle("on",on);b.setAttribute("aria-checked",on);var c=b.querySelector(".tcur");if(on&&!c)b.insertAdjacentHTML("beforeend",'<span class="tcur">Current</span>');if(!on&&c)c.remove();});renderDay();toast(TIERS.filter(function(x){return x.id===t.dataset.tier;})[0].name+" (placeholder)");return;}
   if(t.id==="testPing"){schedulePing(3);return;}
+  if(t.dataset.celebset){S.celebrate=t.dataset.celebset;save();document.querySelectorAll("[data-celebset]").forEach(function(b){b.setAttribute("aria-pressed",b===t?"true":"false");});toast(t.dataset.celebset==="calm"?"Calm: quieter words, no confetti":"Energetic: cheers and confetti for real wins");return;}
   if(t.dataset.day!==undefined){day=+t.dataset.day;renderTabs();renderDay();window.scrollTo(0,0);var db=document.getElementById("dayBtn");if(db)db.focus({preventScroll:true});return;}
   if(t.dataset.tick){ tickSet(findEx(t.dataset.tick),+t.dataset.i,t); return; }
   if(t.dataset.sdel){ deleteSet(findEx(t.dataset.sdel),+t.dataset.i); return; }

@@ -269,13 +269,27 @@ details.how[open] summary::before{content:"−"}
 .donewins li span{flex:1;min-width:0}
 .donewins li b{color:var(--done)}
 .donewins li em{font-style:normal;font-size:.8rem;color:var(--muted)}
+.donewins li span small{display:block;font-size:.76rem;color:var(--muted)}
+.donecard.calm h2{font-size:1.8rem;font-weight:700}
+.donemiles{list-style:none;margin:0 0 10px;padding:0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.donemiles li{background:var(--done-bg);color:var(--ink);border-radius:999px;padding:6px 12px;font-size:.86rem;font-weight:600}
+.donemissed{margin:0 0 10px;font-size:.84rem;color:var(--muted);text-align:left}
+.setrow.missed .n b{color:var(--warn)}
+.missnote{margin:6px 0 0;font-size:.82rem;color:var(--muted)}
+.hrecs{list-style:none;margin:0 0 12px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.hrecs li{background:var(--card);border-radius:12px;padding:9px 10px;display:flex;flex-direction:column;gap:1px;min-width:0}
+.hrecs li span{font-size:.78rem;color:var(--muted)}
+.hrecs li b{font-family:Archivo,sans-serif;font-size:1.15rem}
+.hrecs li em{font-style:normal;font-size:.76rem;color:var(--muted)}
 .donebtns{display:flex;gap:8px;margin-top:6px}
 .donebtns button{flex:1}
 .donebtns .ghost{color:var(--ink);font-weight:600}
-.confetti{position:absolute;inset:0;pointer-events:none}
+/* confetti stays in the band above the title, behind it, so it never covers the numbers */
+.confetti{position:absolute;left:0;right:0;top:0;height:96px;overflow:hidden;pointer-events:none;z-index:0}
+.donecard>:not(.confetti){position:relative;z-index:1}
 .confetti i{position:absolute;top:-10px;left:calc(var(--i)*5.6% + 2%);width:7px;height:12px;border-radius:2px;background:var(--accent);opacity:0;animation:fall 1.6s ease-in calc(var(--i)*45ms) 1 forwards}
 .confetti i:nth-child(3n){background:var(--blue)}.confetti i:nth-child(3n+1){background:var(--done)}
-@keyframes fall{0%{opacity:1;transform:translateY(0) rotate(0)}100%{opacity:0;transform:translateY(420px) rotate(540deg)}}
+@keyframes fall{0%{opacity:1;transform:translateY(0) rotate(0)}100%{opacity:0;transform:translateY(100px) rotate(540deg)}}
 @keyframes donein{from{transform:scale(.85);opacity:0}to{transform:none;opacity:1}}
 @media (prefers-reduced-motion:reduce){.donecard{animation:none}.confetti{display:none}}
 .primary{border:0;background:var(--cta);color:var(--on-cta);padding:15px;border-radius:12px;font-weight:700;font-size:1.05rem;cursor:pointer;font-family:Archivo,sans-serif;font-size:1.35rem}

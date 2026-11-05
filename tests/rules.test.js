@@ -1,6 +1,6 @@
 /* Tests for src/js/rules.js. Run with: node --test tests/*.test.js
-   Tests marked { todo } are known bugs from the tester reports: they describe the behaviour we want,
-   fail today, and don't break the run. Remove the todo when the fix lands (F2). */
+   Tester scenarios (S1, P2, S4 ...) are at the end. A test marked { todo } is a known bug: it describes the
+   behaviour we want, fails today and doesn't break the run. Remove the todo when the fix lands. */
 const test = require("node:test");
 const assert = require("node:assert/strict");
 const R = require("../src/js/rules.js");
@@ -9,14 +9,6 @@ const KG = ["kg", "reps"], BW = ["+kg", "reps"], CARDIO = ["km", "min"], HOLD = 
 const sets = (...a) => a.map(([w, r]) => ({ w: w == null ? "" : String(w), r: r == null ? "" : String(r) }));
 
 /* ---------- records ---------- */
-test("heavier than the record is a PR, heavier than last time is 'up'", () => {
-  assert.deepEqual(R.sessionWin("w", KG, sets([85, 5]), 80, sets([80, 5])), { pr: { now: 85, was: 80, u: "kg" } });
-  assert.deepEqual(R.sessionWin("w", KG, sets([82.5, 5]), 90, sets([80, 5])), { up: { by: 2.5, u: "kg" } });
-  assert.equal(R.sessionWin("w", KG, sets([80, 5]), 80, sets([80, 5])), null);
-  assert.equal(R.sessionWin("w", KG, sets([60, 8]), 0, undefined), null, "first time is not a PR");
-  assert.equal(R.sessionWin("hold", HOLD, sets([60, 30]), 40, undefined), null, "no weight box, no weight PR");
-});
-
 /* history rows like the workout_sets table */
 const row = (wid, at, ex, setNo, weight, reps, measure = "w") => ({ workout_id: wid, performed_at: at, exercise_id: ex, set_no: setNo, measure, weight, reps });
 
@@ -57,8 +49,131 @@ test("a workout waiting to upload replaces its saved copy (an offline edit)", ()
   assert.equal(R.historyRows(db, []).length, 2);
 });
 
-test("cardio distance records are in km", () => {
-  assert.deepEqual(R.sessionWin("cardio", CARDIO, sets([5.2, 30]), "5", sets([5, 31])), { pr: { now: 5.2, was: 5, u: "km" } });
+const recOf = (rows, ex) => R.exerciseRecords(rows)[ex];
+const W1 = "2026-10-01T10:00:00Z", W2 = "2026-10-08T10:00:00Z", W3 = "2026-10-15T10:00:00Z";
+
+test("weighted moves: heaviest, rep maxes at 1, 3, 5, 8, 10 and an estimated 1RM", () => {
+  const rows = [row("w1", W1, "bench", 1, 100, 5), row("w1", W1, "bench", 2, 80, 10), row("w2", W2, "bench", 1, 110, 1)];
+  const b = recOf(rows, "bench").bests;
+  assert.equal(b.rm1.v, 110);
+  assert.equal(b.rm3.v, 100, "100 × 5 also counts for 3 reps");
+  assert.equal(b.rm5.v, 100);
+  assert.equal(b.rm8.v, 80);
+  assert.equal(b.rm10.v, 80);
+  assert.equal(b.e1rm.v, 116.5, "Epley from 100 × 5, rounded to 0.5 kg");
+  assert.equal(R.e1rm(110, 1), 110);
+  assert.equal(R.e1rm(50, 20), 0, "too many reps for a fair estimate");
+});
+
+test("a heavier set with fewer reps doesn't replace the 10-rep record", () => {
+  const rows = [row("w1", W1, "bench", 1, 80, 10)];
+  const rec = recOf(rows, "bench");
+  const win = R.sessionWin("w", KG, sets([90, 6]), rec, sets([80, 10]), "6–10");
+  assert.deepEqual(win, { pr: { now: 90, was: 80, u: "kg", what: "Heaviest" } });
+  const after = recOf(rows.concat([row("w2", W2, "bench", 1, 90, 6)]), "bench").bests;
+  assert.equal(after.rm10.v, 80);
+  assert.equal(after.rm5.v, 90);
+});
+
+test("a rep max beats its own bracket, and the estimate is shown as 'about'", () => {
+  const rec = recOf([row("w1", W1, "bench", 1, 100, 3), row("w1", W1, "bench", 2, 80, 8)], "bench");
+  assert.deepEqual(R.sessionWin("w", KG, sets([85, 8]), rec, sets([100, 3])), { pr: { now: 85, was: 80, u: "kg", what: "Best for 8 reps" } });
+  const list = R.recordList("w", rec.bests);
+  assert.deepEqual(list.map((o) => o.label), ["Heaviest", "Best for 8 reps", "Estimated 1RM"], "100 × 3 is the heaviest, 80 × 8 covers 5 and 8 reps; no set of 10 yet");
+  assert.equal(list[0].set, "100 kg × 3");
+  assert.equal(list.find((o) => o.key === "e1rm").text, "about 110 kg");
+  assert.equal(list.find((o) => o.key === "rm8").set, "80 kg × 8");
+});
+
+test("bodyweight: most reps and most added weight", () => {
+  const rows = [row("w1", W1, "pullup", 1, null, 12, "bw"), row("w2", W2, "pullup", 1, 10, 6, "bw")];
+  const rec = recOf(rows, "pullup");
+  assert.equal(rec.bests.reps.v, 12);
+  assert.equal(rec.bests.added.v, 10);
+  assert.deepEqual(R.sessionWin("bw", BW, sets([null, 14]), rec, sets([10, 6])), { pr: { now: 14, was: 12, u: "reps", what: "Most reps" } });
+  assert.deepEqual(R.sessionWin("bw", BW, sets([12.5, 5]), rec, sets([10, 6])), { pr: { now: 12.5, was: 10, u: "kg", what: "Most added weight" } });
+  assert.deepEqual(R.recordList("bw", rec.bests).map((o) => o.text), ["12 reps", "10 kg"]);
+});
+
+test("holds, timed moves and counts: longest or most, in their own unit", () => {
+  const rows = [row("w1", W1, "plank", 1, null, 45, "hold"), row("w1", W1, "jog", 1, null, 20, "time"), row("w1", W1, "jacks", 1, null, 30, "count")];
+  assert.deepEqual(R.sessionWin("hold", HOLD, sets([null, 60]), recOf(rows, "plank"), sets([null, 45])), { pr: { now: 60, was: 45, u: "sec", what: "Longest hold" } });
+  assert.equal(R.recordList("hold", recOf(rows, "plank").bests)[0].text, "45 sec");
+  assert.equal(R.recordList("time", recOf(rows, "jog").bests)[0].text, "20 min");
+  assert.equal(R.recordList("count", recOf(rows, "jacks").bests)[0].text, "30 reps");
+  assert.deepEqual(R.sessionWin("hold", HOLD, sets([null, 40], [null, 50]), recOf(rows, "plank"), sets([null, 45])), { pr: { now: 50, was: 45, u: "sec", what: "Longest hold" } });
+});
+
+test("cardio: longest distance, fastest pace, longest time; no km on time", () => {
+  const rows = [row("w1", W1, "run", 1, 5, 30, "cardio")];
+  const rec = recOf(rows, "run");
+  assert.deepEqual(R.sessionWin("cardio", CARDIO, sets([5.2, 30]), rec, sets([5, 30])), { pr: { now: 5.2, was: 5, u: "km", what: "Longest distance" } });
+  assert.deepEqual(R.sessionWin("cardio", CARDIO, sets([5, 28]), rec, sets([5, 30])), { pr: { now: 336, was: 360, u: "/km", what: "Fastest pace" } });
+  assert.deepEqual(R.recordList("cardio", rec.bests).map((o) => o.text), ["5 km", "6:00 /km", "30 min"]);
+});
+
+test("every record shows the right unit: no kg on reps, no km on time", () => {
+  const rows = [row("w1", W1, "clam", 1, null, 18, "bw"), row("w1", W1, "plank", 1, null, 45, "hold"), row("w1", W1, "jog", 1, null, 20, "time")];
+  const rec = R.exerciseRecords(rows);
+  assert.ok(R.recordList("bw", rec.clam.bests).every((o) => !/kg/.test(o.text)));
+  assert.ok(R.recordList("time", rec.jog.bests).every((o) => !/km/.test(o.text)));
+  assert.ok(R.recordList("hold", rec.plank.bests).every((o) => !/kg|km/.test(o.text)));
+});
+
+test("first time is never a record; more than last time is 'up'", () => {
+  assert.equal(R.sessionWin("w", KG, sets([60, 8]), undefined, undefined), null);
+  const rec = recOf([row("w1", W1, "bench", 1, 90, 5), row("w2", W2, "bench", 1, 80, 5)], "bench");
+  assert.deepEqual(R.sessionWin("w", KG, sets([82.5, 5]), rec, sets([80, 5])), { up: { by: 2.5, u: "kg" } });
+  assert.equal(R.sessionWin("w", KG, sets([80, 5]), rec, sets([80, 5])), null);
+});
+
+test("missed sets: fewer reps than planned never count as a win", () => {
+  assert.deepEqual(R.targetOf("8–12 / side"), { lo: 8, hi: 12, u: "reps" });
+  assert.deepEqual(R.targetOf("30 sec"), { lo: 30, hi: 30, u: "sec" });
+  assert.equal(R.targetOf("AMRAP"), null);
+  assert.equal(R.isMissed(KG, { w: "110", r: "3" }, "5"), true);
+  assert.equal(R.isMissed(KG, { w: "110", r: "5" }, "5"), false);
+  assert.equal(R.isMissed(KG, { w: "110", r: "8" }, "8–12"), false, "the bottom of a range is enough");
+  assert.equal(R.isMissed(HOLD, { r: "20" }, "30 sec"), true);
+  assert.equal(R.isMissed(CARDIO, { w: "3", r: "20" }, "20 m"), false, "a distance target isn't checked against minutes");
+  const rec = recOf([row("w1", W1, "squat", 1, 105, 5)], "squat");
+  assert.equal(R.sessionWin("w", KG, sets([110, 3]), rec, sets([105, 5]), "5"), null, "110 × 3 on a 5-rep day is missed");
+  assert.deepEqual(R.sessionWin("w", KG, sets([110, 3], [105, 5]), rec, sets([105, 5]), "5"), null, "the completed 105 × 5 only equals last time");
+  assert.deepEqual(R.sessionWin("w", KG, sets([110, 5]), rec, sets([105, 5]), "5"), { pr: { now: 110, was: 105, u: "kg", what: "Heaviest" } });
+});
+
+/* ---------- last time that matches the day ---------- */
+test("last time looks back at the same plan day first, then the same rep target, then any session", () => {
+  const P = "ppl";
+  const r2 = (wid, at, w, reps, day) => ({ ...row(wid, at, "press", 1, w, reps), plan_id: P, day_id: day });
+  const rows = [r2("w1", W1, 60, 8, "tue"), r2("w2", W2, 70, 4, "fri"), r2("w3", W3, 72.5, 3, "fri")];
+  const rec = recOf(rows, "press");
+  const plan = { tue: "8", fri: "3–5", sat: "8" };
+  const targetFor = (p, d) => (p === P ? plan[d] : null);
+  assert.deepEqual(R.lastMatching(rec, { plan: P, day: "tue", target: "8", targetFor }), { date: W1, sets: [{ w: "60", r: "8" }], match: "day" });
+  assert.deepEqual(R.lastMatching(rec, { plan: P, day: "sat", target: "8", targetFor }).match, "target", "Saturday's 3×8 looks back at Tuesday's 3×8");
+  assert.equal(R.lastMatching(rec, { plan: P, day: "sat", target: "8", targetFor }).date, W1);
+  assert.equal(R.lastMatching(rec, { plan: P, day: "sun", target: "12" }).date, W3, "nothing matches: the newest session");
+  assert.equal(R.lastMatching(rec, { plan: "other", day: "sat", target: "8" }).date, W1, "no plan to ask: judged by the reps done");
+  assert.equal(R.lastMatching(undefined, {}), null);
+});
+
+test("waiting workouts keep their plan day", () => {
+  const pending = [{ id: "w9", performed_at: W2, plan_id: "ppl", day_id: "tue", sets: [{ exercise_id: "press", set_no: 1, measure: "w", weight: 60, reps: 8 }] }];
+  const s = R.exerciseRecords(R.historyRows([], pending)).press.sessions[0];
+  assert.equal(s.plan, "ppl");
+  assert.equal(s.day, "tue");
+});
+
+/* ---------- milestones ---------- */
+test("milestones: first workout, workout counts, first full week, weeks in a row, every set done", () => {
+  const t = (d) => new Date(d).toISOString();
+  assert.deepEqual(R.milestones([], t("2026-11-03T08:00:00"), 3, false).map((m) => m.key), ["first"]);
+  const four = [t("2026-10-06T08:00:00"), t("2026-10-14T08:00:00"), t("2026-10-21T08:00:00"), t("2026-10-28T08:00:00")];
+  assert.deepEqual(R.milestones(four, t("2026-11-03T08:00:00"), 3, true).map((m) => m.text), ["5 workouts done", "5 weeks in a row", "Every set done"]);
+  const week = [t("2026-11-03T08:00:00"), t("2026-11-04T08:00:00")];
+  assert.deepEqual(R.milestones(week, t("2026-11-06T08:00:00"), 3, false).map((m) => m.text), ["First full week: every planned day done"]);
+  assert.deepEqual(R.milestones([t("2026-10-20T08:00:00")], t("2026-11-03T08:00:00"), 3, false), [], "a gap week breaks the streak");
 });
 
 test("only sets with a weight or reps typed are saved", () => {
@@ -157,24 +272,25 @@ test("S1 (F1): fixing 850 to 85 in History brings the record, last time and next
   const rec = R.exerciseRecords(R.historyRows(db, fixed)).bench;
   assert.equal(rec.best, 85);
   assert.deepEqual(R.setPrefill(sets([null, null]), 0, rec.last.sets), { w: "85", r: "5" });
-  assert.deepEqual(R.sessionWin("w", KG, sets([87.5, 5]), rec.best, rec.last.sets), { pr: { now: 87.5, was: 85, u: "kg" } });
+  assert.deepEqual(R.sessionWin("w", KG, sets([87.5, 5]), rec, rec.last.sets), { pr: { now: 87.5, was: 85, u: "kg", what: "Heaviest" } });
 });
 
-/* Pilates trainer: 18 clamshells, a bodyweight exercise tracked as +kg / reps (tester issue P2). */
-test("today: 18 clamshells gives no record, and 18 in the first box shows as kg", () => {
-  assert.equal(R.sessionWin("bw", BW, sets([null, 18]), undefined, sets([null, 15])), null);
-  assert.deepEqual(R.sessionWin("bw", BW, sets([18, null]), 15, sets([15, null])), { pr: { now: 18, was: 15, u: "kg" } });
-});
-test("known bug P2 (F2): 18 clamshells after 15 is a record of 18 reps", { todo: "F2.E1 records by exercise type" }, () => {
-  assert.deepEqual(R.sessionWin("bw", BW, sets([null, 18]), undefined, sets([null, 15])), { pr: { now: 18, was: 15, u: "reps" } });
+/* Pilates trainer: 18 clamshells, a bodyweight exercise tracked as +kg / reps (tester issue P2). Fixed in F2. */
+test("P2 (F2): 18 clamshells after 15 is a record of 18 reps, not kg", () => {
+  const rec = recOf([row("w1", W1, "clam", 1, null, 15, "bw")], "clam");
+  assert.deepEqual(R.sessionWin("bw", BW, sets([null, 18]), rec, sets([null, 15]), "15"), { pr: { now: 18, was: 15, u: "reps", what: "Most reps" } });
+  assert.deepEqual(R.recordList("bw", recOf([row("w1", W1, "clam", 1, null, 18, "bw")], "clam").bests).map((o) => o.text), ["18 reps"]);
 });
 
-/* Lifter: failed squat, 110 kg for 0 of 5 reps (tester issues S4, S15). */
-test("today: a failed 110 kg squat is celebrated as a PR", () => {
-  assert.deepEqual(R.sessionWin("w", KG, sets([110, 0]), 105, sets([105, 5])), { pr: { now: 110, was: 105, u: "kg" } });
-  assert.equal(R.exerciseRecords([row("w1", "2026-10-01T10:00:00Z", "squat", 1, 110, 0)]).squat.best, 110);
+/* Lifter: failed squat, 110 kg for 0 of 5 reps (tester issues S4, S15). Fixed in F2. */
+test("S4 (F2): a set with no reps done is not a record", () => {
+  const rec = recOf([row("w0", W1, "squat", 1, 105, 5)], "squat");
+  assert.equal(R.sessionWin("w", KG, sets([110, 0]), rec, sets([105, 5]), "5"), null);
+  assert.equal(R.exerciseRecords([row("w1", W1, "squat", 1, 110, 0)]).squat.best, 0);
 });
-test("known bug S4 (F2): a set with no reps done is not a record", { todo: "F2.E1 records count completed reps" }, () => {
-  assert.equal(R.sessionWin("w", KG, sets([110, 0]), 105, sets([105, 5])), null);
-  assert.equal(R.exerciseRecords([row("w1", "2026-10-01T10:00:00Z", "squat", 1, 110, 0)]).squat.best, 0);
+test("S4 (F2): Tuesday's 3×8 press pre-fills from the last 3×8 day, not Friday's heavy triples", () => {
+  const r2 = (wid, at, w, reps, day) => ({ ...row(wid, at, "press", 1, w, reps), plan_id: "ppl", day_id: day });
+  const rec = recOf([r2("w1", W1, 60, 8, "tue"), r2("w2", W2, 72.5, 3, "fri")], "press");
+  const L = R.lastMatching(rec, { plan: "ppl", day: "tue", target: "8" });
+  assert.deepEqual(R.setPrefill(sets([null, null]), 0, L.sets), { w: "60", r: "8" });
 });
