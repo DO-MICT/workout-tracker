@@ -9,8 +9,14 @@ function applyTheme(){
   var t=themePref(), r=document.documentElement;
   if(t==="light"||t==="dark") r.setAttribute("data-theme",t); else r.removeAttribute("data-theme");
   try{localStorage.setItem("split5-theme",t);}catch(e){}
+  var c=palPref(); if(c!=="volt") r.setAttribute("data-palette",c); else r.removeAttribute("data-palette");
+  try{localStorage.setItem("split5-palette",c);}catch(e){}
   if(window.artRetheme) artRetheme();
+  if(window.msFigMount&&document.getElementById("msFigDefs")) msFigMount();
 }
+/* colour themes, picked under More: GFD volt green is the default; the others are softer looks */
+var PALETTES=[["volt","GFD","#D4FF3A","#0D0F12"],["flow","Flow","#F7B6C8","#B24A6F"],["drift","Drift","#D3C2F2","#6A55A3"],["glow","Glow","#FFC6AB","#B4553C"]];
+function palPref(){var c=S.palette; if(!PALETTES.some(function(p){return p[0]===c;})){try{c=localStorage.getItem("split5-palette");}catch(e){c=null;} if(!PALETTES.some(function(p){return p[0]===c;})) c="volt";} return c;}
 /* one button with the full day name; tap it to pick another day of the plan */
 var DAY_CHEV='<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 function isToday(d){return !!d&&d.id===WEEK[(new Date().getDay()+6)%7].id;}
@@ -195,6 +201,7 @@ document.addEventListener("click",function(e){
   if(t.id==="nSave"){saveNote(false);return;}
   if(t.id==="nDelete"){saveNote(true);return;}
   if(builderClick(t)) return;
+  if(t.dataset.palset){S.palette=t.dataset.palset;save();applyTheme();document.querySelectorAll("[data-palset]").forEach(function(b){b.setAttribute("aria-pressed",b===t?"true":"false");});return;}
   if(t.dataset.themeset){S.theme=t.dataset.themeset;save();applyTheme();document.querySelectorAll("[data-themeset]").forEach(function(b){b.setAttribute("aria-pressed",b===t?"true":"false");});return;}
   if(colesClick(t)) return;
   if(t.id==="editDay"||t.id==="editDay2"){openBuilder();return;}

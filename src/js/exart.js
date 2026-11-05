@@ -105,10 +105,43 @@ function artEngine(id,done){
   }
   ART_GYM_WAIT.push(done);
 }
+/* "light" or "dark", plus "-<palette>" for a colour theme other than GFD volt (e.g. "dark-flow") */
 function artTheme(){
   var t=document.documentElement.getAttribute("data-theme");
-  if(t==="light"||t==="dark") return t;
-  return window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
+  if(t!=="light"&&t!=="dark") t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
+  var p=document.documentElement.getAttribute("data-palette");
+  return p&&ART_PAL[p]?t+"-"+p:t;
+}
+/* colour themes recolour the drawings: the volt muscle colours become the theme's accent, and the page, line and body
+   colours follow the theme. The engines draw in GFD colours; artTint swaps them in the finished SVG. */
+var ART_PAL={
+  flow:{acc:"#F7B6C8",deep:"#A4436A",bg:"#FBF3F4",ink:"#3B2232",dbg:"#1E1519",dink:"#FBEFF3"},
+  drift:{acc:"#D3C2F2",deep:"#5E4A96",bg:"#F6F3FA",ink:"#2E2540",dbg:"#17141F",dink:"#F3EFFA"},
+  glow:{acc:"#FFC6AB",deep:"#A04A33",bg:"#FDF5EF",ink:"#3A2A24",dbg:"#1C1614",dink:"#FCF1EA"}
+};
+var ART_MAPS={};
+function artMix(a,b,w){
+  var x=parseInt(a.slice(1),16), y=parseInt(b.slice(1),16), o="#";
+  [16,8,0].forEach(function(s){var v=Math.round(((x>>s)&255)*(1-w)+((y>>s)&255)*w);o+=(v<16?"0":"")+v.toString(16);});
+  return o.toUpperCase();
+}
+function artMap(mode,pal){
+  var k=mode+"-"+pal; if(ART_MAPS[k]) return ART_MAPS[k];
+  var P=ART_PAL[pal], A=P.acc, m={"#D4FF3A":A,"#F4FFB0":artMix(A,"#FFFFFF",.55)};
+  if(mode==="dark"){
+    m["#0D0F12"]=P.dbg; m["#F3F2EC"]=P.dink; m["#86A80C"]=artMix(A,P.deep,.45); m["#5E7300"]=artMix(A,P.deep,.75);
+    m["#1C2026"]=artMix(P.dbg,"#FFFFFF",.07); m["#15181D"]=artMix(P.dbg,"#FFFFFF",.03); m["#4A4F57"]=artMix(P.dbg,P.dink,.25);
+  }else{
+    m["#0D0F12"]=P.ink; m["#F3F2EC"]=P.bg; m["#A9CF12"]=artMix(A,P.deep,.35); m["#A8D400"]=artMix(A,P.deep,.3);
+    m["#6F8C0A"]=artMix(A,P.deep,.8); m["#7F9E08"]=artMix(A,P.deep,.6); m["#4A5A00"]=P.deep;
+    m["#E9E8E0"]=artMix(P.bg,P.ink,.06); m["#DEDDD4"]=artMix(P.bg,P.ink,.1); m["#CFD0C8"]=artMix(P.bg,P.ink,.18);
+  }
+  return ART_MAPS[k]=m;
+}
+function artTint(svg,theme){
+  var i=theme.indexOf("-"); if(i<0) return svg;
+  var m=artMap(theme.slice(0,i),theme.slice(i+1));
+  return svg.replace(/#[0-9A-Fa-f]{6}\b/g,function(h){return m[h.toUpperCase()]||h;});
 }
 function artStill(){return window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;}
 function artHtml(id,cls){
@@ -123,7 +156,7 @@ function exFigure(id,f,cls){
 function artUrl(svg){return URL.createObjectURL(new Blob([svg],{type:"image/svg+xml"}));}
 /* frame urls for one exercise and theme; built a few at a time so the page stays responsive */
 function artFrames(id,theme,done){
-  var k=id+"|"+theme, c=ART_CACHE[k];
+  var k=id+"|"+theme, c=ART_CACHE[k], mode=theme.split("-")[0];
   if(c&&c.ready) return done(c);
   if(c){c.wait.push(done);return;}
   c=ART_CACHE[k]={ready:false,wait:[done],anim:[],still:[]};
@@ -131,10 +164,10 @@ function artFrames(id,theme,done){
     /* a cycle (sled drags, carries) runs t over 0..2, one full stride, and loops forward without easing or holds */
     var fr=G.framesOf(id), i=0, cyc=!!G.EX[id].cycle, last=cyc?2*ART_STEPS-1:ART_STEPS;
     c.cycle=cyc; c.hold=!!G.EX[id].hold;
-    c.still=fr.map(function(f){return artUrl(G.render(id,theme,f.t,{view:f.view}));});
+    c.still=fr.map(function(f){return artUrl(artTint(G.render(id,mode,f.t,{view:f.view}),theme));});
     function more(){
       var end=Math.min(i+3,last+1);
-      for(;i<end;i++) c.anim.push(i===0?c.still[0]:artUrl(G.render(id,theme,i/ART_STEPS,{view:fr[0].view})));
+      for(;i<end;i++) c.anim.push(i===0?c.still[0]:artUrl(artTint(G.render(id,mode,i/ART_STEPS,{view:fr[0].view}),theme)));
       if(i<=last) return setTimeout(more,0);
       c.ready=true; c.wait.forEach(function(fn){fn(c);}); c.wait=[];
     }

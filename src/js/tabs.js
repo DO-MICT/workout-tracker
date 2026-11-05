@@ -51,6 +51,8 @@ function renderMore(){
     '<div class="mlist">'+row("openMeasure","Body check-in")+row("openBody","Body progress")+row("openLib","Exercise library")+
     (WEB_MODE?row("openSugg","Suggestions",SG_UNREAD?'<span class="replytag">'+SG_UNREAD+' new repl'+(SG_UNREAD>1?'ies':'y')+'</span>':''):'')+
     (WEB_MODE&&sbAdmin?row("openFeedback","Feedback",'<span class="admtag">Admin</span>'):'')+'</div>'+
+    '<div class="mlist mtheme mpal"><span>Colour theme</span><div class="palpick" role="group" aria-label="Colour theme">'+
+    PALETTES.map(function(o){return '<button data-palset="'+o[0]+'" aria-pressed="'+(palPref()===o[0])+'"><i class="palsw" style="background:linear-gradient(135deg,'+o[2]+' 50%,'+o[3]+' 50%)" aria-hidden="true"></i>'+o[1]+'</button>';}).join("")+'</div></div>'+
     '<div class="mlist mtheme"><span>Appearance</span><div class="seg" role="group" aria-label="Appearance">'+
     [["auto","Auto"],["light","Light"],["dark","Dark"]].map(function(o){return '<button data-themeset="'+o[0]+'" aria-pressed="'+(themePref()===o[0])+'">'+o[1]+'</button>';}).join("")+'</div></div>'+
     (WEB_MODE&&sbUser?'<button class="ghost msignout" id="signOut">Sign out</button>':'')+

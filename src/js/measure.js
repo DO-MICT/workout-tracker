@@ -74,10 +74,15 @@ function msFigLoad(cb){
   var done=function(){msFigMount();var q=msFigLoad.q||[];msFigLoad.q=[];q.forEach(function(f){f();});};
   s.onload=done; s.onerror=function(){MS_FIG_STATE=0;done();}; document.head.appendChild(s);
 }
+/* also called when the colour theme changes: the figure is drawn in GFD colours and recoloured by artTint (exart.js) */
 function msFigMount(){
-  if(document.getElementById("msFigDefs")||!window.GFD_BODY_FIG) return;
-  var d=document.createElement("div"); d.id="msFigDefs"; d.setAttribute("aria-hidden","true");
-  d.innerHTML='<svg width="0" height="0" style="position:absolute"><defs><filter id="msGlow" x="-60%" y="-300%" width="220%" height="700%"><feGaussianBlur stdDeviation="3"/></filter>'+window.GFD_BODY_FIG+'</defs></svg>';
+  if(!window.GFD_BODY_FIG) return;
+  var pal=document.documentElement.getAttribute("data-palette")||"", old=document.getElementById("msFigDefs");
+  if(old){ if(old.dataset.pal===pal) return; old.remove(); }
+  var fig=window.GFD_BODY_FIG, cut=fig.indexOf('<symbol id="msFigD"');
+  if(pal&&window.ART_PAL&&ART_PAL[pal]&&cut>0) fig=artTint(fig.slice(0,cut),"light-"+pal)+artTint(fig.slice(cut),"dark-"+pal);
+  var d=document.createElement("div"); d.id="msFigDefs"; d.setAttribute("aria-hidden","true"); d.dataset.pal=pal;
+  d.innerHTML='<svg width="0" height="0" style="position:absolute"><defs><filter id="msGlow" x="-60%" y="-300%" width="220%" height="700%"><feGaussianBlur stdDeviation="3"/></filter>'+fig+'</defs></svg>';
   document.body.appendChild(d); MS_FIG_STATE=2;
 }
 function msBand(k,strong){
