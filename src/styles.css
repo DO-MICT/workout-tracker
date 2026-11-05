@@ -601,8 +601,8 @@ body.tabs .sheet-in{padding-bottom:40px}
 .stbar{width:min(18px,60%);border-radius:6px 6px 2px 2px;background:var(--mark)}
 .stbar.zero{background:var(--line)}.stbar.future{opacity:.35}
 .stbar.best{background:var(--accent);box-shadow:inset 0 0 0 2px var(--accent-ink)}
-:root[data-theme="dark"] .stbar.best{box-shadow:0 0 14px rgba(212,255,58,.45)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stbar.best{box-shadow:0 0 14px rgba(212,255,58,.45)}}
+:root[data-theme="dark"] .stbar.best{box-shadow:0 0 14px color-mix(in srgb,var(--accent) 45%,transparent)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stbar.best{box-shadow:0 0 14px color-mix(in srgb,var(--accent) 45%,transparent)}}
 .stax{position:relative;height:112px;font-size:.72rem;color:var(--muted);display:flex;flex-direction:column;justify-content:space-between;text-align:right;margin:-7px 0}
 .stax.three{height:96px}
 .stlabels{display:grid;font-size:.75rem;color:var(--muted);text-align:center;white-space:nowrap}
@@ -657,3 +657,22 @@ body.tabs .sheet-in{padding-bottom:40px}
 .elmus{margin:0;font-size:.95rem}
 .elwarn{margin:6px 0 0;color:var(--warn);font-weight:600;font-size:.9rem}
 .elok{margin:6px 0 0;color:var(--done);font-weight:600;font-size:.9rem}
+
+/* ---------- colour themes (More › Colour theme): softer looks next to the GFD volt default ---------- */
+.palpick{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.palpick button{display:flex;flex-direction:column;align-items:center;gap:5px;border:2px solid transparent;background:var(--bg);border-radius:12px;padding:8px 2px;min-height:64px;font-weight:600;font-size:.85rem;color:var(--muted);cursor:pointer}
+.palpick button[aria-pressed="true"]{border-color:var(--ink);color:var(--ink);background:var(--card)}
+.palpick button:focus-visible{outline:3px solid var(--blue);outline-offset:1px}
+.palsw{width:26px;height:26px;border-radius:50%;border:1px solid var(--line)}
+/* Flow: Blush Petal */
+:root[data-palette="flow"]{--bg:#FBF3F4;--card:#FFFFFF;--ink:#3B2232;--muted:#7D6672;--line:#EEDDE2;--accent:#F7B6C8;--accent-ink:#3B2232;--cta:#B24A6F;--on-cta:#FFFFFF;--blue:#A4436A;--steel:#E8D3DA;--done:#A4436A;--done-bg:#FBE3EA;--on-done:#FFFFFF;--warn:#A85A12;--shadow:rgba(91,40,64,.14);--mark:#A4436A;--seg2:#C2577A;--seg3:#E8D3DA;--seg4:#7D6672}
+@media (prefers-color-scheme:dark){:root[data-palette="flow"]:not([data-theme="light"]){--bg:#1E1519;--card:#2A1E24;--ink:#FBEFF3;--muted:#BFA6B1;--line:#3C2C34;--accent:#F7B6C8;--accent-ink:#3B2232;--cta:#F7B6C8;--on-cta:#3B2232;--blue:#F7B6C8;--steel:#5A4550;--done:#F7B6C8;--done-bg:#3E2430;--on-done:#3B2232;--warn:#F0A867;--shadow:rgba(0,0,0,.5);--mark:#F2A3BA;--seg2:#C87891;--seg3:#5A4550;--seg4:#BFA6B1}}
+:root[data-palette="flow"][data-theme="dark"]{--bg:#1E1519;--card:#2A1E24;--ink:#FBEFF3;--muted:#BFA6B1;--line:#3C2C34;--accent:#F7B6C8;--accent-ink:#3B2232;--cta:#F7B6C8;--on-cta:#3B2232;--blue:#F7B6C8;--steel:#5A4550;--done:#F7B6C8;--done-bg:#3E2430;--on-done:#3B2232;--warn:#F0A867;--shadow:rgba(0,0,0,.5);--mark:#F2A3BA;--seg2:#C87891;--seg3:#5A4550;--seg4:#BFA6B1}
+/* Drift: Lilac Haze */
+:root[data-palette="drift"]{--bg:#F6F3FA;--card:#FFFFFF;--ink:#2E2540;--muted:#716A80;--line:#E2DCEC;--accent:#D3C2F2;--accent-ink:#2E2540;--cta:#6A55A3;--on-cta:#FFFFFF;--blue:#5E4A96;--steel:#DDD5EA;--done:#5E4A96;--done-bg:#ECE5F8;--on-done:#FFFFFF;--warn:#A85A12;--shadow:rgba(46,37,64,.14);--mark:#5E4A96;--seg2:#8A74C4;--seg3:#DDD5EA;--seg4:#716A80}
+@media (prefers-color-scheme:dark){:root[data-palette="drift"]:not([data-theme="light"]){--bg:#17141F;--card:#221D2C;--ink:#F3EFFA;--muted:#ABA3BA;--line:#332C40;--accent:#D3C2F2;--accent-ink:#231C33;--cta:#D3C2F2;--on-cta:#231C33;--blue:#D3C2F2;--steel:#4A4259;--done:#D3C2F2;--done-bg:#2E2742;--on-done:#231C33;--warn:#F0A867;--shadow:rgba(0,0,0,.5);--mark:#BCA5EA;--seg2:#8F7CBF;--seg3:#4A4259;--seg4:#ABA3BA}}
+:root[data-palette="drift"][data-theme="dark"]{--bg:#17141F;--card:#221D2C;--ink:#F3EFFA;--muted:#ABA3BA;--line:#332C40;--accent:#D3C2F2;--accent-ink:#231C33;--cta:#D3C2F2;--on-cta:#231C33;--blue:#D3C2F2;--steel:#4A4259;--done:#D3C2F2;--done-bg:#2E2742;--on-done:#231C33;--warn:#F0A867;--shadow:rgba(0,0,0,.5);--mark:#BCA5EA;--seg2:#8F7CBF;--seg3:#4A4259;--seg4:#ABA3BA}
+/* Glow: Peach Sorbet */
+:root[data-palette="glow"]{--bg:#FDF5EF;--card:#FFFFFF;--ink:#3A2A24;--muted:#7D6B62;--line:#F0E0D5;--accent:#FFC6AB;--accent-ink:#3A2A24;--cta:#B4553C;--on-cta:#FFFFFF;--blue:#A04A33;--steel:#EED9CC;--done:#A04A33;--done-bg:#FDE6DA;--on-done:#FFFFFF;--warn:#A85A12;--shadow:rgba(90,50,30,.14);--mark:#A04A33;--seg2:#D9775A;--seg3:#EED9CC;--seg4:#7D6B62}
+@media (prefers-color-scheme:dark){:root[data-palette="glow"]:not([data-theme="light"]){--bg:#1C1614;--card:#28201C;--ink:#FCF1EA;--muted:#BBA79C;--line:#3A2E28;--accent:#FFC6AB;--accent-ink:#3A2A24;--cta:#FFC6AB;--on-cta:#3A2A24;--blue:#FFC6AB;--steel:#57473F;--done:#FFC6AB;--done-bg:#3B2A22;--on-done:#3A2A24;--warn:#F0A867;--shadow:rgba(0,0,0,.5);--mark:#F7AE8E;--seg2:#C98468;--seg3:#57473F;--seg4:#BBA79C}}
+:root[data-palette="glow"][data-theme="dark"]{--bg:#1C1614;--card:#28201C;--ink:#FCF1EA;--muted:#BBA79C;--line:#3A2E28;--accent:#FFC6AB;--accent-ink:#3A2A24;--cta:#FFC6AB;--on-cta:#3A2A24;--blue:#FFC6AB;--steel:#57473F;--done:#FFC6AB;--done-bg:#3B2A22;--on-done:#3A2A24;--warn:#F0A867;--shadow:rgba(0,0,0,.5);--mark:#F7AE8E;--seg2:#C98468;--seg3:#57473F;--seg4:#BBA79C}
