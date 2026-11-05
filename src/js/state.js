@@ -76,7 +76,7 @@ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp
 function cur(){return S.cur[S.who];}
 function last(){return S.last[S.who];}
 /* records and last time come from history (records.js, rules.js) */
-function prFor(ex){ var b=bestFor(ex.id); return b>0?String(b):""; }
+function prFor(ex){ var r=bestFor(ex.id); return r&&r.best>0?String(r.best):""; }
 /* today's sets for an exercise. Boxes you haven't touched start with real values (last session's same set,
    or your earlier set today), so what you see is exactly what ✓ saves. pre marks those untouched values. */
 function setsFor(ex){
@@ -84,7 +84,7 @@ function setsFor(ex){
   var arr=c[ex.id]; while(arr.length<ex.sets)arr.push({w:"",r:"",d:false});
   /* migrate: clear weights a much older version auto-filled from the record */
   arr.forEach(function(s){ if(s.pf&&!s.d&&!s.t) s.w=""; delete s.pf; });
-  var L=lastFor(ex.id), lab=labOf(ex);
+  var L=lastFor(ex.id,ex), lab=labOf(ex);
   for(var i=0;i<ex.sets;i++){
     var s=arr[i]; if(s.d||s.t) continue;
     var p=GFDRules.setPrefill(arr,i,L&&L.sets);

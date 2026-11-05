@@ -352,14 +352,17 @@ function histExHtml(){
   if(measure==="bw"&&rows.some(function(r){return r.weight>0;})) m=["Top added weight","kg","weight"];
   var by={}, order=[];
   rows.forEach(function(r){ if(!by[r.workout_id]){by[r.workout_id]={at:r.performed_at,sets:[],pending:r.pending};order.push(r.workout_id);} by[r.workout_id].sets.push(r); });
-  var sessions=order.map(function(id){var s=by[id]; s.sets.sort(function(a,b){return a.set_no-b.set_no;}); var v=null; s.sets.forEach(function(x){var n=x[m[2]]; if(n!=null&&(v===null||n>v)) v=+n;}); s.best=v; return s;});
+  var sessions=order.map(function(id){var s=by[id]; s.sets.sort(function(a,b){return a.set_no-b.set_no;}); var v=null; s.sets.forEach(function(x){var n=x[m[2]]; if(n!=null&&GFDRules.setCounts(measure,{w:x.weight,r:x.reps})&&(v===null||n>v)) v=+n;}); s.best=v; return s;});
   var vals=sessions.filter(function(s){return s.best!=null;}), top=null, reset=prResets()[H.ex];
   /* the record counts from the reset date, if there is one; the chart and list keep everything */
   vals.forEach(function(s){ if((!reset||s.at>reset)&&(!top||s.best>top.best)) top=s; });
   var first=vals.length?vals[vals.length-1]:null, lastS=vals.length?vals[0]:null;
-  h+='<div class="hstats"><div><span>'+esc(reset?m[0]+' since reset':m[0])+'</span><b>'+(top?fmtNum(top.best)+' '+m[1]:'–')+'</b>'+(top?'<em>'+esc(hDate(top.at,{day:"numeric",month:"short"}))+'</em>':'')+'</div>'+
+  var recsH=histRecsHtml(measure,rows,reset);
+  /* the personal bests below already show the top number, so the first tile is only for exercises without one */
+  h+='<div class="hstats">'+(recsH?'':'<div><span>'+esc(reset?m[0]+' since reset':m[0])+'</span><b>'+(top?fmtNum(top.best)+' '+m[1]:'–')+'</b>'+(top?'<em>'+esc(hDate(top.at,{day:"numeric",month:"short"}))+'</em>':'')+'</div>')+
     '<div><span>Workouts</span><b>'+sessions.length+'</b><em>since '+esc(hDate(sessions[sessions.length-1].at,{day:"numeric",month:"short"}))+'</em></div>'+
     (first&&lastS&&vals.length>1?'<div><span>Change</span><b>'+((lastS.best-first.best)>=0?'+':'')+fmtNum(lastS.best-first.best)+' '+m[1]+'</b><em>first to latest</em></div>':'')+'</div>';
+  h+=recsH;
   if(vals.length>1) h+=histChart(vals.slice(0,24).reverse(),m);
   h+='<p class="hsmall hreset">'+(reset?'Record reset on '+esc(hDate(reset,{day:"numeric",month:"short",year:"numeric"}))+'. ':'')+
     '<button class="linkbtn" data-prreset="'+esc(H.ex)+'">Reset record</button> Start your record fresh, for example after a long break or injury. Your history stays.</p>';
@@ -367,6 +370,16 @@ function histExHtml(){
     return '<li><div><b>'+esc(hDate(s.at))+'</b>'+(s.pending?'<em class="htag">Waiting to sync</em>':'')+'</div><span>'+s.sets.map(function(x){return esc(fmtSet(x)||"–");}).join(", ")+'</span></li>';
   }).join("")+'</ul>';
   return h;
+}
+/* personal bests for this exercise, in its own units (rules.js recordList) */
+function histRecsHtml(measure,rows,reset){
+  var resets={}; if(reset) resets[H.ex]=reset;
+  var rec=GFDRules.exerciseRecords(rows.map(function(r){return {workout_id:r.workout_id,performed_at:r.performed_at,exercise_id:H.ex,set_no:r.set_no,measure:r.measure||measure,weight:r.weight==null?null:+r.weight,reps:r.reps==null?null:+r.reps};}),resets)[H.ex];
+  var list=rec?GFDRules.recordList(rec.measure,rec.bests):[];
+  if(!list.length) return '';
+  return '<h3 class="psec">Personal bests'+(reset?' since reset':'')+'</h3><ul class="hrecs">'+list.map(function(o){
+    return '<li><span>'+esc(o.label)+'</span><b>'+esc(o.text)+'</b><em>'+esc([o.set,o.at?hDate(o.at,{day:"numeric",month:"short"}):""].filter(Boolean).join(" · "))+'</em></li>';
+  }).join("")+'</ul>';
 }
 function histChart(pts,m){
   var W=320,Hh=150,pl=38,pr=12,pt=14,pb=24, vs=pts.map(function(p){return p.best;});

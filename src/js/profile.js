@@ -86,6 +86,8 @@ function openProfile(){
     '<h3 class="psec">Default rest timer</h3><p class="sub">Used by the built-in plans. Plans you set up can have their own. Saves as you scroll.</p>'+
     wheelHtml()+
     '<button class="linkbtn" id="testPing">Play the start sound</button>'+
+    '<h3 class="psec">Celebrations</h3><p class="sub">How the app cheers when you finish a workout. Calm uses quieter words and no confetti.</p>'+
+    '<div class="seg" role="group" aria-label="Celebration style">'+[["energetic","Energetic"],["calm","Calm"]].map(function(o){return '<button data-celebset="'+o[0]+'" aria-pressed="'+(celebStyle()===o[0])+'">'+o[1]+'</button>';}).join("")+'</div>'+
     '<h3 class="psec" id="pMeas">Body measurements</h3><p class="sub">'+(lastS?'Last check-in '+esc(fmtDay(lastS.d))+'.':'Nothing saved yet.')+' Weigh in and measure one card at a time.</p>'+
     '<div class="ms-row2"><button class="chip" data-ms="start">Body check-in</button><button class="chip" data-ms="progress">Body progress</button></div>';
   h+=backupHtml()+'</div>';
@@ -142,6 +144,9 @@ function tickSet(ex,i,btn){
   var b=btn||document.querySelector('[data-tick="'+ex.id+'"][data-i="'+i+'"]');
   if(b){
     var row=b.parentElement; b.setAttribute("aria-pressed",s.d); row.classList.toggle("isdone",s.d); row.classList.remove("editing");
+    row.classList.toggle("missed",!!s.d&&GFDRules.isMissed(lab,s,ex.reps));
+    var mn=document.querySelector('.missnote[data-miss="'+ex.id+'"]');
+    if(mn){ var tmp=document.createElement("div"), ms=[]; arr.slice(0,ex.sets).forEach(function(x,k){ if(x.d&&GFDRules.isMissed(lab,x,ex.reps)) ms.push(k+1); }); tmp.innerHTML=missNote(ex,ms); mn.replaceWith(tmp.firstChild); }
     var n=row.querySelector(".n"); if(n) n.innerHTML=setNumHtml(ex,i,s.d);
   }
   refreshSets(ex); save(); updateProgress();
@@ -167,7 +172,7 @@ document.addEventListener("focusin",function(e){
 function jumpFor(ex,i){
   var arr=setsFor(ex), s=arr[i], lab=labOf(ex);
   if(!lab[0]||!s.w||s.ok===s.w) return null;
-  var L=lastFor(ex.id);
+  var L=lastFor(ex.id,ex);
   return GFDRules.bigJump(lab,s.w,L&&L.sets,GFDRules.loggedSets(arr.slice(0,i)));
 }
 var ASK=null;
@@ -204,19 +209,24 @@ function finishWorkout(){
       var j=jumpFor(ex0,i); if(j){ askJump(ex0,i,j,finishWorkout); return; }
     }
   }
-  var c=cur(), L=last(), saved=0, now=new Date().toISOString(), rec=buildWorkout(d), wins={prs:[],up:[],prevCardio:{}};
+  var c=cur(), L=last(), saved=0, now=new Date().toISOString(), rec=buildWorkout(d), wins={prs:[],up:[],prevCardio:{},missed:[],miles:[]};
+  /* milestones need every earlier workout; skipped until history has loaded on a new phone */
+  var prevDates=histKnown()?workoutDates():null, planned=0, ticked=0;
   d.ex.forEach(function(ex){
-    var arr=GFDRules.loggedSets(setsFor(ex).slice(0,ex.sets)), Ls=lastFor(ex.id);
+    var all=setsFor(ex).slice(0,ex.sets), arr=GFDRules.loggedSets(all), Ls=lastFor(ex.id,ex), lab=labOf(ex);
+    planned+=ex.sets;
+    all.forEach(function(s,i){ if(s.d&&!GFDRules.isMissed(lab,s,ex.reps)) ticked++; if(s.d&&GFDRules.isMissed(lab,s,ex.reps)) wins.missed.push({n:ex.n,set:i+1}); });
     /* cardio: keep last time's distance and minutes so the summary can compare pace */
     if(ex.lab==="cardio"&&Ls&&Ls.sets) wins.prevCardio[ex.id]=cardioSum(Ls.sets.map(function(s){return {weight:parseFloat(s.w),reps:parseFloat(s.r)};}));
     /* before this workout joins history: compare with the record and with last time (rules.js) */
-    var win=GFDRules.sessionWin(ex.lab,labOf(ex),arr,bestFor(ex.id),Ls&&Ls.sets);
-    if(win&&win.pr) wins.prs.push({n:ex.n,now:win.pr.now,was:win.pr.was,u:win.pr.u});
+    var win=GFDRules.sessionWin(ex.lab,lab,arr,bestFor(ex.id),Ls&&Ls.sets,ex.reps);
+    if(win&&win.pr) wins.prs.push({n:ex.n,now:win.pr.now,was:win.pr.was,u:win.pr.u,what:win.pr.what,about:win.pr.about});
     else if(win&&win.up) wins.up.push({n:ex.n,by:win.up.by,u:win.up.u});
     /* a copy of last time kept with the app data, used only until history loads on a new phone */
     if(arr.length){L[ex.id]={date:now,sets:arr.map(function(s){return {w:s.w,r:s.r};})};saved++;}
     delete c[ex.id];
   });
+  if(rec&&prevDates) wins.miles=GFDRules.milestones(prevDates,rec.performed_at,DAYS.filter(function(x){return !x.coles;}).length,planned>0&&ticked===planned);
   recordWorkout(rec); save(); stopTimer(); renderDay(); window.scrollTo(0,0);
   if(saved&&rec) showDone(rec,d,wins);
   else toast("Nothing logged yet. Tick a set or type a weight or reps first.");
