@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GFD roadmap · Get Fit Daily</title>
+<meta name="description" content="What's live in GFD · Get Fit Daily, and what we're building next.">
+<meta name="theme-color" content="#0D0F12">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Figtree:wght@400..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0D0F12;--surface:#171A1F;--surface2:#1E2228;--line:#2A2F36;--chalk:#F3F2EC;--muted:#9AA4AE;
+  --volt:#D4FF3A;--volt-dim:rgba(212,255,58,.14);--steel:#56606B;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ink);color:var(--chalk);font-family:Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%;
+  padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:var(--volt)}
+.disp{font-family:Archivo,Figtree,sans-serif;font-weight:900;font-stretch:70%;letter-spacing:.01em;text-transform:uppercase;line-height:.95}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:5;background:rgba(13,15,18,.86);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top .wrap{display:flex;align-items:center;gap:12px;height:56px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--chalk);flex:none}
+.brand svg{width:34px;height:34px}
+.brand b{font-size:20px}
+.jump{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-left:auto;padding:4px 0}
+.jump::-webkit-scrollbar{display:none}
+.jump a{flex:none;text-decoration:none;color:var(--muted);font-size:13px;font-weight:700;padding:6px 11px;border-radius:999px;border:1px solid var(--line);white-space:nowrap}
+.jump a.on{color:var(--ink);background:var(--volt);border-color:var(--volt)}
+@media (max-width:560px){.brand b{display:none}}
+
+/* hero */
+.hero{padding:44px 0 20px}
+.eyebrow{color:var(--volt);font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 12px}
+.hero h1{font-size:clamp(48px,13vw,92px);margin:0 0 16px}
+.hero h1 span{color:var(--volt)}
+.hero p.lede{font-size:18px;color:#D5D9DE;max-width:560px;margin:0 0 22px}
+.cta{display:inline-flex;align-items:center;gap:8px;background:var(--volt);color:var(--ink);font-weight:800;text-decoration:none;padding:13px 20px;border-radius:14px;font-size:16px}
+.cta:focus-visible,.jump a:focus-visible{outline:3px solid var(--chalk);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin:28px 0 0;padding:0;list-style:none;color:var(--muted);font-size:14px}
+.legend li{display:flex;align-items:center;gap:8px}
+.dot{width:14px;height:14px;border-radius:50%;flex:none;display:inline-block}
+.dot.live{background:var(--volt)}
+.dot.next{border:3px solid var(--volt);background:var(--ink)}
+.dot.later{border:2px solid var(--steel);background:var(--ink)}
+
+/* timeline */
+.tl{position:relative;padding:28px 0 8px}
+.rail{position:absolute;left:15px;top:0;bottom:0;width:3px;background:var(--line);border-radius:3px}
+.rail i{position:absolute;left:0;top:0;width:100%;background:var(--volt);border-radius:3px;height:0}
+.rail i.read{background:rgba(212,255,58,.35)}
+.stage{position:relative;padding-left:52px;margin:0 0 12px}
+.stage-h{position:relative;margin:0 0 18px;padding-top:6px}
+.stage-h .node{position:absolute;left:-52px;top:2px;width:33px;height:33px;border-radius:50%;display:grid;place-items:center;background:var(--ink)}
+.stage-h h2{font-size:clamp(32px,8vw,48px);margin:0}
+.stage-h p{margin:6px 0 0;color:var(--muted);font-size:15px}
+.stage.live .stage-h .node{background:var(--volt)}
+.stage.next .stage-h .node{border:4px solid var(--volt)}
+.stage.later .stage-h .node{border:3px solid var(--steel)}
+.stage.live .stage-h h2{color:var(--volt)}
+
+.items{list-style:none;margin:0;padding:0 0 26px}
+.item{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;margin:0 0 14px}
+.item::before{content:"";position:absolute;left:-43px;top:24px;width:15px;height:15px;border-radius:50%;background:var(--ink);border:2px solid var(--steel)}
+.stage.live .item::before{background:var(--volt);border-color:var(--volt)}
+.stage.next .item::before{border:3px solid var(--volt)}
+.item::after{content:"";position:absolute;left:-27px;top:31px;width:22px;height:2px;background:var(--line)}
+.item .tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;margin:0 0 10px}
+.stage.live .tag{background:var(--volt);color:var(--ink)}
+.stage.next .tag{background:var(--volt-dim);color:var(--volt)}
+.stage.later .tag{background:var(--surface2);color:var(--muted)}
+.item h3{font-family:Archivo,Figtree,sans-serif;font-weight:800;font-stretch:88%;font-size:22px;line-height:1.15;margin:0 0 6px}
+.item p{margin:0;color:#C9CED4}
+.item ul{margin:12px 0 0;padding:0;list-style:none}
+.item li{position:relative;padding-left:22px;margin:6px 0;color:#DDE1E5;font-size:15px}
+.item li::before{content:"";position:absolute;left:2px;top:.62em;width:9px;height:2px;background:var(--volt);border-radius:2px}
+.stage.later .item li::before{background:var(--steel)}
+.stage.live .item li::before{left:1px;top:.35em;width:10px;height:6px;background:none;border-left:2px solid var(--volt);border-bottom:2px solid var(--volt);transform:rotate(-45deg)}
+
+/* "you are here" */
+.here{position:relative;padding-left:52px;margin:6px 0 34px}
+.here .pin{position:absolute;left:4px;top:50%;width:25px;height:25px;margin-top:-12.5px;border-radius:50%;background:var(--volt);box-shadow:0 0 0 6px var(--volt-dim)}
+.here .pin::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--volt);opacity:0;animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{transform:scale(.8);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+.here div{background:var(--volt);color:var(--ink);border-radius:14px;padding:12px 16px;font-weight:700}
+.here b{font-family:Archivo,Figtree,sans-serif;font-weight:900;font-stretch:70%;text-transform:uppercase;font-size:22px;display:block;line-height:1}
+
+/* end */
+.end{padding:8px 0 56px 52px;position:relative}
+.end .node{position:absolute;left:3px;top:10px;width:27px;height:27px;border-radius:50%;border:3px dashed var(--steel);background:var(--ink)}
+.end h2{font-size:32px;margin:0 0 8px}
+.end p{color:#C9CED4;margin:0 0 10px;max-width:560px}
+.fine{color:var(--muted);font-size:14px}
+footer{border-top:1px solid var(--line);padding:22px 0 34px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between}
+
+/* reveal on scroll (only when JS runs) */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.here .pin::after{animation:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="GFD, open the app">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="none" stroke="#D4FF3A" stroke-width="9"/><text x="50" y="60" text-anchor="middle" font-family="Archivo" font-weight="900" font-size="30" style="font-stretch:70%" fill="#F3F2EC">GFD</text></svg>
+      <b class="disp">Roadmap</b>
+    </a>
+    <nav class="jump" aria-label="Jump to">
+      <a href="#live">Live</a><a href="#next">Up next</a><a href="#soon">Soon</a><a href="#smarter">Smarter</a><a href="#later">Later</a><a href="#future">Future</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Get Fit Daily · Great Form and Discipline</p>
+    <h1 class="disp">Where GFD<br><span>is heading</span></h1>
+    <p class="lede">Here's what you can use today and what we're building next, in the order it's coming. Scroll down to follow the road.</p>
+    <a class="cta" href="./">Open GFD <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <ul class="legend" aria-label="Key">
+      <li><span class="dot live"></span>Live now</li>
+      <li><span class="dot next"></span>Building next</li>
+      <li><span class="dot later"></span>Planned</li>
+    </ul>
+  </section>
+
+  <div class="tl" id="tl">
+    <div class="rail" aria-hidden="true"><i class="read" id="railread"></i><i id="railfill"></i></div>
+
+    <!-- LIVE -->
+    <section class="stage live" id="live" aria-labelledby="h-live">
+      <div class="stage-h reveal">
+        <span class="node" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#0D0F12" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h2 class="disp" id="h-live">Live now</h2>
+        <p>Already in the app. Most of this landed in November 2026.</p>
+      </div>
+      <ul class="items">
+        <li class="item reveal">
+          <span class="tag">New</span>
+          <h3>Fix any set you logged</h3>
+          <p>Typed 850 instead of 85? Put it right, and everything that depends on it follows.</p>
+          <ul>
+            <li>Edit or delete any set, or a whole workout, from History</li>
+            <li>Personal bests, "last time" and charts rebuild from what you actually lifted</li>
+            <li>A friendly check before saving a jump that looks like a typo</li>
+            <li>Each set starts from last session's real numbers, so what you see is what you save</li>
+          </ul>
+        </li>
+        <li class="item reveal">
+          <span class="tag">New</span>
+          <h3>Personal bests that mean something</h3>
+          <p>Records that fit the exercise, and celebrations you've earned.</p>
+          <ul>
+            <li>Best weight for 1, 3, 5, 8 and 10 reps, plus an estimated one-rep max</li>
+            <li>Most reps for bodyweight moves, longest holds, most rounds, longest or fastest cardio</li>
+            <li>No confetti for a set where the planned reps weren't done</li>
+            <li>"Last time" matches the same plan day and rep target</li>
+            <li>Pick your celebration style: Energetic or Calm</li>
+          </ul>
+        </li>
+        <li class="item reveal">
+          <span class="tag">New</span>
+          <h3>Guided body check-in</h3>
+          <p>Measure yourself in under a minute, one swipe card at a time.</p>
+          <ul>
+            <li>Choose what you track, including left and right sides</li>
+            <li>A history and chart for every measurement, with goals and reminders</li>
+          </ul>
+        </li>
+        <li class="item reveal">
+          <span class="tag">New</span>
+          <h3>Flow, Drift and Glow colour themes</h3>
+          <p>Three softer looks next to the classic volt green, each in light and dark.</p>
+        </li>
+        <li class="item reveal">
+          <span class="tag">New</span>
+          <h3>Works offline</h3>
+          <p>Add GFD to your home screen and keep logging when the gym Wi-Fi gives up. Your sets sync when you're back online.</p>
+        </li>
+        <li class="item reveal">
+          <span class="tag">Since day one</span>
+          <h3>The foundations</h3>
+          <p>Everything you need to plan and log a training week.</p>
+          <ul>
+            <li>More than 1,000 exercises with step-by-step safety tips</li>
+            <li>More than 400 pieces of gear, so plans only use what your gym has</li>
+            <li>Illustrated exercise guides, with more added in every batch</li>
+            <li>Ready-made plans, your own plans, rest timer and Stats</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <div class="here reveal" aria-label="You are here">
+      <span class="pin" aria-hidden="true"></span>
+      <div><b>You are here</b>Everything below is on the way, in the order we plan to build it.</div>
+    </div>
+
+    <!-- UP NEXT -->
+    <section class="stage next" id="next" aria-labelledby="h-next">
+      <div class="stage-h reveal">
+        <span class="node" aria-hidden="true"></span>
+        <h2 class="disp" id="h-next">Up next</h2>
+        <p>The features we're working on now.</p>
+      </div>
+      <ul class="items">
+        <li class="item reveal">
+          <span class="tag">Building next</span>
+          <h3>The right exercise for your gear</h3>
+          <p>Smarter swaps when a machine is busy or you're training somewhere else.</p>
+          <ul>
+            <li>Swaps that keep the same movement first, with a short reason why</li>
+            <li>Swap for today only, or change your plan for good</li>
+            <li>A "Machine taken" button for a quick swap mid-workout</li>
+            <li>Bodyweight and floor exercises always available, wherever you train</li>
+          </ul>
+        </li>
+        <li class="item reveal">
+          <span class="tag">Building next</span>
+          <h3>A start that fits who you are</h3>
+          <p>Setup that asks about you before it hands you a plan.</p>
+          <ul>
+            <li>Four quick questions: what you train, your experience, your goal and how many days a week</li>
+            <li>A recommended plan that suits your answers and your gear</li>
+            <li>A new beginner full-body plan and a simple mat pilates starter</li>
+            <li>Setup picks up where you left off if you close the app</li>
+          </ul>
+        </li>
+        <li class="item reveal">
+          <span class="tag">Building next</span>
+          <h3>Plain words and calmer screens</h3>
+          <p>Every screen easy to read on your first day.</p>
+          <ul>
+            <li>Clearer names, and tap to explain terms like "3 × 10–12" or volume</li>
+            <li>No buttons hiding under the timer or the tab bar</li>
+            <li>Your own plans listed first</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- SOON -->
+    <section class="stage later" id="soon" aria-labelledby="h-soon">
+      <div class="stage-h reveal">
+        <span class="node" aria-hidden="true"></span>
+        <h2 class="disp" id="h-soon">Coming soon</h2>
+        <p>You in control of your account and your data.</p>
+      </div>
+      <ul class="items">
+        <li class="item reveal">
+          <span class="tag">Planned</span>
+          <h3>Your account, your data</h3>
+          <p>Clear about what we keep, and easy to take it with you.</p>
+          <ul>
+            <li>A plain-English privacy policy and terms, readable before you sign up</li>
+            <li>Delete your account and everything in it in two taps</li>
+            <li>Sign in with Google, and a show-password button</li>
+            <li>Download every set you've logged as a spreadsheet file</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- AFTER THAT -->
+    <section class="stage later" id="smarter" aria-labelledby="h-smarter">
+      <div class="stage-h reveal">
+        <span class="node" aria-hidden="true"></span>
+        <h2 class="disp" id="h-smarter">Train smarter</h2>
+        <p>GFD starts telling you what to do next.</p>
+      </div>
+      <ul class="items">
+        <li class="item reveal">
+          <span class="tag">Planned</span>
+          <h3>Log it the way you train</h3>
+          <p>Room for the details serious training needs.</p>
+          <ul>
+            <li>Rest time per exercise, with sensible defaults</li>
+            <li>Warm-up, top and back-off sets, and how hard a set felt (RPE)</li>
+            <li>Left and right for one-sided moves</li>
+            <li>Session notes, plus setup notes like seat height or springs</li>
+          </ul>
+        </li>
+        <li class="item reveal">
+          <span class="tag">Planned</span>
+          <h3>Your progression coach</h3>
+          <p>The app works out your next weight, so you don't have to.</p>
+          <ul>
+            <li>"Next time: 10 kg" after every workout, based on how it went</li>
+            <li>Holds after a tough day, and a lighter week when you need one</li>
+            <li>"How did that feel?" to help beginners find the right weight</li>
+            <li>Week-by-week programmes, from a 4-week starter to 5×5 and beyond</li>
+            <li>Plate calculator and automatic warm-up sets</li>
+          </ul>
+        </li>
+        <li class="item reveal">
+          <span class="tag">Planned</span>
+          <h3>Stats that tell the truth</h3>
+          <p>Numbers you can trust, led by what matters to you.</p>
+          <ul>
+            <li>A headline that fits your training: weight lifted, minutes or sessions</li>
+            <li>A weekly goal you set yourself</li>
+            <li>Progress charts per exercise, and a strength dashboard for the big lifts</li>
+          </ul>
+        </li>
+        <li class="item reveal">
+          <span class="tag">Planned</span>
+          <h3>Your training week</h3>
+          <p>GFD knows which day it is in your plan.</p>
+          <ul>
+            <li>A week strip with ticks for the days you've done</li>
+            <li>Missed a day? "Do Thursday's session today?"</li>
+            <li>"I have 20 minutes" trims today's workout to what matters most</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- LATER -->
+    <section class="stage later" id="later" aria-labelledby="h-later">
+      <div class="stage-h reveal">
+        <span class="node" aria-hidden="true"></span>
+        <h2 class="disp" id="h-later">Polish and depth</h2>
+        <p>Making the everyday parts faster and richer.</p>
+      </div>
+      <ul class="items">
+        <li class="item reveal">
+          <span class="tag">Planned</span>
+          <h3>More body progress</h3>
+          <ul>
+            <li>Progress photos with a side-by-side slider</li>
+            <li>Check-ins for flexibility, balance and posture, like sit-and-reach</li>
+          </ul>
+        </li>
+        <li class="item reveal">
+          <span class="tag">Planned</span>
+          <h3>Gear setup in minutes</h3>
+          <ul>
+            <li>One-tap setups: commercial gym, home rack, pilates studio and more</li>
+            <li>Add a whole station, like bench, bar and plates, in one go</li>
+            <li>Pick gear by picture, and a "What's this machine?" guide</li>
+          </ul>
+        </li>
+        <li class="item reveal">
+          <span class="tag">Planned</span>
+          <h3>Find and learn any exercise</h3>
+          <ul>
+            <li>One search everywhere, with filters for discipline, level and your gear</li>
+            <li>Add to today or to your plan straight from the library</li>
+            <li>Your own history and bests on every exercise page</li>
+            <li>Pictures first, so you see the move before your first set</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- FUTURE -->
+    <section class="stage later" id="future" aria-labelledby="h-future">
+      <div class="stage-h reveal">
+        <span class="node" aria-hidden="true"></span>
+        <h2 class="disp" id="h-future">Further out</h2>
+        <p>Bigger ideas that grow GFD beyond the gym floor.</p>
+      </div>
+      <ul class="items">
+        <li class="item reveal">
+          <span class="tag">Planned</span>
+          <h3>Pilates mode</h3>
+          <ul>
+            <li>Flow sessions: one tick per move, no sets and no rest timer</li>
+            <li>Remember spring settings and footbar for every reformer move</li>
+            <li>Full classical mat order, reformer, Cadillac and chair moves</li>
+            <li>A teaching view with the current and next move</li>
+          </ul>
+        </li>
+        <li class="item reveal">
+          <span class="tag">Planned</span>
+          <h3>For coaches and classes</h3>
+          <ul>
+            <li>Build a programme once and give it to your clients</li>
+            <li>See their logs, missed sessions and comments in one place</li>
+            <li>Run class sequences and share home programmes by link</li>
+          </ul>
+        </li>
+        <li class="item reveal">
+          <span class="tag">Planned</span>
+          <h3>Health, food and friends</h3>
+          <ul>
+            <li>Connect with health apps</li>
+            <li>A simple daily protein and calorie target</li>
+            <li>Train with a gym buddy and see each other's check-ins</li>
+            <li>Bring your history from other workout apps</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <div class="end reveal">
+      <span class="node" aria-hidden="true"></span>
+      <h2 class="disp">And then?</h2>
+      <p>You tell us. Many of the features above came straight from people training with GFD. Send your ideas from <b>More → Suggestions</b> in the app.</p>
+      <p class="fine">This roadmap shows the order we plan to build in. Plans can change as we learn what helps most, so there are no fixed dates.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap"><span>GFD · Get Fit Daily</span><a href="./">Back to the app</a></div>
+</footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var els=[].slice.call(document.querySelectorAll(".reveal"));
+  if("IntersectionObserver" in window&&!reduce){
+    document.documentElement.classList.add("js");
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{rootMargin:"0px 0px -8% 0px"});
+    els.forEach(function(el){io.observe(el);});
+  }
+  // rail fills with volt down to "You are here", then follows the reader
+  var tl=document.getElementById("tl"),fill=document.getElementById("railfill"),read=document.getElementById("railread"),here=document.querySelector(".here");
+  var links=[].slice.call(document.querySelectorAll(".jump a")),stages=links.map(function(a){return document.querySelector(a.getAttribute("href"));});
+  function upd(){
+    var t=tl.getBoundingClientRect(),hereY=here.getBoundingClientRect().top+here.offsetHeight/2-t.top;
+    var readY=Math.min(window.innerHeight*0.6-t.top,t.height);
+    fill.style.height=hereY+"px";
+    read.style.height=Math.max(0,readY)+"px";
+    var cur=0;stages.forEach(function(s,i){if(s.getBoundingClientRect().top<120)cur=i;});
+    links.forEach(function(a,i){a.classList.toggle("on",i===cur);});
+  }
+  var raf=0;function q(){if(!raf)raf=requestAnimationFrame(function(){raf=0;upd();});}
+  addEventListener("scroll",q,{passive:true});addEventListener("resize",q);upd();
+})();
+</script>
+</body>
+</html>
