@@ -119,21 +119,105 @@ function advanceFrom(ex){
 }
 function groupOf(ex){var gs=groupsOf(DAYS[day]);for(var k=0;k<gs.length;k++){if(gs[k].kind!=="single"&&gs[k].items.indexOf(ex)>=0)return gs[k];}return null;}
 function findEx(id){var d=DAYS[day];for(var i=0;i<d.ex.length;i++)if(d.ex[i].id===id)return d.ex[i];return null;}
+/* ---------- ticking, checking and deleting sets (F1) ---------- */
+function setInput(ex,i,f){ return document.querySelector('input[data-ex="'+ex.id+'"][data-i="'+i+'"][data-f="'+f+'"]'); }
+function boxName(lab,f){ return f==="w"?(lab[0]==="km"?"distance":"weight"):(lab[1]==="reps"?"reps":"time"); }
+function tickSet(ex,i,btn){
+  if(!ex) return;
+  var arr=setsFor(ex), s=arr[i], lab=labOf(ex);
+  if(!s.d){
+    /* an empty box can't be ticked: what you see is what's saved */
+    var miss=GFDRules.tickMissing(lab,s);
+    if(miss){ var inp=setInput(ex,i,miss); if(inp) inp.focus(); toast("Type the "+boxName(lab,miss)+" first"); return; }
+    var j=jumpFor(ex,i);
+    if(j){ askJump(ex,i,j,function(){ tickSet(ex,i); }); return; }
+  }
+  s.d=!s.d;
+  if(s.d){
+    if(!s.at) s.at=Date.now();
+    var g=groupOf(ex);
+    if(!g||g.items.every(function(x){return x.sets<=i||setsFor(x)[i].d;})) startTimer(restSec());
+    else{var nx=g.items.filter(function(x){return x.sets>i&&!setsFor(x)[i].d;})[0]; audio(); toast("Next: "+nx.n+", set "+(i+1));}
+  }
+  var b=btn||document.querySelector('[data-tick="'+ex.id+'"][data-i="'+i+'"]');
+  if(b){
+    var row=b.parentElement; b.setAttribute("aria-pressed",s.d); row.classList.toggle("isdone",s.d); row.classList.remove("editing");
+    var n=row.querySelector(".n"); if(n) n.innerHTML=setNumHtml(ex,i,s.d);
+  }
+  refreshSets(ex); save(); updateProgress();
+  if(s.d&&arr.slice(0,ex.sets).every(function(x){return x.d;})) advanceFrom(ex);
+}
+/* the bin on a ticked set: clear it, with Undo */
+function deleteSet(ex,i){
+  if(!ex) return;
+  var arr=setsFor(ex), snap=JSON.parse(JSON.stringify(arr[i]));
+  arr[i]={w:"",r:"",d:false,t:1};
+  save(); renderDay();
+  toastAction("Set "+(i+1)+" of "+ex.n+" deleted","Undo",function(){
+    var a=setsFor(ex); a[i]=snap; save(); renderDay();
+  });
+}
+/* tapping into a ticked set opens it for editing and shows its bin */
+document.addEventListener("focusin",function(e){
+  var row=e.target.closest&&e.target.closest("#day .setrow");
+  document.querySelectorAll("#day .setrow.editing").forEach(function(r){ if(r!==row) r.classList.remove("editing"); });
+  if(row&&row.classList.contains("isdone")) row.classList.add("editing");
+});
+/* is set i far above last time? (rules.js bigJump) Not asked again once you've kept that value. */
+function jumpFor(ex,i){
+  var arr=setsFor(ex), s=arr[i], lab=labOf(ex);
+  if(!lab[0]||!s.w||s.ok===s.w) return null;
+  var L=lastFor(ex.id);
+  return GFDRules.bigJump(lab,s.w,L&&L.sets,GFDRules.loggedSets(arr.slice(0,i)));
+}
+var ASK=null;
+function askJump(ex,i,j,then){
+  var el=document.getElementById("askpop"); if(!el){ then(); return; }
+  var s=setsFor(ex)[i], u=labOf(ex)[0].replace("+","");
+  ASK={ex:ex,i:i,then:then};
+  el.innerHTML='<div class="donecard askcard" role="alertdialog" aria-modal="true" aria-labelledby="askTitle" aria-describedby="askText">'+
+    '<h2 id="askTitle">Check this set</h2><p class="asksub">'+esc(ex.n)+', set '+(i+1)+'</p>'+
+    '<p id="askText" class="asktext">'+esc(GFDRules.jumpText(j,s.w,u))+'</p>'+
+    '<div class="donebtns"><button class="ghost" id="askKeep">Keep '+esc(fmtNum(+s.w))+' '+esc(u)+'</button><button class="primary" id="askFix">Fix it</button></div></div>';
+  el.hidden=false; document.body.style.overflow="hidden";
+  document.getElementById("askFix").focus();
+}
+function askAnswer(keep){
+  var el=document.getElementById("askpop"), a=ASK; ASK=null;
+  if(el){ el.hidden=true; el.innerHTML=""; document.body.style.overflow=""; }
+  if(!a) return;
+  var s=setsFor(a.ex)[a.i];
+  if(keep){ s.ok=s.w; save(); a.then(); return; }
+  /* Fix: open the exercise and put the cursor in the weight box */
+  OPEN[day+":"+a.ex.id]=true;
+  var card=document.querySelector('details.ex[data-ex="'+a.ex.id+'"]');
+  if(card){ card.open=true; var gp=card.closest("details.grp"); if(gp) gp.open=true; }
+  var inp=setInput(a.ex,a.i,"w"); if(inp){ inp.focus(); try{inp.select();}catch(e){} }
+}
 function finishWorkout(){
-  var d=DAYS[day], c=cur(), L=last(), saved=0, now=new Date().toISOString(), rec=buildWorkout(d), wins={prs:[],up:[],prevCardio:{}};
+  var d=DAYS[day];
+  /* check big jumps first, so a typo never becomes a record or last time */
+  for(var k=0;k<d.ex.length;k++){
+    var ex0=d.ex[k], a0=setsFor(ex0);
+    for(var i=0;i<ex0.sets;i++){
+      if(!GFDRules.loggedSets([a0[i]]).length) continue;
+      var j=jumpFor(ex0,i); if(j){ askJump(ex0,i,j,finishWorkout); return; }
+    }
+  }
+  var c=cur(), L=last(), saved=0, now=new Date().toISOString(), rec=buildWorkout(d), wins={prs:[],up:[],prevCardio:{}};
   d.ex.forEach(function(ex){
-    var arr=GFDRules.loggedSets(setsFor(ex).slice(0,ex.sets)), P=prs();
+    var arr=GFDRules.loggedSets(setsFor(ex).slice(0,ex.sets)), Ls=lastFor(ex.id);
     /* cardio: keep last time's distance and minutes so the summary can compare pace */
-    if(ex.lab==="cardio"&&L[ex.id]&&L[ex.id].sets) wins.prevCardio[ex.id]=cardioSum(L[ex.id].sets.map(function(s){return {weight:parseFloat(s.w),reps:parseFloat(s.r)};}));
-    /* before overwriting: compare with the PR and with last time (rules.js) */
-    var win=GFDRules.sessionWin(ex.lab,labOf(ex),arr,P[ex.id],L[ex.id]&&L[ex.id].sets);
+    if(ex.lab==="cardio"&&Ls&&Ls.sets) wins.prevCardio[ex.id]=cardioSum(Ls.sets.map(function(s){return {weight:parseFloat(s.w),reps:parseFloat(s.r)};}));
+    /* before this workout joins history: compare with the record and with last time (rules.js) */
+    var win=GFDRules.sessionWin(ex.lab,labOf(ex),arr,bestFor(ex.id),Ls&&Ls.sets);
     if(win&&win.pr) wins.prs.push({n:ex.n,now:win.pr.now,was:win.pr.was,u:win.pr.u});
     else if(win&&win.up) wins.up.push({n:ex.n,by:win.up.by,u:win.up.u});
+    /* a copy of last time kept with the app data, used only until history loads on a new phone */
     if(arr.length){L[ex.id]={date:now,sets:arr.map(function(s){return {w:s.w,r:s.r};})};saved++;}
-    var np=GFDRules.nextStoredPr(P[ex.id],arr); if(np!==P[ex.id]) P[ex.id]=np;
     delete c[ex.id];
   });
   recordWorkout(rec); save(); stopTimer(); renderDay(); window.scrollTo(0,0);
   if(saved&&rec) showDone(rec,d,wins);
-  else toast("Nothing logged yet. Enter a weight or reps first.");
+  else toast("Nothing logged yet. Tick a set or type a weight or reps first.");
 }

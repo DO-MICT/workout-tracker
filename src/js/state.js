@@ -75,17 +75,21 @@ function weekLong(id){for(var i=0;i<WEEK.length;i++)if(WEEK[i].id===id)return WE
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
 function cur(){return S.cur[S.who];}
 function last(){return S.last[S.who];}
-function prs(){ if(!S.pr) S.pr=[{},{}]; return S.pr[S.who]||(S.pr[S.who]={}); }
-/* record rules live in rules.js */
-function prFor(ex){
-  var L=last()[ex.id], best=GFDRules.bestWeight(prs()[ex.id],L&&L.sets);
-  return best>0?String(best):"";
-}
+/* records and last time come from history (records.js, rules.js) */
+function prFor(ex){ var b=bestFor(ex.id); return b>0?String(b):""; }
+/* today's sets for an exercise. Boxes you haven't touched start with real values (last session's same set,
+   or your earlier set today), so what you see is exactly what ✓ saves. pre marks those untouched values. */
 function setsFor(ex){
   var c=cur(); if(!c[ex.id]){c[ex.id]=[];}
   var arr=c[ex.id]; while(arr.length<ex.sets)arr.push({w:"",r:"",d:false});
-  /* migrate: clear weights an older version auto-filled; they now show as a grey PR hint instead */
+  /* migrate: clear weights a much older version auto-filled from the record */
   arr.forEach(function(s){ if(s.pf&&!s.d&&!s.t) s.w=""; delete s.pf; });
+  var L=lastFor(ex.id), lab=labOf(ex);
+  for(var i=0;i<ex.sets;i++){
+    var s=arr[i]; if(s.d||s.t) continue;
+    var p=GFDRules.setPrefill(arr,i,L&&L.sets);
+    s.w=lab[0]?p.w:""; s.r=p.r;
+    if(s.w||s.r) s.pre=1; else delete s.pre;
+  }
   return arr;
 }
-

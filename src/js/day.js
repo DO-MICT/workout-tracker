@@ -37,7 +37,7 @@ function setDayMenu(open){
   if(open){var c=m.querySelector('[aria-pressed="true"]')||m.querySelector(".dm-item"); if(c) c.focus();}
 }
 function lastText(ex){
-  var L=last()[ex.id]; if(!L||!L.sets||!L.sets.length) return labOf(ex)[0]==="kg"?"First time: pick a weight you can do with good form.":"First time: start easy and log what you do.";
+  var L=lastFor(ex.id); if(!L||!L.sets||!L.sets.length) return labOf(ex)[0]==="kg"?"First time: pick a weight you can do with good form.":"First time: start easy and log what you do.";
   var parts=GFDRules.lastSetParts(L.sets,labOf(ex));
   var dt=new Date(L.date); var ds=isNaN(dt)?"":" ("+dt.toLocaleDateString(undefined,{weekday:"short",day:"numeric",month:"short"})+")";
   return "Last time"+ds+": "+parts.join(", ");
@@ -53,19 +53,21 @@ function groupsOf(d){
   }
   return out;
 }
-/* grey hints: copy the nearest earlier set logged today; before that, PR (kg) and last session / target (reps) */
-function phFor(ex,i){
-  var L=last()[ex.id];
-  return GFDRules.setHint(setsFor(ex),i,L&&L.sets,parseFloat(prFor(ex))||0,labOf(ex),ex.reps);
-}
-function refreshPh(ex){
+/* grey hints in empty boxes are just the units: values come from last time as real numbers (setsFor) */
+function phFor(ex){ return labOf(ex); }
+/* after a change, show the values of the boxes you haven't touched (they follow your earlier sets) */
+function refreshSets(ex){
+  var arr=setsFor(ex);
   for(var i=0;i<ex.sets;i++){
-    var ph=phFor(ex,i);
-    var w=document.querySelector('input[data-ex="'+ex.id+'"][data-i="'+i+'"][data-f="w"]'), r=document.querySelector('input[data-ex="'+ex.id+'"][data-i="'+i+'"][data-f="r"]');
-    if(w) w.placeholder=ph[0]; if(r) r.placeholder=ph[1];
+    var s=arr[i]; if(s.d||s.t) continue;
+    ["w","r"].forEach(function(f){
+      var el=document.querySelector('input[data-ex="'+ex.id+'"][data-i="'+i+'"][data-f="'+f+'"]');
+      if(el&&el!==document.activeElement&&el.value!==s[f]) el.value=s[f];
+    });
   }
 }
 var DAYGEAR=null;
+var DEL_SVG='<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 var PIN_SVG='<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>';
 var CHEV_SVG='<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 var OK_SVG='<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".18"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -73,8 +75,9 @@ var WARN_SVG='<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"
 function setDayLocMenu(open){var m=document.getElementById("dayLocMenu"),b=document.getElementById("dayLocBtn");if(!m||!b)return;m.hidden=!open;b.setAttribute("aria-expanded",open?"true":"false");}
 var NOTE_SVG='<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><g transform="rotate(-45 12 12)"><rect x="1.5" y="7.5" width="21" height="9" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="8.5" y="7.5" width="7" height="9" fill="currentColor" opacity=".35"/></g></svg>';
 function noteOf(id){return (S.notes&&S.notes[id])||"";}
+function setNumHtml(ex,i,done){ return '<b>'+(i+1)+'</b>'+(done?'<button class="setdel" data-sdel="'+ex.id+'" data-i="'+i+'" aria-label="Delete set '+(i+1)+' of '+esc(ex.n)+'">'+DEL_SVG+'</button>':''); }
 function exHtml(ex){
-  var arr=setsFor(ex), L=last()[ex.id], h="";
+  var arr=setsFor(ex), h="";
   var nd=arr.slice(0,ex.sets).filter(function(s){return s.d;}).length;
   h+='<details class="ex'+(nd===ex.sets?' alldone':'')+'" data-ex="'+ex.id+'"'+(OPEN[day+":"+ex.id]?' open':'')+'>';
   var nt=noteOf(ex.id);
@@ -92,8 +95,8 @@ function exHtml(ex){
   var lb=labOf(ex);
   h+='<div class="sets"><div class="setrow" aria-hidden="true"><span></span><span class="lbl">'+lb[0]+'</span><span class="lbl">'+lb[1]+'</span><span></span></div>';
   arr.slice(0,ex.sets).forEach(function(s,i){
-    var ph=phFor(ex,i), wp=ph[0], rp=ph[1];
-    h+='<div class="setrow'+(s.d?' isdone':'')+'"><span class="n">'+(i+1)+'</span>'+
+    var ph=phFor(ex), wp=ph[0], rp=ph[1];
+    h+='<div class="setrow'+(s.d?' isdone':'')+'"><span class="n">'+setNumHtml(ex,i,s.d)+'</span>'+
       (lb[0]?'<input inputmode="decimal" aria-label="Set '+(i+1)+' '+lb[0]+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="w" value="'+esc(s.w)+'" placeholder="'+esc(wp)+'">':'<span></span>')+
       '<input inputmode="decimal" aria-label="Set '+(i+1)+' '+lb[1]+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="r" value="'+esc(s.r)+'" placeholder="'+esc(rp)+'">'+
       '<button class="tick" aria-label="Mark set '+(i+1)+' done" aria-pressed="'+!!s.d+'" data-tick="'+ex.id+'" data-i="'+i+'">✓</button></div>';
@@ -211,31 +214,19 @@ document.addEventListener("click",function(e){
   if(t.dataset.tier){acct().tier=t.dataset.tier;save();document.querySelectorAll("[data-tier]").forEach(function(b){var on=b===t;b.classList.toggle("on",on);b.setAttribute("aria-checked",on);var c=b.querySelector(".tcur");if(on&&!c)b.insertAdjacentHTML("beforeend",'<span class="tcur">Current</span>');if(!on&&c)c.remove();});renderDay();toast(TIERS.filter(function(x){return x.id===t.dataset.tier;})[0].name+" (placeholder)");return;}
   if(t.id==="testPing"){schedulePing(3);return;}
   if(t.dataset.day!==undefined){day=+t.dataset.day;renderTabs();renderDay();window.scrollTo(0,0);var db=document.getElementById("dayBtn");if(db)db.focus({preventScroll:true});return;}
-  if(t.dataset.tick){
-    var ex=findEx(t.dataset.tick), arr=setsFor(ex), i=+t.dataset.i, s=arr[i];
-    s.d=!s.d;
-    if(s.d){
-      if(!s.at) s.at=Date.now();
-      var row=t.parentElement, wi=row.querySelector('[data-f="w"]'), ri=row.querySelector('[data-f="r"]');
-      if(wi&&!s.w&&isFinite(parseFloat(wi.placeholder))){s.w=wi.placeholder;wi.value=s.w;}
-      if(!s.r&&isFinite(parseFloat(ri.placeholder))){s.r=ri.placeholder;ri.value=s.r;}
-      var g=groupOf(ex);
-      if(!g||g.items.every(function(x){return x.sets<=i||setsFor(x)[i].d;})) startTimer(restSec());
-      else{var nx=g.items.filter(function(x){return x.sets>i&&!setsFor(x)[i].d;})[0]; audio(); toast("Next: "+nx.n+", set "+(i+1));}
-    }
-    t.setAttribute("aria-pressed",s.d); t.parentElement.classList.toggle("isdone",s.d);
-    refreshPh(ex); save(); updateProgress();
-    if(s.d&&arr.slice(0,ex.sets).every(function(x){return x.d;})) advanceFrom(ex);
-    return;
-  }
+  if(t.dataset.tick){ tickSet(findEx(t.dataset.tick),+t.dataset.i,t); return; }
+  if(t.dataset.sdel){ deleteSet(findEx(t.dataset.sdel),+t.dataset.i); return; }
+  if(t.id==="toastAct"){ if(toast._act){var fn=toast._act; toast._act=null; document.getElementById("toast").classList.remove("on"); fn();} return; }
+  if(t.id==="askKeep"||t.id==="askFix"){ askAnswer(t.id==="askKeep"); return; }
   if(t.id==="finish"){finishWorkout();return;}
   if(t.id==="tskip"){stopTimer();return;}
   if(t.id==="t30"){tEnd+=30000;tTotal+=30;schedulePing((tEnd-Date.now())/1000);return;}
 });
 document.addEventListener("keydown",function(e){
   if(OB&&e.key==="Escape") return;
+  if(e.key==="Escape"){var ap=document.getElementById("askpop");if(ap&&!ap.hidden){askAnswer(false);return;}}
   if(e.key==="Escape"){var dp=document.getElementById("donepop");if(dp&&!dp.hidden){closeDone();return;}}
-  if(H&&e.key==="Escape"){if(H.del){H.del=null;renderHistory(true);}else if(H.ex&&!H.fromEx){document.getElementById("histBack").click();}else closeHistory();return;}
+  if(H&&e.key==="Escape"){if(H.edit){H.edit=null;renderHistory(true);}else if(H.del){H.del=null;renderHistory(true);}else if(H.ex&&!H.fromEx){document.getElementById("histBack").click();}else closeHistory();return;}
   if(SG&&e.key==="Escape"){closeSugg();return;}
   if(FB&&e.key==="Escape"){if(FB.view){FB.view=null;renderFeedback(true);}else closeFeedback();return;}
   if(OB&&e.key==="Enter"&&/^(obEmail|obName|obPass)$/.test(e.target.id)){var pb=document.querySelector("#onboard .primary");if(pb)pb.click();return;}
@@ -256,13 +247,13 @@ document.addEventListener("keydown",function(e){
   if(e.key==="Escape"){var mo=document.getElementById("more");if(mo&&!mo.hidden){closeMore();return;}}
 });
 document.addEventListener("input",function(e){
-  var el=e.target; if(builderInput(el)||libraryInput(el)) return;
+  var el=e.target; if(builderInput(el)||libraryInput(el)||historyInput(el)) return;
   if(el.id==="eqSearch"){renderGear();return;}
   if(el.dataset&&el.dataset.pf){el.removeAttribute("aria-invalid");return;}
   if(!el.dataset||!el.dataset.ex) return;
   var ex=findEx(el.dataset.ex); var arr=setsFor(ex);
-  var st=arr[+el.dataset.i]; st[el.dataset.f]=el.value.replace(",",".").slice(0,6); st.t=1;
-  refreshPh(ex); save();
+  var st=arr[+el.dataset.i]; st[el.dataset.f]=el.value.replace(",",".").slice(0,6); st.t=1; delete st.pre;
+  refreshSets(ex); save();
 });
 document.addEventListener("toggle",function(e){
   var el=e.target; if(!el||!el.classList) return;

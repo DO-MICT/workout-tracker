@@ -154,7 +154,7 @@ function sbPush(force){
 document.addEventListener("visibilitychange",function(){ if(document.visibilityState==="hidden"&&sbDirty){clearTimeout(sbTimer);sbPush();} });
 function webSignOut(){
   if(wout().length&&sbUser&&!webSignOut.tried){ webSignOut.tried=true; histFlush().then(webSignOut,webSignOut); return; }
-  var done=function(){ try{localStorage.removeItem(KEY);}catch(e){} location.reload(); };
+  var done=function(){ try{localStorage.removeItem(KEY);}catch(e){} rcForget(); location.reload(); };
   if(sbDirty&&sbUser){ clearTimeout(sbTimer); sbBusy=false; sbPush(); setTimeout(function(){ sb.auth.signOut().then(done,done); },900); }
   else if(sb) sb.auth.signOut().then(done,done); else done();
 }
