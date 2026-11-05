@@ -122,20 +122,15 @@ function findEx(id){var d=DAYS[day];for(var i=0;i<d.ex.length;i++)if(d.ex[i].id=
 function finishWorkout(){
   var d=DAYS[day], c=cur(), L=last(), saved=0, now=new Date().toISOString(), rec=buildWorkout(d), wins={prs:[],up:[],prevCardio:{}};
   d.ex.forEach(function(ex){
-    var arr=setsFor(ex).slice(0,ex.sets).filter(function(s){return s.w||s.r;});
-    /* before overwriting: compare with the PR and with last time (weighted exercises only) */
-    var top=0; arr.forEach(function(s){var v=parseFloat(s.w); if(v>top) top=v;});
+    var arr=GFDRules.loggedSets(setsFor(ex).slice(0,ex.sets)), P=prs();
     /* cardio: keep last time's distance and minutes so the summary can compare pace */
     if(ex.lab==="cardio"&&L[ex.id]&&L[ex.id].sets) wins.prevCardio[ex.id]=cardioSum(L[ex.id].sets.map(function(s){return {weight:parseFloat(s.w),reps:parseFloat(s.r)};}));
-    if(top>0&&labOf(ex)[0]){
-      var unit=ex.lab==="cardio"?"km":"kg";
-      var oldPr=parseFloat(prFor(ex))||0, prev=L[ex.id], prevTop=0;
-      if(prev&&prev.sets) prev.sets.forEach(function(s){var v=parseFloat(s.w); if(v>prevTop) prevTop=v;});
-      if(oldPr>0&&top>oldPr) wins.prs.push({n:ex.n,now:top,was:oldPr,u:unit});
-      else if(prevTop>0&&top>prevTop) wins.up.push({n:ex.n,by:Math.round((top-prevTop)*100)/100,u:unit});
-    }
+    /* before overwriting: compare with the PR and with last time (rules.js) */
+    var win=GFDRules.sessionWin(ex.lab,labOf(ex),arr,P[ex.id],L[ex.id]&&L[ex.id].sets);
+    if(win&&win.pr) wins.prs.push({n:ex.n,now:win.pr.now,was:win.pr.was,u:win.pr.u});
+    else if(win&&win.up) wins.up.push({n:ex.n,by:win.up.by,u:win.up.u});
     if(arr.length){L[ex.id]={date:now,sets:arr.map(function(s){return {w:s.w,r:s.r};})};saved++;}
-    arr.forEach(function(s){var v=parseFloat(s.w); if(v>(parseFloat(prs()[ex.id])||0)) prs()[ex.id]=String(v);});
+    var np=GFDRules.nextStoredPr(P[ex.id],arr); if(np!==P[ex.id]) P[ex.id]=np;
     delete c[ex.id];
   });
   recordWorkout(rec); save(); stopTimer(); renderDay(); window.scrollTo(0,0);

@@ -76,9 +76,9 @@ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp
 function cur(){return S.cur[S.who];}
 function last(){return S.last[S.who];}
 function prs(){ if(!S.pr) S.pr=[{},{}]; return S.pr[S.who]||(S.pr[S.who]={}); }
+/* record rules live in rules.js */
 function prFor(ex){
-  var best=parseFloat(prs()[ex.id])||0, L=last()[ex.id];
-  if(L&&L.sets) L.sets.forEach(function(s){var v=parseFloat(s.w); if(v>best) best=v;});
+  var L=last()[ex.id], best=GFDRules.bestWeight(prs()[ex.id],L&&L.sets);
   return best>0?String(best):"";
 }
 function setsFor(ex){
