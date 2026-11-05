@@ -12,6 +12,7 @@ function applyTheme(){
   var c=palPref(); if(c!=="volt") r.setAttribute("data-palette",c); else r.removeAttribute("data-palette");
   try{localStorage.setItem("split5-palette",c);}catch(e){}
   if(window.artRetheme) artRetheme();
+  if(window.msFigMount&&document.getElementById("msFigDefs")) msFigMount();
 }
 /* colour themes, picked under More: GFD volt green is the default; the others are softer looks */
 var PALETTES=[["volt","GFD","#D4FF3A","#0D0F12"],["flow","Flow","#F7B6C8","#B24A6F"],["drift","Drift","#D3C2F2","#6A55A3"],["glow","Glow","#FFC6AB","#B4553C"]];
