@@ -17,17 +17,17 @@ function renderTabbar(){
 }
 function tabSheetsOpen(){
   var vis=function(id){var el=document.getElementById(id);return el&&!el.hidden;};
-  return {overlay:vis("onboard")||vis("wizard")||vis("builder")||vis("notesheet")||vis("donepop"),
-    tab:vis("more")||vis("exlib")||vis("profile")||vis("sugg")||vis("feedback")?"more":vis("history")?"stats":vis("plans")?"plans":vis("equip")?"gear":"workout"};
+  return {overlay:vis("onboard")||vis("wizard")||vis("builder")||vis("notesheet")||vis("donepop")||vis("measure"),
+    tab:vis("more")||vis("exlib")||vis("profile")||vis("sugg")||vis("feedback")?"more":vis("history")||vis("body")?"stats":vis("plans")?"plans":vis("equip")?"gear":"workout"};
 }
 function syncTabs(){
   var st=tabSheetsOpen();
   document.body.classList.toggle("tabs",!st.overlay);
   if(st.tab!==TAB_ACTIVE){TAB_ACTIVE=st.tab;renderTabbar();}
 }
-function closeTabSheets(){ closeMore(); closeLibrary(); closeProfile(); closeSugg(); closeFeedback(); closePlans(); closeHistory(); closeEquip(); }
+function closeTabSheets(){ msClose(); bpClose(); closeMore(); closeLibrary(); closeProfile(); closeSugg(); closeFeedback(); closePlans(); closeHistory(); closeEquip(); }
 function goTab(id){
-  if(id===TAB_ACTIVE&&id!=="workout") return;
+  if(id===TAB_ACTIVE&&id!=="workout"&&!(id==="stats"&&!document.getElementById("body").hidden)) return;
   closeTabSheets();
   if(id==="plans") openPlans();
   else if(id==="stats") openHistory();
@@ -48,7 +48,7 @@ function renderMore(){
   var row=function(id,label,extra){return '<button class="mrow" id="'+id+'"><span>'+label+'</span>'+(extra||'')+'<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';};
   var h='<div class="sheet-in"><div class="sheet-top"><h2 id="mtitle">More</h2></div>'+
     '<button class="mprof" id="openProfile"><span class="mav" aria-hidden="true">'+esc(nm.charAt(0).toUpperCase())+'</span><span class="mpt"><b>'+esc(nm)+'</b><span>'+esc(A.email||"Profile, rest timer and backup")+'</span></span><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+
-    '<div class="mlist">'+row("openMeasure","Capture measurements")+row("openLib","Exercise library")+
+    '<div class="mlist">'+row("openMeasure","Body check-in")+row("openBody","Body progress")+row("openLib","Exercise library")+
     (WEB_MODE?row("openSugg","Suggestions",SG_UNREAD?'<span class="replytag">'+SG_UNREAD+' new repl'+(SG_UNREAD>1?'ies':'y')+'</span>':''):'')+
     (WEB_MODE&&sbAdmin?row("openFeedback","Feedback",'<span class="admtag">Admin</span>'):'')+'</div>'+
     '<div class="mlist mtheme"><span>Appearance</span><div class="seg" role="group" aria-label="Appearance">'+
@@ -57,15 +57,12 @@ function renderMore(){
     '</div>';
   sh.innerHTML=h;
 }
-/* straight to the measurements form on the profile page */
-function openMeasure(){
-  closeTabSheets(); openProfile();
-  var sec=document.getElementById("pMeas"), sh=document.getElementById("profile");
-  if(sec&&sh){ sh.scrollTop=Math.max(0,sec.offsetTop-12); var f=sh.querySelector('input[data-pf="weight"]'); if(f) f.focus({preventScroll:true}); }
-}
+/* body measurements live in measure.js */
+function openMeasure(){ msOpen("start"); }
 function tabsClick(t){
   if(t.dataset.tab){goTab(t.dataset.tab);return true;}
   if(t.id==="openMeasure"){openMeasure();return true;}
+  if(t.id==="openBody"){bpOpen();return true;}
   if(t.id==="openLib"){closeMore();openLibrary();return true;}
   if(t.id==="openProfile"&&!document.getElementById("more").hidden){closeMore();openProfile();return true;}
   if(t.id==="openSugg"||t.id==="openFeedback"){closeMore();return false;}
@@ -73,7 +70,7 @@ function tabsClick(t){
 }
 (function initTabs(){
   renderTabbar();
-  var watch=["onboard","wizard","builder","notesheet","donepop","more","exlib","profile","sugg","feedback","history","plans","equip"];
+  var watch=["onboard","wizard","builder","notesheet","donepop","measure","body","more","exlib","profile","sugg","feedback","history","plans","equip"];
   if(window.MutationObserver){
     var mo=new MutationObserver(function(){syncTabs();});
     watch.forEach(function(id){var el=document.getElementById(id); if(el) mo.observe(el,{attributes:true,attributeFilter:["hidden"]});});

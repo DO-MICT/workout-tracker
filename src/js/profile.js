@@ -1,5 +1,4 @@
-/* ---------- profile: body measurements ---------- */
-var PF=[["height","Height","cm"],["weight","Weight","kg"],["waist","Waist","cm"],["chest","Chest","cm"],["uarm","Upper arm","cm"],["larm","Lower arm","cm"],["abd","Abdomen","cm"],["glutes","Glutes","cm"],["thighs","Thighs","cm"],["calves","Calves","cm"]];
+/* ---------- profile: rest timer, account and links to body measurements (measure.js) ---------- */
 function profileRest(){var r=S.profile&&+S.profile.rest; return (r>=5&&r<=600)?r:90;}
 function restSec(){var r=S.plans?planRest(activePlan().id):0; return r||profileRest();}
 var WH=40;
@@ -81,21 +80,15 @@ function saveAcct(){
   save(); renderAll(); toast("Details saved");
 }
 function openProfile(){
-  var P=prof(), hs=P.hist, lastS=hs.length?hs[hs.length-1]:null, prevS=hs.length>1?hs[hs.length-2]:null;
+  var P=prof(), hs=P.hist, lastS=hs.length?hs[hs.length-1]:null;
   var h='<div class="sheet-in"><div class="sheet-top"><h2 id="ptitle">Profile</h2><button class="chip" id="closeProfile">Close</button></div>'+
     accountHtml()+
     '<h3 class="psec">Default rest timer</h3><p class="sub">Used by the built-in plans. Plans you set up can have their own. Saves as you scroll.</p>'+
     wheelHtml()+
     '<button class="linkbtn" id="testPing">Play the start sound</button>'+
-    '<h3 class="psec" id="pMeas">Measurements</h3><p class="sub">'+(lastS?'Last saved '+esc(fmtDay(lastS.d))+'.':'Nothing saved yet.')+'</p><div class="pgrid">';
-  PF.forEach(function(f){
-    var v=P.vals[f[0]]; v=(v===undefined?"":v);
-    var delta="";
-    if(lastS&&prevS){var a=parseFloat(lastS.v[f[0]]),b=parseFloat(prevS.v[f[0]]);
-      if(isFinite(a)&&isFinite(b)&&a!==b){var df=Math.round((a-b)*10)/10;delta=(df>0?"+":"−")+Math.abs(df)+" "+f[2]+" since "+fmtDay(prevS.d);}}
-    h+='<label class="pf"><span class="pl">'+f[1]+'<i>'+f[2]+'</i></span><input inputmode="decimal" autocomplete="off" data-pf="'+f[0]+'" value="'+esc(v)+'" aria-label="'+f[1]+' in '+(f[2]==="kg"?"kilograms":"centimetres")+'"><span class="pd">'+esc(delta)+'</span></label>';
-  });
-  h+='</div><button class="primary" id="saveProfile">Save measurements</button>'+backupHtml()+'</div>';
+    '<h3 class="psec" id="pMeas">Body measurements</h3><p class="sub">'+(lastS?'Last check-in '+esc(fmtDay(lastS.d))+'.':'Nothing saved yet.')+' Weigh in and measure one card at a time.</p>'+
+    '<div class="ms-row2"><button class="chip" data-ms="start">Body check-in</button><button class="chip" data-ms="progress">Body progress</button></div>';
+  h+=backupHtml()+'</div>';
   var sh=document.getElementById("profile"); sh.innerHTML=h; sh.hidden=false; sh.scrollTop=0;
   document.body.style.overflow="hidden"; sh.focus();
   initWheel();
@@ -103,22 +96,6 @@ function openProfile(){
 function closeProfile(){
   var sh=document.getElementById("profile"); if(!sh||sh.hidden) return;
   sh.hidden=true; sh.innerHTML=""; document.body.style.overflow="";
-}
-function saveProfile(){
-  var P=prof(), vals={}, bad=null;
-  document.querySelectorAll("#profile input[data-pf]").forEach(function(inp){
-    var raw=inp.value.trim().replace(",",".");
-    if(raw===""){inp.removeAttribute("aria-invalid");return;}
-    var n=Number(raw);
-    if(!isFinite(n)||n<=0||n>500){inp.setAttribute("aria-invalid","true");if(!bad)bad=inp;return;}
-    inp.removeAttribute("aria-invalid"); vals[inp.dataset.pf]=String(Math.round(n*10)/10);
-  });
-  if(bad){bad.focus();toast("Check the highlighted fields: numbers only");return;}
-  if(!Object.keys(vals).length&&!Object.keys(P.vals).length){toast("Enter at least one measurement");return;}
-  P.vals=vals;
-  var lastS=P.hist.length?P.hist[P.hist.length-1]:null;
-  if(!lastS||JSON.stringify(lastS.v)!==JSON.stringify(vals)){ P.hist.push({d:new Date().toISOString(),v:vals}); if(P.hist.length>200) P.hist=P.hist.slice(-200); }
-  save(); closeProfile(); toast("Measurements saved");
 }
 function cardDone(c){return c.classList.contains("grp")?!!c.querySelector(":scope > summary .gcnt.all"):c.classList.contains("alldone");}
 function advanceFrom(ex){
