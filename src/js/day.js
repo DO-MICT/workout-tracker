@@ -126,7 +126,7 @@ function renderDay(){
     }
     document.getElementById("day").innerHTML=h; updateProgress(); return;
   }
-  h+='<div class="dayhead"><h2>'+esc(d.title)+'</h2><button class="linkbtn" id="editDay">Edit workout</button></div>';
+  h+=msDueHtml("day")+'<div class="dayhead"><h2>'+esc(d.title)+'</h2><button class="linkbtn" id="editDay">Edit workout</button></div>';
   var pid=activePlan().id, lo=dayLoc(pid,d.id), set=!!dayLocOf(pid,d.id), miss=[];
   DAYGEAR=lo.gear.length?lo.gear:null;
   if(DAYGEAR) d.ex.forEach(function(x){var L=LIB[x.id]; if(L&&missingFor(L,DAYGEAR).length) miss.push(x);});
@@ -178,6 +178,7 @@ document.addEventListener("click",function(e){
   if(!e.target.closest("#dayMenu")) setDayMenu(false);
   var t=e.target.closest("button"); if(!t) return;
   if(tabsClick(t)) return;
+  if(msClick(t)) return;
   if(libraryClick(t)) return;
   if(statsClick(t)) return;
   if(t.dataset.note){e.preventDefault();openNote(t.dataset.note);return;}
@@ -209,7 +210,6 @@ document.addEventListener("click",function(e){
   if(t.dataset.gear){toggleGear(t.dataset.gear);return;}
   if(t.id==="clearSearch"){var q=document.getElementById("eqSearch");q.value="";renderGear();q.focus();return;}
   if(t.id==="closeProfile"){closeProfile();return;}
-  if(t.id==="saveProfile"){saveProfile();return;}
   if(t.id==="saveAcct"){saveAcct();return;}
   if(t.dataset.tier){acct().tier=t.dataset.tier;save();document.querySelectorAll("[data-tier]").forEach(function(b){var on=b===t;b.classList.toggle("on",on);b.setAttribute("aria-checked",on);var c=b.querySelector(".tcur");if(on&&!c)b.insertAdjacentHTML("beforeend",'<span class="tcur">Current</span>');if(!on&&c)c.remove();});renderDay();toast(TIERS.filter(function(x){return x.id===t.dataset.tier;})[0].name+" (placeholder)");return;}
   if(t.id==="testPing"){schedulePing(3);return;}
