@@ -31,9 +31,6 @@ function dayLoc(pid,did){return locById(dayLocOf(pid,did))||curLoc();}
 function setDayLoc(pid,did,id){var P=plansState(); if(!P.dayLoc) P.dayLoc={}; if(!P.dayLoc[pid]) P.dayLoc[pid]={}; if(id) P.dayLoc[pid][did]=id; else delete P.dayLoc[pid][did];}
 function bLoc(){return (BD&&BD.loc&&locById(BD.loc))||curLoc();}
 function bGear(){return bLoc().gear;}
-function swapsFor(exId,g,inDay){
-  return GFDRules.swapCandidates(LIB,exId,g||gear(),inDay,3);
-}
 function locChips(attr,sel){
   var L=locState(); sel=sel||L.active;
   return L.list.map(function(l){return '<button class="chip sm" '+attr+'="'+l.id+'" aria-pressed="'+(l.id===sel)+'">'+esc(l.name)+' <span class="lcnt">'+l.gear.length+'</span></button>';}).join("");
@@ -59,13 +56,6 @@ function locClick(t){
   if(t.dataset.dayloc){setDayLoc(activePlan().id,DAYS[day].id,t.dataset.dayloc);save();setDayLocMenu(false);renderDay();toast(weekLong(DAYS[day].id)+": training at "+dayLoc(activePlan().id,DAYS[day].id).name);var db=document.getElementById("dayLocBtn");if(db)db.focus();return true;}
   if(t.id==="dayLocBtn"){var dm=document.getElementById("dayLocMenu");setDayLocMenu(dm&&dm.hidden);return true;}
   if(t.id==="dayLocSetup"){setDayLocMenu(false);setLoc(dayLoc(activePlan().id,DAYS[day].id).id);openEquip();return true;}
-  if(t.dataset.swap){
-    var pr=t.dataset.swap.split("|"), d=DAYS[day], src=dayToSrc(d), i=-1;
-    src.ex.forEach(function(x,k){if(x.id===pr[0])i=k;}); if(i<0) return true;
-    var from=LIB[pr[0]], to=LIB[pr[1]];
-    src.ex[i]={id:to.id,sets:src.ex[i].sets,reps:to.reps,link:src.ex[i].link};
-    setDaySource(d.id,src); OPEN[day+":"+to.id]=true; save(); renderAll(); toast("Swapped "+from.n+" for "+to.n); return true;
-  }
   if(t.id==="locAdd"){LOC_MODE="add";renderLocBar();return true;}
   if(t.id==="locRename"){LOC_MODE="rename";renderLocBar();return true;}
   if(t.id==="locCancel"){LOC_MODE=null;renderLocBar();return true;}

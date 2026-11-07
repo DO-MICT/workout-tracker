@@ -85,10 +85,11 @@ function exHtml(ex){
   h+='<summary><div class="ttl"><h3>'+esc(ex.n)+'</h3>'+(exMiss.length?'<span class="nogear">Needs gear</span>':'')+'</div><div class="meta"><span class="target">'+ex.sets+' × '+esc(ex.reps)+'</span><span class="cntrow"><button class="notebtn'+(nt?' has':'')+'" data-note="'+ex.id+'" aria-label="'+(nt?'Edit':'Add')+' injury note for '+esc(ex.n)+'" title="Injury note">'+NOTE_SVG+'</button><span class="cnt'+(nd===ex.sets?' all':'')+'">'+nd+'/'+ex.sets+' sets</span></span></div></summary>';
   if(nt) h+='<div class="injnote"><b>Injury note</b><p>'+esc(nt)+'</p></div>';
   if(exMiss.length){
-    var lo2=dayLoc(activePlan().id,DAYS[day].id), sw=swapsFor(ex.id,DAYGEAR,DAYS[day].ex.map(function(x){return x.id;}));
-    h+='<div class="gearwarn"><p>Not possible at '+esc(lo2.name)+': needs '+esc(needsText(LIB[ex.id],DAYGEAR))+'.</p>'+
-      (sw.length?'<span>Swap for:</span><div class="swaps">'+sw.map(function(o){return '<button class="chip sm" data-swap="'+ex.id+'|'+o.id+'">'+esc(o.n)+'</button>';}).join("")+'</div>':'<span>No alternative here with your gear.</span>')+'</div>';
+    var lo2=dayLoc(activePlan().id,DAYS[day].id);
+    h+='<div class="gearwarn"><p>Not possible at '+esc(lo2.name)+': needs '+esc(needsText(LIB[ex.id],DAYGEAR))+'. Swap it for:</p>'+swapPanelHtml(ex,true)+'</div>';
   }
+  h+=swapBarHtml(ex,exMiss.length>0);
+  if(SWAP&&SWAP.ex===ex.id&&!exMiss.length&&!(DAYS[day]&&DAYS[day].coles)) h+=swapPanelHtml(ex,false);
   h+='<div class="last">'+esc(lastText(ex))+'</div><button class="linkbtn hlink" data-hex="'+ex.id+'">See history and progress</button>';
   if(DAYS[day]&&DAYS[day].coles) h+='<button class="chip sm colesswap" data-colesswap="'+ex.id+'">↻ Different '+esc((LIB[ex.id]||{}).mg||"").toLowerCase()+' exercise</button>';
   h+='<details class="how"><summary>How to do it safely</summary>'+exFigure(ex.id,ex.f)+'<ul class="cues">'+ex.c.map(function(c){return '<li>'+esc(c)+'</li>';}).join("")+'</ul></details>';
@@ -200,6 +201,7 @@ document.addEventListener("click",function(e){
   if(onboardClick(t)) return;
   if(backupClick(t)) return;
   if(t.id==="signOut"){ if(!confirmTap(t,"Sign out","Tap again to sign out")) return; webSignOut(); return; }
+  if(swapsClick(t)) return;
   if(locClick(t)) return;
   if(wizardClick(t)) return;
   if(plansClick(t)) return;
@@ -243,13 +245,14 @@ document.addEventListener("keydown",function(e){
   if(e.key==="Enter"&&e.target.id==="locName"){var ls=document.getElementById("locSave");if(ls)ls.click();return;}
   if(e.key==="Escape"&&LOC_MODE){LOC_MODE=null;renderLocBar();return;}
   if(e.key==="Enter"&&e.target.id==="plName"){var sb=document.querySelector("[data-saveren]");if(sb)sb.click();return;}
-  if(e.key==="Escape"&&WZ){var eqs=document.getElementById("equip"); if(eqs&&!eqs.hidden) return; if(BD&&BD.wizard&&BD.view==="peek"){peekBack(BD.peek);} else if(BD&&BD.wizard&&BD.view==="pick"){BD.view="edit";renderBuilder();} else toast("Tap Cancel to leave setup"); return;}
+  if(e.key==="Escape"&&WZ){var eqs=document.getElementById("equip"); if(eqs&&!eqs.hidden) return; if(BD&&BD.wizard&&BD.view==="peek"){peekBack(BD.peek);} else if(BD&&BD.wizard&&(BD.view==="pick"||BD.view==="rep")){BD.view="edit";renderBuilder();} else toast("Tap Cancel to leave setup"); return;}
+  if(e.key==="Escape"&&SWAP&&!BD&&!EL&&!H){var se=SWAP.ex;SWAP=null;renderDay();var sb2=document.querySelector('[data-swopen="'+se+'"]');if(sb2)sb2.focus({preventScroll:true});return;}
   if(e.key==="Escape"){var dym=document.getElementById("dayMenu");if(dym&&!dym.hidden){setDayMenu(false);document.getElementById("dayBtn").focus();return;}}
   if(e.key==="Escape"){var dlm=document.getElementById("dayLocMenu");if(dlm&&!dlm.hidden){setDayLocMenu(false);document.getElementById("dayLocBtn").focus();return;}}
   if(e.key==="Escape"){var pm=document.getElementById("planMenu");if(pm&&!pm.hidden){setPlanMenu(false);document.getElementById("planBtn").focus();return;}}
   if(e.key==="Escape"){var ps=document.getElementById("plans");if(ps&&!ps.hidden){if(PL_REN){PL_REN=null;renderPlans();}else closePlans();return;}}
   if(e.key==="Escape"){var ns=document.getElementById("notesheet");if(ns&&!ns.hidden){closeNote();return;}}
-  if(e.key==="Escape"&&BD){ if(BD.view==="peek") peekBack(BD.peek); else if(BD.view==="pick"){BD.view="edit";renderBuilder();} else if(!BD.dirty) closeBuilder(); else toast("Tap Save workout or Cancel"); return; }
+  if(e.key==="Escape"&&BD){ if(BD.view==="peek") peekBack(BD.peek); else if(BD.view==="pick"||BD.view==="rep"){BD.view="edit";renderBuilder();} else if(!BD.dirty) closeBuilder(); else toast("Tap Save workout or Cancel"); return; }
   if(e.key==="Escape"){var eq=document.getElementById("equip");if(eq&&!eq.hidden){closeEquip();return;}}
   if(e.key==="Escape"){var sh=document.getElementById("profile");if(sh&&!sh.hidden){closeProfile();return;}}
   if(EL&&e.key==="Escape"){if(EL.view){document.getElementById("libBack").click();}else closeLibrary();return;}

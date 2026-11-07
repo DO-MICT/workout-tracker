@@ -3,8 +3,8 @@
    public `exercises` and `gear` tables (readable without signing in) and are kept on this phone,
    so the next start has them straight away. Exercises already built into the app keep their name,
    cues, gear and diagram (plans and history depend on them); the database adds the details. */
-var CAT_KEY="gfd-catalog-v1", CAT={sig:"",ex:0,gear:0,loaded:false};
-var EX_COLS="id,name,aliases,training_type,muscle_group,primary_muscles,secondary_muscles,equipment,req,equipment_tier,difficulty,tracking,sets,reps,form_cues,common_mistakes,regressions,progressions,safety,diagram,updated_at";
+var CAT_KEY="gfd-catalog-v2", CAT={sig:"",ex:0,gear:0,loaded:false};
+var EX_COLS="id,name,aliases,training_type,muscle_group,primary_muscles,secondary_muscles,movement_pattern,unilateral,equipment,req,equipment_tier,difficulty,tracking,sets,reps,form_cues,common_mistakes,regressions,progressions,safety,diagram,updated_at";
 var GEAR_COLS="id,name,aliases,keywords,category,app_group,group_order,sort_order,tier,setting,description,muscle_focus,loading,weight_options,space,price_band,buying_tips,safety,updated_at";
 var BUILTIN_IDS=Object.keys(LIB).reduce(function(o,k){o[k]=1;return o;},{});
 var GEAR_INFO={};
@@ -16,7 +16,7 @@ function catSig(ex,gr){
 function catApply(ex,gr){
   if(ex&&ex.length){
     ex.forEach(function(r){
-      var x={tt:r.training_type,diff:r.difficulty,tier:r.equipment_tier,pm:r.primary_muscles||[],sm:r.secondary_muscles||[],eq:r.equipment||[],
+      var x={tt:r.training_type,diff:r.difficulty,mp:r.movement_pattern||"",uni:!!r.unilateral,tier:r.equipment_tier,pm:r.primary_muscles||[],sm:r.secondary_muscles||[],eq:r.equipment||[],
         mist:r.common_mistakes||[],reg:r.regressions||[],prog:r.progressions||[],safety:r.safety||"",al:r.aliases||[]};
       var L=LIB[r.id];
       if(L&&BUILTIN_IDS[r.id]){ L.x=x; return; }
@@ -39,7 +39,7 @@ function catApply(ex,gr){
 (function catFromCache(){
   try{
     var c=JSON.parse(localStorage.getItem(CAT_KEY)||"null");
-    if(c&&c.v===1&&Array.isArray(c.ex)&&Array.isArray(c.gear)){ catApply(c.ex,c.gear); CAT.sig=c.sig||""; }
+    if(c&&c.v===2&&Array.isArray(c.ex)&&Array.isArray(c.gear)){ catApply(c.ex,c.gear); CAT.sig=c.sig||""; }
   }catch(e){}
 })();
 function catPage(table,cols,order){
@@ -61,7 +61,7 @@ function catFetch(){
     CAT.loaded=true;
     if(sig===CAT.sig) return;
     catApply(ex,gr); CAT.sig=sig;
-    try{ localStorage.setItem(CAT_KEY,JSON.stringify({v:1,sig:sig,ex:ex,gear:gr})); }catch(e){}
+    try{ localStorage.setItem(CAT_KEY,JSON.stringify({v:2,sig:sig,ex:ex,gear:gr})); }catch(e){}
     catRefresh();
   }).catch(function(){ CAT.loaded=true; });
 }

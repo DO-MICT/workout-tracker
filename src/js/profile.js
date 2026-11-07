@@ -228,6 +228,8 @@ function finishWorkout(){
     delete c[ex.id];
   });
   if(rec&&prevDates) wins.miles=GFDRules.milestones(prevDates,rec.performed_at,DAYS.filter(function(x){return !x.coles&&!x.opt&&x.ex.length;}).length,planned>0&&ticked===planned);
+  /* today-only swaps end with the workout: next time the plan's own exercises are back */
+  if(saved&&rec&&d.ex.some(function(x){return x.swFrom;})){ endTodaySwaps(d.id); DAYS=buildDays(); }
   recordWorkout(rec); save(); stopTimer(); renderDay(); window.scrollTo(0,0);
   if(saved&&rec) showDone(rec,d,wins);
   else toast("Nothing logged yet. Tick a set or type a weight or reps first.");

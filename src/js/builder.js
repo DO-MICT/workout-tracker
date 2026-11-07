@@ -26,7 +26,7 @@ function saveNote(del){
 /* ---------- workout builder ---------- */
 var BD=null; /* draft: {day, title, ex:[{id,sets,reps,link}], view:"edit"|"pick", q, mg, all, dirty} */
 function draftFromDay(i){
-  var d=DAYS[i];
+  var d=planDay(i); /* the plan as saved, without today-only swaps */
   return {day:i,title:d.title,dirty:false,view:"edit",q:"",mg:"",all:false,
     ex:d.ex.map(function(x,k){var nx=d.ex[k+1];return {id:x.id,sets:x.sets,reps:x.reps,
       link:!!nx&&((x.ss==="a"&&nx.ss==="b")||(x.ss==="b"&&nx.ss==="b")||(x.ss==="c"&&nx.ss==="c"))};})};
@@ -46,6 +46,7 @@ function renderBuilder(){
   var sh=bSheet(); if(!sh||!BD) return;
   if(BD.view==="peek"&&LIB[BD.peek]){ renderPeek(sh); return; }
   if(BD.view==="pick"){ renderPicker(sh); return; }
+  if(BD.view==="rep"&&BD.ex[BD.rep]){ renderReplace(sh); return; }
   var d=BD.wizard?null:DAYS[BD.day], h;
   if(BD.wizard) h=wzBuilderChrome();
   else h='<div class="sheet-in"><div class="sheet-top"><h2 id="btitle">Edit '+esc(weekLong(d.id))+'</h2><button class="chip" id="bCancel">Cancel</button></div>';
@@ -59,6 +60,7 @@ function renderBuilder(){
       '<div class="brow-top"><div class="bn"><b>'+esc(L.n)+'</b><span>'+esc(L.mg)+'</span>'+(miss?'<em>Needs '+esc(miss)+'</em>':'')+'</div>'+
       '<div class="bacts"><button class="ibtn" data-bup="'+k+'" aria-label="Move '+esc(L.n)+' up"'+(k===0?' disabled':'')+'>↑</button>'+
       '<button class="ibtn" data-bdown="'+k+'" aria-label="Move '+esc(L.n)+' down"'+(k===BD.ex.length-1?' disabled':'')+'>↓</button>'+
+      '<button class="ibtn" data-brep="'+k+'" aria-label="Replace '+esc(L.n)+'" title="Replace">⇄</button>'+
       '<button class="ibtn" data-bdel="'+k+'" aria-label="Remove '+esc(L.n)+'">×</button></div></div>'+
       '<div class="bfields"><div class="bstep"><span>Sets</span><button class="ibtn" data-bsets="'+k+'" data-d="-1" aria-label="Fewer sets"'+(x.sets<=1?' disabled':'')+'>−</button><b aria-live="polite">'+x.sets+'</b><button class="ibtn" data-bsets="'+k+'" data-d="1" aria-label="More sets"'+(x.sets>=8?' disabled':'')+'>+</button></div>'+
       '<label class="breps"><span>Target</span><input data-breps="'+k+'" value="'+esc(x.reps)+'" maxlength="16" autocomplete="off" aria-label="Target reps or time for '+esc(L.n)+'"></label></div></div>';
@@ -104,6 +106,21 @@ function renderPicker(sh){
   var st=sh.scrollTop; sh.innerHTML=h; sh.scrollTop=st;
   if(keepFocus){var i=document.getElementById("pSearch");i.focus();i.setSelectionRange(i.value.length,i.value.length);}
 }
+/* Replace (F4.E2.S2): the best swaps for one exercise in the draft, same ranking as the day view */
+function renderReplace(sh){
+  var x=BD.ex[BD.rep], L=LIB[x.id], bg=bGear(), inDay=BD.ex.map(function(y){return y.id;});
+  var all=swapOptions(x.id,bg,inDay,null), list=all.slice(0,BD.repMore?30:8);
+  var h='<div class="sheet-in"><div class="sheet-top"><button class="chip" id="rBack">‹ Back</button></div>'+
+    '<h2 id="btitle" class="eltitle">Replace '+esc(L.n)+'</h2>'+
+    '<p class="sub">'+(bg.length?'Best matches you can do at <b>'+esc(bLoc().name)+'</b>, closest movement first.':'Closest movement first. No equipment set for '+esc(bLoc().name)+' yet, so everything shows.')+'</p>';
+  if(!list.length) h+='<p class="eqempty">No alternative here with your gear. Try <button class="linkbtn" id="bAdd">adding an exercise</button> instead.</p>';
+  h+='<div class="swlist">'+list.map(function(r){
+    return '<div class="prow"><span class="pview"><span class="bn"><b>'+esc(r.o.n)+'</b><span>'+esc(swapReasonText(r))+'</span>'+(r.harder?'<em class="swhard">Harder</em>':'')+'</span></span>'+
+      '<button class="chip sm" data-brepto="'+r.o.id+'" aria-label="Use '+esc(r.o.n)+' instead">Use</button></div>';
+  }).join("")+'</div>';
+  if(all.length>list.length) h+='<button class="ghost elmore" id="rMore">More options</button>';
+  sh.innerHTML=h+'</div>'; sh.scrollTop=0;
+}
 var PINFO_SVG='<svg class="pinfo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="7.4" r="1.4" fill="currentColor"/></svg>';
 /* a look at one exercise before adding it: the same details as the library, with Add at the bottom */
 function renderPeek(sh){
@@ -133,6 +150,10 @@ function builderClick(t){
   if(t.dataset.pmg!==undefined){BD.mg=t.dataset.pmg;renderBuilder();return true;}
   if(t.dataset.pview){BD.pickTop=bSheet().scrollTop;BD.peek=t.dataset.pview;BD.view="peek";renderBuilder();var pb=document.getElementById("pkBack");if(pb)pb.focus();return true;}
   if(t.id==="pkBack"||t.id==="pkBack2"){peekBack(BD.peek);return true;}
+  if(t.dataset.brep!==undefined){BD.rep=+t.dataset.brep;BD.repMore=false;BD.view="rep";renderBuilder();var rb=document.getElementById("rBack");if(rb)rb.focus();return true;}
+  if(t.id==="rBack"){var rk=BD.rep;BD.view="edit";renderBuilder();var rf=document.querySelector('[data-brep="'+rk+'"]');if(rf){rf.focus();rf.scrollIntoView({block:"center"});}return true;}
+  if(t.id==="rMore"){BD.repMore=true;var st=bSheet().scrollTop;renderBuilder();bSheet().scrollTop=st;return true;}
+  if(t.dataset.brepto){var rx=BD.ex[BD.rep],R0=LIB[rx.id],R1=LIB[t.dataset.brepto];rx.reps=GFDRules.swapReps(R0,R1,rx.reps);rx.id=R1.id;BD.dirty=true;BD.view="edit";renderBuilder();toast(R0.n+" replaced with "+R1.n);var rf2=document.querySelector('[data-brep="'+BD.rep+'"]');if(rf2){rf2.focus();rf2.scrollIntoView({block:"center"});}return true;}
   if(t.dataset.pkadd){var P=LIB[t.dataset.pkadd];BD.ex.push({id:P.id,sets:P.sets,reps:P.reps,link:false});BD.dirty=true;peekBack(P.id);toast(P.n+" added");return true;}
   if(t.dataset.padd){var L=LIB[t.dataset.padd];BD.ex.push({id:L.id,sets:L.sets,reps:L.reps,link:false});BD.dirty=true;renderBuilder();toast(L.n+" added");return true;}
   var k;
