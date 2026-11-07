@@ -8,7 +8,7 @@ function webStart(){
   if(window.supabase&&window.supabase.createClient){ webReady(); return; }
   var s=document.createElement("script"); s.src="vendor/supabase.js";
   s.onload=webReady;
-  s.onerror=function(){ sbOffline=true; setStatus(); if(!acct().signedIn) openWebAuth("signup"); else toast("Offline. Your workouts save on this phone and sync later."); };
+  s.onerror=function(){ sbOffline=true; setStatus(); if(!acct().signedIn) openWebAuth("signup"); else { if(!S.onboarded) resumeOnboarding(); toast("Offline. Your workouts save on this phone and sync later."); } };
   document.head.appendChild(s);
 }
 function webReady(){
@@ -23,7 +23,7 @@ function webReady(){
   },function(){ sbOffline=true; setStatus(); if(!acct().signedIn) openWebAuth("signup"); });
 }
 function openWebAuth(mode){
-  OB={step:"register",mode:mode||"signup",plan:"split5"};
+  OB={step:"register",mode:mode||"signup",ans:{}};
   var sh=document.getElementById("onboard"); sh.hidden=false; document.body.style.overflow="hidden"; renderOnboard();
 }
 function authMsg(e){
@@ -125,7 +125,8 @@ function onSignedIn(user,fresh){
   setStatus("Syncing…");
   sb.from("user_state").select("data,client_ts").eq("user_id",user.id).maybeSingle().then(function(r){
     var row=r&&r.data, rd=row&&row.data, ok=rd&&rd.v===1&&rd.cur&&rd.last;
-    if(ok&&(!S.onboarded||(+row.client_ts||0)>(S.ts||0))){
+    /* a phone that hasn't finished setup takes the account copy, unless it has newer setup progress of its own */
+    if(ok&&((+row.client_ts||0)>(S.ts||0)||(!S.onboarded&&(rd.onboarded||!S.ob)))){
       var keep=wout().slice();   /* workouts finished on this phone but not uploaded yet */
       S=rd; S.who=0; keep.forEach(function(w){ if(!wout().some(function(x){return x.id===w.id;})) wout().push(w); });
       S.account=Object.assign({},S.account||{},{id:user.id,email:user.email,signedIn:true,authMode:"supabase"});
@@ -138,7 +139,7 @@ function onSignedIn(user,fresh){
     if(pd){ if(pd.display_name&&(!S.names[0]||S.names[0]==="You")) S.names[0]=pd.display_name; acct().serverTier=pd.tier; sbAdmin=!!pd.is_admin; }
   }).catch(function(){}).then(function(){
     var sh=document.getElementById("onboard");
-    if(!S.onboarded){ OB={step:"choose",plan:"split5"}; sh.hidden=false; document.body.style.overflow="hidden"; renderOnboard(); }
+    if(!S.onboarded){ if(!(WZ&&WZ.ob)) resumeOnboarding(); else { sh.hidden=true; sh.innerHTML=""; } }
     else if(OB){ sh.hidden=true; sh.innerHTML=""; document.body.style.overflow=""; OB=null; }
     pickToday=true; renderAll(); setStatus(); checkReplies(); histInit();
   });

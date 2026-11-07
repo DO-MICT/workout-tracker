@@ -329,11 +329,41 @@
     return out;
   }
 
+  /* ---- onboarding: suggest a plan from four answers (F3) ----
+     ans = {train: gym|pilates|yoga|running|mixed, level: new|some|experienced,
+            goal: strength|muscle|weight|move|general, days: 2..5}
+     fit = {planId: share of the plan's exercises the location has the gear for, 0..1}
+     Returns plan ids best first. pick is the first one that doesn't mostly need gear the location
+     doesn't have (fit of at least 0.5); "coles" builds from the gear that's there, so it always fits. */
+  function planOrder(ans){
+    var a=ans||{}, t=a.train, lv=a.level, g=a.goal, d=+a.days||3, out;
+    if(t==="pilates") out=["pilates","yoga","beginner"];
+    else if(t==="yoga") out=["yoga","pilates","beginner"];
+    else if(t==="running") out=["run","beginner","fb3"];
+    else if(lv==="new") out=["beginner","fb3"];
+    else if(t==="mixed") out=d>=4||g==="weight"?["fb3","beginner","split5"]:["beginner","fb3"];
+    else if(d>=5&&lv==="experienced") out=g==="muscle"?["split5","bro","fb3"]:["split5","fb3","bro"];
+    else if(d>=5) out=["split5","fb3","beginner"];
+    else out=["fb3","beginner","split5"];
+    if(g==="move"&&out.indexOf("yoga")<0) out.push("yoga");
+    return out;
+  }
+  function recommendPlan(ans,fit){
+    var order=planOrder(ans), f=fit||{}, pick="coles";
+    for(var i=0;i<order.length;i++){ var v=f[order[i]]; if(v==null||v>=0.5){ pick=order[i]; break; } }
+    return {pick:pick,order:order};
+  }
+  /* how the app cheers: calm for pilates, yoga and "move better", energetic for the rest */
+  function celebrateFor(ans){ var a=ans||{}; return a.train==="pilates"||a.train==="yoga"||a.goal==="move"?"calm":"energetic"; }
+  /* training days for the starter plans: 2 days a week sit apart, 3 or more use Monday, Wednesday, Friday */
+  function starterDays(days){ return (+days||3)<=2?["mon","thu"]:["mon","wed","fri"]; }
+
   var R={num:num,topWeight:topWeight,sessionWin:sessionWin,loggedSets:loggedSets,
     e1rm:e1rm,targetOf:targetOf,isMissed:isMissed,setCounts:setCounts,bestsOf:bestsOf,recordList:recordList,lastMatching:lastMatching,
     weekKey:weekKey,milestones:milestones,
     historyRows:historyRows,exerciseRecords:exerciseRecords,setPrefill:setPrefill,tickMissing:tickMissing,bigJump:bigJump,jumpText:jumpText,
     lastSetParts:lastSetParts,missingGear:missingGear,swapCandidates:swapCandidates,
-    workoutVolume:workoutVolume,cardioSum:cardioSum};
+    workoutVolume:workoutVolume,cardioSum:cardioSum,
+    planOrder:planOrder,recommendPlan:recommendPlan,celebrateFor:celebrateFor,starterDays:starterDays};
   if(typeof module!=="undefined"&&module.exports) module.exports=R; else root.GFDRules=R;
 })(typeof window!=="undefined"?window:this);

@@ -11,15 +11,40 @@ var TEMPLATES=[
   thu:{title:"Legs",ex:T([["goblet",4,"10–12"],["rdl",4,"8"],["bss",3,"8–10 / leg"],["hipthrust",3,"10"],["legext",3,"12",1],["legcurl",3,"12"],["calf",4,"12–15"]])},
   fri:{title:"Arms",ex:T([["ezcurl",3,"8–10",1],["skull",3,"10"],["hammer",3,"10–12",1],["ropepush",3,"10–12"],["cablecurlbar",3,"12",1],["ohext",3,"12"]])}
  }},
- {id:"fb3",name:"Full body 3-day + cardio",desc:"Full body on Monday, Wednesday and Friday. Cardio on Tuesday and Thursday.",days:{
+ {id:"fb3",name:"Full body 3 days + optional cardio",desc:"Full body on Monday, Wednesday and Friday. Cardio on Tuesday and Thursday if you have the time.",days:{
   mon:{title:"Full body A",ex:T([["goblet",3,"10–12"],["bench",3,"6–8"],["widepull",3,"10–12"],["shouldermach",3,"8–10"],["plank",3,"45 s"]])},
-  tue:{title:"Cardio",ex:T([["inclinewalk",1,"30 min"],["plank",3,"45 s"]])},
+  tue:{title:"Optional cardio",opt:true,ex:T([["inclinewalk",1,"30 min"],["plank",3,"45 s"]])},
   wed:{title:"Full body B",ex:T([["rdl",3,"8"],["bss",3,"8 / leg"],["incdb",3,"8–10"],["cablerow",3,"10–12"],["lateral",3,"12–15"],["situp",3,"12"]])},
-  thu:{title:"Cardio",ex:T([["treadrun",1,"20 min"],["inclinewalk",1,"10 min"],["sideplank",2,"30 s / side"]])},
+  thu:{title:"Optional cardio",opt:true,ex:T([["treadrun",1,"20 min"],["inclinewalk",1,"10 min"],["sideplank",2,"30 s / side"]])},
   fri:{title:"Full body C",ex:T([["hipthrust",3,"10"],["lyingpress",3,"10"],["cgpull",3,"10–12"],["ohp",3,"8–10"],["hammer",2,"12",1],["skull",2,"10"]])}
+ }},
+ /* starter plans (F3): 2 or 3 days a week. starter: true means Monday, Wednesday, Friday by default and
+    Monday and Thursday for 2 days (Thursday repeats Wednesday). restOff: the rest timer stays off unless you set one. */
+ {id:"beginner",name:"Beginner full body",starter:true,desc:"Machines and dumbbells, 2 to 3 sets of 10 to 15. No barbell lifts while you learn the moves.",days:{
+  mon:{title:"Full body A",ex:T([["legpress",3,"12–15"],["machinechest",3,"10–15"],["widepull",3,"10–15"],["shouldermach",2,"10–15"],["plank",2,"20–30 s"]])},
+  wed:{title:"Full body B",ex:T([["goblet",3,"10–15"],["dbrow",2,"10–15 / side"],["flatdb",2,"10–15"],["legcurl",2,"12–15"],["glutebridge",2,"12–15"],["deadbug",2,"8 / side"]])},
+  fri:{title:"Full body C",ex:T([["legext",2,"12–15"],["legpress",2,"12–15"],["cablerow",3,"10–15"],["incdb",2,"10–15"],["lateral",2,"12–15"],["sideplank",2,"20 s / side"]])}
+ }},
+ {id:"pilates",name:"Mat pilates 3-day",starter:true,restOff:true,desc:"Classic mat moves, one pass of each. The rest timer is off so you can flow.",days:{
+  mon:{title:"Mat pilates: the basics",ex:T([["hundred",1,"60 s"],["rollup",1,"6"],["legcircles",1,"5 each way / side"],["rollingball",1,"6–8"],["singlelegstretch",1,"8 / side"],["spinestretch",1,"5"],["swan",1,"5"],["childpose",1,"30 s"]])},
+  wed:{title:"Mat pilates: back and sides",ex:T([["hundred",1,"60 s"],["saw",1,"4 / side"],["swimming",1,"20–30"],["singlelegkick",1,"8 / side"],["sidekick",1,"8–10 / side"],["pshoulderbridge",1,"5 / side"],["spinetwist",1,"4 / side"],["catcow",1,"8"]])},
+  fri:{title:"Mat pilates: flow",ex:T([["hundred",1,"60 s"],["rollup",1,"6"],["doublelegstretch",1,"6–8"],["scissors",1,"8 / side"],["crisscross",1,"8 / side"],["legpullfront",1,"5 / side"],["swan",1,"5"],["spinestretch",1,"5"]])}
+ }},
+ {id:"yoga",name:"Yoga 3-day",starter:true,restOff:true,desc:"Standing strength, a long stretch and balance. Hold each pose and breathe.",days:{
+  mon:{title:"Yoga: standing strength",ex:T([["sunsal",1,"5 min"],["warrior1",2,"30 s / side"],["warrior2",2,"30 s / side"],["triangle",2,"30 s / side"],["tree",2,"30 s / side"],["childpose",1,"60 s"]])},
+  wed:{title:"Yoga: stretch and open",ex:T([["catcow",1,"10"],["downdog",2,"45 s"],["lowlunge",2,"30 s / side"],["pigeon",1,"60 s / side"],["seatedfold",2,"45 s"],["supinetwist",1,"45 s / side"],["savasana",1,"5 min"]])},
+  fri:{title:"Yoga: back and balance",ex:T([["sunsal",1,"5 min"],["chairpose",2,"30 s"],["crescent",2,"30 s / side"],["cobra",2,"20 s"],["bridgepose",2,"30 s"],["happybaby",1,"60 s"],["savasana",1,"5 min"]])}
+ }},
+ {id:"run",name:"Run 3-day",starter:true,desc:"An easy run, strength for runners and a longer run. Run-walk is fine: keep it easy enough to talk.",days:{
+  mon:{title:"Easy run",ex:T([["runwalk",1,"20–30 min"],["plank",2,"30 s"],["glutebridge",2,"15"]])},
+  wed:{title:"Strength for runners",ex:T([["bwsquat",3,"15"],["walklunge",2,"10 / leg"],["glutebridge",3,"15"],["sideplank",2,"20 s / side"],["deadbug",2,"8 / side"],["hipflexor",1,"45 s / side"]])},
+  fri:{title:"Longer run",ex:T([["jog",1,"25–35 min"],["hipflexor",1,"45 s / side"],["downdog",1,"45 s"]])}
  }},
  {id:"coles",name:"Cole’s Sessions",desc:"A random session from the gear at your location. Pick full body, upper, lower, core or cardio, how many exercises and how many sets.",days:null,random:true}
 ];
+TEMPLATES.forEach(function(t){ if(t.starter&&t.days&&!t.days.thu) t.days.thu=t.days.wed; });
+/* the days a built-in plan uses when you haven't changed them */
+function tmplDayIds(t){return t&&t.starter?["mon","wed","fri"]:["mon","tue","wed","thu","fri"];}
 function plansState(){
   if(!S.plans||typeof S.plans!=="object") S.plans={active:"split5",custom:[],edits:{}};
   var P=S.plans; if(!Array.isArray(P.custom)) P.custom=[]; if(!P.edits) P.edits={};
@@ -60,14 +85,14 @@ function resolveDay(d,src){
     items.forEach(function(x,k){x.ss=circuit?"c":(k===0?"a":"b");});
   });
   var seen={}; ex.forEach(function(x){ if(x._base&&counts[x._base]>1){seen[x._base]=(seen[x._base]||0)+1; x.gl=x._base.replace(":"," "+seen[x._base]+":");} });
-  return {id:d.id,short:d.short,title:src.title||d.title,sub:"",custom:true,ex:ex};
+  return {id:d.id,short:d.short,title:src.title||d.title,sub:"",custom:true,opt:!!src.opt,ex:ex};
 }
 function buildDaysFor(planId){
   if(planId==="coles") return [colesDay()];
   var cp=customById(planId);
   if(cp&&Array.isArray(cp.dayIds)&&cp.dayIds.length) return WEEK.filter(function(w){return cp.dayIds.indexOf(w.id)>=0;}).map(function(w){return resolveDay(w,daySource(planId,w.id));});
-  var ids=planMeta(planId).dayIds;
-  if(tmplById(planId)&&Array.isArray(ids)&&ids.length) return WEEK.filter(function(w){return ids.indexOf(w.id)>=0;}).map(function(w){
+  var tp=tmplById(planId), ids=planMeta(planId).dayIds; if(tp&&tp.starter&&!(Array.isArray(ids)&&ids.length)) ids=tmplDayIds(tp);
+  if(tp&&Array.isArray(ids)&&ids.length) return WEEK.filter(function(w){return ids.indexOf(w.id)>=0;}).map(function(w){
     var src=daySource(planId,w.id); if(src) return resolveDay(w,src);
     for(var i=0;i<DEFAULT_DAYS.length;i++) if(DEFAULT_DAYS[i].id===w.id) return DEFAULT_DAYS[i];
     return resolveDay(w,{title:"Rest day",ex:[]});
@@ -75,11 +100,15 @@ function buildDaysFor(planId){
   return DEFAULT_DAYS.map(function(d){var src=daySource(planId,d.id); return src?resolveDay(d,src):d;});
 }
 function planRest(id){var cp=customById(id), r=cp?+cp.rest:+planMeta(id).rest; return (r>=5&&r<=600)?r:0;}
+/* starter plans like mat pilates keep the rest timer off until you set one for the plan */
+function planRestOff(id){var t=tmplById(id); return !!(t&&t.restOff&&!planRest(id));}
+function restText(id){return planRestOff(id)?"rest timer off":"rest "+fmtRest(planRest(id)||profileRest())+(planRest(id)?"":" (default)");}
 function buildDays(){return buildDaysFor(activePlan().id);}
 /* resolved day -> storable source (keeps supersets as links) */
 function dayToSrc(d){
-  return {title:d.title,ex:d.ex.map(function(x,k){var nx=d.ex[k+1];return {id:x.id,sets:x.sets,reps:x.reps,
+  var o={title:d.title,ex:d.ex.map(function(x,k){var nx=d.ex[k+1];return {id:x.id,sets:x.sets,reps:x.reps,
     link:!!nx&&((x.ss==="a"&&nx.ss==="b")||(x.ss==="b"&&nx.ss==="b")||(x.ss==="c"&&nx.ss==="c"))};})};
+  if(d.opt) o.opt=true; return o;
 }
 function usePlan(id){ if(!planById(id)) return; plansState().active=id; save(); OPEN={}; pickToday=true; renderAll(); }
 function newPlanId(){return "p"+Date.now().toString(36)+Math.floor(Math.random()*1e4).toString(36);}
@@ -121,7 +150,7 @@ function renderPlans(){
     else h+='<div class="plhead"><h3>'+esc(p.name)+'</h3>'+(p.id===act?'<span class="pltag">Active</span>':'')+'</div>';
     var pcp=customById(p.id);
     if(p.desc) h+='<p class="pldesc">'+esc(p.desc)+(edited?' <em>Edited</em>':'')+'</p>'; else if(edited) h+='<p class="pldesc"><em>Edited</em></p>';
-    h+='<p class="pldesc">'+days.length+' day'+(days.length>1?'s':'')+' a week · rest '+fmtRest(planRest(p.id)||profileRest())+(planRest(p.id)?'':' (default)')+'</p>';
+    h+='<p class="pldesc">'+days.length+' day'+(days.length>1?'s':'')+' a week · '+restText(p.id)+'</p>';
     h+='<ul class="pldays">'+days.map(function(d){return '<li><b>'+d.short+'</b>'+esc(d.title)+'<span>'+(d.ex.length?d.ex.length+' exercises':'Empty')+'</span></li>';}).join("")+'</ul>';
     h+='<div class="placts">'+(p.id===act?'':'<button class="chip sm primarychip" data-useplan="'+p.id+'">Use this plan</button>')+
       '<button class="chip sm" data-editplan="'+p.id+'">Edit</button><button class="chip sm" data-dupplan="'+p.id+'">Duplicate</button>'+
@@ -177,8 +206,8 @@ function plansClick(t){
 /* ---------- guided plan setup ---------- */
 var WZ=null; /* {step, days:[ids], titles:{}, ex:{}, cur, rest, name, activate} */
 var WZSTEPS=["Pick your days","Add exercises","Rest timer","Name your plan","Review","Save"];
-function openWizard(editId){
-  WZ={step:1,days:[],titles:{},ex:{},locs:{},cur:"",rest:profileRest(),name:"",activate:true,touched:false};
+function openWizard(editId,fromOb){
+  WZ={ob:!!fromOb,step:1,days:[],titles:{},ex:{},locs:{},cur:"",rest:profileRest(),name:"",activate:true,touched:false};
   var ep=editId&&planById(editId);
   if(ep){
     WZ.editId=ep.id; WZ.step=5; WZ.name=ep.name; WZ.rest=planRest(ep.id)||profileRest(); WZ.restWas=WZ.rest; WZ.activate=activePlan().id===ep.id;
@@ -190,7 +219,9 @@ function openWizard(editId){
 }
 function closeWizard(){
   var sh=document.getElementById("wizard"); if(!sh||sh.hidden) return;
+  var backToOb=WZ&&WZ.ob&&!WZ.saved;
   sh.hidden=true; sh.innerHTML=""; document.body.style.overflow=""; WZ=null; if(BD&&BD.wizard) BD=null;
+  if(backToOb) resumeOnboarding();   /* backing out of "Build my own" goes back to the plan step */
 }
 function wzOrderedDays(){return WEEK.filter(function(w){return WZ.days.indexOf(w.id)>=0;});}
 function wzHead(){
@@ -235,7 +266,7 @@ function renderWizard(){
   } else if(WZ.step===6){
     var nEx=0; WZ.days.forEach(function(d){nEx+=(WZ.ex[d]||[]).length;});
     h+='<div class="wzdone"><h3>'+esc(WZ.name)+'</h3><p>'+WZ.days.length+' day'+(WZ.days.length>1?'s':'')+' a week · '+nEx+' exercises · rest '+fmtRest(WZ.rest)+'</p>'+
-       (WZ.editId&&activePlan().id===WZ.editId?'<p>This is the plan you’re on now.</p>':'<label class="ptoggle"><input type="checkbox" id="wzAct"'+(WZ.activate?' checked':'')+'> Start using this plan now</label>')+'</div>'+wzNav(WZ.editId?"Save changes":"Create plan");
+       (WZ.ob?'<p>You’ll start on this plan.</p>':WZ.editId&&activePlan().id===WZ.editId?'<p>This is the plan you’re on now.</p>':'<label class="ptoggle"><input type="checkbox" id="wzAct"'+(WZ.activate?' checked':'')+'> Start using this plan now</label>')+'</div>'+wzNav(WZ.editId?"Save changes":"Create plan");
   }
   sh.innerHTML=h;
   if(WZ.step===3) initWheel(WZ.rest,function(v){WZ.rest=v;});
@@ -278,8 +309,9 @@ function wzSubmit(){
   var np={id:newPlanId(),name:WZ.name,dayIds:wzOrderedDays().map(function(w){return w.id;}),days:days,rest:WZ.rest};
   plansState().custom.push(np);
   wzDays2Locs(np.id);
-  var act=WZ.activate; if(act) plansState().active=np.id;
-  save(); closeWizard(); closePlans();
+  var act=WZ.activate||WZ.ob, ob=WZ.ob; if(act) plansState().active=np.id;
+  WZ.saved=true; save(); closeWizard(); closePlans();
+  if(ob){ endOnboarding(); toast("All set. You’re on "+np.name); return; }
   if(act){OPEN={};pickToday=true;} renderAll();
   toast(act?"Plan created. You’re now on "+np.name:"Plan created");
 }
@@ -301,10 +333,10 @@ function wzSaveEdit(){
     var t=tmplById(id); if(!P.meta) P.meta={}; var m={};
     if(WZ.name!==t.name) m.name=WZ.name;
     if(WZ.rest!==WZ.restWas||planMeta(id).rest) m.rest=WZ.rest;
-    if(ids.join()!=="mon,tue,wed,thu,fri") m.dayIds=ids;
+    if(ids.join()!==tmplDayIds(t).join()) m.dayIds=ids;
     if(Object.keys(m).length) P.meta[id]=m; else delete P.meta[id];
     var ed={}, orig={}; delete P.edits[id]; var saveMeta=P.meta[id]; delete P.meta[id];
-    buildDaysFor(id).forEach(function(d){orig[d.id]=JSON.stringify(dayToSrc(d));});   /* original, without edits */
+    buildDaysFor(id).forEach(function(d){var o=dayToSrc(d); delete o.opt; orig[d.id]=JSON.stringify(o);});   /* original, without edits */
     if(saveMeta) P.meta[id]=saveMeta;
     ids.forEach(function(d){ var s=days[d]; if(!orig[d]||JSON.stringify(s)!==orig[d]) ed[d]=s; });
     if(Object.keys(ed).length) P.edits[id]=ed;

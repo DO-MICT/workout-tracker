@@ -1,6 +1,6 @@
 /* ---------- profile: rest timer, account and links to body measurements (measure.js) ---------- */
 function profileRest(){var r=S.profile&&+S.profile.rest; return (r>=5&&r<=600)?r:90;}
-function restSec(){var r=S.plans?planRest(activePlan().id):0; return r||profileRest();}
+function restSec(){if(S.plans&&planRestOff(activePlan().id)) return 0; var r=S.plans?planRest(activePlan().id):0; return r||profileRest();}
 var WH=40;
 function wheelItems(n,step){var s='<div class="wpad"></div>';for(var i=0;i<n;i++)s+='<div class="witem">'+(step===5?String(i*step).padStart(2,"0"):i*step)+'</div>';return s+'<div class="wpad"></div>';}
 function wIndex(el){return Math.max(0,Math.min(el.querySelectorAll(".witem").length-1,Math.round(el.scrollTop/WH)));}
@@ -83,6 +83,7 @@ function openProfile(){
   var P=prof(), hs=P.hist, lastS=hs.length?hs[hs.length-1]:null;
   var h='<div class="sheet-in"><div class="sheet-top"><h2 id="ptitle">Profile</h2><button class="chip" id="closeProfile">Close</button></div>'+
     accountHtml()+
+    aboutHtml()+
     '<h3 class="psec">Default rest timer</h3><p class="sub">Used by the built-in plans. Plans you set up can have their own. Saves as you scroll.</p>'+
     wheelHtml()+
     '<button class="linkbtn" id="testPing">Play the start sound</button>'+
@@ -138,7 +139,7 @@ function tickSet(ex,i,btn){
   if(s.d){
     if(!s.at) s.at=Date.now();
     var g=groupOf(ex);
-    if(!g||g.items.every(function(x){return x.sets<=i||setsFor(x)[i].d;})) startTimer(restSec());
+    if(!g||g.items.every(function(x){return x.sets<=i||setsFor(x)[i].d;})) {var rs=restSec(); if(rs) startTimer(rs);}
     else{var nx=g.items.filter(function(x){return x.sets>i&&!setsFor(x)[i].d;})[0]; audio(); toast("Next: "+nx.n+", set "+(i+1));}
   }
   var b=btn||document.querySelector('[data-tick="'+ex.id+'"][data-i="'+i+'"]');
@@ -226,7 +227,7 @@ function finishWorkout(){
     if(arr.length){L[ex.id]={date:now,sets:arr.map(function(s){return {w:s.w,r:s.r};})};saved++;}
     delete c[ex.id];
   });
-  if(rec&&prevDates) wins.miles=GFDRules.milestones(prevDates,rec.performed_at,DAYS.filter(function(x){return !x.coles;}).length,planned>0&&ticked===planned);
+  if(rec&&prevDates) wins.miles=GFDRules.milestones(prevDates,rec.performed_at,DAYS.filter(function(x){return !x.coles&&!x.opt&&x.ex.length;}).length,planned>0&&ticked===planned);
   recordWorkout(rec); save(); stopTimer(); renderDay(); window.scrollTo(0,0);
   if(saved&&rec) showDone(rec,d,wins);
   else toast("Nothing logged yet. Tick a set or type a weight or reps first.");

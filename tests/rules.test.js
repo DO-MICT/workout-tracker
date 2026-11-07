@@ -294,3 +294,35 @@ test("S4 (F2): Tuesday's 3×8 press pre-fills from the last 3×8 day, not Friday
   const L = R.lastMatching(rec, { plan: "ppl", day: "tue", target: "8" });
   assert.deepEqual(R.setPrefill(sets([null, null]), 0, L.sets), { w: "60", r: "8" });
 });
+
+/* ---------- onboarding plan suggestion (F3) ---------- */
+const GYM_SPLITS = ["split5", "bro"];
+test("a pilates instructor at a studio is never given a gym split", () => {
+  const ans = { train: "pilates", level: "experienced", goal: "move", days: 3 };
+  const r = R.recommendPlan(ans, { pilates: 1, yoga: 0.6, beginner: 0.1, split5: 0.2, bro: 0.1, fb3: 0.2 });
+  assert.equal(r.pick, "pilates");
+  assert.ok(r.order.every((id) => !GYM_SPLITS.includes(id)));
+});
+test("a 3-day beginner gets the beginner full body plan, never a split", () => {
+  const r = R.recommendPlan({ train: "gym", level: "new", goal: "general", days: 3 }, { beginner: 1, fb3: 0.8, split5: 0.9 });
+  assert.equal(r.pick, "beginner");
+  assert.ok(r.order.every((id) => !GYM_SPLITS.includes(id)));
+});
+test("a plan that mostly needs missing gear is skipped", () => {
+  const r = R.recommendPlan({ train: "gym", level: "new", goal: "strength", days: 2 }, { beginner: 0.3, fb3: 0.6 });
+  assert.equal(r.pick, "fb3");
+  assert.equal(R.recommendPlan({ train: "pilates", level: "new", days: 3 }, { pilates: 0.1, yoga: 0.2, beginner: 0 }).pick, "coles", "falls back to sessions built from the gear that's there");
+});
+test("experienced lifters training 5 days get the split", () => {
+  assert.equal(R.recommendPlan({ train: "gym", level: "experienced", goal: "muscle", days: 5 }, {}).pick, "split5");
+  assert.equal(R.recommendPlan({ train: "gym", level: "some", goal: "strength", days: 3 }, {}).pick, "fb3");
+  assert.equal(R.recommendPlan({ train: "running", level: "new", days: 3 }, {}).pick, "run");
+  assert.equal(R.recommendPlan({ train: "yoga", level: "some", days: 4 }, {}).pick, "yoga");
+});
+test("celebration style and starter days follow the answers", () => {
+  assert.equal(R.celebrateFor({ train: "pilates", goal: "strength" }), "calm");
+  assert.equal(R.celebrateFor({ train: "gym", goal: "move" }), "calm");
+  assert.equal(R.celebrateFor({ train: "gym", goal: "muscle" }), "energetic");
+  assert.deepEqual(R.starterDays(2), ["mon", "thu"]);
+  assert.deepEqual(R.starterDays(5), ["mon", "wed", "fri"]);
+});
