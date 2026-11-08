@@ -22,3 +22,4 @@ drop function if exists private.scrub(text, int);
 drop table if exists public.app_config;
 drop table if exists public.client_errors;
 drop table if exists public.events;
+-- private.sync_purge_tombstones keeps its written-out form: it does the same as WP3's loop.

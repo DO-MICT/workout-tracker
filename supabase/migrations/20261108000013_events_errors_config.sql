@@ -275,3 +275,24 @@ revoke all on function private.scrub(text, int) from public, anon, authenticated
 revoke all on function private.on_profile_insert_event() from public, anon, authenticated;
 revoke all on function private.on_profile_delete_event() from public, anon, authenticated;
 revoke all on function private.on_entitlement_insert_event() from public, anon, authenticated;
+
+-- ---------- lint fix for WP3 ----------
+-- `supabase db lint` (plpgsql_check) reads WP3's loop over table names as one table called "{user_settings,...}"
+-- and fails the db-check run. Same behaviour, written out per table so the checker can follow it.
+create or replace function private.sync_purge_tombstones(older_than interval default '90 days')
+returns integer language plpgsql security definer set search_path = '' as $$
+declare n integer := 0; k integer;
+begin
+  delete from public.user_settings where deleted_at < now() - older_than;    get diagnostics k = row_count; n := n + k;
+  delete from public.about_me where deleted_at < now() - older_than;         get diagnostics k = row_count; n := n + k;
+  delete from public.locations where deleted_at < now() - older_than;        get diagnostics k = row_count; n := n + k;
+  delete from public.plans where deleted_at < now() - older_than;            get diagnostics k = row_count; n := n + k;
+  delete from public.schedule_entries where deleted_at < now() - older_than; get diagnostics k = row_count; n := n + k;
+  delete from public.measurements where deleted_at < now() - older_than;     get diagnostics k = row_count; n := n + k;
+  delete from public.exercise_notes where deleted_at < now() - older_than;   get diagnostics k = row_count; n := n + k;
+  delete from public.custom_exercises where deleted_at < now() - older_than; get diagnostics k = row_count; n := n + k;
+  delete from public.progress_photos where deleted_at < now() - older_than;  get diagnostics k = row_count; n := n + k;
+  return n;
+end;
+$$;
+revoke all on function private.sync_purge_tombstones(interval) from public, anon, authenticated;
