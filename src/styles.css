@@ -412,6 +412,30 @@ details.grp .ex{margin-bottom:8px}
 .gearwarn p{margin:0 0 6px}
 .gearwarn>span{font-size:.8rem;color:var(--muted);font-weight:600}
 .swaps{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+/* exercise swaps (F4) */
+.swacts{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 4px}
+.swnote{background:var(--done-bg);border-radius:10px;padding:8px 12px;margin:6px 0;font-size:.9rem}
+.swnote .linkbtn{padding:0;min-height:28px}
+.swpanel{border:1.5px solid var(--line);border-radius:12px;padding:10px;margin:6px 0 8px;background:var(--bg)}
+.swpanel.inline{border:0;padding:0;margin:0;background:transparent}
+.swhead{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}
+.swhead .linkbtn{padding:0;min-height:32px}
+.swmode{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1.5px solid var(--ink);border-radius:999px;overflow:hidden;margin-bottom:8px}
+.swmode button{border:0;background:transparent;color:var(--ink);font:inherit;font-weight:700;font-size:.88rem;min-height:40px;cursor:pointer}
+.swmode button[aria-checked="true"]{background:var(--ink);color:var(--bg)}
+.swmode button:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
+.swlist{display:flex;flex-direction:column;gap:6px}
+.swopt{box-sizing:border-box;display:flex;align-items:center;gap:8px;width:100%;text-align:left;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:8px 10px;min-height:52px;cursor:pointer;font:inherit}
+.swopt .bn{flex:1;min-width:0}
+.swopt .bn b{display:block}
+.swopt .bn span,.swlist .pview .bn>span{display:block;font-size:.8rem;color:var(--muted);white-space:normal}
+.swopt:hover{border-color:var(--ink)}
+.swopt:focus-visible{outline:3px solid var(--blue);outline-offset:1px}
+.swhard{flex:none;font-style:normal;font-size:.72rem;font-weight:700;color:var(--warn);border:1.5px solid currentColor;border-radius:999px;padding:0 8px}
+.swlist .pview .swhard{display:inline-block;margin-top:2px}
+.swlist span.pview{cursor:default}
+.swmore{margin-top:6px;padding:4px 0;min-height:32px}
+.swnone{margin:0;color:var(--muted);font-size:.9rem}
 .warnt{font-style:normal;color:var(--warn);font-weight:600}
 .okt{color:var(--done);font-weight:600}
 .locbar.slim{padding:8px 12px;margin:0 0 12px}

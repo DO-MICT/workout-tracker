@@ -249,6 +249,60 @@ test("swaps: same muscle group, doable here, not already in the day, same tracki
   assert.equal(R.swapCandidates(lib, "bench", ["dumbbells", "cablecross"], [], 1).length, 1);
 });
 
+/* ---------- F4 swaps ---------- */
+/* the real catalogue, shaped the way catalog.js loads it */
+const CATALOG = (() => {
+  const lib = {};
+  require("../data/exercise-library/exercises.json").exercises.forEach((r) => {
+    lib[r.id] = { id: r.id, n: r.name, mg: r.muscle_group, req: r.req || "", lab: r.tracking || "w", reps: r.reps,
+      x: { tt: r.training_type, diff: r.difficulty, pm: r.primary_muscles || [], mp: r.movement_pattern, uni: r.unilateral } };
+  });
+  return lib;
+})();
+
+test("D2: Barbell RDL offers Dumbbell RDL first, and every top swap is still a hinge", () => {
+  const top = R.rankSwaps(CATALOG, "rdl", { gear: ["dumbbells", "kettlebells", "cablecross"], level: "some", n: 3 });
+  assert.equal(top[0].o.id, "dbrdl");
+  top.forEach((r) => assert.equal(r.o.x.mp, "Hinge", r.o.n));
+  assert.equal(R.swapReason(top[0], (id) => ({ dumbbells: "Dumbbells" })[id] || id), "Same movement, uses dumbbells");
+});
+
+test("S7: floor moves count at every location without adding gear", () => {
+  assert.deepEqual(R.missingGear("calisthenics|yogamat|pilatesmat", []), [], "plank as built into the app");
+  assert.deepEqual(R.missingGear("calisthenics", ["barbell"]), []);
+  assert.deepEqual(R.missingGear("barbell,yogamat", []), ["barbell"], "the floor doesn't stand in for a barbell");
+  const ids = R.rankSwaps(CATALOG, "rdl", { gear: [] }).map((r) => r.o.id);
+  assert.ok(ids.includes("glutebridge"), "a bodyweight hinge is on offer with no gear at all");
+});
+
+test("PW6: away from the studio a reformer move offers a band or mat version", () => {
+  const top = R.rankSwaps(CATALOG, "rowing", { gear: ["bands"], n: 3 });
+  assert.ok(top.length);
+  top.forEach((r) => assert.ok(!/reformer/.test(r.o.req), r.o.n));
+  assert.equal(top[0].o.id, "bandrow");
+});
+
+test("swaps above your level stay in the list, lower down and marked harder", () => {
+  const lib = {
+    a: { id: "a", n: "Push-up", mg: "Chest", req: "", lab: "bw", x: { mp: "Horizontal push", pm: ["Chest"], diff: "Beginner" } },
+    hard: { id: "hard", n: "Archer push-up", mg: "Chest", req: "", lab: "bw", x: { mp: "Horizontal push", pm: ["Chest"], diff: "Advanced" } },
+    easy: { id: "easy", n: "Knee push-up", mg: "Chest", req: "", lab: "bw", x: { mp: "Horizontal push", pm: ["Chest"], diff: "Beginner" } },
+    fly: { id: "fly", n: "Floor fly", mg: "Chest", req: "", lab: "w", x: { mp: "Isolation", pm: ["Chest"], diff: "Beginner" } },
+  };
+  const r = R.rankSwaps(lib, "a", { gear: [], level: "new" });
+  assert.deepEqual(r.map((x) => x.o.id), ["easy", "fly", "hard"]);
+  assert.equal(r[2].harder, true);
+  const exp = R.rankSwaps(lib, "a", { gear: [], level: "experienced" });
+  assert.ok(exp.findIndex((x) => x.o.id === "hard") < exp.findIndex((x) => x.o.id === "fly"), "no penalty when it suits your level");
+  assert.equal(exp.find((x) => x.o.id === "hard").harder, false);
+  assert.equal(R.rankSwaps(lib, "a", { gear: null }).length, 3, "gear null = don't check gear (no gear picked yet)");
+});
+
+test("a swap keeps the plan's target when both are tracked the same way", () => {
+  assert.equal(R.swapReps({ lab: "w" }, { lab: "w", reps: "10" }, "6–8"), "6–8");
+  assert.equal(R.swapReps({ lab: "w" }, { lab: "hold", reps: "30 s" }, "6–8"), "30 s");
+});
+
 /* ---------- stats maths ---------- */
 test("volume counts weighted sets only", () => {
   assert.equal(R.workoutVolume([{ measure: "w", weight: 60, reps: 8 }, { measure: "w", weight: 62.5, reps: 6 }, { measure: "cardio", weight: 5, reps: 30 }, { measure: "w", weight: null, reps: 10 }]), 855);

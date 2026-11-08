@@ -103,7 +103,7 @@ function planRest(id){var cp=customById(id), r=cp?+cp.rest:+planMeta(id).rest; r
 /* starter plans like mat pilates keep the rest timer off until you set one for the plan */
 function planRestOff(id){var t=tmplById(id); return !!(t&&t.restOff&&!planRest(id));}
 function restText(id){return planRestOff(id)?"rest timer off":"rest "+fmtRest(planRest(id)||profileRest())+(planRest(id)?"":" (default)");}
-function buildDays(){return buildDaysFor(activePlan().id);}
+function buildDays(){var id=activePlan().id;return applyTodaySwaps(id,buildDaysFor(id));}
 /* resolved day -> storable source (keeps supersets as links) */
 function dayToSrc(d){
   var o={title:d.title,ex:d.ex.map(function(x,k){var nx=d.ex[k+1];return {id:x.id,sets:x.sets,reps:x.reps,

@@ -274,20 +274,75 @@
   }
 
   /* ---- gear and swaps ---- */
+  /* floor moves: gear you can always stand in for with a floor, a towel or carpet (F4.E3), so push-ups,
+     plank and mat work count as doable at every location without adding them as gear */
+  var FLOOR=["calisthenics","yogamat","pilatesmat","gymmat"];
   /* [] when the gear covers it, otherwise the "any of" groups that are missing */
   function missingGear(req,gear){
     if(!req) return []; gear=gear||[];
-    return req.split(",").filter(function(alt){ return !alt.split("|").some(function(id){ return gear.indexOf(id)>=0; }); });
+    return req.split(",").filter(function(alt){ return !alt.split("|").some(function(id){ return gear.indexOf(id)>=0||FLOOR.indexOf(id)>=0; }); });
   }
-  /* up to n swaps for exId: same muscle group, not already in the day, doable with this gear;
-     ones tracked the same way (kg, reps, time...) first */
-  function swapCandidates(lib,exId,gear,inDay,n){
+  var LEVELS={new:0,some:1,experienced:2}, DIFF={Beginner:0,Intermediate:1,Advanced:2};
+  /* words that name the gear, not the movement: "Barbell Romanian deadlift" and "Dumbbell Romanian deadlift" match */
+  var GEAR_WORDS=/^(barbell|dumbbell|dumbbells|db|bb|kettlebell|kettlebells|kb|double|cable|machine|smith|trap|bar|ez|ez-bar|band|banded|resistance|landmine|seated|standing|lying|incline|decline|flat|weighted|bodyweight|reformer|mat|trx|suspension|ring|rings|single-arm|one-arm|a|the|with|on|and|of|to|in)$/;
+  function nameWords(n){ return String(n||"").toLowerCase().replace(/[()]/g," ").split(/[\s,/]+/).filter(function(w){ return w&&!GEAR_WORDS.test(w); }); }
+  /* the gear an exercise would use here: one id per "any of" group, preferring what's in the gear list */
+  function gearUsed(req,gear){
+    if(!req) return [];
+    return req.split(",").map(function(alt){
+      var ids=alt.split("|"), have=ids.filter(function(id){ return gear&&gear.indexOf(id)>=0; });
+      return have[0]||ids.filter(function(id){ return FLOOR.indexOf(id)<0; })[0]||"";
+    }).filter(Boolean);
+  }
+  /* free weights swap best for free weights; dumbbells are the usual stand-in for a barbell */
+  var FREE=["barbell","ezbar","trapbar","dumbbells","kettlebells","plates"];
+  function isFree(req){ return String(req||"").split(/[,|]/).some(function(id){ return FREE.indexOf(id)>=0; }); }
+  function gearKin(fromReq,toReq){
+    if(!isFree(fromReq)||!isFree(toReq)) return 0;
+    return 4+(/(^|[,|])dumbbells($|[,|])/.test(toReq)?1:0);
+  }
+  /* swaps for exId, best first (F4.E1.S3). Keeps the movement and changes the gear:
+     same movement pattern, then same main muscle, then same style (pilates stays pilates), tracked the same way,
+     similar name. Moves above the person's level stay in the list, lower down, marked harder.
+     opts: gear (null = don't check gear), inDay (ids to leave out), level ("new"|"some"|"experienced"), n.
+     Returns [{o, score, move, muscle, style, harder, gear:[ids used]}]. */
+  function rankSwaps(lib,exId,opts){
     var L=lib[exId]; if(!L) return [];
-    inDay=inDay||[];
-    return Object.keys(lib).map(function(k){ return lib[k]; })
-      .filter(function(o){ return o.mg===L.mg&&o.id!==exId&&inDay.indexOf(o.id)<0&&!missingGear(o.req,gear).length; })
-      .sort(function(a,b){ return (a.lab===L.lab?0:1)-(b.lab===L.lab?0:1); })
-      .slice(0,n==null?3:n);
+    opts=opts||{}; var gear=opts.gear||null, inDay=opts.inDay||[], lv=LEVELS[opts.level];
+    var lx=L.x||{}, lpm=(lx.pm||[]).map(function(m){ return m.toLowerCase(); }), lw=nameWords(L.n);
+    var out=[];
+    Object.keys(lib).forEach(function(k){
+      var o=lib[k]; if(o.id===exId||inDay.indexOf(o.id)>=0) return;
+      if(gear&&missingGear(o.req,gear).length) return;
+      var x=o.x||{}, pm=(x.pm||[]).map(function(m){ return m.toLowerCase(); });
+      var move=!!(lx.mp&&x.mp===lx.mp), main=!!(lpm[0]&&pm[0]===lpm[0]), overlap=lpm.some(function(m){ return pm.indexOf(m)>=0; });
+      var iso=lx.mp==="Isolation"||lx.mp==="Stretch"||lx.mp==="Mobility";
+      /* a related move: same muscle group, or the same movement working the same muscles */
+      if(o.mg!==L.mg&&!(move&&overlap)) return;
+      /* "Isolation" says little on its own, so it only counts with the same main muscle */
+      if(move&&iso&&!overlap) move=false;
+      var style=!!(lx.tt&&x.tt===lx.tt), harder=lv!=null&&DIFF[x.diff]!=null&&DIFF[x.diff]>lv;
+      var w=nameWords(o.n), shared=w.filter(function(t){ return lw.indexOf(t)>=0; }).length;
+      var score=(move?100:0)+(main?40:overlap?20:0)+(o.mg===L.mg?10:0)+(style?12:0)+(o.lab===L.lab?8:0)+
+        Math.min(shared,3)*6+(!!x.uni===!!lx.uni?10:0)+gearKin(L.req,o.req)-(harder?120:0);
+      out.push({o:o,score:score,move:move,muscle:main||overlap,style:style,harder:harder,gear:gearUsed(o.req,gear)});
+    });
+    out.sort(function(a,b){ return (b.score-a.score)||String(a.o.n).localeCompare(String(b.o.n)); });
+    return opts.n==null?out:out.slice(0,opts.n);
+  }
+  /* why a swap was offered, in plain words: "Same movement, uses dumbbells" */
+  function swapReason(r,gearName){
+    var name=gearName||function(id){ return id; }, parts=[];
+    if(r.move) parts.push("Same movement"); else if(r.muscle) parts.push("Same muscles"); else parts.push("Same muscle group");
+    var g=r.gear.map(function(id){ return String(name(id)).toLowerCase(); });
+    parts.push(g.length?"uses "+(g.length>1?g.slice(0,-1).join(", ")+" and "+g[g.length-1]:g[0]):"no gear needed");
+    return parts.join(", ");
+  }
+  /* reps to plan after a swap: keep the plan's target when both are tracked the same way */
+  function swapReps(from,to,planReps){ return from&&to&&(from.lab||"w")===(to.lab||"w")&&planReps?planReps:(to&&to.reps)||planReps; }
+  /* up to n swaps (the exercise objects), as before F4: kept for older callers */
+  function swapCandidates(lib,exId,gear,inDay,n){
+    return rankSwaps(lib,exId,{gear:gear||[],inDay:inDay,n:n==null?3:n}).map(function(r){ return r.o; });
   }
 
   /* ---- stats maths ---- */
@@ -362,7 +417,7 @@
     e1rm:e1rm,targetOf:targetOf,isMissed:isMissed,setCounts:setCounts,bestsOf:bestsOf,recordList:recordList,lastMatching:lastMatching,
     weekKey:weekKey,milestones:milestones,
     historyRows:historyRows,exerciseRecords:exerciseRecords,setPrefill:setPrefill,tickMissing:tickMissing,bigJump:bigJump,jumpText:jumpText,
-    lastSetParts:lastSetParts,missingGear:missingGear,swapCandidates:swapCandidates,
+    lastSetParts:lastSetParts,missingGear:missingGear,swapCandidates:swapCandidates,rankSwaps:rankSwaps,swapReason:swapReason,swapReps:swapReps,
     workoutVolume:workoutVolume,cardioSum:cardioSum,
     planOrder:planOrder,recommendPlan:recommendPlan,celebrateFor:celebrateFor,starterDays:starterDays};
   if(typeof module!=="undefined"&&module.exports) module.exports=R; else root.GFDRules=R;

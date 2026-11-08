@@ -37,3 +37,12 @@ Gear ids allowed in an exercise's `req`: `data/exercise-library/tools/gear_ids.t
 `exercises.json` on main already has the 41 `exercise-req-updates.json` changes applied. Re-running the gear merge
 therefore sees them as already done and drops 18 stale gear → exercise links (for example `sealrow` from `flatbench`).
 That output is more correct, but commit it on purpose as its own change, not mixed into something else.
+
+## Fields the app's swaps depend on (since F4, Nov 2026)
+
+Swaps (`GFDRules.rankSwaps` in `src/js/rules.js`) rank by `movement_pattern` first, then the first of
+`primary_muscles`, `training_type`, `tracking`, `unilateral`, then `difficulty` against the user's level.
+Keep `movement_pattern` to the existing 22 values (Hinge, Squat, Lunge, Horizontal push, Isolation ...);
+a new spelling of an old pattern splits swaps. "Isolation", "Stretch" and "Mobility" only count as the same
+movement when the main muscle matches too. Gear ids `calisthenics`, `yogamat`, `pilatesmat` and `gymmat` count
+as always available (a floor or towel stands in), so moves needing only those show at every location.
