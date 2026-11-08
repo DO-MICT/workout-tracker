@@ -51,7 +51,7 @@ function consentCheck(){
 function consentOpen(needs,update){
   var sh=document.getElementById("consent"); if(!sh) return;
   sh.dataset.needs=needs.join(",");
-  var both=needs.length>1, what=both?policyLink("terms")+' and the '+policyLink("privacy"):'the '+policyLink(needs[0]);
+  var both=needs.length>1, what=both?'the '+policyLink("terms")+' and the '+policyLink("privacy"):'the '+policyLink(needs[0]);
   sh.innerHTML='<div class="sheet-in ob">'+brandHtml()+'<div class="obhero"><h1 id="cstitle">'+(update?'We’ve updated':'One more thing')+'</h1>'+
     '<p>'+(update?'We changed our '+(both?'Terms of use and Privacy policy':CONSENT_LABEL[needs[0]])+'. Please read '+(both?'them':'it')+' and agree to keep using GFD.'
       :'Please read and agree to how GFD works and how we look after your data.')+'</p></div>'+
