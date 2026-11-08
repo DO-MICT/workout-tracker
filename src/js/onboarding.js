@@ -121,7 +121,7 @@ function onboardClick(t){
     var n=(document.getElementById("obName").value||"").trim(), e=(document.getElementById("obEmail").value||"").trim(), err=document.getElementById("obErr");
     if(!e){err.textContent="Enter your email to create your account.";document.getElementById("obEmail").focus();return true;}
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e)){err.textContent="That email doesn’t look right.";document.getElementById("obEmail").focus();return true;}
-    var A=acct(); A.email=e; A.signedIn=true; A.authMode="mvp"; A.registeredAt=new Date().toISOString(); A.tier="tester";
+    var A=acct(); A.email=e; A.signedIn=true; A.authMode="mvp"; A.registeredAt=new Date().toISOString();
     S.names[0]=n||"You"; save(); resumeOnboarding(); return true;
   }
   if(t.dataset.obans){

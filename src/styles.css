@@ -449,6 +449,7 @@ details.grp .ex{margin-bottom:8px}
 .tiers{display:grid;gap:10px}
 .tier{position:relative;display:block;width:100%;text-align:left;border:2px solid var(--line);background:var(--card);border-radius:14px;padding:12px 14px;cursor:pointer;color:var(--ink)}
 .tier.on{border-color:var(--done)}
+.tier.static{cursor:default}
 .tier:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .th{display:flex;align-items:center;gap:8px}
 .th b{font-family:Archivo,sans-serif;font-size:1.4rem}
