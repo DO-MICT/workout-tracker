@@ -423,6 +423,82 @@ test('usage counts and errors are for admins only, and errors are scrubbed', asy
   assert.ok(mine.count >= 2, 'the same error within an hour adds to its count');
 });
 
+// ---------- consents (WP6) ----------
+
+test('consents: private to each user, recorded only through give/withdraw, never edited', async () => {
+  // publish test versions of the terms and privacy texts for this run, and put the old value back after
+  const old = rows(await admin('/rest/v1/app_config?select=value&key=eq.policies'))[0].value;
+  const pol = { ...old, terms: 't-' + run, privacy: 'p-' + run };
+  const set = await admin('/rest/v1/app_config?key=eq.policies', { method: 'PATCH', body: { value: pol } });
+  assert.ok(set.status < 300, 'service key sets policy versions: ' + JSON.stringify(set.json));
+  try {
+    // before agreeing, A's view shows nothing active and today's versions
+    let mine = rows(await rest('my_consents?select=kind,active,version,current_version', 'a'));
+    assert.equal(mine.length, 4);
+    assert.deepEqual(mine.find((r) => r.kind === 'terms'), { kind: 'terms', active: false, version: null, current_version: 't-' + run });
+
+    // the wrong (old) version is refused; the current one is recorded once
+    assert.ok((await rest('rpc/give_consent', 'a', { method: 'POST', body: { p_kind: 'terms', p_version: 'old' } })).status >= 400);
+    for (let i = 0; i < 2; i++) {
+      const g = await rest('rpc/give_consent', 'a', { method: 'POST', body: { p_kind: 'terms', p_version: 't-' + run } });
+      assert.equal(g.status, 200, JSON.stringify(g.json));
+    }
+    await rest('rpc/give_consent', 'a', { method: 'POST', body: { p_kind: 'privacy', p_version: 'p-' + run } });
+    await rest('rpc/give_consent', 'a', { method: 'POST', body: { p_kind: 'marketing', p_version: pol.marketing } });
+    assert.equal(rows(await rest('consents?select=id&kind=eq.terms', 'a')).length, 1, 'agreeing twice adds one row');
+
+    // marketing withdrawn: a new row, the old one stays
+    const w = await rest('rpc/withdraw_consent', 'a', { method: 'POST', body: { p_kind: 'marketing' } });
+    assert.equal(w.status, 200, JSON.stringify(w.json));
+    const mk = rows(await rest('consents?select=withdrawn_at&kind=eq.marketing&order=id', 'a'));
+    assert.equal(mk.length, 2);
+    assert.equal(mk[0].withdrawn_at, null);
+    assert.ok(mk[1].withdrawn_at);
+    mine = rows(await rest('my_consents?select=kind,active', 'a'));
+    assert.deepEqual(Object.fromEntries(mine.map((r) => [r.kind, r.active])), { terms: true, privacy: true, health: false, marketing: false });
+
+    // terms can't be withdrawn (that's deleting the account), and nothing is written directly
+    assert.ok((await rest('rpc/withdraw_consent', 'a', { method: 'POST', body: { p_kind: 'terms' } })).status >= 400);
+    const ins = await rest('consents', 'a', { method: 'POST', body: { user_id: users.a.id, kind: 'health', version: '1' } });
+    assert.ok(ins.status >= 400, 'A cannot insert consent rows directly');
+    const upd = await rest('consents?kind=eq.marketing', 'a', { method: 'PATCH', body: { withdrawn_at: null }, headers: { Prefer: 'return=representation' } });
+    assert.ok(upd.status >= 400 || rows(upd).length === 0, 'A cannot edit consent rows');
+    const del = await rest('consents?kind=eq.terms', 'a', { method: 'DELETE', headers: { Prefer: 'return=representation' } });
+    assert.ok(del.status >= 400 || rows(del).length === 0, 'A cannot delete consent rows');
+
+    // B sees none of A's rows; signed-out visitors can't record or read anything
+    assert.equal(rows(await rest('consents?select=id', 'b')).length, 0, "B sees none of A's consents");
+    assert.ok(rows(await rest('my_consents?select=active', 'b')).every((r) => r.active === false));
+    assert.ok((await rest('rpc/give_consent', null, { method: 'POST', body: { p_kind: 'terms', p_version: 't-' + run } })).status >= 400);
+    assert.equal(rows(await rest('consents?select=id')).length, 0);
+    assert.ok((await rest('rpc/has_consent', 'a', { method: 'POST', body: { p_uid: users.a.id, p_kind: 'terms' } })).status >= 400,
+      'has_consent is private');
+
+    // sign-up: versions ticked on the form are recorded with the account; stale ones are not
+    const email = `rls-d-${run}@example.com`;
+    const made = await admin('/auth/v1/admin/users', {
+      method: 'POST',
+      body: { email, password: PASSWORD, email_confirm: true,
+        user_metadata: { display_name: 'Tester D', consents: { terms: 't-' + run, privacy: 'stale', marketing: pol.marketing } } },
+    });
+    assert.equal(made.status, 200, JSON.stringify(made.json));
+    users.d = { id: made.json.id };
+    const signin = await call('/auth/v1/token?grant_type=password', { method: 'POST', body: { email, password: PASSWORD } });
+    const d = rows(await call('/rest/v1/my_consents?select=kind,active', { token: signin.json.access_token }));
+    assert.deepEqual(Object.fromEntries(d.map((r) => [r.kind, r.active])), { terms: true, privacy: false, health: false, marketing: true });
+  } finally {
+    await admin('/rest/v1/app_config?key=eq.policies', { method: 'PATCH', body: { value: old } });
+  }
+});
+
+test('consents: terms and privacy are refused while the policies are unpublished', async () => {
+  const pol = rows(await admin('/rest/v1/app_config?select=value&key=eq.policies'))[0].value;
+  if (pol.terms) return; // staging may have published versions
+  const r = await rest('rpc/give_consent', 'b', { method: 'POST', body: { p_kind: 'terms', p_version: '' } });
+  assert.ok(r.status >= 400);
+  assert.match(JSON.stringify(r.json), /not published/);
+});
+
 // ---------- one trial per person ----------
 
 test('deleting an account and joining again with the same email gives no second trial', async () => {

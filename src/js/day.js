@@ -200,6 +200,7 @@ document.addEventListener("click",function(e){
   if(feedbackClick(t)) return;
   if(usageClick(t)) return;
   if(suggClick(t)) return;
+  if(consentClick(t)) return;
   if(webAuthClick(t)) return;
   if(onboardClick(t)) return;
   if(backupClick(t)) return;

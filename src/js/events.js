@@ -89,7 +89,7 @@ function evWeek2(user){
 }
 
 /* ---------- errors ---------- */
-var EV_SCREENS=["onboard","wizard","builder","measure","body","more","exlib","profile","sugg","feedback","usage","history","plans","equip","notesheet","donepop"];
+var EV_SCREENS=["consent","onboard","wizard","builder","measure","body","more","exlib","profile","sugg","feedback","usage","history","plans","equip","notesheet","donepop"];
 function evScreen(){
   for(var i=0;i<EV_SCREENS.length;i++){ var el=document.getElementById(EV_SCREENS[i]); if(el&&!el.hidden) return EV_SCREENS[i]; }
   return "day";

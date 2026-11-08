@@ -458,6 +458,16 @@ details.grp .ex{margin-bottom:8px}
 .tier ul{margin:0;padding-left:18px;font-size:.88rem;color:var(--muted)}
 .tcur{position:absolute;top:12px;right:12px;background:var(--done);color:var(--on-done);font-size:.75rem;font-weight:700;border-radius:999px;padding:1px 9px}
 .onboard{z-index:8}
+.onboard.csgate{z-index:9}
+.cscheck{display:flex;gap:10px;align-items:flex-start;margin:12px 0;font-size:.92rem;line-height:1.4;cursor:pointer}
+.cscheck input{flex:none;width:22px;height:22px;margin:0;accent-color:var(--done)}
+.cscheck a,.csrow a{color:inherit;text-decoration:underline}
+.cslist{background:var(--card);border-radius:12px;padding:4px 12px}
+.csrow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid var(--line)}
+.csrow:last-child{border-bottom:0}
+.csrow span{font-size:.85rem;color:var(--muted)}
+.cstoggle{background:var(--card);border-radius:12px;margin-top:10px}
+.seg.segtwo{grid-template-columns:repeat(2,1fr)}
 .ob .obhero{padding:18px 0 6px}
 .ob .brand{display:flex;align-items:center;gap:12px;padding-top:14px}
 .ob .brand svg{flex:none;border-radius:12px}

@@ -56,7 +56,7 @@ function accountHtml(){
     '<p class="wzerr" id="acErr" role="alert"></p><button class="primary" id="saveAcct">Save details</button>'+
     '<div class="soon"><div><b>Account</b><span>'+(A.signedIn?'Signed in':'Not signed in')+' · email and password sign-in coming soon</span></div>'+
     '<div class="soonbtns"><button class="chip sm" disabled aria-disabled="true">Create account</button><button class="chip sm" disabled aria-disabled="true">Sign in</button></div></div></div>';
-  h+=accessHtml();
+  h+=accessHtml()+consentHtml();
   return h;
 }
 function saveAcct(){
@@ -84,6 +84,7 @@ function openProfile(){
   var sh=document.getElementById("profile"); sh.innerHTML=h; sh.hidden=false; sh.scrollTop=0;
   document.body.style.overflow="hidden"; sh.focus();
   initWheel();
+  if(WEB_MODE&&sbUser) consentProfileLoad();
 }
 function closeProfile(){
   var sh=document.getElementById("profile"); if(!sh||sh.hidden) return;
