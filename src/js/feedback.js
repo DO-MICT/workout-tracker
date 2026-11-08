@@ -1,5 +1,4 @@
 /* ---------- suggestions (web version): text + optional screenshot, saved to Supabase ---------- */
-var APP_VERSION="2026.10.21";
 var SG=null; /* {kind, msg, blob, url, sending, sent, past, err, seenBefore} */
 var SG_UNREAD=0;
 /* count replies the tester hasn't seen yet (shows a dot on the menu) */

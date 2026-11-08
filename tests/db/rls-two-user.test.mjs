@@ -111,7 +111,7 @@ test('signed-out visitors read the shared libraries but no personal data', async
   assert.equal((await rest('gear?select=id&limit=1')).status, 200);
   assert.equal(rows(await rest('tier_features?select=tier')).length, 4);
   for (const table of ['profiles', 'user_state', 'entitlements', 'my_access', 'workouts', 'workout_sets', 'suggestions',
-  ...SYNC_TABLES]) {
+  'events', 'client_errors', ...SYNC_TABLES]) {
     const r = await rest(`${table}?select=*`);
     assert.ok(r.status === 401 || r.status === 403 || rows(r).length === 0, `anon must not read ${table} (got ${r.status})`);
   }
@@ -365,6 +365,62 @@ test("an admin reads everyone's feedback and grants access; the other user still
   const edit = await rest(`user_state?user_id=eq.${users.b.id}`, 'a', { method: 'PATCH', body: { data: {} }, headers: { Prefer: 'return=representation' } });
   assert.deepEqual(rows(edit), []);
   assert.deepEqual(rows(await rest(`profiles?id=eq.${users.a.id}&select=id`, 'b')), [], 'B still cannot see A');
+});
+
+// ---------- usage events, error log, app config (WP5) ----------
+
+test('events and errors: the app can log them but nobody reads or writes the tables directly', async () => {
+  const anonId = randomUUID();
+  const ok = await rest('rpc/log_event', 'a', { method: 'POST', body: { p_name: 'first_workout', p_anon_id: anonId, p_props: { exercises: 6 }, p_app_version: '2026.11.08' } });
+  assert.equal(ok.status, 200, JSON.stringify(ok.json));
+  assert.equal(ok.json, true);
+  const signedOut = await rest('rpc/log_event', null, { method: 'POST', body: { p_name: 'paywall_seen', p_anon_id: randomUUID() } });
+  assert.equal(signedOut.status, 200, 'signed-out visitors can log too: ' + JSON.stringify(signedOut.json));
+
+  const badName = await rest('rpc/log_event', 'a', { method: 'POST', body: { p_name: 'sign_up', p_anon_id: anonId } });
+  assert.ok(badName.status >= 400, 'the app cannot send server-only or unknown events');
+  const freeText = await rest('rpc/log_event', 'a', { method: 'POST', body: { p_name: 'export', p_anon_id: anonId, p_props: { note: 'my knee hurts' } } });
+  assert.ok(freeText.status >= 400, 'free text in props is refused');
+
+  for (let i = 0; i < 2; i++) {
+    const e = await rest('rpc/log_client_error', 'b', { method: 'POST', body: { p_message: `TypeError for ${users.b.email}`, p_anon_id: anonId, p_screen: 'stats', p_app_version: '2026.11.08' } });
+    assert.equal(e.status, 200, JSON.stringify(e.json));
+  }
+
+  for (const t of ['events', 'client_errors']) {
+    for (const who of ['a', 'b', null]) {
+      const r = await rest(`${t}?select=*`, who);
+      assert.ok(r.status >= 400 || rows(r).length === 0, `${who || 'anon'} must not read ${t}`);
+    }
+    const ins = await rest(t, 'a', { method: 'POST', body: t === 'events' ? { name: 'export' } : { message: 'x' } });
+    assert.ok(ins.status >= 400, `A cannot insert into ${t} directly`);
+  }
+});
+
+test('app_config: everyone reads it, nobody writes it', async () => {
+  const anon = rows(await rest('app_config?select=key,value'));
+  assert.ok(anon.some((r) => r.key === 'min_version'), 'signed-out visitors read min_version');
+  const upd = await rest('app_config?key=eq.min_version', 'a', { method: 'PATCH', body: { value: '9999' }, headers: { Prefer: 'return=representation' } });
+  assert.ok(upd.status >= 400 || rows(upd).length === 0, 'A cannot change app config');
+  assert.equal(rows(await rest('app_config?select=value&key=eq.min_version'))[0].value, '0');
+});
+
+test('usage counts and errors are for admins only, and errors are scrubbed', async () => {
+  assert.ok((await rest('rpc/admin_usage', 'b', { method: 'POST', body: {} })).status >= 400, 'B is not an admin');
+  assert.ok((await rest('rpc/admin_errors', 'b', { method: 'POST', body: {} })).status >= 400, 'B is not an admin');
+  assert.ok((await rest('rpc/admin_usage', null, { method: 'POST', body: {} })).status >= 400, 'anon is not an admin');
+
+  // A was made an admin above
+  const u = await rest('rpc/admin_usage', 'a', { method: 'POST', body: { p_days: 2 } });
+  assert.equal(u.status, 200, JSON.stringify(u.json));
+  const names = new Set(rows(u).map((r) => r.name));
+  for (const n of ['sign_up', 'trial_start', 'first_workout']) assert.ok(names.has(n), `usage counts ${n}`);
+
+  const e = rows(await rest('rpc/admin_errors', 'a', { method: 'POST', body: { p_limit: 20 } }));
+  const mine = e.find((x) => x.screen === 'stats' && /^TypeError for/.test(x.message));
+  assert.ok(mine, 'the error was logged');
+  assert.equal(mine.message, 'TypeError for [email]', 'the email was scrubbed');
+  assert.ok(mine.count >= 2, 'the same error within an hour adds to its count');
 });
 
 // ---------- one trial per person ----------
