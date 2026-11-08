@@ -26,7 +26,7 @@ function cloudPush(){
 }
 function setStatus(msg){
   var el=document.getElementById("status");
-  if(WEB_MODE){ el.textContent=msg||(sbUser?(sbOk?"Synced to your account":"Saving…"):sbOffline?"Offline · saved on this phone":"Saved on this phone"); return; }
+  if(WEB_MODE){ el.textContent=msg||(sbOffline?"Offline · saved on this phone":sbUser?(sbOk?"Synced to your account":(typeof SY!=="undefined"&&SY.on&&SY.err)?"Saved on this phone · sync will try again":"Saving…"):"Saved on this phone"); return; }
   el.textContent=msg||(cloudOk?"Saved to your account":canSave?"Saved on this phone":"Can't save here. Turn off private browsing to keep your logs.");
 }
 /* Keep logs in the artifact's own database (private to each signed-in viewer),

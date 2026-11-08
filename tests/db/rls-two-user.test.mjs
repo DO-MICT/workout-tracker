@@ -72,11 +72,12 @@ after(async () => {
 // ---------- sign-up ----------
 
 test('sign-up makes a profile, an empty data row and a 14-day Pro trial', async () => {
-  const p = rows(await rest('profiles?select=id,email,display_name,is_admin', 'a'));
+  const p = rows(await rest('profiles?select=id,email,display_name,is_admin,data_model', 'a'));
   assert.equal(p.length, 1);
   assert.equal(p[0].id, users.a.id);
   assert.equal(p[0].display_name, 'Tester A');
   assert.equal(p[0].is_admin, false);
+  assert.equal(p[0].data_model, 2, 'new accounts start on the synced tables (WP3)');
 
   assert.equal(rows(await rest('user_state?select=user_id', 'a')).length, 1);
 
@@ -91,7 +92,10 @@ test('sign-up makes a profile, an empty data row and a 14-day Pro trial', async 
 
 // ---------- reading ----------
 
-for (const table of ['profiles', 'user_state', 'entitlements', 'my_access', 'workouts', 'workout_sets', 'suggestions']) {
+const SYNC_TABLES = ['user_settings', 'about_me', 'locations', 'plans', 'plan_versions', 'schedule_entries', 'measurements', 'exercise_notes', 'custom_exercises', 'progress_photos'];
+
+for (const table of ['profiles', 'user_state', 'entitlements', 'my_access', 'workouts', 'workout_sets', 'suggestions',
+  ...SYNC_TABLES]) {
   test(`${table}: a user never sees the other user's rows`, async () => {
     const col = table === 'profiles' ? 'id' : 'user_id';
     const own = rows(await rest(`${table}?select=${col}`, 'a'));
@@ -106,7 +110,8 @@ test('signed-out visitors read the shared libraries but no personal data', async
   assert.equal((await rest('exercises?select=id&limit=1')).status, 200);
   assert.equal((await rest('gear?select=id&limit=1')).status, 200);
   assert.equal(rows(await rest('tier_features?select=tier')).length, 4);
-  for (const table of ['profiles', 'user_state', 'entitlements', 'my_access', 'workouts', 'workout_sets', 'suggestions']) {
+  for (const table of ['profiles', 'user_state', 'entitlements', 'my_access', 'workouts', 'workout_sets', 'suggestions',
+  ...SYNC_TABLES]) {
     const r = await rest(`${table}?select=*`);
     assert.ok(r.status === 401 || r.status === 403 || rows(r).length === 0, `anon must not read ${table} (got ${r.status})`);
   }
@@ -115,6 +120,11 @@ test('signed-out visitors read the shared libraries but no personal data', async
 // ---------- writing ----------
 
 test("user_state: A can save own data but not B's", async () => {
+  // behave like accounts made before WP3, which still keep their data in user_state
+  for (const u of ['a', 'b']) {
+    const r = await admin(`/rest/v1/profiles?id=eq.${users[u].id}`, { method: 'PATCH', body: { data_model: 1 } });
+    assert.ok(r.status < 300, 'set data_model 1: ' + JSON.stringify(r.json));
+  }
   const mine = await rest(`user_state?user_id=eq.${users.a.id}`, 'a', {
     method: 'PATCH', body: { data: { v: 1, hello: 'a' }, client_ts: 1 }, headers: { Prefer: 'return=representation' },
   });
@@ -131,6 +141,104 @@ test("user_state: A can save own data but not B's", async () => {
   const del = await rest(`user_state?user_id=eq.${users.b.id}`, 'a', { method: 'DELETE', headers: { Prefer: 'return=representation' } });
   assert.deepEqual(rows(del), []);
   assert.equal(rows(await rest('user_state?select=data', 'b'))[0].data.hacked, undefined);
+});
+
+// ---------- per-record sync (WP3) ----------
+
+const push = (who, mutations) => rest('rpc/sync_push', who, { method: 'POST', body: { mutations } });
+const pull = (who, since = 0) => rest('rpc/sync_pull', who, { method: 'POST', body: { since } });
+const pulled = async (who, t, id) => (await pull(who)).json.rows.filter((x) => x.t === t && (!id || x.r.id === id)).map((x) => x.r);
+
+test('sync: moving off the blob happens once, then user_state is read-only', async () => {
+  const planId = randomUUID();
+  const recs = [
+    { t: 'user_settings', f: { theme: 'dark', prefs: { onboarded: true } } },
+    { t: 'plans', id: planId, f: { local_id: 'p1', name: 'From blob', body: { days: {} } } },
+  ];
+  const first = await rest('rpc/migrate_from_blob', 'a', { method: 'POST', body: { records: recs } });
+  assert.equal(first.status, 200, JSON.stringify(first.json));
+  assert.equal(first.json.data_model, 2);
+  assert.equal(first.json.already, false);
+
+  recs[1].f.name = 'Second run';
+  const again = await rest('rpc/migrate_from_blob', 'a', { method: 'POST', body: { records: recs } });
+  assert.equal(again.json.already, true, 'a repeat run changes nothing');
+  assert.equal((await pulled('a', 'plans', planId))[0].name, 'From blob');
+  assert.equal(rows(await rest('profiles?select=data_model', 'a'))[0].data_model, 2);
+
+  const blob = await rest(`user_state?user_id=eq.${users.a.id}`, 'a', {
+    method: 'PATCH', body: { data: { v: 1, late: true } }, headers: { Prefer: 'return=representation' },
+  });
+  assert.ok(blob.status >= 400 || rows(blob).length === 0, 'old app versions can no longer write the blob');
+  assert.equal(rows(await rest('user_state?select=data', 'a'))[0].data.late, undefined);
+
+  // B has not moved yet: B's blob still works, and B cannot move A's records into B's account
+  const bBlob = await rest(`user_state?user_id=eq.${users.b.id}`, 'b', {
+    method: 'PATCH', body: { data: { v: 1, still: true } }, headers: { Prefer: 'return=representation' },
+  });
+  assert.equal(rows(bBlob).length, 1);
+  const steal = await rest('rpc/migrate_from_blob', 'b', { method: 'POST', body: { records: [{ t: 'plans', id: planId, f: { local_id: 'x', name: 'mine now' } }] } });
+  assert.ok(steal.status >= 400, "B's move fails as a whole when it names A's record");
+  assert.equal(rows(await rest('profiles?select=data_model', 'b'))[0].data_model, 1, 'and B stays on the blob');
+});
+
+test('sync: the app cannot write synced tables directly', async () => {
+  for (const t of SYNC_TABLES) {
+    const r = await rest(t, 'a', { method: 'POST', body: { id: users.a.id, user_id: users.a.id } });
+    assert.ok(r.status >= 400, `direct insert into ${t} must fail (got ${r.status})`);
+  }
+});
+
+test('sync: changes to different fields on two phones both survive, and B cannot touch A', async () => {
+  const id = randomUUID();
+  const made = await push('a', [{ t: 'plans', id, f: { local_id: 'p2', name: 'Push day', body: { v: 1 } } }]);
+  assert.equal(made.json.results[0].status, 'applied', JSON.stringify(made.json));
+  const rev = made.json.results[0].rev;
+
+  // phone 1 renames, phone 2 (still on the old rev) edits the body
+  const p1 = await push('a', [{ t: 'plans', id, rev, f: { name: 'Push day A' } }]);
+  const p2 = await push('a', [{ t: 'plans', id, rev, f: { body: { v: 2 } } }]);
+  assert.equal(p1.json.results[0].status, 'applied');
+  assert.equal(p2.json.results[0].status, 'merged');
+  const row = (await pulled('a', 'plans', id))[0];
+  assert.equal(row.name, 'Push day A');
+  assert.deepEqual(row.body, { v: 2 });
+  assert.equal(row.rev, rev + 2);
+  assert.ok(rows(await rest(`plan_versions?plan_id=eq.${id}&select=body`, 'a')).some((v) => v.body.v === 1), 'the replaced body is kept');
+
+  const b = await push('b', [{ t: 'plans', id, f: { name: 'hacked' } }, { t: 'plans', id, op: 'delete' }]);
+  assert.deepEqual(b.json.results.map((r) => r.status), ['skipped', 'skipped']);
+  assert.deepEqual(await pulled('b', 'plans', id), [], 'B never sees A\'s plan');
+  assert.deepEqual(rows(await rest(`plan_versions?plan_id=eq.${id}`, 'b')), []);
+  assert.equal((await pulled('a', 'plans', id))[0].name, 'Push day A');
+});
+
+test('sync: settings merge key by key, deletes are tombstones, a bad change does not block the rest', async () => {
+  const before = (await pull('a')).json.cursor;
+  const locId = randomUUID();
+  const r = await push('a', [
+    { t: 'user_settings', f: { units: 'lb', prefs: { a: 1, b: 2 } } },
+    { t: 'about_me', f: { days_per_week: 12 } },
+    { t: 'no_such_table', f: {} },
+    { t: 'locations', id: locId, f: { local_id: 'loc9', name: 'Home', gear: ['dumbbells'] } },
+  ]);
+  assert.deepEqual(r.json.results.map((x) => x.status), ['applied', 'error', 'error', 'applied']);
+  await push('a', [{ t: 'user_settings', f: { prefs: { a: null, c: 3 } } }, { t: 'locations', id: locId, op: 'delete' }]);
+
+  const after = await pull('a', before);
+  const s = after.json.rows.filter((x) => x.t === 'user_settings').map((x) => x.r)[0];
+  assert.deepEqual(s.prefs, { onboarded: true, b: 2, c: 3 });
+  assert.equal(s.units, 'lb');
+  assert.equal(s.theme, 'dark', 'fields not sent are left alone');
+  const loc = after.json.rows.filter((x) => x.t === 'locations').map((x) => x.r)[0];
+  assert.ok(loc.deleted_at, 'a deleted record comes back as a tombstone');
+  assert.ok(after.json.cursor > before);
+  assert.deepEqual((await pull('a', after.json.cursor)).json.rows, [], 'nothing new after the cursor');
+});
+
+test('sync: signed-out visitors cannot push or pull', async () => {
+  assert.ok((await push(null, [])).status >= 400);
+  assert.ok((await pull(null)).status >= 400);
 });
 
 test('profiles: a user changes only their display name, never email, tier or admin', async () => {

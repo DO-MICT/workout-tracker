@@ -2,7 +2,7 @@
    Used when the page runs outside Claude. The publishable key is meant to be public;
    row level security in the database keeps each person's data private. */
 var SB_URL="https://zdllpjrkwcdmcuizxuum.supabase.co", SB_KEY="sb_publishable_MDB4dT4ybWlZk5rzdcx40w_G7KwYRtm";
-var sb=null, sbUser=null, sbTimer=null, sbBusy=false, sbDirty=false, sbOk=false, sbOffline=false;
+var sb=null, sbUser=null, sbTimer=null, sbBusy=false, sbDirty=false, sbOk=false, sbOffline=false, sbDataModel=0;
 function webStart(){
   setStatus("Connecting…");
   if(window.supabase&&window.supabase.createClient){ webReady(); return; }
@@ -123,19 +123,17 @@ function onSignedIn(user,fresh){
   if(A.id&&A.id!==user.id){ var nm=fresh?S.names[0]:""; S=blank(); if(nm) S.names[0]=nm; }  /* someone else used this phone before */
   A=acct(); A.id=user.id; A.email=user.email||A.email; A.signedIn=true; A.authMode="supabase"; delete A.tier; delete A.tierSource; delete A.serverTier;  /* tier now comes from the server (access.js) */
   setStatus("Syncing…");
-  sb.from("user_state").select("data,client_ts").eq("user_id",user.id).maybeSingle().then(function(r){
-    var row=r&&r.data, rd=row&&row.data, ok=rd&&rd.v===1&&rd.cur&&rd.last;
-    /* a phone that hasn't finished setup takes the account copy, unless it has newer setup progress of its own */
-    if(ok&&((+row.client_ts||0)>(S.ts||0)||(!S.onboarded&&(rd.onboarded||!S.ob)))){
-      var keep=wout().slice();   /* workouts finished on this phone but not uploaded yet */
-      S=rd; S.who=0; keep.forEach(function(w){ if(!wout().some(function(x){return x.id===w.id;})) wout().push(w); });
-      S.account=Object.assign({},S.account||{},{id:user.id,email:user.email,signedIn:true,authMode:"supabase"});
-      try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}
-      sbOk=true;
-    } else { save(); sbPush(true); }
-    return sb.from("profiles").select("display_name,is_admin").eq("id",user.id).maybeSingle();
+  var pd=null;
+  /* data_model says where this account's data lives: 1 = the user_state blob, 2 = per-record sync (WP3).
+     An older database without the column means blob. */
+  sb.from("profiles").select("display_name,is_admin,data_model").eq("id",user.id).maybeSingle().then(function(p){
+    if(p&&p.error) return sb.from("profiles").select("display_name,is_admin").eq("id",user.id).maybeSingle();
+    return p;
   }).then(function(p){
-    var pd=p&&p.data;
+    pd=p&&p.data; sbDataModel=(pd&&pd.data_model)||0;
+    if(sbDataModel===2) return storeStart(user,2);
+    return blobLoad(user).then(function(){ if(sbDataModel===1) return storeStart(user,1); });
+  }).then(function(){
     if(pd){ if(pd.display_name&&(!S.names[0]||S.names[0]==="You")) S.names[0]=pd.display_name; sbAdmin=!!pd.is_admin; }
     return refreshAccess();
   }).catch(function(){}).then(function(){
@@ -145,9 +143,28 @@ function onSignedIn(user,fresh){
     pickToday=true; renderAll(); setStatus(); checkReplies(); histInit();
   });
 }
-function sbQueue(){ if(!sbUser) return; sbDirty=true; clearTimeout(sbTimer); sbTimer=setTimeout(sbPush,800); }
+/* the old one-blob sync: take the account copy if it is newer, else upload this phone's */
+function blobLoad(user){
+  return sb.from("user_state").select("data,client_ts").eq("user_id",user.id).maybeSingle().then(function(r){
+    var row=r&&r.data, rd=row&&row.data, ok=rd&&rd.v===1&&rd.cur&&rd.last;
+    /* a phone that hasn't finished setup takes the account copy, unless it has newer setup progress of its own */
+    if(ok&&((+row.client_ts||0)>(S.ts||0)||(!S.onboarded&&(rd.onboarded||!S.ob)))){
+      var keep=wout().slice();   /* workouts finished on this phone but not uploaded yet */
+      S=rd; S.who=0; keep.forEach(function(w){ if(!wout().some(function(x){return x.id===w.id;})) wout().push(w); });
+      S.account=Object.assign({},S.account||{},{id:user.id,email:user.email,signedIn:true,authMode:"supabase"});
+      try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}
+      sbOk=true;
+    } else { save(); sbPush(true); }
+  });
+}
+function sbQueue(){
+  if(!sbUser) return;
+  if(storeOn()){ storeChanged(); return; }
+  if(sbDataModel===2) return;   /* moved to per-record sync: store.js picks the change up when it starts */
+  sbDirty=true; clearTimeout(sbTimer); sbTimer=setTimeout(sbPush,800);
+}
 function sbPush(force){
-  if(!sb||!sbUser) return; if(force) sbDirty=true; if(sbBusy||!sbDirty) return;
+  if(!sb||!sbUser||storeOn()||sbDataModel===2) return; if(force) sbDirty=true; if(sbBusy||!sbDirty) return;
   sbBusy=true; sbDirty=false; var snap=JSON.parse(JSON.stringify(S));
   sb.from("user_state").upsert({user_id:sbUser.id,data:snap,client_ts:snap.ts||Date.now()},{onConflict:"user_id"}).then(function(r){
     sbOk=!(r&&r.error); sbBusy=false; setStatus(); if(sbDirty){clearTimeout(sbTimer);sbTimer=setTimeout(sbPush,400);}
@@ -156,6 +173,7 @@ function sbPush(force){
 document.addEventListener("visibilitychange",function(){ if(document.visibilityState==="hidden"&&sbDirty){clearTimeout(sbTimer);sbPush();} });
 function webSignOut(){
   if(wout().length&&sbUser&&!webSignOut.tried){ webSignOut.tried=true; histFlush().then(webSignOut,webSignOut); return; }
+  if(storeOn()&&!webSignOut.flushed){ webSignOut.flushed=true; var go=function(){ storeForget().then(webSignOut,webSignOut); }; storeFlush().then(go,go); return; }
   var done=function(){ try{localStorage.removeItem(KEY);}catch(e){} rcForget(); accessForget(); location.reload(); };
   if(sbDirty&&sbUser){ clearTimeout(sbTimer); sbBusy=false; sbPush(); setTimeout(function(){ sb.auth.signOut().then(done,done); },900); }
   else if(sb) sb.auth.signOut().then(done,done); else done();
