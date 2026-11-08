@@ -452,14 +452,17 @@ grant execute on function public.migrate_from_blob(jsonb) to authenticated;
 -- Tombstones older than 90 days can go. Run by hand or by a scheduled job later (WP5 sets up jobs).
 create or replace function private.sync_purge_tombstones(older_than interval default '90 days')
 returns integer language plpgsql security definer set search_path = '' as $$
-declare t text; n integer := 0; k integer;
+declare n integer := 0; k integer; cutoff timestamptz := now() - older_than;
 begin
-  foreach t in array array['user_settings', 'about_me', 'locations', 'plans', 'schedule_entries', 'measurements',
-                           'exercise_notes', 'custom_exercises', 'progress_photos'] loop
-    execute format('delete from public.%I where deleted_at < now() - $1', t) using older_than;
-    get diagnostics k = row_count;
-    n := n + k;
-  end loop;
+  delete from public.user_settings where deleted_at < cutoff; get diagnostics k = row_count; n := n + k;
+  delete from public.about_me where deleted_at < cutoff; get diagnostics k = row_count; n := n + k;
+  delete from public.locations where deleted_at < cutoff; get diagnostics k = row_count; n := n + k;
+  delete from public.plans where deleted_at < cutoff; get diagnostics k = row_count; n := n + k;
+  delete from public.schedule_entries where deleted_at < cutoff; get diagnostics k = row_count; n := n + k;
+  delete from public.measurements where deleted_at < cutoff; get diagnostics k = row_count; n := n + k;
+  delete from public.exercise_notes where deleted_at < cutoff; get diagnostics k = row_count; n := n + k;
+  delete from public.custom_exercises where deleted_at < cutoff; get diagnostics k = row_count; n := n + k;
+  delete from public.progress_photos where deleted_at < cutoff; get diagnostics k = row_count; n := n + k;
   return n;
 end;
 $$;

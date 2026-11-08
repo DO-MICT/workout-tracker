@@ -71,7 +71,7 @@ The `user_state` blob is being replaced by per-record tables (`user_settings`, `
   (NFR-8), then a cleanup migration drops `user_state`.
 - In the app: `src/js/syncmap.js` maps S to records and back (pure, tested in `tests/syncmap.test.js`);
   `src/js/store.js` keeps the queue in IndexedDB and runs push and pull. Screens still read and write S.
-- Adding a synced table: add it to the arrays in `sync_apply`, `sync_pull` and `sync_purge_tombstones` (new migration),
+- Adding a synced table: add it to the table lists in `sync_apply`, `sync_pull` and `sync_purge_tombstones` (new migration),
   to `FIELDS` and the mapping in `syncmap.js`, to `02_sync_tables.test.sql` and to `SYNC_TABLES` in the two-user test.
 - `tests/db/sync-two-phones.test.mjs` runs the real `syncmap.js` and `store.js` as two phones against the API.
 
