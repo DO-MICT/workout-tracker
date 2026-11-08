@@ -35,26 +35,20 @@ function initWheel(initial,onSet){
 function fmtRest(s){return Math.floor(s/60)+":"+String(s%60).padStart(2,"0");}
 function prof(){ if(!S.profile) S.profile={vals:{},hist:[]}; if(!S.profile.hist) S.profile.hist=[]; if(!S.profile.vals) S.profile.vals={}; return S.profile; }
 function fmtDay(iso){var d=new Date(iso);return isNaN(d)?"":d.toLocaleDateString(undefined,{day:"numeric",month:"short"});}
-/* ---------- account + subscription (placeholders for the app store release) ----------
-   Shape is ready for real sign-in later: an auth provider will fill id/emailVerified,
-   and the store will set tier. Passwords are never stored here. */
-var TIERS=[
- {id:"free",name:"Free",price:"R0",tag:"Basic",pts:["Built-in plans and workout logging","Equipment and one location"]},
- {id:"pro",name:"Pro",price:"Price TBC / month",tag:"Full access",pts:["Unlimited plans and locations","Guided plan setup and swaps"]},
- {id:"tester",name:"Tester",price:"Free during testing",tag:"Beta",pts:["Everything in Pro while the app is being tested","Early features before release","Send feedback"]}
-];
+/* ---------- account ----------
+   Filled by Supabase sign-in in web mode. Passwords are never stored here.
+   What the account may use (Free, Pro, Tester) comes from the server: see access.js. */
 function acct(){
-  if(!S.account||typeof S.account!=="object") S.account={v:1,id:"",provider:"email",email:"",emailVerified:false,signedIn:false,tier:"tester",tierSource:"placeholder",createdAt:new Date().toISOString()};
+  if(!S.account||typeof S.account!=="object") S.account={v:1,id:"",provider:"email",email:"",emailVerified:false,signedIn:false,createdAt:new Date().toISOString()};
   return S.account;
 }
-function tierOf(){var t=acct().tier;return TIERS.some(function(x){return x.id===t;})?t:"tester";}
 function accountHtml(){
-  var A=acct(), tier=tierOf(), h;
+  var A=acct(), h;
   if(WEB_MODE&&sbUser){
     h='<h3 class="psec">Your details</h3><p class="sub">Signed in as <b>'+esc(sbUser.email||A.email||"")+'</b>. Your data syncs to your account.</p>'+
       '<div class="acct"><label class="bname"><span>Name</span><input id="acName" maxlength="40" autocomplete="name" value="'+esc(S.names[0]||"")+'"></label>'+
       '<p class="wzerr" id="acErr" role="alert"></p><button class="primary" id="saveAcct">Save details</button>'+
-      '<div class="soon"><div><b>Account</b><span>'+(sbOk?'Synced':'Not synced yet')+' · server tier: '+esc(A.serverTier||"tester")+'</span></div><div class="soonbtns"><button class="chip sm danger" id="signOut">Sign out</button></div></div></div>';
+      '<div class="soon"><div><b>Account</b><span>'+(sbOk?'Synced':'Not synced yet')+'</span></div><div class="soonbtns"><button class="chip sm danger" id="signOut">Sign out</button></div></div></div>';
   } else
   h='<h3 class="psec">Your details</h3><p class="sub">Saved with your data. Sign-in with email and password comes with the app store release.</p>'+
     '<div class="acct"><label class="bname"><span>Name</span><input id="acName" maxlength="40" autocomplete="name" value="'+esc(S.names[0]||"")+'"></label>'+
@@ -62,12 +56,7 @@ function accountHtml(){
     '<p class="wzerr" id="acErr" role="alert"></p><button class="primary" id="saveAcct">Save details</button>'+
     '<div class="soon"><div><b>Account</b><span>'+(A.signedIn?'Signed in':'Not signed in')+' · email and password sign-in coming soon</span></div>'+
     '<div class="soonbtns"><button class="chip sm" disabled aria-disabled="true">Create account</button><button class="chip sm" disabled aria-disabled="true">Sign in</button></div></div></div>';
-  h+='<h3 class="psec">Subscription</h3><p class="sub">Placeholder tiers for the app store launch. No payment is taken, and switching here only changes how the app looks for testing.</p>'+
-    '<div class="tiers" role="radiogroup" aria-label="Subscription tier">'+TIERS.map(function(t){
-      return '<button class="tier'+(t.id===tier?' on':'')+'" role="radio" aria-checked="'+(t.id===tier)+'" data-tier="'+t.id+'">'+
-        '<span class="th"><b>'+t.name+'</b><span class="ttag">'+t.tag+'</span></span><span class="tprice">'+t.price+'</span>'+
-        '<ul>'+t.pts.map(function(x){return '<li>'+x+'</li>';}).join("")+'</ul>'+(t.id===tier?'<span class="tcur">Current</span>':'')+'</button>';
-    }).join("")+'</div>';
+  h+=accessHtml();
   return h;
 }
 function saveAcct(){

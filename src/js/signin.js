@@ -121,7 +121,7 @@ function webAuthClick(t){
 function onSignedIn(user,fresh){
   sbUser=user; var A=acct();
   if(A.id&&A.id!==user.id){ var nm=fresh?S.names[0]:""; S=blank(); if(nm) S.names[0]=nm; }  /* someone else used this phone before */
-  A=acct(); A.id=user.id; A.email=user.email||A.email; A.signedIn=true; A.authMode="supabase";
+  A=acct(); A.id=user.id; A.email=user.email||A.email; A.signedIn=true; A.authMode="supabase"; delete A.tier; delete A.tierSource; delete A.serverTier;  /* tier now comes from the server (access.js) */
   setStatus("Syncing…");
   sb.from("user_state").select("data,client_ts").eq("user_id",user.id).maybeSingle().then(function(r){
     var row=r&&r.data, rd=row&&row.data, ok=rd&&rd.v===1&&rd.cur&&rd.last;
@@ -133,10 +133,11 @@ function onSignedIn(user,fresh){
       try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}
       sbOk=true;
     } else { save(); sbPush(true); }
-    return sb.from("profiles").select("display_name,tier,is_admin").eq("id",user.id).maybeSingle();
+    return sb.from("profiles").select("display_name,is_admin").eq("id",user.id).maybeSingle();
   }).then(function(p){
     var pd=p&&p.data;
-    if(pd){ if(pd.display_name&&(!S.names[0]||S.names[0]==="You")) S.names[0]=pd.display_name; acct().serverTier=pd.tier; sbAdmin=!!pd.is_admin; }
+    if(pd){ if(pd.display_name&&(!S.names[0]||S.names[0]==="You")) S.names[0]=pd.display_name; sbAdmin=!!pd.is_admin; }
+    return refreshAccess();
   }).catch(function(){}).then(function(){
     var sh=document.getElementById("onboard");
     if(!S.onboarded){ if(!(WZ&&WZ.ob)) resumeOnboarding(); else { sh.hidden=true; sh.innerHTML=""; } }
@@ -155,7 +156,7 @@ function sbPush(force){
 document.addEventListener("visibilitychange",function(){ if(document.visibilityState==="hidden"&&sbDirty){clearTimeout(sbTimer);sbPush();} });
 function webSignOut(){
   if(wout().length&&sbUser&&!webSignOut.tried){ webSignOut.tried=true; histFlush().then(webSignOut,webSignOut); return; }
-  var done=function(){ try{localStorage.removeItem(KEY);}catch(e){} rcForget(); location.reload(); };
+  var done=function(){ try{localStorage.removeItem(KEY);}catch(e){} rcForget(); accessForget(); location.reload(); };
   if(sbDirty&&sbUser){ clearTimeout(sbTimer); sbBusy=false; sbPush(); setTimeout(function(){ sb.auth.signOut().then(done,done); },900); }
   else if(sb) sb.auth.signOut().then(done,done); else done();
 }
