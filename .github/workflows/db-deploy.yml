@@ -1,0 +1,103 @@
+name: Deploy database
+# Applies new migrations from supabase/migrations: staging first, then production after Deon approves.
+# Replaces pasting SQL into the Supabase SQL editor. Setup and how to use it: docs/db-brief.md
+#
+#   * Merging to main with a new migration updates staging by itself.
+#   * Production: Actions > Deploy database > Run workflow > "staging-then-production".
+#     The production job waits for approval in the protected "production" environment.
+#
+# Secrets (Settings > Environments):
+#   staging:    SUPABASE_DB_URL (session pooler URL), SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_KEY
+#   production: SUPABASE_DB_URL (session pooler URL), with Deon as required reviewer
+on:
+  push:
+    branches: [main]
+    paths: ['supabase/migrations/**']
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Where to apply new migrations
+        type: choice
+        options: [staging, staging-then-production]
+        default: staging
+
+concurrency:
+  group: db-deploy
+  cancel-in-progress: false
+
+jobs:
+  staging:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: staging
+    env:
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Is staging set up?
+        id: ready
+        run: |
+          if [ -z "$SUPABASE_DB_URL" ]; then
+            echo "::warning::Staging isn't set up yet (no SUPABASE_DB_URL secret in the staging environment). See docs/db-brief.md."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: supabase/setup-cli@v1
+        if: steps.ready.outputs.ok == 'true'
+        with:
+          version: 3.0.0
+
+      - name: What will change on staging
+        if: steps.ready.outputs.ok == 'true'
+        run: |
+          supabase db push --remote="$SUPABASE_DB_URL" --include-seed --dry-run --yes | tee plan.txt
+          { echo "### Staging: migrations to apply"; echo '```'; cat plan.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Apply to staging
+        if: steps.ready.outputs.ok == 'true'
+        run: supabase db push --remote="$SUPABASE_DB_URL" --include-seed --yes
+
+      - uses: actions/setup-node@v4
+        if: steps.ready.outputs.ok == 'true'
+        with:
+          node-version: 22
+
+      - name: RLS two-user test on staging
+        if: steps.ready.outputs.ok == 'true'
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: node --test tests/db/*.test.mjs
+
+    outputs:
+      ready: ${{ steps.ready.outputs.ok }}
+
+  production:
+    needs: staging
+    if: github.event_name == 'workflow_dispatch' && inputs.target == 'staging-then-production' && needs.staging.outputs.ready == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: production   # protected: waits for Deon's approval
+    env:
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Production secret present
+        run: test -n "$SUPABASE_DB_URL" || { echo "::error::No SUPABASE_DB_URL secret in the production environment. See docs/db-brief.md."; exit 1; }
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: 3.0.0
+
+      - name: What will change on production
+        run: |
+          supabase db push --remote="$SUPABASE_DB_URL" --dry-run --yes | tee plan.txt
+          { echo "### Production: migrations to apply"; echo '```'; cat plan.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Apply to production
+        run: supabase db push --remote="$SUPABASE_DB_URL" --yes

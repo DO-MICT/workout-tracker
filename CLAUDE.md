@@ -7,11 +7,14 @@ The web app is the source of truth; the earlier Expo app (`mobile/`) was removed
 
 - Exercise illustrations: `docs/illustration-brief.md` (style, how to add a pose, batch workflow, `tools/render_art.js`)
 - Exercise and gear libraries: `docs/data-brief.md` (edit `sources/`, rebuild with the scripts, don't regenerate)
+- Database changes: `docs/db-brief.md` (migrations + rollbacks, db-check CI, staging, deploy workflow)
 
 ## Rules
 
 - `index.html` is built from `app.html`: run `python3 tools/build_pages.py` after changing `app.html` (CI fails otherwise).
 - `sw.js` gives the live site offline support (network first, so no cache bump is needed). Add any new `src/js` file to its `SHELL` list.
+- Database: add a new migration with a rollback in `supabase/rollbacks/`; never edit one already on `main`. Add a case to
+  `tests/db/rls-two-user.test.mjs` for each new table. GitHub Actions deploys it (staging, then production on Deon's approval).
 - Keep exercise and gear ids stable; saved plans, history and gear lists point at them.
 - On Windows, set `PYTHONUTF8=1` before running the Python tools.
 - Don't read the large generated files whole (`data/**/exercises.json`, `gear.json`, `*.sql`, `src/js/gfd-exercise-art.js`).

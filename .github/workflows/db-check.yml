@@ -1,0 +1,75 @@
+name: Database check
+# Builds a throwaway Supabase in the runner from supabase/migrations, then checks it:
+# structure rules (RLS everywhere), the two-user RLS test through the real API, and that each rollback works.
+# Nothing here touches staging or production.
+on:
+  pull_request:
+    paths:
+      - 'supabase/**'
+      - 'tests/db/**'
+      - 'tools/db_check.py'
+      - 'data/exercise-library/exercises.sql'
+      - 'data/gear-library/gear.sql'
+      - '.github/workflows/db-check.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/**'
+      - 'tests/db/**'
+      - 'tools/db_check.py'
+      - '.github/workflows/db-check.yml'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Migration files (names, rollbacks, nothing already shipped was edited)
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            python3 tools/db_check.py files --base "origin/${{ github.base_ref }}"
+          else
+            python3 tools/db_check.py files
+          fi
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: 3.0.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Start a local Supabase and apply every migration (plus the library seed)
+        run: supabase start -x realtime,imgproxy,mailpit,postgres-meta,studio,edge-runtime,logflare,vector,supavisor
+
+      - name: Lint SQL functions
+        run: supabase db lint --level warning --fail-on error
+
+      - name: Structure checks (pgTAP)
+        run: supabase test db
+
+      - name: RLS two-user test through the API
+        run: |
+          eval "$(supabase status -o env | grep -E '^(API_URL|ANON_KEY|SERVICE_ROLE_KEY)=')"
+          SUPABASE_URL="$API_URL" SUPABASE_ANON_KEY="$ANON_KEY" SUPABASE_SERVICE_KEY="$SERVICE_ROLE_KEY" \
+            node --test tests/db/*.test.mjs
+
+      - name: Each rollback runs, and its migration applies again afterwards
+        run: python3 tools/db_check.py roundtrip --db-url postgresql://postgres:postgres@127.0.0.1:54322/postgres
+
+      - name: Checks still pass after the round trip
+        run: |
+          supabase test db
+          eval "$(supabase status -o env | grep -E '^(API_URL|ANON_KEY|SERVICE_ROLE_KEY)=')"
+          SUPABASE_URL="$API_URL" SUPABASE_ANON_KEY="$ANON_KEY" SUPABASE_SERVICE_KEY="$SERVICE_ROLE_KEY" \
+            node --test tests/db/*.test.mjs
+
+      - name: Stop Supabase
+        if: always()
+        run: supabase stop --no-backup
