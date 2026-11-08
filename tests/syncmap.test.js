@@ -201,3 +201,22 @@ test("NFR-2: two phones edit different plans offline and both keep their changes
   assert.equal(after.plans.custom[0].name, "Changed on phone 1");
   assert.equal(after.plans.custom[1].name, "Changed on phone 2");
 });
+
+test("units (kg or lb) sync in their own column, never in prefs (WP4)", () => {
+  const S = sample();
+  let st = M.toRecords(S, UID)["user_settings:" + UID].f;
+  assert.equal(st.units, "kg", "no choice yet means kg, never null");
+  S.units = "lb";
+  const prev = M.toRecords(sample(), UID);
+  const next = M.toRecords(S, UID);
+  st = next["user_settings:" + UID].f;
+  assert.equal(st.units, "lb");
+  assert.ok(!("units" in st.prefs));
+  assert.deepEqual(M.diff(prev, next), [{ t: "user_settings", id: UID, op: "upsert", f: { units: "lb" } }]);
+  const back = M.applyRecords(sample(), next);
+  assert.equal(back.units, "lb");
+  const kg = M.applyRecords(Object.assign(sample(), { units: "lb" }), prev);
+  assert.ok(!("units" in kg), "kg on the server clears a local lb");
+  const row = { id: UID, deleted_at: null, rev: 2, ...st };
+  assert.equal(M.fromServer("user_settings", row).f.units, "lb");
+});

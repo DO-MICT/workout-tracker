@@ -380,3 +380,52 @@ test("celebration style and starter days follow the answers", () => {
   assert.deepEqual(R.starterDays(2), ["mon", "thu"]);
   assert.deepEqual(R.starterDays(5), ["mon", "wed", "fri"]);
 });
+
+/* ---------- kg or lb (WP4) ---------- */
+test("weights are kept in kg and shown in the chosen unit", () => {
+  assert.equal(R.toKg("45", "lb"), 20.412);
+  assert.equal(R.toKg("100", "kg"), 100);
+  assert.equal(R.toKg("abc", "lb"), null);
+  assert.equal(R.fromKg(20.412, "lb"), 45);
+  assert.equal(R.fromKg(100, "lb", 1), 220.5);
+  // typed in lb, saved in kg, shown again exactly as typed (to 0.01 lb)
+  for (const t of ["45", "135", "225", "2.5", "317.5", "1000", "12.25", "0.5"]) assert.equal(R.boxShow(R.boxSave(t, "lb"), "lb"), t, t);
+  assert.equal(R.boxSave("45", "lb"), "20.412");
+  assert.equal(R.boxSave("60", "kg"), "60", "kg users' boxes are saved as typed");
+  assert.equal(R.boxSave("", "lb"), "");
+  assert.equal(R.boxShow("", "lb"), "");
+  assert.equal(R.boxShow("62.5", "kg"), "62.5");
+  assert.equal(R.boxShow("61.235", "kg"), "61.24", "a weight typed in lb shows to 2 decimals in kg");
+  assert.equal(R.boxShow("-20", "lb"), "-44.1", "assisted (negative) weights convert too");
+  assert.equal(R.unitLabel("kg", "lb"), "lb");
+  assert.equal(R.unitLabel("+kg", "lb"), "+lb");
+  assert.equal(R.unitLabel("km", "lb"), "km");
+  assert.equal(R.unitLabel("kg"), "kg");
+  assert.equal(R.fmtWeight(100, "lb"), "220.5 lb");
+  assert.equal(R.fmtWeight(102.058, "lb"), "225 lb");
+  assert.equal(R.fmtWeight(82.5, "kg"), "82.5 kg");
+  assert.equal(R.unitOf("stone"), "kg");
+});
+
+test("records, last time and the big-jump check speak pounds for lb users", () => {
+  const B = R.bestsOf("w", [{ w: 102.058, r: 5 }, { w: 92.986, r: 8 }]);
+  const lb = R.recordList("w", B, "lb");
+  assert.equal(lb[0].text, "225 lb");
+  assert.equal(lb[0].set, "225 lb × 5");
+  assert.equal(R.recordList("w", B)[0].text, "102.06 kg", "kg stays the default");
+  assert.equal(R.recordList("bw", R.bestsOf("bw", [{ w: 11.34, r: 8 }]), "lb").find((x) => x.key === "added").text, "25 lb");
+  assert.deepEqual(R.lastSetParts(sets([61.235, 8], [61.235, 6]), KG, "lb"), ["135 lb × 8", "135 lb × 6"]);
+  assert.deepEqual(R.lastSetParts(sets([60, 8]), KG), ["60 kg × 8"]);
+  assert.deepEqual(R.lastSetParts(sets([5, 30]), CARDIO, "lb"), ["5 km × 30 min"], "distances stay km");
+  const j = R.bigJump(KG, "204.117", sets([102.058, 5]));
+  assert.equal(R.jumpText(j, "204.117", "kg", "lb"), "450 lb? That's 2× your last set.");
+  const by = R.bigJump(KG, "136.078", sets([102.058, 5]));
+  assert.equal(R.jumpText(by, "136.078", "kg", "lb"), "300 lb? That's 75 lb more than last time (225 lb).");
+  assert.equal(R.jumpText(R.bigJump(CARDIO, "300", []), "300", "km", "lb"), "300 km? That's more than most people ever log for this.");
+});
+
+test("a pound weight saved with only 2 kg decimals still shows as typed", () => {
+  assert.equal(R.boxShow(61.24, "lb"), "135");
+  assert.equal(R.boxShow(20.41, "lb"), "45");
+  assert.equal(R.boxShow(5.556, "lb"), "12.25");
+});
