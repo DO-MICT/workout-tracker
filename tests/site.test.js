@@ -50,6 +50,20 @@ test("the terms say GFD is not medical advice; the privacy policy names the EU s
   assert.match(p, /don't sell/i);
 });
 
+test("the deletion page (Google Play's link) is built, uses the app's Supabase project, and is linked from the policies", () => {
+  const html = read("delete-account.html");
+  assert.doesNotMatch(html, /\{\{[a-z_]+\}\}/, "no raw tokens");
+  const src = read("src/js/signin.js");
+  const url = src.match(/SB_URL="([^"]+)"/)[1], key = src.match(/SB_KEY="([^"]+)"/)[1];
+  assert.ok(html.includes(`"${url}"`) && html.includes(`"${key}"`), "same project and publishable key as the app");
+  assert.match(html, /request_account_deletion/);
+  assert.match(html, /cancel_account_deletion/);
+  assert.match(html, /7 days/);
+  assert.ok(read("privacy.html").includes('href="delete-account.html"'), "the privacy policy links it");
+  assert.ok(read("site/shell.html").includes('href="delete-account.html"'), "every policy page footer links it");
+  assert.ok(read("sw.js").includes("'delete-account.html'"), "works offline like the other pages");
+});
+
 test("each sign-in email keeps Supabase's own link or code and links the policies", () => {
   const dir = path.join(ROOT, "supabase/templates");
   const names = fs.readdirSync(dir).filter((f) => f.endsWith(".html")).sort();

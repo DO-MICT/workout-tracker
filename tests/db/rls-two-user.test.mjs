@@ -94,7 +94,7 @@ test('sign-up makes a profile, an empty data row and a 14-day Pro trial', async 
 
 const SYNC_TABLES = ['user_settings', 'about_me', 'locations', 'plans', 'plan_versions', 'schedule_entries', 'measurements', 'exercise_notes', 'custom_exercises', 'progress_photos'];
 
-for (const table of ['profiles', 'user_state', 'entitlements', 'my_access', 'workouts', 'workout_sets', 'suggestions',
+for (const table of ['profiles', 'user_state', 'entitlements', 'my_access', 'workouts', 'workout_sets', 'suggestions', 'deletion_requests',
   ...SYNC_TABLES]) {
   test(`${table}: a user never sees the other user's rows`, async () => {
     const col = table === 'profiles' ? 'id' : 'user_id';
@@ -110,7 +110,7 @@ test('signed-out visitors read the shared libraries but no personal data', async
   assert.equal((await rest('exercises?select=id&limit=1')).status, 200);
   assert.equal((await rest('gear?select=id&limit=1')).status, 200);
   assert.equal(rows(await rest('tier_features?select=tier')).length, 4);
-  for (const table of ['profiles', 'user_state', 'entitlements', 'my_access', 'workouts', 'workout_sets', 'suggestions',
+  for (const table of ['profiles', 'user_state', 'entitlements', 'my_access', 'workouts', 'workout_sets', 'suggestions', 'deletion_requests',
   'events', 'client_errors', ...SYNC_TABLES]) {
     const r = await rest(`${table}?select=*`);
     assert.ok(r.status === 401 || r.status === 403 || rows(r).length === 0, `anon must not read ${table} (got ${r.status})`);

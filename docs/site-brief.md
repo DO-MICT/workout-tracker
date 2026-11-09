@@ -7,6 +7,7 @@ rebuilt by `python3 tools/build_pages.py` (which runs `tools/build_site.py`). CI
 |---|---|---|
 | `site/shell.html` + `site/privacy.html` | `privacy.html` | `<site>/privacy.html` |
 | `site/shell.html` + `site/terms.html` | `terms.html` | `<site>/terms.html` |
+| `site/shell.html` + `site/delete-account.html` | `delete-account.html` | `<site>/delete-account.html` (WP8, Google Play's deletion link; uses the app's Supabase URL and key from `src/js/signin.js`) |
 | `site/emails/_frame.html` + `site/emails/<kind>.html` | `supabase/templates/<kind>.html` | Supabase auth emails |
 | `site.json` `domain` | `CNAME` (only when set) | GitHub Pages custom domain |
 

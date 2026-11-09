@@ -154,3 +154,45 @@ Secrets never go in the repo. The app keeps using only the production publishabl
   ones that match today's versions. Anything else is asked by the screen after sign-in (`src/js/consent.js`).
 - `private.has_consent(uid, kind)` is for the health tables' RLS (WP9). Withdrawing health consent calls
   `private.delete_health_data(uid)`; WP9 fills it in with deletes from its tables.
+
+## Account deletion and data export (WP8)
+
+Migration `20261109000016_account_deletion.sql`, Edge Function `supabase/functions/delete-account`, app `src/js/account.js`,
+web page `site/delete-account.html` (built to `delete-account.html`, the link for Google Play's data deletion form).
+
+- **Asking**: Profile › Delete my account (type DELETE), or the web page. `request_account_deletion(source)` adds a
+  `deletion_requests` row due in 7 days (asking again keeps the first date). The phone then signs out and forgets its copy.
+- **Changing your mind**: signing in during the 7 days shows "Keep your account?" before anything else (before the
+  consent gate); `cancel_account_deletion()` removes the row. The web page offers the same.
+- **Deleting**: `.github/workflows/account-deletions.yml` calls the `delete-account` function once a day with the header
+  `x-cron-secret`. For each due request (`core.js`, the same code the tests run): remove the person's files under
+  `<user id>/` in the `suggestions` and `progress-photos` buckets, delete the RevenueCat customer once
+  `REVENUECAT_SECRET_KEY` is set (WP12), then delete the auth user. Every table with a `user_id` cascades from
+  `auth.users` (a pgTAP check enforces it), the profiles trigger logs `account_deleted` with no id, and the trial check
+  code stays in `private.trial_ledger`. A failure leaves the row with `attempts` and `last_error`; the next day retries.
+  The function's result is counts only.
+- **Export**: `export_my_data()` returns one JSON document with every table, listed by name. The app adds CSVs of sets
+  and measurements, a README and feedback screenshots, and saves a ZIP (`gfd-data-YYYY-MM-DD.zip`). Logs `export`.
+- **Adding a table with personal data**: give it `user_id ... references auth.users (id) on delete cascade`, add it to
+  `export_my_data()` (new migration; `06_account_deletion.test.sql` fails otherwise), and if it holds files, add the
+  bucket to `BUCKETS` in `core.js` with files under `<user id>/`. WP15 ends couple links in `deleteOne`.
+- Tests: `supabase/tests/database/06_account_deletion.test.sql`, `tests/db/account-deletion.test.mjs` (export, the
+  two-user cases, a full deletion run with files, and a failed run that retries), `tests/account.test.js` (ZIP and CSV).
+
+### One-time setup (Deon)
+
+1. Apply the migration (Deploy database workflow, as for the others).
+2. Supabase → Edge Functions → Secrets (staging and production): `DELETE_CRON_SECRET` = a long random text
+   (40+ characters, from a password manager).
+3. Deploy the function: GitHub → Settings → Secrets → Actions: `SUPABASE_ACCESS_TOKEN` (supabase.com → Account →
+   Access tokens); Settings → Environments → staging / production → Variables: `PROJECT_REF`. Then Actions → Deploy
+   functions → Run workflow (staging, then production). Or from a computer with the CLI:
+   `supabase functions deploy delete-account --project-ref <ref>`.
+4. GitHub → Settings → Secrets → Actions: `DELETE_FN_URL` = `https://zdllpjrkwcdmcuizxuum.supabase.co/functions/v1/delete-account`
+   and `DELETE_CRON_SECRET` = the same text as step 2. Then Actions → Account deletions → Run workflow once: it should
+   print `{"due":0,"deleted":0,"failed":0,"files":0}`.
+5. Google Play Console → App content → Data safety → Data deletion: link `<site>/delete-account.html`.
+
+GitHub turns off scheduled workflows after 60 days without commits. If the repo goes quiet, re-enable it on the Actions
+tab, or schedule the function in Supabase instead (Integrations → Cron → new job → Edge Function `delete-account`,
+daily, header `x-cron-secret`).

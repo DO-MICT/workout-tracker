@@ -3,6 +3,7 @@
 Usage:  python3 tools/build_site.py      (tools/build_pages.py runs it too, so CI checks the output is current)
 
   site/privacy.html, site/terms.html      ->  privacy.html, terms.html (served by GitHub Pages)
+  site/delete-account.html                ->  delete-account.html (WP8: the deletion link for Google Play)
   site/emails/*.html                      ->  supabase/templates/*.html (Supabase auth emails)
   site.json "domain"                      ->  CNAME (only once a domain is set)
 
@@ -33,6 +34,14 @@ def load():
     return json.loads((root / "site.json").read_text(encoding="utf-8"))
 
 
+def supabase_client():
+    """the app's Supabase URL and publishable key, read from src/js/signin.js so there is one place for them"""
+    src = (root / "src" / "js" / "signin.js").read_text(encoding="utf-8")
+    m = re.search(r'var SB_URL="(https://[a-z0-9.-]+)", SB_KEY="([A-Za-z0-9_.-]+)"', src)
+    assert m, "src/js/signin.js: SB_URL and SB_KEY not found"
+    return m.group(1), m.group(2)
+
+
 def values(c):
     domain = (c.get("domain") or "").strip().lower()
     assert re.fullmatch(r"([a-z0-9-]+\.)+[a-z]{2,}", domain) or domain == "", "site.json domain: just the name, like example.com"
@@ -54,6 +63,8 @@ def values(c):
         "terms_version": c["policies"]["terms"],
         "privacy_version": c["policies"]["privacy"],
         "effective": c["policies"]["effective"],
+        "supabase_url": supabase_client()[0],
+        "supabase_key": supabase_client()[1],
     }
 
 
@@ -93,7 +104,7 @@ def build():
     v = values(c)
     shell = (SITE / "shell.html").read_text(encoding="utf-8")
     report = {}
-    for name in ("privacy", "terms"):
+    for name in ("privacy", "terms", "delete-account"):
         body = (SITE / f"{name}.html").read_text(encoding="utf-8")
         title, _, body = body.partition("\n")
         page = shell.replace("<!--TITLE-->", title.strip()).replace("<!--BODY-->", body)
