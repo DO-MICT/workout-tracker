@@ -110,7 +110,7 @@ function dayToSrc(d){
     link:!!nx&&((x.ss==="a"&&nx.ss==="b")||(x.ss==="b"&&nx.ss==="b")||(x.ss==="c"&&nx.ss==="c"))};})};
   if(d.opt) o.opt=true; return o;
 }
-function usePlan(id){ if(!planById(id)) return; plansState().active=id; save(); OPEN={}; pickToday=true; renderAll(); }
+function usePlan(id){ if(!planById(id)) return; if(planLocked(id)){ proOffer("plans"); return; } plansState().active=id; save(); OPEN={}; pickToday=true; renderAll(); }
 function newPlanId(){return "p"+Date.now().toString(36)+Math.floor(Math.random()*1e4).toString(36);}
 
 /* ---------- plan switcher (tap the title) ---------- */
@@ -119,7 +119,8 @@ function renderPlanBtn(){
   b.firstChild.textContent=activePlan().name;
   var m=document.getElementById("planMenu"), act=activePlan().id;
   m.innerHTML='<div class="menu-lbl2">Switch plan</div>'+allPlans().map(function(p){
-    return '<button class="menu-item pm-item" data-useplan="'+p.id+'" aria-pressed="'+(p.id===act)+'"><span>'+esc(p.name)+'</span>'+(p.id===act?'<b aria-hidden="true">✓</b>':'')+'</button>';
+    var lk=planLocked(p.id);
+    return '<button class="menu-item pm-item'+(lk?' pm-locked':'')+'" data-useplan="'+p.id+'" aria-pressed="'+(p.id===act)+'"'+(lk?' aria-label="'+esc(p.name)+', read only on Free"':'')+'><span>'+esc(p.name)+'</span>'+(p.id===act?'<b aria-hidden="true">✓</b>':lk?'<span class="ttag">Read only</span>':'')+'</button>';
   }).join("")+'<button class="menu-item pm-manage" id="managePlans">Manage plans</button>';
 }
 function setPlanMenu(open){
@@ -135,7 +136,8 @@ function renderPlans(){
   var sh=document.getElementById("plans"); if(!sh||sh.hidden) return;
   var act=activePlan().id;
   var h='<div class="sheet-in"><div class="sheet-top"><h2 id="pltitle">Workout plans</h2><button class="chip" id="closePlans">Close</button></div>'+
-    '<p class="sub">Pick the plan you’re following. Each plan keeps its own edits. Your logs and PRs follow the exercise, whichever plan you’re on.</p>';
+    '<p class="sub">Pick the plan you’re following. Each plan keeps its own edits. Your logs and PRs follow the exercise, whichever plan you’re on.</p>'+
+    planCapHtml();
   allPlans().forEach(function(p){
     if(p.id==="coles"){
       var cs=colesSession(), cf=colesFocus(cs?cs.focus:colesState().opts.focus);
@@ -145,6 +147,14 @@ function renderPlans(){
       return;
     }
     var days=buildDaysFor(p.id), edited=planEdited(p.id);
+    if(planLocked(p.id)){
+      h+='<div class="plcard pllocked"><div class="plhead"><h3>'+esc(p.name)+'</h3><span class="ttag">Read only</span></div>'+
+        '<p class="pldesc">Saved, but not in use on Free. Pick it to use it again, or get Pro.</p>'+
+        '<ul class="pldays">'+days.map(function(d){return '<li><b>'+d.short+'</b>'+esc(d.title)+'<span>'+(d.ex.length?d.ex.length+' exercises':'Empty')+'</span></li>';}).join("")+'</ul>'+
+        '<div class="placts">'+(sbUser?'<button class="chip sm primarychip" data-pickplans="1">Pick plans in use</button>':'')+'<button class="chip sm" data-pro="plans">Get Pro</button>'+
+        '<button class="chip sm danger" data-delplan="'+p.id+'">Delete</button></div></div>';
+      return;
+    }
     h+='<div class="plcard'+(p.id===act?' on':'')+'">';
     if(PL_REN===p.id) h+='<div class="plren"><input id="plName" maxlength="32" value="'+esc(p.name)+'" aria-label="Plan name"><button class="chip sm" data-saveren="'+p.id+'">Save</button></div>';
     else h+='<div class="plhead"><h3>'+esc(p.name)+'</h3>'+(p.id===act?'<span class="pltag">Active</span>':'')+'</div>';
@@ -161,6 +171,13 @@ function renderPlans(){
   var st=sh.scrollTop; sh.innerHTML=h; sh.scrollTop=st;
   if(PL_REN){var i=document.getElementById("plName"); if(i){i.focus();i.select();}}
 }
+/* Free: how many of your own plans are in use (WP14) */
+function planCapHtml(){
+  var cap=planCap(); if(cap===Infinity) return "";
+  var n=plansInUse(), locked=Object.keys(lockedPlans()).length;
+  return '<div class="plcap" role="status"><span><b>'+n+' of '+cap+'</b> of your own plans in use'+(locked?' · '+locked+' read only':'')+'</span>'+
+    (locked&&sbUser?'<button class="linkbtn" data-pickplans="1">Pick which</button>':'<button class="linkbtn" data-pro="plans">Unlimited with Pro</button>')+'</div>';
+}
 function confirmTap(t,label,again){
   if(t.dataset.armed) return true;
   t.dataset.armed="1"; t.textContent=again;
@@ -170,12 +187,14 @@ function confirmTap(t,label,again){
 function plansClick(t){
   if(t.id==="planBtn"){var m=document.getElementById("planMenu");setPlanMenu(m.hidden);return true;}
   if(t.dataset.useplan){
+    if(planLocked(t.dataset.useplan)){ setPlanMenu(false); proOffer("plans"); return true; }
     var inSheet=!!t.closest("#plans"); setPlanMenu(false); usePlan(t.dataset.useplan);
     if(inSheet) renderPlans(); toast("Now on: "+activePlan().name); return true;
   }
   if(t.id==="openPlans"||t.id==="managePlans"){setPlanMenu(false);openPlans();return true;}
   if(t.id==="closePlans"){closePlans();var b=document.getElementById("planBtn");if(b)b.focus();return true;}
   if(t.dataset.dupplan){
+    if(!canAddPlan()){ proOffer("plans"); return true; }
     var src=planById(t.dataset.dupplan), days={};
     buildDaysFor(src.id).forEach(function(d){days[d.id]=dayToSrc(d);});
     var srcDays=buildDaysFor(src.id), scp=customById(src.id);
@@ -183,7 +202,7 @@ function plansClick(t){
     if(scp&&scp.rest) np.rest=scp.rest;
     plansState().custom.push(np); save(); PL_REN=np.id; renderPlans(); toast("Copied. Give it a name");return true;
   }
-  if(t.dataset.editplan){openWizard(t.dataset.editplan);return true;}
+  if(t.dataset.editplan){ if(planLocked(t.dataset.editplan)){ proOffer("plans"); return true; } openWizard(t.dataset.editplan);return true;}
   if(t.dataset.renplan){PL_REN=t.dataset.renplan;renderPlans();return true;}
   if(t.dataset.saveren){
     var cp=customById(t.dataset.saveren), v=(document.getElementById("plName").value||"").trim();
@@ -200,7 +219,7 @@ function plansClick(t){
     if(!confirmTap(t,"Reset edits","Tap again to reset")) return true;
     delete plansState().edits[t.dataset.resetplan]; if(plansState().meta) delete plansState().meta[t.dataset.resetplan]; save(); renderAll(); renderPlans(); toast("Plan reset to the original"); return true;
   }
-  if(t.id==="newPlan"){openWizard();return true;}
+  if(t.id==="newPlan"){ if(!canAddPlan()){ proOffer("plans"); return true; } openWizard();return true;}
   return false;
 }
 /* ---------- guided plan setup ---------- */
@@ -301,6 +320,7 @@ function wzValidate(){
 function wzGo(step){ WZ.step=step; if(step!==2&&BD&&BD.wizard) BD=null; renderWizard(); document.getElementById("wizard").scrollTop=0; }
 function wzSubmit(){
   if(WZ.editId) return wzSaveEdit();
+  if(!canAddPlan()){ proOffer("plans"); return; }   /* Free is at its plan limit (set up from onboarding, or another phone added one) */
   var days={};
   wzOrderedDays().forEach(function(w){
     days[w.id]={title:(WZ.titles[w.id]||"").trim()||((WZ.ex[w.id]||[]).length?"Workout":"Rest day"),

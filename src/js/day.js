@@ -200,6 +200,7 @@ document.addEventListener("click",function(e){
   if(feedbackClick(t)) return;
   if(usageClick(t)) return;
   if(suggClick(t)) return;
+  if(accessClick(t)) return;
   if(consentClick(t)) return;
   if(healthClick(t)) return;
   if(accountClick(t)) return;
@@ -242,6 +243,7 @@ document.addEventListener("click",function(e){
 });
 document.addEventListener("keydown",function(e){
   if(OB&&e.key==="Escape") return;
+  if(e.key==="Escape"){var prs=document.getElementById("prosheet");if(prs&&!prs.hidden){proClose();return;}}
   if(e.key==="Escape"){var ap=document.getElementById("askpop");if(ap&&!ap.hidden){askAnswer(false);return;}}
   if(e.key==="Escape"){var dp=document.getElementById("donepop");if(dp&&!dp.hidden){closeDone();return;}}
   if(H&&e.key==="Escape"){if(H.edit){H.edit=null;renderHistory(true);}else if(H.del){H.del=null;renderHistory(true);}else if(H.ex&&!H.fromEx){document.getElementById("histBack").click();}else closeHistory();return;}
