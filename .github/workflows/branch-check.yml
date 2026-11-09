@@ -1,0 +1,12 @@
+name: branch-check
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  branch-check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          if [ "${{ github.head_ref }}" != "dev" ]; then
+            echo "PRs into main must come from dev"; exit 1
+          fi
