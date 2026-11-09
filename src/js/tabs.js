@@ -77,7 +77,7 @@ function tabsClick(t){
 }
 (function initTabs(){
   renderTabbar();
-  var watch=["onboard","wizard","builder","notesheet","donepop","measure","body","more","exlib","profile","sugg","feedback","usage","history","plans","equip"];
+  var watch=["onboard","consent","wizard","builder","notesheet","donepop","measure","body","more","exlib","profile","sugg","feedback","usage","history","plans","equip"];
   if(window.MutationObserver){
     var mo=new MutationObserver(function(){syncTabs();});
     watch.forEach(function(id){var el=document.getElementById(id); if(el) mo.observe(el,{attributes:true,attributeFilter:["hidden"]});});

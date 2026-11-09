@@ -139,3 +139,18 @@ Prefer a new forward migration that fixes the problem.
    two-user test there.
 
 Secrets never go in the repo. The app keeps using only the production publishable key.
+
+## Consents (WP6)
+
+- `consents` (migration `20261108000014_consents.sql`): one row per consent given or withdrawn, kinds `terms`, `privacy`,
+  `health`, `marketing`. Append-only: a trigger refuses every update; withdrawing adds a row with `withdrawn_at`. The
+  newest row per kind is the current state. Rows go with the account (cascade).
+- The app reads `my_consents` (one row per kind: active, agreed version, `current_version`) and writes only through
+  `give_consent(kind, version)` (the version must be today's) and `withdraw_consent(kind)` (health and marketing only;
+  terms and privacy end with account deletion, WP8).
+- Current versions live in `app_config.policies`. `terms` and `privacy` stay empty until the policy pages are published
+  (WP7); while empty nobody is asked. Bumping a version makes the app ask everyone again on next open.
+- Sign-up: ticked versions go in the user metadata (`consents`); the `profiles_consents_insert` trigger records the
+  ones that match today's versions. Anything else is asked by the screen after sign-in (`src/js/consent.js`).
+- `private.has_consent(uid, kind)` is for the health tables' RLS (WP9). Withdrawing health consent calls
+  `private.delete_health_data(uid)`; WP9 fills it in with deletes from its tables.

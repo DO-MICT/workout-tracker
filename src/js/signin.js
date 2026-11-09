@@ -44,6 +44,7 @@ function webAuthHtml(){
       '<label class="bname"><span>Name</span><input id="obName" maxlength="40" autocomplete="name" placeholder="What should we call you?"></label>'+
       '<label class="bname"><span>Email</span><input id="obEmail" type="email" inputmode="email" autocomplete="email" maxlength="80" placeholder="you@example.com"></label>'+
       '<label class="bname"><span>Password</span><input id="obPass" type="password" autocomplete="new-password" minlength="6" maxlength="72" placeholder="At least 6 characters"></label>'+
+      consentSignupHtml()+
       '<p class="wzerr" id="obErr" role="alert"></p><button class="primary" id="waSignup">Create account</button>'+
       '<p class="obfine">Already have an account? <button class="linkbtn" data-wamode="signin">Sign in</button></p>';
   } else if(m==="signin"){
@@ -79,8 +80,10 @@ function webAuthClick(t){
     var n=v("obName"), e=v("obEmail"), p=document.getElementById("obPass").value;
     if(!okEmail(e)){err.textContent="Enter a valid email.";return true;}
     if(p.length<6){err.textContent="Use a password of at least 6 characters.";return true;}
+    var cErr=consentSignupError(); if(cErr){err.textContent=cErr;return true;}
+    var meta={display_name:n}, cm=consentSignupMeta(); if(cm) meta.consents=cm;   /* recorded with the account (WP6) */
     waBusy(t,true,"Create account"); OB.email=e;
-    sb.auth.signUp({email:e,password:p,options:{data:{display_name:n},emailRedirectTo:location.origin+location.pathname}}).then(function(r){
+    sb.auth.signUp({email:e,password:p,options:{data:meta,emailRedirectTo:location.origin+location.pathname}}).then(function(r){
       waBusy(t,false,"Create account");
       if(r.error){err.textContent=authMsg(r.error);return;}
       if(n) S.names[0]=n.slice(0,40);
@@ -136,7 +139,8 @@ function onSignedIn(user,fresh){
   }).then(function(){
     if(pd){ if(pd.display_name&&(!S.names[0]||S.names[0]==="You")) S.names[0]=pd.display_name; sbAdmin=!!pd.is_admin; }
     return refreshAccess();
-  }).catch(function(){}).then(function(){
+  }).then(function(){ return consentCheck(); })   /* terms and privacy first, if a version is owed (WP6) */
+  .catch(function(){}).then(function(){
     var sh=document.getElementById("onboard");
     if(!S.onboarded){ if(!(WZ&&WZ.ob)) resumeOnboarding(); else { sh.hidden=true; sh.innerHTML=""; } }
     else if(OB){ sh.hidden=true; sh.innerHTML=""; document.body.style.overflow=""; OB=null; }
