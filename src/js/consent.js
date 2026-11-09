@@ -7,7 +7,7 @@
      those with the new account (sign-up trigger).
    - Profile › Privacy shows what was agreed and when, and turns tips and news on or off.
    - Terms and privacy versions live in app_config.policies; WP7 (migration 20261108000015) publishes them with the
-     pages built from site.json (docs/site-brief.md). While a version is empty nobody is asked. Health consent comes with the health details screens (WP9). */
+     pages built from site.json (docs/site-brief.md). While a version is empty nobody is asked. Health consent and its row in Profile › Privacy are in health.js (WP9). */
 var CS=null;   /* {rows: [{kind, version, given_at, withdrawn_at, active, current_version}], uid} or null */
 var CONSENT_KINDS=["terms","privacy"], CONSENT_LABEL={terms:"Terms of use",privacy:"Privacy policy",marketing:"Tips and news by email",health:"Health details"};
 
@@ -121,7 +121,7 @@ function consentBoxHtml(){
   var m=consentRow("marketing"), on=!!(m&&m.active);
   h+='</div><div class="mtheme cstoggle"><span>Tips and news by email</span><div class="seg segtwo" role="group" aria-label="Tips and news by email">'+
     [["off","Off"],["on","On"]].map(function(o){return '<button data-csnews="'+o[0]+'" aria-pressed="'+((o[0]==="on")===on)+'"'+(m&&m.current_version?'':' disabled')+'>'+o[1]+'</button>';}).join("")+'</div></div>'+
-    '<p class="sub">Health details, like injuries or things you can’t do, will be kept apart and only with your OK. That comes in a later update.</p>';
+    healthRowHtml();
   return h;
 }
 function consentProfileLoad(){

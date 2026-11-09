@@ -526,6 +526,57 @@ test('policies: the published terms and privacy are asked of new accounts, and e
   assert.equal(rows(await rest('consents?select=id')).length, 0);
 });
 
+// ---------- health details (WP9) ----------
+
+test('health: rows open only to their owner and only with health consent; withdrawing deletes them', async () => {
+  const pol = rows(await rest('app_config?select=value&key=eq.policies', 'a'))[0].value;
+  const note = { kind: 'exercise_note', exercise_id: 'bench', note: 'Left shoulder: elbows tucked' };
+  const ret = { Prefer: 'return=representation' };
+
+  // no consent yet: nothing can be saved or read, even by the owner
+  assert.ok((await rest('health_limits', 'a', { method: 'POST', body: note })).status >= 400, 'A cannot save before agreeing');
+  assert.ok((await rest('pain_entries', 'a', { method: 'POST', body: { score: 3 } })).status >= 400);
+
+  const g = await rest('rpc/give_consent', 'a', { method: 'POST', body: { p_kind: 'health', p_version: pol.health } });
+  assert.equal(g.status, 200, JSON.stringify(g.json));
+  const id = randomUUID();
+  const ins = await rest('health_limits', 'a', { method: 'POST', body: { id, ...note }, headers: ret });
+  assert.equal(ins.status, 201, JSON.stringify(ins.json));
+  assert.equal(rows(ins)[0].user_id, users.a.id, 'user_id is filled in from the session');
+  const up = await rest('health_limits?on_conflict=id', 'a', { method: 'POST', body: { id, ...note, note: 'Changed' },
+    headers: { Prefer: 'resolution=merge-duplicates,return=representation' } });
+  assert.equal(up.status, 200, 'the app upserts by id: ' + JSON.stringify(up.json));
+  assert.equal(rows(up)[0].note, 'Changed');
+  assert.equal((await rest('pain_entries', 'a', { method: 'POST', body: { score: 4, exercise_id: 'bench' } })).status, 201);
+  assert.ok((await rest('pain_entries', 'a', { method: 'POST', body: { score: 12 } })).status >= 400, 'pain is 0 to 10');
+  assert.ok((await rest('health_limits', 'a', { method: 'POST', body: { kind: 'cant_do', code: 'no_jumping', user_id: users.b.id } })).status >= 400,
+    'A cannot save a row for B');
+
+  // B (no consent) and signed-out visitors see nothing, and can't change A's rows
+  assert.equal(rows(await rest('health_limits?select=id', 'b')).length, 0, "B sees none of A's health details");
+  assert.equal(rows(await rest('pain_entries?select=id', 'b')).length, 0);
+  assert.equal(rows(await rest('health_limits?select=id')).length, 0);
+  const bdel = await rest('health_limits?id=eq.' + id, 'b', { method: 'DELETE', headers: ret });
+  assert.ok(bdel.status >= 400 || rows(bdel).length === 0, "B cannot delete A's rows");
+  // B agreeing doesn't open A's rows
+  await rest('rpc/give_consent', 'b', { method: 'POST', body: { p_kind: 'health', p_version: pol.health } });
+  assert.equal(rows(await rest('health_limits?select=id', 'b')).length, 0, "B's consent opens only B's rows");
+
+  // the export has a separate health section
+  const x = (await rest('rpc/export_my_data', 'a', { method: 'POST', body: {} })).json;
+  assert.equal(x.health.health_limits.length, 1);
+  assert.equal(x.health.pain_entries.length, 1);
+  assert.equal(x.tables.health_limits, undefined, 'health is not mixed in with the other tables');
+
+  // withdrawing deletes everything at once
+  const w = await rest('rpc/withdraw_consent', 'a', { method: 'POST', body: { p_kind: 'health' } });
+  assert.equal(w.status, 200, JSON.stringify(w.json));
+  const left = rows(await admin('/rest/v1/health_limits?select=id&user_id=eq.' + users.a.id)).length
+    + rows(await admin('/rest/v1/pain_entries?select=id&user_id=eq.' + users.a.id)).length;
+  assert.equal(left, 0, 'withdrawing health consent deleted every health row');
+  assert.ok((await rest('health_limits', 'a', { method: 'POST', body: note })).status >= 400, 'and nothing can be saved after');
+});
+
 // ---------- one trial per person ----------
 
 test('deleting an account and joining again with the same email gives no second trial', async () => {

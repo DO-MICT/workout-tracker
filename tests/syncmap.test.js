@@ -90,7 +90,8 @@ test("the blob splits into the synced tables", () => {
   const left = ms.find((r) => r.f.site === "uarm" && r.f.side === "left");
   assert.equal(left.f.value, 33.5);
   assert.equal(ms.find((r) => r.f.site === "waist").f.side, null);
-  assert.deepEqual(by("exercise_notes").map((r) => r.f.exercise_id).sort(), ["bench", "squat"]);
+  assert.equal(by("exercise_notes").length, 0, "injury notes are health details: never in the synced tables (WP9)");
+  assert.ok(!JSON.stringify(R).includes("Seat 4"), "nor in prefs");
 });
 
 test("records turn back into the same app data (round trip)", () => {
@@ -106,7 +107,7 @@ test("records turn back into the same app data (round trip)", () => {
   assert.equal(b.plans.active, "p1");
   assert.deepEqual(b.locs, a.locs);
   assert.deepEqual(b.about, a.about);
-  assert.deepEqual(b.notes, a.notes);
+  assert.equal(S1.notes, undefined, "notes don't come from the synced tables");
   assert.deepEqual(b.profile.hist, a.profile.hist);
   assert.deepEqual(b.profile.vals, a.profile.vals);
   assert.equal(b.profile.rest, 120);
@@ -146,9 +147,9 @@ test("only changed fields are sent, settings key by key, removed records as dele
   assert.deepEqual(st.f, { prefs: { coles: { opts: { focus: "full", count: 8, sets: 3, loc: "" } }, prReset: null } });
   const p1 = find("plans", (m) => m.id === M.recId(UID, "plan", "p1"))[0];
   assert.deepEqual(Object.keys(p1.f).sort(), ["body", "name"]);
-  assert.equal(find("exercise_notes")[0].op, "delete");
+  assert.equal(find("exercise_notes").length, 0, "an injury note change sends nothing here (health.js does it)");
   assert.deepEqual(find("locations")[0].f, { gear: ["barbell", "plates", "adjbench", "smith"] });
-  assert.equal(muts.length, 4);
+  assert.equal(muts.length, 3);
   assert.deepEqual(M.diff(prev, prev), [], "no change, nothing to send");
 });
 

@@ -196,3 +196,25 @@ web page `site/delete-account.html` (built to `delete-account.html`, the link fo
 GitHub turns off scheduled workflows after 60 days without commits. If the repo goes quiet, re-enable it on the Actions
 tab, or schedule the function in Supabase instead (Integrations → Cron → new job → Edge Function `delete-account`,
 daily, header `x-cron-secret`).
+
+## Health details (WP9)
+
+Migration `20261109000017_health_data.sql`, app `src/js/health.js`. NFR-6: health details live apart, only with consent.
+
+- `health_limits`: `kind` = `exercise_note` (injury note on an exercise, one per exercise), `cant_do` (a short code such as
+  `no_jumping`, one per code), `injury` or `note`. `pain_entries`: `score` 0 to 10, optional `exercise_id` and `workout_id`
+  (your own workouts only), `felt_at`, `note`. Only injury notes have screens so far; limits (G1) and pain (FR-4.10) come
+  later on the same tables.
+- RLS: own rows **and** `private.health_ok()` (= `has_consent(auth.uid(), 'health')`) for every read and write. Without
+  active consent even the owner's app gets nothing. The app reads and writes them directly (not through sync).
+- Withdrawing health consent (`withdraw_consent('health')`) runs `private.delete_health_data(uid)`, which deletes both
+  tables' rows at once. Account deletion cascades as usual.
+- `export_my_data()` returns them under a separate top-level `health` section, not in `tables`.
+- Never put health details in `events`, `client_errors`, `user_settings.prefs` or the synced tables. Injury notes used to
+  sync as `exercise_notes` (WP3 draft); they are now local-only in `S` (`syncmap.js` LOCAL: `notes`, `healthQ`,
+  `healthSync`) and `health.js` keeps them in `health_limits`. `exercise_notes` is left for setup cues (FR-4.9).
+- In the app: after the consent gate, `healthStart()` loads notes (consent on), forgets them (withdrawn), or asks once per
+  open whether to keep a phone's older notes (never asked). Adding a note without consent asks first. Profile › Privacy has
+  the Health details on/off switch (off deletes). Signed out, notes stay on the phone as before.
+- Adding a health table: same RLS pattern, add it to `delete_health_data` and to the `health` section of
+  `export_my_data()` (new migration), and a case in the health test of `tests/db/rls-two-user.test.mjs`.
