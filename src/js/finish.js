@@ -119,7 +119,7 @@ function schedulePing(delay){
   });
 }
 function startTimer(sec){
-  tTotal=sec;tEnd=Date.now()+sec*1000; schedulePing(sec);
+  tTotal=sec;tEnd=Date.now()+sec*1000; schedulePing(sec); platform.restAlert(tEnd);   /* the app: a notification if the screen is off (WP10) */
   document.getElementById("timer").classList.add("on");
   clearInterval(tInt);tick();tInt=setInterval(tick,250);
 }
@@ -127,7 +127,8 @@ function tick(){
   var left=Math.max(0,Math.round((tEnd-Date.now())/1000));
   document.getElementById("tt").textContent=Math.floor(left/60)+":"+String(left%60).padStart(2,"0");
   document.getElementById("tbar").style.width=(left/tTotal*100)+"%";
-  if(left<=0){clearInterval(tInt);document.getElementById("tt").textContent="Go";try{navigator.vibrate&&navigator.vibrate(200);}catch(e){}setTimeout(stopTimer,2500);}
+  if(left<=1) platform.restSoon();   /* on screen: the beep does the job, no notification */
+  if(left<=0){clearInterval(tInt);document.getElementById("tt").textContent="Go";platform.buzz(200);setTimeout(stopTimer,2500);}
 }
-function stopTimer(){if(Date.now()<tEnd-300) cancelPing();clearInterval(tInt);document.getElementById("timer").classList.remove("on");}
+function stopTimer(){if(Date.now()<tEnd-300){cancelPing();platform.restAlert(0);}clearInterval(tInt);document.getElementById("timer").classList.remove("on");}
 

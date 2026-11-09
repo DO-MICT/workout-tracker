@@ -12,7 +12,7 @@ function page({ webMode = true } = {}) {
   const store = {}, listeners = {}, els = {};
   const el = (id) => els[id] || (els[id] = { id, hidden: true, innerHTML: "", setAttribute() {}, addEventListener(t, f) { this["on" + t] = f; } });
   const ctx = {
-    WEB_MODE: webMode, S: {}, saves: 0, sb: null, sbUser: null,
+    WEB_MODE: webMode, S: {}, saves: 0, sb: null, sbUser: null, platform: { name: "web", native: false },
     localStorage: { getItem: (k) => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = String(v); }, removeItem: (k) => { delete store[k]; } },
     location: { origin: "https://app.example", reload() { ctx.reloaded = true; } },
     document: {

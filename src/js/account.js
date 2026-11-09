@@ -84,10 +84,7 @@ function exportFiles(x){
 /* ---------- download ---------- */
 function exportName(){ return "gfd-data-"+new Date().toISOString().slice(0,10)+".zip"; }
 function saveBlob(blob,name){
-  if(typeof platform!=="undefined"&&platform&&platform.saveFile) return platform.saveFile(blob,name);   /* Android (WP10) */
-  var a=document.createElement("a"), u=URL.createObjectURL(blob);
-  a.href=u; a.download=name; document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(function(){ URL.revokeObjectURL(u); },30000);
+  return platform.saveFile(blob,name);   /* web: a download; Android: the share sheet (WP10) */
 }
 function exportScreenshots(x){
   var paths=((x.tables||{}).suggestions||[]).map(function(s){return s.screenshot_path;}).filter(Boolean).slice(0,50);
