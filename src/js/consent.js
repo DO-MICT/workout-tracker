@@ -6,8 +6,8 @@
    - The sign-up form has the same tick box, plus an optional one for tips and news; the database records
      those with the new account (sign-up trigger).
    - Profile › Privacy shows what was agreed and when, and turns tips and news on or off.
-   - Terms and privacy versions stay empty in app_config.policies until the policy pages go live (WP7);
-     until then nobody is asked. Health consent comes with the health details screens (WP9). */
+   - Terms and privacy versions live in app_config.policies; WP7 (migration 20261108000015) publishes them with the
+     pages built from site.json (docs/site-brief.md). While a version is empty nobody is asked. Health consent comes with the health details screens (WP9). */
 var CS=null;   /* {rows: [{kind, version, given_at, withdrawn_at, active, current_version}], uid} or null */
 var CONSENT_KINDS=["terms","privacy"], CONSENT_LABEL={terms:"Terms of use",privacy:"Privacy policy",marketing:"Tips and news by email",health:"Health details"};
 

@@ -48,7 +48,7 @@ Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-trac
 - Admins: `profiles.is_admin`. Admins see Menu → Feedback in the app. Add one in the SQL editor: `update public.profiles set is_admin = true where email = '…';`
 - Reading suggestions without the app: Table Editor → `suggestions` (set `status` to seen / planned / done / wont_do; testers see it update). Screenshots: Storage → `suggestions`, path in `screenshot_path`.
 - The key in `app.html` is the **publishable** key, which is meant to be public. Never put a secret/service key in this repo.
-- Auth settings to check in the dashboard (Authentication): Site URL = `https://do-mict.github.io/workout-tracker/`, add it to Redirect URLs, and decide whether email confirmation is on.
+- Auth settings (Site URL, Redirect URLs, sign-in emails, email sender) are pushed from the repo with `tools/push_auth_emails.py`; see `docs/site-brief.md`.
 
 ## Code layout (`src/js/`, in load order)
 | File | Covers |

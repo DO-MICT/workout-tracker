@@ -499,6 +499,33 @@ test('consents: terms and privacy are refused while the policies are unpublished
   assert.match(JSON.stringify(r.json), /not published/);
 });
 
+// ---------- policy pages (WP7) ----------
+
+test('policies: the published terms and privacy are asked of new accounts, and each person only sees their own yes', async () => {
+  const pol = rows(await rest('app_config?select=value&key=eq.policies', 'b'))[0].value;
+  assert.match(pol.terms, /^\d{4}\.\d{2}\.\d{2}$/, 'terms published');
+  assert.match(pol.privacy, /^\d{4}\.\d{2}\.\d{2}$/, 'privacy published');
+  assert.equal(pol.terms_url, 'terms.html');
+  assert.equal(pol.privacy_url, 'privacy.html');
+
+  // B never agreed: the app would ask for both
+  let mine = rows(await rest('my_consents?select=kind,active,current_version', 'b'));
+  assert.deepEqual(mine.find((r) => r.kind === 'terms'), { kind: 'terms', active: false, current_version: pol.terms });
+  assert.deepEqual(mine.find((r) => r.kind === 'privacy'), { kind: 'privacy', active: false, current_version: pol.privacy });
+
+  for (const k of ['terms', 'privacy']) {
+    const g = await rest('rpc/give_consent', 'b', { method: 'POST', body: { p_kind: k, p_version: pol[k] } });
+    assert.equal(g.status, 200, JSON.stringify(g.json));
+  }
+  mine = rows(await rest('my_consents?select=kind,active,version', 'b'));
+  assert.deepEqual(mine.filter((r) => r.kind === 'terms' || r.kind === 'privacy').map((r) => [r.kind, r.active, r.version]).sort(),
+    [['privacy', true, pol.privacy], ['terms', true, pol.terms]]);
+
+  // A sees only A's rows, and B's yes isn't visible to anyone signed out
+  assert.ok(rows(await rest('consents?select=user_id', 'a')).every((r) => r.user_id === users.a.id), "A sees none of B's consents");
+  assert.equal(rows(await rest('consents?select=id')).length, 0);
+});
+
 // ---------- one trial per person ----------
 
 test('deleting an account and joining again with the same email gives no second trial', async () => {

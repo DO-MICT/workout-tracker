@@ -245,10 +245,32 @@ otp_expiry = 3600
 # admin_email = "admin@email.com"
 # sender_name = "Admin"
 
-# Uncomment to customize email template
-# [auth.email.template.invite]
-# subject = "You have been invited"
-# content_path = "./supabase/templates/invite.html"
+# GFD sign-in emails (WP7): built from site/emails/ by tools/build_site.py. Production gets the same ones through
+# tools/push_auth_emails.py (see docs/site-brief.md).
+[auth.email.template.confirmation]
+subject = "Confirm your email for GFD"
+content_path = "./supabase/templates/confirmation.html"
+
+[auth.email.template.recovery]
+subject = "Reset your GFD password"
+content_path = "./supabase/templates/recovery.html"
+
+[auth.email.template.magic_link]
+subject = "Your GFD sign-in link"
+content_path = "./supabase/templates/magic_link.html"
+
+[auth.email.template.email_change]
+subject = "Confirm your new email for GFD"
+content_path = "./supabase/templates/email_change.html"
+
+[auth.email.template.invite]
+subject = "You're invited to GFD"
+content_path = "./supabase/templates/invite.html"
+
+[auth.email.template.reauthentication]
+subject = "Your GFD confirmation code"
+content_path = "./supabase/templates/reauthentication.html"
+
 
 # Uncomment to customize notification email template
 # [auth.email.notification.password_changed]

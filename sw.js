@@ -3,7 +3,7 @@
 // Supabase calls are never cached: sync and sign-in always go to the server.
 const CACHE = 'gfd-v1';
 const SHELL = [
-  './', 'index.html', 'roadmap.html', 'manifest.webmanifest', 'src/styles.css',
+  './', 'index.html', 'roadmap.html', 'privacy.html', 'terms.html', 'manifest.webmanifest', 'src/styles.css',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'icons/favicon-32.png',
   'vendor/supabase.js',
   'src/js/rules.js', 'src/js/syncmap.js', 'src/js/diagrams.js', 'src/js/gfd-exercise-art.js', 'src/js/exart.js', 'src/js/library.js',
