@@ -134,6 +134,7 @@ function openPlans(){var sh=document.getElementById("plans"); sh.hidden=false; d
 function closePlans(){var sh=document.getElementById("plans"); if(!sh||sh.hidden) return; sh.hidden=true; sh.innerHTML=""; document.body.style.overflow=""; PL_REN=null;}
 function renderPlans(){
   var sh=document.getElementById("plans"); if(!sh||sh.hidden) return;
+  if(isWide()){ renderPlanGrid(sh); return; }   /* tablet and desktop: week grid (wide.js, WP16) */
   var act=activePlan().id;
   var h='<div class="sheet-in"><div class="sheet-top"><h2 id="pltitle">Workout plans</h2><button class="chip" id="closePlans">Close</button></div>'+
     '<p class="sub">Pick the plan you’re following. Each plan keeps its own edits. Your logs and PRs follow the exercise, whichever plan you’re on.</p>'+
