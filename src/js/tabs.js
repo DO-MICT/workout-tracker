@@ -71,7 +71,7 @@ function tabsClick(t){
   if(t.id==="openLib"){closeMore();openLibrary();return true;}
   if(t.id==="openUsage"){closeMore();openUsage();return true;}
   if(t.id==="openRoadmap"){location.href="roadmap.html";return true;}
-  if(t.id==="openPrivacy"||t.id==="openTerms"){ var k=t.id==="openPrivacy"?"privacy":"terms"; window.open(policyUrl(k)||k+".html","_blank","noopener"); return true; }
+  if(t.id==="openPrivacy"||t.id==="openTerms"){ var k=t.id==="openPrivacy"?"privacy":"terms"; platform.openExternal(policyUrl(k)||k+".html"); return true; }
   if(t.id==="openProfile"&&!document.getElementById("more").hidden){closeMore();openProfile();return true;}
   if(t.id==="openSugg"||t.id==="openFeedback"){closeMore();return false;}
   return false;

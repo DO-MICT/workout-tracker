@@ -240,7 +240,7 @@ function msGo(saveIt){
   if(saveIt&&v>0&&v<=msMax(k)){
     if(!M.entry){M.entry={d:new Date().toISOString(),v:{}};P.hist.push(M.entry);if(P.hist.length>400)P.hist=P.hist.slice(-400);}
     M.entry.v[k]=msStore(k,v); P.vals[k]=msStore(k,v); M.saved[k]=v; rec.saved=true; save();
-    if(navigator.vibrate) try{navigator.vibrate(12);}catch(e){}
+    platform.buzz(12);
   }
   M.stack.push(rec);
   (saveIt?t.stS:t.stK).style.opacity=1;

@@ -238,7 +238,7 @@ document.addEventListener("click",function(e){
   if(t.id==="askKeep"||t.id==="askFix"){ askAnswer(t.id==="askKeep"); return; }
   if(t.id==="finish"){finishWorkout();return;}
   if(t.id==="tskip"){stopTimer();return;}
-  if(t.id==="t30"){tEnd+=30000;tTotal+=30;schedulePing((tEnd-Date.now())/1000);return;}
+  if(t.id==="t30"){tEnd+=30000;tTotal+=30;schedulePing((tEnd-Date.now())/1000);platform.restAlert(tEnd);return;}
 });
 document.addEventListener("keydown",function(e){
   if(OB&&e.key==="Escape") return;

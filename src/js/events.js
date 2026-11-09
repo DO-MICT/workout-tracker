@@ -34,7 +34,7 @@ function evAnonId(){
   if(typeof id==="string"&&/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.test(id)) return id;
   id=evUuid(); evPut(EV_ANON_KEY,id); return id;
 }
-function evPlatform(){ var C=window.Capacitor, p=C&&C.getPlatform&&C.getPlatform(); return p==="android"||p==="ios"?p:"web"; }
+function evPlatform(){ return platform.name; }
 /* same rule as the database: up to 8 short keys; numbers, true/false or short lower-case codes */
 function evPropsOk(p){
   if(p==null) return true;
@@ -133,6 +133,12 @@ function cfgApply(){
 function showUpdateBar(){
   if(document.getElementById("updBar")) return;
   var d=document.createElement("div"); d.id="updBar"; d.className="updbar"; d.setAttribute("role","status");
+  if(platform.native){   /* the app can't reload new code: it comes from Google Play */
+    d.innerHTML='<span>A new version of GFD is on Google Play.</span><button id="updReload">Update</button>';
+    document.body.appendChild(d);
+    document.getElementById("updReload").addEventListener("click",function(){ platform.openExternal(platform.storeUrl()); });
+    return;
+  }
   d.innerHTML='<span>A new version of GFD is ready.</span><button id="updReload">Reload</button>';
   document.body.appendChild(d);
   document.getElementById("updReload").addEventListener("click",function(){

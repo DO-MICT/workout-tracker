@@ -16,11 +16,27 @@ function webReady(){
   catch(e){ sbOffline=true; setStatus(); if(!acct().signedIn) openWebAuth("signup"); return; }
   catFetch(); evReady();
   sb.auth.onAuthStateChange(function(ev){ if(ev==="PASSWORD_RECOVERY") openWebAuth("newpass"); });
+  platform.onAuthLink(appAuthLink);   /* the Android app: confirm-email and reset links come back as gfd://auth-callback (WP10) */
   sb.auth.getSession().then(function(r){
     var ses=r&&r.data&&r.data.session;
     if(ses&&ses.user) onSignedIn(ses.user);
     else openWebAuth(acct().signedIn?"signin":"signup");
   },function(){ sbOffline=true; setStatus(); if(!acct().signedIn) openWebAuth("signup"); });
+}
+/* a sign-in link opened the app. On the website supabase-js reads the link from the address bar itself
+   (detectSessionInUrl); in the app the link arrives through platform.js instead. */
+function appAuthLink(a){
+  if(!sb) return;
+  if(a.error||a.error_description){
+    openWebAuth("signin"); toast(/expired|invalid/i.test(a.error_description||a.error_code||"")?"That link has expired. Sign in, or ask for a new one.":"That link didn’t work. Sign in instead.");
+    return;
+  }
+  if(!a.access_token||!a.refresh_token) return;
+  sb.auth.setSession({access_token:a.access_token,refresh_token:a.refresh_token}).then(function(r){
+    if(r.error||!r.data||!r.data.user){ openWebAuth("signin"); toast("That link has expired. Sign in, or ask for a new one."); return; }
+    if(a.type==="recovery"){ openWebAuth("newpass"); return; }
+    if(!sbUser||sbUser.id!==r.data.user.id) onSignedIn(r.data.user,a.type==="signup");
+  },function(){ toast("Can’t reach the server. Check your connection."); });
 }
 function openWebAuth(mode){
   OB={step:"register",mode:mode||"signup",ans:{}};
@@ -83,7 +99,7 @@ function webAuthClick(t){
     var cErr=consentSignupError(); if(cErr){err.textContent=cErr;return true;}
     var meta={display_name:n}, cm=consentSignupMeta(); if(cm) meta.consents=cm;   /* recorded with the account (WP6) */
     waBusy(t,true,"Create account"); OB.email=e;
-    sb.auth.signUp({email:e,password:p,options:{data:meta,emailRedirectTo:location.origin+location.pathname}}).then(function(r){
+    sb.auth.signUp({email:e,password:p,options:{data:meta,emailRedirectTo:platform.authRedirect()}}).then(function(r){
       waBusy(t,false,"Create account");
       if(r.error){err.textContent=authMsg(r.error);return;}
       if(n) S.names[0]=n.slice(0,40);
@@ -105,7 +121,7 @@ function webAuthClick(t){
   if(t.id==="waReset"){
     var e3=v("obEmail"); if(!okEmail(e3)){err.textContent="Enter a valid email.";return true;}
     waBusy(t,true,"Send reset link"); OB.email=e3;
-    sb.auth.resetPasswordForEmail(e3,{redirectTo:location.origin+location.pathname}).then(function(r){
+    sb.auth.resetPasswordForEmail(e3,{redirectTo:platform.authRedirect()}).then(function(r){
       waBusy(t,false,"Send reset link"); if(r.error){err.textContent=authMsg(r.error);return;} OB.mode="sent"; renderOnboard();
     },function(x){waBusy(t,false,"Send reset link");err.textContent=authMsg(x);});
     return true;
