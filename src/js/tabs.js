@@ -11,7 +11,7 @@ var TAB_ACTIVE="workout";
 function renderTabbar(){
   var nav=document.getElementById("tabbar"); if(!nav) return;
   var side=function(id,label){return '<button class="tab" data-tab="'+id+'" aria-current="'+(TAB_ACTIVE===id?"page":"false")+'"><span class="tpill">'+TAB_SVG[id]+(id==="more"&&SG_UNREAD?'<i class="tdot" aria-label="New reply"></i>':'')+'</span>'+label+'</button>';};
-  nav.innerHTML=side("plans","Plans")+side("stats","Stats")+
+  nav.innerHTML='<span class="rbrand" aria-hidden="true"><svg viewBox="0 0 100 100" width="40" height="40"><rect width="100" height="100" rx="22" fill="#D4FF3A"/><circle cx="50" cy="50" r="37" fill="none" stroke="#0D0F12" stroke-width="8"/><text x="50" y="60" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="30" fill="#0D0F12">GFD</text></svg><b>Get Fit Daily</b></span>'+side("plans","Plans")+side("stats","Stats")+
     '<button class="tab tcentre" data-tab="workout" aria-current="'+(TAB_ACTIVE==="workout"?"page":"false")+'"><span class="tplate">'+TAB_SVG.workout+'</span>Workout</button>'+
     side("gear","Gear")+side("more","More");
 }
