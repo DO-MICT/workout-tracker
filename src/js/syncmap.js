@@ -11,7 +11,7 @@
    - overlay(f, pending)    -> server fields with this device's waiting changes on top
 
    Where each part of S goes:
-     user_settings  theme, palette, celebrate, plans.active, profile.rest, names; every other key of S that is
+     user_settings  units (kg or lb, WP4), theme, palette, celebrate, plans.active, profile.rest, names; every other key of S that is
                     not local-only goes in prefs (prefs["profile.x"], prefs["plans.x"], prefs["locs.x"] for the
                     extra keys of those objects), so nothing is lost moving off the blob
      about_me       S.about
@@ -25,9 +25,9 @@
 (function(root){
   "use strict";
   var LOCAL={v:1,who:1,cur:1,last:1,wout:1,wlog:1,account:1,ts:1,gearSeedV1:1,_sync:1};
-  var MAPPED={names:1,theme:1,palette:1,celebrate:1,about:1,locs:1,plans:1,profile:1,notes:1};
+  var MAPPED={units:1,names:1,theme:1,palette:1,celebrate:1,about:1,locs:1,plans:1,profile:1,notes:1};
   var FIELDS={
-    user_settings:["theme","palette","celebrate","active_plan","rest_default","display_names","prefs"],
+    user_settings:["units","theme","palette","celebrate","active_plan","rest_default","display_names","prefs"],
     about_me:["train","level","goal","days_per_week"],
     locations:["local_id","name","gear","sort","extra"],
     plans:["local_id","name","source_template","body"],
@@ -107,6 +107,7 @@
     if(L) Object.keys(L).forEach(function(k){ if(k!=="list"&&L[k]!==undefined) prefs["locs."+k]=clone(L[k]); });
     var rest=num(prof.rest);
     put("user_settings",uid,{
+      units:S.units==="lb"?"lb":"kg",   /* never null: the column defaults to kg and can't be empty */
       theme:str(S.theme,20), palette:str(S.palette,20), celebrate:str(S.celebrate,20),
       active_plan:P?str(P.active,80):null,
       rest_default:(rest!==null&&rest>=0&&rest<=600)?Math.round(rest):null,
@@ -170,6 +171,7 @@
     Object.keys(S).forEach(function(k){ if(!LOCAL[k]) delete S[k]; });
     Object.keys(prefs).forEach(function(k){ if(k.indexOf(".")<0) S[k]=clone(prefs[k]); });
     function sub(prefix){ var o={}; Object.keys(prefs).forEach(function(k){ if(k.indexOf(prefix+".")===0) o[k.slice(prefix.length+1)]=clone(prefs[k]); }); return o; }
+    if(f.units==="lb") S.units="lb";
     if(f.theme!=null) S.theme=f.theme;
     if(f.palette!=null) S.palette=f.palette;
     if(f.celebrate!=null) S.celebrate=f.celebrate;

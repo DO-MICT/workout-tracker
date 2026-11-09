@@ -75,14 +75,15 @@ function statsHtml(){
   }
   var p=stPeriod(range,0), pp=stPeriod(range,1), h=seg;
 
-  /* volume */
-  var vols=p.b.map(function(b){var v=0;all.forEach(function(w){var t=new Date(w.at);if(t>=b.s&&t<b.e)v+=w.vol||0;});return v;});
+  /* volume (kept in kg, shown in the chosen unit) */
+  var vf=U()==="lb"?1/GFDRules.KG_PER_LB:1, wu=U();
+  var vols=p.b.map(function(b){var v=0;all.forEach(function(w){var t=new Date(w.at);if(t>=b.s&&t<b.e)v+=(w.vol||0)*vf;});return v;});
   var tot=vols.reduce(function(a,b){return a+b;},0), prevTot=0;
-  all.forEach(function(w){if(stIn(w.at,pp))prevTot+=w.vol||0;});
+  all.forEach(function(w){if(stIn(w.at,pp))prevTot+=(w.vol||0)*vf;});
   var max=stNice(Math.max.apply(null,vols)), best=Math.max.apply(null,vols), today=new Date();
-  h+='<section class="stcard"><div class="sthead"><div><span class="stlbl">Volume lifted</span><span class="stbig"><b>'+Math.round(tot).toLocaleString("en-ZA").replace(/,/g," ")+'</b> kg</span></div>'+
+  h+='<section class="stcard"><div class="sthead"><div><span class="stlbl">Volume lifted</span><span class="stbig"><b>'+Math.round(tot).toLocaleString("en-ZA").replace(/,/g," ")+'</b> '+wu+'</span></div>'+
     '<div class="stright">'+stDelta(tot,prevTot,"%")+(prevTot?'<span class="stvs">'+ST_VS[range]+'</span>':'')+'</div></div>'+
-    '<div class="stchart"><div class="stplot" role="img" aria-label="'+esc("Volume "+ST_THIS[range]+": "+p.b.map(function(b,i){return b.l+" "+Math.round(vols[i])+" kg";}).join(", "))+'">'+
+    '<div class="stchart"><div class="stplot" role="img" aria-label="'+esc("Volume "+ST_THIS[range]+": "+p.b.map(function(b,i){return b.l+" "+Math.round(vols[i])+" "+wu;}).join(", "))+'">'+
     '<div class="stgrid"><i></i><i></i><i></i><i></i></div><div class="stbars">'+
     vols.map(function(v,i){var cls=!v?"zero":v===best?"best":""; var future=p.b[i].s>today;
       return '<div class="stcol"><div class="stbar '+cls+(future?' future':'')+'" style="height:'+(v?Math.max(4,v/max*100):3)+'%"></div></div>';}).join("")+
@@ -91,14 +92,14 @@ function statsHtml(){
 
   /* body weight from the body check-in (measure.js) */
   h+=msDueHtml("stats");
-  var pts=prof().hist.filter(function(x){return x.v&&parseFloat(x.v.weight)>0&&stIn(x.d,p);}).map(function(x){return {t:new Date(x.d),v:parseFloat(x.v.weight)};});
+  var pts=prof().hist.filter(function(x){return x.v&&parseFloat(x.v.weight)>0&&stIn(x.d,p);}).map(function(x){return {t:new Date(x.d),v:GFDRules.fromKg(parseFloat(x.v.weight),wu,1)};});
   if(pts.length){
     var vs=pts.map(function(x){return x.v;}), lo=Math.floor(Math.min.apply(null,vs)-0.5), hi=Math.ceil(Math.max.apply(null,vs)+0.5), span=p.e-p.s;
     var xy=pts.map(function(x){return {x:(x.t-p.s)/span*100,y:8+(hi-x.v)/(hi-lo)*84};});
     var avg=vs.reduce(function(a,b){return a+b;},0)/vs.length;
-    h+='<section class="stcard"><div class="sthead"><div><span class="stlbl">Body weight</span><span class="stbig"><b>'+fmtNum(Math.round(avg*10)/10)+'</b> kg avg</span></div>'+
-      '<div class="stright">'+(pts.length>1?stDelta(vs[vs.length-1],vs[0],"kg",true)+'<span class="stvs">'+ST_THIS[range]+'</span>':'')+'</div></div>'+
-      '<div class="stchart"><div class="stplot wt" role="img" aria-label="'+esc("Body weight "+ST_THIS[range]+": "+pts.map(function(x){return hDate(x.t.toISOString(),{day:"numeric",month:"short"})+" "+x.v+" kg";}).join(", "))+'">'+
+    h+='<section class="stcard"><div class="sthead"><div><span class="stlbl">Body weight</span><span class="stbig"><b>'+fmtNum(Math.round(avg*10)/10)+'</b> '+wu+' avg</span></div>'+
+      '<div class="stright">'+(pts.length>1?stDelta(vs[vs.length-1],vs[0],wu,true)+'<span class="stvs">'+ST_THIS[range]+'</span>':'')+'</div></div>'+
+      '<div class="stchart"><div class="stplot wt" role="img" aria-label="'+esc("Body weight "+ST_THIS[range]+": "+pts.map(function(x){return hDate(x.t.toISOString(),{day:"numeric",month:"short"})+" "+x.v+" "+wu;}).join(", "))+'">'+
       '<div class="stgrid three"><i></i><i></i><i></i></div>'+
       '<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polyline points="'+xy.map(function(q){return q.x.toFixed(2)+","+q.y.toFixed(2);}).join(" ")+'" vector-effect="non-scaling-stroke"/></svg>'+
       xy.map(function(q){return '<i class="stdot" style="left:'+q.x.toFixed(2)+'%;top:'+q.y.toFixed(2)+'%"></i>';}).join("")+
@@ -126,7 +127,7 @@ function statsHtml(){
   var avgD=durs.length?Math.round(durs.reduce(function(a,b){return a+b;},0)/durs.length/60):0;
   var pavgD=pdurs.length?Math.round(pdurs.reduce(function(a,b){return a+b;},0)/pdurs.length/60):0;
   h+='<h3 class="stsec">Insights</h3><div class="strow">'+
-    '<section class="stcard sthalf stcol2"><span class="stlbl">Best lift</span>'+(top?'<b class="stname">'+esc(top.n||"")+'</b><span class="stbig sm"><b>'+fmtNum(top.w)+'</b> kg × '+fmtNum(top.r)+'</span>':'<span class="stnote">No weighted sets '+ST_THIS[range]+'</span>')+'</section>'+
+    '<section class="stcard sthalf stcol2"><span class="stlbl">Best lift</span>'+(top?'<b class="stname">'+esc(top.n||"")+'</b><span class="stbig sm"><b>'+fmtNum(GFDRules.fromKg(top.w,wu,1))+'</b> '+wu+' × '+fmtNum(top.r)+'</span>':'<span class="stnote">No weighted sets '+ST_THIS[range]+'</span>')+'</section>'+
     '<section class="stcard sthalf stcol2"><span class="stlbl">Avg session</span>'+(avgD?'<span class="stbig"><b>'+avgD+'</b> min</span>'+(pavgD&&pavgD!==avgD?'<span class="stnote">'+stDelta(avgD,pavgD,"min",true)+' '+ST_VS[range]+'</span>':''):'<span class="stnote">Not timed yet</span>')+'</section></div>';
   var mg={}, nSets=0;
   inSets.forEach(function(s){var k=s.mg||"Other"; mg[k]=(mg[k]||0)+1; nSets++;});

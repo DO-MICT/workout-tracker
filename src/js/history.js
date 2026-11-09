@@ -19,13 +19,14 @@ function stableUuid(str){
     b[k*4]=h>>>24&255;b[k*4+1]=h>>>16&255;b[k*4+2]=h>>>8&255;b[k*4+3]=h&255;}
   b[6]=(b[6]&15)|80; b[8]=(b[8]&63)|128; return hexUuid(b);
 }
-function numOrNull(v,lo,hi){ if(v===undefined||v===null||v==="") return null; var n=parseFloat(String(v).replace(",",".")); if(!isFinite(n)) return null; n=Math.round(n*100)/100; return Math.max(lo,Math.min(hi,n)); }
+/* dp: decimals kept (2; weights 3, so pounds typed in the app come back exactly, WP4) */
+function numOrNull(v,lo,hi,dp){ if(v===undefined||v===null||v==="") return null; var n=parseFloat(String(v).replace(",",".")); if(!isFinite(n)) return null; var f=Math.pow(10,dp||2); n=Math.round(n*f)/f; return Math.max(lo,Math.min(hi,n)); }
 function clip(s,n){ return s==null?null:String(s).slice(0,n); }
 function wout(){ if(!Array.isArray(S.wout)) S.wout=[]; return S.wout; }
 function wlog(){ if(!Array.isArray(S.wlog)) S.wlog=[]; return S.wlog; }
 function histSet(ex,k,i,s){
   return {exercise_id:clip(ex.id,80),exercise_name:clip(ex.n,120),muscle_group:clip(ex.mg||(LIB[ex.id]&&LIB[ex.id].mg)||"",40)||null,exercise_order:Math.min(k,199),set_no:Math.min(i+1,50),
-    measure:ex.lab||"w",weight:numOrNull(s.w,-1000,5000),reps:numOrNull(s.r,0,100000),done:!!s.d,group_tag:/^[abc]$/.test(ex.ss||"")?ex.ss:null};
+    measure:ex.lab||"w",weight:numOrNull(s.w,-1000,5000,3),reps:numOrNull(s.r,0,100000),done:!!s.d,group_tag:/^[abc]$/.test(ex.ss||"")?ex.ss:null};
 }
 function buildWorkout(d){
   var P=activePlan(), cs=d.coles?colesSession():null, lo=cs?(locById(cs.loc)||colesLoc()):dayLoc(P.id,d.id);
@@ -181,14 +182,15 @@ function histSaveEdit(row,sets){
 function fmtNum(n){ if(n==null) return ""; var r=Math.round(n*100)/100; return String(r); }
 function fmtSet(s){
   var m=s.measure||"w", w=s.weight, r=s.reps;
-  if(m==="w") return (w!=null?fmtNum(w)+" kg":"")+(w!=null&&r!=null?" × ":"")+(r!=null?fmtNum(r)+(w==null?" reps":""):"");
-  if(m==="bw") return (w?(w>0?"+":"")+fmtNum(w)+" kg × ":"")+(r!=null?fmtNum(r)+" reps":"");
+  if(m==="w") return (w!=null?fmtW(w):"")+(w!=null&&r!=null?" × ":"")+(r!=null?fmtNum(r)+(w==null?" reps":""):"");
+  if(m==="bw") return (w?(w>0?"+":"")+fmtW(w)+" × ":"")+(r!=null?fmtNum(r)+" reps":"");
   if(m==="cardio") return [w!=null?fmtNum(w)+" km":"",r!=null?fmtNum(r)+" min":""].filter(Boolean).join(" · ");
   if(m==="time") return r!=null?fmtNum(r)+" min":"";
   if(m==="hold") return r!=null?fmtNum(r)+" sec":"";
   return r!=null?fmtNum(r)+" reps":"";
 }
-function fmtKg(v){ v=Math.round(+v||0); return v.toLocaleString("en-ZA").replace(/,/g," ")+" kg"; }
+/* a total in kg (volume lifted), whole numbers, in the chosen unit: "12 450 kg", "27 448 lb" */
+function fmtKg(v){ v=Math.round(GFDRules.fromKg(+v||0,U(),0)||0); return v.toLocaleString("en-ZA").replace(/,/g," ")+" "+U(); }
 function fmtDur(s){ if(!s) return ""; var m=Math.round(s/60); return m<60?m+" min":Math.floor(m/60)+" h "+String(m%60).padStart(2,"0")+" min"; }
 function hDate(iso,opts){ var d=new Date(iso); return isNaN(d)?"":d.toLocaleDateString(undefined,opts||{weekday:"short",day:"numeric",month:"short"}); }
 /* what the progress chart tracks for each kind of exercise */
@@ -297,13 +299,14 @@ function histEditStart(id){
   H.edit={id:id,row:row,err:"",ex:histExerciseList(sets).map(function(e){
     var s0=e.sets[0]||{};
     return {id:e.id,name:e.name,mg:s0.muscle_group||null,measure:s0.measure||"w",tag:e.tag||null,order:e.order,
-      sets:e.sets.map(function(s){return {w:s.weight==null?"":fmtNum(+s.weight),r:s.reps==null?"":fmtNum(+s.reps),done:s.done!==false};})};
+      /* weights are edited in the chosen unit and turned back into kg on save */
+      sets:e.sets.map(function(s){return {w:s.weight==null?"":(isKgLab(LABS[s0.measure||"w"])?GFDRules.boxShow(+s.weight,U()):fmtNum(+s.weight)),r:s.reps==null?"":fmtNum(+s.reps),done:s.done!==false};})};
   })};
 }
 function histEditHtml(){
   var E=H.edit, h='<div class="hedit"><p class="sub">Change any number, add a set or remove one. Records and last time update to match.</p>';
   E.ex.forEach(function(e,k){
-    var lb=LABS[e.measure]||LABS.w;
+    var lb0=LABS[e.measure]||LABS.w, lb=[GFDRules.unitLabel(lb0[0],U()),lb0[1]];
     h+='<div class="hedex"><b>'+esc(e.name)+'</b>';
     if(e.sets.length) h+='<div class="setrow hedrow" aria-hidden="true"><span></span><span class="lbl">'+esc(lb[0])+'</span><span class="lbl">'+esc(lb[1])+'</span><span></span></div>';
     e.sets.forEach(function(s,j){
@@ -333,7 +336,7 @@ function histEditSave(){
       if(!(s.w||s.r)) return;
       n++;
       sets.push({exercise_id:e.id,exercise_name:e.name,muscle_group:e.mg,exercise_order:e.order,set_no:Math.min(n,50),
-        measure:e.measure,weight:numOrNull(s.w,-1000,5000),reps:numOrNull(s.r,0,100000),done:s.done,group_tag:e.tag});
+        measure:e.measure,weight:numOrNull(isKgLab(LABS[e.measure]||LABS.w)?GFDRules.boxSave(s.w,U()):s.w,-1000,5000,3),reps:numOrNull(s.r,0,100000),done:s.done,group_tag:e.tag});
     });
   });
   if(!sets.length){ E.err="Every set is empty. To remove the whole workout, use Delete workout instead."; renderHistory(true); return; }
@@ -350,9 +353,12 @@ function histExHtml(){
   if(!rows.length) return h+'<div class="hempty"><b>Nothing logged yet</b><p>Once you complete a workout with '+esc(L.n)+', your sets and progress show here.</p></div>';
   var measure=rows[0].measure||L.lab||"w", m=metricOf(measure);
   if(measure==="bw"&&rows.some(function(r){return r.weight>0;})) m=["Top added weight","kg","weight"];
+  /* weights are kept in kg: the tiles and chart show the chosen unit */
+  var conv=m[1]==="kg"?function(v){return GFDRules.fromKg(v,U(),U()==="lb"?1:2);}:function(v){return v;};
+  m=[m[0],GFDRules.showUnit(m[1],U()),m[2]];
   var by={}, order=[];
   rows.forEach(function(r){ if(!by[r.workout_id]){by[r.workout_id]={at:r.performed_at,sets:[],pending:r.pending};order.push(r.workout_id);} by[r.workout_id].sets.push(r); });
-  var sessions=order.map(function(id){var s=by[id]; s.sets.sort(function(a,b){return a.set_no-b.set_no;}); var v=null; s.sets.forEach(function(x){var n=x[m[2]]; if(n!=null&&GFDRules.setCounts(measure,{w:x.weight,r:x.reps})&&(v===null||n>v)) v=+n;}); s.best=v; return s;});
+  var sessions=order.map(function(id){var s=by[id]; s.sets.sort(function(a,b){return a.set_no-b.set_no;}); var v=null; s.sets.forEach(function(x){var n=x[m[2]]; if(n!=null&&GFDRules.setCounts(measure,{w:x.weight,r:x.reps})&&(v===null||n>v)) v=+n;}); s.best=v===null?null:conv(v); return s;});
   var vals=sessions.filter(function(s){return s.best!=null;}), top=null, reset=prResets()[H.ex];
   /* the record counts from the reset date, if there is one; the chart and list keep everything */
   vals.forEach(function(s){ if((!reset||s.at>reset)&&(!top||s.best>top.best)) top=s; });
@@ -375,7 +381,7 @@ function histExHtml(){
 function histRecsHtml(measure,rows,reset){
   var resets={}; if(reset) resets[H.ex]=reset;
   var rec=GFDRules.exerciseRecords(rows.map(function(r){return {workout_id:r.workout_id,performed_at:r.performed_at,exercise_id:H.ex,set_no:r.set_no,measure:r.measure||measure,weight:r.weight==null?null:+r.weight,reps:r.reps==null?null:+r.reps};}),resets)[H.ex];
-  var list=rec?GFDRules.recordList(rec.measure,rec.bests):[];
+  var list=rec?GFDRules.recordList(rec.measure,rec.bests,U()):[];
   if(!list.length) return '';
   return '<h3 class="psec">Personal bests'+(reset?' since reset':'')+'</h3><ul class="hrecs">'+list.map(function(o){
     return '<li><span>'+esc(o.label)+'</span><b>'+esc(o.text)+'</b><em>'+esc([o.set,o.at?hDate(o.at,{day:"numeric",month:"short"}):""].filter(Boolean).join(" · "))+'</em></li>';

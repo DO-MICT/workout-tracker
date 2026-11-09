@@ -75,6 +75,17 @@ The `user_state` blob is being replaced by per-record tables (`user_settings`, `
   to `FIELDS` and the mapping in `syncmap.js`, to `02_sync_tables.test.sql` and to `SYNC_TABLES` in the two-user test.
 - `tests/db/sync-two-phones.test.mjs` runs the real `syncmap.js` and `store.js` as two phones against the API.
 
+## Weights and units (WP4)
+
+- Every weight in the database is **kg**: `workout_sets.weight` (3 decimals since `20261108000012_weight_precision.sql`),
+  `workouts.volume_kg`, body weight in `measurements` and in the blob. Never store pounds.
+- `user_settings.units` (`kg` default, or `lb`) only changes what the app shows and takes in. It syncs in its own column
+  (`syncmap.js`), never in `prefs`.
+- Converting happens only in `src/js/rules.js` (`toKg`, `fromKg`, `boxShow`, `boxSave`, `fmtWeight`, `showVal`), tested in
+  `tests/rules.test.js`. Screens call `U()` (state.js) for the unit. A set box keeps kg in `S.cur`; a lb user's typing is
+  converted as it's saved, so records, last time and the big-jump check all work in kg.
+- Distances (km), body lengths (cm) and times don't change with the setting.
+
 ## Deploying (`.github/workflows/db-deploy.yml`)
 
 - **Staging, automatic**: merging a PR with a new migration to `main` applies it to staging (with the library seed) and runs
