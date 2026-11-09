@@ -221,5 +221,6 @@ function finishWorkout(){
   if(saved&&rec&&d.ex.some(function(x){return x.swFrom;})){ endTodaySwaps(d.id); DAYS=buildDays(); }
   recordWorkout(rec); save(); stopTimer(); renderDay(); window.scrollTo(0,0);
   if(saved&&rec) showDone(rec,d,wins);
+  if(saved&&rec&&prevDates&&!prevDates.length) logEvent("first_workout",{exercises:d.ex.length});
   else toast("Nothing logged yet. Tick a set or type a weight or reps first.");
 }

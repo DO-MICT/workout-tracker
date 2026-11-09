@@ -25,7 +25,7 @@ function syncTabs(){
   document.body.classList.toggle("tabs",!st.overlay);
   if(st.tab!==TAB_ACTIVE){TAB_ACTIVE=st.tab;renderTabbar();}
 }
-function closeTabSheets(){ msClose(); bpClose(); closeMore(); closeLibrary(); closeProfile(); closeSugg(); closeFeedback(); closePlans(); closeHistory(); closeEquip(); }
+function closeTabSheets(){ msClose(); bpClose(); closeMore(); closeLibrary(); closeProfile(); closeSugg(); closeFeedback(); closeUsage(); closePlans(); closeHistory(); closeEquip(); }
 function goTab(id){
   if(id===TAB_ACTIVE&&id!=="workout"&&!(id==="stats"&&!document.getElementById("body").hidden)) return;
   closeTabSheets();
@@ -50,7 +50,7 @@ function renderMore(){
     '<button class="mprof" id="openProfile"><span class="mav" aria-hidden="true">'+esc(nm.charAt(0).toUpperCase())+'</span><span class="mpt"><b>'+esc(nm)+'</b><span>'+esc(A.email||"Profile, rest timer and backup")+'</span></span><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+
     '<div class="mlist">'+row("openMeasure","Body check-in")+row("openBody","Body progress")+row("openLib","Exercise library")+
     (WEB_MODE?row("openSugg","Suggestions",SG_UNREAD?'<span class="replytag">'+SG_UNREAD+' new repl'+(SG_UNREAD>1?'ies':'y')+'</span>':''):'')+
-    (WEB_MODE&&sbAdmin?row("openFeedback","Feedback",'<span class="admtag">Admin</span>'):'')+
+    (WEB_MODE&&sbAdmin?row("openFeedback","Feedback",'<span class="admtag">Admin</span>')+row("openUsage","Usage",'<span class="admtag">Admin</span>'):'')+
     (WEB_MODE?row("openRoadmap","What's coming"):'')+'</div>'+
     '<div class="mlist mtheme mpal"><span>Colour theme</span><div class="palpick" role="group" aria-label="Colour theme">'+
     PALETTES.map(function(o){return '<button data-palset="'+o[0]+'" aria-pressed="'+(palPref()===o[0])+'"><i class="palsw" style="background:linear-gradient(135deg,'+o[2]+' 50%,'+o[3]+' 50%)" aria-hidden="true"></i>'+o[1]+'</button>';}).join("")+'</div></div>'+
@@ -69,6 +69,7 @@ function tabsClick(t){
   if(t.id==="openMeasure"){openMeasure();return true;}
   if(t.id==="openBody"){bpOpen();return true;}
   if(t.id==="openLib"){closeMore();openLibrary();return true;}
+  if(t.id==="openUsage"){closeMore();openUsage();return true;}
   if(t.id==="openRoadmap"){location.href="roadmap.html";return true;}
   if(t.id==="openProfile"&&!document.getElementById("more").hidden){closeMore();openProfile();return true;}
   if(t.id==="openSugg"||t.id==="openFeedback"){closeMore();return false;}
@@ -76,7 +77,7 @@ function tabsClick(t){
 }
 (function initTabs(){
   renderTabbar();
-  var watch=["onboard","wizard","builder","notesheet","donepop","measure","body","more","exlib","profile","sugg","feedback","history","plans","equip"];
+  var watch=["onboard","wizard","builder","notesheet","donepop","measure","body","more","exlib","profile","sugg","feedback","usage","history","plans","equip"];
   if(window.MutationObserver){
     var mo=new MutationObserver(function(){syncTabs();});
     watch.forEach(function(id){var el=document.getElementById(id); if(el) mo.observe(el,{attributes:true,attributeFilter:["hidden"]});});

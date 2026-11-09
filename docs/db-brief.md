@@ -86,6 +86,26 @@ The `user_state` blob is being replaced by per-record tables (`user_settings`, `
   converted as it's saved, so records, last time and the big-jump check all work in kg.
 - Distances (km), body lengths (cm) and times don't change with the setting.
 
+## Usage events, errors and app config (WP5)
+
+Migration `20261108000013_events_errors_config.sql`. Nothing here may hold personal details (NFR-11).
+
+- `events(name, at, anon_id, platform, app_version, props)`: counts, not people. `anon_id` is a random id per install
+  (`src/js/events.js`), never the account id. The app sends only `onboarding_done`, `first_workout`, `week2_return`,
+  `paywall_seen` and `export` through `log_event`; the database writes `sign_up`, `trial_start`, `purchase` (an
+  entitlement from play, web, lifetime or couple) and `account_deleted` itself, with no id at all. `props` holds up to 8
+  numbers, true/false or short lower-case codes: free text and health data are refused. 100 events a day per install.
+- `client_errors`: message, stack, screen, version, scrubbed of emails, query strings, ids and long numbers (in the app and
+  again in `log_client_error`). The same error within an hour adds to `count`. 20 new errors an hour per install.
+- Nobody reads either table through the API. Admins see counts and the latest errors on More → Usage
+  (`admin_usage(days)`, `admin_errors(limit)`), or in the SQL editor. Events are purged after 400 days, errors after 90.
+- `app_config` (everyone reads, only the SQL editor writes): `min_version` (copies with an older `APP_VERSION` show
+  "A new version of GFD is ready" with a Reload button), `catalog_version`, `flags` (read with `flag("name")`).
+  To force a reload after a breaking release: bump `APP_VERSION` in `src/js/events.js`, merge, then
+  `update public.app_config set value = '"2026.12.01"' where key = 'min_version';`
+- Adding an event: add its name to `private.client_event_names()` (new migration) and to `EV_NAMES` in `events.js`, and a
+  label in `US_LABELS`.
+
 ## Deploying (`.github/workflows/db-deploy.yml`)
 
 - **Staging, automatic**: merging a PR with a new migration to `main` applies it to staging (with the library seed) and runs

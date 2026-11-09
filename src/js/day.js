@@ -198,6 +198,7 @@ document.addEventListener("click",function(e){
   if(t.id==="doneHistory"){closeDone();openHistory();return;}
   if(historyClick(t)) return;
   if(feedbackClick(t)) return;
+  if(usageClick(t)) return;
   if(suggClick(t)) return;
   if(webAuthClick(t)) return;
   if(onboardClick(t)) return;
@@ -242,6 +243,7 @@ document.addEventListener("keydown",function(e){
   if(e.key==="Escape"){var dp=document.getElementById("donepop");if(dp&&!dp.hidden){closeDone();return;}}
   if(H&&e.key==="Escape"){if(H.edit){H.edit=null;renderHistory(true);}else if(H.del){H.del=null;renderHistory(true);}else if(H.ex&&!H.fromEx){document.getElementById("histBack").click();}else closeHistory();return;}
   if(SG&&e.key==="Escape"){closeSugg();return;}
+  if(US&&e.key==="Escape"){closeUsage();return;}
   if(FB&&e.key==="Escape"){if(FB.view){FB.view=null;renderFeedback(true);}else closeFeedback();return;}
   if(OB&&e.key==="Enter"&&/^(obEmail|obName|obPass)$/.test(e.target.id)){var pb=document.querySelector("#onboard .primary");if(pb)pb.click();return;}
   if(OB&&e.key==="Enter"&&e.target.id==="obLoc"){document.getElementById("obLocNext").click();return;}

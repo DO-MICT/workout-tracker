@@ -871,3 +871,12 @@ body.tabs .sheet-in{padding-bottom:40px}
 :root[data-palette]{--ms-band:var(--done);--ms-good:var(--done)}
 :root[data-palette][data-theme="dark"]{--ms-band:var(--accent);--ms-glow:color-mix(in srgb,var(--accent) 55%,transparent);--ms-good:var(--accent)}
 @media (prefers-color-scheme:dark){:root[data-palette]:not([data-theme="light"]){--ms-band:var(--accent);--ms-glow:color-mix(in srgb,var(--accent) 55%,transparent);--ms-good:var(--accent)}}
+/* usage page (admins, WP5) and the new-version bar */
+.ustable{width:100%;border-collapse:collapse;margin:4px 0 8px;background:var(--card);border-radius:14px;overflow:hidden}
+.ustable th,.ustable td{padding:10px 12px;border-top:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums}
+.ustable thead th{border-top:0;font-size:.8rem;color:var(--muted);font-weight:700}
+.ustable th[scope=row],.ustable thead th:first-child{text-align:left;font-weight:600}
+.usstack summary{cursor:pointer;font-size:.8rem;color:var(--muted)}
+.usstack pre{white-space:pre-wrap;word-break:break-word;font-size:.75rem;margin:6px 0 0;max-height:200px;overflow:auto}
+.updbar{position:fixed;left:12px;right:12px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:9;display:flex;align-items:center;gap:12px;justify-content:space-between;background:var(--done);color:var(--on-done);padding:10px 14px;border-radius:12px;font-weight:600;max-width:520px;margin:0 auto}
+.updbar button{border:0;background:transparent;color:inherit;font-weight:800;text-decoration:underline;cursor:pointer;padding:6px 4px;font-size:1rem;min-height:44px}
