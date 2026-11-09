@@ -52,6 +52,29 @@ Runs on every PR touching `supabase/`, `tests/db/`, `tools/db_check.py` or the l
   Add a case here for every new table.
 - **Rollback round trip**: each rollback runs (newest first), then the migrations apply again, then the checks rerun.
 
+## Synced tables (WP3)
+
+The `user_state` blob is being replaced by per-record tables (`user_settings`, `about_me`, `locations`, `plans` +
+`plan_versions`, `schedule_entries`, `measurements`, `exercise_notes`, `custom_exercises`, `progress_photos`), migration
+`20261108000011_sync_tables.sql`.
+
+- Every synced table has `id` (made on the device, UUID v5 of user + old id), `user_id`, `rev`, `change_seq`,
+  `created_at`, `updated_at`, `deleted_at` (tombstone). A trigger stamps `rev` and `change_seq`; RLS lets you read your
+  own rows only, and the app has no write rights on these tables.
+- Writes go through `sync_push(mutations)`: `[{t, id, op: 'upsert'|'delete', f: {changed fields}, rev}]`. Per field, the
+  change that reaches the server last wins; `user_settings.prefs` merges key by key (null removes a key). A bad change
+  comes back as `status: 'error'` and the rest still apply.
+- Reads go through `sync_pull(since)`: rows above the cursor, tombstones included. Push and pull take a per-user lock, so
+  `change_seq` order is commit order and a pull never skips a change.
+- `migrate_from_blob(records)` moves an account off the blob once (`profiles.data_model` 1 to 2), insert only, all or
+  nothing. After that the account's `user_state` row is read-only. New accounts start on 2. The blob stays 30 days
+  (NFR-8), then a cleanup migration drops `user_state`.
+- In the app: `src/js/syncmap.js` maps S to records and back (pure, tested in `tests/syncmap.test.js`);
+  `src/js/store.js` keeps the queue in IndexedDB and runs push and pull. Screens still read and write S.
+- Adding a synced table: add it to the table lists in `sync_apply`, `sync_pull` and `sync_purge_tombstones` (new migration),
+  to `FIELDS` and the mapping in `syncmap.js`, to `02_sync_tables.test.sql` and to `SYNC_TABLES` in the two-user test.
+- `tests/db/sync-two-phones.test.mjs` runs the real `syncmap.js` and `store.js` as two phones against the API.
+
 ## Deploying (`.github/workflows/db-deploy.yml`)
 
 - **Staging, automatic**: merging a PR with a new migration to `main` applies it to staging (with the library seed) and runs
