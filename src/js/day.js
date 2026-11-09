@@ -201,6 +201,7 @@ document.addEventListener("click",function(e){
   if(usageClick(t)) return;
   if(suggClick(t)) return;
   if(consentClick(t)) return;
+  if(healthClick(t)) return;
   if(accountClick(t)) return;
   if(webAuthClick(t)) return;
   if(onboardClick(t)) return;
@@ -258,6 +259,7 @@ document.addEventListener("keydown",function(e){
   if(e.key==="Escape"){var dlm=document.getElementById("dayLocMenu");if(dlm&&!dlm.hidden){setDayLocMenu(false);document.getElementById("dayLocBtn").focus();return;}}
   if(e.key==="Escape"){var pm=document.getElementById("planMenu");if(pm&&!pm.hidden){setPlanMenu(false);document.getElementById("planBtn").focus();return;}}
   if(e.key==="Escape"){var ps=document.getElementById("plans");if(ps&&!ps.hidden){if(PL_REN){PL_REN=null;renderPlans();}else closePlans();return;}}
+  if(e.key==="Escape"){var hs=document.getElementById("healthsheet");if(hs&&!hs.hidden){healthAfter=null;healthClose();return;}}
   if(e.key==="Escape"){var ns=document.getElementById("notesheet");if(ns&&!ns.hidden){closeNote();return;}}
   if(e.key==="Escape"&&BD){ if(BD.view==="peek") peekBack(BD.peek); else if(BD.view==="pick"||BD.view==="rep"){BD.view="edit";renderBuilder();} else if(!BD.dirty) closeBuilder(); else toast("Tap Save workout or Cancel"); return; }
   if(e.key==="Escape"){var eq=document.getElementById("equip");if(eq&&!eq.hidden){closeEquip();return;}}

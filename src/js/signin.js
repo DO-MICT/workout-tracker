@@ -141,6 +141,7 @@ function onSignedIn(user,fresh){
     return refreshAccess();
   }).then(function(){ return deletionCheck(); })   /* asked to delete the account: keep it first, or sign out (WP8) */
   .then(function(){ return consentCheck(); })   /* then terms and privacy, if a version is owed (WP6) */
+  .then(function(){ return healthStart(); })   /* injury notes from the health table, or ask about this phone's (WP9) */
   .catch(function(){}).then(function(){
     var sh=document.getElementById("onboard");
     if(!S.onboarded){ if(!(WZ&&WZ.ob)) resumeOnboarding(); else { sh.hidden=true; sh.innerHTML=""; } }

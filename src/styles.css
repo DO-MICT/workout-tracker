@@ -470,6 +470,9 @@ details.grp .ex{margin-bottom:8px}
 .csrow:last-child{border-bottom:0}
 .csrow span{font-size:.85rem;color:var(--muted)}
 .cstoggle{background:var(--card);border-radius:12px;margin-top:10px}
+.hsub{display:block;font-size:.8rem;color:var(--muted);font-weight:400;margin-top:2px}
+.hlist{margin:8px 0 14px;padding-left:20px;font-size:.92rem;line-height:1.45}
+.hlist li{margin:4px 0}
 .seg.segtwo{grid-template-columns:repeat(2,1fr)}
 .ob .obhero{padding:18px 0 6px}
 .ob .brand{display:flex;align-items:center;gap:12px;padding-top:14px}

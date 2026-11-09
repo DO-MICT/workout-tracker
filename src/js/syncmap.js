@@ -19,13 +19,15 @@
      plans          one record per custom plan (body.custom) and per edited built-in plan
                     (body.edits / body.meta), with body.dayLoc for either
      measurements   S.profile.hist, one row per value (a check-in is the rows with the same taken_at)
-     exercise_notes S.notes
+     exercise_notes nothing yet (setup cues, FR-4.9). S.notes are injury notes: health details, kept in
+                    health_limits by health.js only with health consent (WP9), never here.
    Local only (never synced here): the in-progress workout (cur, last), the workout outbox (wout, wlog),
-   account, who, v, ts, gearSeedV1 and _sync (store.js's link between S and its saved sync state). */
+   account, who, v, ts, gearSeedV1, _sync (store.js's link between S and its saved sync state), and the injury notes
+   with their upload queue (notes, healthQ, healthSync: health.js). */
 (function(root){
   "use strict";
-  var LOCAL={v:1,who:1,cur:1,last:1,wout:1,wlog:1,account:1,ts:1,gearSeedV1:1,_sync:1};
-  var MAPPED={units:1,names:1,theme:1,palette:1,celebrate:1,about:1,locs:1,plans:1,profile:1,notes:1};
+  var LOCAL={v:1,who:1,cur:1,last:1,wout:1,wlog:1,account:1,ts:1,gearSeedV1:1,_sync:1,notes:1,healthQ:1,healthSync:1};
+  var MAPPED={units:1,names:1,theme:1,palette:1,celebrate:1,about:1,locs:1,plans:1,profile:1};
   var FIELDS={
     user_settings:["units","theme","palette","celebrate","active_plan","rest_default","display_names","prefs"],
     about_me:["train","level","goal","days_per_week"],
@@ -154,10 +156,6 @@
         put("measurements",recId(uid,"m",at+":"+k),{taken_at:at,site:site.slice(0,20),side:side,value:Math.round(n*100)/100});
       });
     });
-    if(isObj(S.notes)) Object.keys(S.notes).forEach(function(id){
-      var v=S.notes[id]; if(typeof v!=="string"||!v) return;
-      put("exercise_notes",recId(uid,"note",id),{exercise_id:id.slice(0,80),note:v.slice(0,2000),kind:"setup"});
-    });
     return R;
   }
 
@@ -215,9 +213,6 @@
       px.custom=cust.sort(function(a,b){return a.pos-b.pos;}).map(function(x){return x.c;});
       S.plans=px;
     }
-    /* notes */
-    var notes=byTable(recs,"exercise_notes");
-    if(notes.length){ S.notes={}; notes.forEach(function(r){ S.notes[r.f.exercise_id]=r.f.note; }); }
     return S;
   }
 

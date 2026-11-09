@@ -69,6 +69,8 @@ function exportFiles(x){
     "sets.csv           every set you logged: date, plan, day, exercise, order, set, weight (kg), reps, type, done, place\r\n"+
     "measurements.csv   body check-ins: date, site, side, value (kg for weight, cm for lengths, % for body fat)\r\n"+
     "screenshots/       pictures you sent with feedback, if any\r\n\r\n"+
+    "Health details (injury notes, things you can't do, pain scores) are in the \"health\" section of gfd-data.json,\r\n"+
+    "kept apart from everything else and only while you have health details turned on.\r\n\r\n"+
     "Weights are always in kg, whatever unit the app shows. Times are UTC.\r\n"+
     "Rows marked deleted_at in the JSON are ones you deleted; they are removed for good within 90 days.\r\n";
   return [
