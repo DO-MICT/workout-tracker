@@ -139,7 +139,8 @@ function onSignedIn(user,fresh){
   }).then(function(){
     if(pd){ if(pd.display_name&&(!S.names[0]||S.names[0]==="You")) S.names[0]=pd.display_name; sbAdmin=!!pd.is_admin; }
     return refreshAccess();
-  }).then(function(){ return consentCheck(); })   /* terms and privacy first, if a version is owed (WP6) */
+  }).then(function(){ return deletionCheck(); })   /* asked to delete the account: keep it first, or sign out (WP8) */
+  .then(function(){ return consentCheck(); })   /* then terms and privacy, if a version is owed (WP6) */
   .catch(function(){}).then(function(){
     var sh=document.getElementById("onboard");
     if(!S.onboarded){ if(!(WZ&&WZ.ob)) resumeOnboarding(); else { sh.hidden=true; sh.innerHTML=""; } }

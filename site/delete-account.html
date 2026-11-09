@@ -1,0 +1,114 @@
+Delete your account
+<p class="eyebrow" style="color:var(--volt);font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 12px">GFD · Get Fit Daily</p>
+<h1 class="disp">Delete your account</h1>
+<p class="lede">You can delete your GFD account and all your data at any time, in the app or on this page. It's free and you don't need to give a reason.</p>
+
+<h2>In the app</h2>
+<p>Open GFD, tap <b>More</b>, then <b>Profile</b>, scroll to <b>Your data and account</b> and tap <b>Delete my account</b>. Type DELETE to confirm.</p>
+
+<h2>On this page</h2>
+<div class="box" id="del">
+  <noscript><p>This form needs JavaScript. You can also delete your account in the app, or email {{privacy_email}}.</p></noscript>
+  <form id="delSignIn" hidden>
+    <p>Sign in with the email and password of the account you want to delete.</p>
+    <p><label>Email<br><input class="in" id="delEmail" type="email" autocomplete="email" required></label></p>
+    <p><label>Password<br><input class="in" id="delPass" type="password" autocomplete="current-password" required></label></p>
+    <p class="err" id="delErr1" role="alert"></p>
+    <button class="btn" type="submit" id="delSignBtn">Sign in</button>
+  </form>
+  <div id="delAsk" hidden>
+    <p>Signed in as <b id="delWho"></b>.</p>
+    <p>Type DELETE to confirm that you want your account and everything in it deleted.</p>
+    <p><label>Type DELETE<br><input class="in" id="delType" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="10"></label></p>
+    <p class="err" id="delErr2" role="alert"></p>
+    <button class="btn danger" type="button" id="delGo">Delete my account</button>
+    <button class="btn ghost" type="button" data-out>Sign out</button>
+  </div>
+  <div id="delPending" hidden>
+    <p><b>Your account will be deleted on <span id="delDue"></span>.</b></p>
+    <p>Changed your mind? Tap Keep my account (here or in the app) before then.</p>
+    <p class="err" id="delErr3" role="alert"></p>
+    <button class="btn" type="button" id="delKeep">Keep my account</button>
+    <button class="btn ghost" type="button" data-out>Sign out</button>
+  </div>
+  <div id="delKept" hidden>
+    <p><b>Your account is kept.</b> Nothing will be deleted.</p>
+    <button class="btn ghost" type="button" data-out>Sign out</button>
+  </div>
+</div>
+
+<h2>What happens</h2>
+<ul>
+<li>You have <b>7 days</b> to change your mind. Sign in again (in the app or here) and tap Keep my account.</li>
+<li>After 7 days we delete your account and everything in it: plans, workouts, sets, records, measurements, notes, gear, settings, consent records, feedback and screenshots you sent, and your link to any Pro purchase.</li>
+<li>What stays: a one-way scrambled code made from your email (not the address itself) so the free trial is once per person, and usage counts that never had your name, email or account id. Purchase records are kept by Google Play or Paddle as tax law requires.</li>
+<li>Copies in our provider's backups roll off within 30 days.</li>
+</ul>
+
+<h2>Paying for Pro?</h2>
+<p>Deleting your account doesn't cancel a subscription. Cancel it first: on Android open Google Play, then Payments and subscriptions, Subscriptions, GFD, Cancel. If you bought on the web, use the link in your receipt email.</p>
+
+<h2>Want a copy first?</h2>
+<p>In the app, tap Profile, then <b>Download my data</b> for a ZIP of everything we keep about you. Or email us and we'll send it.</p>
+
+<h2>Can't sign in?</h2>
+<p>Reset your password from the app's sign-in screen, or email {{privacy_email}} from the address on your account and we'll delete it for you within 30 days. See the <a href="privacy.html">privacy policy</a> for more.</p>
+
+<style>
+.in{width:100%;max-width:360px;font:inherit;color:var(--chalk);background:var(--ink);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-top:4px}
+.in:focus-visible{outline:3px solid var(--volt);outline-offset:1px}
+.btn{font:inherit;font-weight:800;border-radius:999px;border:1px solid var(--volt);background:var(--volt);color:var(--ink);padding:10px 18px;margin:4px 8px 4px 0;cursor:pointer}
+.btn.danger{background:#C0392B;border-color:#C0392B;color:#fff}
+.btn.ghost{background:transparent;color:var(--chalk);border-color:var(--line)}
+.btn:disabled{opacity:.6;cursor:default}
+.err{color:#FF8A7A;min-height:1em;margin:6px 0}
+</style>
+<script src="vendor/supabase.js"></script>
+<script>
+(function(){
+  /* WP8: the Google Play deletion link. Same Supabase project and functions as the app (src/js/account.js). */
+  var SB_URL="{{supabase_url}}", SB_KEY="{{supabase_key}}";
+  var $=function(id){return document.getElementById(id);};
+  var sb=null;
+  try{ sb=window.supabase.createClient(SB_URL,SB_KEY,{auth:{persistSession:false,autoRefreshToken:false}}); }catch(e){}
+  var oops="Couldn't do that. Check your connection and try again.";
+  function show(id){ ["delSignIn","delAsk","delPending","delKept"].forEach(function(k){ $(k).hidden=k!==id; }); }
+  function when(ts){ var d=new Date(ts); return isNaN(d)?"":d.toLocaleDateString(undefined,{weekday:"long",day:"numeric",month:"long",year:"numeric"}); }
+  function state(email){
+    return sb.from("deletion_requests").select("due_at").maybeSingle().then(function(r){
+      if(r.error) throw r.error;
+      $("delWho").textContent=email;
+      if(r.data){ $("delDue").textContent=when(r.data.due_at); show("delPending"); } else show("delAsk");
+    });
+  }
+  if(!sb){ $("del").insertAdjacentHTML("beforeend","<p>This form couldn't load. You can delete your account in the app, or email us (address below).</p>"); return; }
+  show("delSignIn");
+  $("delSignIn").addEventListener("submit",function(e){
+    e.preventDefault();
+    var b=$("delSignBtn"), err=$("delErr1"), email=$("delEmail").value.trim();
+    b.disabled=true; err.textContent="";
+    sb.auth.signInWithPassword({email:email,password:$("delPass").value}).then(function(r){
+      if(r.error){ err.textContent=/invalid/i.test(r.error.message||"")?"That email and password don't match an account.":oops; return; }
+      $("delPass").value="";
+      return state(email);
+    }).catch(function(){ err.textContent=oops; }).then(function(){ b.disabled=false; });
+  });
+  $("delGo").addEventListener("click",function(){
+    var b=this, err=$("delErr2");
+    if(($("delType").value||"").trim().toUpperCase()!=="DELETE"){ err.textContent="Type DELETE in the box to confirm."; $("delType").focus(); return; }
+    b.disabled=true; err.textContent="";
+    sb.rpc("request_account_deletion",{p_source:"page"}).then(function(r){
+      if(r.error||!r.data) throw r.error;
+      $("delDue").textContent=when(r.data.due_at); show("delPending");
+    }).catch(function(){ err.textContent=oops; }).then(function(){ b.disabled=false; });
+  });
+  $("delKeep").addEventListener("click",function(){
+    var b=this, err=$("delErr3"); b.disabled=true; err.textContent="";
+    sb.rpc("cancel_account_deletion").then(function(r){ if(r.error) throw r.error; show("delKept"); })
+      .catch(function(){ err.textContent=oops; }).then(function(){ b.disabled=false; });
+  });
+  document.querySelectorAll("[data-out]").forEach(function(b){
+    b.addEventListener("click",function(){ sb.auth.signOut().then(function(){},function(){}); $("delEmail").value=""; $("delType").value=""; show("delSignIn"); });
+  });
+})();
+</script>

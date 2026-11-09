@@ -462,6 +462,9 @@ details.grp .ex{margin-bottom:8px}
 .cscheck{display:flex;gap:10px;align-items:flex-start;margin:12px 0;font-size:.92rem;line-height:1.4;cursor:pointer}
 .cscheck input{flex:none;width:22px;height:22px;margin:0;accent-color:var(--done)}
 .cscheck a,.csrow a{color:inherit;text-decoration:underline}
+.delwarn{background:rgba(192,57,43,.12);border:1px solid #C0392B;border-radius:14px;padding:10px 14px;margin:10px 0;font-size:.92rem;line-height:1.45}
+.dellist{margin:10px 0 14px;padding-left:20px;font-size:.92rem;line-height:1.5}
+.dellist li{margin:4px 0}
 .cslist{background:var(--card);border-radius:12px;padding:4px 12px}
 .csrow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid var(--line)}
 .csrow:last-child{border-bottom:0}
