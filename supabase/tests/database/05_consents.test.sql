@@ -19,8 +19,10 @@ select has_trigger('public', 'consents', 'consents_no_update', 'consent rows can
 select has_trigger('public', 'consents', 'consents_after_insert', 'withdrawing health consent deletes health data');
 select has_trigger('public', 'profiles', 'profiles_consents_insert', 'sign-up records the consents on the form');
 
--- terms and privacy stay unpublished until WP7
-select is((select value ->> 'terms' from public.app_config where key = 'policies'), '', 'terms not published yet');
+-- terms and privacy are published by WP7 (20261108000015) and point at the pages on the site
+select ok((select value ->> 'terms' ~ '^[0-9]{4}\.[0-9]{2}\.[0-9]{2}$' and value ->> 'terms_url' = 'terms.html'
+             and value ->> 'privacy' ~ '^[0-9]{4}\.[0-9]{2}\.[0-9]{2}$' and value ->> 'privacy_url' = 'privacy.html'
+           from public.app_config where key = 'policies'), 'terms and privacy are published, with their pages');
 select isnt((select value ->> 'health' from public.app_config where key = 'policies'), '', 'health text has a version');
 
 -- has_consent follows the newest row

@@ -51,7 +51,7 @@ function renderMore(){
     '<div class="mlist">'+row("openMeasure","Body check-in")+row("openBody","Body progress")+row("openLib","Exercise library")+
     (WEB_MODE?row("openSugg","Suggestions",SG_UNREAD?'<span class="replytag">'+SG_UNREAD+' new repl'+(SG_UNREAD>1?'ies':'y')+'</span>':''):'')+
     (WEB_MODE&&sbAdmin?row("openFeedback","Feedback",'<span class="admtag">Admin</span>')+row("openUsage","Usage",'<span class="admtag">Admin</span>'):'')+
-    (WEB_MODE?row("openRoadmap","What's coming"):'')+'</div>'+
+    (WEB_MODE?row("openRoadmap","What's coming"):'')+(WEB_MODE?row("openPrivacy","Privacy policy")+row("openTerms","Terms of use"):"")+'</div>'+
     '<div class="mlist mtheme mpal"><span>Colour theme</span><div class="palpick" role="group" aria-label="Colour theme">'+
     PALETTES.map(function(o){return '<button data-palset="'+o[0]+'" aria-pressed="'+(palPref()===o[0])+'"><i class="palsw" style="background:linear-gradient(135deg,'+o[2]+' 50%,'+o[3]+' 50%)" aria-hidden="true"></i>'+o[1]+'</button>';}).join("")+'</div></div>'+
     '<div class="mlist mtheme"><span>Appearance</span><div class="seg" role="group" aria-label="Appearance">'+
@@ -71,6 +71,7 @@ function tabsClick(t){
   if(t.id==="openLib"){closeMore();openLibrary();return true;}
   if(t.id==="openUsage"){closeMore();openUsage();return true;}
   if(t.id==="openRoadmap"){location.href="roadmap.html";return true;}
+  if(t.id==="openPrivacy"||t.id==="openTerms"){ var k=t.id==="openPrivacy"?"privacy":"terms"; window.open(policyUrl(k)||k+".html","_blank","noopener"); return true; }
   if(t.id==="openProfile"&&!document.getElementById("more").hidden){closeMore();openProfile();return true;}
   if(t.id==="openSugg"||t.id==="openFeedback"){closeMore();return false;}
   return false;
