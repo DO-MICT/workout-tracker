@@ -41,7 +41,14 @@ function msCfg(){
   return P;
 }
 function msSpot(k){var b=k.replace(/L$/,"");for(var i=0;i<MS_SPOTS.length;i++)if(MS_SPOTS[i][0]===b)return MS_SPOTS[i];return k==="height"?["height","Height","cm"]:null;}
-function msUnit(k){var s=msSpot(k);return s?s[2]:"cm";}
+function msUnit(k){var s=msSpot(k);return s?(s[2]==="kg"?U():s[2]):"cm";}
+/* body weight is kept in kg (WP4). With lb picked, the screens below work in lb: msSeries and msGoal convert
+   on the way in, msStore on the way out (kg to 2 decimals, so a weight typed to 0.1 lb comes back the same). */
+function msLb(k){return k==="weight"&&U()==="lb";}
+function msStore(k,v){return msLb(k)?String(Math.round(v*GFDRules.KG_PER_LB*100)/100):msFmt(v);}
+function msShown(k,kg){return msLb(k)?kg/GFDRules.KG_PER_LB:kg;}
+function msGoal(k){var g=msCfg().goals[k];return g?{t:msShown(k,+g.t),by:g.by}:null;}
+function msMax(k){return msLb(k)?1100:500;}
 function msIsLeft(k){return /L$/.test(k)&&!!MS_BAND[k];}
 function msSide(k){var s=msSpot(k);if(!s||!s[3]||!msCfg().mset.lr)return "";return msIsLeft(k)?"Left":"Right";}
 function msName(k,short){var s=msSpot(k),sd=msSide(k);if(!s)return k;return s[1]+(sd?(short?" "+sd.charAt(0):" · "+sd):"");}
@@ -54,11 +61,11 @@ function msKeys(){
 function msNum(x){var n=parseFloat(x);return isFinite(n)?n:null;}
 /* [{t:Date, v:number, e:entry}] oldest first */
 function msSeries(k){
-  var out=[]; prof().hist.forEach(function(e){var n=e&&e.v?msNum(e.v[k]):null; if(n!=null) out.push({t:new Date(e.d),v:n,e:e});});
+  var out=[]; prof().hist.forEach(function(e){var n=e&&e.v?msNum(e.v[k]):null; if(n!=null) out.push({t:new Date(e.d),v:msShown(k,n),e:e});});
   out.sort(function(a,b){return a.t-b.t;}); return out;
 }
 function msLatest(k){var s=msSeries(k);return s.length?s[s.length-1]:null;}
-function msGood(k,d){var g=msCfg().goals[k],s=msSeries(k);if(!d)return true;
+function msGood(k,d){var g=msGoal(k),s=msSeries(k);if(!d)return true;
   if(g&&s.length){return (g.t-s[0].v)*d>0;} return k==="weight"||k==="waist"||k==="abd"||k==="hips"?d<0:d>0;}
 function msFmt(n){return (Math.round(n*10)/10).toFixed(1);}
 function msDelta(a,b){var d=Math.round((a-b)*10)/10;return (d>0?"+":d<0?"−":"±")+Math.abs(d).toFixed(1);}
@@ -113,7 +120,7 @@ function msDue(){
   var tapeDue=R.tape>0&&tapeKeys.length&&(!lastTape||msDaysSince(lastTape)>=R.tape);
   var weighDue=R.weigh>0&&!P.mset.off.weight&&(!lw||msDaysSince(lw.t)>=R.weigh);
   if(tapeDue) out={kind:"tape",title:lastTape?"Check-in due":"Start tracking your body",sub:lastTape?"Last one "+fmtDay(lastTape)+" · about "+Math.max(1,Math.round(msKeys().length*12/60))+" min":"Weight and tape measurements, one card at a time"};
-  else if(weighDue) out={kind:"weigh",title:"Weigh-in due",sub:lw?"Last one "+fmtDay(lw.t)+" · "+msFmt(lw.v)+" kg":"Log your weight to start the trend"};
+  else if(weighDue) out={kind:"weigh",title:"Weigh-in due",sub:lw?"Last one "+fmtDay(lw.t)+" · "+msFmt(lw.v)+" "+msUnit("weight"):"Log your weight to start the trend"};
   return out;
 }
 function msDueHtml(where){
@@ -167,14 +174,14 @@ function msStartHtml(){
     '<button class="linkbtn" data-ms="progress">See your body progress</button>';
 }
 function msCardHtml(k,depth){
-  var P=msCfg(), l=msLatest(k), v=l?l.v:MS_DEF[k.replace(/L$/,"")]||50, side=msSide(k), sp=msSpot(k);
+  var P=msCfg(), l=msLatest(k), v=l?l.v:Math.round(msShown(k,MS_DEF[k.replace(/L$/,"")]||50)), side=msSide(k), sp=msSpot(k);
   var h='<div class="ms-card'+(depth?' back'+depth:'')+'" data-k="'+k+'"'+(depth?' aria-hidden="true"':'')+'>';
   if(depth) return h+'</div>';
   h+='<span class="ms-stamp save" aria-hidden="true">SAVE</span><span class="ms-stamp skip" aria-hidden="true">SKIP</span>'+
     '<div class="ms-figbox">'+msFig({vb:MS_CROP[k],hi:MS_BAND[k]?[k]:[],soft:(side==="Left"&&MS_BAND[k.slice(0,-1)])?[k.slice(0,-1)]:[]})+'</div>'+
     '<h3>'+esc(sp[1])+(side?'<span class="ms-side">'+side+'</span>':'')+'</h3>'+
     (P.mset.tips!==false?'<p class="ms-tip">'+esc(MS_TIP[k.replace(/L$/,"")]||"")+'</p>':'')+
-    '<div class="ms-val"><label class="ms-num"><input id="msInput" inputmode="decimal" autocomplete="off" value="'+msFmt(v)+'" aria-label="'+esc(msName(k))+' in '+(sp[2]==="kg"?"kilograms":"centimetres")+'"><span>'+sp[2]+'</span></label>'+
+    '<div class="ms-val"><label class="ms-num"><input id="msInput" inputmode="decimal" autocomplete="off" value="'+msFmt(v)+'" aria-label="'+esc(msName(k))+' in '+(sp[2]==="kg"?(msLb(k)?"pounds":"kilograms"):"centimetres")+'"><span>'+msUnit(k)+'</span></label>'+
     '<span class="ms-pill'+(l?'':' out')+'" id="msDelta">'+(l?'same as '+esc(fmtDay(l.t)):'first time')+'</span></div>'+
     '<div class="ms-ruler" id="msRuler" tabindex="0" role="slider" aria-label="'+esc(msName(k))+'" aria-valuenow="'+msFmt(v)+'"><i class="ms-ptr"></i></div>';
   return h+'</div>';
@@ -208,7 +215,7 @@ function msWireDeck(){
     if(!fromInput) inp.value=msFmt(cur);
     if(l){var d=Math.round((cur-l.v)*10)/10; dd.textContent=d===0?"same as "+fmtDay(l.t):msDelta(cur,l.v)+" since "+fmtDay(l.t); dd.className="ms-pill"+(msGood(k,d)?"":" out");}
   }
-  function set(v,fromInput){ v=Math.round(v*10)/10; if(!(v>0)) return; cur=Math.min(500,v); if(cur<R.from+1||cur>R.from+R.n/10-1) build(); else draw(); show(fromInput); }
+  function set(v,fromInput){ v=Math.round(v*10)/10; if(!(v>0)) return; cur=Math.min(msMax(k),v); if(cur<R.from+1||cur>R.from+R.n/10-1) build(); else draw(); show(fromInput); }
   build();
   var sx=null,sv=0;
   rul.addEventListener("pointerdown",function(e){e.stopPropagation();sx=e.clientX;sv=cur;rul.setPointerCapture(e.pointerId);});
@@ -217,7 +224,7 @@ function msWireDeck(){
   rul.addEventListener("pointerup",rend); rul.addEventListener("pointercancel",rend);
   rul.addEventListener("keydown",function(e){var d=e.key==="ArrowRight"?0.1:e.key==="ArrowLeft"?-0.1:e.key==="PageUp"?1:e.key==="PageDown"?-1:0;if(d){e.preventDefault();e.stopPropagation();set(cur+d);}});
   inp.addEventListener("pointerdown",function(e){e.stopPropagation();});
-  inp.addEventListener("input",function(){var n=msNum(inp.value.replace(",","."));if(n!=null&&n>0&&n<=500)set(n,true);});
+  inp.addEventListener("input",function(){var n=msNum(inp.value.replace(",","."));if(n!=null&&n>0&&n<=msMax(k))set(n,true);});
   inp.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();inp.blur();msGo(true);}});
   /* swipe the card */
   var px0=null,dx=0,stS=c.querySelector(".ms-stamp.save"),stK=c.querySelector(".ms-stamp.skip");
@@ -230,9 +237,9 @@ function msWireDeck(){
 function msGo(saveIt){
   var t=MS_CUR; if(!t||!M) return; MS_CUR=null;
   var P=msCfg(), k=t.k, v=t.get(), rec={k:k,saved:false,prev:P.vals[k]};
-  if(saveIt&&v>0&&v<=500){
+  if(saveIt&&v>0&&v<=msMax(k)){
     if(!M.entry){M.entry={d:new Date().toISOString(),v:{}};P.hist.push(M.entry);if(P.hist.length>400)P.hist=P.hist.slice(-400);}
-    M.entry.v[k]=msFmt(v); P.vals[k]=msFmt(v); M.saved[k]=v; rec.saved=true; save();
+    M.entry.v[k]=msStore(k,v); P.vals[k]=msStore(k,v); M.saved[k]=v; rec.saved=true; save();
     if(navigator.vibrate) try{navigator.vibrate(12);}catch(e){}
   }
   M.stack.push(rec);
@@ -250,7 +257,7 @@ function msUndo(){
   M.i=Math.max(0,M.i-1); M.mode="cards"; msRender();
 }
 function msGoalHtml(k,compact){
-  var g=msCfg().goals[k], s=msSeries(k); if(!g||!s.length) return "";
+  var g=msGoal(k), s=msSeries(k); if(!g||!s.length) return "";
   var start=s[0].v, now=s[s.length-1].v, tot=g.t-start, frac=tot?Math.max(0,Math.min(1,(now-start)/tot)):1, left=Math.round(Math.abs(g.t-now)*10)/10;
   return '<div class="ms-goal'+(compact?' c':'')+'"><div><b>'+esc(msName(k))+' goal '+msFmt(g.t)+' '+msUnit(k)+'</b><span>'+(frac>=1?'Reached':left+' '+msUnit(k)+' to go')+(g.by?' · by '+esc(fmtDay(g.by)):'')+'</span></div>'+
     '<div class="ms-bar"><i style="width:'+Math.round(frac*100)+'%"></i></div></div>';
@@ -347,7 +354,7 @@ function bpMainHtml(){
   return h;
 }
 function bpSpark(k,w,hgt,axis){
-  var pts=bpPts(k), g=msCfg().goals[k];
+  var pts=bpPts(k), g=msGoal(k);
   if(pts.length<2) return '';
   var vs=pts.map(function(p){return p.v;}).concat(g?[g.t]:[]), lo=Math.min.apply(null,vs), hi=Math.max.apply(null,vs), pad=(hi-lo)*.15||1; lo-=pad; hi+=pad;
   var t0=pts[0].t.getTime(), t1=pts[pts.length-1].t.getTime(), L=axis?28:2, Rr=axis?8:6, T=6, B=axis?18:4;
@@ -365,7 +372,7 @@ function bpSpark(k,w,hgt,axis){
 }
 /* when the trend reaches the goal (simple straight line through the range), or "" */
 function bpForecast(k){
-  var g=msCfg().goals[k], p=bpPts(k); if(!g||p.length<3) return "";
+  var g=msGoal(k), p=bpPts(k); if(!g||p.length<3) return "";
   var n=p.length, mx=0,my=0; p.forEach(function(q){mx+=q.t.getTime();my+=q.v;}); mx/=n; my/=n;
   var sxy=0,sxx=0; p.forEach(function(q){var dx=q.t.getTime()-mx;sxy+=dx*(q.v-my);sxx+=dx*dx;});
   if(!sxx) return ""; var slope=sxy/sxx, now=p[n-1].v; if((g.t-now)*slope<=0) return "";
@@ -373,7 +380,7 @@ function bpForecast(k){
   return "At this pace: "+when.toLocaleDateString(undefined,{month:"long",year:"numeric"});
 }
 function bpDetailHtml(){
-  var k=BP.k, s=msSeries(k), l=s[s.length-1], c=bpChange(k), g=msCfg().goals[k], u=msUnit(k);
+  var k=BP.k, s=msSeries(k), l=s[s.length-1], c=bpChange(k), g=msGoal(k), u=msUnit(k);
   var h='<div class="sheet-top"><button class="chip" data-bp="back">‹ Back</button><h2 id="bptitle">'+esc(msName(k))+'</h2></div>';
   if(!l) return h+'<p class="sub">Nothing saved yet.</p>';
   h+='<div class="ms-dhead"><span class="ms-big">'+msFmt(l.v)+'<small>'+u+'</small></span>'+(c?'<span class="ms-pill'+(msGood(k,c.d)?'':' out')+'">'+msDelta(c.b.v,c.a.v)+' since '+esc(fmtDay(c.a.t))+'</span>':'')+'</div>';
@@ -402,7 +409,7 @@ function bpDetailHtml(){
   return h+'</div>';
 }
 function bpEntry(id){ var hs=prof().hist; for(var i=0;i<hs.length;i++) if(hs[i].d===id) return hs[i]; return null; }
-function bpRefreshVals(k){ var l=msLatest(k), P=prof(); if(l) P.vals[k]=msFmt(l.v); else delete P.vals[k]; }
+function bpRefreshVals(k){ var l=msLatest(k), P=prof(); if(l) P.vals[k]=msStore(k,l.v); else delete P.vals[k]; }
 
 /* ---------- clicks (from the global handler in day.js) ---------- */
 function msClick(t){
@@ -441,13 +448,13 @@ function msClick(t){
     if(b==="goalcancel"){BP.goal=false;bpRender(true);return true;}
     if(b==="goaldel"){delete Pp.goals[BP.k];save();BP.goal=false;bpRender(true);toast("Goal removed");return true;}
     if(b==="goalsave"){var n=msNum((document.getElementById("bpGoalT").value||"").replace(",",".")),by=document.getElementById("bpGoalBy").value||"";
-      if(n==null||n<=0||n>500){toast("Enter a target number");return true;}
-      Pp.goals[BP.k]={t:Math.round(n*10)/10,by:/^\d{4}-\d{2}-\d{2}$/.test(by)?by:""};save();BP.goal=false;bpRender(true);toast("Goal saved");return true;}
+      if(n==null||n<=0||n>msMax(BP.k)){toast("Enter a target number");return true;}
+      Pp.goals[BP.k]={t:msLb(BP.k)?+msStore(BP.k,n):Math.round(n*10)/10,by:/^\d{4}-\d{2}-\d{2}$/.test(by)?by:""};save();BP.goal=false;bpRender(true);toast("Goal saved");return true;}
     if(b==="edit"){BP.edit=t.dataset.id;bpRender(true);var ei=document.getElementById("bpEditV");if(ei){ei.focus();ei.select();}return true;}
     if(b==="editcancel"){BP.edit=null;bpRender(true);return true;}
     if(b==="editsave"){var e=bpEntry(BP.edit),nv=msNum((document.getElementById("bpEditV").value||"").replace(",","."));
-      if(!e||nv==null||nv<=0||nv>500){toast("Enter a number");return true;}
-      e.v[BP.k]=msFmt(nv);bpRefreshVals(BP.k);save();BP.edit=null;bpRender(true);toast("Saved");return true;}
+      if(!e||nv==null||nv<=0||nv>msMax(BP.k)){toast("Enter a number");return true;}
+      e.v[BP.k]=msStore(BP.k,nv);bpRefreshVals(BP.k);save();BP.edit=null;bpRender(true);toast("Saved");return true;}
     if(b==="del"){if(!confirmTap(t,"Delete","Tap again"))return true;var e2=bpEntry(t.dataset.id);if(e2){delete e2.v[BP.k];
       if(!Object.keys(e2.v).length){var hs=prof().hist;hs.splice(hs.indexOf(e2),1);}bpRefreshVals(BP.k);save();}
       if(!msSeries(BP.k).length)BP.k=null;bpRender(true);toast("Deleted");return true;}

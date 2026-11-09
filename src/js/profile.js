@@ -168,12 +168,12 @@ function jumpFor(ex,i){
 var ASK=null;
 function askJump(ex,i,j,then){
   var el=document.getElementById("askpop"); if(!el){ then(); return; }
-  var s=setsFor(ex)[i], u=labOf(ex)[0].replace("+","");
+  var s=setsFor(ex)[i], u=labOf(ex)[0].replace("+",""), uw=GFDRules.showUnit(u,U());
   ASK={ex:ex,i:i,then:then};
   el.innerHTML='<div class="donecard askcard" role="alertdialog" aria-modal="true" aria-labelledby="askTitle" aria-describedby="askText">'+
     '<h2 id="askTitle">Check this set</h2><p class="asksub">'+esc(ex.n)+', set '+(i+1)+'</p>'+
-    '<p id="askText" class="asktext">'+esc(GFDRules.jumpText(j,s.w,u))+'</p>'+
-    '<div class="donebtns"><button class="ghost" id="askKeep">Keep '+esc(fmtNum(+s.w))+' '+esc(u)+'</button><button class="primary" id="askFix">Fix it</button></div></div>';
+    '<p id="askText" class="asktext">'+esc(GFDRules.jumpText(j,s.w,u,U()))+'</p>'+
+    '<div class="donebtns"><button class="ghost" id="askKeep">Keep '+esc(u==="kg"?GFDRules.boxShow(s.w,U()):fmtNum(+s.w))+' '+esc(uw)+'</button><button class="primary" id="askFix">Fix it</button></div></div>';
   el.hidden=false; document.body.style.overflow="hidden";
   document.getElementById("askFix").focus();
 }

@@ -6,7 +6,7 @@ function backupHtml(){
 function backupClick(t){
   var area=document.getElementById("bkArea"); if(!area) return false;
   if(t.id==="bkShow"){
-    var snap=JSON.parse(JSON.stringify(S)); if(snap.account){delete snap.account.id;delete snap.account.signedIn;delete snap.account.authMode;}
+    var snap=JSON.parse(JSON.stringify(S)); delete snap._sync; if(snap.account){delete snap.account.id;delete snap.account.signedIn;delete snap.account.authMode;}
     area.innerHTML='<textarea id="bkOut" class="bktext" rows="5" readonly aria-label="Backup code">'+esc(JSON.stringify(snap))+'</textarea><button class="chip sm" id="bkCopy">Copy</button>';
     var ta=document.getElementById("bkOut"); ta.focus(); ta.select(); return true;
   }
@@ -26,7 +26,8 @@ function backupClick(t){
     if(!d||d.v!==1||!d.cur||!d.last){err.textContent="That doesn’t look like a backup code from this app.";return true;}
     if(!confirmTap(t,"Restore backup","Tap again to replace your data")) return true;
     var keep=acct(); d.account=Object.assign({},d.account||{},{id:keep.id,email:keep.email||((d.account||{}).email),signedIn:keep.signedIn,authMode:keep.authMode});
-    d.who=0; d.onboarded=true; d.gearSeedV1=1; S=d; save(); closeProfile(); OPEN={}; pickToday=true; renderAll(); toast("Backup restored");
+    d.who=0; d.onboarded=true; d.gearSeedV1=1; if(S._sync) d._sync=S._sync; else delete d._sync;   /* synced accounts send the restored data as changes */
+    S=d; save(); closeProfile(); OPEN={}; pickToday=true; renderAll(); toast("Backup restored");
     return true;
   }
   return false;

@@ -7,11 +7,50 @@
    - a set is {w, r} as typed (strings, may be empty): w = weight / distance / added kg, r = reps / minutes / seconds
    - measure is how an exercise is tracked: w, bw, cardio, time, hold or count (LABS in library.js)
    - lab is a tracking label pair from LABS, e.g. ["kg","reps"], ["+kg","reps"], ["km","min"], ["","sec"]
-   - req is a gear requirement string: "a|b,c" means (a or b) and c */
+   - req is a gear requirement string: "a|b,c" means (a or b) and c
+   - weights are always kg here (as stored); units ("kg" or "lb") only change what's shown and typed (WP4) */
 (function(root){
   "use strict";
   function num(v){ var n=parseFloat(v); return isFinite(n)?n:0; }
   function round2(n){ return Math.round(n*100)/100; }
+
+
+  /* ---- kg or lb (WP4, D10) ----
+     Weights are kept in kg everywhere: the set boxes' saved values, history, the database. Someone who picked
+     pounds sees and types lb; only these helpers convert. A weight typed in lb is kept in kg to 3 decimals,
+     so 45 lb (20.412 kg) shows as 45 lb again. Distances (km), body lengths (cm) and times don't change. */
+  var KG_PER_LB=0.45359237;
+  function unitOf(u){ return u==="lb"?"lb":"kg"; }
+  function parseNum(v){ if(v==null) return null; var n=parseFloat(String(v).replace(",",".")); return isFinite(n)?n:null; }
+  function roundTo(n,dp){ var f=Math.pow(10,dp); return Math.round(n*f)/f; }
+  /* a number in the chosen unit -> kg (null when it isn't a number) */
+  function toKg(v,u){ var n=parseNum(v); if(n===null) return null; return unitOf(u)==="lb"?roundTo(n*KG_PER_LB,3):n; }
+  /* kg -> the chosen unit, rounded (dp: decimals, default 2) */
+  function fromKg(kg,u,dp){ var n=parseNum(kg); if(n===null) return null; return roundTo(unitOf(u)==="lb"?n/KG_PER_LB:n,dp==null?2:dp); }
+  /* what a set box shows for a saved kg value: "" stays "", kg as saved, lb converted */
+  function boxShow(kg,u){
+    if(kg==null||kg==="") return "";
+    if(unitOf(u)==="kg"){ var k=parseNum(kg); return k===null||roundTo(k,2)===k?String(kg):String(roundTo(k,2)); }   /* 61.235 (typed in lb) -> 61.24 */
+    var n=fromKg(kg,"lb",2), n1=fromKg(kg,"lb",1); if(n===null) return String(kg);
+    /* a weight saved before 3 decimals (2 in kg) is up to 0.011 lb off: 61.24 kg shows as 135, not 135.01 */
+    return String(Math.abs(n-n1)<=0.015?n1:n);
+  }
+  /* what's saved for a value typed in a set box: kg as typed, lb converted to kg ("" stays "") */
+  function boxSave(typed,u){
+    typed=typed==null?"":String(typed);
+    if(unitOf(u)==="kg"||typed==="") return typed;
+    var n=toKg(typed,"lb"); return n===null?typed:String(n);
+  }
+  /* a box label from LABS in the chosen unit: "kg" -> "lb", "+kg" -> "+lb"; others unchanged */
+  function unitLabel(lab0,u){ return lab0==="kg"||lab0==="+kg"?lab0.replace("kg",unitOf(u)):lab0; }
+  /* a kg value with its unit, ready to show: "100 kg", "220.5 lb" (dp: decimals, default 1 for lb, 2 for kg) */
+  function fmtWeight(kg,u,dp){
+    u=unitOf(u); var n=fromKg(kg,u,dp==null?(u==="lb"?1:2):dp);
+    return (n===null?"0":String(n))+" "+u;
+  }
+  /* a value with a unit from the rules ({v, u}), shown in the chosen unit: only "kg" values change */
+  function showVal(v,unit,u){ return unit==="kg"?String(fromKg(v,u,unitOf(u)==="lb"?1:2)):fmtN(v); }
+  function showUnit(unit,u){ return unit==="kg"?unitOf(u):unit; }
 
   /* ---- personal records by exercise type (F2) ----
      Records come from saved history (F1): nothing is stored that only ever goes up, so fixing or
@@ -83,13 +122,13 @@
   function fmtN(n){ return String(Math.round(n*100)/100); }
   function fmtPaceSec(sec){ sec=Math.round(sec); return Math.floor(sec/60)+":"+String(sec%60).padStart(2,"0"); }
   /* "100 kg", "about 112.5 kg", "18 reps", "45 sec", "5.2 km", "5:12 /km" */
-  function recText(key,u,v){
+  function recText(key,u,v,units){
     if(u==="/km") return fmtPaceSec(v)+" /km";
-    return (key==="e1rm"?"about ":"")+fmtN(v)+" "+u;
+    return (key==="e1rm"?"about ":"")+showVal(v,u,units)+" "+showUnit(u,units);
   }
   /* records to show for one exercise: [{key, label, text, at, set}] (set: "100 kg × 5" for weighted records).
      When one set holds several rep maxes it's shown once, under the most reps it covers. */
-  function recordList(measure,bests){
+  function recordList(measure,bests,units){
     measure=measureOf(measure); bests=bests||{};
     var keys=(REC_KEYS[measure]||[]).filter(function(k){ return bests[k[0]]; });
     var setId=function(b){ return b.w+"|"+b.r+"|"+b.at; }, seen={}, keep={};
@@ -98,8 +137,8 @@
       REP_MAX.slice(1).reverse().forEach(function(n){ var b=bests["rm"+n]; if(!b) return; var id=setId(b); if(!seen[id]){ seen[id]=1; keep["rm"+n]=1; } });
     }
     return keys.filter(function(k){ return measure!=="w"||k[0]==="rm1"||k[0]==="e1rm"||keep[k[0]]; }).map(function(k){
-      var b=bests[k[0]], o={key:k[0],label:k[1],text:recText(k[0],k[2],b.v),at:b.at};
-      if(measure==="w") o.set=(k[0]==="e1rm"?"from ":"")+fmtN(b.w)+" kg × "+fmtN(b.r);
+      var b=bests[k[0]], o={key:k[0],label:k[1],text:recText(k[0],k[2],b.v,units),at:b.at};
+      if(measure==="w") o.set=(k[0]==="e1rm"?"from ":"")+fmtWeight(b.w,units)+" × "+fmtN(b.r);
       return o;
     });
   }
@@ -256,20 +295,21 @@
     if(!(lastTop>0)&&!lo&&SANE[lab[0]]&&v>SANE[lab[0]]) return {limit:SANE[lab[0]]};
     return null;
   }
-  /* "850 kg? That's 10× your last set." */
-  function jumpText(j,value,unit){
-    var v=String(num(value))+" "+unit+"?";
+  /* "850 kg? That's 10× your last set." value and j are kg for weights; units shows them in lb when picked */
+  function jumpText(j,value,unit,units){
+    var sv=function(x){ return unit==="kg"?showVal(x,"kg",units):String(num(x)); }, su=showUnit(unit,units);
+    var v=sv(value)+" "+su+"?";
     if(j.limit) return v+" That's more than most people ever log for this.";
     if(j.x) return v+" That's "+j.x+"× your "+(j.today?"earlier set today":"last set")+".";
-    return v+" That's "+j.by+" "+unit+" more than last time ("+j.ref+" "+unit+").";
+    return v+" That's "+sv(j.by)+" "+su+" more than last time ("+sv(j.ref)+" "+su+").";
   }
 
   /* ---- last time ---- */
   /* "60 kg × 8", "+10 kg × 6", "12 reps", "30 sec" for each set of last session */
-  function lastSetParts(sets,lab){
-    var u2=lab[1]==="reps"?"":" "+lab[1];
+  function lastSetParts(sets,lab,units){
+    var u2=lab[1]==="reps"?"":" "+lab[1], kg=lab[0]==="kg"||lab[0]==="+kg";
     return (sets||[]).map(function(s){
-      return (s.w&&lab[0]?s.w+" "+lab[0].replace("+",""):"")+(s.w&&lab[0]&&s.r?" × ":"")+(s.r?s.r+u2:"");
+      return (s.w&&lab[0]?(kg?boxShow(s.w,units)+" "+unitOf(units):s.w+" "+lab[0].replace("+","")):"")+(s.w&&lab[0]&&s.r?" × ":"")+(s.r?s.r+u2:"");
     }).filter(Boolean);
   }
 
@@ -413,7 +453,9 @@
   /* training days for the starter plans: 2 days a week sit apart, 3 or more use Monday, Wednesday, Friday */
   function starterDays(days){ return (+days||3)<=2?["mon","thu"]:["mon","wed","fri"]; }
 
-  var R={num:num,topWeight:topWeight,sessionWin:sessionWin,loggedSets:loggedSets,
+  var R={KG_PER_LB:KG_PER_LB,unitOf:unitOf,toKg:toKg,fromKg:fromKg,boxShow:boxShow,boxSave:boxSave,unitLabel:unitLabel,
+    fmtWeight:fmtWeight,showVal:showVal,showUnit:showUnit,
+    num:num,topWeight:topWeight,sessionWin:sessionWin,loggedSets:loggedSets,
     e1rm:e1rm,targetOf:targetOf,isMissed:isMissed,setCounts:setCounts,bestsOf:bestsOf,recordList:recordList,lastMatching:lastMatching,
     weekKey:weekKey,milestones:milestones,
     historyRows:historyRows,exerciseRecords:exerciseRecords,setPrefill:setPrefill,tickMissing:tickMissing,bigJump:bigJump,jumpText:jumpText,

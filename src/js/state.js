@@ -26,7 +26,7 @@ function cloudPush(){
 }
 function setStatus(msg){
   var el=document.getElementById("status");
-  if(WEB_MODE){ el.textContent=msg||(sbUser?(sbOk?"Synced to your account":"Saving…"):sbOffline?"Offline · saved on this phone":"Saved on this phone"); return; }
+  if(WEB_MODE){ el.textContent=msg||(sbOffline?"Offline · saved on this phone":sbUser?(sbOk?"Synced to your account":(typeof SY!=="undefined"&&SY.on&&SY.err)?"Saved on this phone · sync will try again":"Saving…"):"Saved on this phone"); return; }
   el.textContent=msg||(cloudOk?"Saved to your account":canSave?"Saved on this phone":"Can't save here. Turn off private browsing to keep your logs.");
 }
 /* Keep logs in the artifact's own database (private to each signed-in viewer),
@@ -74,6 +74,11 @@ function weekLong(id){for(var i=0;i<WEEK.length;i++)if(WEEK[i].id===id)return WE
 
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
 function cur(){return S.cur[S.who];}
+/* kg or lb (WP4): weights are kept in kg; this is only what's shown and typed. rules.js has the converters. */
+function U(){return S.units==="lb"?"lb":"kg";}
+function isKgLab(lab){return !!lab&&(lab[0]==="kg"||lab[0]==="+kg");}
+/* a saved kg value shown in the chosen unit: "100 kg", "220.5 lb" */
+function fmtW(kg,dp){return GFDRules.fmtWeight(kg,U(),dp);}
 function last(){return S.last[S.who];}
 /* records and last time come from history (records.js, rules.js) */
 function prFor(ex){ var r=bestFor(ex.id); return r&&r.best>0?String(r.best):""; }

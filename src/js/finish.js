@@ -33,8 +33,8 @@ var DONE_LAST=null;
 function donePick(a){var i=Math.floor(Math.random()*a.length); if(a.length>1&&a[i]===DONE_LAST) i=(i+1)%a.length; DONE_LAST=a[i]; return a[i];}
 function celebStyle(){ return S.celebrate==="calm"?"calm":"energetic"; }
 /* a record's number with its unit: "100 kg", "about 112.5 kg", "18 reps", "5:12 /km" */
-function winText(p){ return p.u==="/km"?fmtPace(p.now)+" /km":(p.about?"about ":"")+fmtNum(p.now)+" "+(p.u||"kg"); }
-function wasText(p){ return "was "+(p.u==="/km"?fmtPace(p.was):fmtNum(p.was)); }
+function winText(p){ var u=p.u||"kg"; return u==="/km"?fmtPace(p.now)+" /km":(p.about?"about ":"")+GFDRules.showVal(p.now,u,U())+" "+GFDRules.showUnit(u,U()); }
+function wasText(p){ return "was "+(p.u==="/km"?fmtPace(p.was):GFDRules.showVal(p.was,p.u||"kg",U())); }
 function showDone(rec,d,wins){
   var el=document.getElementById("donepop"); if(!el) return;
   var calm=celebStyle()==="calm", miles=wins.miles||[], missed=wins.missed||[];
@@ -61,7 +61,7 @@ function showDone(rec,d,wins){
       :'<div class="dcpace"><em>Add '+(b.km>0?'minutes':'distance')+' to see your pace</em></div>')+'</div>';
   }).join("")+'</div>';
   if(wins.prs.length) h+='<div class="donewins"><h3>'+(calm?'Personal best'+(wins.prs.length>1?'s':''):'New PR'+(wins.prs.length>1?'s':''))+'</h3><ul>'+wins.prs.map(function(p){return '<li><span>'+esc(p.n)+(p.what?'<small>'+esc(p.what)+'</small>':'')+'</span><b>'+esc(winText(p))+'</b><em>'+esc(wasText(p))+'</em></li>';}).join("")+'</ul></div>';
-  if(wins.up.length) h+='<div class="donewins up"><h3>Up on last time</h3><ul>'+wins.up.map(function(p){return '<li><span>'+esc(p.n)+'</span><b>+'+fmtNum(p.by)+' '+(p.u||'kg')+'</b></li>';}).join("")+'</ul></div>';
+  if(wins.up.length) h+='<div class="donewins up"><h3>Up on last time</h3><ul>'+wins.up.map(function(p){return '<li><span>'+esc(p.n)+'</span><b>+'+esc(GFDRules.showVal(p.by,p.u||'kg',U())+' '+GFDRules.showUnit(p.u||'kg',U()))+'</b></li>';}).join("")+'</ul></div>';
   if(missed.length) h+='<p class="donemissed">'+esc(missed.length===1?missed[0].n+", set "+missed[0].set+" was short of its target.":missed.length+" sets were short of their target.")+' They’re saved, just not counted as wins.</p>';
   h+='<div class="donebtns"><button class="ghost" id="doneHistory">See in History</button><button class="primary" id="doneClose">Done</button></div></div>';
   el.innerHTML=h; el.hidden=false; document.body.style.overflow="hidden";

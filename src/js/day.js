@@ -38,7 +38,7 @@ function setDayMenu(open){
 }
 function lastText(ex){
   var L=lastFor(ex.id,ex); if(!L||!L.sets||!L.sets.length) return labOf(ex)[0]==="kg"?"First time: pick a weight you can do with good form.":"First time: start easy and log what you do.";
-  var parts=GFDRules.lastSetParts(L.sets,labOf(ex));
+  var parts=GFDRules.lastSetParts(L.sets,labOf(ex),U());
   var dt=new Date(L.date); var ds=isNaN(dt)?"":" ("+dt.toLocaleDateString(undefined,{weekday:"short",day:"numeric",month:"short"})+")";
   return "Last time"+ds+": "+parts.join(", ");
 }
@@ -54,7 +54,9 @@ function groupsOf(d){
   return out;
 }
 /* grey hints in empty boxes are just the units: values come from last time as real numbers (setsFor) */
-function phFor(ex){ return labOf(ex); }
+function phFor(ex){ var l=labOf(ex); return [GFDRules.unitLabel(l[0],U()),l[1]]; }
+/* what a box shows: weights in the chosen unit (kept in kg), everything else as typed */
+function boxVal(ex,s,f){ return f==="w"&&isKgLab(labOf(ex))?GFDRules.boxShow(s.w,U()):s[f]; }
 /* after a change, show the values of the boxes you haven't touched (they follow your earlier sets) */
 function refreshSets(ex){
   var arr=setsFor(ex);
@@ -62,7 +64,7 @@ function refreshSets(ex){
     var s=arr[i]; if(s.d||s.t) continue;
     ["w","r"].forEach(function(f){
       var el=document.querySelector('input[data-ex="'+ex.id+'"][data-i="'+i+'"][data-f="'+f+'"]');
-      if(el&&el!==document.activeElement&&el.value!==s[f]) el.value=s[f];
+      var v=boxVal(ex,s,f); if(el&&el!==document.activeElement&&el.value!==v) el.value=v;
     });
   }
 }
@@ -93,14 +95,14 @@ function exHtml(ex){
   h+='<div class="last">'+esc(lastText(ex))+'</div><button class="linkbtn hlink" data-hex="'+ex.id+'">See history and progress</button>';
   if(DAYS[day]&&DAYS[day].coles) h+='<button class="chip sm colesswap" data-colesswap="'+ex.id+'">↻ Different '+esc((LIB[ex.id]||{}).mg||"").toLowerCase()+' exercise</button>';
   h+='<details class="how"><summary>How to do it safely</summary>'+exFigure(ex.id,ex.f)+'<ul class="cues">'+ex.c.map(function(c){return '<li>'+esc(c)+'</li>';}).join("")+'</ul></details>';
-  var lb=labOf(ex);
-  h+='<div class="sets"><div class="setrow" aria-hidden="true"><span></span><span class="lbl">'+lb[0]+'</span><span class="lbl">'+lb[1]+'</span><span></span></div>';
+  var lb=labOf(ex), lw=GFDRules.unitLabel(lb[0],U());
+  h+='<div class="sets"><div class="setrow" aria-hidden="true"><span></span><span class="lbl">'+lw+'</span><span class="lbl">'+lb[1]+'</span><span></span></div>';
   var missed=[];
   arr.slice(0,ex.sets).forEach(function(s,i){
     var ph=phFor(ex), wp=ph[0], rp=ph[1], ms=s.d&&GFDRules.isMissed(lb,s,ex.reps);
     if(ms) missed.push(i+1);
     h+='<div class="setrow'+(s.d?' isdone':'')+(ms?' missed':'')+'"><span class="n">'+setNumHtml(ex,i,s.d)+'</span>'+
-      (lb[0]?'<input inputmode="decimal" aria-label="Set '+(i+1)+' '+lb[0]+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="w" value="'+esc(s.w)+'" placeholder="'+esc(wp)+'">':'<span></span>')+
+      (lb[0]?'<input inputmode="decimal" aria-label="Set '+(i+1)+' '+lw+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="w" value="'+esc(boxVal(ex,s,"w"))+'" placeholder="'+esc(wp)+'">':'<span></span>')+
       '<input inputmode="decimal" aria-label="Set '+(i+1)+' '+lb[1]+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="r" value="'+esc(s.r)+'" placeholder="'+esc(rp)+'">'+
       '<button class="tick" aria-label="Mark set '+(i+1)+' done" aria-pressed="'+!!s.d+'" data-tick="'+ex.id+'" data-i="'+i+'">✓</button></div>';
   });
@@ -210,6 +212,8 @@ document.addEventListener("click",function(e){
   if(t.id==="nDelete"){saveNote(true);return;}
   if(builderClick(t)) return;
   if(t.dataset.palset){S.palette=t.dataset.palset;save();applyTheme();document.querySelectorAll("[data-palset]").forEach(function(b){b.setAttribute("aria-pressed",b===t?"true":"false");});return;}
+  /* kg or lb (WP4): only what's shown and typed changes; everything is still kept in kg */
+  if(t.dataset.unitset){if(t.dataset.unitset==="lb")S.units="lb";else delete S.units;save();renderAll();renderMore();var ub=document.querySelector('[data-unitset="'+U()+'"]');if(ub)ub.focus();toast(U()==="lb"?"Weights now show in pounds":"Weights now show in kilograms");return;}
   if(t.dataset.themeset){S.theme=t.dataset.themeset;save();applyTheme();document.querySelectorAll("[data-themeset]").forEach(function(b){b.setAttribute("aria-pressed",b===t?"true":"false");});return;}
   if(colesClick(t)) return;
   if(t.id==="editDay"||t.id==="editDay2"){openBuilder();return;}
@@ -263,7 +267,9 @@ document.addEventListener("input",function(e){
   if(el.dataset&&el.dataset.pf){el.removeAttribute("aria-invalid");return;}
   if(!el.dataset||!el.dataset.ex) return;
   var ex=findEx(el.dataset.ex); var arr=setsFor(ex);
-  var st=arr[+el.dataset.i]; st[el.dataset.f]=el.value.replace(",",".").slice(0,6); st.t=1; delete st.pre;
+  var st=arr[+el.dataset.i], typed=el.value.replace(",",".").slice(0,6);
+  /* weights are kept in kg: a lb user's typing is converted as it's saved */
+  st[el.dataset.f]=el.dataset.f==="w"&&isKgLab(labOf(ex))?GFDRules.boxSave(typed,U()):typed; st.t=1; delete st.pre;
   refreshSets(ex); save();
 });
 document.addEventListener("toggle",function(e){
