@@ -896,3 +896,14 @@ body.tabs .sheet-in{padding-bottom:40px}
 .usstack pre{white-space:pre-wrap;word-break:break-word;font-size:.75rem;margin:6px 0 0;max-height:200px;overflow:auto}
 .updbar{position:fixed;left:12px;right:12px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:9;display:flex;align-items:center;gap:12px;justify-content:space-between;background:var(--done);color:var(--on-done);padding:10px 14px;border-radius:12px;font-weight:600;max-width:520px;margin:0 auto}
 .updbar button{border:0;background:transparent;color:inherit;font-weight:800;text-decoration:underline;cursor:pointer;padding:6px 4px;font-size:1rem;min-height:44px}
+
+/* ---------- Free and Pro (WP14) ---------- */
+.lockdot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 1.5px var(--ink);margin-left:6px;vertical-align:middle}
+.stseg button.stlock{color:var(--muted)}
+.plcap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:0 0 12px;font-size:.92rem}
+.plcard.pllocked{opacity:.86;border-style:dashed}
+.pm-item.pm-locked span:first-child{color:var(--muted)}
+.pronote{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:.92rem;line-height:1.45;margin:6px 0 4px}
+.ms-prolock{font-size:.88rem;color:var(--muted);line-height:1.45;margin:6px 0 10px}
+.pkplans{display:grid;gap:8px;margin:8px 0 12px}
+.pkplans .ms-set{width:100%}

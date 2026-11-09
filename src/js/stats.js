@@ -63,9 +63,11 @@ function statsStreakChip(){
 var ST_FLAME='<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c.6 3.4 5 5.2 5 10a5 5 0 0 1-10 0c0-2.3 1.2-3.8 2.4-4.8-.1 2 .8 3.3 2 3.6C11 9 10.6 6 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
 
 function statsHtml(){
+  if(stLocked(ST.range)) ST.range="month";   /* Pro ended while a long range was picked */
   var all=ST.all, range=ST.range;
   var seg='<div class="stseg" role="group" aria-label="Time range">'+[["week","Week"],["month","Month"],["q","3 Months"],["year","Year"]].map(function(o){
-    return '<button data-strange="'+o[0]+'" aria-pressed="'+(range===o[0])+'">'+o[1]+'</button>';}).join("")+'</div>';
+    var lk=stLocked(o[0]);
+    return '<button data-strange="'+o[0]+'" aria-pressed="'+(range===o[0])+'"'+(lk?' class="stlock" aria-label="'+o[1]+', with Pro"':'')+'>'+o[1]+(lk?'<i class="lockdot" aria-hidden="true"></i>':'')+'</button>';}).join("")+'</div>';
   if(all===null) return seg+'<p class="eqempty">Loading…</p>';
   var hasSample=all.some(function(w){return w.sample;});
   if(!all.length){
@@ -172,7 +174,10 @@ function statsClearSample(){
   prof().hist=prof().hist.filter(function(x){return !x.sample;});
   save();
 }
+/* Free keeps the week and month views; longer ranges are full stats (Pro, WP14) */
+function stLocked(range){ return (range==="q"||range==="year")&&!can("stats.full"); }
 function statsClick(t){
+  if(t.dataset.strange&&stLocked(t.dataset.strange)){proOffer("stats");return true;}
   if(t.dataset.strange){ST.range=t.dataset.strange;renderHistory(true);var b=document.querySelector('[data-strange="'+ST.range+'"]');if(b)b.focus({preventScroll:true});return true;}
   if(t.dataset.stats==="sample"){statsSample();histReload();statsLoad();toast("Sample workouts added");return true;}
   if(t.dataset.stats==="clearsample"){statsClearSample();histReload();statsLoad();toast("Sample data removed");return true;}

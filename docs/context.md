@@ -11,7 +11,7 @@ Publish to the Apple App Store and Google Play with a subscription model:
 - **Pro** — full access, price TBC
 - **Tester** — full access while testing
 
-The server decides the tier (WP1, Nov 2026): `entitlements` + `my_access`, read by `src/js/access.js` (`can('stats.full')`). New accounts get a 14-day Pro trial; nothing is gated in the app yet (that's WP14).
+The server decides the tier (WP1, Nov 2026): `entitlements` + `my_access`, read by `src/js/access.js` (`can('stats.full')`). New accounts get a 14-day Pro trial. Free vs Pro gating (WP14): see `docs/db-brief.md` → Free and Pro.
 
 ## Where it stands (October 2026)
 - **MVP web app** — one HTML file (`app.html`), mobile-first, no build tooling.

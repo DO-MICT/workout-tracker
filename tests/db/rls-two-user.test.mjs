@@ -273,7 +273,7 @@ test('entitlements: nobody can give themselves Pro', async () => {
 });
 
 test('private functions are not reachable through the API', async () => {
-  for (const fn of ['start_trial', 'is_admin', 'can_grant', 'email_hash']) {
+  for (const fn of ['start_trial', 'is_admin', 'can_grant', 'email_hash', 'apply_plan_limits', 'has_feature', 'apply_due_plan_limits', 'user_features']) {
     const r = await rest('rpc/' + fn, 'a', { method: 'POST', body: {} });
     assert.ok(r.status >= 400, fn + ' must not be callable');
   }
@@ -588,4 +588,44 @@ test('deleting an account and joining again with the same email gives no second 
   const again = await makeUser('C2', email.replace('@', '+again@').toUpperCase());
   users.c = again;
   assert.equal(rows(await call('/rest/v1/my_access?select=tier,source', { token: again.token }))[0].tier, 'free');
+});
+
+// ---------- the Free plan cap (WP14) ----------
+
+test('plan cap: Free keeps 3 plans in use and picks which; B cannot touch them; photos are Pro', async () => {
+  // C (from the test above) had no second trial, so C is on Free; B is on the sign-up trial
+  const plan = (n) => ({ t: 'plans', id: randomUUID(), f: { local_id: 'p' + n, name: 'Plan ' + n, body: { custom: { id: 'p' + n }, pos: n } } });
+  const cPush = (mutations) => call('/rest/v1/rpc/sync_push', { method: 'POST', token: users.c.token, body: { mutations } });
+  const cRpc = (fn, body = {}) => call('/rest/v1/rpc/' + fn, { method: 'POST', token: users.c.token, body });
+  const four = [1, 2, 3, 4].map(plan);
+  const pushed = await cPush(four);
+  assert.deepEqual(pushed.json.results.map((r) => r.status), ['applied', 'applied', 'applied', 'applied'], 'nothing is refused');
+  const mine = rows(await call('/rest/v1/plans?select=local_id,read_only&order=local_id', { token: users.c.token }));
+  assert.deepEqual(mine.map((r) => r.read_only), [false, false, false, true], 'the 4th plan is kept read-only');
+
+  const st = await cRpc('my_plan_access');
+  assert.equal(st.status, 200, JSON.stringify(st.json));
+  assert.deepEqual(st.json, { unlimited: false, limit: 3, in_use: 3, locked: ['p4'] });
+
+  const tooMany = await cRpc('choose_plans', { p_keep: ['p1', 'p2', 'p3', 'p4'] });
+  assert.ok(tooMany.status >= 400, 'Free cannot keep 4');
+  const picked = await cRpc('choose_plans', { p_keep: ['p2', 'p3', 'p4'] });
+  assert.deepEqual(picked.json.locked, ['p1']);
+
+  const unlock = await call(`/rest/v1/plans?local_id=eq.p1`, { method: 'PATCH', token: users.c.token, body: { read_only: false } });
+  assert.ok(unlock.status >= 400, 'the app cannot unlock a plan itself');
+
+  const b = await rest('rpc/choose_plans', 'b', { method: 'POST', body: { p_keep: ['p1'] } });
+  assert.equal(b.status, 200);
+  assert.equal(b.json.unlimited, true, 'B is on the trial, so unlimited');
+  const again = await cRpc('my_plan_access');
+  assert.deepEqual(again.json.locked, ['p1'], 'B picking changed nothing for C');
+  assert.deepEqual(rows(await rest('plans?local_id=eq.p1&select=id', 'b')).filter((r) => four.some((x) => x.id === r.id)), [], 'B never sees C\'s plans');
+
+  const photo = { t: 'progress_photos', id: randomUUID(), f: { taken_on: new Date().toISOString().slice(0, 10), pose: 'front' } };
+  assert.equal((await cPush([photo])).json.results[0].status, 'error', 'Free cannot add progress photos');
+  assert.equal((await push('b', [{ ...photo, id: randomUUID() }])).json.results[0].status, 'applied', 'the trial can');
+
+  const anon = await call('/rest/v1/rpc/my_plan_access', { method: 'POST', body: {} });
+  assert.ok(anon.status >= 400, 'signed-out visitors cannot call it');
 });

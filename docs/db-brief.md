@@ -218,3 +218,34 @@ Migration `20261109000017_health_data.sql`, app `src/js/health.js`. NFR-6: healt
   the Health details on/off switch (off deletes). Signed out, notes stay on the phone as before.
 - Adding a health table: same RLS pattern, add it to `delete_health_data` and to the `health` section of
   `export_my_data()` (new migration), and a case in the health test of `tests/db/rls-two-user.test.mjs`.
+
+## Free and Pro (WP14)
+
+Migration `20261109000018_plan_limits.sql`, app `src/js/access.js` (plus small hooks in `plans.js`, `stats.js`,
+`measure.js`). Decisions D13 and D20: Free keeps 3 plans and the basic measurements; when Pro ends nothing is deleted.
+
+- **What Free includes** is in `app_config.free_limits`: `plans` (own plans in use at once, 3) and `measure_sites`
+  (`weight`, `waist`, `chest`, `hips`; height is always open). Raise the cap without a release:
+  `update public.app_config set value = jsonb_set(value, '{plans}', '5') where key = 'free_limits';`
+- **The plan cap is on the server**: trigger `plans_limit` on `public.plans`. It counts your own plans
+  (`source_template is null`) that aren't deleted or `read_only`. Built-in plans and your edits to them never count.
+  It never refuses a sync write (a refused write is lost on the phone): a new plan over the cap is saved `read_only`, and
+  a change to a read-only plan is undone with the attempted body kept in `plan_versions`. Moving it in the list
+  (`body.pos`) and deleting it are allowed. Only an explicit unlock over the cap raises (`plan_limit`).
+- **Downgrade**: `private.apply_plan_limits(uid)` keeps the active plan and the two most recently trained, and marks the
+  rest `read_only`; on Pro it unlocks everything. It runs from the `entitlements_plan_limits` trigger (any purchase,
+  refund, grant or revoke), from `my_plan_access()` when the app opens, and nightly at 03:17 UTC through pg_cron
+  (`gfd-plan-limits` → `private.apply_due_plan_limits()`) for trials that ran out on their own.
+- **The app calls** `my_plan_access()` (after `my_access`, in `refreshAccess`) → `{unlimited, limit, in_use, locked}`,
+  and `choose_plans(local_ids)` from the "Plans in use" sheet. `read_only` is not in syncmap's `FIELDS`, so the app never
+  writes it. While offline, `lockedPlans()` also treats any plan beyond the cap as read-only (active plan first).
+- **Pro-only rows**: new `progress_photos` rows need the `photos` feature (trigger `progress_photos_pro`). F10 adds the
+  bucket policy for the files.
+- **App-only gates** (architecture 5.3: the data is the user's own): Stats ranges 3 months and year (`stats.full`),
+  measurement sites beyond the basic ones (`measure.full`: shown in Body progress, read only; delete still works).
+  Progression, timed workouts and photos have keys and upgrade words ready for when those features ship.
+- **Upgrade page**: `proOffer(why)` opens it and logs `paywall_seen` with `{from: why}`. Buying hooks in through
+  `window.GFDBilling = {buy(why) -> Promise, label}` (WP12 Play / RevenueCat, WP13 Paddle); without it the page says Pro
+  opens with the Google Play release.
+- Tests: `supabase/tests/database/08_plan_limits.test.sql`, the plan cap case in `tests/db/rls-two-user.test.mjs`,
+  `tests/access.test.js`.
