@@ -5,7 +5,7 @@
 
    platform.name            "web" | "android"   (the Claude copy counts as web)
    platform.native          true inside the app
-   platform.siteUrl(path)   the public website (site.json: the domain once bought, else GitHub Pages)
+   platform.siteUrl(path)   the public website (in the app: site.json's domain; on the web: this site)
    platform.authRedirect()  where sign-in emails send people back to: gfd://auth-callback in the app, this page on the web
    platform.onAuthLink(fn)  the app was opened by a sign-in link: fn({access_token, refresh_token, type, error_description})
    platform.saveFile(blob,name)  web: download; app: the share sheet (Save to Files, Drive, email...)
@@ -22,7 +22,8 @@ var platform=(function(){
   var C=window.Capacitor, P=(C&&C.Plugins)||{};
   var isAndroid=!!(C&&C.getPlatform&&C.getPlatform()==="android");
   var SHELL=window.GFD_SHELL||{};
-  var SITE=SHELL.site||"https://do-mict.github.io/workout-tracker/";
+  /* the app shell names the website; on the web the site is wherever this page is served from */
+  var SITE=SHELL.site||(location.origin+location.pathname.replace(/[^\/]*$/,""));
   var APP_ID=SHELL.appId||"com.getfitdaily.app";
   var REST_ID=4201, restAsked=false, restEnd=0, linkFns=[], linkSeen={}, linkWait=[];
 
