@@ -60,3 +60,11 @@ who processes it or how long it's kept, update `site/privacy.html` in the same P
 days, error reports 90 days, deletion within 30 days, trial check code kept.
 
 Not legal advice: Deon should have the texts read by someone qualified before launch (backlog B3).
+
+## Link preview (WhatsApp, Facebook, X, LinkedIn)
+
+`tools/build_pages.py` adds Open Graph and Twitter tags to `index.html`, with absolute URLs on the `site.json` domain.
+The images are `icons/share-card.png` (1200 × 630, shown first) and `icons/share-square.png` (600 × 600), drawn by
+`node tools/build_share_images.js` (reversed logo on ink). Keep each under ~300 KB or WhatsApp drops the picture.
+Previews only work on the public site: dev.getfitdaily.co.za is behind a password, so crawlers can't read it.
+WhatsApp caches a preview per link for a while; add `?v=2` to test a change straight away.
