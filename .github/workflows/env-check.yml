@@ -52,7 +52,10 @@ jobs:
             # where it points, without the password: user@host:port
             where=$(python3 -c "import sys,urllib.parse as u;x=u.urlsplit(sys.argv[1]);print(f'{x.username}@{x.hostname}:{x.port}')" "$DB_URL" 2>/dev/null || echo "not a postgresql:// URI")
             echo "SUPABASE_DB_URL points at $where"; echo "- SUPABASE_DB_URL points at $where" >> "$s"
-            if out=$(psql "$DB_URL" -XAt -v ON_ERROR_STOP=1 -c "select (select count(*) from auth.users)||' accounts, newest migration '||case when to_regclass('supabase_migrations.schema_migrations') is null then 'none (empty project)' else (select coalesce(max(version),'none') from supabase_migrations.schema_migrations) end" 2>&1); then
+            if out=$(psql "$DB_URL" -XAt -v ON_ERROR_STOP=1 -c "select count(*)||' accounts' from auth.users" 2>&1); then
+              if [ "$(psql "$DB_URL" -XAt -c "select to_regclass('supabase_migrations.schema_migrations') is not null")" = t ]; then
+                out="$out, newest migration $(psql "$DB_URL" -XAt -c "select coalesce(max(version),'none') from supabase_migrations.schema_migrations")"
+              else out="$out, no migrations yet (empty project)"; fi
               pass "Database login works: $out"
             else
               fail "Database login failed: $(echo "$out" | sed -E 's#postgres(ql)?://[^ ]*#<url>#g' | tr '\n' ' ' | cut -c1-200)"
