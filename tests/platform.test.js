@@ -10,7 +10,7 @@ const vm = require("node:vm");
 const SRC = fs.readFileSync(path.join(__dirname, "../src/js/platform.js"), "utf8");
 const tick = () => new Promise((r) => setTimeout(r, 0));
 
-function page({ android = false, launchUrl = null, shell = null } = {}) {
+function page({ android = false, launchUrl = null, shell = null, location = null } = {}) {
   const calls = [], listeners = {}, docListeners = {}, open = new Set();
   const plugin = (name, methods) => {
     const p = { addListener: (ev, fn) => { listeners[name + ":" + ev] = fn; return Promise.resolve({ remove() {} }); } };
@@ -19,7 +19,7 @@ function page({ android = false, launchUrl = null, shell = null } = {}) {
   };
   const ctx = {
     console, setTimeout, URL, Promise,
-    location: { origin: "https://do-mict.github.io", pathname: "/workout-tracker/" },
+    location: location || { origin: "https://do-mict.github.io", pathname: "/workout-tracker/" },
     history: { back() { calls.push(["history.back"]); } },
     navigator: {},
     KeyboardEvent: function (t, o) { this.type = t; this.key = o.key; },
@@ -72,6 +72,13 @@ test("site links use the site address from the shell, relative paths included", 
   assert.equal(p.siteUrl("./terms.html"), "https://getfitdaily.app/terms.html");
   assert.equal(p.siteUrl("https://example.com/x"), "https://example.com/x");
   assert.equal(page().p.siteUrl("roadmap.html"), "https://do-mict.github.io/workout-tracker/roadmap.html");
+});
+
+test("web: site links stay on the site the page is served from", () => {
+  const p = page({ location: { origin: "https://getfitdaily.co.za", pathname: "/" } }).p;
+  assert.equal(p.siteUrl("privacy.html"), "https://getfitdaily.co.za/privacy.html");
+  const q = page({ location: { origin: "https://dev.getfitdaily.co.za", pathname: "/index.html" } });
+  assert.equal(q.p.siteUrl("terms.html"), "https://dev.getfitdaily.co.za/terms.html");
 });
 
 test("auth links: tokens and type are read from the fragment, errors from the query", () => {
