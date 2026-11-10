@@ -49,10 +49,13 @@ jobs:
             case "$DB_URL" in *"$ref"*) pass "SUPABASE_DB_URL names project $ref";; *) fail "SUPABASE_DB_URL is for another project";; esac
             case "$DB_URL" in *pooler.supabase.com:5432*) pass "SUPABASE_DB_URL is the Session pooler";; *) fail "SUPABASE_DB_URL should be the Session pooler URI (…pooler.supabase.com:5432…)";; esac
             case "$DB_URL" in *YOUR-PASSWORD*) fail "SUPABASE_DB_URL still has [YOUR-PASSWORD] in it";; esac
+            # where it points, without the password: user@host:port
+            where=$(python3 -c "import sys,urllib.parse as u;x=u.urlsplit(sys.argv[1]);print(f'{x.username}@{x.hostname}:{x.port}')" "$DB_URL" 2>/dev/null || echo "not a postgresql:// URI")
+            echo "SUPABASE_DB_URL points at $where"; echo "- SUPABASE_DB_URL points at $where" >> "$s"
             if out=$(psql "$DB_URL" -XAt -v ON_ERROR_STOP=1 -c "select (select count(*) from auth.users)||' accounts, newest migration '||coalesce((select max(version) from supabase_migrations.schema_migrations),'none')" 2>&1); then
               pass "Database login works: $out"
             else
-              fail "Database login failed: $(echo "$out" | grep -oE 'password authentication failed|could not translate host name|Tenant or user not found|timeout' | head -1)"
+              fail "Database login failed: $(echo "$out" | sed -E 's#postgres(ql)?://[^ ]*#<url>#g' | tr '\n' ' ' | cut -c1-200)"
             fi
           fi
 
