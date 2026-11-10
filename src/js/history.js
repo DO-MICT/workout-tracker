@@ -220,6 +220,7 @@ function histMore(){
     H.rows=(H.rows||[]).concat(res.rows); H.more=res.more; if(res.offline) H.err="Sign in to see workouts saved to your account.";
     if(!WEB_MODE) res.rows.forEach(function(w){H.sets[w.id]=w.sets;});
     renderHistory(true);
+    if(H.loadAll&&H.more) setTimeout(histMore,0); else if(H) H.loadAll=false;
   }).catch(function(){ if(!H) return; H.loading=false; H.rows=H.rows||[]; H.err="Couldn’t load your history. Check your connection and try again."; renderHistory(true); });
 }
 function histLoadEx(exId){
@@ -256,14 +257,16 @@ function renderHistory(keepScroll){
   if(H.ex) h+=histExHtml();
   else {
     h+='<div class="sheet-top"><h2 id="htitle">Your progress</h2>'+statsStreakChip()+'</div>';
-    h+=statsHtml();
+    h+='<div class="stdash">'+statsHtml()+'</div>';
     var rows=histRows(), np=WEB_MODE?wout().length:0;
-    h+='<h3 class="stsec">Workouts</h3><p class="sub">Tap a workout to see the sets, or an exercise to see your progress.</p>';
+    var wideT=isWide();
+    h+='<h3 class="stsec">Workouts</h3><p class="sub">'+(wideT?'Filter, open a workout to see its sets, or tick several to delete them together.':'Tap a workout to see the sets, or an exercise to see your progress.')+'</p>';
     if(np) h+='<p class="hpend" role="status">'+np+' workout'+(np>1?'s':'')+' waiting to sync. '+(sbUser?'It’ll upload when you’re online.':'Sign in to upload.')+'</p>';
     if(H.err) h+='<p class="wzerr" role="alert">'+esc(H.err)+'</p>';
     if(H.rows===null&&!rows.length) h+='<p class="eqempty">Loading…</p>';
     else if(!rows.length) h+='<div class="hempty"><b>No workouts yet</b><p>Log your sets and tap <b>Complete workout</b>. It’ll show up here with the date, sets and weights.</p></div>';
     var month="";
+    if(wideT&&rows.length){ h+=histTableHtml(rows); rows=[]; }
     rows.forEach(function(w){
       var m=hDate(w.performed_at,{month:"long",year:"numeric"});
       if(m!==month){month=m;h+='<h3 class="psec hmonth">'+esc(m)+'</h3>';}
@@ -271,26 +274,30 @@ function renderHistory(keepScroll){
       var open=!!H.open[w.id];
       h+='<details class="hcard" data-hw="'+esc(w.id)+'"'+(open?' open':'')+'><summary><div class="hdate"><b>'+esc(hDate(w.performed_at,{day:"numeric"}))+'</b><span>'+esc(hDate(w.performed_at,{weekday:"short"}))+'</span></div>'+
         '<div class="hmain"><b>'+esc(w.day_title||"Workout")+'</b><span>'+esc(meta)+'</span>'+(w.pending?'<em class="htag">'+(w.edited?'Edit waiting to sync':'Waiting to sync')+'</em>':'')+(w.source==="import"?'<em class="htag imp">From before history</em>':'')+'</div>'+DAY_CHEV+'</summary>';
-      if(open){
-        var sets=H.sets[w.id];
-        if(sets===undefined) h+='<p class="eqempty">Loading…</p>';
-        else if(sets===null) h+='<p class="eqempty">Couldn’t load the sets.</p>';
-        else if(H.edit&&H.edit.id===w.id) h+=histEditHtml();
-        else {
-          h+='<ol class="hex">'+histExerciseList(sets).map(function(e){
-            return '<li'+(e.tag?' class="g"':'')+'><button class="linkbtn hexname" data-hex="'+esc(e.id)+'">'+esc(e.name)+'</button><span>'+e.sets.map(function(s){return esc(fmtSet(s)||"–");}).join(", ")+'</span></li>';
-          }).join("")+'</ol>';
-          if(w.started_at) h+='<p class="hsmall">Started '+esc(new Date(w.started_at).toLocaleTimeString(undefined,{hour:"2-digit",minute:"2-digit"}))+', finished '+esc(new Date(w.performed_at).toLocaleTimeString(undefined,{hour:"2-digit",minute:"2-digit"}))+'</p>';
-        }
-        if(H.edit&&H.edit.id===w.id){}
-        else if(H.del===w.id) h+='<div class="hdel"><span>Delete this workout? Your records and last time will update to match.</span><button class="ghost" data-hdelno="1">Keep</button><button class="primary danger" data-hdelyes="'+esc(w.id)+'">Delete</button></div>';
-        else h+='<div class="hacts">'+(sets&&sets.length?'<button class="chip" data-hedit="'+esc(w.id)+'">Edit workout</button>':'')+'<button class="linkbtn hdelbtn" data-hdel="'+esc(w.id)+'">Delete workout</button></div>';
-      }
+      if(open) h+=histBodyHtml(w);
       h+='</details>';
     });
     if(H.more) h+='<button class="ghost hmore" id="histMore"'+(H.loading?' disabled':'')+'>'+(H.loading?'Loading…':'Show older workouts')+'</button>';
   }
   sh.innerHTML=h+'</div>'; if(keepScroll) sh.scrollTop=st;
+}
+/* the sets of one open workout, with edit and delete (the phone list and the big-screen table share it) */
+function histBodyHtml(w){
+  var h='';
+  var sets=H.sets[w.id];
+  if(sets===undefined) h+='<p class="eqempty">Loading…</p>';
+  else if(sets===null) h+='<p class="eqempty">Couldn’t load the sets.</p>';
+  else if(H.edit&&H.edit.id===w.id) h+=histEditHtml();
+  else {
+    h+='<ol class="hex">'+histExerciseList(sets).map(function(e){
+      return '<li'+(e.tag?' class="g"':'')+'><button class="linkbtn hexname" data-hex="'+esc(e.id)+'">'+esc(e.name)+'</button><span>'+e.sets.map(function(s){return esc(fmtSet(s)||"–");}).join(", ")+'</span></li>';
+    }).join("")+'</ol>';
+    if(w.started_at) h+='<p class="hsmall">Started '+esc(new Date(w.started_at).toLocaleTimeString(undefined,{hour:"2-digit",minute:"2-digit"}))+', finished '+esc(new Date(w.performed_at).toLocaleTimeString(undefined,{hour:"2-digit",minute:"2-digit"}))+'</p>';
+  }
+  if(H.edit&&H.edit.id===w.id){}
+  else if(H.del===w.id) h+='<div class="hdel"><span>Delete this workout? Your records and last time will update to match.</span><button class="ghost" data-hdelno="1">Keep</button><button class="primary danger" data-hdelyes="'+esc(w.id)+'">Delete</button></div>';
+  else h+='<div class="hacts">'+(sets&&sets.length?'<button class="chip" data-hedit="'+esc(w.id)+'">Edit workout</button>':'')+'<button class="linkbtn hdelbtn" data-hdel="'+esc(w.id)+'">Delete workout</button></div>';
+  return h;
 }
 /* ---------- edit a past workout (F1) ---------- */
 function histEditStart(id){

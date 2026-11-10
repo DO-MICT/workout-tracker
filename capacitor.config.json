@@ -1,0 +1,19 @@
+{
+  "appId": "com.getfitdaily.app",
+  "appName": "GFD",
+  "webDir": "build/app",
+  "loggingBehavior": "debug",
+  "android": {
+    "allowMixedContent": false,
+    "captureInput": false,
+    "webContentsDebuggingEnabled": false
+  },
+  "server": {
+    "androidScheme": "https",
+    "hostname": "localhost"
+  },
+  "plugins": {
+    "SystemBars": { "insetsHandling": "native", "initialViewportFitValueHint": "cover" },
+    "LocalNotifications": { "smallIcon": "ic_stat_gfd", "iconColor": "#D4FF3A" }
+  }
+}

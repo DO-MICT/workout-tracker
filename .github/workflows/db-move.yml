@@ -1,0 +1,55 @@
+name: Move to GFD Prod (one time)
+# Moves everything from the old Supabase project ("Workout tracker") into the new GFD Prod project:
+# sign-in accounts (passwords keep working), all tables, the trial ledger and its salt, the libraries and storage files.
+# Script and details: tools/db_move.sh, docs/db-brief.md "Moving to GFD Prod".
+#
+#   1. Actions > Move to GFD Prod > Run workflow, mode "check": reads both projects, changes nothing.
+#   2. Same again with mode "apply". It only runs into an empty GFD Prod, so it can't overwrite anything.
+#
+# Secrets in the protected "production" environment (Settings > Environments > production):
+#   SUPABASE_DB_URL, SUPABASE_URL, SUPABASE_SERVICE_KEY                  GFD Prod
+#   OLD_SUPABASE_DB_URL, OLD_SUPABASE_URL, OLD_SUPABASE_SERVICE_KEY      the old project (delete these after the move)
+# DB URLs are the Session pooler URIs (GitHub's runners have no IPv6) with the password filled in.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: check = look only, apply = move
+        type: choice
+        options: [check, apply]
+        default: check
+      migrations_from:
+        description: Branch whose newer migrations finish the move (main = what the live site runs)
+        type: string
+        default: main
+
+concurrency:
+  group: db-deploy
+  cancel-in-progress: false
+
+jobs:
+  move:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: production   # waits for Deon's approval
+    env:
+      OLD_DB_URL: ${{ secrets.OLD_SUPABASE_DB_URL }}
+      OLD_SUPABASE_URL: ${{ secrets.OLD_SUPABASE_URL }}
+      OLD_SERVICE_KEY: ${{ secrets.OLD_SUPABASE_SERVICE_KEY }}
+      NEW_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+      NEW_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      NEW_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      FINAL_DIR: ${{ github.workspace }}/final
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.migrations_from }}
+          path: final
+      - uses: supabase/setup-cli@v1
+        with:
+          version: 3.0.0
+      - name: Pull Postgres 17 tools
+        run: docker pull -q postgres:17
+      - name: Move (${{ inputs.mode }})
+        run: tools/db_move.sh "${{ inputs.mode }}"

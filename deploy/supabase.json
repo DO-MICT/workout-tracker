@@ -1,0 +1,16 @@
+{
+  "_readme": "Which Supabase project each build talks to. tools/build_dist.py (the Docker build Coolify runs) and tools/build_app.py (Android) put the url and key of the chosen environment into the app. Coolify picks it with the GFD_ENV build variable: production for main (getfitdaily.co.za), dev for the dev branch (dev.getfitdaily.co.za). Only the project URL and the publishable key go here: both are public by design (every visitor's browser gets them). Never put a secret or service key here. See docs/db-brief.md.",
+  "production": {
+    "name": "GFD Prod",
+    "url": "https://zdllpjrkwcdmcuizxuum.supabase.co",
+    "key": "sb_publishable_MDB4dT4ybWlZk5rzdcx40w_G7KwYRtm",
+    "site": "https://getfitdaily.co.za/"
+  },
+  "dev": {
+    "name": "GetFitDailyDev",
+    "url": "https://incujtxyxtygehpkgtwz.supabase.co",
+    "key": "sb_publishable_Qjov8VLdzN6oybg8q4vXnQ_Olg4_bCC",
+    "site": "https://dev.getfitdaily.co.za/"
+  },
+  "_production_history": "GFD Prod is the original Workout tracker project (zdllpjrkwcdmcuizxuum), transferred into the GFD Supabase organization and renamed on 10 Nov 2026, so its URL kept the old ref. All data, accounts, files and sign-in settings came with it."
+}

@@ -1,7 +1,9 @@
-/* ---------- injury notes (one per exercise, shared across days) ---------- */
+/* ---------- injury notes (one per exercise, shared across days). Health details: health.js keeps them on the server (WP9) ---------- */
 var NOTE_ID=null;
 function openNote(id){
-  var L=LIB[id]||findEx(id); if(!L) return; NOTE_ID=id;
+  var L=LIB[id]||findEx(id); if(!L) return;
+  if(!healthMayEdit(id)) return;   /* signed in without health consent: ask first (health.js, WP9) */
+  NOTE_ID=id;
   var sh=document.getElementById("notesheet"), cur=noteOf(id);
   sh.innerHTML='<div class="sheet-in"><div class="sheet-top"><h2 id="ntitle">Injury note</h2><button class="chip" id="nCancel">Cancel</button></div>'+
     '<p class="sub">'+esc(L.n)+'. Shows on this exercise every time it comes up.</p>'+
@@ -19,7 +21,7 @@ function saveNote(del){
   if(!NOTE_ID) return; if(!S.notes) S.notes={};
   var v=del?"":(document.getElementById("nText").value||"").trim(), id=NOTE_ID;
   if(v) S.notes[id]=v; else delete S.notes[id];
-  save(); OPEN[day+":"+id]=true; closeNote(); renderDay();
+  save(); healthNoteChanged(id,v); OPEN[day+":"+id]=true; closeNote(); renderDay();
   var b=document.querySelector('[data-note="'+id+'"]'); if(b) b.focus();
   toast(v?"Note saved":"Note deleted");
 }

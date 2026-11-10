@@ -1,0 +1,24 @@
+{
+  "name": "gfd-get-fit-daily",
+  "private": true,
+  "version": "1.0.0",
+  "description": "GFD · Get Fit Daily. The web app lives in app.html + src/ (no build step); this file only holds the Capacitor Android shell (WP10). See docs/android-brief.md.",
+  "scripts": {
+    "app:build": "python3 tools/build_app.py",
+    "app:sync": "python3 tools/build_app.py && npx cap sync android",
+    "app:apk": "python3 tools/build_app.py && npx cap sync android && cd android && ./gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/browser": "^8.0.5",
+    "@capacitor/core": "^8.6.0",
+    "@capacitor/filesystem": "^8.1.5",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/local-notifications": "^8.3.1",
+    "@capacitor/share": "^8.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.6.0"
+  }
+}

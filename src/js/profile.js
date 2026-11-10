@@ -56,7 +56,7 @@ function accountHtml(){
     '<p class="wzerr" id="acErr" role="alert"></p><button class="primary" id="saveAcct">Save details</button>'+
     '<div class="soon"><div><b>Account</b><span>'+(A.signedIn?'Signed in':'Not signed in')+' · email and password sign-in coming soon</span></div>'+
     '<div class="soonbtns"><button class="chip sm" disabled aria-disabled="true">Create account</button><button class="chip sm" disabled aria-disabled="true">Sign in</button></div></div></div>';
-  h+=accessHtml();
+  h+=accessHtml()+consentHtml();
   return h;
 }
 function saveAcct(){
@@ -80,10 +80,11 @@ function openProfile(){
     '<div class="seg" role="group" aria-label="Celebration style">'+[["energetic","Energetic"],["calm","Calm"]].map(function(o){return '<button data-celebset="'+o[0]+'" aria-pressed="'+(celebStyle()===o[0])+'">'+o[1]+'</button>';}).join("")+'</div>'+
     '<h3 class="psec" id="pMeas">Body measurements</h3><p class="sub">'+(lastS?'Last check-in '+esc(fmtDay(lastS.d))+'.':'Nothing saved yet.')+' Weigh in and measure one card at a time.</p>'+
     '<div class="ms-row2"><button class="chip" data-ms="start">Body check-in</button><button class="chip" data-ms="progress">Body progress</button></div>';
-  h+=backupHtml()+'</div>';
+  h+=backupHtml()+accountDataHtml()+'</div>';
   var sh=document.getElementById("profile"); sh.innerHTML=h; sh.hidden=false; sh.scrollTop=0;
   document.body.style.overflow="hidden"; sh.focus();
   initWheel();
+  if(WEB_MODE&&sbUser) consentProfileLoad();
 }
 function closeProfile(){
   var sh=document.getElementById("profile"); if(!sh||sh.hidden) return;
@@ -221,5 +222,6 @@ function finishWorkout(){
   if(saved&&rec&&d.ex.some(function(x){return x.swFrom;})){ endTodaySwaps(d.id); DAYS=buildDays(); }
   recordWorkout(rec); save(); stopTimer(); renderDay(); window.scrollTo(0,0);
   if(saved&&rec) showDone(rec,d,wins);
+  if(saved&&rec&&prevDates&&!prevDates.length) logEvent("first_workout",{exercises:d.ex.length});
   else toast("Nothing logged yet. Tick a set or type a weight or reps first.");
 }

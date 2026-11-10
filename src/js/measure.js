@@ -52,6 +52,8 @@ function msMax(k){return msLb(k)?1100:500;}
 function msIsLeft(k){return /L$/.test(k)&&!!MS_BAND[k];}
 function msSide(k){var s=msSpot(k);if(!s||!s[3]||!msCfg().mset.lr)return "";return msIsLeft(k)?"Left":"Right";}
 function msName(k,short){var s=msSpot(k),sd=msSide(k);if(!s)return k;return s[1]+(sd?(short?" "+sd.charAt(0):" · "+sd):"");}
+/* the tracked keys you can add to now: on Free, the basic sites only (WP14). The others stay in Body progress, read only. */
+function msLogKeys(){ var k=msKeys().filter(function(x){return !msLocked(x);}); return k.length?k:["weight"]; }
 /* every key that's tracked, in check-in order */
 function msKeys(){
   var C=msCfg().mset, out=[];
@@ -114,12 +116,12 @@ function msFig(o){
 function msDue(){
   var P=msCfg(), R=P.remind, out=null, today=new Date().toISOString().slice(0,10);
   if(P.msSnooze&&P.msSnooze>=today) return null;
-  var tapeKeys=msKeys().filter(function(k){return k!=="weight";});
+  var tapeKeys=msLogKeys().filter(function(k){return k!=="weight";});
   var lastTape=null; tapeKeys.forEach(function(k){var l=msLatest(k); if(l&&(!lastTape||l.t>lastTape)) lastTape=l.t;});
   var lw=msLatest("weight");
   var tapeDue=R.tape>0&&tapeKeys.length&&(!lastTape||msDaysSince(lastTape)>=R.tape);
   var weighDue=R.weigh>0&&!P.mset.off.weight&&(!lw||msDaysSince(lw.t)>=R.weigh);
-  if(tapeDue) out={kind:"tape",title:lastTape?"Check-in due":"Start tracking your body",sub:lastTape?"Last one "+fmtDay(lastTape)+" · about "+Math.max(1,Math.round(msKeys().length*12/60))+" min":"Weight and tape measurements, one card at a time"};
+  if(tapeDue) out={kind:"tape",title:lastTape?"Check-in due":"Start tracking your body",sub:lastTape?"Last one "+fmtDay(lastTape)+" · about "+Math.max(1,Math.round(msLogKeys().length*12/60))+" min":"Weight and tape measurements, one card at a time"};
   else if(weighDue) out={kind:"weigh",title:"Weigh-in due",sub:lw?"Last one "+fmtDay(lw.t)+" · "+msFmt(lw.v)+" "+msUnit("weight"):"Log your weight to start the trend"};
   return out;
 }
@@ -146,7 +148,7 @@ function msClose(){
   if(H&&!H.ex) renderHistory(true);
 }
 function msDeck(){
-  var keys=M.keys||msKeys();
+  var keys=M.keys||msLogKeys();
   if(!M.keys&&!msLatest("height")) keys=keys.concat(["height"]);
   return keys;
 }
@@ -163,10 +165,12 @@ function msRender(){
 function msStartHtml(){
   var P=msCfg(), keys=msDeck(), lastAny=null;
   P.hist.forEach(function(e){var t=new Date(e.d); if(!lastAny||t>lastAny) lastAny=t;});
-  var goals=Object.keys(P.goals).filter(function(k){return msLatest(k);}).slice(0,2);
+  var goals=Object.keys(P.goals).filter(function(k){return msLatest(k)&&!msLocked(k);}).slice(0,2);
+  var lockedN=msKeys().filter(msLocked).length;
   return '<div class="sheet-top"><h2 id="mstitle">Body check-in</h2><button class="chip" data-ms="close">Close</button></div>'+
     '<div class="ms-hero">'+msFig({soft:keys.filter(function(k){return MS_BAND[k];})})+'</div>'+
     '<p class="sub">'+keys.length+' card'+(keys.length===1?'':'s')+' · about '+Math.max(1,Math.round(keys.length*12/60))+' min'+(lastAny?' · last one '+esc(fmtDay(lastAny)):'')+'</p>'+
+    (lockedN?'<p class="ms-prolock">'+lockedN+' more spot'+(lockedN===1?'':'s')+' need Pro. What you’ve saved stays in Body progress. <button class="linkbtn" data-pro="measure">About Pro</button></p>':'')+
     '<div class="ms-legend"><span class="ms-pill">Swipe →</span><span>Save and go to the next</span><span class="ms-pill out">← Swipe</span><span>Skip this one today</span></div>'+
     goals.map(function(k){return msGoalHtml(k,true);}).join("")+
     '<button class="primary" data-ms="go">Start check-in</button>'+
@@ -240,7 +244,7 @@ function msGo(saveIt){
   if(saveIt&&v>0&&v<=msMax(k)){
     if(!M.entry){M.entry={d:new Date().toISOString(),v:{}};P.hist.push(M.entry);if(P.hist.length>400)P.hist=P.hist.slice(-400);}
     M.entry.v[k]=msStore(k,v); P.vals[k]=msStore(k,v); M.saved[k]=v; rec.saved=true; save();
-    if(navigator.vibrate) try{navigator.vibrate(12);}catch(e){}
+    platform.buzz(12);
   }
   M.stack.push(rec);
   (saveIt?t.stS:t.stK).style.opacity=1;
@@ -284,7 +288,10 @@ function msSettingsHtml(){
   var goals=Object.keys(P.goals);
   return '<div class="sheet-top"><h2 id="mstitle">What you track</h2><button class="chip" data-ms="back">Back</button></div>'+
     '<p class="sub">Tap to turn a spot on or off. Your check-in has one card for each.</p>'+
-    '<div class="ms-chips">'+MS_SPOTS.map(function(s){var on=!C.off[s[0]];return '<button class="chip sm" data-ms="spot" data-k="'+s[0]+'" aria-pressed="'+on+'">'+(on?'✓ ':'')+esc(s[4]||s[1])+'</button>';}).join("")+'</div>'+
+    '<div class="ms-chips">'+MS_SPOTS.map(function(s){var on=!C.off[s[0]], lk=msLocked(s[0]);
+      if(lk) return '<button class="chip sm stlock" data-pro="measure" aria-label="'+esc(s[4]||s[1])+', with Pro">'+esc(s[4]||s[1])+'<i class="lockdot" aria-hidden="true"></i></button>';
+      return '<button class="chip sm" data-ms="spot" data-k="'+s[0]+'" aria-pressed="'+on+'">'+(on?'✓ ':'')+esc(s[4]||s[1])+'</button>';}).join("")+'</div>'+
+    (MS_SPOTS.some(function(s){return msLocked(s[0]);})?'<p class="sub">Spots marked with a dot need Pro. Anything you saved before stays in Body progress.</p>':'')+
     '<div class="ms-box">'+tog("lr",C.lr,"Left and right separately","Upper arms, forearms, thighs and calves")+tog("tips",C.tips!==false,"Tips on each card","Where and how to place the tape")+
     '<label class="ms-set"><span><b>Height</b><span>Set once, change it any time</span></span><span class="ms-ht"><input id="msHeight" inputmode="decimal" autocomplete="off" value="'+(ht?msFmt(ht.v):'')+'" placeholder="175" aria-label="Height in centimetres">cm</span></label></div>'+
     '<h3 class="psec">Reminders</h3><p class="sub">The app shows a card on the Workout and Stats tabs when one is due.</p>'+
@@ -384,10 +391,13 @@ function bpDetailHtml(){
   var h='<div class="sheet-top"><button class="chip" data-bp="back">‹ Back</button><h2 id="bptitle">'+esc(msName(k))+'</h2></div>';
   if(!l) return h+'<p class="sub">Nothing saved yet.</p>';
   h+='<div class="ms-dhead"><span class="ms-big">'+msFmt(l.v)+'<small>'+u+'</small></span>'+(c?'<span class="ms-pill'+(msGood(k,c.d)?'':' out')+'">'+msDelta(c.b.v,c.a.v)+' since '+esc(fmtDay(c.a.t))+'</span>':'')+'</div>';
+  var ro=msLocked(k);
+  if(ro) h+='<p class="ms-prolock">Read only on Free: your history stays here. Pro lets you keep logging and editing it. <button class="linkbtn" data-pro="measure">About Pro</button></p>';
   if(k!=="height"){
     h+=bpSeg();
     h+=bpPts(k).length>1?'<section class="stcard ms-big-chart" role="img" aria-label="'+esc(msName(k)+": "+bpPts(k).map(function(p){return fmtDay(p.t)+" "+msFmt(p.v)+" "+u;}).join(", "))+'">'+bpSpark(k,320,170,true)+'</section>':'<p class="sub">One more check-in and a chart shows up here.</p>';
-    if(BP.goal){
+    if(ro){}
+    else if(BP.goal){
       h+='<section class="stcard ms-goaled"><b>Goal</b><div class="ms-goalin"><label><span>Target</span><span class="ms-ht"><input id="bpGoalT" inputmode="decimal" autocomplete="off" value="'+(g?msFmt(g.t):'')+'" placeholder="'+msFmt(l.v)+'">'+u+'</span></label>'+
         '<label><span>By (optional)</span><input id="bpGoalBy" type="date" value="'+(g&&g.by?esc(g.by):'')+'"></label></div>'+
         '<div class="ms-row2"><button class="ghost" data-bp="goalcancel">Cancel</button><button class="chip primarychip" data-bp="goalsave">Save goal</button></div>'+(g?'<button class="linkbtn danger" data-bp="goaldel">Remove this goal</button>':'')+'</section>';
@@ -404,7 +414,7 @@ function bpDetailHtml(){
         '<button class="chip sm" data-bp="editcancel">Cancel</button><button class="chip sm primarychip" data-bp="editsave">Save</button></div>';
     } else
       h+='<div class="ms-hrow"><span>'+esc(hDate(p.e.d,{day:"numeric",month:"short",year:"numeric"}))+'</span><b>'+msFmt(p.v)+' '+u+'</b><span class="ms-hd">'+(prev?msDelta(p.v,prev.v):'')+'</span>'+
-        '<button class="linkbtn" data-bp="edit" data-id="'+esc(id)+'">Edit</button><button class="linkbtn danger" data-bp="del" data-id="'+esc(id)+'">Delete</button></div>';
+        (ro?'':'<button class="linkbtn" data-bp="edit" data-id="'+esc(id)+'">Edit</button>')+'<button class="linkbtn danger" data-bp="del" data-id="'+esc(id)+'">Delete</button></div>';
   });
   return h+'</div>';
 }
@@ -430,7 +440,7 @@ function msClick(t){
     if(a==="skip"){msGo(false);return true;}
     if(a==="undo"){msUndo();return true;}
     if(a==="stop"){M.mode=Object.keys(M.saved).length?"done":"start";msRender();return true;}
-    if(a==="spot"){var k=t.dataset.k;if(P.mset.off[k])delete P.mset.off[k];else{if(msKeys().length<=1){toast("Keep at least one spot");return true;}P.mset.off[k]=1;}save();msRender();return true;}
+    if(a==="spot"){var k=t.dataset.k;if(P.mset.off[k])delete P.mset.off[k];else{if(msLogKeys().length<=1){toast("Keep at least one spot");return true;}P.mset.off[k]=1;}save();msRender();return true;}
     if(a==="lr"){P.mset.lr=!P.mset.lr;save();msRender();return true;}
     if(a==="tips"){P.mset.tips=P.mset.tips===false;save();msRender();return true;}
     if(a==="rem"){P.remind[t.dataset.kind]=+t.dataset.days;delete P.msSnooze;save();msRender();return true;}
@@ -450,6 +460,7 @@ function msClick(t){
     if(b==="goalsave"){var n=msNum((document.getElementById("bpGoalT").value||"").replace(",",".")),by=document.getElementById("bpGoalBy").value||"";
       if(n==null||n<=0||n>msMax(BP.k)){toast("Enter a target number");return true;}
       Pp.goals[BP.k]={t:msLb(BP.k)?+msStore(BP.k,n):Math.round(n*10)/10,by:/^\d{4}-\d{2}-\d{2}$/.test(by)?by:""};save();BP.goal=false;bpRender(true);toast("Goal saved");return true;}
+    if((b==="edit"||b==="goal")&&msLocked(BP.k)){proOffer("measure");return true;}
     if(b==="edit"){BP.edit=t.dataset.id;bpRender(true);var ei=document.getElementById("bpEditV");if(ei){ei.focus();ei.select();}return true;}
     if(b==="editcancel"){BP.edit=null;bpRender(true);return true;}
     if(b==="editsave"){var e=bpEntry(BP.edit),nv=msNum((document.getElementById("bpEditV").value||"").replace(",","."));

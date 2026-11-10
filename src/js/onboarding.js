@@ -37,6 +37,7 @@ function endOnboarding(){
   var ans=(OB&&OB.ans)||(S.ob&&S.ob.ans)||null;
   if(ans&&ans.train){ S.about={train:ans.train,level:ans.level,goal:ans.goal,days:+ans.days||3}; if(!S.celebrate) S.celebrate=GFDRules.celebrateFor(ans); }
   S.onboarded=true; delete S.ob; save();
+  logEvent("onboarding_done",ans?{train:String(ans.train||""),days:+ans.days||0}:{});
   var sh=document.getElementById("onboard"); sh.hidden=true; sh.innerHTML=""; document.body.style.overflow=""; OB=null;
   pickToday=true; OPEN={}; renderAll();
 }

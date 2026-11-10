@@ -30,8 +30,8 @@ Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-trac
 | `tools/build_pages.py` | Builds `index.html` (adds web title, home-screen install tags, icons). |
 | `manifest.webmanifest`, `icons/` | "Add to Home Screen" support. |
 | `vendor/supabase.js` | Supabase JS client v2.45.4 (MIT), served from this repo so there's no CDN dependency. |
-| `supabase/migrations/` | Database schema, applied by the Deploy database workflow (staging, then production). Rollbacks in `supabase/rollbacks/`, structure tests in `supabase/tests/`, local setup in `supabase/config.toml`. |
-| `tests/db/` | RLS two-user test, run by CI against a throwaway Supabase and against staging. |
+| `supabase/migrations/` | Database schema, applied by the Deploy database workflow (GFD Dev from the `dev` branch, GFD Prod from `main` after approval). Rollbacks in `supabase/rollbacks/`, structure tests in `supabase/tests/`, local setup in `supabase/config.toml`. |
+| `tests/db/` | RLS two-user test, run by CI against a throwaway Supabase and against GFD Dev. |
 | `docs/db-brief.md` | How database changes are written, checked and deployed. |
 | `data/exercise-library/`, `data/gear-library/` | Source data for the `exercises` and `gear` tables, and the SQL that loads them (`exercises.sql`, `gear.sql`). |
 | `docs/context.md` | Project context for planning sessions. |
@@ -39,16 +39,17 @@ Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-trac
 ## Making changes
 1. Edit the file for that area in `src/js/` (or `src/styles.css`).
 2. Run `python3 tools/build_pages.py`.
-3. Commit and push to `main`. GitHub Pages updates within a few minutes.
+3. Open a PR into `dev`: once merged, Coolify rebuilds https://dev.getfitdaily.co.za (GFD Dev). A PR from `dev` into
+   `main` puts it live on https://getfitdaily.co.za (GFD Prod). Which Supabase each site uses: `deploy/supabase.json`.
 
 ## Supabase
-- Project: `Workout tracker` (`zdllpjrkwcdmcuizxuum`, eu-west-3), free plan. Staging: `gfd-staging`. Schema changes go through GitHub Actions, not the SQL editor: see `docs/db-brief.md`.
+- Projects: `GFD Prod` (live) and `GFD Dev` (dev branch), in Deon's GFD Supabase account; URLs and publishable keys in `deploy/supabase.json`. GFD Prod is the original `Workout tracker` project (`zdllpjrkwcdmcuizxuum`), transferred into the GFD account on 10 Nov 2026. Schema changes go through GitHub Actions, not the SQL editor: see `docs/db-brief.md`.
 - Tables: `profiles` (name, email, tier), `user_state` (the app's data as JSON) `suggestions` (tester feedback), `exercises` and `gear` (shared catalogues: everyone can read them, only admins can change them; the app loads them at start and keeps a copy on the phone), and `workouts` + `workout_sets` (history; saved through the `save_workout` function in one transaction, with ids made on the phone so retries never duplicate). Row level security: each user can only read and write their own rows; tier and suggestion status can't be changed from the app.
 - Storage: private `suggestions` bucket for screenshots (images only, 5 MB max, one folder per user).
 - Admins: `profiles.is_admin`. Admins see Menu → Feedback in the app. Add one in the SQL editor: `update public.profiles set is_admin = true where email = '…';`
 - Reading suggestions without the app: Table Editor → `suggestions` (set `status` to seen / planned / done / wont_do; testers see it update). Screenshots: Storage → `suggestions`, path in `screenshot_path`.
 - The key in `app.html` is the **publishable** key, which is meant to be public. Never put a secret/service key in this repo.
-- Auth settings to check in the dashboard (Authentication): Site URL = `https://do-mict.github.io/workout-tracker/`, add it to Redirect URLs, and decide whether email confirmation is on.
+- Auth settings (Site URL, Redirect URLs, sign-in emails, email sender) are pushed from the repo with `tools/push_auth_emails.py`; see `docs/site-brief.md`.
 
 ## Code layout (`src/js/`, in load order)
 | File | Covers |
