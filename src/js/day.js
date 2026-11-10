@@ -96,14 +96,14 @@ function exHtml(ex){
   if(DAYS[day]&&DAYS[day].coles) h+='<button class="chip sm colesswap" data-colesswap="'+ex.id+'">↻ Different '+esc((LIB[ex.id]||{}).mg||"").toLowerCase()+' exercise</button>';
   h+='<details class="how"><summary>How to do it safely</summary>'+exFigure(ex.id,ex.f)+'<ul class="cues">'+ex.c.map(function(c){return '<li>'+esc(c)+'</li>';}).join("")+'</ul></details>';
   var lb=labOf(ex), lw=GFDRules.unitLabel(lb[0],U());
-  h+='<div class="sets"><div class="setrow" aria-hidden="true"><span></span><span class="lbl">'+lw+'</span><span class="lbl">'+lb[1]+'</span><span></span></div>';
+  h+='<div class="sets numgrp"><div class="setrow" aria-hidden="true"><span></span><span class="lbl">'+lw+'</span><span class="lbl">'+lb[1]+'</span><span></span></div>';
   var missed=[];
   arr.slice(0,ex.sets).forEach(function(s,i){
     var ph=phFor(ex), wp=ph[0], rp=ph[1], ms=s.d&&GFDRules.isMissed(lb,s,ex.reps);
     if(ms) missed.push(i+1);
     h+='<div class="setrow'+(s.d?' isdone':'')+(ms?' missed':'')+'"><span class="n">'+setNumHtml(ex,i,s.d)+'</span>'+
-      (lb[0]?'<input inputmode="decimal" aria-label="Set '+(i+1)+' '+lw+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="w" value="'+esc(boxVal(ex,s,"w"))+'" placeholder="'+esc(wp)+'">':'<span></span>')+
-      '<input inputmode="decimal" aria-label="Set '+(i+1)+' '+lb[1]+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="r" value="'+esc(s.r)+'" placeholder="'+esc(rp)+'">'+
+      (lb[0]?'<input'+numFor(lw)+' aria-label="Set '+(i+1)+' '+lw+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="w" value="'+esc(boxVal(ex,s,"w"))+'" placeholder="'+esc(wp)+'">':'<span></span>')+
+      '<input'+numFor(lb[1])+' aria-label="Set '+(i+1)+' '+lb[1]+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="r" value="'+esc(s.r)+'" placeholder="'+esc(rp)+'">'+
       '<button class="tick" aria-label="Mark set '+(i+1)+' done" aria-pressed="'+!!s.d+'" data-tick="'+ex.id+'" data-i="'+i+'">✓</button></div>';
   });
   h+='</div>'+missNote(ex,missed)+'</details>';
@@ -280,6 +280,20 @@ document.addEventListener("input",function(e){
   st[el.dataset.f]=el.dataset.f==="w"&&isKgLab(labOf(ex))?GFDRules.boxSave(typed,U()):typed; st.t=1; delete st.pre;
   refreshSets(ex); save();
 });
+/* tapping a set box that already holds a number selects it, so typing replaces it instead of adding to it.
+   The select runs after the tap finishes, and the tap's own mouseup is held back, or iPhone Safari drops the selection. */
+var SELBOX=null;
+function isSetBox(el){ return el&&el.tagName==="INPUT"&&el.dataset&&(el.dataset.ex&&el.dataset.f||el.dataset.hed); }
+function selectBox(el){ if(document.activeElement!==el||!el.value) return; try{el.setSelectionRange(0,el.value.length);}catch(err){try{el.select();}catch(e2){}} }
+document.addEventListener("focusin",function(e){
+  var el=e.target; if(!isSetBox(el)||!el.value) return;
+  SELBOX=el; selectBox(el); setTimeout(function(){selectBox(el);},0);
+});
+document.addEventListener("mouseup",function(e){
+  if(SELBOX&&e.target===SELBOX){ e.preventDefault(); selectBox(SELBOX); }
+  SELBOX=null;
+});
+document.addEventListener("focusout",function(e){ if(e.target===SELBOX) SELBOX=null; });
 document.addEventListener("toggle",function(e){
   var el=e.target; if(!el||!el.classList) return;
   if(el.classList.contains("eqfold")){if(!(document.getElementById("eqSearch")||{}).value) EQ_OPEN[el.dataset.eqg]=el.open; return;}

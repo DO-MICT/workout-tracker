@@ -44,6 +44,8 @@ function msSpot(k){var b=k.replace(/L$/,"");for(var i=0;i<MS_SPOTS.length;i++)if
 function msUnit(k){var s=msSpot(k);return s?(s[2]==="kg"?U():s[2]):"cm";}
 /* body weight is kept in kg (WP4). With lb picked, the screens below work in lb: msSeries and msGoal convert
    on the way in, msStore on the way out (kg to 2 decimals, so a weight typed to 0.1 lb comes back the same). */
+/* hold-to-scroll steps for the GFD keypad (numpad.js): 0.1 kg or lb, 0.5 cm */
+function msNumAttrs(k){var u=msUnit(k);return numAttrs(u==="kg"||u==="lb"?0.1:0.5,1,u);}
 function msLb(k){return k==="weight"&&U()==="lb";}
 function msStore(k,v){return msLb(k)?String(Math.round(v*GFDRules.KG_PER_LB*100)/100):msFmt(v);}
 function msShown(k,kg){return msLb(k)?kg/GFDRules.KG_PER_LB:kg;}
@@ -185,7 +187,7 @@ function msCardHtml(k,depth){
     '<div class="ms-figbox">'+msFig({vb:MS_CROP[k],hi:MS_BAND[k]?[k]:[],soft:(side==="Left"&&MS_BAND[k.slice(0,-1)])?[k.slice(0,-1)]:[]})+'</div>'+
     '<h3>'+esc(sp[1])+(side?'<span class="ms-side">'+side+'</span>':'')+'</h3>'+
     (P.mset.tips!==false?'<p class="ms-tip">'+esc(MS_TIP[k.replace(/L$/,"")]||"")+'</p>':'')+
-    '<div class="ms-val"><label class="ms-num"><input id="msInput" inputmode="decimal" autocomplete="off" value="'+msFmt(v)+'" aria-label="'+esc(msName(k))+' in '+(sp[2]==="kg"?(msLb(k)?"pounds":"kilograms"):"centimetres")+'"><span>'+msUnit(k)+'</span></label>'+
+    '<div class="ms-val"><label class="ms-num"><input id="msInput"'+msNumAttrs(k)+' value="'+msFmt(v)+'" aria-label="'+esc(msName(k))+' in '+(sp[2]==="kg"?(msLb(k)?"pounds":"kilograms"):"centimetres")+'"><span>'+msUnit(k)+'</span></label>'+
     '<span class="ms-pill'+(l?'':' out')+'" id="msDelta">'+(l?'same as '+esc(fmtDay(l.t)):'first time')+'</span></div>'+
     '<div class="ms-ruler" id="msRuler" tabindex="0" role="slider" aria-label="'+esc(msName(k))+'" aria-valuenow="'+msFmt(v)+'"><i class="ms-ptr"></i></div>';
   return h+'</div>';
@@ -293,7 +295,7 @@ function msSettingsHtml(){
       return '<button class="chip sm" data-ms="spot" data-k="'+s[0]+'" aria-pressed="'+on+'">'+(on?'✓ ':'')+esc(s[4]||s[1])+'</button>';}).join("")+'</div>'+
     (MS_SPOTS.some(function(s){return msLocked(s[0]);})?'<p class="sub">Spots marked with a dot need Pro. Anything you saved before stays in Body progress.</p>':'')+
     '<div class="ms-box">'+tog("lr",C.lr,"Left and right separately","Upper arms, forearms, thighs and calves")+tog("tips",C.tips!==false,"Tips on each card","Where and how to place the tape")+
-    '<label class="ms-set"><span><b>Height</b><span>Set once, change it any time</span></span><span class="ms-ht"><input id="msHeight" inputmode="decimal" autocomplete="off" value="'+(ht?msFmt(ht.v):'')+'" placeholder="175" aria-label="Height in centimetres">cm</span></label></div>'+
+    '<label class="ms-set"><span><b>Height</b><span>Set once, change it any time</span></span><span class="ms-ht"><input id="msHeight"'+numAttrs(1,1,"cm")+' value="'+(ht?msFmt(ht.v):'')+'" placeholder="175" aria-label="Height in centimetres">cm</span></label></div>'+
     '<h3 class="psec">Reminders</h3><p class="sub">The app shows a card on the Workout and Stats tabs when one is due.</p>'+
     '<div class="ms-box">'+rem("weigh","Weigh-in")+rem("tape","Tape check-in")+'</div>'+
     '<h3 class="psec">Goals</h3><p class="sub">'+(goals.length?'Change a goal from its chart in Body progress.':'Set a goal from any chart in Body progress.')+'</p>'+
@@ -398,7 +400,7 @@ function bpDetailHtml(){
     h+=bpPts(k).length>1?'<section class="stcard ms-big-chart" role="img" aria-label="'+esc(msName(k)+": "+bpPts(k).map(function(p){return fmtDay(p.t)+" "+msFmt(p.v)+" "+u;}).join(", "))+'">'+bpSpark(k,320,170,true)+'</section>':'<p class="sub">One more check-in and a chart shows up here.</p>';
     if(ro){}
     else if(BP.goal){
-      h+='<section class="stcard ms-goaled"><b>Goal</b><div class="ms-goalin"><label><span>Target</span><span class="ms-ht"><input id="bpGoalT" inputmode="decimal" autocomplete="off" value="'+(g?msFmt(g.t):'')+'" placeholder="'+msFmt(l.v)+'">'+u+'</span></label>'+
+      h+='<section class="stcard ms-goaled"><b>Goal</b><div class="ms-goalin"><label><span>Target</span><span class="ms-ht"><input id="bpGoalT"'+msNumAttrs(k)+' aria-label="Goal for '+esc(msName(k))+'" value="'+(g?msFmt(g.t):'')+'" placeholder="'+msFmt(l.v)+'">'+u+'</span></label>'+
         '<label><span>By (optional)</span><input id="bpGoalBy" type="date" value="'+(g&&g.by?esc(g.by):'')+'"></label></div>'+
         '<div class="ms-row2"><button class="ghost" data-bp="goalcancel">Cancel</button><button class="chip primarychip" data-bp="goalsave">Save goal</button></div>'+(g?'<button class="linkbtn danger" data-bp="goaldel">Remove this goal</button>':'')+'</section>';
     } else if(g){
@@ -410,7 +412,7 @@ function bpDetailHtml(){
   s.slice().reverse().forEach(function(p,i,arr){
     var prev=arr[i+1], id=p.e.d;
     if(BP.edit===id){
-      h+='<div class="ms-hrow edit"><span>'+esc(hDate(p.e.d,{day:"numeric",month:"short",year:"numeric"}))+'</span><span class="ms-ht"><input id="bpEditV" inputmode="decimal" autocomplete="off" value="'+msFmt(p.v)+'" aria-label="New value">'+u+'</span>'+
+      h+='<div class="ms-hrow edit"><span>'+esc(hDate(p.e.d,{day:"numeric",month:"short",year:"numeric"}))+'</span><span class="ms-ht"><input id="bpEditV"'+msNumAttrs(k)+' value="'+msFmt(p.v)+'" aria-label="New value">'+u+'</span>'+
         '<button class="chip sm" data-bp="editcancel">Cancel</button><button class="chip sm primarychip" data-bp="editsave">Save</button></div>';
     } else
       h+='<div class="ms-hrow"><span>'+esc(hDate(p.e.d,{day:"numeric",month:"short",year:"numeric"}))+'</span><b>'+msFmt(p.v)+' '+u+'</b><span class="ms-hd">'+(prev?msDelta(p.v,prev.v):'')+'</span>'+
