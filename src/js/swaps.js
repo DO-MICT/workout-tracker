@@ -9,8 +9,9 @@ var SWMODE="today";     /* "today" | "plan" */
 function swapLevel(){ return S.about&&S.about.level||null; }
 function swapGearName(id){ return gearName(id); }
 /* ranked options for one exercise; g = gear list, or null when no gear is set (then everything counts) */
+/* g: the gear list ([] = bodyweight only), or null to ignore gear */
 function swapOptions(exId,g,inDay,n){
-  return GFDRules.rankSwaps(LIB,exId,{gear:g&&g.length?g:null,inDay:inDay||[],level:swapLevel(),n:n});
+  return GFDRules.rankSwaps(LIB,exId,{gear:g||null,inDay:inDay||[],level:swapLevel(),n:n});
 }
 function swapReasonText(r){ return GFDRules.swapReason(r,swapGearName); }
 

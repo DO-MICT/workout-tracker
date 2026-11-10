@@ -280,6 +280,20 @@ document.addEventListener("input",function(e){
   st[el.dataset.f]=el.dataset.f==="w"&&isKgLab(labOf(ex))?GFDRules.boxSave(typed,U()):typed; st.t=1; delete st.pre;
   refreshSets(ex); save();
 });
+/* tapping a set box that already holds a number selects it, so typing replaces it instead of adding to it.
+   The select runs after the tap finishes, and the tap's own mouseup is held back, or iPhone Safari drops the selection. */
+var SELBOX=null;
+function isSetBox(el){ return el&&el.tagName==="INPUT"&&el.dataset&&(el.dataset.ex&&el.dataset.f||el.dataset.hed); }
+function selectBox(el){ if(document.activeElement!==el||!el.value) return; try{el.setSelectionRange(0,el.value.length);}catch(err){try{el.select();}catch(e2){}} }
+document.addEventListener("focusin",function(e){
+  var el=e.target; if(!isSetBox(el)||!el.value) return;
+  SELBOX=el; selectBox(el); setTimeout(function(){selectBox(el);},0);
+});
+document.addEventListener("mouseup",function(e){
+  if(SELBOX&&e.target===SELBOX){ e.preventDefault(); selectBox(SELBOX); }
+  SELBOX=null;
+});
+document.addEventListener("focusout",function(e){ if(e.target===SELBOX) SELBOX=null; });
 document.addEventListener("toggle",function(e){
   var el=e.target; if(!el||!el.classList) return;
   if(el.classList.contains("eqfold")){if(!(document.getElementById("eqSearch")||{}).value) EQ_OPEN[el.dataset.eqg]=el.open; return;}

@@ -76,25 +76,26 @@ function renderBuilder(){
   sh.innerHTML=h;
 }
 function pickList(){
-  var bg=bGear(), q=BD.q.trim().toLowerCase(), have=bg.length>0, inDay=BD.ex.map(function(x){return x.id;});
+  var bg=bGear(), q=BD.q.trim().toLowerCase(), inDay=BD.ex.map(function(x){return x.id;});
   return Object.keys(LIB).map(function(id){return LIB[id];}).filter(function(L){
     if(BD.mg&&L.mg!==BD.mg) return false;
     if(q&&(L.n+" "+L.mg).toLowerCase().indexOf(q)<0) return false;
-    if(have&&!BD.all&&missingFor(L,bg).length) return false;
+    /* no gear at this location means bodyweight only (Deon's suggestion, 10 Nov) */
+    if(!BD.all&&missingFor(L,bg).length) return false;
     return true;
-  }).map(function(L){return {L:L,added:inDay.indexOf(L.id)>=0,ok:!have||!missingFor(L,bg).length};});
+  }).map(function(L){return {L:L,added:inDay.indexOf(L.id)>=0,ok:!missingFor(L,bg).length};});
 }
 function renderPicker(sh){
   var keepFocus=document.activeElement&&document.activeElement.id==="pSearch";
   var h='<div class="sheet-in"><div class="sheet-top"><h2 id="btitle">'+(BD.wizard?'Add to '+esc(weekLong(BD.dayId)):'Add exercise')+'</h2><button class="chip" id="pBack">Done</button></div>';
-  h+='<p class="sub">'+(bGear().length?'Showing exercises you can do at <b>'+esc(bLoc().name)+'</b>.':'No equipment set for '+esc(bLoc().name)+' yet.')+'</p>';
+  h+='<p class="sub">'+(bGear().length?'Showing exercises you can do at <b>'+esc(bLoc().name)+'</b>.':'No equipment set for '+esc(bLoc().name)+' yet, so only bodyweight exercises show.')+'</p>';
   if(locState().list.length>1) h+='<div class="locchips pickloc" role="group" aria-label="Location">'+locChips("data-bdloc",bLoc().id)+'</div>';
   h+='<div class="eqsearch"><input type="search" id="pSearch" value="'+esc(BD.q)+'" placeholder="Search exercises" autocomplete="off" aria-label="Search exercises"></div>';
   h+='<div class="mgchips" role="group" aria-label="Muscle group">'+['All'].concat(MGS).map(function(m){var v=m==="All"?"":m;return '<button class="chip sm" data-pmg="'+v+'" aria-pressed="'+(BD.mg===v)+'">'+m+'</button>';}).join("")+'</div>';
-  if(bGear().length) h+='<label class="ptoggle"><input type="checkbox" id="pAll"'+(BD.all?' checked':'')+'> Also show exercises I don’t have gear for</label>';
-  else h+='<div class="bnote">No equipment picked yet. <button class="linkbtn" id="bGoGear">Choose equipment</button></div>';
+  if(!bGear().length) h+='<div class="bnote">No equipment picked yet. <button class="linkbtn" id="bGoGear">Choose equipment</button></div>';
+  h+='<label class="ptoggle"><input type="checkbox" id="pAll"'+(BD.all?' checked':'')+'> Also show exercises I don’t have gear for</label>';
   var list=pickList();
-  if(!list.length) h+='<p class="eqempty">'+(BD.q?'No exercises match “'+esc(BD.q)+'”.':'Nothing here with your current gear. Try another muscle group or add equipment.')+'</p>';
+  if(!list.length) h+='<p class="eqempty">'+(BD.q?'No exercises match “'+esc(BD.q)+'”.':(bGear().length?'Nothing here with your current gear. Try another muscle group or add equipment.':'No bodyweight exercises here. Try another muscle group or add equipment.'))+'</p>';
   MGS.forEach(function(m){
     var part=list.filter(function(r){return r.L.mg===m;}); if(!part.length) return;
     h+='<h4 class="pgh">'+m+'</h4>';
@@ -114,7 +115,7 @@ function renderReplace(sh){
   var all=swapOptions(x.id,bg,inDay,null), list=all.slice(0,BD.repMore?30:8);
   var h='<div class="sheet-in"><div class="sheet-top"><button class="chip" id="rBack">‹ Back</button></div>'+
     '<h2 id="btitle" class="eltitle">Replace '+esc(L.n)+'</h2>'+
-    '<p class="sub">'+(bg.length?'Best matches you can do at <b>'+esc(bLoc().name)+'</b>, closest movement first.':'Closest movement first. No equipment set for '+esc(bLoc().name)+' yet, so everything shows.')+'</p>';
+    '<p class="sub">'+(bg.length?'Best matches you can do at <b>'+esc(bLoc().name)+'</b>, closest movement first.':'Closest movement first. No equipment set for '+esc(bLoc().name)+' yet, so only bodyweight options show.')+'</p>';
   if(!list.length) h+='<p class="eqempty">No alternative here with your gear. Try <button class="linkbtn" id="bAdd">adding an exercise</button> instead.</p>';
   h+='<div class="swlist">'+list.map(function(r){
     return '<div class="prow"><span class="pview"><span class="bn"><b>'+esc(r.o.n)+'</b><span>'+esc(swapReasonText(r))+'</span>'+(r.harder?'<em class="swhard">Harder</em>':'')+'</span></span>'+
@@ -126,7 +127,7 @@ function renderReplace(sh){
 var PINFO_SVG='<svg class="pinfo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="7.4" r="1.4" fill="currentColor"/></svg>';
 /* a look at one exercise before adding it: the same details as the library, with Add at the bottom */
 function renderPeek(sh){
-  var L=LIB[BD.peek], bg=bGear(), added=BD.ex.some(function(x){return x.id===L.id;}), ok=!bg.length||!missingFor(L,bg).length;
+  var L=LIB[BD.peek], bg=bGear(), added=BD.ex.some(function(x){return x.id===L.id;}), ok=!missingFor(L,bg).length;
   var h='<div class="sheet-in peek"><div class="sheet-top"><button class="chip" id="pkBack">‹ Back</button></div>'+
     '<h2 id="btitle" class="eltitle">'+esc(L.n)+'</h2>'+exDetailBody(L,bg,bLoc().name)+
     '<div class="pkbar">'+(added?'<button class="primary" id="pkBack2">Already in this workout · back to list</button>':
