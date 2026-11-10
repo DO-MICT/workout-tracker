@@ -44,8 +44,8 @@ function msSpot(k){var b=k.replace(/L$/,"");for(var i=0;i<MS_SPOTS.length;i++)if
 function msUnit(k){var s=msSpot(k);return s?(s[2]==="kg"?U():s[2]):"cm";}
 /* body weight is kept in kg (WP4). With lb picked, the screens below work in lb: msSeries and msGoal convert
    on the way in, msStore on the way out (kg to 2 decimals, so a weight typed to 0.1 lb comes back the same). */
-/* hold-to-scroll steps for the GFD keypad (numpad.js): 0.1 kg, 0.2 lb, 0.5 cm */
-function msNumAttrs(k){var u=msUnit(k);return numAttrs(u==="kg"?0.1:u==="lb"?0.2:0.5,1,u);}
+/* hold-to-scroll steps for the GFD keypad (numpad.js): 0.1 kg or lb, 0.5 cm */
+function msNumAttrs(k){var u=msUnit(k);return numAttrs(u==="kg"||u==="lb"?0.1:0.5,1,u);}
 function msLb(k){return k==="weight"&&U()==="lb";}
 function msStore(k,v){return msLb(k)?String(Math.round(v*GFDRules.KG_PER_LB*100)/100):msFmt(v);}
 function msShown(k,kg){return msLb(k)?kg/GFDRules.KG_PER_LB:kg;}
