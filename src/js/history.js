@@ -314,12 +314,12 @@ function histEditHtml(){
   var E=H.edit, h='<div class="hedit"><p class="sub">Change any number, add a set or remove one. Records and last time update to match.</p>';
   E.ex.forEach(function(e,k){
     var lb0=LABS[e.measure]||LABS.w, lb=[GFDRules.unitLabel(lb0[0],U()),lb0[1]];
-    h+='<div class="hedex"><b>'+esc(e.name)+'</b>';
+    h+='<div class="hedex numgrp"><b>'+esc(e.name)+'</b>';
     if(e.sets.length) h+='<div class="setrow hedrow" aria-hidden="true"><span></span><span class="lbl">'+esc(lb[0])+'</span><span class="lbl">'+esc(lb[1])+'</span><span></span></div>';
     e.sets.forEach(function(s,j){
       h+='<div class="setrow hedrow"><span class="n">'+(j+1)+'</span>'+
-        (lb[0]?'<input inputmode="decimal" aria-label="'+esc(e.name)+' set '+(j+1)+' '+esc(lb[0])+'" data-hed="'+k+'|'+j+'|w" value="'+esc(s.w)+'" placeholder="'+esc(lb[0])+'">':'<span></span>')+
-        '<input inputmode="decimal" aria-label="'+esc(e.name)+' set '+(j+1)+' '+esc(lb[1])+'" data-hed="'+k+'|'+j+'|r" value="'+esc(s.r)+'" placeholder="'+esc(lb[1])+'">'+
+        (lb[0]?'<input'+numFor(lb[0])+' aria-label="'+esc(e.name)+' set '+(j+1)+' '+esc(lb[0])+'" data-hed="'+k+'|'+j+'|w" value="'+esc(s.w)+'" placeholder="'+esc(lb[0])+'">':'<span></span>')+
+        '<input'+numFor(lb[1])+' aria-label="'+esc(e.name)+' set '+(j+1)+' '+esc(lb[1])+'" data-hed="'+k+'|'+j+'|r" value="'+esc(s.r)+'" placeholder="'+esc(lb[1])+'">'+
         '<button class="setdel hsetdel" data-hedel="'+k+'|'+j+'" aria-label="Remove '+esc(e.name)+' set '+(j+1)+'">'+DEL_SVG+'</button></div>';
     });
     if(!e.sets.length) h+='<p class="hsmall">No sets: this exercise will be removed.</p>';
