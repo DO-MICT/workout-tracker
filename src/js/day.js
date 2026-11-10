@@ -96,14 +96,14 @@ function exHtml(ex){
   if(DAYS[day]&&DAYS[day].coles) h+='<button class="chip sm colesswap" data-colesswap="'+ex.id+'">↻ Different '+esc((LIB[ex.id]||{}).mg||"").toLowerCase()+' exercise</button>';
   h+='<details class="how"><summary>How to do it safely</summary>'+exFigure(ex.id,ex.f)+'<ul class="cues">'+ex.c.map(function(c){return '<li>'+esc(c)+'</li>';}).join("")+'</ul></details>';
   var lb=labOf(ex), lw=GFDRules.unitLabel(lb[0],U());
-  h+='<div class="sets"><div class="setrow" aria-hidden="true"><span></span><span class="lbl">'+lw+'</span><span class="lbl">'+lb[1]+'</span><span></span></div>';
+  h+='<div class="sets numgrp"><div class="setrow" aria-hidden="true"><span></span><span class="lbl">'+lw+'</span><span class="lbl">'+lb[1]+'</span><span></span></div>';
   var missed=[];
   arr.slice(0,ex.sets).forEach(function(s,i){
     var ph=phFor(ex), wp=ph[0], rp=ph[1], ms=s.d&&GFDRules.isMissed(lb,s,ex.reps);
     if(ms) missed.push(i+1);
     h+='<div class="setrow'+(s.d?' isdone':'')+(ms?' missed':'')+'"><span class="n">'+setNumHtml(ex,i,s.d)+'</span>'+
-      (lb[0]?'<input inputmode="decimal" aria-label="Set '+(i+1)+' '+lw+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="w" value="'+esc(boxVal(ex,s,"w"))+'" placeholder="'+esc(wp)+'">':'<span></span>')+
-      '<input inputmode="decimal" aria-label="Set '+(i+1)+' '+lb[1]+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="r" value="'+esc(s.r)+'" placeholder="'+esc(rp)+'">'+
+      (lb[0]?'<input'+numFor(lw)+' aria-label="Set '+(i+1)+' '+lw+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="w" value="'+esc(boxVal(ex,s,"w"))+'" placeholder="'+esc(wp)+'">':'<span></span>')+
+      '<input'+numFor(lb[1])+' aria-label="Set '+(i+1)+' '+lb[1]+'" data-ex="'+ex.id+'" data-i="'+i+'" data-f="r" value="'+esc(s.r)+'" placeholder="'+esc(rp)+'">'+
       '<button class="tick" aria-label="Mark set '+(i+1)+' done" aria-pressed="'+!!s.d+'" data-tick="'+ex.id+'" data-i="'+i+'">✓</button></div>';
   });
   h+='</div>'+missNote(ex,missed)+'</details>';
