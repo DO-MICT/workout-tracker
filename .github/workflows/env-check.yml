@@ -1,7 +1,10 @@
 name: Check environment
 # Read-only: checks that the secrets and the PROJECT_REF variable in the dev or production environment all point at
 # the same Supabase project, and that it's the one deploy/supabase.json names. Changes nothing. Prints no secrets.
+# Runs by itself when this file changes (both environments), or by hand: Actions > Check environment > Run workflow.
 on:
+  push:
+    paths: ['.github/workflows/env-check.yml']
   workflow_dispatch:
     inputs:
       target:
@@ -11,11 +14,16 @@ on:
 
 jobs:
   check:
+    name: check ${{ matrix.target }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    environment: ${{ inputs.target }}
+    strategy:
+      fail-fast: false
+      matrix:
+        target: ${{ github.event_name == 'push' && fromJSON('["production","dev"]') || fromJSON(format('["{0}"]', inputs.target)) }}
+    environment: ${{ matrix.target }}
     env:
-      TARGET: ${{ inputs.target }}
+      TARGET: ${{ matrix.target }}
       DB_URL: ${{ secrets.SUPABASE_DB_URL }}
       SB_URL: ${{ secrets.SUPABASE_URL }}
       SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
