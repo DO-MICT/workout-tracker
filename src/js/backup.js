@@ -8,7 +8,7 @@ function backupClick(t){
   if(t.id==="bkShow"){
     var snap=JSON.parse(JSON.stringify(S)); delete snap._sync; if(snap.account){delete snap.account.id;delete snap.account.signedIn;delete snap.account.authMode;}
     area.innerHTML='<textarea id="bkOut" class="bktext" rows="5" readonly aria-label="Backup code">'+esc(JSON.stringify(snap))+'</textarea><button class="chip sm" id="bkCopy">Copy</button>';
-    var ta=document.getElementById("bkOut"); ta.focus(); ta.select(); return true;
+    var ta=document.getElementById("bkOut"); ta.focus(); ta.select(); logEvent("export"); return true;
   }
   if(t.id==="bkCopy"){
     var o=document.getElementById("bkOut"); o.select();

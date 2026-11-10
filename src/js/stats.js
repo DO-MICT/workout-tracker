@@ -1,7 +1,7 @@
 /* ---------- Stats: charts at the top of the progress page ----------
    Volume per day/week/month, body weight from saved measurements, streak, weekly goal and insights.
    Reads the same workouts as the history list: the device log, or the database on the web. */
-var ST={range:"week",all:null,sets:[],loading:false};
+var ST={range:"week",all:null,sets:[],loading:false,from:"",to:"",cmp:null};
 function stWorkout(w){ return {id:w.id,at:w.performed_at,vol:w.volume_kg!=null?+w.volume_kg:(w.sets?histVolume(w):0),dur:w.duration_sec||0,sample:w.source==="sample"}; }
 function stSetsOf(w){ return (w.sets||[]).map(function(s){return {at:w.performed_at,n:s.exercise_name,mg:s.muscle_group,m:s.measure,w:s.weight,r:s.reps};}); }
 function statsLoad(){
@@ -28,6 +28,7 @@ var MON3=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec
 function stMonday(d){ var x=new Date(d.getFullYear(),d.getMonth(),d.getDate()); x.setDate(x.getDate()-((x.getDay()+6)%7)); return x; }
 function stAdd(d,days){ var x=new Date(d); x.setDate(x.getDate()+days); return x; }
 function stPeriod(range,back){
+  if(range==="custom") return stCustomPeriod(back);
   var now=new Date(), b=[], i;
   if(range==="week"){ var m=stAdd(stMonday(now),-7*back); for(i=0;i<7;i++) b.push({s:stAdd(m,i),e:stAdd(m,i+1),l:"MTWTFSS".charAt(i)}); }
   else if(range==="month"){ var m2=stAdd(stMonday(now),-21-28*back); for(i=0;i<4;i++){var s=stAdd(m2,7*i); b.push({s:s,e:stAdd(s,7),l:s.getDate()+" "+MON3[s.getMonth()]});} }
@@ -45,8 +46,8 @@ function stDelta(now,prev,unit,down){
   var good=down?!up:up;
   return '<span class="stdelta'+(good?'':' bad')+'">'+(up?"↑ ":"↓ ")+txt+'</span>';
 }
-var ST_VS={week:"vs last week",month:"vs previous 4 weeks",q:"vs previous 3 months",year:"vs previous year"};
-var ST_THIS={week:"this week",month:"last 4 weeks",q:"last 3 months",year:"last 12 months"};
+var ST_VS={week:"vs last week",month:"vs previous 4 weeks",q:"vs previous 3 months",year:"vs previous year",custom:"vs the period before"};
+var ST_THIS={week:"this week",month:"last 4 weeks",q:"last 3 months",year:"last 12 months",custom:"in these dates"};
 
 /* weeks in a row with at least one workout (this week counts once you've trained) */
 function stStreak(all){
@@ -63,9 +64,14 @@ function statsStreakChip(){
 var ST_FLAME='<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c.6 3.4 5 5.2 5 10a5 5 0 0 1-10 0c0-2.3 1.2-3.8 2.4-4.8-.1 2 .8 3.3 2 3.6C11 9 10.6 6 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
 
 function statsHtml(){
+  if(stLocked(ST.range)) ST.range="month";   /* Pro ended while a long range was picked */
   var all=ST.all, range=ST.range;
-  var seg='<div class="stseg" role="group" aria-label="Time range">'+[["week","Week"],["month","Month"],["q","3 Months"],["year","Year"]].map(function(o){
-    return '<button data-strange="'+o[0]+'" aria-pressed="'+(range===o[0])+'">'+o[1]+'</button>';}).join("")+'</div>';
+  if(range==="custom"&&!isWide()) range=ST.range="month";   /* picked dates on a big screen, then went back to the phone layout */
+  var opts=[["week","Week"],["month","Month"],["q","3 Months"],["year","Year"]]; if(isWide()) opts.push(["custom","Dates"]);
+  var seg='<div class="stseg'+(opts.length>4?' five':'')+'" role="group" aria-label="Time range">'+opts.map(function(o){
+    var lk=stLocked(o[0]);
+    return '<button data-strange="'+o[0]+'" aria-pressed="'+(range===o[0])+'"'+(lk?' class="stlock" aria-label="'+o[1]+', with Pro"':'')+'>'+o[1]+(lk?'<i class="lockdot" aria-hidden="true"></i>':'')+'</button>';}).join("")+'</div>';
+  if(range==="custom") seg+=stDatesHtml();
   if(all===null) return seg+'<p class="eqempty">Loading…</p>';
   var hasSample=all.some(function(w){return w.sample;});
   if(!all.length){
@@ -86,7 +92,7 @@ function statsHtml(){
     '<div class="stchart"><div class="stplot" role="img" aria-label="'+esc("Volume "+ST_THIS[range]+": "+p.b.map(function(b,i){return b.l+" "+Math.round(vols[i])+" "+wu;}).join(", "))+'">'+
     '<div class="stgrid"><i></i><i></i><i></i><i></i></div><div class="stbars">'+
     vols.map(function(v,i){var cls=!v?"zero":v===best?"best":""; var future=p.b[i].s>today;
-      return '<div class="stcol"><div class="stbar '+cls+(future?' future':'')+'" style="height:'+(v?Math.max(4,v/max*100):3)+'%"></div></div>';}).join("")+
+      return '<div class="stcol" data-tip="'+esc(stTipLabel(p.b[i])+": "+Math.round(v).toLocaleString("en-ZA").replace(/,/g," ")+" "+wu)+'" title="'+esc(stTipLabel(p.b[i])+": "+Math.round(v)+" "+wu)+'"><div class="stbar '+cls+(future?' future':'')+'" style="height:'+(v?Math.max(4,v/max*100):3)+'%"></div></div>';}).join("")+
     '</div></div><div class="stax">'+[max,max*2/3,max/3,0].map(function(v){return '<span>'+stK(v)+'</span>';}).join("")+'</div>'+
     '<div class="stlabels" style="grid-template-columns:repeat('+p.b.length+',minmax(0,1fr))">'+p.b.map(function(b){return '<span>'+esc(b.l)+'</span>';}).join("")+'</div></div></section>';
 
@@ -102,7 +108,7 @@ function statsHtml(){
       '<div class="stchart"><div class="stplot wt" role="img" aria-label="'+esc("Body weight "+ST_THIS[range]+": "+pts.map(function(x){return hDate(x.t.toISOString(),{day:"numeric",month:"short"})+" "+x.v+" "+wu;}).join(", "))+'">'+
       '<div class="stgrid three"><i></i><i></i><i></i></div>'+
       '<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polyline points="'+xy.map(function(q){return q.x.toFixed(2)+","+q.y.toFixed(2);}).join(" ")+'" vector-effect="non-scaling-stroke"/></svg>'+
-      xy.map(function(q){return '<i class="stdot" style="left:'+q.x.toFixed(2)+'%;top:'+q.y.toFixed(2)+'%"></i>';}).join("")+
+      xy.map(function(q,qi){var tip=hDate(pts[qi].t.toISOString(),{day:"numeric",month:"short"})+": "+fmtNum(pts[qi].v)+" "+wu;return '<i class="stdot" data-tip="'+esc(tip)+'" title="'+esc(tip)+'" style="left:'+q.x.toFixed(2)+'%;top:'+q.y.toFixed(2)+'%"></i>';}).join("")+
       '</div><div class="stax three">'+[hi,(hi+lo)/2,lo].map(function(v){return '<span>'+fmtNum(v)+'</span>';}).join("")+'</div>'+
       '<div class="stlabels" style="grid-template-columns:repeat('+p.b.length+',minmax(0,1fr))">'+p.b.map(function(b){return '<span>'+esc(b.l)+'</span>';}).join("")+'</div></div></section>';
   } else {
@@ -139,6 +145,7 @@ function statsHtml(){
         var len=pt[1]/nSets*CC, c='<circle cx="38" cy="38" r="'+R+'" class="stseg'+i+'" stroke-dasharray="'+len.toFixed(2)+' '+CC.toFixed(2)+'" stroke-dashoffset="'+(-off).toFixed(2)+'"/>'; off+=len; return c;}).join("")+'</g></svg>'+
       '<div><span class="stlbl">Sets by muscle</span><ul>'+parts.map(function(pt,i){return '<li><i class="stkey'+i+'"></i>'+Math.round(pt[1]/nSets*100)+'% '+esc(pt[0])+'</li>';}).join("")+'</ul></div></section>';
   }
+  if(isWide()) h+=statsCompareHtml(p);
   if(hasSample) h+='<p class="stsample">Showing sample workouts. <button class="linkbtn" data-stats="clearsample">Remove sample data</button></p>';
   return h;
 }
@@ -172,8 +179,11 @@ function statsClearSample(){
   prof().hist=prof().hist.filter(function(x){return !x.sample;});
   save();
 }
+/* Free keeps the week and month views; longer ranges are full stats (Pro, WP14) */
+function stLocked(range){ return (range==="q"||range==="year"||range==="custom")&&!can("stats.full"); }
 function statsClick(t){
-  if(t.dataset.strange){ST.range=t.dataset.strange;renderHistory(true);var b=document.querySelector('[data-strange="'+ST.range+'"]');if(b)b.focus({preventScroll:true});return true;}
+  if(t.dataset.strange&&stLocked(t.dataset.strange)){proOffer("stats");return true;}
+  if(t.dataset.strange){ST.range=t.dataset.strange; if(ST.range==="custom") stDatesDefault();renderHistory(true);var b=document.querySelector('[data-strange="'+ST.range+'"]');if(b)b.focus({preventScroll:true});return true;}
   if(t.dataset.stats==="sample"){statsSample();histReload();statsLoad();toast("Sample workouts added");return true;}
   if(t.dataset.stats==="clearsample"){statsClearSample();histReload();statsLoad();toast("Sample data removed");return true;}
   return false;

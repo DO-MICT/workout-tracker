@@ -1,0 +1,5 @@
+Subject: Confirm your new email for GFD
+<h1 style="font-size:22px;margin:0 0 12px;color:#0D0F12;">Confirm your new email</h1>
+<p style="margin:0 0 12px;">You asked to change the email on your GFD account from {{ .Email }} to {{ .NewEmail }}. Tap the button to confirm.</p>
+<p style="margin:24px 0;"><a href="{{ .ConfirmationURL }}" style="display:inline-block;background:#D4FF3A;color:#0D0F12;font-weight:bold;text-decoration:none;padding:13px 22px;border-radius:12px;">Confirm the change</a></p>
+<p style="font-size:13px;color:#6B747D;">Button not working? Copy this link into your browser:<br><a href="{{ .ConfirmationURL }}" style="color:#4A5560;word-break:break-all;">{{ .ConfirmationURL }}</a></p>

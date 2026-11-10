@@ -86,6 +86,26 @@ The `user_state` blob is being replaced by per-record tables (`user_settings`, `
   converted as it's saved, so records, last time and the big-jump check all work in kg.
 - Distances (km), body lengths (cm) and times don't change with the setting.
 
+## Usage events, errors and app config (WP5)
+
+Migration `20261108000013_events_errors_config.sql`. Nothing here may hold personal details (NFR-11).
+
+- `events(name, at, anon_id, platform, app_version, props)`: counts, not people. `anon_id` is a random id per install
+  (`src/js/events.js`), never the account id. The app sends only `onboarding_done`, `first_workout`, `week2_return`,
+  `paywall_seen` and `export` through `log_event`; the database writes `sign_up`, `trial_start`, `purchase` (an
+  entitlement from play, web, lifetime or couple) and `account_deleted` itself, with no id at all. `props` holds up to 8
+  numbers, true/false or short lower-case codes: free text and health data are refused. 100 events a day per install.
+- `client_errors`: message, stack, screen, version, scrubbed of emails, query strings, ids and long numbers (in the app and
+  again in `log_client_error`). The same error within an hour adds to `count`. 20 new errors an hour per install.
+- Nobody reads either table through the API. Admins see counts and the latest errors on More → Usage
+  (`admin_usage(days)`, `admin_errors(limit)`), or in the SQL editor. Events are purged after 400 days, errors after 90.
+- `app_config` (everyone reads, only the SQL editor writes): `min_version` (copies with an older `APP_VERSION` show
+  "A new version of GFD is ready" with a Reload button), `catalog_version`, `flags` (read with `flag("name")`).
+  To force a reload after a breaking release: bump `APP_VERSION` in `src/js/events.js`, merge, then
+  `update public.app_config set value = '"2026.12.01"' where key = 'min_version';`
+- Adding an event: add its name to `private.client_event_names()` (new migration) and to `EV_NAMES` in `events.js`, and a
+  label in `US_LABELS`.
+
 ## Deploying (`.github/workflows/db-deploy.yml`)
 
 - **Staging, automatic**: merging a PR with a new migration to `main` applies it to staging (with the library seed) and runs
@@ -119,3 +139,113 @@ Prefer a new forward migration that fixes the problem.
    two-user test there.
 
 Secrets never go in the repo. The app keeps using only the production publishable key.
+
+## Consents (WP6)
+
+- `consents` (migration `20261108000014_consents.sql`): one row per consent given or withdrawn, kinds `terms`, `privacy`,
+  `health`, `marketing`. Append-only: a trigger refuses every update; withdrawing adds a row with `withdrawn_at`. The
+  newest row per kind is the current state. Rows go with the account (cascade).
+- The app reads `my_consents` (one row per kind: active, agreed version, `current_version`) and writes only through
+  `give_consent(kind, version)` (the version must be today's) and `withdraw_consent(kind)` (health and marketing only;
+  terms and privacy end with account deletion, WP8).
+- Current versions live in `app_config.policies`. `terms` and `privacy` stay empty until the policy pages are published
+  (WP7); while empty nobody is asked. Bumping a version makes the app ask everyone again on next open.
+- Sign-up: ticked versions go in the user metadata (`consents`); the `profiles_consents_insert` trigger records the
+  ones that match today's versions. Anything else is asked by the screen after sign-in (`src/js/consent.js`).
+- `private.has_consent(uid, kind)` is for the health tables' RLS (WP9). Withdrawing health consent calls
+  `private.delete_health_data(uid)`; WP9 fills it in with deletes from its tables.
+
+## Account deletion and data export (WP8)
+
+Migration `20261109000016_account_deletion.sql`, Edge Function `supabase/functions/delete-account`, app `src/js/account.js`,
+web page `site/delete-account.html` (built to `delete-account.html`, the link for Google Play's data deletion form).
+
+- **Asking**: Profile › Delete my account (type DELETE), or the web page. `request_account_deletion(source)` adds a
+  `deletion_requests` row due in 7 days (asking again keeps the first date). The phone then signs out and forgets its copy.
+- **Changing your mind**: signing in during the 7 days shows "Keep your account?" before anything else (before the
+  consent gate); `cancel_account_deletion()` removes the row. The web page offers the same.
+- **Deleting**: `.github/workflows/account-deletions.yml` calls the `delete-account` function once a day with the header
+  `x-cron-secret`. For each due request (`core.js`, the same code the tests run): remove the person's files under
+  `<user id>/` in the `suggestions` and `progress-photos` buckets, delete the RevenueCat customer once
+  `REVENUECAT_SECRET_KEY` is set (WP12), then delete the auth user. Every table with a `user_id` cascades from
+  `auth.users` (a pgTAP check enforces it), the profiles trigger logs `account_deleted` with no id, and the trial check
+  code stays in `private.trial_ledger`. A failure leaves the row with `attempts` and `last_error`; the next day retries.
+  The function's result is counts only.
+- **Export**: `export_my_data()` returns one JSON document with every table, listed by name. The app adds CSVs of sets
+  and measurements, a README and feedback screenshots, and saves a ZIP (`gfd-data-YYYY-MM-DD.zip`). Logs `export`.
+- **Adding a table with personal data**: give it `user_id ... references auth.users (id) on delete cascade`, add it to
+  `export_my_data()` (new migration; `06_account_deletion.test.sql` fails otherwise), and if it holds files, add the
+  bucket to `BUCKETS` in `core.js` with files under `<user id>/`. WP15 ends couple links in `deleteOne`.
+- Tests: `supabase/tests/database/06_account_deletion.test.sql`, `tests/db/account-deletion.test.mjs` (export, the
+  two-user cases, a full deletion run with files, and a failed run that retries), `tests/account.test.js` (ZIP and CSV).
+
+### One-time setup (Deon)
+
+1. Apply the migration (Deploy database workflow, as for the others).
+2. Supabase → Edge Functions → Secrets (staging and production): `DELETE_CRON_SECRET` = a long random text
+   (40+ characters, from a password manager).
+3. Deploy the function: GitHub → Settings → Secrets → Actions: `SUPABASE_ACCESS_TOKEN` (supabase.com → Account →
+   Access tokens); Settings → Environments → staging / production → Variables: `PROJECT_REF`. Then Actions → Deploy
+   functions → Run workflow (staging, then production). Or from a computer with the CLI:
+   `supabase functions deploy delete-account --project-ref <ref>`.
+4. GitHub → Settings → Secrets → Actions: `DELETE_FN_URL` = `https://zdllpjrkwcdmcuizxuum.supabase.co/functions/v1/delete-account`
+   and `DELETE_CRON_SECRET` = the same text as step 2. Then Actions → Account deletions → Run workflow once: it should
+   print `{"due":0,"deleted":0,"failed":0,"files":0}`.
+5. Google Play Console → App content → Data safety → Data deletion: link `<site>/delete-account.html`.
+
+GitHub turns off scheduled workflows after 60 days without commits. If the repo goes quiet, re-enable it on the Actions
+tab, or schedule the function in Supabase instead (Integrations → Cron → new job → Edge Function `delete-account`,
+daily, header `x-cron-secret`).
+
+## Health details (WP9)
+
+Migration `20261109000017_health_data.sql`, app `src/js/health.js`. NFR-6: health details live apart, only with consent.
+
+- `health_limits`: `kind` = `exercise_note` (injury note on an exercise, one per exercise), `cant_do` (a short code such as
+  `no_jumping`, one per code), `injury` or `note`. `pain_entries`: `score` 0 to 10, optional `exercise_id` and `workout_id`
+  (your own workouts only), `felt_at`, `note`. Only injury notes have screens so far; limits (G1) and pain (FR-4.10) come
+  later on the same tables.
+- RLS: own rows **and** `private.health_ok()` (= `has_consent(auth.uid(), 'health')`) for every read and write. Without
+  active consent even the owner's app gets nothing. The app reads and writes them directly (not through sync).
+- Withdrawing health consent (`withdraw_consent('health')`) runs `private.delete_health_data(uid)`, which deletes both
+  tables' rows at once. Account deletion cascades as usual.
+- `export_my_data()` returns them under a separate top-level `health` section, not in `tables`.
+- Never put health details in `events`, `client_errors`, `user_settings.prefs` or the synced tables. Injury notes used to
+  sync as `exercise_notes` (WP3 draft); they are now local-only in `S` (`syncmap.js` LOCAL: `notes`, `healthQ`,
+  `healthSync`) and `health.js` keeps them in `health_limits`. `exercise_notes` is left for setup cues (FR-4.9).
+- In the app: after the consent gate, `healthStart()` loads notes (consent on), forgets them (withdrawn), or asks once per
+  open whether to keep a phone's older notes (never asked). Adding a note without consent asks first. Profile › Privacy has
+  the Health details on/off switch (off deletes). Signed out, notes stay on the phone as before.
+- Adding a health table: same RLS pattern, add it to `delete_health_data` and to the `health` section of
+  `export_my_data()` (new migration), and a case in the health test of `tests/db/rls-two-user.test.mjs`.
+
+## Free and Pro (WP14)
+
+Migration `20261109000018_plan_limits.sql`, app `src/js/access.js` (plus small hooks in `plans.js`, `stats.js`,
+`measure.js`). Decisions D13 and D20: Free keeps 3 plans and the basic measurements; when Pro ends nothing is deleted.
+
+- **What Free includes** is in `app_config.free_limits`: `plans` (own plans in use at once, 3) and `measure_sites`
+  (`weight`, `waist`, `chest`, `hips`; height is always open). Raise the cap without a release:
+  `update public.app_config set value = jsonb_set(value, '{plans}', '5') where key = 'free_limits';`
+- **The plan cap is on the server**: trigger `plans_limit` on `public.plans`. It counts your own plans
+  (`source_template is null`) that aren't deleted or `read_only`. Built-in plans and your edits to them never count.
+  It never refuses a sync write (a refused write is lost on the phone): a new plan over the cap is saved `read_only`, and
+  a change to a read-only plan is undone with the attempted body kept in `plan_versions`. Moving it in the list
+  (`body.pos`) and deleting it are allowed. Only an explicit unlock over the cap raises (`plan_limit`).
+- **Downgrade**: `private.apply_plan_limits(uid)` keeps the active plan and the two most recently trained, and marks the
+  rest `read_only`; on Pro it unlocks everything. It runs from the `entitlements_plan_limits` trigger (any purchase,
+  refund, grant or revoke), from `my_plan_access()` when the app opens, and nightly at 03:17 UTC through pg_cron
+  (`gfd-plan-limits` → `private.apply_due_plan_limits()`) for trials that ran out on their own.
+- **The app calls** `my_plan_access()` (after `my_access`, in `refreshAccess`) → `{unlimited, limit, in_use, locked}`,
+  and `choose_plans(local_ids)` from the "Plans in use" sheet. `read_only` is not in syncmap's `FIELDS`, so the app never
+  writes it. While offline, `lockedPlans()` also treats any plan beyond the cap as read-only (active plan first).
+- **Pro-only rows**: new `progress_photos` rows need the `photos` feature (trigger `progress_photos_pro`). F10 adds the
+  bucket policy for the files.
+- **App-only gates** (architecture 5.3: the data is the user's own): Stats ranges 3 months and year (`stats.full`),
+  measurement sites beyond the basic ones (`measure.full`: shown in Body progress, read only; delete still works).
+  Progression, timed workouts and photos have keys and upgrade words ready for when those features ship.
+- **Upgrade page**: `proOffer(why)` opens it and logs `paywall_seen` with `{from: why}`. Buying hooks in through
+  `window.GFDBilling = {buy(why) -> Promise, label}` (WP12 Play / RevenueCat, WP13 Paddle); without it the page says Pro
+  opens with the Google Play release.
+- Tests: `supabase/tests/database/08_plan_limits.test.sql`, the plan cap case in `tests/db/rls-two-user.test.mjs`,
+  `tests/access.test.js`.

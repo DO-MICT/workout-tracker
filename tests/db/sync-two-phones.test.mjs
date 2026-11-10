@@ -86,6 +86,7 @@ test('two phones: move off the blob, change different things offline, both end u
   assert.equal((await rest('profiles?select=data_model'))[0].data_model, 2);
   assert.equal((await rest('plans?select=id')).length, 2);
   assert.equal((await rest('measurements?select=id')).length, 1);
+  assert.equal((await rest('exercise_notes?select=id')).length, 0, 'injury notes are health details: not synced here (WP9)');
   await wait();
   assert.deepEqual(Object.keys(p1.SY.queue), [], 'nothing left to send after the move');
 
@@ -93,14 +94,15 @@ test('two phones: move off the blob, change different things offline, both end u
   assert.equal(await vm.runInContext(`storeStart(sbUser,2)`, p2), true, 'phone 2 starts fresh');
   await wait();
   assert.equal(p2.S.plans.custom[1].name, 'Plan two');
-  assert.equal(p2.S.notes.bench, 'Seat 4');
+  assert.equal(p2.S.notes, undefined, 'injury notes come from the health table (health.js), not sync');
+  assert.equal(p1.S.notes.bench, 'Seat 4', 'phone 1 keeps its own notes until health.js handles them');
   assert.equal(p2.S.profile.hist[0].v.weight, '81.2');
   assert.deepEqual(Object.keys(p2.SY.queue), [], 'adopting the account data sends nothing back');
 
   // both phones go offline and change different things
   p1.offline = p2.offline = true;
   p1.S.plans.custom[0].name = 'Renamed on phone 1'; p1.S.theme = 'light';
-  p2.S.plans.custom[1].name = 'Renamed on phone 2'; p2.S.palette = 'flow'; p2.S.notes = {};
+  p2.S.plans.custom[1].name = 'Renamed on phone 2'; p2.S.palette = 'flow';
   vm.runInContext('storeChanged(true)', p1); vm.runInContext('storeChanged(true)', p2);
   await vm.runInContext('syPush()', p1); await vm.runInContext('syPush()', p2);
   assert.ok(Object.keys(p1.SY.queue).length >= 2, 'phone 1 keeps its changes while offline');
@@ -115,11 +117,10 @@ test('two phones: move off the blob, change different things offline, both end u
     assert.equal(p.S.plans.custom[1].name, 'Renamed on phone 2', p.name);
     assert.equal(p.S.theme, 'light', p.name);
     assert.equal(p.S.palette, 'flow', p.name);
-    assert.equal(p.S.notes && p.S.notes.bench, undefined, p.name + ' note removed');
     assert.deepEqual(Object.keys(p.SY.queue), [], p.name + ' queue empty');
   }
   assert.ok(p1.renders > 0, "phone 1 redrew after pulling phone 2's changes");
-  assert.equal((await rest('exercise_notes?select=id&deleted_at=not.is.null')).length, 1, 'the note is a tombstone');
+  assert.equal((await rest('exercise_notes?select=id')).length, 0, 'still no injury notes in the synced tables');
 
   // a reopened phone with saved state only sends what changed
   const saved = JSON.parse(p1.localStorage.getItem('gfd-sync-' + user.id));
