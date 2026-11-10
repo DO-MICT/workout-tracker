@@ -1,0 +1,42 @@
+name: Push sign-in settings
+# Sends the sign-in emails, site address, redirect URLs and (if SMTP secrets are set) the Brevo sender to GFD Dev or
+# GFD Prod, with tools/push_auth_emails.py. Mode "check" shows what would change; "apply" sends it.
+# Supabase keeps these in the dashboard, not in migrations, so this keeps them the same as the repo.
+#
+# Repository secrets (Settings > Secrets and variables > Actions):
+#   SUPABASE_ACCESS_TOKEN   supabase.com > Account > Access tokens (same one Deploy functions uses)
+#   SMTP_USER, SMTP_PASS    Brevo > SMTP & API > SMTP: the login and an SMTP key (optional: without them only emails + URLs)
+# The project comes from deploy/supabase.json for the chosen environment.
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        type: choice
+        options: [dev, production]
+        default: dev
+      mode:
+        type: choice
+        options: [check, apply]
+        default: check
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment: ${{ inputs.target }}
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SMTP_USER: ${{ secrets.SMTP_USER }}
+      SMTP_PASS: ${{ secrets.SMTP_PASS }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Push (${{ inputs.mode }}) to ${{ inputs.target }}
+        run: |
+          test -n "$SUPABASE_ACCESS_TOKEN" || { echo "::error::Add the SUPABASE_ACCESS_TOKEN repository secret."; exit 1; }
+          args=(--env "${{ inputs.target }}")
+          [ "${{ inputs.mode }}" = apply ] && args+=(--apply)
+          if [ -n "$SMTP_USER" ] && [ -n "$SMTP_PASS" ]; then
+            args+=(--smtp-host smtp-relay.brevo.com --smtp-port 587 --smtp-user "$SMTP_USER")
+          fi
+          python3 tools/push_auth_emails.py "${args[@]}" | tee out.txt
+          { echo "### Sign-in settings: ${{ inputs.target }} (${{ inputs.mode }})"; echo '```'; cat out.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"

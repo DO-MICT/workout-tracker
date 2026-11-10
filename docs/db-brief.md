@@ -180,7 +180,9 @@ Prefer a new forward migration that fixes the problem.
 3. **Move**: Actions → Move to GFD Prod → `check`, then `apply`.
 4. **GFD Dev**: Actions → Deploy database → Run workflow on `dev` → `dev`. It builds GFD Dev from scratch, loads the
    library and runs the tests there.
-5. **Auth settings** for both: `tools/push_auth_emails.py --env production` and `--env dev` (see `docs/site-brief.md`).
+5. **Auth settings** for both: Actions → Push sign-in settings (`dev`, then `production`; `check`, then `apply`), with
+   repository secrets `SUPABASE_ACCESS_TOKEN`, `SMTP_USER`, `SMTP_PASS` (Brevo). Same as running
+   `tools/push_auth_emails.py --env dev|production` locally (see `docs/site-brief.md`).
 
 Secrets never go in the repo. The app keeps using only the production publishable key.
 
