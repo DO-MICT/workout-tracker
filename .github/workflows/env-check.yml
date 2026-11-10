@@ -1,0 +1,77 @@
+name: Check environment
+# Read-only: checks that the secrets and the PROJECT_REF variable in the dev or production environment all point at
+# the same Supabase project, and that it's the one deploy/supabase.json names. Changes nothing. Prints no secrets.
+# Runs by itself when this file changes (both environments), or by hand: Actions > Check environment > Run workflow.
+on:
+  push:
+    paths: ['.github/workflows/env-check.yml']
+  workflow_dispatch:
+    inputs:
+      target:
+        type: choice
+        options: [dev, production]
+        default: production
+
+jobs:
+  check:
+    name: check ${{ matrix.target }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        target: ${{ github.event_name == 'push' && fromJSON('["production","dev"]') || fromJSON(format('["{0}"]', inputs.target)) }}
+    environment: ${{ matrix.target }}
+    env:
+      TARGET: ${{ matrix.target }}
+      DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+      SB_URL: ${{ secrets.SUPABASE_URL }}
+      SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+      PROJECT_REF: ${{ vars.PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check
+        run: |
+          ok=1; s=$GITHUB_STEP_SUMMARY
+          pass() { echo "✅ $*"; echo "- ✅ $*" >> "$s"; }
+          fail() { echo "::error::$*"; echo "- ❌ $*" >> "$s"; ok=0; }
+          echo "### Environment $TARGET" >> "$s"
+          want=$(python3 -c "import json;print(json.load(open('deploy/supabase.json'))['$TARGET']['url'])")
+          ref=${want#https://}; ref=${ref%%.supabase.co}
+          echo "deploy/supabase.json: $want"; echo "- deploy/supabase.json: $want" >> "$s"
+
+          [ "${SB_URL%/}" = "$want" ] && pass "SUPABASE_URL is $want" || fail "SUPABASE_URL is missing or not $want"
+          [ "$PROJECT_REF" = "$ref" ] && pass "PROJECT_REF variable is $ref" || fail "PROJECT_REF variable is '${PROJECT_REF}' (want $ref; it's a Variable, not a Secret)"
+
+          if [ -z "$DB_URL" ]; then fail "SUPABASE_DB_URL is missing"
+          else
+            case "$DB_URL" in *"$ref"*) pass "SUPABASE_DB_URL names project $ref";; *) fail "SUPABASE_DB_URL is for another project";; esac
+            case "$DB_URL" in *pooler.supabase.com:5432*) pass "SUPABASE_DB_URL is the Session pooler";; *) fail "SUPABASE_DB_URL should be the Session pooler URI (…pooler.supabase.com:5432…)";; esac
+            case "$DB_URL" in *YOUR-PASSWORD*) fail "SUPABASE_DB_URL still has [YOUR-PASSWORD] in it";; esac
+            # where it points, without the password: user@host:port
+            where=$(python3 -c "import sys,urllib.parse as u;x=u.urlsplit(sys.argv[1]);print(f'{x.username}@{x.hostname}:{x.port}')" "$DB_URL" 2>/dev/null || echo "not a postgresql:// URI")
+            echo "SUPABASE_DB_URL points at $where"; echo "- SUPABASE_DB_URL points at $where" >> "$s"
+            if out=$(psql "$DB_URL" -XAt -v ON_ERROR_STOP=1 -c "select count(*)||' accounts' from auth.users" 2>&1); then
+              if [ "$(psql "$DB_URL" -XAt -c "select to_regclass('supabase_migrations.schema_migrations') is not null")" = t ]; then
+                out="$out, newest migration $(psql "$DB_URL" -XAt -c "select coalesce(max(version),'none') from supabase_migrations.schema_migrations")"
+              else out="$out, no migrations yet (empty project)"; fi
+              pass "Database login works: $out"
+            else
+              fail "Database login failed: $(echo "$out" | sed -E 's#postgres(ql)?://[^ ]*#<url>#g' | tr '\n' ' ' | cut -c1-200)"
+            fi
+          fi
+
+          if [ -z "$SERVICE_KEY" ]; then fail "SUPABASE_SERVICE_KEY is missing"
+          else
+            case "$SERVICE_KEY" in sb_publishable_*) fail "SUPABASE_SERVICE_KEY is the publishable key; use the secret key (sb_secret_…)";; esac
+            h=(-H "apikey: $SERVICE_KEY"); case "$SERVICE_KEY" in eyJ*) h+=(-H "Authorization: Bearer $SERVICE_KEY");; esac
+            code=$(curl -s -o /dev/null -w '%{http_code}' "${h[@]}" "$want/auth/v1/admin/users?per_page=1")
+            [ "$code" = 200 ] && pass "SUPABASE_SERVICE_KEY works (admin access)" || fail "SUPABASE_SERVICE_KEY rejected by $want (HTTP $code)"
+          fi
+
+          if [ "$TARGET" = dev ]; then
+            code=$(curl -s -o /dev/null -w '%{http_code}' -H "apikey: $ANON_KEY" "$want/auth/v1/settings")
+            [ "$code" = 200 ] && pass "SUPABASE_ANON_KEY works" || fail "SUPABASE_ANON_KEY rejected (HTTP $code)"
+          fi
+          [ $ok = 1 ] && { echo "**All good.**" >> "$s"; echo "All good."; } || exit 1

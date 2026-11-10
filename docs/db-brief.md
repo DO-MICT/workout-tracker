@@ -9,8 +9,10 @@ Before WP2, SQL was pasted into the production SQL editor by hand; now GitHub Ac
 |---|---|---|
 | Local / CI | Throwaway Supabase started in Docker (`supabase start`) | Every PR that touches `supabase/` |
 | Dev | `GFD Dev` (Deon's GFD Supabase account) | The `dev` branch and https://dev.getfitdaily.co.za: migration rehearsal, two-user tests, test accounts |
-| Production | `GFD Prod` (Deon's GFD Supabase account) | The `main` branch and https://getfitdaily.co.za: real users |
-| Old production | `Workout tracker` (`zdllpjrkwcdmcuizxuum`, eu-west-3) | Real users until the move to GFD Prod; then paused, kept a few weeks as a backup |
+| Production | `GFD Prod` (`zdllpjrkwcdmcuizxuum`, eu-west-3, Deon's GFD Supabase account) | The `main` branch and https://getfitdaily.co.za: real users |
+
+GFD Prod is the original `Workout tracker` project, transferred into the GFD organization and renamed on 10 Nov 2026
+(Supabase → project settings → Transfer project). Everything came with it, so the URL keeps its old ref.
 
 GFD Dev is a clone of GFD Prod's structure: the same migrations plus the exercise and gear library (seed). It never
 holds real people's data (POPIA/GDPR: test with test accounts).
@@ -137,11 +139,15 @@ Migration `20261108000013_events_errors_config.sql`. Nothing here may hold perso
   runs the two-user and sync tests there.
 - **GFD Prod, one approval**: merging `dev` into `main` with a new migration starts the production job, which waits for
   Deon's approval (the protected `production` environment), prints what it will apply and applies it. It can also be run
-  by hand from `main` (Run workflow → `production`). It refuses an empty GFD Prod: the move below comes first.
+  by hand from `main` (Run workflow → `production`). It refuses an empty GFD Prod (a safety check).
 - Each job's summary lists the migrations it applied.
 - Library data (`exercises.sql`, `gear.sql`) is still loaded into production by hand when it changes (`docs/data-brief.md`).
 
-## Moving to GFD Prod (one time, Nov 2026)
+## Moving to GFD Prod (one time, Nov 2026): not used
+
+Deon transferred the old project instead (above), which keeps everything without copying. The workflow and script
+below stay for a future move between projects (for example to another region): they copy into an empty project.
+
 
 `tools/db_move.sh`, run by Actions → **Move to GFD Prod (one time)** (`.github/workflows/db-move.yml`, `production`
 environment, so it waits for approval). Mode `check` reads both projects and changes nothing; `apply` moves.
@@ -168,16 +174,16 @@ Prefer a new forward migration that fixes the problem.
 
 ## One-time setup (Deon)
 
-1. **Projects.** In the GFD Supabase account: `GFD Prod` (exists) and `GFD Dev`, same region, free plan, strong
+1. **Projects.** In the GFD Supabase account: `GFD Prod` (transferred) and `GFD Dev`, same region, free plan, strong
    database passwords in a password manager. Put each project's URL and **publishable** key in `deploy/supabase.json`.
 2. **GitHub environments.** Repo → Settings → Environments (the old `staging` one can be deleted):
    - `dev`, secrets: `SUPABASE_DB_URL` (dashboard → Connect → **Session pooler** URI, with the password filled in),
      `SUPABASE_URL` (Project Settings → API → URL), `SUPABASE_ANON_KEY` (publishable key), `SUPABASE_SERVICE_KEY`
      (secret key); variable `PROJECT_REF`.
    - `production`, tick **Required reviewers** and add yourself; secrets `SUPABASE_DB_URL`, `SUPABASE_URL`,
-     `SUPABASE_SERVICE_KEY` (GFD Prod); variable `PROJECT_REF`. For the move only: `OLD_SUPABASE_DB_URL`,
-     `OLD_SUPABASE_URL`, `OLD_SUPABASE_SERVICE_KEY` (the old project; delete them afterwards).
-3. **Move**: Actions → Move to GFD Prod → `check`, then `apply`.
+     `SUPABASE_SERVICE_KEY` (GFD Prod); variable `PROJECT_REF` = `zdllpjrkwcdmcuizxuum`.
+3. **Production migration history**: run `supabase/one-off/wp2-production-migration-history.sql` once in GFD Prod's SQL
+   editor (done 10 Nov 2026).
 4. **GFD Dev**: Actions → Deploy database → Run workflow on `dev` → `dev`. It builds GFD Dev from scratch, loads the
    library and runs the tests there.
 5. **Auth settings** for both: Actions → Push sign-in settings (`dev`, then `production`; `check`, then `apply`), with

@@ -43,7 +43,7 @@ Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-trac
    `main` puts it live on https://getfitdaily.co.za (GFD Prod). Which Supabase each site uses: `deploy/supabase.json`.
 
 ## Supabase
-- Projects: `GFD Prod` (live) and `GFD Dev` (dev branch), in Deon's GFD Supabase account; URLs and publishable keys in `deploy/supabase.json`. The old `Workout tracker` project (`zdllpjrkwcdmcuizxuum`) is moved into GFD Prod by the "Move to GFD Prod" workflow. Schema changes go through GitHub Actions, not the SQL editor: see `docs/db-brief.md`.
+- Projects: `GFD Prod` (live) and `GFD Dev` (dev branch), in Deon's GFD Supabase account; URLs and publishable keys in `deploy/supabase.json`. GFD Prod is the original `Workout tracker` project (`zdllpjrkwcdmcuizxuum`), transferred into the GFD account on 10 Nov 2026. Schema changes go through GitHub Actions, not the SQL editor: see `docs/db-brief.md`.
 - Tables: `profiles` (name, email, tier), `user_state` (the app's data as JSON) `suggestions` (tester feedback), `exercises` and `gear` (shared catalogues: everyone can read them, only admins can change them; the app loads them at start and keeps a copy on the phone), and `workouts` + `workout_sets` (history; saved through the `save_workout` function in one transaction, with ids made on the phone so retries never duplicate). Row level security: each user can only read and write their own rows; tier and suggestion status can't be changed from the app.
 - Storage: private `suggestions` bucket for screenshots (images only, 5 MB max, one folder per user).
 - Admins: `profiles.is_admin`. Admins see Menu → Feedback in the app. Add one in the SQL editor: `update public.profiles set is_admin = true where email = '…';`
