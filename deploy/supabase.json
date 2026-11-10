@@ -1,16 +1,16 @@
 {
   "_readme": "Which Supabase project each build talks to. tools/build_dist.py (the Docker build Coolify runs) and tools/build_app.py (Android) put the url and key of the chosen environment into the app. Coolify picks it with the GFD_ENV build variable: production for main (getfitdaily.co.za), dev for the dev branch (dev.getfitdaily.co.za). Only the project URL and the publishable key go here: both are public by design (every visitor's browser gets them). Never put a secret or service key here. See docs/db-brief.md.",
   "production": {
-    "name": "GFD Prod",
-    "url": "",
-    "key": "",
+    "name": "GetFitDailyProd",
+    "url": "https://rbnhqwgvwwmvglbiytnz.supabase.co",
+    "key": "sb_publishable_T7W74TH1owJ6neO9Y4TusQ_gr5Mnpjf",
     "site": "https://getfitdaily.co.za/"
   },
   "dev": {
-    "name": "GFD Dev",
-    "url": "",
-    "key": "",
+    "name": "GetFitDailyDev",
+    "url": "https://incujtxyxtygehpkgtwz.supabase.co",
+    "key": "sb_publishable_Qjov8VLdzN6oybg8q4vXnQ_Olg4_bCC",
     "site": "https://dev.getfitdaily.co.za/"
   },
-  "_old_production": "Workout tracker (zdllpjrkwcdmcuizxuum), the project before the move to GFD Prod. Builds with an empty production url still use it, so the live site keeps working until the move is done."
+  "_old_production": "Workout tracker (zdllpjrkwcdmcuizxuum), the project before the move to GFD Prod. Its URL is still the default in the source files (signin.js, delete-account.html) until the move is done; builds replace it."
 }
