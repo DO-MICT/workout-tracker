@@ -11,7 +11,7 @@ function numAttrs(step,dec,unit){
 /* the usual step for a unit label, so callers can just pass the label they show */
 function numFor(unit){
   var u=String(unit||"").replace("+","");
-  var T={kg:[0.1,2],lb:[0.1,2],km:[0.1,2],min:[1,1],sec:[1,0],reps:[1,0],cm:[0.5,1]}[u]||[1,2];
+  var T={kg:[0.5,2],lb:[0.5,2],km:[0.1,2],min:[1,1],sec:[1,0],reps:[1,0],cm:[0.5,1]}[u]||[1,2];
   return numAttrs(T[0],T[1],u);
 }
 var NP={press:null,scrub:null,pad:null,until:0};
@@ -36,7 +36,7 @@ function npBubbleShow(){
   document.getElementById("npUp").textContent=npFmt(v+s.sp.step); document.getElementById("npDn").textContent=v-s.sp.step>=0?npFmt(v-s.sp.step):"";
 }
 /* a short slide moves one notch per 15px; past 150px it speeds up for big jumps.
-   Fine steps (0.1 kg) speed up much harder, so 60 to 80 kg is still one slide. */
+   Fine steps (0.1, like body weight) speed up much harder, so big jumps are still one slide. */
 function npSteps(d,fine){ var a=Math.abs(d), s=a<=150?a/15:fine?10+Math.pow((a-150)/6,1.6):10+(a-150)/6; return Math.round(s)*(d<0?-1:1); }
 function npScrubStart(){
   var p=NP.press, el=p.el, sp=npSpec(el), v=npNum(el);
