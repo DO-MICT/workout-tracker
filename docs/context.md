@@ -11,7 +11,7 @@ Publish to the Apple App Store and Google Play with a subscription model:
 - **Pro** — full access, price TBC
 - **Tester** — full access while testing
 
-The server decides the tier (WP1, Nov 2026): `entitlements` + `my_access`, read by `src/js/access.js` (`can('stats.full')`). New accounts get a 14-day Pro trial; nothing is gated in the app yet (that's WP14).
+The server decides the tier (WP1, Nov 2026): `entitlements` + `my_access`, read by `src/js/access.js` (`can('stats.full')`). New accounts get a 14-day Pro trial. Free vs Pro gating (WP14): see `docs/db-brief.md` → Free and Pro.
 
 ## Where it stands (October 2026)
 - **MVP web app** — one HTML file (`app.html`), mobile-first, no build tooling.
@@ -25,7 +25,7 @@ The server decides the tier (WP1, Nov 2026): `entitlements` + `my_access`, read 
   - `workouts` (one row per completed workout: performed_at, started_at, duration, plan/day/location ids **and names as snapshots**, set_count, volume_kg, source app|import) and `workout_sets` (exercise id/name/muscle group, exercise_order, set_no, measure w|bw|cardio|time|hold|count, weight, reps, done, superset tag; user_id + performed_at copied in for fast per-exercise progress). Written only via `save_workout(jsonb)`: one transaction, idempotent on the device-generated uuid. Users read/insert/delete their own rows; no updates yet.
   - `profiles.is_admin` + `private.is_admin()`: admins read all suggestions, profiles and screenshots and can update suggestion status only.
   - Trigger creates profile + user_state rows on sign-up. RLS: own rows only; users may update only `display_name` on profiles.
-  - Migrations in `supabase/migrations/`, checked by the `db-check` workflow and applied by `db-deploy` (staging project `gfd-staging`, then production on approval). See `docs/db-brief.md`.
+  - Migrations in `supabase/migrations/`, checked by the `db-check` workflow and applied by `db-deploy` (GFD Dev from the `dev` branch, GFD Prod from `main` on approval). Hosting moved to Coolify (getfitdaily.co.za = main + GFD Prod, dev.getfitdaily.co.za = dev + GFD Dev) in Nov 2026. See `docs/db-brief.md`.
 - **Repo** `DO-MICT/workout-tracker` (public, required for free GitHub Pages).
 
 ## Features in the MVP

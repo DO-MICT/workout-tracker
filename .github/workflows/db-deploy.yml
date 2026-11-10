@@ -1,45 +1,48 @@
 name: Deploy database
-# Applies new migrations from supabase/migrations: staging first, then production after Deon approves.
+# Applies new migrations from supabase/migrations to the Supabase project that matches the branch:
+#   dev branch  -> GFD Dev  (environment "dev"), with the exercise and gear library, then the RLS tests
+#   main branch -> GFD Prod (environment "production", waits for Deon's approval)
 # Replaces pasting SQL into the Supabase SQL editor. Setup and how to use it: docs/db-brief.md
 #
-#   * Merging to main with a new migration updates staging by itself.
-#   * Production: Actions > Deploy database > Run workflow > "staging-then-production".
-#     The production job waits for approval in the protected "production" environment.
+#   * Merging a PR with a new migration into dev updates GFD Dev by itself.
+#   * Merging dev into main asks for approval, then updates GFD Prod.
+#   * Run by hand: Actions > Deploy database > Run workflow (production only from main).
 #
 # Secrets (Settings > Environments):
-#   staging:    SUPABASE_DB_URL (session pooler URL), SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_KEY
+#   dev:        SUPABASE_DB_URL (session pooler URL), SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_KEY
 #   production: SUPABASE_DB_URL (session pooler URL), with Deon as required reviewer
 on:
   push:
-    branches: [main]
+    branches: [dev, main]
     paths: ['supabase/migrations/**']
   workflow_dispatch:
     inputs:
       target:
-        description: Where to apply new migrations
+        description: Where to apply new migrations (production only runs from main)
         type: choice
-        options: [staging, staging-then-production]
-        default: staging
+        options: [dev, production]
+        default: dev
 
 concurrency:
   group: db-deploy
   cancel-in-progress: false
 
 jobs:
-  staging:
+  dev:
+    if: (github.event_name == 'push' && github.ref_name == 'dev') || (github.event_name == 'workflow_dispatch' && inputs.target == 'dev')
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    environment: staging
+    environment: dev
     env:
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Is staging set up?
+      - name: Is GFD Dev set up?
         id: ready
         run: |
           if [ -z "$SUPABASE_DB_URL" ]; then
-            echo "::warning::Staging isn't set up yet (no SUPABASE_DB_URL secret in the staging environment). See docs/db-brief.md."
+            echo "::warning::GFD Dev isn't set up yet (no SUPABASE_DB_URL secret in the dev environment). See docs/db-brief.md."
             echo "ok=false" >> "$GITHUB_OUTPUT"
           else
             echo "ok=true" >> "$GITHUB_OUTPUT"
@@ -50,13 +53,13 @@ jobs:
         with:
           version: 3.0.0
 
-      - name: What will change on staging
+      - name: What will change on GFD Dev
         if: steps.ready.outputs.ok == 'true'
         run: |
           supabase db push --remote="$SUPABASE_DB_URL" --include-seed --dry-run --yes | tee plan.txt
-          { echo "### Staging: migrations to apply"; echo '```'; cat plan.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          { echo "### GFD Dev: migrations to apply"; echo '```'; cat plan.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Apply to staging
+      - name: Apply to GFD Dev
         if: steps.ready.outputs.ok == 'true'
         run: supabase db push --remote="$SUPABASE_DB_URL" --include-seed --yes
 
@@ -65,7 +68,7 @@ jobs:
         with:
           node-version: 22
 
-      - name: RLS two-user test on staging
+      - name: RLS two-user test on GFD Dev
         if: steps.ready.outputs.ok == 'true'
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
@@ -73,12 +76,8 @@ jobs:
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: node --test tests/db/*.test.mjs
 
-    outputs:
-      ready: ${{ steps.ready.outputs.ok }}
-
   production:
-    needs: staging
-    if: github.event_name == 'workflow_dispatch' && inputs.target == 'staging-then-production' && needs.staging.outputs.ready == 'true'
+    if: github.ref_name == 'main' && (github.event_name == 'push' || inputs.target == 'production')
     runs-on: ubuntu-latest
     timeout-minutes: 15
     environment: production   # protected: waits for Deon's approval
@@ -90,14 +89,22 @@ jobs:
       - name: Production secret present
         run: test -n "$SUPABASE_DB_URL" || { echo "::error::No SUPABASE_DB_URL secret in the production environment. See docs/db-brief.md."; exit 1; }
 
+      - name: Has the move to GFD Prod been done?
+        # An empty GFD Prod must get the old project's data first (Move to GFD Prod workflow), or the move can't run.
+        run: |
+          n=$(psql "$SUPABASE_DB_URL" -XAtc "select count(*) from auth.users" 2>/dev/null || echo error)
+          if [ "$n" = "0" ]; then
+            echo "::error::GFD Prod has no accounts yet. Run 'Move to GFD Prod' first (docs/db-brief.md), then run this again."; exit 1
+          fi
+
       - uses: supabase/setup-cli@v1
         with:
           version: 3.0.0
 
-      - name: What will change on production
+      - name: What will change on GFD Prod
         run: |
           supabase db push --remote="$SUPABASE_DB_URL" --dry-run --yes | tee plan.txt
-          { echo "### Production: migrations to apply"; echo '```'; cat plan.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          { echo "### GFD Prod: migrations to apply"; echo '```'; cat plan.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Apply to production
+      - name: Apply to GFD Prod
         run: supabase db push --remote="$SUPABASE_DB_URL" --yes

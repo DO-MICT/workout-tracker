@@ -198,7 +198,12 @@ document.addEventListener("click",function(e){
   if(t.id==="doneHistory"){closeDone();openHistory();return;}
   if(historyClick(t)) return;
   if(feedbackClick(t)) return;
+  if(usageClick(t)) return;
   if(suggClick(t)) return;
+  if(accessClick(t)) return;
+  if(consentClick(t)) return;
+  if(healthClick(t)) return;
+  if(accountClick(t)) return;
   if(webAuthClick(t)) return;
   if(onboardClick(t)) return;
   if(backupClick(t)) return;
@@ -234,14 +239,16 @@ document.addEventListener("click",function(e){
   if(t.id==="askKeep"||t.id==="askFix"){ askAnswer(t.id==="askKeep"); return; }
   if(t.id==="finish"){finishWorkout();return;}
   if(t.id==="tskip"){stopTimer();return;}
-  if(t.id==="t30"){tEnd+=30000;tTotal+=30;schedulePing((tEnd-Date.now())/1000);return;}
+  if(t.id==="t30"){tEnd+=30000;tTotal+=30;schedulePing((tEnd-Date.now())/1000);platform.restAlert(tEnd);return;}
 });
 document.addEventListener("keydown",function(e){
   if(OB&&e.key==="Escape") return;
+  if(e.key==="Escape"){var prs=document.getElementById("prosheet");if(prs&&!prs.hidden){proClose();return;}}
   if(e.key==="Escape"){var ap=document.getElementById("askpop");if(ap&&!ap.hidden){askAnswer(false);return;}}
   if(e.key==="Escape"){var dp=document.getElementById("donepop");if(dp&&!dp.hidden){closeDone();return;}}
   if(H&&e.key==="Escape"){if(H.edit){H.edit=null;renderHistory(true);}else if(H.del){H.del=null;renderHistory(true);}else if(H.ex&&!H.fromEx){document.getElementById("histBack").click();}else closeHistory();return;}
   if(SG&&e.key==="Escape"){closeSugg();return;}
+  if(US&&e.key==="Escape"){closeUsage();return;}
   if(FB&&e.key==="Escape"){if(FB.view){FB.view=null;renderFeedback(true);}else closeFeedback();return;}
   if(OB&&e.key==="Enter"&&/^(obEmail|obName|obPass)$/.test(e.target.id)){var pb=document.querySelector("#onboard .primary");if(pb)pb.click();return;}
   if(OB&&e.key==="Enter"&&e.target.id==="obLoc"){document.getElementById("obLocNext").click();return;}
@@ -254,6 +261,7 @@ document.addEventListener("keydown",function(e){
   if(e.key==="Escape"){var dlm=document.getElementById("dayLocMenu");if(dlm&&!dlm.hidden){setDayLocMenu(false);document.getElementById("dayLocBtn").focus();return;}}
   if(e.key==="Escape"){var pm=document.getElementById("planMenu");if(pm&&!pm.hidden){setPlanMenu(false);document.getElementById("planBtn").focus();return;}}
   if(e.key==="Escape"){var ps=document.getElementById("plans");if(ps&&!ps.hidden){if(PL_REN){PL_REN=null;renderPlans();}else closePlans();return;}}
+  if(e.key==="Escape"){var hs=document.getElementById("healthsheet");if(hs&&!hs.hidden){healthAfter=null;healthClose();return;}}
   if(e.key==="Escape"){var ns=document.getElementById("notesheet");if(ns&&!ns.hidden){closeNote();return;}}
   if(e.key==="Escape"&&BD){ if(BD.view==="peek") peekBack(BD.peek); else if(BD.view==="pick"||BD.view==="rep"){BD.view="edit";renderBuilder();} else if(!BD.dirty) closeBuilder(); else toast("Tap Save workout or Cancel"); return; }
   if(e.key==="Escape"){var eq=document.getElementById("equip");if(eq&&!eq.hidden){closeEquip();return;}}

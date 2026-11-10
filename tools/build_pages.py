@@ -26,3 +26,11 @@ assert src.count("<title>5-day split</title>") == 1, "title tag not found in app
 out = src.replace("<title>5-day split</title>", head_tags, 1)
 (root / "index.html").write_text(out, encoding="utf-8")
 print("index.html built")
+
+# the policy pages, sign-in emails and CNAME come from site.json (WP7)
+import sys
+sys.path.insert(0, str(root / "tools"))
+import build_site  # noqa: E402
+_v, _report = build_site.build()
+for _name, _gaps in _report.items():
+    print(f"{_name}.html built" + (f" (draft: fill in {', '.join(_gaps)} in site.json)" if _gaps else ""))

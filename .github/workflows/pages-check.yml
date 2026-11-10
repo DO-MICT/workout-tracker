@@ -6,10 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Rebuild index.html and compare
+      - name: Rebuild index.html, the policy pages and emails, and compare
         run: |
           python3 tools/build_pages.py
-          git diff --exit-code index.html || { echo "::error::index.html is out of date. Run: python3 tools/build_pages.py"; exit 1; }
+          git add -N . && git diff --exit-code -- index.html privacy.html terms.html delete-account.html CNAME supabase/templates || { echo "::error::Built files are out of date. Run: python3 tools/build_pages.py"; exit 1; }
       - name: Syntax check the app scripts
         run: for f in src/js/*.js; do node --check "$f"; done
       - name: Training rules tests

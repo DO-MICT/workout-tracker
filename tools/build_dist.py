@@ -3,7 +3,12 @@
 
 Add a page here when it becomes public. Everything else in the repo
 (migrations, tests, docs, notes) stays out of the deployed site.
+
+GFD_ENV (production, the default, or dev) picks the Supabase project from
+deploy/supabase.json (see tools/supabase_env.py). A dev build is also kept out
+of search engines and says DEV in the tab title.
 """
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -29,6 +34,20 @@ for name in DIRS:
     path = ROOT / name
     if path.is_dir():
         shutil.copytree(path, DIST / name)
+
+sys.path.insert(0, str(ROOT / "tools"))
+import supabase_env  # noqa: E402
+
+env, url = supabase_env.apply(DIST)
+if env == "dev":
+    index = DIST / "index.html"
+    html = index.read_text(encoding="utf-8")
+    html, n = re.subn(r"<title>", '<meta name="robots" content="noindex, nofollow">\n<title>DEV · ', html, count=1)
+    if n != 1:
+        sys.exit("dev build: no <title> in index.html")
+    index.write_text(html, encoding="utf-8")
+    (DIST / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
+print(f"Supabase ({env}): {url}")
 
 missing = [n for n in REQUIRED if not (DIST / n).is_file()]
 if missing:

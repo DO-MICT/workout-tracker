@@ -1,0 +1,102 @@
+name: Android build
+# The Android app (WP10): the web app (app.html + src/) inside a Capacitor shell. See docs/android-brief.md.
+# - Pull requests that touch the app: a debug APK to try on a phone (Actions run → Artifacts → gfd-debug-apk).
+# - A v* tag, or Run workflow: a signed release bundle (.aab) for Google Play, uploaded to the internal
+#   testing track when the Play service account secret is set.
+on:
+  pull_request:
+    paths: [app.html, 'src/**', 'vendor/**', 'icons/**', 'android/**', capacitor.config.json, package.json, package-lock.json, tools/build_app.py, site.json, .github/workflows/android-build.yml]
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      status:
+        description: Play release status (draft until the app's first review is done, then completed)
+        type: choice
+        options: [draft, completed]
+        default: draft
+
+concurrency:
+  group: android-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - name: Web files into the app
+        run: |
+          npm ci
+          python3 tools/build_app.py
+          npx cap sync android
+      - name: Version
+        id: v
+        run: |
+          name=$(sed -n 's/^var APP_VERSION="\([^"]*\)".*/\1/p' src/js/events.js)
+          echo "name=$name" >> "$GITHUB_OUTPUT"
+          echo "code=$((1000 + GITHUB_RUN_NUMBER))" >> "$GITHUB_OUTPUT"
+          echo "Version $name (code $((1000 + GITHUB_RUN_NUMBER)))"
+
+      - name: Debug APK
+        if: github.event_name == 'pull_request'
+        working-directory: android
+        run: ./gradlew assembleDebug -PgfdVersionCode=${{ steps.v.outputs.code }} -PgfdVersionName=${{ steps.v.outputs.name }}
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'pull_request'
+        with:
+          name: gfd-debug-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 14
+
+      - name: Upload key
+        if: github.event_name != 'pull_request'
+        env:
+          KEYSTORE_B64: ${{ secrets.GFD_UPLOAD_KEYSTORE_B64 }}
+        run: |
+          if [ -z "$KEYSTORE_B64" ]; then
+            echo "::error::No upload key yet. Make one and add the GFD_UPLOAD_* secrets (docs/android-brief.md, step 2)."; exit 1
+          fi
+          echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+          echo "GFD_UPLOAD_KEYSTORE=$RUNNER_TEMP/upload.jks" >> "$GITHUB_ENV"
+      - name: Release bundle
+        if: github.event_name != 'pull_request'
+        working-directory: android
+        env:
+          GFD_UPLOAD_KEYSTORE_PASSWORD: ${{ secrets.GFD_UPLOAD_KEYSTORE_PASSWORD }}
+          GFD_UPLOAD_KEY_ALIAS: ${{ secrets.GFD_UPLOAD_KEY_ALIAS }}
+          GFD_UPLOAD_KEY_PASSWORD: ${{ secrets.GFD_UPLOAD_KEY_PASSWORD }}
+        run: ./gradlew bundleRelease -PgfdVersionCode=${{ steps.v.outputs.code }} -PgfdVersionName=${{ steps.v.outputs.name }}
+      - uses: actions/upload-artifact@v4
+        if: github.event_name != 'pull_request'
+        with:
+          name: gfd-release-aab
+          path: android/app/build/outputs/bundle/release/app-release.aab
+          retention-days: 90
+      - name: Is Google Play connected?
+        id: play
+        if: github.event_name != 'pull_request'
+        env:
+          PLAY_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -n "$PLAY_JSON" ]; then echo "ok=1" >> "$GITHUB_OUTPUT"; else
+            echo "::notice::No PLAY_SERVICE_ACCOUNT_JSON secret: the .aab is in this run's artifacts; upload it in Play Console by hand."; fi
+      - name: Upload to Play (internal testing)
+        if: steps.play.outputs.ok == '1'
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+          packageName: com.getfitdaily.app
+          releaseFiles: android/app/build/outputs/bundle/release/app-release.aab
+          track: internal
+          status: ${{ github.event.inputs.status || 'draft' }}
+          releaseName: ${{ steps.v.outputs.name }} (${{ steps.v.outputs.code }})

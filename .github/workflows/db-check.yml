@@ -1,7 +1,7 @@
 name: Database check
 # Builds a throwaway Supabase in the runner from supabase/migrations, then checks it:
 # structure rules (RLS everywhere), the two-user RLS test through the real API, and that each rollback works.
-# Nothing here touches staging or production.
+# Nothing here touches GFD Dev or GFD Prod.
 on:
   pull_request:
     paths:

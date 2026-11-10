@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">GFD</string>
+    <string name="title_activity_main">GFD</string>
+    <string name="package_name">com.getfitdaily.app</string>
+    <string name="custom_url_scheme">gfd</string>
+</resources>
