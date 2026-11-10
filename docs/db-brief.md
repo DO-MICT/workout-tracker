@@ -1,17 +1,42 @@
-# Database brief: migrations, staging and CI
+# Database brief: migrations, environments and CI
 
-How database changes get from a PR to the live Supabase project (WP2, Nov 2026). Before WP2, SQL was pasted into the
-production SQL editor by hand; from now on GitHub Actions applies it, staging first.
+How database changes get from a PR to the live Supabase project (WP2, Nov 2026; dev and prod split 10 Nov 2026).
+Before WP2, SQL was pasted into the production SQL editor by hand; now GitHub Actions applies it, GFD Dev first.
 
 ## Environments
 
 | | Supabase project | Used for |
 |---|---|---|
 | Local / CI | Throwaway Supabase started in Docker (`supabase start`) | Every PR that touches `supabase/` |
-| Staging | `gfd-staging` (free plan) | Migration rehearsal, two-user tests, later sync and billing tests with test accounts |
-| Production | `Workout tracker` (`zdllpjrkwcdmcuizxuum`, eu-west-3) | Real users |
+| Dev | `GFD Dev` (Deon's GFD Supabase account) | The `dev` branch and https://dev.getfitdaily.co.za: migration rehearsal, two-user tests, test accounts |
+| Production | `GFD Prod` (Deon's GFD Supabase account) | The `main` branch and https://getfitdaily.co.za: real users |
+| Old production | `Workout tracker` (`zdllpjrkwcdmcuizxuum`, eu-west-3) | Real users until the move to GFD Prod; then paused, kept a few weeks as a backup |
 
-Staging gets the same migrations plus the exercise and gear library (seed). It never holds real people's data.
+GFD Dev is a clone of GFD Prod's structure: the same migrations plus the exercise and gear library (seed). It never
+holds real people's data (POPIA/GDPR: test with test accounts).
+
+Branches: work goes into `dev` (PRs from feature branches), and `dev` goes into `main` (the `branch-check` workflow
+only allows PRs into `main` from `dev`).
+
+Which project the app talks to is set in `deploy/supabase.json` (project URL + publishable key per environment, both
+public by design). Builds pick one with `GFD_ENV`: `tools/build_dist.py` (the Docker build Coolify runs) and
+`tools/build_app.py` (Android, always production). See `tools/supabase_env.py`. The source files keep one URL/key line
+(`var SB_URL=..., SB_KEY=...` in `src/js/signin.js` and `site/delete-account.html`) that builds rewrite.
+
+## Hosting (Coolify)
+
+The site runs in Coolify on Deon's server (135.181.83.117), built from the repo's `Dockerfile` (nginx serving only the
+public files, `tools/build_dist.py`). Two Coolify applications, same repo:
+
+| Coolify app | Branch | Domain | Build variable |
+|---|---|---|---|
+| GFD Prod | `main` | https://getfitdaily.co.za (and www) | `GFD_ENV=production` |
+| GFD Dev | `dev` | https://dev.getfitdaily.co.za | `GFD_ENV=dev` |
+
+`GFD_ENV` must be a **build** variable (it's a Docker build argument). Nothing else is needed: the URL and key come
+from `deploy/supabase.json`. `SUPABASE_URL` / `SUPABASE_KEY` build variables still work as an override, but leave them
+out so the repo stays the one place. A dev build stops if `dev` has no project in the file (it would otherwise write into
+production), and it's marked noindex with "DEV ·" in the tab title.
 
 ## Writing a migration
 
@@ -108,35 +133,54 @@ Migration `20261108000013_events_errors_config.sql`. Nothing here may hold perso
 
 ## Deploying (`.github/workflows/db-deploy.yml`)
 
-- **Staging, automatic**: merging a PR with a new migration to `main` applies it to staging (with the library seed) and runs
-  the two-user test there.
-- **Production, one approval**: Actions → Deploy database → Run workflow → `staging-then-production`. Staging runs first;
-  the production job then waits for Deon's approval (the protected `production` environment), prints what it will apply
-  and applies it. No more pasting SQL into the production SQL editor.
+- **GFD Dev, automatic**: merging a PR with a new migration into `dev` applies it to GFD Dev (with the library seed) and
+  runs the two-user and sync tests there.
+- **GFD Prod, one approval**: merging `dev` into `main` with a new migration starts the production job, which waits for
+  Deon's approval (the protected `production` environment), prints what it will apply and applies it. It can also be run
+  by hand from `main` (Run workflow → `production`). It refuses an empty GFD Prod: the move below comes first.
 - Each job's summary lists the migrations it applied.
 - Library data (`exercises.sql`, `gear.sql`) is still loaded into production by hand when it changes (`docs/data-brief.md`).
 
+## Moving to GFD Prod (one time, Nov 2026)
+
+`tools/db_move.sh`, run by Actions → **Move to GFD Prod (one time)** (`.github/workflows/db-move.yml`, `production`
+environment, so it waits for approval). Mode `check` reads both projects and changes nothing; `apply` moves.
+
+1. Refuses unless GFD Prod is empty (no accounts, no migrations newer than the old project's, no hand-made tables).
+2. Applies the migrations the old project has (up to `20261108000010`).
+3. Copies, with triggers off: `auth.users` + `auth.identities` (same ids and password hashes, so everyone keeps their
+   password; sessions don't move, so everyone signs in once), every `public` and `private` table (including the
+   trial-ledger salt in `private.app_secrets`, replacing the new project's), and the storage files through the Storage
+   API. Then compares row counts table by table and stops if any differ.
+4. Applies the newer migrations from the branch in `migrations_from` (default `main`), so `dev`-only migrations reach
+   prod only when `dev` is merged into `main`.
+
+Not moved (dashboard settings, not data): Auth settings (site URL, redirect URLs, email templates, SMTP), Edge Function
+secrets and deployments, API keys. `tools/push_auth_emails.py --env production|dev` sets the auth ones. Tested
+10 Nov 2026 on two local Supabases: sign-in with the old password, history, trial, screenshot, salt, new sign-ups and
+the 43 RLS and sync tests all fine after the move.
+
 ### Undoing a migration
 
-Run its `supabase/rollbacks/<name>.down.sql` in the SQL editor (staging first; production only with a backup), then
+Run its `supabase/rollbacks/<name>.down.sql` in the SQL editor (GFD Dev first; production only with a backup), then
 `delete from supabase_migrations.schema_migrations where version = '<version>';` so a fixed version can be deployed.
 Prefer a new forward migration that fixes the problem.
 
 ## One-time setup (Deon)
 
-1. **Staging project.** supabase.com → New project, name `gfd-staging`, region eu-west-3 (Paris), free plan, strong
-   database password (keep it in your password manager). The free plan allows two active projects; if Supabase refuses,
-   pause a project you don't need.
-2. **GitHub environments.** Repo → Settings → Environments:
-   - `staging`, secrets: `SUPABASE_DB_URL` (dashboard → Connect → **Session pooler** URI, with the password filled in),
+1. **Projects.** In the GFD Supabase account: `GFD Prod` (exists) and `GFD Dev`, same region, free plan, strong
+   database passwords in a password manager. Put each project's URL and **publishable** key in `deploy/supabase.json`.
+2. **GitHub environments.** Repo → Settings → Environments (the old `staging` one can be deleted):
+   - `dev`, secrets: `SUPABASE_DB_URL` (dashboard → Connect → **Session pooler** URI, with the password filled in),
      `SUPABASE_URL` (Project Settings → API → URL), `SUPABASE_ANON_KEY` (publishable key), `SUPABASE_SERVICE_KEY`
-     (secret key).
-   - `production`, tick **Required reviewers** and add yourself; secret `SUPABASE_DB_URL` (production's Session pooler URI).
-3. **Production migration history.** Run `supabase/one-off/wp2-production-migration-history.sql` once in the production SQL editor. It
-   changes no tables or data; it renumbers the list of applied migrations to match the repo (the early ones were recorded
-   under other numbers, and update_workout and entitlements were not recorded).
-4. **First staging run.** Actions → Deploy database → Run workflow → `staging`. It builds staging from scratch and runs the
-   two-user test there.
+     (secret key); variable `PROJECT_REF`.
+   - `production`, tick **Required reviewers** and add yourself; secrets `SUPABASE_DB_URL`, `SUPABASE_URL`,
+     `SUPABASE_SERVICE_KEY` (GFD Prod); variable `PROJECT_REF`. For the move only: `OLD_SUPABASE_DB_URL`,
+     `OLD_SUPABASE_URL`, `OLD_SUPABASE_SERVICE_KEY` (the old project; delete them afterwards).
+3. **Move**: Actions → Move to GFD Prod → `check`, then `apply`.
+4. **GFD Dev**: Actions → Deploy database → Run workflow on `dev` → `dev`. It builds GFD Dev from scratch, loads the
+   library and runs the tests there.
+5. **Auth settings** for both: `tools/push_auth_emails.py --env production` and `--env dev` (see `docs/site-brief.md`).
 
 Secrets never go in the repo. The app keeps using only the production publishable key.
 
@@ -182,13 +226,13 @@ web page `site/delete-account.html` (built to `delete-account.html`, the link fo
 ### One-time setup (Deon)
 
 1. Apply the migration (Deploy database workflow, as for the others).
-2. Supabase → Edge Functions → Secrets (staging and production): `DELETE_CRON_SECRET` = a long random text
+2. Supabase → Edge Functions → Secrets (GFD Dev and GFD Prod): `DELETE_CRON_SECRET` = a long random text
    (40+ characters, from a password manager).
 3. Deploy the function: GitHub → Settings → Secrets → Actions: `SUPABASE_ACCESS_TOKEN` (supabase.com → Account →
-   Access tokens); Settings → Environments → staging / production → Variables: `PROJECT_REF`. Then Actions → Deploy
-   functions → Run workflow (staging, then production). Or from a computer with the CLI:
+   Access tokens); Settings → Environments → dev / production → Variables: `PROJECT_REF`. Then Actions → Deploy
+   functions → Run workflow (dev, then production). Or from a computer with the CLI:
    `supabase functions deploy delete-account --project-ref <ref>`.
-4. GitHub → Settings → Secrets → Actions: `DELETE_FN_URL` = `https://zdllpjrkwcdmcuizxuum.supabase.co/functions/v1/delete-account`
+4. GitHub → Settings → Secrets → Actions: `DELETE_FN_URL` = `https://<GFD Prod ref>.supabase.co/functions/v1/delete-account`
    and `DELETE_CRON_SECRET` = the same text as step 2. Then Actions → Account deletions → Run workflow once: it should
    print `{"due":0,"deleted":0,"failed":0,"files":0}`.
 5. Google Play Console → App content → Data safety → Data deletion: link `<site>/delete-account.html`.

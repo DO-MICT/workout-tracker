@@ -3,7 +3,7 @@
 // One phone moves an account off the blob, the second phone starts fresh, both change different
 // things offline, and after they reconnect both phones hold both sets of changes.
 //
-// Same environment as rls-two-user.test.mjs (local Supabase or staging, never production).
+// Same environment as rls-two-user.test.mjs (local Supabase or GFD Dev, never production).
 // Run: node --test tests/db/*.test.mjs
 
 import { test, before, after } from 'node:test';
@@ -15,8 +15,13 @@ import { randomUUID } from 'node:crypto';
 const URL_ = (process.env.SUPABASE_URL || '').replace(/\/$/, '');
 const ANON = process.env.SUPABASE_ANON_KEY || '';
 const SERVICE = process.env.SUPABASE_SERVICE_KEY || '';
-if (!URL_ || !ANON || !SERVICE) throw new Error('Set SUPABASE_URL, SUPABASE_ANON_KEY and SUPABASE_SERVICE_KEY (local or staging, never production).');
-if (/zdllpjrkwcdmcuizxuum/.test(URL_)) throw new Error('This is the production project. Use local or staging.');
+if (!URL_ || !ANON || !SERVICE) throw new Error('Set SUPABASE_URL, SUPABASE_ANON_KEY and SUPABASE_SERVICE_KEY (local or GFD Dev, never production).');
+if (isProduction(URL_)) throw new Error('This is the production project (GFD Prod or the old one). Use local or GFD Dev.');
+function isProduction(u) {
+  const cfg = JSON.parse(process.getBuiltinModule('node:fs').readFileSync(new URL('../../deploy/supabase.json', import.meta.url), 'utf8'));
+  const prod = (cfg.production.url || '').replace(/\/$/, '');
+  return /zdllpjrkwcdmcuizxuum/.test(u) || (!!prod && u.replace(/\/$/, '') === prod);
+}
 const REPO = new URL('../../', import.meta.url).pathname;
 
 async function call(path, { method = 'GET', token, key = ANON, body } = {}) {

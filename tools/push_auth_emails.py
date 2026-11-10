@@ -3,16 +3,18 @@
 
 Supabase keeps auth emails and SMTP settings in the dashboard, not in migrations. This copies them from the repo
 (supabase/templates/, built by tools/build_pages.py from site/emails/ and site.json) through the Management API,
-so production and staging match what's reviewed in the PR.
+so GFD Prod and GFD Dev match what's reviewed in the PR. --env picks the site address from deploy/supabase.json
+(production: https://getfitdaily.co.za/, dev: https://dev.getfitdaily.co.za/) and, if --project is left out, the
+project ref from the url there.
 
   # see what would change (nothing is sent)
-  SUPABASE_ACCESS_TOKEN=sbp_... python3 tools/push_auth_emails.py --project zdllpjrkwcdmcuizxuum
+  SUPABASE_ACCESS_TOKEN=sbp_... python3 tools/push_auth_emails.py --env production
 
   # send the emails + site address
-  SUPABASE_ACCESS_TOKEN=sbp_... python3 tools/push_auth_emails.py --project zdllpjrkwcdmcuizxuum --apply
+  SUPABASE_ACCESS_TOKEN=sbp_... python3 tools/push_auth_emails.py --env production --apply
 
-  # also switch to the custom email sender (password from the SMTP_PASS environment variable)
-  SMTP_PASS=... ... --apply --smtp-host smtp.resend.com --smtp-port 465 --smtp-user resend
+  # also switch to the Brevo email sender (SMTP key from the SMTP_PASS environment variable)
+  SMTP_PASS=... ... --apply --smtp-host smtp-relay.brevo.com --smtp-port 587 --smtp-user <Brevo SMTP login>
 
 The access token is a personal token from supabase.com/dashboard/account/tokens. Don't save it in the repo.
 Redirect URLs are only added, never removed, so preview and staging links keep working.
@@ -48,7 +50,7 @@ def wanted(args, current):
     for k in KINDS:
         out[f"mailer_subjects_{k}"] = subjects[k]
         out[f"mailer_templates_{k}_content"] = (root / "supabase" / "templates" / f"{k}.html").read_text(encoding="utf-8")
-    site = v["site_url"]
+    site = args.site_url or v["site_url"]
     out["site_url"] = site
     allow = [u for u in (current.get("uri_allow_list") or "").split(",") if u.strip()]
     # gfd://auth-callback: sign-in links that open the Android app (WP10)
@@ -71,13 +73,24 @@ def wanted(args, current):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--project", required=True, help="Supabase project ref (production: zdllpjrkwcdmcuizxuum)")
+    ap.add_argument("--env", choices=["production", "dev"], default="production",
+                    help="which project and site address from deploy/supabase.json (default production)")
+    ap.add_argument("--project", help="Supabase project ref; default: the one in deploy/supabase.json for --env")
     ap.add_argument("--apply", action="store_true", help="send the changes (default: only show them)")
     ap.add_argument("--smtp-host")
-    ap.add_argument("--smtp-port", type=int, default=465)
-    ap.add_argument("--smtp-user", default="resend")
+    ap.add_argument("--smtp-port", type=int, default=587)
+    ap.add_argument("--smtp-user", help="the SMTP login (Brevo: SMTP & API > SMTP)")
     ap.add_argument("--rate", type=int, default=100, help="emails per hour once the custom sender is on")
     args = ap.parse_args()
+    cfg = json.loads((root / "deploy" / "supabase.json").read_text(encoding="utf-8"))[args.env]
+    args.site_url = cfg["site"]
+    if not args.project:
+        ref = cfg["url"].removeprefix("https://").split(".")[0] if cfg["url"] else ""
+        if not ref:
+            sys.exit(f"No --project given and no {args.env} url in deploy/supabase.json.")
+        args.project = ref
+    if args.smtp_host and not args.smtp_user:
+        sys.exit("Give --smtp-user (the SMTP login) with --smtp-host.")
     token = os.environ.get("SUPABASE_ACCESS_TOKEN")
     if not token:
         sys.exit("Put a Supabase personal access token in SUPABASE_ACCESS_TOKEN.")

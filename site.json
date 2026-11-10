@@ -1,7 +1,7 @@
 {
   "_readme": "WP7. The one place for the website address, contact details and policy versions. Edit, then run: python3 tools/build_pages.py (rebuilds privacy.html, terms.html, CNAME and the sign-in emails). Empty values show as highlighted gaps and a 'draft' banner on the policy pages. See docs/site-brief.md.",
 
-  "domain": "",
+  "domain": "getfitdaily.co.za",
   "_domain": "THE DOMAIN PLACEHOLDER. Put the bought name here, without https or www (for example getfitdaily.app). Empty = not bought yet: links use pages_url and no CNAME file is written.",
 
   "pages_url": "https://do-mict.github.io/workout-tracker/",

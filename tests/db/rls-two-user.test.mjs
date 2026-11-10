@@ -1,7 +1,7 @@
 // RLS two-user test (NFR-7): two real accounts talk to the API the way the app does,
 // and each one must only ever see and change its own data.
 //
-// Runs against a local Supabase (the db-check workflow) or staging. Never point it at production:
+// Runs against a local Supabase (the db-check workflow) or GFD Dev. Never point it at production:
 // it creates and deletes accounts.
 //
 //   SUPABASE_URL          API url, e.g. http://127.0.0.1:54321
@@ -18,9 +18,14 @@ const URL_ = (process.env.SUPABASE_URL || '').replace(/\/$/, '');
 const ANON = process.env.SUPABASE_ANON_KEY || '';
 const SERVICE = process.env.SUPABASE_SERVICE_KEY || '';
 if (!URL_ || !ANON || !SERVICE) {
-  throw new Error('Set SUPABASE_URL, SUPABASE_ANON_KEY and SUPABASE_SERVICE_KEY (local or staging, never production).');
+  throw new Error('Set SUPABASE_URL, SUPABASE_ANON_KEY and SUPABASE_SERVICE_KEY (local or GFD Dev, never production).');
 }
-if (/zdllpjrkwcdmcuizxuum/.test(URL_)) throw new Error('This is the production project. Use local or staging.');
+if (isProduction(URL_)) throw new Error('This is the production project (GFD Prod or the old one). Use local or GFD Dev.');
+function isProduction(u) {
+  const cfg = JSON.parse(process.getBuiltinModule('node:fs').readFileSync(new URL('../../deploy/supabase.json', import.meta.url), 'utf8'));
+  const prod = (cfg.production.url || '').replace(/\/$/, '');
+  return /zdllpjrkwcdmcuizxuum/.test(u) || (!!prod && u.replace(/\/$/, '') === prod);
+}
 
 const run = Date.now().toString(36);
 const PASSWORD = 'Test-' + randomUUID();
@@ -493,7 +498,7 @@ test('consents: private to each user, recorded only through give/withdraw, never
 
 test('consents: terms and privacy are refused while the policies are unpublished', async () => {
   const pol = rows(await admin('/rest/v1/app_config?select=value&key=eq.policies'))[0].value;
-  if (pol.terms) return; // staging may have published versions
+  if (pol.terms) return; // GFD Dev may have published versions
   const r = await rest('rpc/give_consent', 'b', { method: 'POST', body: { p_kind: 'terms', p_version: '' } });
   assert.ok(r.status >= 400);
   assert.match(JSON.stringify(r.json), /not published/);

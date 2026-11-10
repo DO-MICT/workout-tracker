@@ -3,7 +3,7 @@ name: Account deletions
 # The function does the work (files, RevenueCat, auth user); this only calls it. See docs/db-brief.md.
 #
 # Repository secrets (Settings > Secrets and variables > Actions):
-#   DELETE_FN_URL       https://<project ref>.supabase.co/functions/v1/delete-account (production)
+#   DELETE_FN_URL       https://<GFD Prod ref>.supabase.co/functions/v1/delete-account
 #   DELETE_CRON_SECRET  the same long random text as the function's DELETE_CRON_SECRET secret in Supabase
 # Until both are set, the run only prints a warning.
 on:

@@ -1,18 +1,18 @@
 name: Deploy functions
-# WP8: deploys the Supabase Edge Functions in supabase/functions (now: delete-account) to staging or production.
+# WP8: deploys the Supabase Edge Functions in supabase/functions (now: delete-account) to GFD Dev or GFD Prod.
 # Run by hand: Actions > Deploy functions > Run workflow. The production job waits for Deon's approval.
 #
 # Secrets: repository secret SUPABASE_ACCESS_TOKEN (supabase.com > Account > Access tokens);
-#          environment variable PROJECT_REF in the staging and production environments
-#          (Settings > Environments > <env> > Variables), e.g. zdllpjrkwcdmcuizxuum for production.
+#          environment variable PROJECT_REF in the dev and production environments
+#          (Settings > Environments > <env> > Variables), the project ref of GFD Dev or GFD Prod (the part before .supabase.co).
 on:
   workflow_dispatch:
     inputs:
       target:
         description: Where to deploy
         type: choice
-        options: [staging, production]
-        default: staging
+        options: [dev, production]
+        default: dev
 
 jobs:
   deploy:

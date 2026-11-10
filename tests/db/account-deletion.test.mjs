@@ -1,7 +1,7 @@
 // Account deletion and data export (WP8): two real accounts use the API like the app and the deletion page do,
 // and the delete-account Edge Function's code (supabase/functions/delete-account/core.js) runs against the same API.
 //
-// Runs against a local Supabase (the db-check workflow) or staging. Never point it at production: it creates and
+// Runs against a local Supabase (the db-check workflow) or GFD Dev. Never point it at production: it creates and
 // deletes accounts. Same variables as rls-two-user.test.mjs:
 //   SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_KEY
 //
@@ -16,9 +16,14 @@ const URL_ = (process.env.SUPABASE_URL || '').replace(/\/$/, '');
 const ANON = process.env.SUPABASE_ANON_KEY || '';
 const SERVICE = process.env.SUPABASE_SERVICE_KEY || '';
 if (!URL_ || !ANON || !SERVICE) {
-  throw new Error('Set SUPABASE_URL, SUPABASE_ANON_KEY and SUPABASE_SERVICE_KEY (local or staging, never production).');
+  throw new Error('Set SUPABASE_URL, SUPABASE_ANON_KEY and SUPABASE_SERVICE_KEY (local or GFD Dev, never production).');
 }
-if (/zdllpjrkwcdmcuizxuum/.test(URL_)) throw new Error('This is the production project. Use local or staging.');
+if (isProduction(URL_)) throw new Error('This is the production project (GFD Prod or the old one). Use local or GFD Dev.');
+function isProduction(u) {
+  const cfg = JSON.parse(process.getBuiltinModule('node:fs').readFileSync(new URL('../../deploy/supabase.json', import.meta.url), 'utf8'));
+  const prod = (cfg.production.url || '').replace(/\/$/, '');
+  return /zdllpjrkwcdmcuizxuum/.test(u) || (!!prod && u.replace(/\/$/, '') === prod);
+}
 
 const run = Date.now().toString(36);
 const PASSWORD = 'Test-' + randomUUID();

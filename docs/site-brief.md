@@ -21,7 +21,12 @@ of each email source is `Subject: ...`.
 `site.json` → `"domain": ""`. Empty means "not bought yet": links use `pages_url` (GitHub Pages), emails link there,
 and no `CNAME` is written. Contact addresses are `<local part>@<domain>` (`hello@`, `privacy@`; the sender is `hello@`).
 
-When the domain is bought:
+Bought 10 Nov 2026: **getfitdaily.co.za**, set in `site.json`. The site is hosted in Coolify (see `docs/db-brief.md`,
+"Hosting"), not GitHub Pages: DNS A records for the apex, `www` and `dev` point at the Coolify server. Mail: ImprovMX
+receives (forwards to Deon), Brevo sends (SPF/DKIM/DMARC records in place). Step 2 below is the GitHub Pages way and is
+no longer used; the `CNAME` file only makes old GitHub Pages links redirect to the domain.
+
+When the domain was bought (original steps):
 
 1. Set `"domain": "example.com"` in `site.json`, run `python3 tools/build_pages.py`, commit (this adds `CNAME`).
 2. DNS at the registrar: for an apex domain, A records to GitHub Pages (185.199.108.153, .109.153, .110.153, .111.153)
@@ -32,7 +37,7 @@ When the domain is bought:
    records it shows (SPF, DKIM, and a DMARC record such as `v=DMARC1; p=none; rua=mailto:privacy@<domain>`), create
    an SMTP key. Set up receiving for `hello@` and `privacy@` (registrar forwarding or a mailbox).
 4. `SUPABASE_ACCESS_TOKEN=... SMTP_PASS=... python3 tools/push_auth_emails.py --project <ref> --apply --smtp-host smtp.resend.com`
-   once for staging and once for production. Without `--apply` it only shows what would change. It sets the site
+   once for GFD Dev and once for GFD Prod (`--env dev`, `--env production`). Without `--apply` it only shows what would change. It sets the site
    URL, adds redirect URLs (never removes), the six email templates and subjects, and the sender.
    Without `--smtp-host` it sends only the emails and site URL.
 

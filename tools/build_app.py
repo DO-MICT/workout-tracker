@@ -45,6 +45,8 @@ def build():
         shutil.copytree(root / d, out / d, ignore=shutil.ignore_patterns("*.md", ".DS_Store"))
     for f in COPY_FILES:
         shutil.copy2(root / f, out / f)
+    import supabase_env  # the Play app always talks to production (deploy/supabase.json)
+    supabase_env.apply(out, "production")
     return out
 
 
