@@ -145,6 +145,7 @@ function proRender(){
     '<p class="sub">'+esc(PRO_WHY[PRO.why]())+'</p>'+
     '<ul class="hlist">'+PRO_LIST.map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ul>'+
     '<p class="wzerr" id="proErr" role="alert"></p>'+
+    (buy&&typeof billingTermsHtml==="function"?billingTermsHtml():'')+   /* auto-renew line before the buy button (Play policy, WP12) */
     (buy?'<button class="primary" id="proBuy">'+esc(window.GFDBilling.label||"Get Pro")+'</button>'
         :'<p class="pronote">'+(sbUser?'Buying Pro opens with the Google Play release. Your logs, plans and history stay yours on Free.':'Sign in to start your 14-day free trial of Pro.')+'</p>')+
     (PRO.why==="plans"&&locked&&sbUser?'<button class="ghost bre" id="proPick">Pick which '+planCap()+' plans to keep</button>':'')+

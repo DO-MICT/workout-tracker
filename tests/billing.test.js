@@ -259,3 +259,12 @@ test("an upgrade page without a plan picker buys the yearly plan", async () => {
   assert.equal(await ctx.window.GFDBilling.buy("plans"), true);
   assert.ok(calls.some((c) => c[0] === "purchase" && c[1] === "$rc_annual"));
 });
+
+test("the upgrade page says Pro renews automatically and how to cancel", () => {
+  const t = app().ctx.billingTermsHtml();
+  assert.match(t, /renew automatically/); assert.match(t, /Google Play → Subscriptions/); assert.match(t, /Manage or cancel/);
+  const w = app({ android: false }).ctx.billingTermsHtml();
+  assert.match(w, /renew automatically/); assert.doesNotMatch(w, /Google Play/);
+  const SRC = fs.readFileSync(path.join(__dirname, "../src/js/access.js"), "utf8");
+  assert.ok(SRC.indexOf("billingTermsHtml()") < SRC.indexOf('id="proBuy"'), "the line comes before the buy button");
+});

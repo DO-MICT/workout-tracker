@@ -124,3 +124,10 @@ function billingAfterAccess(a){
 }
 /* signing out: the next person on this phone gets their own RevenueCat customer */
 function billingForget(){ var b=billPlay(); if(b) b.signOut(); }
+
+/* ---------- what the upgrade page must say before Buy (Google Play Subscriptions policy) ----------
+   Shown above the plan choices' buy button on every platform: it renews automatically, and how to cancel. */
+function billingTermsHtml(){
+  var where=billPlay()?"Google Play → Subscriptions, or in Profile → Your plan → Manage or cancel":"Profile → Your plan → Manage or cancel";
+  return '<p class="obfine" id="proTerms">Monthly and yearly Pro renew automatically at the price shown until you cancel. Cancel any time in '+where+'. Pro stays until the end of the time you’ve paid for.</p>';
+}
