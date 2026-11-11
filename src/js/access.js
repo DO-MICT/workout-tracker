@@ -34,19 +34,20 @@ function refreshAccess(){
   if(!WEB_MODE||!sb||!sbUser) return Promise.resolve(access());
   if(accBusy) return accBusy;
   var uid=sbUser.id;
-  accBusy=sb.from("my_access").select("tier,source,starts_at,ends_at,will_renew,features,checked_at").maybeSingle().then(function(r){
+  accBusy=sb.from("my_access").select("*").maybeSingle().then(function(r){
     if(r&&!r.error&&sbUser&&sbUser.id===uid){
       var keepPlans=ACC&&ACC.uid===uid?ACC.plans:null;
       var d=r.data||accFree();
       ACC={uid:uid,tier:d.tier||"free",source:d.source||"none",starts_at:d.starts_at||null,ends_at:d.ends_at||null,
-        will_renew:!!d.will_renew,features:Array.isArray(d.features)?d.features:[],fetched:Date.now(),plans:keepPlans};
+        will_renew:!!d.will_renew,features:Array.isArray(d.features)?d.features:[],product_id:d.product_id||null,fetched:Date.now(),plans:keepPlans};
       try{ localStorage.setItem(ACCESS_KEY,JSON.stringify(ACC)); }catch(e){}
+      if(typeof billingAfterAccess==="function") billingAfterAccess(ACC);   /* yearly renewal reminder (WP12) */
       return refreshPlanAccess();
     }
   }).then(function(){ accBusy=null; return access(); },function(){ accBusy=null; return access(); });
   return accBusy;
 }
-function accessForget(){ ACC=false; try{ localStorage.removeItem(ACCESS_KEY); }catch(e){} }
+function accessForget(){ ACC=false; try{ localStorage.removeItem(ACCESS_KEY); }catch(e){} if(typeof billingForget==="function") billingForget(); }
 
 /* ---------- what Free includes (WP14) ----------
    Free keeps up to 3 of its own plans in use and logs the basic measurement sites; both numbers come from
@@ -202,6 +203,7 @@ function accessClick(t){
   if(t.id==="pickSave"){pickPlansSave(t);return true;}
   if(t.dataset.pickkeep&&PRO){var id=t.dataset.pickkeep; if(PRO.keep[id]) delete PRO.keep[id]; else PRO.keep[id]=1; proRender(); var b=document.querySelector('[data-pickkeep="'+id+'"]'); if(b) b.focus(); return true;}
   if(t.dataset.pro){proOffer(t.dataset.pro);return true;}
+  if(typeof billingClick==="function"&&billingClick(t)) return true;   /* Manage or cancel, Restore purchases (WP12) */
   return false;
 }
 document.addEventListener("visibilitychange",function(){
@@ -221,10 +223,11 @@ function accessCardInner(){
   if(t==="free") h+='<ul><li>Workout logging, history, swaps and records</li><li>Week and month charts, export and import</li><li>Up to '+freeLimits().plans+' of your own plans, plus every built-in plan</li><li>'+esc(freeSitesText())+'</li></ul>'+
     (a.source==="preview"?'':'<button class="chip sm" data-pro="general">What Pro adds</button>');
   else h+='<ul>'+a.features.filter(function(f){return ACCESS_FEATS[f];}).map(function(f){return '<li>'+esc(ACCESS_FEATS[f])+'</li>';}).join("")+'</ul>';
+  if(typeof billingCardHtml==="function") h+=billingCardHtml(a);   /* WP12 */
   return h;
 }
 function accessHtml(){
-  var note=!WEB_MODE?"":sbUser?"Your plan is kept on your account, so it follows you to every device. Buying Pro comes with the app store release.":"Sign in to see your plan.";
+  var note=!WEB_MODE?"":sbUser?"Your plan is kept on your account, so it follows you to every device.":"Sign in to see your plan.";
   return '<h3 class="psec">Your plan</h3>'+(note?'<p class="sub">'+note+'</p>':'')+
     '<div class="tier on static" id="accCard" aria-live="polite">'+accessCardInner()+'</div>';
 }
