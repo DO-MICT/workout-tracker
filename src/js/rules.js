@@ -453,6 +453,34 @@
   /* training days for the starter plans: 2 days a week sit apart, 3 or more use Monday, Wednesday, Friday */
   function starterDays(days){ return (+days||3)<=2?["mon","thu"]:["mon","wed","fri"]; }
 
+  /* ---- when a workout happened (F1.E4.S1) ----
+     The date and time boxes are local time ("2026-11-10", "18:30"); the database keeps an ISO time.
+     A workout can be moved or logged in the past, never more than 5 minutes ahead and never before 2000. */
+  function pad2(n){ return (n<10?"0":"")+n; }
+  function whenParts(iso){
+    var d=new Date(iso); if(isNaN(d)) return {date:"",time:""};
+    return {date:d.getFullYear()+"-"+pad2(d.getMonth()+1)+"-"+pad2(d.getDate()),time:pad2(d.getHours())+":"+pad2(d.getMinutes())};
+  }
+  function whenFromParts(date,time,nowMs){
+    var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(String(date||"").trim());
+    if(!m) return {err:"Pick a date."};
+    var t=/^(\d{1,2}):(\d{2})/.exec(String(time||"").trim()), hh=t?+t[1]:12, mm=t?+t[2]:0;
+    if(hh>23||mm>59) return {err:"Pick a time between 00:00 and 23:59."};
+    var d=new Date(+m[1],+m[2]-1,+m[3],hh,mm,0,0);
+    if(isNaN(d)||d.getDate()!==+m[3]) return {err:"Pick a date."};
+    if(d.getFullYear()<2000) return {err:"Pick a date from 2000 onwards."};
+    var now=nowMs==null?Date.now():nowMs;
+    if(d.getTime()>now+5*60000) return {err:"That’s still to come. Pick a time that has already passed."};
+    return {at:d.toISOString()};
+  }
+  /* move a workout to a new finish time: the start keeps the same gap to the finish */
+  function shiftStart(startIso,oldAt,newAt){
+    if(!startIso) return null;
+    var s=new Date(startIso).getTime(), o=new Date(oldAt).getTime(), n=new Date(newAt).getTime();
+    if(!isFinite(s)||!isFinite(o)||!isFinite(n)) return null;
+    return new Date(s+(n-o)).toISOString();
+  }
+
   var R={KG_PER_LB:KG_PER_LB,unitOf:unitOf,toKg:toKg,fromKg:fromKg,boxShow:boxShow,boxSave:boxSave,unitLabel:unitLabel,
     fmtWeight:fmtWeight,showVal:showVal,showUnit:showUnit,
     num:num,topWeight:topWeight,sessionWin:sessionWin,loggedSets:loggedSets,
@@ -461,6 +489,7 @@
     historyRows:historyRows,exerciseRecords:exerciseRecords,setPrefill:setPrefill,tickMissing:tickMissing,bigJump:bigJump,jumpText:jumpText,
     lastSetParts:lastSetParts,missingGear:missingGear,swapCandidates:swapCandidates,rankSwaps:rankSwaps,swapReason:swapReason,swapReps:swapReps,
     workoutVolume:workoutVolume,cardioSum:cardioSum,
-    planOrder:planOrder,recommendPlan:recommendPlan,celebrateFor:celebrateFor,starterDays:starterDays};
+    planOrder:planOrder,recommendPlan:recommendPlan,celebrateFor:celebrateFor,starterDays:starterDays,
+    whenParts:whenParts,whenFromParts:whenFromParts,shiftStart:shiftStart};
   if(typeof module!=="undefined"&&module.exports) module.exports=R; else root.GFDRules=R;
 })(typeof window!=="undefined"?window:this);
