@@ -8,7 +8,7 @@ permissions, notifications, the store listing or sign-up. A PR that breaks a rul
 The rules have ids (P1, D2, …) so code comments, PRs and reviews can point at them. `tests/play-policy.test.js`
 checks the ones a machine can check; it runs in CI with the other tests.
 
-Facts these rules rely on (change the rules if one changes): Android package `com.getfitdaily.app`; Health & Fitness
+Facts these rules rely on (change the rules if one changes): Android package `co.za.getfitdaily.app` (locked in Play Console); Health & Fitness
 category; audience 18 and over (`site.json` `min_age`, Play Console Target audience 18+ only, neutral age screen at sign-up); no ads; developer is a trader (EU DSA); Pro is sold by
 Google Play Billing through RevenueCat in the app and by Paddle on the website; 14-day Pro trial granted by our
 server at sign-up, no card and no automatic charge.
@@ -164,6 +164,6 @@ blockchain, news, government, Android TV/Wear/Auto/XR, instant apps, Families ad
 | Permissions (A1) | OK | Only INTERNET in our manifest; the notifications plugin adds notifications, `SCHEDULE_EXACT_ALARM`, vibrate, boot |
 | Target API (A6) | OK | Targets 36 |
 | Ads, SDKs, UGC, AI, IP | OK | No ads or trackers; UGC is private; no AI features |
-| Package name | Confirmed | `com.getfitdaily.app` (code and Play Console); fixed for ever after the first upload |
+| Package name | Being changed | Play Console is locked to `co.za.getfitdaily.app`; the code still says `com.getfitdaily.app` until the rename PR lands |
 | Audience / Families | Fixed here | Play Console had 13+; set it to 18+ only. App, terms and privacy now 18+ with a neutral age screen at sign-up |
 | Trader status (Play Console) | Deon | Play shows a trader's address, phone and email on the listing in the EU: use business contact details |
