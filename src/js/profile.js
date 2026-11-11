@@ -200,9 +200,15 @@ function finishWorkout(){
       var j=jumpFor(ex0,i); if(j){ askJump(ex0,i,j,finishWorkout); return; }
     }
   }
-  var c=cur(), L=last(), saved=0, now=new Date().toISOString(), rec=buildWorkout(d), wins={prs:[],up:[],prevCardio:{},missed:[],miles:[]};
-  /* milestones need every earlier workout; skipped until history has loaded on a new phone */
+  /* logged for another day (F1.E4.S1): check the date first */
+  var past=PAST?GFDRules.whenFromParts(PAST.date,PAST.time):null;
+  if(past&&past.err){ toast(past.err); var pd=document.querySelector('[data-past="date"]'); if(pd) pd.focus(); return; }
+  var c=cur(), L=last(), saved=0, rec=buildWorkout(d,past&&past.at), now=rec?rec.performed_at:new Date().toISOString(), wins={prs:[],up:[],prevCardio:{},missed:[],miles:[]};
+  /* milestones need every earlier workout; skipped until history has loaded on a new phone, and for a workout
+     logged for an earlier day (streaks and "first this week" are about today) */
   var prevDates=histKnown()?workoutDates():null, planned=0, ticked=0;
+  var firstEver=!!(prevDates&&!prevDates.length);
+  if(past) prevDates=null;
   d.ex.forEach(function(ex){
     var all=setsFor(ex).slice(0,ex.sets), arr=GFDRules.loggedSets(all), Ls=lastFor(ex.id,ex), lab=labOf(ex);
     planned+=ex.sets;
@@ -220,8 +226,11 @@ function finishWorkout(){
   if(rec&&prevDates) wins.miles=GFDRules.milestones(prevDates,rec.performed_at,DAYS.filter(function(x){return !x.coles&&!x.opt&&x.ex.length;}).length,planned>0&&ticked===planned);
   /* today-only swaps end with the workout: next time the plan's own exercises are back */
   if(saved&&rec&&d.ex.some(function(x){return x.swFrom;})){ endTodaySwaps(d.id); DAYS=buildDays(); }
+  if(saved&&rec) PAST=null;
   recordWorkout(rec); save(); stopTimer(); renderDay(); window.scrollTo(0,0);
-  if(saved&&rec) showDone(rec,d,wins);
-  if(saved&&rec&&prevDates&&!prevDates.length) logEvent("first_workout",{exercises:d.ex.length});
+  if(saved&&rec){
+    showDone(rec,d,wins);
+    if(firstEver) logEvent("first_workout",{exercises:d.ex.length});
+  }
   else toast("Nothing logged yet. Tick a set or type a weight or reps first.");
 }
