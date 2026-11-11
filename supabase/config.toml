@@ -446,3 +446,7 @@ enabled = true
 # WP8: called by the daily GitHub workflow with x-cron-secret, not with a user's sign-in
 [functions.delete-account]
 verify_jwt = false
+
+# WP12: RevenueCat calls it with its own secret; the app's /sync call is checked inside the function
+[functions.billing-webhook]
+verify_jwt = false
