@@ -14,8 +14,8 @@
   "_information_officer": "POPIA information officer (Q9). Usually the same person as the owner.",
   "country": "South Africa",
   "_country": "Where the owner is based; the terms use its law and courts. Change if Q9 says otherwise.",
-  "min_age": 16,
-  "_min_age": "Q12 (13 or 16) is still open. 16 is the safer choice for the EU.",
+  "min_age": 18,
+  "_min_age": "18+ (2026-11-11, Play Families policy and POPIA, where a child is under 18). Must match MIN_AGE in src/js/consent.js and the Play Console Target audience (docs/play-policy-brief.md C1).",
 
   "email_sender_name": "GFD · Get Fit Daily",
   "email_local_parts": {"hello": "hello", "privacy": "privacy", "sender": "hello"},

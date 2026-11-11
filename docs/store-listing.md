@@ -70,7 +70,7 @@ and the illustration line only claims what is drawn (81 exercises live in Nov 20
 | Ads | No, the app has no ads |
 | App access | Sign-in needed: give review a test account (email + password) with a plan and a few workouts |
 | Content rating | Questionnaire: reference/health-and-fitness; no violence, user-to-user chat, gambling or location sharing → expected rating Everyone / PEGI 3 |
-| Target audience | 16 and over today (`min_age` in `site.json`). If Deon settles on 18+, change `min_age`, rebuild the pages and pick 18+ here. Never include under-13s (Families policy) |
+| Target audience | **18 and over only** (tick 18+ alone). Matches `min_age` in `site.json` and `MIN_AGE` in `consent.js`. Picking any age under 18 brings in the Families policy (docs/play-policy-brief.md C1) |
 | News app | No |
 | Health apps | Health apps declaration: Fitness / activity tracking (workout logging). Not a medical device, no Health Connect, no medical claims |
 | Financial features | None |

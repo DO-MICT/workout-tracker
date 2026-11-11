@@ -62,3 +62,16 @@ test("sign-up form: tick box only once published; versions go in the metadata", 
   assert.deepEqual({ ...page(pol, { obAgree: true, obNews: true }).consentSignupMeta() }, { terms: "t1", privacy: "p1", marketing: "m1" });
   assert.equal(page({}, {}).consentSignupMeta(), null);
 });
+
+test("age screen: neutral year check against MIN_AGE (Play C1)", () => {
+  const c = page({});
+  const now = new Date("2026-11-11T12:00:00Z");
+  assert.equal(c.ageCheck("1990", now), "ok");
+  assert.equal(c.ageCheck(String(2026 - c.MIN_AGE), now), "ok");
+  assert.equal(c.ageCheck(String(2027 - c.MIN_AGE), now), "young");
+  assert.equal(c.ageCheck("2015", now), "young");
+  assert.match(c.ageCheck("", now), /year you were born/);
+  assert.match(c.ageCheck("90", now), /year you were born/);
+  assert.match(c.ageCheck("2030", now), /Check the year/);
+  assert.match(c.ageCheck("1850", now), /Check the year/);
+});

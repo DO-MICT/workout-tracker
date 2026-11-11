@@ -63,3 +63,11 @@ test("D1/D2/D7: privacy policy and account deletion are linked from the app", ()
   assert.match(read("tools/build_app.py"), /delete-account\.html/);
   assert.match(read("site/privacy.html"), /delete-account\.html/);
 });
+
+test("C1: the age screen's limit matches site.json and is used by both sign-up paths", () => {
+  const min = JSON.parse(read("site.json")).min_age;
+  assert.equal(Number((read("src/js/consent.js").match(/var MIN_AGE=(\d+)/) || [])[1]), min);
+  assert.ok(min >= 18 || /Families/.test(read("docs/play-policy-brief.md")), "under-18 audience needs the Families rules");
+  assert.match(read("src/js/signin.js"), /ageError\("obYear"\)/);
+  assert.match(read("src/js/consent.js"), /ageError\("csYear"\)/);
+});

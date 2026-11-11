@@ -9,7 +9,7 @@ The rules have ids (P1, D2, …) so code comments, PRs and reviews can point at 
 checks the ones a machine can check; it runs in CI with the other tests.
 
 Facts these rules rely on (change the rules if one changes): Android package `com.getfitdaily.app`; Health & Fitness
-category; audience 16 and over (`site.json` `min_age`); no ads; developer is a trader (EU DSA); Pro is sold by
+category; audience 18 and over (`site.json` `min_age`, Play Console Target audience 18+ only, neutral age screen at sign-up); no ads; developer is a trader (EU DSA); Pro is sold by
 Google Play Billing through RevenueCat in the app and by Paddle on the website; 14-day Pro trial granted by our
 server at sign-up, no card and no automatic charge.
 
@@ -105,8 +105,19 @@ server at sign-up, no card and no automatic charge.
 
 ### Content, people and families
 
-- **C1. Audience 16+**, never designed for or marketed to children (Families policy). Change `min_age` and the
-  Target audience answer together.
+- **C1. Adults only (18+), enforced by a neutral age screen** ([Families](https://support.google.com/googleplay/android-developer/answer/9893335)).
+  Play Console Target audience is **18+ only**. Picking any age group under 18 (13–15, 16–17) puts the whole
+  [Families policy](https://play.google.com/about/families/children-and-families) on GFD: everything a child could see
+  must suit children, any ads must come from certified networks, and every SDK must meet COPPA, GDPR-K (parental
+  consent under 13–16 depending on the country), POPIA (a child is under 18; a parent must consent) and the UK
+  Children's Code. Health data, progress photos and subscriptions for teens make that a big job, so we don't.
+  How it's enforced: every new account gives its birth year (`ageFieldHtml` / `ageError` in `consent.js`) on the email
+  sign-up form and on the terms screen a new Google account gets. The field starts empty, says nothing about the limit,
+  and an under-age answer only hears "Sorry, you can't create a GFD account": the device is then blocked from making
+  accounts, and a new Google account is signed out with its deletion requested. The year never leaves the phone.
+  `MIN_AGE` (consent.js), `site.json` `min_age` and the Play answer must always match (the test checks the first two).
+  Never market to children: no cartoon kids, school or toy themes in the listing or app.
+  Lowering the age is Deon's decision and needs the full Families rules added here first.
 - **C2. User-generated content.** Suggestions and custom exercises are private today. Anything that lets people see
   each other's content (couple plan, coach mode, sharing) needs a report button, a way to block, moderation and
   terms that forbid abuse, before it ships.
@@ -154,5 +165,5 @@ blockchain, news, government, Android TV/Wear/Auto/XR, instant apps, Families ad
 | Target API (A6) | OK | Targets 36 |
 | Ads, SDKs, UGC, AI, IP | OK | No ads or trackers; UGC is private; no AI features |
 | Package name | Decision | Code uses `com.getfitdaily.app`; fixed for ever after the first upload |
-| Audience | Decision | Code and policy say 16+; 18+ was also mentioned |
+| Audience / Families | Fixed here | Play Console had 13+; set it to 18+ only. App, terms and privacy now 18+ with a neutral age screen at sign-up |
 | Trader status (Play Console) | Deon | Play shows a trader's address, phone and email on the listing in the EU: use business contact details |

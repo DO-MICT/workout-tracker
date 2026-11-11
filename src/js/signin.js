@@ -94,7 +94,7 @@ function webAuthHtml(){
       '<label class="bname"><span>Name</span><input id="obName" maxlength="40" autocomplete="name" placeholder="What should we call you?"></label>'+
       '<label class="bname"><span>Email</span><input id="obEmail" type="email" inputmode="email" autocomplete="email" maxlength="80" placeholder="you@example.com"></label>'+
       '<label class="bname pw"><span>Password</span><input id="obPass" type="password" autocomplete="new-password" minlength="6" maxlength="72" placeholder="At least 6 characters">'+peekHtml()+'</label>'+
-      consentSignupHtml()+
+      ageFieldHtml("obYear")+consentSignupHtml()+
       '<p class="wzerr" id="obErr" role="alert"></p><button class="primary" id="waSignup">Create account</button>'+
       '<p class="obfine">Already have an account? <button class="linkbtn" data-wamode="signin">Sign in</button></p>';
   } else if(m==="signin"){
@@ -132,11 +132,12 @@ function webAuthClick(t){
   var err=document.getElementById("obErr"), v=function(id){var el=document.getElementById(id);return el?(el.value||"").trim():"";};
   var okEmail=function(e){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e);};
   if(!sb&&(t.id==="waSignup"||t.id==="waSignin"||t.id==="waReset"||t.id==="waNewpass")){ err.textContent="Can’t reach the server. Check your connection and reload."; return true; }
-  if(t.id==="waGoogle"){ googleStart(t,err); return true; }
+  if(t.id==="waGoogle"){ if(OB.mode==="signup"&&ageBlocked()){ err.textContent=AGE_SORRY; return true; } googleStart(t,err); return true; }
   if(t.id==="waSignup"){
     var n=v("obName"), e=v("obEmail"), p=document.getElementById("obPass").value;
     if(!okEmail(e)){err.textContent="Enter a valid email.";return true;}
     if(p.length<6){err.textContent="Use a password of at least 6 characters.";return true;}
+    var aErr=ageError("obYear"); if(aErr){err.textContent=aErr;return true;}   /* neutral age screen (Play C1) */
     var cErr=consentSignupError(); if(cErr){err.textContent=cErr;return true;}
     var meta={display_name:n}, cm=consentSignupMeta(); if(cm) meta.consents=cm;   /* recorded with the account (WP6) */
     waBusy(t,true,"Create account"); OB.email=e;
