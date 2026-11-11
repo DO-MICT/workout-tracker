@@ -297,7 +297,37 @@ Migration `20261109000018_plan_limits.sql`, app `src/js/access.js` (plus small h
   measurement sites beyond the basic ones (`measure.full`: shown in Body progress, read only; delete still works).
   Progression, timed workouts and photos have keys and upgrade words ready for when those features ship.
 - **Upgrade page**: `proOffer(why)` opens it and logs `paywall_seen` with `{from: why}`. Buying hooks in through
-  `window.GFDBilling = {buy(why) -> Promise, label}` (WP12 Play / RevenueCat, WP13 Paddle); without it the page says Pro
-  opens with the Google Play release.
+  `window.GFDBilling = {label, ready?(), plans() -> [{id,title,price,per,note}], buy(why, id), manage()}` (WP12 Play in
+  the app, `billing.js`; WP13 Paddle on the website, `webbilling.js`); without it the page says Pro opens with the
+  Google Play release.
 - Tests: `supabase/tests/database/08_plan_limits.test.sql`, the plan cap case in `tests/db/rls-two-user.test.mjs`,
   `tests/access.test.js`.
+
+## Pro on the web (WP13)
+
+App `src/js/webbilling.js`, SDK `vendor/purchases-js.umd.js` (RevenueCat Web SDK 1.73.1, MIT, loaded only when someone
+opens the upgrade page on the website). Decision D15: the website sells Pro through Paddle, the merchant of record, so
+iPhone and desktop users can pay and Paddle handles VAT and sales tax worldwide.
+
+- **Path of a purchase**: the upgrade page → RevenueCat Web Billing checkout running on Paddle, with the Supabase user id
+  as RevenueCat's app user id → Paddle tells RevenueCat → RevenueCat's webhook (WP12, `billing-webhook`) writes
+  `entitlements` with source `web` (store `PADDLE`). Right after paying the app calls `billing-webhook/sync` and then
+  asks `my_access` again for up to 20 seconds; if Pro still hasn't arrived it says the payment came through.
+- **Never in the Android app**: `webbilling.js` does nothing when `platform.native`, and the Android build leaves the SDK
+  out (`tools/build_app.py`). Play billing (WP12) sells Pro there.
+- **Settings per Supabase project** in `app_config.web_billing` (no release needed; dev uses the Paddle sandbox):
+  ```sql
+  insert into public.app_config (key, value, note) values
+    ('web_billing', '{"rc_key": "rcb_sb_...", "offering": null}', 'RevenueCat Web Billing public key (WP13)')
+  on conflict (key) do update set value = excluded.value;
+  ```
+  `rc_key` is RevenueCat's **Web Billing public API key** (starts `rcb_`; sandbox `rcb_sb_`). It is public by design;
+  never put a secret key here. `offering` picks a RevenueCat offering by id, `null` uses the current one. No row or an
+  empty key: the upgrade page keeps saying Pro opens with the Google Play release.
+- **Products**: Paddle prices US$4.99 a month and US$34.99 a year (US$79.99 lifetime when WP15 lands), imported into
+  RevenueCat, attached to the `pro` entitlement and put in the offering as the `$rc_monthly`, `$rc_annual` and
+  `$rc_lifetime` packages. No trial on the Paddle prices: everyone already gets 14 days of Pro at sign-up (WP1).
+- **Manage or cancel**: `GFDBilling.manage()` opens RevenueCat's `managementURL` (Paddle's customer portal).
+- Events logged: `checkout_started`, `checkout_paid`, `checkout_cancelled` (with `plan` and `store: web`).
+- **RevenueCat, webhook and its secrets** (shared with Play): `docs/android-brief.md`, "Pro billing (WP12)".
+- Tests: `tests/webbilling.test.js` (fake SDK). Test real payments on dev with Paddle sandbox cards.

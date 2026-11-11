@@ -16,6 +16,9 @@ project ref from the url there.
   # also switch to the Brevo email sender (SMTP key from the SMTP_PASS environment variable)
   SMTP_PASS=... ... --apply --smtp-host smtp-relay.brevo.com --smtp-port 587 --smtp-user <Brevo SMTP login>
 
+  # also switch on Google sign-in (WP11): the Web client from Google Cloud → APIs & Services → Credentials
+  GOOGLE_CLIENT_ID=....apps.googleusercontent.com GOOGLE_CLIENT_SECRET=... ... --apply --google
+
 The access token is a personal token from supabase.com/dashboard/account/tokens. Don't save it in the repo.
 Redirect URLs are only added, never removed, so preview and staging links keep working.
 """
@@ -58,6 +61,11 @@ def wanted(args, current):
         if u not in allow:
             allow.append(u)
     out["uri_allow_list"] = ",".join(allow)
+    if args.google:
+        cid, sec = os.environ.get("GOOGLE_CLIENT_ID", "").strip(), os.environ.get("GOOGLE_CLIENT_SECRET", "").strip()
+        if not cid.endswith(".apps.googleusercontent.com") or not sec:
+            sys.exit("Put the Google Web client's ID and secret in GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET.")
+        out.update({"external_google_enabled": True, "external_google_client_id": cid, "external_google_secret": sec})
     if args.smtp_host:
         if not v["sender_email"]:
             sys.exit("Set the domain in site.json first: the sender address is hello@<domain>.")
@@ -77,6 +85,8 @@ def main():
                     help="which project and site address from deploy/supabase.json (default production)")
     ap.add_argument("--project", help="Supabase project ref; default: the one in deploy/supabase.json for --env")
     ap.add_argument("--apply", action="store_true", help="send the changes (default: only show them)")
+    ap.add_argument("--google", action="store_true",
+                    help="switch on Google sign-in with GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET from the environment")
     ap.add_argument("--smtp-host")
     ap.add_argument("--smtp-port", type=int, default=587)
     ap.add_argument("--smtp-user", help="the SMTP login (Brevo: SMTP & API > SMTP)")
@@ -101,7 +111,7 @@ def main():
         print(f"Note: the policy pages still have gaps ({', '.join(gaps)}); emails link to them anyway.")
     changed = {k: v for k, v in body.items() if str(current.get(k) or "") != str(v)}
     for k in sorted(changed):
-        shown = "(hidden)" if k == "smtp_pass" else (f"{len(changed[k])} characters" if k.endswith("_content") else changed[k])
+        shown = "(hidden)" if k in ("smtp_pass", "external_google_secret") else (f"{len(changed[k])} characters" if k.endswith("_content") else changed[k])
         print(f"  {k}: {shown}")
     if not changed:
         print("Nothing to change.")

@@ -14,9 +14,12 @@
    platform.restAlert(endMs)  app: a notification when rest ends, even with the screen off (0 cancels it)
    platform.restSoon()      the in-app beep is about to play with the app open: drop the notification
    platform.openExternal(url)  the browser (relative links go to the website)
+   platform.openAuthUrl(url,onClosed)  Google sign-in (WP11): web goes to url in this tab; the app opens it in a Custom Tab
+                            (Google refuses sign-in inside a WebView), closes it when gfd://auth-callback comes back, and
+                            calls onClosed() if the person closes the tab without finishing
    platform.appInfo()       Promise of {version, build} in the app, null on the web
    platform.storeUrl()      the Google Play listing
-   platform.billing         null until WP12 (RevenueCat)
+   platform.billing         app only (WP12): Google Play through RevenueCat, see billing.js; null on the web
    Android's back button closes the open sheet or menu first, then leaves the app (same as Escape on a keyboard). */
 var platform=(function(){
   var C=window.Capacitor, P=(C&&C.Plugins)||{};
@@ -25,7 +28,7 @@ var platform=(function(){
   /* the app shell names the website; on the web the site is wherever this page is served from */
   var SITE=SHELL.site||(location.origin+location.pathname.replace(/[^\/]*$/,""));
   var APP_ID=SHELL.appId||"com.getfitdaily.app";
-  var REST_ID=4201, restAsked=false, restEnd=0, linkFns=[], linkSeen={}, linkWait=[];
+  var REST_ID=4201, restAsked=false, restEnd=0, linkFns=[], linkSeen={}, linkWait=[], authTab=null, authTabL=null;
 
   function siteUrl(path){
     path=path||"";
@@ -46,6 +49,7 @@ var platform=(function(){
   function gotLink(url){
     if(!url||!/^gfd:\/\/auth-callback/i.test(url)||linkSeen[url]) return;
     linkSeen[url]=1;
+    if(authTab){ authTab=null; call("Browser","close"); }   /* back from Google sign-in: shut the Custom Tab */
     var a=parseLink(url);
     if(!linkFns.length){ linkWait.push(a); return; }   /* the app was opened by the link: sign-in isn't ready yet */
     linkFns.forEach(function(fn){ try{ fn(a); }catch(e){} });
@@ -110,10 +114,75 @@ var platform=(function(){
     call("App","minimizeApp");
   }
 
+  /* ---------- Google Play billing through RevenueCat (WP12) ----------
+     RevenueCat's app user id is the Supabase user id, so the server (billing-webhook) knows whose purchase it is.
+     Errors reject with an Error whose message is fit to show; backing out of Google's sheet rejects {cancelled:true}. */
+  function rcBilling(){
+    var R=P.Purchases, setUp=null, who=null, pkgs={};
+    if(!R) return null;   /* an older app build without the plugin */
+    function fail(e){
+      if(e&&(e.userCancelled||String(e.code)==="1")) return Promise.reject({cancelled:true});
+      var c=String(e&&e.code||""), m={
+        "2":"Google Play had a problem. Try again in a moment.", "3":"Purchases are turned off on this phone.",
+        "6":"Google Play already has this purchase. Tap Restore purchases.", "10":"No connection. Try again when you’re online.",
+        "20":"Your payment is pending. Pro opens when Google Play confirms it.", "35":"Google Play isn’t available on this phone."
+      }[c];
+      return Promise.reject(new Error(m||"That didn’t go through. Nothing was charged. Try again in a moment."));
+    }
+    function ready(key,uid){
+      if(!key||!uid) return Promise.reject(new Error("Buying Pro isn’t open yet."));
+      if(setUp&&who===uid) return setUp;
+      if(setUp) setUp=setUp.then(function(){ return R.logIn({appUserID:uid}); });
+      else setUp=Promise.resolve(R.configure({apiKey:key,appUserID:uid}));
+      who=uid;
+      setUp=setUp.catch(function(e){ setUp=null; who=null; return fail(e); });
+      return setUp;
+    }
+    return {
+      store:"play",
+      ready:ready,
+      /* the current offering's packages: [{id, title, price, per, product}] */
+      plans:function(){
+        return Promise.resolve(R.getOfferings()).then(function(o){
+          var cur=o&&o.current, list=(cur&&cur.availablePackages)||[];
+          pkgs={};
+          return list.map(function(p){
+            pkgs[p.identifier]=p;
+            var sp=p.product||{}, t=String(p.packageType||"");
+            var per=t==="ANNUAL"?"year":t==="MONTHLY"?"month":t==="LIFETIME"?"once":(sp.subscriptionPeriod==="P1Y"?"year":sp.subscriptionPeriod==="P1M"?"month":"");
+            return {id:p.identifier,title:sp.title||"",price:sp.priceString||"",per:per,product:sp.identifier||""};
+          });
+        },fail);
+      },
+      buy:function(id){
+        var p=pkgs[id]; if(!p) return Promise.reject(new Error("That plan isn’t available right now. Try again in a moment."));
+        return Promise.resolve(R.purchasePackage({aPackage:p})).then(function(r){ return r&&r.customerInfo; },fail);
+      },
+      restore:function(){ return Promise.resolve(R.restorePurchases()).then(function(r){ return r&&r.customerInfo; },fail); },
+      signOut:function(){ if(!setUp) return Promise.resolve(); var s=setUp; setUp=null; who=null; return s.then(function(){ return R.logOut(); }).catch(function(){}); },
+      /* Google Play's own page to change or cancel a subscription */
+      manageUrl:function(product){
+        var sku=String(product||"").split(":")[0];
+        return "https://play.google.com/store/account/subscriptions"+(sku?"?sku="+encodeURIComponent(sku)+"&package="+encodeURIComponent(APP_ID):"");
+      }
+    };
+  }
+
   function openExternal(url){
     var u=siteUrl(url);
     if(isAndroid&&P.Browser) return call("Browser","open",{url:u,toolbarColor:"#0D0F12"});
     window.open(u,"_blank","noopener"); return Promise.resolve(null);
+  }
+
+  function openAuthUrl(url,onClosed){
+    if(!isAndroid||!P.Browser){ location.assign(url); return Promise.resolve(null); }
+    authTab=onClosed||function(){};
+    if(!authTabL&&P.Browser.addListener){
+      authTabL=true;
+      /* closed by hand before the link came back: let the sign-in screen try again */
+      P.Browser.addListener("browserFinished",function(){ var f=authTab; authTab=null; if(f) setTimeout(function(){ try{ f(); }catch(e){} },300); });
+    }
+    return call("Browser","open",{url:url,toolbarColor:"#0D0F12",presentationStyle:"popover"});
   }
 
   if(isAndroid){
@@ -155,8 +224,9 @@ var platform=(function(){
     restAlert:restAlert,
     restSoon:function(){ if(isAndroid&&restEnd&&document.visibilityState==="visible"){ restEnd=0; call("LocalNotifications","cancel",{notifications:[{id:REST_ID}]}); } },
     openExternal:openExternal,
+    openAuthUrl:openAuthUrl,
     appInfo:function(){ return isAndroid?call("App","getInfo"):Promise.resolve(null); },
     storeUrl:function(){ return "https://play.google.com/store/apps/details?id="+APP_ID; },
-    billing:null
+    billing:isAndroid?rcBilling():null
   };
 })();
