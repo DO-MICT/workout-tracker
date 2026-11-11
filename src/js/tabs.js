@@ -20,8 +20,16 @@ function tabSheetsOpen(){
   return {overlay:vis("onboard")||vis("wizard")||vis("builder")||vis("notesheet")||vis("donepop")||vis("measure"),
     tab:vis("more")||vis("exlib")||vis("profile")||vis("sugg")||vis("feedback")?"more":vis("history")||vis("body")?"stats":vis("plans")?"plans":vis("equip")?"gear":"workout"};
 }
+/* WP17: while any page or popup is open, the workout page underneath is inert, so TalkBack and the keyboard can't wander into it.
+   Tab pages (Plans, Stats, Gear, More...) are not modal: the tab bar stays reachable next to them. */
+function syncInert(){
+  var open=Array.prototype.some.call(document.querySelectorAll(".sheet,.donepop"),function(el){return !el.hidden;});
+  var w=document.querySelector(".wrap"); if(!w) return;
+  if(open){w.setAttribute("inert","");w.setAttribute("aria-hidden","true");} else {w.removeAttribute("inert");w.removeAttribute("aria-hidden");}
+}
 function syncTabs(){
   var st=tabSheetsOpen();
+  syncInert();
   document.body.classList.toggle("tabs",!st.overlay);
   if(st.tab!==TAB_ACTIVE){TAB_ACTIVE=st.tab;renderTabbar();}
 }
@@ -78,7 +86,7 @@ function tabsClick(t){
 }
 (function initTabs(){
   renderTabbar();
-  var watch=["onboard","consent","wizard","builder","notesheet","donepop","measure","body","more","exlib","profile","sugg","feedback","usage","history","plans","equip"];
+  var watch=["onboard","consent","wizard","builder","notesheet","donepop","askpop","measure","body","more","exlib","profile","sugg","feedback","usage","history","plans","equip","acctdel","healthsheet","prosheet"];
   if(window.MutationObserver){
     var mo=new MutationObserver(function(){syncTabs();});
     watch.forEach(function(id){var el=document.getElementById(id); if(el) mo.observe(el,{attributes:true,attributeFilter:["hidden"]});});
