@@ -6,6 +6,8 @@ name: Push sign-in settings
 # Repository secrets (Settings > Secrets and variables > Actions):
 #   SUPABASE_ACCESS_TOKEN   supabase.com > Account > Access tokens (same one Deploy functions uses)
 #   SMTP_USER, SMTP_PASS    Brevo > SMTP & API > SMTP: the login and an SMTP key (optional: without them only emails + URLs)
+#   GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET  the Google Web client (optional: with them, Google sign-in is switched on; WP11,
+#                           docs/site-brief.md)
 # The project comes from deploy/supabase.json for the chosen environment.
 on:
   workflow_dispatch:
@@ -28,6 +30,8 @@ jobs:
       SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
       SMTP_USER: ${{ secrets.SMTP_USER }}
       SMTP_PASS: ${{ secrets.SMTP_PASS }}
+      GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+      GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
     steps:
       - uses: actions/checkout@v4
       - name: Push (${{ inputs.mode }}) to ${{ inputs.target }}
@@ -37,6 +41,9 @@ jobs:
           [ "${{ inputs.mode }}" = apply ] && args+=(--apply)
           if [ -n "$SMTP_USER" ] && [ -n "$SMTP_PASS" ]; then
             args+=(--smtp-host smtp-relay.brevo.com --smtp-port 587 --smtp-user "$SMTP_USER")
+          fi
+          if [ -n "$GOOGLE_CLIENT_ID" ] && [ -n "$GOOGLE_CLIENT_SECRET" ]; then
+            args+=(--google)
           fi
           python3 tools/push_auth_emails.py "${args[@]}" | tee out.txt
           { echo "### Sign-in settings: ${{ inputs.target }} (${{ inputs.mode }})"; echo '```'; cat out.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"

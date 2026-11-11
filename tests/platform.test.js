@@ -41,7 +41,7 @@ function page({ android = false, launchUrl = null, shell = null, location = null
         App: plugin("App", { getLaunchUrl: launchUrl ? { url: launchUrl } : {}, minimizeApp: null, getInfo: { version: "2026.11.09", build: "12" } }),
         LocalNotifications: plugin("LocalNotifications", { checkPermissions: { display: "granted" }, requestPermissions: { display: "granted" }, createChannel: null, schedule: null, cancel: null }),
         Haptics: plugin("Haptics", { vibrate: null }),
-        Browser: plugin("Browser", { open: null }),
+        Browser: plugin("Browser", { open: null, close: null }),
         Share: plugin("Share", { share: null }),
         Filesystem: plugin("Filesystem", { writeFile: { uri: "file:///cache/x.zip" } }),
       },
@@ -167,4 +167,38 @@ test("android: saving a file writes it to the cache and opens the share sheet", 
   const w = calls.find((c) => c[0] === "Filesystem.writeFile")[1];
   assert.equal(JSON.stringify(w), JSON.stringify({ path: "gfd-data-2026-11-09.zip", data: "UEsDBA==", directory: "CACHE" }));
   assert.equal(JSON.stringify(calls.find((c) => c[0] === "Share.share")[1].files), JSON.stringify(["file:///cache/x.zip"]));
+});
+
+test("android: Google sign-in opens in a Custom Tab, which closes when the link comes back (WP11)", async () => {
+  const { p, calls, listeners } = page({ android: true });
+  const got = [];
+  p.onAuthLink((a) => got.push(a));
+  let closed = 0;
+  p.openAuthUrl("https://x.supabase.co/auth/v1/authorize?provider=google", () => closed++);
+  await tick();
+  assert.deepEqual(calls.find((c) => c[0] === "Browser.open")[1].url, "https://x.supabase.co/auth/v1/authorize?provider=google");
+  listeners["App:appUrlOpen"]({ url: "gfd://auth-callback#access_token=a&refresh_token=r" });
+  await tick();
+  assert.ok(calls.some((c) => c[0] === "Browser.close"));
+  assert.equal(got[0].access_token, "a");
+  listeners["Browser:browserFinished"]();
+  await new Promise((r) => setTimeout(r, 350));
+  assert.equal(closed, 0, "finishing after the link came back doesn't reset the button");
+});
+
+test("android: closing the Google tab by hand lets the sign-in screen try again", async () => {
+  const { p, listeners } = page({ android: true });
+  let closed = 0;
+  p.openAuthUrl("https://x/authorize", () => closed++);
+  listeners["Browser:browserFinished"]();
+  await new Promise((r) => setTimeout(r, 350));
+  assert.equal(closed, 1);
+});
+
+test("web: Google sign-in goes to Google in this tab", () => {
+  const { ctx, p } = page();
+  let went = "";
+  ctx.location.assign = (u) => { went = u; };
+  p.openAuthUrl("https://x/authorize");
+  assert.equal(went, "https://x/authorize");
 });
