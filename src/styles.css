@@ -623,6 +623,13 @@ details.grp .ex{margin-bottom:8px}
 .eqchip:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .eqempty{color:var(--muted);font-size:.92rem;margin:6px 0 4px}
 .psec{font-size:1.35rem;margin:18px 0 2px;font-weight:700}
+details.padv{margin-top:22px;border-top:1px solid var(--line)}
+details.padv>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;min-height:48px;font-weight:600;color:var(--muted)}
+details.padv>summary::-webkit-details-marker{display:none}
+details.padv>summary::after{content:"";width:9px;height:9px;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:rotate(45deg);margin:-4px 6px 0 0}
+details.padv[open]>summary::after{transform:rotate(-135deg);margin-top:4px}
+details.padv>summary:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:8px}
+details.padv .psec{margin-top:4px}
 .psec:first-of-type{margin-top:6px}
 .sheet .sub{margin-bottom:10px}
 .wheel{position:relative;display:flex;justify-content:center;gap:18px;background:var(--card);border-radius:14px;padding:8px 12px;max-width:320px}

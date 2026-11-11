@@ -1,4 +1,4 @@
-/* ---------- register + first-run setup (friends test build) ---------- */
+/* ---------- first-run setup (sign-up itself is in signin.js) ---------- */
 var MY_GEAR=["adjbench","flatbench","barbell","plates","ezbar","dumbbells","lyingpress","shoulderpress","latpulldown","legext","lyingcurl","standcalf","abbench","romanchair","cablecross","pullupbar","bands","yogamat","treadmill","smith","stabball"];
 var OB=null; /* {step, ans:{train,level,goal,days}, plan, picked, locName}; web sign-in also keeps mode/email here */
 /* F3: four short questions, then where you train, then a plan that fits. Progress is kept in S.ob as you go,
@@ -19,12 +19,7 @@ var OB_PRESETS={
  body:["Just my body",["calisthenics"]]
 };
 function obPresetOrder(t){return ({pilates:["pilates","home","body","gym"],yoga:["yoga","home","body","gym"],running:["body","home","gym"]})[t]||["gym","home","body","yoga"];}
-function needsOnboarding(){ if(!TESTER_BUILD) return false; var A=acct(); return !A.signedIn||!S.onboarded; }
 function obShow(){ var sh=document.getElementById("onboard"); sh.hidden=false; document.body.style.overflow="hidden"; renderOnboard(); }
-function startOnboarding(){
-  if(!needsOnboarding()) return;
-  if(acct().signedIn) resumeOnboarding(); else { OB={step:"register",ans:{}}; obShow(); }
-}
 /* open setup where it was left: the saved step and answers, or the first question */
 function resumeOnboarding(){
   var o=S.ob||{}, st=OB_ORDER.indexOf(o.step)>=0?o.step:"train";
@@ -74,14 +69,7 @@ function renderOnboard(){
   var sh=document.getElementById("onboard"); if(!sh||!OB) return;
   var h='<div class="sheet-in ob">', back='<button class="ghost" id="obBack">Back</button>';
   if(OB.step==="register"&&WEB_MODE){ h+=webAuthHtml(); }
-  else if(OB.step==="register"){
-    h+=brandHtml()+'<div class="obhero"><h1>Welcome</h1><p>Create your account to start testing Get Fit Daily.</p></div>'+
-      '<label class="bname"><span>Name</span><input id="obName" maxlength="40" autocomplete="name" placeholder="What should we call you?"></label>'+
-      '<label class="bname"><span>Email</span><input id="obEmail" type="email" inputmode="email" autocomplete="email" maxlength="80" placeholder="you@example.com"></label>'+
-      '<label class="bname dim"><span>Password</span><input id="obPass" type="text" value="mvp" disabled aria-describedby="obPassNote"><em id="obPassNote">Fixed to “mvp” while we test. Real passwords come with the app store release.</em></label>'+
-      '<p class="wzerr" id="obErr" role="alert"></p><button class="primary" id="obRegister">Create account</button>'+
-      '<p class="obfine">Test version: your details and workouts are saved on this phone only.</p>';
-  } else if(OB_Q[OB.step]){
+  else if(OB_Q[OB.step]){
     var q=OB_Q[OB.step], qi=["train","level","goal","days"].indexOf(OB.step), cur=OB.ans[OB.step];
     if(qi===0) h+='<div class="obhero"><h1>Let’s set you up</h1><p>Four quick questions, then we’ll suggest a plan that fits. You can change everything later.</p></div>';
     h+=obDots(1,'Question '+(qi+1)+' of 4')+'<h2 class="obh" id="obQ">'+q.h+'</h2><p class="sub">'+q.sub+'</p>'+
@@ -118,13 +106,6 @@ function renderOnboard(){
 function obWeek(n){return ({2:["mon","thu"],3:["mon","wed","fri"],4:["mon","tue","thu","fri"],5:["mon","tue","wed","thu","fri"]})[+n]||[];}
 function onboardClick(t){
   if(!OB) return false;
-  if(t.id==="obRegister"){
-    var n=(document.getElementById("obName").value||"").trim(), e=(document.getElementById("obEmail").value||"").trim(), err=document.getElementById("obErr");
-    if(!e){err.textContent="Enter your email to create your account.";document.getElementById("obEmail").focus();return true;}
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e)){err.textContent="That email doesn’t look right.";document.getElementById("obEmail").focus();return true;}
-    var A=acct(); A.email=e; A.signedIn=true; A.authMode="mvp"; A.registeredAt=new Date().toISOString();
-    S.names[0]=n||"You"; save(); resumeOnboarding(); return true;
-  }
   if(t.dataset.obans){
     var kv=t.dataset.obans.split(":"), k=kv[0];
     OB.ans[k]=k==="days"?+kv[1]:kv[1];
