@@ -60,10 +60,12 @@ function billManage(){
   return platform.openExternal(billPlayManageUrl(a.product_id));
 }
 /* works on the web too: Google's subscriptions page for the signed-in Google account */
+/* the Play package name, from platform.js (the one place that knows it) */
+function billAppId(){ var m=/[?&]id=([^&]+)/.exec(platform.storeUrl()); return m?decodeURIComponent(m[1]):""; }
 function billPlayManageUrl(product){
   var b=billPlay(); if(b) return b.manageUrl(product);
   var sku=String(product||"").split(":")[0];
-  return "https://play.google.com/store/account/subscriptions"+(sku?"?sku="+encodeURIComponent(sku)+"&package=com.getfitdaily.app":"");
+  return "https://play.google.com/store/account/subscriptions"+(sku?"?sku="+encodeURIComponent(sku)+"&package="+encodeURIComponent(billAppId()):"");
 }
 
 if(billPlay()){

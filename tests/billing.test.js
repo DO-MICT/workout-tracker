@@ -217,7 +217,8 @@ test("Your plan card: manage and restore for Google Play, a note for web and lif
   const t = { dataset: { bill: "manage" } };
   ctx.access = () => ({ source: "play", product_id: "gfd_pro:monthly" });
   assert.equal(ctx.billingClick(t), true);
-  assert.equal(opened[0], "https://play.google.com/store/account/subscriptions?sku=gfd_pro&package=com.getfitdaily.app");
+  assert.equal(opened[0], "https://play.google.com/store/account/subscriptions?sku=gfd_pro&package=" + ctx.platform.storeUrl().split("id=")[1]);
+  assert.match(app({ android: false }).ctx.billPlayManageUrl("gfd_pro:yearly"), /sku=gfd_pro&package=[a-z.]+$/, "the website uses the same package name");
   assert.equal(ctx.billingClick({ dataset: {} }), false);
 });
 
