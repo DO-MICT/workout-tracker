@@ -59,6 +59,7 @@ function renderMore(){
     '<div class="mlist mtheme"><span>Weights in</span><div class="seg" role="group" aria-label="Weights in">'+
     [["kg","kg"],["lb","lb"]].map(function(o){return '<button data-unitset="'+o[0]+'" aria-pressed="'+(U()===o[0])+'">'+o[1]+'</button>';}).join("")+'</div></div>'+
     (WEB_MODE&&sbUser?'<button class="ghost msignout" id="signOut">Sign out</button>':'')+
+    (typeof MEDICAL_NOTE==="string"?'<p class="obfine">'+esc(MEDICAL_NOTE)+'</p>':'')+
     '</div>';
   sh.innerHTML=h;
 }

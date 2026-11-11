@@ -50,11 +50,12 @@ function consentCheck(){
 }
 function consentOpen(needs,update){
   var sh=document.getElementById("consent"); if(!sh) return;
-  sh.dataset.needs=needs.join(",");
+  sh.dataset.needs=needs.join(","); sh.dataset.fresh=update?"":"1";
   var both=needs.length>1, what=both?'the '+policyLink("terms")+' and the '+policyLink("privacy"):'the '+policyLink(needs[0]);
   sh.innerHTML='<div class="sheet-in ob">'+brandHtml()+'<div class="obhero"><h1 id="cstitle">'+(update?'We’ve updated':'One more thing')+'</h1>'+
     '<p>'+(update?'We changed our '+(both?'Terms of use and Privacy policy':CONSENT_LABEL[needs[0]])+'. Please read '+(both?'them':'it')+' and agree to keep using GFD.'
       :'Please read and agree to how GFD works and how we look after your data.')+'</p></div>'+
+    (update?'':ageFieldHtml("csYear"))+
     '<label class="cscheck"><input type="checkbox" id="csAgree"> <span>I agree to '+what+'.</span></label>'+
     '<p class="wzerr" id="csErr" role="alert"></p><button class="primary" id="csGo">Agree and continue</button>'+
     '<p class="obfine">Don’t agree? <button class="linkbtn" id="csOut">Sign out</button></p></div>';
@@ -64,6 +65,13 @@ function consentClose(){
   var sh=document.getElementById("consent"); if(!sh||sh.hidden) return;
   sh.hidden=true; sh.innerHTML=""; document.body.style.overflow="";
   var d=consentDone; consentDone=null; if(d) d();
+}
+/* under age on a brand-new account: ask for it to be deleted, then sign out */
+function ageRefuse(err,t){
+  err.textContent=AGE_SORRY; t.disabled=true;
+  var src=typeof evPlatform==="function"?evPlatform():"web";
+  var p=sb?sb.rpc("request_account_deletion",{p_source:src}).then(null,function(){}):Promise.resolve();
+  p.then(function(){ setTimeout(function(){ webSignOut(); },2500); });
 }
 /* record each kind in turn; stop at the first problem */
 function consentGive(kinds){
@@ -80,6 +88,35 @@ function consentErr(e){
   if(/text has changed/i.test(m)) return "The text was just updated. Close and reopen the app to read the new version.";
   if(/too many/i.test(m)) return "Too many changes today. Try again tomorrow.";
   return "Couldn’t save that. Check your connection and try again.";
+}
+
+/* ---------- neutral age screen (Play Families policy, docs/play-policy-brief.md C1) ----------
+   Every new account gives the year it was born before it's made: the email sign-up form, and the terms screen that a
+   new Google account gets. Neutral: the field starts empty, nothing hints at the age limit, and an under-age answer
+   isn't told how to get past it. The year is only checked on the phone, never sent or kept (data minimisation).
+   An under-age answer blocks new accounts on this device; a new Google account is also signed out and its deletion
+   requested. MIN_AGE must match site.json min_age (tests/play-policy.test.js checks). */
+var MIN_AGE=18, AGE_BLOCK_KEY="gfd.agegate";
+function ageBlocked(){ try{ return localStorage.getItem(AGE_BLOCK_KEY)==="1"; }catch(e){ return false; } }
+function ageBlock(){ try{ localStorage.setItem(AGE_BLOCK_KEY,"1"); }catch(e){} }
+var AGE_SORRY="Sorry, you can’t create a GFD account.";
+/* "ok", "young", or a message to show (pure: tested) */
+function ageCheck(v,now){
+  var y=Number(String(v==null?"":v).trim()), cur=(now||new Date()).getFullYear();
+  if(!/^\d{4}$/.test(String(v==null?"":v).trim())) return "Enter the year you were born, for example 1990.";
+  if(y>cur||y<cur-120) return "Check the year you were born.";
+  return cur-y>=MIN_AGE?"ok":"young";
+}
+function ageFieldHtml(id){
+  return '<label class="bname"><span>Year you were born</span><input id="'+id+'" type="text" inputmode="numeric" autocomplete="bday-year" maxlength="4" pattern="[0-9]*" placeholder="YYYY"></label>';
+}
+/* null = fine; a string = what to tell the person. Marks the device on an under-age answer. */
+function ageError(id){
+  if(ageBlocked()) return AGE_SORRY;
+  var el=document.getElementById(id), r=ageCheck(el?el.value:"");
+  if(r==="ok") return null;
+  if(r==="young"){ ageBlock(); return AGE_SORRY; }
+  return r;
 }
 
 /* ---------- sign-up form: same tick box, plus tips and news ---------- */
@@ -130,6 +167,11 @@ function consentProfileLoad(){
 function consentClick(t){
   if(t.id==="csGo"){
     var sh=document.getElementById("consent"), err=document.getElementById("csErr");
+    if(sh.dataset.fresh){   /* a new account (Google): the age screen first */
+      var ae=ageError("csYear");
+      if(ae===AGE_SORRY){ ageRefuse(err,t); return true; }
+      if(ae){ err.textContent=ae; return true; }
+    }
     if(!document.getElementById("csAgree").checked){ err.textContent="Tick the box to agree, or sign out."; return true; }
     t.disabled=true; t.textContent="Please wait…";
     consentGive((sh.dataset.needs||"").split(",").filter(Boolean)).then(function(){ consentClose(); },function(e){

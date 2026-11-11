@@ -10,6 +10,7 @@ The web app is the source of truth; the earlier Expo app (`mobile/`) was removed
 - Android app (Capacitor shell, `platform.js`, Play releases): `docs/android-brief.md`; store text: `docs/store-listing.md`
 - Database changes, dev/prod Supabase and Coolify hosting: `docs/db-brief.md` (migrations + rollbacks, db-check CI, deploy workflow)
 - Domain, privacy policy, terms and sign-in emails: `docs/site-brief.md` (edit `site.json` and `site/`, never the built pages)
+- Google Play policy (payments, privacy, health, permissions, store listing): `docs/play-policy-brief.md`. Applies to all work
 
 ## Rules
 
@@ -27,4 +28,8 @@ The web app is the source of truth; the earlier Expo app (`mobile/`) was removed
   Grep or query them for the part you need.
 - Work in batches with a clear end (about 6–10 illustrations or 20–40 library entries per session). When a batch is done,
   update the relevant brief if something new was decided, and start a new session for the next batch.
+- Google Play policy rules in `docs/play-policy-brief.md` bind every design and PR: in the Android app Pro is sold only
+  through Google Play and nothing leads to web checkout; any new data, provider or SDK updates the privacy policy and the
+  Data safety table in the same PR; no medical claims; no new permissions without Deon's OK. Name the rule id in the PR
+  when a change touches one.
 - Plain, friendly English in the app; metric units.

@@ -181,6 +181,12 @@ footer a{color:var(--muted)}
 <footer>
   <div class="wrap">GFD · Get Fit Daily. Great Form and Discipline. · <a href="./">Open the app</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a> · <a href="delete-account.html">Delete your account</a> · <a href="roadmap.html">What's coming</a></div>
 </footer>
-<script>document.querySelectorAll('.top nav a').forEach(function(a){if(location.pathname.endsWith(a.getAttribute('href')))a.setAttribute('aria-current','page');});</script>
+<script>/* opened from the Android app (?inapp=1): no links into the web app, which sells Pro outside Google Play (Play Payments policy) */
+if(/[?&]inapp=1/.test(location.search)){
+  document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');
+    if(h==='./'||h==='roadmap.html'){if(a.closest('footer')){var p=a.previousSibling;if(p&&p.nodeType===3)p.nodeValue=p.nodeValue.replace(/ · $/,'');a.remove();}else{var s=document.createElement('span');s.className=a.className;s.innerHTML=a.innerHTML;a.replaceWith(s);}}
+    else if(/^[a-z-]+\.html$/.test(h))a.setAttribute('href',h+'?inapp=1');});
+}
+document.querySelectorAll('.top nav a').forEach(function(a){if(location.pathname.endsWith(a.getAttribute('href').split('?')[0]))a.setAttribute('aria-current','page');});</script>
 </body>
 </html>

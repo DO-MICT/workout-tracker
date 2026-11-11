@@ -116,6 +116,10 @@ var platform=(function(){
 
   function openExternal(url){
     var u=siteUrl(url);
+    /* our own pages opened from the app get ?inapp=1: site/shell.html then hides its links back to the web app, whose
+       upgrade page sells Pro through Paddle. Play's Payments policy: the app must not lead people to another way to
+       pay (docs/play-policy-brief.md, P3). */
+    if(isAndroid&&!/^[a-z][a-z0-9+.-]*:/i.test(url||"")) u=u.replace(/^([^#?]*)(\?[^#]*)?/,function(m,a,q){ return a+(q?q+"&":"?")+"inapp=1"; });
     if(isAndroid&&P.Browser) return call("Browser","open",{url:u,toolbarColor:"#0D0F12"});
     window.open(u,"_blank","noopener"); return Promise.resolve(null);
   }

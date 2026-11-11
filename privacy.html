@@ -93,16 +93,18 @@ footer a{color:var(--muted)}
 </tbody></table></div>
 <p>We don't use advertising, ad trackers or third-party analytics, and we don't sell or share your personal information for advertising. We don't make automated decisions about you that have legal or similar effects: training suggestions are only suggestions.</p>
 <p><b>On your device.</b> The app keeps a copy of your data in your browser or phone storage so it works offline in the gym. Signing out clears it.</p>
+<p><b>In the Android app.</b> GFD asks to send notifications so it can tell you when your rest is over; that alert is set on your phone and nothing leaves the phone for it. The app doesn't read your location, contacts, files, microphone or photos, except a picture you choose to attach. It uses no advertising ID. Google Play may give us crash and performance reports from Android without your name or account.</p>
 
 <h2>Who helps us run GFD</h2>
 <p>These providers process data for us under contracts that limit them to doing so on our instructions:</p>
 <ul>
 <li><b>Supabase</b>: database, sign-in and file storage. Your account and training data are stored in the European Union (Paris, France).</li>
-<li><b>GitHub</b> (Microsoft): hosts the website and web app. Like any web host it sees your IP address when pages load.</li>
+<li><b>Hetzner</b>: runs the server (in Helsinki, Finland) that serves the website and web app. Like any web host it sees your IP address when pages load and keeps short server logs.</li>
 <li><b>Google sign-in</b>, if you choose it: Google confirms who you are and tells us your name and email address. Google's own privacy policy covers your Google account.</li>
 <li><b>Google Fonts</b>: the app's lettering is loaded from Google, which sees your IP address when it does.</li>
-<li><b>Email sender</b>: delivers sign-in, confirmation and password emails, and tips and news if you ask for them.</li>
-<li><b>Google Play</b>, <b>RevenueCat</b> and <b>Paddle</b> (our web payment partner and merchant of record): handle Pro purchases, receipts and refunds. Paddle and Google act as sellers in their own right for payments and have their own privacy policies.</li>
+<li><b>Brevo</b>: sends our sign-in, confirmation and password emails, and tips and news if you ask for them. It sees your email address and whether an email was delivered.</li>
+<li><b>ImprovMX</b>: receives email you send to our addresses (such as <a href="mailto:privacy@getfitdaily.co.za">privacy@getfitdaily.co.za</a>) and passes it on to us.</li>
+<li><b>Google Play</b>, <b>RevenueCat</b> and <b>Paddle</b> (our web payment partner and merchant of record): handle Pro purchases, receipts and refunds. RevenueCat gets a random code for your account (not your name or email) and your purchase record, and tells us when Pro starts, renews or ends. Paddle and Google act as sellers in their own right for payments and have their own privacy policies.</li>
 </ul>
 <p>Some of these providers are based in, or may access data from, countries outside the EU, UK or South Africa, such as the United States. Where that happens the transfer is protected by safeguards recognised by those laws, such as the European Commission's standard contractual clauses or an adequacy decision.</p>
 
@@ -131,7 +133,7 @@ footer a{color:var(--muted)}
 <p>Data travels encrypted (HTTPS) and is stored encrypted by our providers. Each person can only reach their own records: the database itself checks this on every request, and we test it automatically before every change. Photos are private and shown through short-lived links. Only a small number of admins can read suggestions sent to us; nobody at GFD browses your workouts. If a breach ever puts your data at risk, we'll tell you and the regulators as the law requires.</p>
 
 <h2>Children</h2>
-<p>GFD is for people aged 16 and over. We don't knowingly keep data about anyone younger. If you think a child has signed up, email <a href="mailto:privacy@getfitdaily.co.za">privacy@getfitdaily.co.za</a> and we'll delete the account.</p>
+<p>GFD is for people aged 18 and over. We don't knowingly keep data about anyone younger. When an account is made we ask the year you were born to check this; the year is only checked on your device and isn't sent to us or kept. If you think a child has signed up, email <a href="mailto:privacy@getfitdaily.co.za">privacy@getfitdaily.co.za</a> and we'll delete the account.</p>
 
 <h2>Changes to this policy</h2>
 <p>When we change this policy we give it a new version number. If the change matters, the app shows it to you and asks you to agree before you carry on. Earlier versions are available on request.</p>
@@ -142,6 +144,12 @@ footer a{color:var(--muted)}
 <footer>
   <div class="wrap">GFD · Get Fit Daily. Great Form and Discipline. · <a href="./">Open the app</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a> · <a href="delete-account.html">Delete your account</a> · <a href="roadmap.html">What's coming</a></div>
 </footer>
-<script>document.querySelectorAll('.top nav a').forEach(function(a){if(location.pathname.endsWith(a.getAttribute('href')))a.setAttribute('aria-current','page');});</script>
+<script>/* opened from the Android app (?inapp=1): no links into the web app, which sells Pro outside Google Play (Play Payments policy) */
+if(/[?&]inapp=1/.test(location.search)){
+  document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');
+    if(h==='./'||h==='roadmap.html'){if(a.closest('footer')){var p=a.previousSibling;if(p&&p.nodeType===3)p.nodeValue=p.nodeValue.replace(/ · $/,'');a.remove();}else{var s=document.createElement('span');s.className=a.className;s.innerHTML=a.innerHTML;a.replaceWith(s);}}
+    else if(/^[a-z-]+\.html$/.test(h))a.setAttribute('href',h+'?inapp=1');});
+}
+document.querySelectorAll('.top nav a').forEach(function(a){if(location.pathname.endsWith(a.getAttribute('href').split('?')[0]))a.setAttribute('aria-current','page');});</script>
 </body>
 </html>

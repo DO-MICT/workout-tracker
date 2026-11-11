@@ -41,7 +41,13 @@ YOUR DATA IS YOURS
 
 GFD Pro: unlimited plans, full stats and more. Try Pro free for 14 days, no card needed.
 The free plan keeps up to 3 plans.
+
+GFD is not a medical device. It gives general training suggestions and doesn't diagnose, treat, cure or prevent
+any condition. Talk to a doctor or other health professional for medical advice, diagnosis or treatment.
 ```
+
+Keep the last paragraph: Play's Health Content policy requires it (docs/play-policy-brief.md, H2). Never name a
+price on the website or say Pro is cheaper anywhere else (P3).
 
 Check before submitting: the Pro and free-plan lines describe WP12 and WP14, so keep them only once those are live,
 and the illustration line only claims what is drawn (81 exercises live in Nov 2026).
@@ -64,12 +70,12 @@ and the illustration line only claims what is drawn (81 exercises live in Nov 20
 | Ads | No, the app has no ads |
 | App access | Sign-in needed: give review a test account (email + password) with a plan and a few workouts |
 | Content rating | Questionnaire: reference/health-and-fitness; no violence, user-to-user chat, gambling or location sharing → expected rating Everyone / PEGI 3 |
-| Target audience | 16 and over (matches `min_age` in `site.json`; change both if Q12 lands on 13) |
+| Target audience | **18 and over only** (tick 18+ alone). Matches `min_age` in `site.json` and `MIN_AGE` in `consent.js`. Picking any age under 18 brings in the Families policy (docs/play-policy-brief.md C1) |
 | News app | No |
-| Health apps | Fitness (workout logging). Not a medical device |
+| Health apps | Health apps declaration: Fitness / activity tracking (workout logging). Not a medical device, no Health Connect, no medical claims |
 | Financial features | None |
 | Government app | No |
-| Data deletion | In-app: Profile › Delete my account. Web: `<site>/delete-account.html` |
+| Data deletion | In-app: Profile › Delete my account. Web (the URL field in Play Console): `https://getfitdaily.co.za/delete-account.html` |
 
 ## Data safety form
 
@@ -78,7 +84,7 @@ Data is not sold, not used for ads, not shared with third parties (processors ac
 
 | Data type (Play's names) | Collected | Optional? | Purposes |
 | --- | --- | --- | --- |
-| Personal info › Email address | Yes | Required | Account management, App functionality |
+| Personal info › Email address | Yes | Required | Account management, App functionality, Developer communications (sign-in emails; tips and news only if opted in) |
 | Personal info › Name | Yes | Optional (display name) | App functionality |
 | Health and fitness › Fitness info | Yes | Required for the app to be useful | App functionality |
 | Health and fitness › Health info | Yes | Optional (only with health details switched on) | App functionality |
@@ -87,7 +93,13 @@ Data is not sold, not used for ads, not shared with third parties (processors ac
 | App activity › App interactions | Yes | Required | Analytics (anonymous counts, no account id) |
 | App info and performance › Crash logs | Yes | Required | Analytics (scrubbed error reports) |
 | Device or other IDs | Yes | Required | Analytics (random install id, not the advertising id) |
+| Personal info › User IDs | Yes | Required | Account management, App functionality (account id; RevenueCat gets it for purchases) |
 | Messages › Other in-app messages | Yes | Optional (suggestions/feedback) | Developer communications |
+
+SDKs to account for (Play counts what they collect as ours): RevenueCat (purchases, account id), Capacitor plugins
+(no data collection), supabase-js (talks only to our own backend). Paddle's code is website only and is left out of
+the app build. Re-check this table
+whenever a dependency is added (docs/play-policy-brief.md, D3).
 
 Not collected: location, contacts, calendar, files and docs, audio, web browsing, SMS, call logs.
 The rest timer's alert is a local notification set on the phone; no push service and no data leaves the phone for it.
