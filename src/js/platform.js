@@ -14,6 +14,9 @@
    platform.restAlert(endMs)  app: a notification when rest ends, even with the screen off (0 cancels it)
    platform.restSoon()      the in-app beep is about to play with the app open: drop the notification
    platform.openExternal(url)  the browser (relative links go to the website)
+   platform.openAuthUrl(url,onClosed)  Google sign-in (WP11): web goes to url in this tab; the app opens it in a Custom Tab
+                            (Google refuses sign-in inside a WebView), closes it when gfd://auth-callback comes back, and
+                            calls onClosed() if the person closes the tab without finishing
    platform.appInfo()       Promise of {version, build} in the app, null on the web
    platform.storeUrl()      the Google Play listing
    platform.billing         app only (WP12): Google Play through RevenueCat, see billing.js; null on the web
@@ -25,7 +28,7 @@ var platform=(function(){
   /* the app shell names the website; on the web the site is wherever this page is served from */
   var SITE=SHELL.site||(location.origin+location.pathname.replace(/[^\/]*$/,""));
   var APP_ID=SHELL.appId||"com.getfitdaily.app";
-  var REST_ID=4201, restAsked=false, restEnd=0, linkFns=[], linkSeen={}, linkWait=[];
+  var REST_ID=4201, restAsked=false, restEnd=0, linkFns=[], linkSeen={}, linkWait=[], authTab=null, authTabL=null;
 
   function siteUrl(path){
     path=path||"";
@@ -46,6 +49,7 @@ var platform=(function(){
   function gotLink(url){
     if(!url||!/^gfd:\/\/auth-callback/i.test(url)||linkSeen[url]) return;
     linkSeen[url]=1;
+    if(authTab){ authTab=null; call("Browser","close"); }   /* back from Google sign-in: shut the Custom Tab */
     var a=parseLink(url);
     if(!linkFns.length){ linkWait.push(a); return; }   /* the app was opened by the link: sign-in isn't ready yet */
     linkFns.forEach(function(fn){ try{ fn(a); }catch(e){} });
@@ -170,6 +174,17 @@ var platform=(function(){
     window.open(u,"_blank","noopener"); return Promise.resolve(null);
   }
 
+  function openAuthUrl(url,onClosed){
+    if(!isAndroid||!P.Browser){ location.assign(url); return Promise.resolve(null); }
+    authTab=onClosed||function(){};
+    if(!authTabL&&P.Browser.addListener){
+      authTabL=true;
+      /* closed by hand before the link came back: let the sign-in screen try again */
+      P.Browser.addListener("browserFinished",function(){ var f=authTab; authTab=null; if(f) setTimeout(function(){ try{ f(); }catch(e){} },300); });
+    }
+    return call("Browser","open",{url:url,toolbarColor:"#0D0F12",presentationStyle:"popover"});
+  }
+
   if(isAndroid){
     document.documentElement.classList.add("native","android");
     if(P.App){
@@ -209,6 +224,7 @@ var platform=(function(){
     restAlert:restAlert,
     restSoon:function(){ if(isAndroid&&restEnd&&document.visibilityState==="visible"){ restEnd=0; call("LocalNotifications","cancel",{notifications:[{id:REST_ID}]}); } },
     openExternal:openExternal,
+    openAuthUrl:openAuthUrl,
     appInfo:function(){ return isAndroid?call("App","getInfo"):Promise.resolve(null); },
     storeUrl:function(){ return "https://play.google.com/store/apps/details?id="+APP_ID; },
     billing:isAndroid?rcBilling():null

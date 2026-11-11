@@ -24,6 +24,9 @@ What the shell adds over the website:
 - **Sign-in links**: emails link to `gfd://auth-callback#access_token=…` (`platform.authRedirect()`); the app catches
   them (intent filter in `AndroidManifest.xml`) and `appAuthLink()` in `signin.js` sets the session, or opens New
   password for a reset link. The website keeps using its own address.
+- **Google sign-in** (WP11): `platform.openAuthUrl()` opens Google in a Custom Tab (Google blocks sign-in inside a
+  WebView), the result comes back as `gfd://auth-callback#access_token=…` like an email link, and the tab is closed.
+  No Android OAuth client or SHA-1 is needed: it's the same browser flow as the web. Setup: `docs/site-brief.md`.
 - **Back button**: closes whatever Escape would (sheet, menu, popup); on the main screen or sign-in it leaves the app.
 - **Downloads** (data export ZIP): written to the app cache and handed to Android's share sheet.
 - **Links that open a new tab** (policy pages) open in the in-app browser tab at the public site address.
@@ -120,5 +123,4 @@ grace period (status `grace`).
 
 ## Later work packages
 
-- WP11 Google sign-in: use `platform.authRedirect()` as the OAuth redirect; the callback already lands in `appAuthLink`.
 - iOS (M4): a new branch in `platform.js` and `npx cap add ios`; no fork.
