@@ -84,7 +84,7 @@ function exHtml(ex){
   h+='<details class="ex'+(nd===ns?' alldone':'')+'" data-ex="'+ex.id+'"'+(OPEN[day+":"+ex.id]?' open':'')+'>';
   var nt=noteOf(ex.id);
   var exMiss=DAYGEAR&&LIB[ex.id]?missingFor(LIB[ex.id],DAYGEAR):[];
-  h+='<summary><div class="ttl"><h3>'+esc(ex.n)+'</h3>'+(exMiss.length?'<span class="nogear">Needs gear</span>':'')+'</div><div class="meta"><span class="target">'+ex.sets+' × '+esc(ex.reps)+'</span><span class="cntrow"><button class="notebtn'+(nt?' has':'')+'" data-note="'+ex.id+'" aria-label="'+(nt?'Edit':'Add')+' injury note for '+esc(ex.n)+'" title="Injury note">'+NOTE_SVG+'</button><span class="cnt'+(nd===ns?' all':'')+'">'+nd+'/'+ns+' sets</span></span></div></summary>';
+  h+='<summary><div class="ttl"><h3>'+esc(ex.n)+'</h3>'+(exMiss.length?'<span class="nogear">Needs gear</span>':'')+'</div><div class="meta"><span class="target">'+ex.sets+' × '+esc(ex.reps)+'</span><span class="cntrow">'+(nt?'<span class="notemark" title="Has an injury note">'+NOTE_SVG+'<span class="sr">Has an injury note.</span></span>':'')+'<span class="cnt'+(nd===ns?' all':'')+'">'+nd+'/'+ns+' sets</span></span></div></summary>';
   if(nt) h+='<div class="injnote"><b>Injury note</b><p>'+esc(nt)+'</p></div>';
   if(exMiss.length){
     var lo2=dayLoc(activePlan().id,DAYS[day].id);
@@ -92,7 +92,7 @@ function exHtml(ex){
   }
   h+=swapBarHtml(ex,exMiss.length>0);
   if(SWAP&&SWAP.ex===ex.id&&!exMiss.length&&!(DAYS[day]&&DAYS[day].coles)) h+=swapPanelHtml(ex,false);
-  h+='<div class="last">'+esc(lastText(ex))+'</div><button class="linkbtn hlink" data-hex="'+ex.id+'">See history and progress</button>';
+  h+='<div class="last">'+esc(lastText(ex))+'</div><div class="exlinks"><button class="linkbtn hlink" data-hex="'+ex.id+'">See history and progress</button><button class="linkbtn hlink notelink" data-note="'+ex.id+'" aria-label="'+(nt?'Edit':'Add')+' injury note for '+esc(ex.n)+'">'+NOTE_SVG+(nt?'Edit injury note':'Add injury note')+'</button></div>';
   if(DAYS[day]&&DAYS[day].coles) h+='<button class="chip sm colesswap" data-colesswap="'+ex.id+'">↻ Different '+esc((LIB[ex.id]||{}).mg||"").toLowerCase()+' exercise</button>';
   h+='<details class="how"><summary>How to do it safely</summary>'+exFigure(ex.id,ex.f)+'<ul class="cues">'+ex.c.map(function(c){return '<li>'+esc(c)+'</li>';}).join("")+'</ul></details>';
   var lb=labOf(ex), lw=GFDRules.unitLabel(lb[0],U());

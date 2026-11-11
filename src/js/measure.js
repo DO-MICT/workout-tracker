@@ -129,8 +129,8 @@ function msDue(){
 }
 function msDueHtml(where){
   var d=msDue(); if(!d) return "";
-  return '<section class="ms-due'+(where==="stats"?' st':'')+'" aria-label="'+esc(d.title)+'"><div><b>'+esc(d.title)+'</b><span>'+esc(d.sub)+'</span></div>'+
-    '<div class="ms-due-b"><button class="chip sm" data-ms="later">Later</button><button class="chip sm primarychip" data-ms="'+(d.kind==="weigh"?"weigh":"start")+'">'+(d.kind==="weigh"?"Weigh in":"Start")+'</button></div></section>';
+  return '<div class="ms-due'+(where==="stats"?' st':'')+'" role="group" aria-label="'+esc(d.title)+'"><div><b>'+esc(d.title)+'</b><span>'+esc(d.sub)+'</span></div>'+
+    '<div class="ms-due-b"><button class="chip sm" data-ms="later">Later</button><button class="chip sm primarychip" data-ms="'+(d.kind==="weigh"?"weigh":"start")+'">'+(d.kind==="weigh"?"Weigh in":"Start")+'</button></div></div>';
 }
 
 /* ---------- check-in sheet: start, cards, done, settings ---------- */

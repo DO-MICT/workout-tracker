@@ -193,7 +193,7 @@ function plansClick(t){
     if(inSheet) renderPlans(); toast("Now on: "+activePlan().name); return true;
   }
   if(t.id==="openPlans"||t.id==="managePlans"){setPlanMenu(false);openPlans();return true;}
-  if(t.id==="closePlans"){closePlans();var b=document.getElementById("planBtn");if(b)b.focus();return true;}
+  if(t.id==="closePlans"){closePlans();syncInert();var b=document.getElementById("planBtn");if(b)b.focus();return true;}
   if(t.dataset.dupplan){
     if(!canAddPlan()){ proOffer("plans"); return true; }
     var src=planById(t.dataset.dupplan), days={};

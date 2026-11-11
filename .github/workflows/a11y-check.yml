@@ -1,0 +1,25 @@
+name: Accessibility check
+# WP17 (WCAG 2.2 AA, NFR-5): opens the app in a headless browser and checks the main screens in every colour theme,
+# light and dark, phone and desktop: axe WCAG A/AA rules, 44 px tap targets, and nothing off the screen at 200% text size.
+# See docs/a11y-brief.md. Run locally: npm i --no-save playwright@1.63.0 axe-core@4.10.2 && node tests/a11y/audit.js
+on:
+  pull_request:
+    paths:
+      - 'app.html'
+      - 'src/**'
+      - 'tests/a11y/**'
+      - '.github/workflows/a11y-check.yml'
+jobs:
+  a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install the checker
+        run: |
+          npm i --no-save --no-package-lock playwright@1.63.0 axe-core@4.10.2
+          npx playwright install --with-deps chromium
+      - name: Check
+        run: node tests/a11y/audit.js

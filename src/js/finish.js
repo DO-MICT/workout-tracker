@@ -68,13 +68,19 @@ function showDone(rec,d,wins){
   var b=document.getElementById("doneClose"); if(b) b.focus();
 }
 function closeDone(){var el=document.getElementById("donepop"); if(!el||el.hidden) return; el.hidden=true; el.innerHTML=""; document.body.style.overflow="";}
-function toast(m){var t=document.getElementById("toast");toast._act=null;t.textContent=m;t.classList.add("on");clearTimeout(toast._t);toast._t=setTimeout(function(){t.classList.remove("on");},2600);}
+/* screen readers: read a short message aloud without moving focus (WP17) */
+function announce(m){var r=document.getElementById("srlive"); if(!r) return; r.textContent=""; clearTimeout(announce._t); announce._t=setTimeout(function(){r.textContent=m;},80);}
+function toast(m){var t=document.getElementById("toast");toast._act=null;t.textContent=m;announce(m);t.classList.add("on");clearTimeout(toast._t);toast._t=setTimeout(function(){t.classList.remove("on");},2600);}
 /* a toast with one button, e.g. Undo */
 function toastAction(m,label,fn){
   var t=document.getElementById("toast");
   t.innerHTML='<span>'+esc(m)+'</span><button id="toastAct" class="toastbtn">'+esc(label)+'</button>';
-  t.classList.add("on"); toast._act=fn; clearTimeout(toast._t);
-  toast._t=setTimeout(function(){t.classList.remove("on");toast._act=null;},6000);
+  t.classList.add("on"); toast._act=fn; clearTimeout(toast._t); announce(m+". "+label+" is at the top of the screen.");
+  var hide=function(){t.classList.remove("on");toast._act=null;};
+  toast._t=setTimeout(hide,6000);
+  /* keep it up while someone is on the button (WCAG 2.2.1) */
+  t.onfocusin=t.onmouseenter=function(){clearTimeout(toast._t);};
+  t.onfocusout=t.onmouseleave=function(){clearTimeout(toast._t);toast._t=setTimeout(hide,4000);};
 }
 
 /* ---------- on-screen keyboard ----------
@@ -121,6 +127,7 @@ function schedulePing(delay){
 function startTimer(sec){
   tTotal=sec;tEnd=Date.now()+sec*1000; schedulePing(sec); platform.restAlert(tEnd);   /* the app: a notification if the screen is off (WP10) */
   document.getElementById("timer").classList.add("on");
+  announce("Rest "+(sec>=60?Math.floor(sec/60)+" min"+(sec%60?" "+sec%60+" s":""):sec+" seconds")+" started");
   clearInterval(tInt);tick();tInt=setInterval(tick,250);
 }
 function tick(){
@@ -128,7 +135,7 @@ function tick(){
   document.getElementById("tt").textContent=Math.floor(left/60)+":"+String(left%60).padStart(2,"0");
   document.getElementById("tbar").style.width=(left/tTotal*100)+"%";
   if(left<=1) platform.restSoon();   /* on screen: the beep does the job, no notification */
-  if(left<=0){clearInterval(tInt);document.getElementById("tt").textContent="Go";platform.buzz(200);setTimeout(stopTimer,2500);}
+  if(left<=0){clearInterval(tInt);document.getElementById("tt").textContent="Go";announce("Rest over. Go.");platform.buzz(200);setTimeout(stopTimer,2500);}
   if(window.focusRing) focusRing();
 }
 function stopTimer(){if(Date.now()<tEnd-300){cancelPing();platform.restAlert(0);}clearInterval(tInt);document.getElementById("timer").classList.remove("on");if(window.focusRing)focusRing();}
