@@ -329,4 +329,5 @@ iPhone and desktop users can pay and Paddle handles VAT and sales tax worldwide.
   `$rc_lifetime` packages. No trial on the Paddle prices: everyone already gets 14 days of Pro at sign-up (WP1).
 - **Manage or cancel**: `GFDBilling.manage()` opens RevenueCat's `managementURL` (Paddle's customer portal).
 - Events logged: `checkout_started`, `checkout_paid`, `checkout_cancelled` (with `plan` and `store: web`).
+- **RevenueCat, webhook and its secrets** (shared with Play): `docs/android-brief.md`, "Pro billing (WP12)".
 - Tests: `tests/webbilling.test.js` (fake SDK). Test real payments on dev with Paddle sandbox cards.
