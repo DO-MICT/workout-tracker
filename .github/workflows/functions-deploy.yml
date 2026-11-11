@@ -1,5 +1,5 @@
 name: Deploy functions
-# WP8: deploys the Supabase Edge Functions in supabase/functions (now: delete-account) to GFD Dev or GFD Prod.
+# WP8: deploys the Supabase Edge Functions in supabase/functions (delete-account, billing-webhook) to GFD Dev or GFD Prod.
 # Run by hand: Actions > Deploy functions > Run workflow. The production job waits for Deon's approval.
 #
 # Secrets: repository secret SUPABASE_ACCESS_TOKEN (supabase.com > Account > Access tokens);
@@ -27,10 +27,12 @@ jobs:
       - uses: supabase/setup-cli@v1
         with:
           version: 3.0.0
-      - name: Deploy delete-account
+      - name: Deploy functions
         run: |
           if [ -z "$SUPABASE_ACCESS_TOKEN" ] || [ -z "$PROJECT_REF" ]; then
             echo "::error::Set the SUPABASE_ACCESS_TOKEN secret and the PROJECT_REF variable for ${{ inputs.target }}. See docs/db-brief.md."; exit 1
           fi
-          supabase functions deploy delete-account --project-ref "$PROJECT_REF" --use-api
-          echo "Deployed delete-account to ${{ inputs.target }} ($PROJECT_REF)" >> "$GITHUB_STEP_SUMMARY"
+          for fn in delete-account billing-webhook; do
+            supabase functions deploy "$fn" --project-ref "$PROJECT_REF" --use-api
+            echo "Deployed $fn to ${{ inputs.target }} ($PROJECT_REF)" >> "$GITHUB_STEP_SUMMARY"
+          done
