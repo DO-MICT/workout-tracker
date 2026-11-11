@@ -80,7 +80,8 @@ function openProfile(){
     '<div class="seg" role="group" aria-label="Celebration style">'+[["energetic","Energetic"],["calm","Calm"]].map(function(o){return '<button data-celebset="'+o[0]+'" aria-pressed="'+(celebStyle()===o[0])+'">'+o[1]+'</button>';}).join("")+'</div>'+
     '<h3 class="psec" id="pMeas">Body measurements</h3><p class="sub">'+(lastS?'Last check-in '+esc(fmtDay(lastS.d))+'.':'Nothing saved yet.')+' Weigh in and measure one card at a time.</p>'+
     '<div class="ms-row2"><button class="chip" data-ms="start">Body check-in</button><button class="chip" data-ms="progress">Body progress</button></div>';
-  h+=backupHtml()+accountDataHtml()+'</div>';
+  /* backup codes are for moving data by hand: tucked away so Profile reads like a finished app (F5.E3.S1) */
+  h+=accountDataHtml()+'<details class="padv"><summary>Advanced</summary>'+backupHtml()+'</details></div>';
   var sh=document.getElementById("profile"); sh.innerHTML=h; sh.hidden=false; sh.scrollTop=0;
   document.body.style.overflow="hidden"; sh.focus();
   initWheel();
