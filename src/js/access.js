@@ -175,6 +175,7 @@ function proRender(){
     }).join("")+'</div>':buy&&ch.length===1?'<p class="sub">'+esc(ch[0].label+": "+ch[0].price)+'</p>':'')+
     (buy&&PRO.loading?'<p class="pronote">Loading prices…</p>':'')+
     (buy&&PRO.loadErr&&!ch.length?'<p class="pronote">Prices didn’t load. Check your connection, then close this and try again.</p>':'')+
+    (buy&&!(b.plans&&!ch.length)&&typeof billingTermsHtml==="function"?billingTermsHtml():'')+
     (buy&&!(b.plans&&!ch.length)?'<button class="primary" id="proBuy">'+esc(b.label||"Get Pro")+'</button>'
         :'<p class="pronote">'+(sbUser?'Buying Pro opens with the Google Play release. Your logs, plans and history stay yours on Free.':'Sign in to start your 14-day free trial of Pro.')+'</p>')+
     (PRO.why==="plans"&&locked&&sbUser?'<button class="ghost bre" id="proPick">Pick which '+planCap()+' plans to keep</button>':'')+
