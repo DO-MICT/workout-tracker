@@ -164,6 +164,6 @@ blockchain, news, government, Android TV/Wear/Auto/XR, instant apps, Families ad
 | Permissions (A1) | OK | Only INTERNET in our manifest; the notifications plugin adds notifications, `SCHEDULE_EXACT_ALARM`, vibrate, boot |
 | Target API (A6) | OK | Targets 36 |
 | Ads, SDKs, UGC, AI, IP | OK | No ads or trackers; UGC is private; no AI features |
-| Package name | Being changed | Play Console is locked to `co.za.getfitdaily.app`; the code still says `com.getfitdaily.app` until the rename PR lands |
+| Package name | Fixed in PR #62 | `co.za.getfitdaily.app`, locked in Play Console; PR #62 renames it in the code |
 | Audience / Families | Fixed here | Play Console had 13+; set it to 18+ only. App, terms and privacy now 18+ with a neutral age screen at sign-up |
 | Trader status (Play Console) | Deon | Play shows a trader's address, phone and email on the listing in the EU: use business contact details |
