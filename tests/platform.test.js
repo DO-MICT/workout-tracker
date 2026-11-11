@@ -156,7 +156,15 @@ test("android: links that would open a new tab go to the browser", () => {
   const a = { getAttribute: () => "privacy.html" };
   docListeners.click({ target: { closest: () => a }, preventDefault: () => { prevented = true; } });
   assert.ok(prevented);
-  assert.equal(JSON.stringify(calls.pop()), JSON.stringify(["Browser.open", { url: "https://getfitdaily.app/privacy.html", toolbarColor: "#0D0F12" }]));
+  assert.equal(JSON.stringify(calls.pop()), JSON.stringify(["Browser.open", { url: "https://getfitdaily.app/privacy.html?inapp=1", toolbarColor: "#0D0F12" }]));
+});
+
+test("android: our own pages get ?inapp=1 (Play P3), other sites don't", () => {
+  const { p, calls } = page({ android: true, shell: { site: "https://getfitdaily.app/" } });
+  p.openExternal("terms.html?v=2#paying");
+  assert.equal(calls.pop()[1].url, "https://getfitdaily.app/terms.html?v=2&inapp=1#paying");
+  p.openExternal("https://play.google.com/store/account/subscriptions");
+  assert.equal(calls.pop()[1].url, "https://play.google.com/store/account/subscriptions");
 });
 
 test("android: saving a file writes it to the cache and opens the share sheet", async () => {

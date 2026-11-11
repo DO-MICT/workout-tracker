@@ -97,6 +97,9 @@ function healthStart(){
 }
 
 /* ---------- the sheet ---------- */
+/* Play's Health Content policy: a health app that isn't a medical device says so, and tells people to see a health
+   professional for medical advice. Shown on More and here (docs/play-policy-brief.md, H2). */
+var MEDICAL_NOTE="GFD gives general training suggestions. It isn’t a medical device and doesn’t diagnose or treat anything. For medical advice, diagnosis or treatment, talk to a doctor or other health professional.";
 /* mode "move" = this phone has notes from before; "ask" = about to add one, or turning it on in Profile */
 function healthOpen(mode,after){
   var sh=document.getElementById("healthsheet"); if(!sh) return;
@@ -115,6 +118,7 @@ function healthOpen(mode,after){
     '<p class="wzerr" id="hErr" role="alert"></p>'+
     '<button class="primary" id="hAgree">'+(mode==="move"?'Keep them':'I agree')+'</button>'+
     (mode==="move"?'<button class="ghost bre" id="hDrop">Delete them</button><p class="obfine">Not now keeps them on this phone only.</p>':'')+
+    '<p class="obfine">'+esc(MEDICAL_NOTE)+'</p>'+
     '<p class="obfine">'+policyLink("privacy")+'</p></div>';
   sh.hidden=false; document.body.style.overflow="hidden"; sh.scrollTop=0; sh.focus();
 }
