@@ -1,6 +1,6 @@
 /* ---------- backup: copy all data out, or restore it (works in every version) ---------- */
 function backupHtml(){
-  return '<h3 class="psec">Back up or move your data</h3><p class="sub">Copy your backup code to keep it safe or to move your data to another version of the app. Restoring replaces what’s here.</p>'+
+  return '<h3 class="psec">Backup code</h3><p class="sub">Your account already keeps your data safe. A backup code is a copy of your plans and settings as text, for moving them by hand. Restoring replaces what’s here.</p>'+
     '<div class="bkbtns"><button class="chip sm" id="bkShow">Show backup code</button><button class="chip sm" id="bkRestoreOpen">Restore from a code</button></div><div id="bkArea"></div>';
 }
 function backupClick(t){

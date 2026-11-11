@@ -134,7 +134,7 @@ function renderDay(){
     if(d.ex.length&&!colesState().editing){
       h+='<div class="progress"><div class="bar"><i id="pbar"></i></div><span id="ptext"></span></div>';
       groupsOf(d).forEach(function(g){ h+=exHtml(g.items[0]); });
-      h+='<div class="actions"><button class="primary" id="finish">Complete workout</button></div>';
+      h+=finishHtml();
     }
     document.getElementById("day").innerHTML=h; updateProgress(); return;
   }
@@ -154,10 +154,21 @@ function renderDay(){
   h+='<div class="progress"><div class="bar"><i id="pbar"></i></div><span id="ptext"></span></div>';
   if(!d.ex.length) h+='<div class="emptyday"><p>'+(d.title==="Rest day"?'Rest day. Recover, walk, stretch.':'No exercises on this day yet.')+'</p><button class="'+(d.title==="Rest day"?'ghost':'primary')+'" id="editDay2">Add exercises</button></div>';
   groupsOf(d).forEach(function(g){ h+= g.kind==="single" ? exHtml(g.items[0]) : grpHtml(g); });
-  h+='<div class="actions"><button class="primary" id="finish">Complete workout</button></div>';
+  h+=finishHtml();
   document.getElementById("day").innerHTML=h;
   updateProgress();
 }
+/* Complete workout, with "log it for another day" for a workout done earlier (F1.E4.S1) */
+var PAST=null;   /* {date, time} while the date boxes are open, else null (the workout is saved as now) */
+function finishHtml(){
+  var btn='<div class="actions"><button class="primary" id="finish">'+(PAST?'Save for '+esc(pastLabel()):'Complete workout')+'</button></div>';
+  if(!PAST) return btn+'<p class="pastline"><button class="linkbtn" id="pastOpen" aria-expanded="false">Did this on another day? Log it for then</button></p>';
+  return '<fieldset class="hwhen pastwhen"><legend>When you did it</legend>'+
+    '<label><span>Date</span><input type="date" data-past="date" value="'+esc(PAST.date)+'" max="'+esc(GFDRules.whenParts(new Date().toISOString()).date)+'" min="2000-01-01"></label>'+
+    '<label><span>Finished at</span><input type="time" data-past="time" value="'+esc(PAST.time)+'"></label>'+
+    '<button class="linkbtn" id="pastClose" aria-expanded="true">Use today instead</button></fieldset>'+btn;
+}
+function pastLabel(){ var w=GFDRules.whenFromParts(PAST.date,PAST.time); return w.at?hDate(w.at,{weekday:"short",day:"numeric",month:"short"}):"that day"; }
 function updateProgress(){
   var d=DAYS[day], tot=0, done=0;
   d.ex.forEach(function(ex){var a=setsFor(ex);for(var i=0,n=nSets(ex,a);i<n;i++){tot++;if(a[i].d)done++;}});
@@ -241,6 +252,11 @@ document.addEventListener("click",function(e){
   if(t.id==="toastAct"){ if(toast._act){var fn=toast._act; toast._act=null; document.getElementById("toast").classList.remove("on"); fn();} return; }
   if(t.id==="askKeep"||t.id==="askFix"){ askAnswer(t.id==="askKeep"); return; }
   if(t.id==="finish"){finishWorkout();return;}
+  if(t.id==="pastOpen"||t.id==="pastClose"){
+    PAST=t.id==="pastOpen"?GFDRules.whenParts(new Date().toISOString()):null; renderDay();
+    var pf=document.querySelector(PAST?'[data-past="date"]':'#pastOpen'); if(pf) pf.focus();
+    return;
+  }
   if(t.id==="tskip"){stopTimer();return;}
   if(t.id==="t30"){tEnd+=30000;tTotal+=30;schedulePing((tEnd-Date.now())/1000);platform.restAlert(tEnd);return;}
 });
@@ -275,6 +291,7 @@ document.addEventListener("keydown",function(e){
 });
 document.addEventListener("input",function(e){
   var el=e.target; if(builderInput(el)||libraryInput(el)||historyInput(el)) return;
+  if(el.dataset&&el.dataset.past&&PAST){ PAST[el.dataset.past]=el.value; var fb=document.getElementById("finish"); if(fb) fb.textContent="Save for "+pastLabel(); return; }
   if(el.id==="eqSearch"){renderGear();return;}
   if(el.dataset&&el.dataset.pf){el.removeAttribute("aria-invalid");return;}
   if(!el.dataset||!el.dataset.ex) return;

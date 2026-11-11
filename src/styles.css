@@ -183,6 +183,14 @@ details.how[open] summary::before{content:"−"}
 .hedrow .setdel.hsetdel{display:flex;border:1px solid var(--line)}
 .linkbtn.headd{padding:6px 0}
 .hreset{margin:4px 0 14px}
+/* F1.E4.S1: when a workout happened (History edit, and logging a past workout under Complete workout) */
+.hwhen{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px;border:0;margin:0 0 10px;padding:10px;background:var(--bg);border-radius:12px}
+.hwhen legend{float:left;width:100%;padding:0;margin:0 0 2px;font-weight:600}
+.hwhen label{display:flex;flex-direction:column;gap:4px;flex:1 1 140px;min-width:0;font-size:.85rem;color:var(--muted)}
+.hwhen input{min-height:44px;width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit;font-size:1rem}
+.pastline{margin:-6px 0 14px;text-align:center}
+.pastline .linkbtn,.pastwhen .linkbtn{min-height:44px;padding:8px 4px}
+.pastwhen{background:var(--card);border:1px solid var(--line);margin:4px 0 12px}
 .hreset .linkbtn{color:#C0392B;font-size:.82rem;padding:0;min-height:0}
 /* F1: "850 kg? Check this set" */
 .askcard h2{font-size:1.9rem}
@@ -615,6 +623,13 @@ details.grp .ex{margin-bottom:8px}
 .eqchip:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .eqempty{color:var(--muted);font-size:.92rem;margin:6px 0 4px}
 .psec{font-size:1.35rem;margin:18px 0 2px;font-weight:700}
+details.padv{margin-top:22px;border-top:1px solid var(--line)}
+details.padv>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;min-height:48px;font-weight:600;color:var(--muted)}
+details.padv>summary::-webkit-details-marker{display:none}
+details.padv>summary::after{content:"";width:9px;height:9px;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:rotate(45deg);margin:-4px 6px 0 0}
+details.padv[open]>summary::after{transform:rotate(-135deg);margin-top:4px}
+details.padv>summary:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:8px}
+details.padv .psec{margin-top:4px}
 .psec:first-of-type{margin-top:6px}
 .sheet .sub{margin-bottom:10px}
 .wheel{position:relative;display:flex;justify-content:center;gap:18px;background:var(--card);border-radius:14px;padding:8px 12px;max-width:320px}

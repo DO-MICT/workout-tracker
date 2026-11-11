@@ -80,7 +80,8 @@ function openProfile(){
     '<div class="seg" role="group" aria-label="Celebration style">'+[["energetic","Energetic"],["calm","Calm"]].map(function(o){return '<button data-celebset="'+o[0]+'" aria-pressed="'+(celebStyle()===o[0])+'">'+o[1]+'</button>';}).join("")+'</div>'+
     '<h3 class="psec" id="pMeas">Body measurements</h3><p class="sub">'+(lastS?'Last check-in '+esc(fmtDay(lastS.d))+'.':'Nothing saved yet.')+' Weigh in and measure one card at a time.</p>'+
     '<div class="ms-row2"><button class="chip" data-ms="start">Body check-in</button><button class="chip" data-ms="progress">Body progress</button></div>';
-  h+=backupHtml()+accountDataHtml()+'</div>';
+  /* backup codes are for moving data by hand: tucked away so Profile reads like a finished app (F5.E3.S1) */
+  h+=accountDataHtml()+'<details class="padv"><summary>Advanced</summary>'+backupHtml()+'</details></div>';
   var sh=document.getElementById("profile"); sh.innerHTML=h; sh.hidden=false; sh.scrollTop=0;
   document.body.style.overflow="hidden"; sh.focus();
   initWheel();
@@ -201,9 +202,15 @@ function finishWorkout(){
       var j=jumpFor(ex0,i); if(j){ askJump(ex0,i,j,finishWorkout); return; }
     }
   }
-  var c=cur(), L=last(), saved=0, now=new Date().toISOString(), rec=buildWorkout(d), wins={prs:[],up:[],prevCardio:{},missed:[],miles:[]};
-  /* milestones need every earlier workout; skipped until history has loaded on a new phone */
+  /* logged for another day (F1.E4.S1): check the date first */
+  var past=PAST?GFDRules.whenFromParts(PAST.date,PAST.time):null;
+  if(past&&past.err){ toast(past.err); var pd=document.querySelector('[data-past="date"]'); if(pd) pd.focus(); return; }
+  var c=cur(), L=last(), saved=0, rec=buildWorkout(d,past&&past.at), now=rec?rec.performed_at:new Date().toISOString(), wins={prs:[],up:[],prevCardio:{},missed:[],miles:[]};
+  /* milestones need every earlier workout; skipped until history has loaded on a new phone, and for a workout
+     logged for an earlier day (streaks and "first this week" are about today) */
   var prevDates=histKnown()?workoutDates():null, planned=0, ticked=0;
+  var firstEver=!!(prevDates&&!prevDates.length);
+  if(past) prevDates=null;
   d.ex.forEach(function(ex){
     var all=setsFor(ex).slice(0,nSets(ex)), arr=GFDRules.loggedSets(all), Ls=lastFor(ex.id,ex), lab=labOf(ex);
     planned+=nSets(ex);
@@ -222,8 +229,11 @@ function finishWorkout(){
   /* today-only swaps end with the workout: next time the plan's own exercises are back */
   if(saved&&rec&&d.ex.some(function(x){return x.swFrom;})){ endTodaySwaps(d.id); DAYS=buildDays(); }
   if(saved&&rec){ delete S.fstart; FX.id=null; FX.prev=null; FX.si=null; }
+  if(saved&&rec) PAST=null;
   recordWorkout(rec); save(); stopTimer(); renderDay(); window.scrollTo(0,0);
-  if(saved&&rec) showDone(rec,d,wins);
-  if(saved&&rec&&prevDates&&!prevDates.length) logEvent("first_workout",{exercises:d.ex.length});
+  if(saved&&rec){
+    showDone(rec,d,wins);
+    if(firstEver) logEvent("first_workout",{exercises:d.ex.length});
+  }
   else toast("Nothing logged yet. Tick a set or type a weight or reps first.");
 }
