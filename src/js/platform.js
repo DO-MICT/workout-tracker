@@ -27,7 +27,7 @@ var platform=(function(){
   var SHELL=window.GFD_SHELL||{};
   /* the app shell names the website; on the web the site is wherever this page is served from */
   var SITE=SHELL.site||(location.origin+location.pathname.replace(/[^\/]*$/,""));
-  var APP_ID=SHELL.appId||"com.getfitdaily.app";
+  var APP_ID=SHELL.appId||"co.za.getfitdaily.app";
   var REST_ID=4201, restAsked=false, restEnd=0, linkFns=[], linkSeen={}, linkWait=[], authTab=null, authTabL=null;
 
   function siteUrl(path){

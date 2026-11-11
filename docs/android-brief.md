@@ -8,7 +8,7 @@ reaches the website at once and the app in its next Play release. Architecture: 
 | Piece | What it does |
 | --- | --- |
 | `tools/build_app.py` | Builds `build/app/` (not checked in): `app.html` with an app head (no service worker or manifest; `window.GFD_SHELL` carries the site address from `site.json` and the app id), plus `src/`, `vendor/`, `icons/` and the policy pages |
-| `capacitor.config.json` | App id `com.getfitdaily.app`, name GFD, `webDir: build/app`, edge-to-edge insets, notification icon |
+| `capacitor.config.json` | App id `co.za.getfitdaily.app`, name GFD, `webDir: build/app`, edge-to-edge insets, notification icon |
 | `android/` | The native project (checked in). `npx cap sync android` copies `build/app` into it |
 | `src/js/platform.js` | The only file that talks to Capacitor. Web and Android behind one API (see its header). Core code calls `platform.*` |
 | `tools/build_android_icons.js` | Draws the launcher, round, adaptive/themed, notification and splash icons from the brand logo |
@@ -42,7 +42,7 @@ npm ci
 npm run app:apk          # build/app → android → app/build/outputs/apk/debug/app-debug.apk
 ```
 
-The debug build installs as "com.getfitdaily.app.debug" next to the real app. Every PR that touches the app also
+The debug build installs as "co.za.getfitdaily.app.debug" next to the real app. Every PR that touches the app also
 builds one: Actions → the PR's Android build run → Artifacts → gfd-debug-apk.
 
 Change `app.html` or `src/`? Nothing else to do: the workflow rebuilds `build/app` every time. Change a plugin or
@@ -51,7 +51,7 @@ the Capacitor version? Run `npm install` and `npx cap sync android`, and commit 
 ## Release to Google Play (Deon's steps)
 
 1. **Play developer account** (B1) and create the app in Play Console: name "GFD · Get Fit Daily", package
-   `com.getfitdaily.app` (fixed for ever once uploaded).
+   `co.za.getfitdaily.app` (fixed for ever once uploaded; this is the name Play Console has, so never change it).
 2. **Upload key** (once; keep a copy of the file and passwords somewhere safe, e.g. a password manager):
    ```
    keytool -genkeypair -v -keystore gfd-upload.jks -alias upload -keyalg RSA -keysize 2048 -validity 10000

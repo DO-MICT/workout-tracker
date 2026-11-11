@@ -1,5 +1,5 @@
 {
-  "appId": "com.getfitdaily.app",
+  "appId": "co.za.getfitdaily.app",
   "appName": "GFD",
   "webDir": "build/app",
   "loggingBehavior": "debug",
