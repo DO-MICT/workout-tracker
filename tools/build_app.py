@@ -42,7 +42,7 @@ def build():
     out.mkdir(parents=True)
     (out / "index.html").write_text(html, encoding="utf-8")
     for d in COPY_DIRS:
-        shutil.copytree(root / d, out / d, ignore=shutil.ignore_patterns("*.md", ".DS_Store"))
+        shutil.copytree(root / d, out / d, ignore=shutil.ignore_patterns("*.md", ".DS_Store", "purchases-js*", "PURCHASES-JS-*"))
     for f in COPY_FILES:
         shutil.copy2(root / f, out / f)
     import supabase_env  # the Play app always talks to production (deploy/supabase.json)

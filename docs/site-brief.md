@@ -44,6 +44,29 @@ When the domain was bought (original steps):
 The database urls in `app_config.policies` are relative (`terms.html`, `privacy.html`), so they don't change with the
 domain. The Android app (WP10) bundles the same pages.
 
+## Google sign-in (WP11)
+
+The Continue with Google button on the sign-in and sign-up screens appears by itself once a project has the Google
+provider on (the app asks `/auth/v1/settings`), so nothing breaks before setup. New Google accounts get the terms and
+privacy screen after sign-in (they skip the sign-up tick box) and take their first name from Google. Same accounts as
+email: Supabase links a Google sign-in to an existing account with the same confirmed email.
+
+Setup, once (one Google client serves GFD Prod and GFD Dev):
+1. console.cloud.google.com → a project for GFD → Google Auth Platform (OAuth consent screen): External; app name
+   GFD · Get Fit Daily; support email; home page `https://getfitdaily.co.za/`; privacy `…/privacy.html`; terms
+   `…/terms.html`; authorised domains `getfitdaily.co.za` and `supabase.co`. Scopes: only `openid`, `email`, `profile`
+   (no review needed for these). Audience → Publish app, or only listed test users can sign in.
+2. Clients → Create client → Web application. Authorised JavaScript origins: `https://getfitdaily.co.za`,
+   `https://dev.getfitdaily.co.za`. Authorised redirect URIs: `https://zdllpjrkwcdmcuizxuum.supabase.co/auth/v1/callback`
+   and `https://incujtxyxtygehpkgtwz.supabase.co/auth/v1/callback`. Copy the client ID and secret.
+3. Easiest: add repository secrets `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`, then run Actions → Push sign-in
+   settings → dev / apply, then production / apply. Or locally for each project: `GOOGLE_CLIENT_ID=… GOOGLE_CLIENT_SECRET=… SUPABASE_ACCESS_TOKEN=… python3
+   tools/push_auth_emails.py --env dev --apply --google` (then `--env production`). Or by hand: Authentication → Sign In /
+   Providers → Google → on, paste both, save; and check URL Configuration lists the site and `gfd://auth-callback`.
+
+Google's screen says "continue to <ref>.supabase.co" until the project has a Supabase custom domain (a paid add-on,
+e.g. `auth.getfitdaily.co.za`); then add that domain's `/auth/v1/callback` to the client too.
+
 ## Changing a policy text
 
 - Typos and filling gaps before anyone has agreed: edit `site/` or `site.json`, rebuild. No version change.
