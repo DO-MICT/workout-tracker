@@ -33,13 +33,15 @@ function buildWorkout(d,at){
   var P=activePlan(), cs=d.coles?colesSession():null, lo=cs?(locById(cs.loc)||colesLoc()):dayLoc(P.id,d.id);
   var sets=[], first=0, now=Date.now();
   d.ex.forEach(function(ex,k){
-    setsFor(ex).slice(0,ex.sets).forEach(function(s,i){
+    setsFor(ex).slice(0,nSets(ex)).forEach(function(s,i){
       if(!GFDRules.loggedSets([s]).length) return;
       if(s.at&&(!first||s.at<first)) first=s.at;
       sets.push(histSet(ex,k,i,s));
     });
   });
   if(!sets.length) return null;
+  /* the Start workout tap (focus view) counts as the start, when it came before the first set */
+  var fs=S.fstart; if(fs&&fs.day===d.id&&fs.who===(S.who||0)&&fs.at<now&&(!first||fs.at<first)) first=fs.at;
   var dur=first&&now>first?Math.round((now-first)/1000):null; if(dur!==null&&dur>86400) {dur=null;first=0;}
   if(at){ dur=null; first=0; }
   var w={id:uuid4(),performed_at:at||new Date(now).toISOString(),started_at:first?new Date(first).toISOString():null,duration_sec:dur,

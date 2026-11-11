@@ -136,6 +136,7 @@ function tick(){
   document.getElementById("tbar").style.width=(left/tTotal*100)+"%";
   if(left<=1) platform.restSoon();   /* on screen: the beep does the job, no notification */
   if(left<=0){clearInterval(tInt);document.getElementById("tt").textContent="Go";announce("Rest over. Go.");platform.buzz(200);setTimeout(stopTimer,2500);}
+  if(window.focusRing) focusRing();
 }
-function stopTimer(){if(Date.now()<tEnd-300){cancelPing();platform.restAlert(0);}clearInterval(tInt);document.getElementById("timer").classList.remove("on");}
+function stopTimer(){if(Date.now()<tEnd-300){cancelPing();platform.restAlert(0);}clearInterval(tInt);document.getElementById("timer").classList.remove("on");if(window.focusRing)focusRing();}
 

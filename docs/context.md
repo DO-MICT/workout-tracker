@@ -36,6 +36,7 @@ The server decides the tier (WP1, Nov 2026): `entitlements` + `my_access`, read 
 - Equipment: ~90 items in 9 groups, searchable; **locations** each with their own gear; each plan day has a location and shows whether its gear is sufficient, with same-muscle swap suggestions.
 - **Well-done popup** after Complete workout: random cheer (PR-specific when a PR is beaten), time, sets, exercises, kg lifted, new PRs (with the old value) and exercises up on last time; buttons See in History / Done.
 - **History**: every Complete workout is saved as a record (outbox `S.wout` → `save_workout`, retried when back online; on-device `S.wlog` in the Claude copy). History page by month with sets per workout, delete, load older; per-exercise progress (best per workout, chart, every session), opened from History or “See history and progress” on an exercise. Older “last time” entries were imported once as workouts marked “From before history”.
+- **Focus view** (`src/js/focus.js`, Nov 2026, the Workout tab's default): one exercise and one set at a time for one-thumb logging. Round timer at the top (Start → rest countdown → Go, with +30s/Skip beside it; the layout never moves), big Log set button above the tab bar, set dots with **+** for an extra set (an extra round in a superset/circuit; extra sets are marked `x` in `cur` and counted by `nSets()`), auto-advance to the next exercise with "+ One more set of …" for the one just finished, ⋯ sheet with Swap, Machine taken, injury note, history and How to. Supersets show A1/A2 pills and go straight to the partner with no rest. ⋯ → Show all exercises switches to the list (`S.dayView="list"`). `S.fstart` holds the Start workout tap, used as the workout's start time.
 - Logging: per-set kg/reps, grey hints from PR then from earlier sets today, auto-advance to the next exercise, supersets/circuits in blue groups, rest timer (wheel picker, per-plan rest) with race-start countdown sound.
 - Profile: details, "Your plan" card (read only, from the server), default rest, body measurements with history, backup code (copy/restore all data).
 - Injury note per exercise, light/dark/auto theme.
@@ -44,7 +45,7 @@ The server decides the tier (WP1, Nov 2026): `entitlements` + `my_access`, read 
 - Web mode: register / sign in / email confirmation / password reset, sync newest-save-wins, sign out clears the device.
 
 ## Data model (app state, stored as JSON in `user_state.data`)
-`v`, `names`, `cur` (today's sets), `last` (last saved session per exercise), `pr`, `notes`, `profile` (rest, measurements), `plans` (`active`, `custom[]`, `edits`, `meta`, `dayLoc`), `locs` (`active`, `list[{id,name,gear[]}]`), `coles` (`opts`, `session`), `sgSeen`, `account`, `theme`, `onboarded`, `ts`.
+`v`, `names`, `cur` (today's sets), `last` (last saved session per exercise), `pr`, `notes`, `profile` (rest, measurements), `plans` (`active`, `custom[]`, `edits`, `meta`, `dayLoc`), `locs` (`active`, `list[{id,name,gear[]}]`), `coles` (`opts`, `session`), `dayView` (focus/list), `fstart` (Start workout tap), `sgSeen`, `account`, `theme`, `onboarded`, `ts`.
 
 ## Next steps (agreed direction)
 1. Supabase Auth settings: Site URL + redirect URL for GitHub Pages; decide on email confirmation (built-in email sending is rate-limited — fine for a handful of testers, use custom SMTP before launch).

@@ -88,7 +88,7 @@ function setsFor(ex){
   /* migrate: clear weights a much older version auto-filled from the record */
   arr.forEach(function(s){ if(s.pf&&!s.d&&!s.t) s.w=""; delete s.pf; });
   var L=lastFor(ex.id,ex), lab=labOf(ex);
-  for(var i=0;i<ex.sets;i++){
+  for(var i=0,n=nSets(ex,arr);i<n;i++){
     var s=arr[i]; if(s.d||s.t) continue;
     var p=GFDRules.setPrefill(arr,i,L&&L.sets);
     s.w=lab[0]?p.w:""; s.r=p.r;

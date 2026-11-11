@@ -1133,6 +1133,89 @@ body.np-open .wrap{padding-bottom:300px}
 .np-key{-webkit-tap-highlight-color:transparent}
 .np-key:focus{outline:none}
 .np-key:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+/* ---------- Focus view: one-thumb set logging (focus.js) ---------- */
+body.focusview .timer{display:none!important}
+body.tabs.focusview .wrap{padding-bottom:calc(var(--tabh) + 16px)}
+body.focusview .daynav{margin-bottom:10px}
+.fx{display:flex;flex-direction:column;gap:8px;min-height:calc(100vh - var(--tabh) - 24px);min-height:calc(100svh - var(--tabh) - 24px);scroll-margin-top:calc(env(safe-area-inset-top,0px) + 8px)}
+.fx-top{display:flex;align-items:center;gap:6px;min-height:52px}
+.fx-nav{flex:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:700 1.4rem/1 Figtree,sans-serif;cursor:pointer;display:grid;place-items:center;padding:0}
+.fx-more{font-size:1.3rem;letter-spacing:.05em}
+.fx-name{flex:1;min-width:0;display:flex;align-items:center;gap:8px}
+.fx-name > div{min-width:0}
+.fx-name h2{margin:0;font-size:1.3rem;line-height:1.05;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fx-name span{display:block;font-size:.8rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fx-warn{color:var(--warn);font-weight:700}
+.fx-pos{flex:none;font:800 .8rem Archivo,sans-serif;background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:3px 6px}
+.fx-pos.grp{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.fx-tz{display:grid;grid-template-columns:1fr 112px 1fr;align-items:center;gap:10px;height:120px;flex:none}
+.fx-side{justify-self:center;width:76px;min-height:48px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:700;cursor:pointer}
+.fx-side.off{visibility:hidden}
+.fx-ring{position:relative;width:112px;height:112px;border-radius:50%;border:0;padding:0;background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.fx-ring svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.fx-ring circle{fill:none;stroke-width:9}
+.fx-ring .trk{stroke:var(--line)}
+.fx-ring .arc{stroke:var(--done);stroke-linecap:round;transition:stroke-dashoffset .4s linear}
+.fx-ring .in{position:relative;display:flex;flex-direction:column;align-items:center;line-height:1}
+.fx-ring b{font:900 2rem Archivo,sans-serif;font-variant-numeric:tabular-nums}
+.fx-ring small{font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.fx-ring.idle b{color:var(--done);font-size:1.6rem}
+.fx-ring.go{background:var(--accent)}
+.fx-ring.go circle{stroke:transparent}
+.fx-ring.go b{color:var(--accent-ink);font-size:2.4rem}
+.fx-ring.go small{color:var(--accent-ink)}
+.fx-ring.go::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--accent);animation:fxpulse 1.6s ease-out infinite}
+@keyframes fxpulse{from{transform:scale(.96);opacity:.9}to{transform:scale(1.1);opacity:0}}
+.fx-clock{height:18px;text-align:center;font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:-6px}
+.fx-card{flex:1;display:flex;flex-direction:column;justify-content:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:12px 14px;touch-action:pan-y}
+.fx-pills{display:flex;gap:6px}
+.fx-pill{flex:1;min-width:0;min-height:44px;display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:12px;background:transparent;color:var(--muted);padding:0 8px;cursor:pointer;font-size:.8rem;text-align:left}
+.fx-pill b{flex:none;font:800 .85rem Archivo,sans-serif;color:var(--ink)}
+.fx-pill span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fx-pill.on{border:2px solid var(--done);color:var(--ink)}
+.fx-pill.on b{color:var(--done)}
+.fx-lbl{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.fx-lbl > span:first-child{font:800 1.9rem/1 Archivo,sans-serif}
+.fx-lbl small{font-size:1rem;color:var(--muted)}
+.fx-last{font-size:.8rem;color:var(--muted)}
+.fx-last b{color:var(--ink)}
+.fx-x{font:700 .7rem Figtree,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--warn);vertical-align:middle}
+.fx-x.ed{color:var(--done)}
+.fx-dots{display:flex;flex-wrap:wrap;gap:4px}
+.fx-dot{width:44px;height:44px;border-radius:50%;border:2px solid var(--line);background:transparent;color:var(--muted);font-weight:700;cursor:pointer;padding:0}
+.fx-dot.d{background:var(--done);border-color:var(--done);color:var(--on-done)}
+.fx-dot.c{border-color:var(--done);color:var(--ink);box-shadow:inset 0 0 0 2px var(--done)}
+.fx-dot.x{border-style:dashed}
+.fx-dot.d.x{border-style:solid}
+.fx-dot.add{width:56px;border-radius:22px;border-color:var(--done);color:var(--done);font-size:1.4rem}
+.fx-nums{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:8px}
+.fx-nums.one{grid-template-columns:minmax(0,1fr)}
+.fx-times{font:800 1.3rem Archivo,sans-serif;color:var(--muted)}
+.fx-num{position:relative;display:block}
+.fx-num input{box-sizing:border-box;width:100%;height:80px;border:1px solid var(--line);border-radius:14px;background:var(--bg);text-align:center;font:800 2.8rem/1 Archivo,sans-serif;font-variant-numeric:tabular-nums;padding:0 0 16px}
+.fx-num input:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.fx-num small{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-size:.72rem;color:var(--muted);pointer-events:none}
+.fx-bot{position:sticky;bottom:calc(var(--tabh) + 8px);display:flex;flex-direction:column;gap:2px;background:var(--bg);padding-top:4px;z-index:2}
+.fx-go{min-height:60px;border:0;border-radius:16px;background:var(--cta);color:var(--on-cta);font:800 1.35rem Archivo,sans-serif;cursor:pointer}
+.fx-go:active{transform:scale(.99)}
+.fx-slot{min-height:44px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:.85rem;color:var(--muted)}
+.fx-slot .linkbtn{font-weight:700;min-height:44px}
+.fx-scrim{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9}
+.fx-sheet{position:fixed;left:0;right:0;bottom:var(--tabh);z-index:10;max-height:calc(100svh - var(--tabh) - 40px);overflow:auto;background:var(--card);border-radius:20px 20px 0 0;padding:8px max(14px,calc(50% - 306px)) 16px;box-shadow:0 -10px 30px var(--shadow)}
+.fx-grab{width:40px;height:4px;border-radius:2px;background:var(--line);margin:0 auto 6px}
+.fx-sheethead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.fx-sheethead h2{margin:0;font-size:1.3rem}
+.fx-links{display:flex;flex-wrap:wrap;gap:4px 16px;margin:4px 0 8px}
+.fx-links .linkbtn{min-height:44px;margin:0;display:inline-flex;align-items:center;gap:6px}
+.fx-sheetfoot{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.fx-sheetfoot .ghost{flex:1;min-height:48px}
+.fx-back{width:100%;min-height:48px;margin:0 0 12px}
+@media (prefers-reduced-motion:reduce){.fx-ring.go::after{animation:none}.fx-ring .arc{transition:none}}
+/* desktop and tablet (wide.js): the tab bar is a side rail, so the focus view sits at its natural height, max 560px wide */
+body.wide .fx{min-height:0;max-width:560px;margin:0 auto}
+body.wide .fx-card{flex:none}
+body.wide .fx-bot{position:static}
+body.wide .fx-sheet{bottom:0;left:50%;right:auto;width:min(640px,100%);transform:translateX(-50%);padding:8px 16px 16px}
 
 /* ---------- WP17 accessibility (WCAG 2.2 AA, NFR-5) ----------
    Tap targets are at least 44 px. Buttons that look smaller keep their look and get an invisible 44 px hit area. */
