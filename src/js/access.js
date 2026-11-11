@@ -111,8 +111,16 @@ function msLocked(k){
 
 /* ---------- the upgrade page ----------
    One sheet for every locked thing: a friendly line about what was tapped, what Pro adds, and Get Pro.
-   Buying comes with WP12 (Google Play through RevenueCat) and WP13 (Paddle on the web): they set
-   window.GFDBilling = {buy(plan) -> Promise, label} and this page uses it. Until then it says when Pro opens. */
+   Buying comes from window.GFDBilling: Google Play in the app (WP12, billing.js) or Paddle on the website (WP13,
+   webbilling.js). Its shape: {label, buy(why, planId) -> Promise, and optionally ready() -> bool,
+   plans() -> Promise of [{id, title, price, per, note}] (price is the store's own price text, per "month"/"year")}.
+   buy resolves when paid ({pending:true}: paid, but Pro hasn't reached the account yet) and rejects with an Error
+   whose message the page shows, or with {cancelled:true} (also accepted as a resolve) when the person backed out.
+   With no billing (or not ready) the page says when Pro opens. */
+function billing(){
+  var b=window.GFDBilling;
+  return b&&typeof b.buy==="function"&&(typeof b.ready!=="function"||b.ready())?b:null;
+}
 var PRO_WHY={
   general:function(){return "Pro opens everything in GFD, on every device you sign in on.";},
   plans:function(){return "Free keeps "+planCap()+" of your own plans in use. Pro has no limit, and every plan you’ve made opens again.";},
@@ -124,10 +132,27 @@ var PRO_WHY={
 };
 var PRO_LIST=["Unlimited plans","Full stats: 3 months, a year and more","Every body measurement site","Progression and programmes, timed workouts and progress photos as they arrive"];
 var PRO=null;
+/* the store's plans as the page shows them, yearly first */
+function proChoices(list){
+  var per={month:" a month",year:" a year",once:" once"}, rank={year:0,month:1,once:2};
+  var out=(Array.isArray(list)?list:[]).filter(function(p){return p&&p.id!=null;}).map(function(p){
+    return {id:String(p.id),label:String(p.title||""),price:String(p.price||"")+(per[p.per]||""),note:String(p.note||""),per:p.per};
+  });
+  out.sort(function(a,b){ return (rank[a.per]==null?3:rank[a.per])-(rank[b.per]==null?3:rank[b.per]); });
+  return out;
+}
 function proOffer(why){
   var sh=document.getElementById("prosheet"); if(!sh) return;
   PRO={mode:"offer",why:PRO_WHY[why]?why:"plans"};
   logEvent("paywall_seen",{from:PRO.why});
+  var b=billing();
+  if(b&&typeof b.plans==="function"){
+    var mine=PRO; mine.loading=true; mine.choices=[];
+    Promise.resolve(b.plans()).then(function(list){
+      mine.choices=proChoices(list); mine.pick=mine.choices.length?mine.choices[0].id:null; mine.loading=false;
+    },function(){ mine.loading=false; mine.loadErr=true; })
+      .then(function(){ if(PRO===mine&&!mine.busy) proRender(); });
+  }
   proRender(); sh.hidden=false; document.body.style.overflow="hidden"; sh.scrollTop=0; sh.focus();
 }
 function proClose(){
@@ -138,25 +163,39 @@ function proClose(){
 function proRender(){
   var sh=document.getElementById("prosheet"); if(!sh||!PRO) return;
   if(PRO.mode==="pick"){ sh.innerHTML=pickPlansHtml(); return; }
-  var a=access(), buy=window.GFDBilling&&typeof window.GFDBilling.buy==="function";
+  var a=access(), b=billing(), buy=!!b, ch=PRO.choices||[];
   var locked=Object.keys(lockedPlans()).length;
   sh.innerHTML='<div class="sheet-in"><div class="sheet-top"><h2 id="protitle">GFD Pro</h2><button class="chip" id="proLater">Not now</button></div>'+
     '<p class="sub">'+esc(PRO_WHY[PRO.why]())+'</p>'+
     '<ul class="hlist">'+PRO_LIST.map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ul>'+
     '<p class="wzerr" id="proErr" role="alert"></p>'+
-    (buy?'<button class="primary" id="proBuy">'+esc(window.GFDBilling.label||"Get Pro")+'</button>'
+    (buy&&ch.length>1?'<div class="prochoice" role="radiogroup" aria-label="Pick a plan">'+ch.map(function(c){
+      var on=c.id===PRO.pick;
+      return '<button class="ms-set" role="radio" aria-checked="'+on+'" data-procho="'+esc(c.id)+'"><span><b>'+esc(c.label)+'</b><span>'+esc(c.price)+'</span></span>'+(c.note?'<span class="ttag">'+esc(c.note)+'</span>':'')+'</button>';
+    }).join("")+'</div>':buy&&ch.length===1?'<p class="sub">'+esc(ch[0].label+": "+ch[0].price)+'</p>':'')+
+    (buy&&PRO.loading?'<p class="pronote">Loading prices…</p>':'')+
+    (buy&&PRO.loadErr&&!ch.length?'<p class="pronote">Prices didn’t load. Check your connection, then close this and try again.</p>':'')+
+    (buy&&!(b.plans&&!ch.length)&&typeof billingTermsHtml==="function"?billingTermsHtml():'')+
+    (buy&&!(b.plans&&!ch.length)?'<button class="primary" id="proBuy">'+esc(b.label||"Get Pro")+'</button>'
         :'<p class="pronote">'+(sbUser?'Buying Pro opens with the Google Play release. Your logs, plans and history stay yours on Free.':'Sign in to start your 14-day free trial of Pro.')+'</p>')+
     (PRO.why==="plans"&&locked&&sbUser?'<button class="ghost bre" id="proPick">Pick which '+planCap()+' plans to keep</button>':'')+
     (a.source==="trial"?'':'<p class="obfine">Nothing you’ve saved is ever deleted when Pro ends.</p>')+'</div>';
 }
 function proBuy(t){
-  var err=document.getElementById("proErr");
-  t.disabled=true; t.textContent="Please wait…";
-  Promise.resolve(window.GFDBilling.buy(PRO&&PRO.why)).then(function(){ return refreshAccess(); }).then(function(){
-    if(isPro()){ proClose(); accRefreshCard(); renderPlans(); toast("Welcome to Pro"); if(typeof renderAll==="function"&&DAYS) renderAll(); }
-    else { t.disabled=false; t.textContent=window.GFDBilling.label||"Get Pro"; }
+  var err=document.getElementById("proErr"), b=billing(), res=null; if(!b) return;
+  var label=b.label||"Get Pro";
+  t.disabled=true; t.textContent="Please wait…"; if(err) err.textContent=""; if(PRO) PRO.busy=true;
+  Promise.resolve(b.buy(PRO&&PRO.why,PRO&&PRO.pick)).then(function(r){ res=r||{}; return refreshAccess(); }).then(function(){
+    if(PRO) PRO.busy=false;
+    if(!res.cancelled&&!res.pending&&isPro()){ proClose(); accRefreshCard(); renderPlans(); toast("Welcome to Pro"); if(typeof renderAll==="function"&&DAYS) renderAll(); }
+    else {
+      t.disabled=false; t.textContent=label;
+      if(res.pending&&err) err.textContent="Payment received, thank you. Pro can take a minute to reach your account; it opens on its own, or close this and check Your plan in Profile.";
+    }
   }).catch(function(e){
-    t.disabled=false; t.textContent=window.GFDBilling.label||"Get Pro";
+    if(PRO) PRO.busy=false;
+    t.disabled=false; t.textContent=label;
+    if(e&&e.cancelled) return;
     if(err) err.textContent=(e&&e.message)||"That didn’t go through. Nothing was charged. Try again in a moment.";
   });
 }
@@ -197,6 +236,7 @@ function pickPlansSave(t){
 function accessClick(t){
   if(t.id==="proLater"){proClose();return true;}
   if(t.id==="proBuy"){proBuy(t);return true;}
+  if(t.dataset.procho&&PRO){PRO.pick=t.dataset.procho; proRender(); var c=document.querySelector('[data-procho="'+PRO.pick+'"]'); if(c) c.focus(); return true;}
   if(t.id==="proPick"||t.dataset.pickplans){pickPlansOpen();return true;}
   if(t.id==="pickPro"){proOffer("plans");return true;}
   if(t.id==="pickSave"){pickPlansSave(t);return true;}
@@ -224,7 +264,7 @@ function accessCardInner(){
   return h;
 }
 function accessHtml(){
-  var note=!WEB_MODE?"":sbUser?"Your plan is kept on your account, so it follows you to every device. Buying Pro comes with the app store release.":"Sign in to see your plan.";
+  var note=!WEB_MODE?"":sbUser?"Your plan is kept on your account, so it follows you to every device."+(billing()?"":" Buying Pro comes with the app store release."):"Sign in to see your plan.";
   return '<h3 class="psec">Your plan</h3>'+(note?'<p class="sub">'+note+'</p>':'')+
     '<div class="tier on static" id="accCard" aria-live="polite">'+accessCardInner()+'</div>';
 }
