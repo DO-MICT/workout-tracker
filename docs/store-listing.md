@@ -84,7 +84,7 @@ Data is not sold, not used for ads, not shared with third parties (processors ac
 
 | Data type (Play's names) | Collected | Optional? | Purposes |
 | --- | --- | --- | --- |
-| Personal info › Email address | Yes | Required | Account management, App functionality |
+| Personal info › Email address | Yes | Required | Account management, App functionality, Developer communications (sign-in emails; tips and news only if opted in) |
 | Personal info › Name | Yes | Optional (display name) | App functionality |
 | Health and fitness › Fitness info | Yes | Required for the app to be useful | App functionality |
 | Health and fitness › Health info | Yes | Optional (only with health details switched on) | App functionality |
