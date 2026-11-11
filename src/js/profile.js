@@ -93,7 +93,7 @@ function closeProfile(){
 function cardDone(c){return c.classList.contains("grp")?!!c.querySelector(":scope > summary .gcnt.all"):c.classList.contains("alldone");}
 function advanceFrom(ex){
   var g=groupOf(ex), card;
-  if(g){ if(!g.items.every(function(x){return setsFor(x).slice(0,x.sets).every(function(s){return s.d;});})) return;
+  if(g){ if(!g.items.every(function(x){return setsFor(x).slice(0,nSets(x)).every(function(s){return s.d;});})) return;
          card=document.querySelector('#day > details.grp[data-gk="'+g.items[0].id+'"]'); }
   else card=document.querySelector('#day > details.ex[data-ex="'+ex.id+'"]');
   if(!card) return;
@@ -129,19 +129,20 @@ function tickSet(ex,i,btn){
   if(s.d){
     if(!s.at) s.at=Date.now();
     var g=groupOf(ex);
-    if(!g||g.items.every(function(x){return x.sets<=i||setsFor(x)[i].d;})) {var rs=restSec(); if(rs) startTimer(rs);}
-    else{var nx=g.items.filter(function(x){return x.sets>i&&!setsFor(x)[i].d;})[0]; audio(); toast("Next: "+nx.n+", set "+(i+1));}
+    if(!g||g.items.every(function(x){return nSets(x)<=i||setsFor(x)[i].d;})) {var rs=restSec(); if(rs) startTimer(rs);}
+    else{var nx=g.items.filter(function(x){return nSets(x)>i&&!setsFor(x)[i].d;})[0]; audio(); if(!document.getElementById("fx")) toast("Next: "+nx.n+", set "+(i+1));}
   }
   var b=btn||document.querySelector('[data-tick="'+ex.id+'"][data-i="'+i+'"]');
   if(b){
     var row=b.parentElement; b.setAttribute("aria-pressed",s.d); row.classList.toggle("isdone",s.d); row.classList.remove("editing");
     row.classList.toggle("missed",!!s.d&&GFDRules.isMissed(lab,s,ex.reps));
     var mn=document.querySelector('.missnote[data-miss="'+ex.id+'"]');
-    if(mn){ var tmp=document.createElement("div"), ms=[]; arr.slice(0,ex.sets).forEach(function(x,k){ if(x.d&&GFDRules.isMissed(lab,x,ex.reps)) ms.push(k+1); }); tmp.innerHTML=missNote(ex,ms); mn.replaceWith(tmp.firstChild); }
+    if(mn){ var tmp=document.createElement("div"), ms=[]; arr.slice(0,nSets(ex,arr)).forEach(function(x,k){ if(x.d&&GFDRules.isMissed(lab,x,ex.reps)) ms.push(k+1); }); tmp.innerHTML=missNote(ex,ms); mn.replaceWith(tmp.firstChild); }
     var n=row.querySelector(".n"); if(n) n.innerHTML=setNumHtml(ex,i,s.d);
   }
   refreshSets(ex); save(); updateProgress();
-  if(s.d&&arr.slice(0,ex.sets).every(function(x){return x.d;})) advanceFrom(ex);
+  if(s.d&&arr.slice(0,nSets(ex,arr)).every(function(x){return x.d;})) advanceFrom(ex);
+  focusTicked(ex,i,s.d);
 }
 /* the bin on a ticked set: clear it, with Undo */
 function deleteSet(ex,i){
@@ -195,7 +196,7 @@ function finishWorkout(){
   /* check big jumps first, so a typo never becomes a record or last time */
   for(var k=0;k<d.ex.length;k++){
     var ex0=d.ex[k], a0=setsFor(ex0);
-    for(var i=0;i<ex0.sets;i++){
+    for(var i=0,n0=nSets(ex0,a0);i<n0;i++){
       if(!GFDRules.loggedSets([a0[i]]).length) continue;
       var j=jumpFor(ex0,i); if(j){ askJump(ex0,i,j,finishWorkout); return; }
     }
@@ -204,8 +205,8 @@ function finishWorkout(){
   /* milestones need every earlier workout; skipped until history has loaded on a new phone */
   var prevDates=histKnown()?workoutDates():null, planned=0, ticked=0;
   d.ex.forEach(function(ex){
-    var all=setsFor(ex).slice(0,ex.sets), arr=GFDRules.loggedSets(all), Ls=lastFor(ex.id,ex), lab=labOf(ex);
-    planned+=ex.sets;
+    var all=setsFor(ex).slice(0,nSets(ex)), arr=GFDRules.loggedSets(all), Ls=lastFor(ex.id,ex), lab=labOf(ex);
+    planned+=nSets(ex);
     all.forEach(function(s,i){ if(s.d&&!GFDRules.isMissed(lab,s,ex.reps)) ticked++; if(s.d&&GFDRules.isMissed(lab,s,ex.reps)) wins.missed.push({n:ex.n,set:i+1}); });
     /* cardio: keep last time's distance and minutes so the summary can compare pace */
     if(ex.lab==="cardio"&&Ls&&Ls.sets) wins.prevCardio[ex.id]=cardioSum(Ls.sets.map(function(s){return {weight:parseFloat(s.w),reps:parseFloat(s.r)};}));
@@ -220,6 +221,7 @@ function finishWorkout(){
   if(rec&&prevDates) wins.miles=GFDRules.milestones(prevDates,rec.performed_at,DAYS.filter(function(x){return !x.coles&&!x.opt&&x.ex.length;}).length,planned>0&&ticked===planned);
   /* today-only swaps end with the workout: next time the plan's own exercises are back */
   if(saved&&rec&&d.ex.some(function(x){return x.swFrom;})){ endTodaySwaps(d.id); DAYS=buildDays(); }
+  if(saved&&rec){ delete S.fstart; FX.id=null; FX.prev=null; FX.si=null; }
   recordWorkout(rec); save(); stopTimer(); renderDay(); window.scrollTo(0,0);
   if(saved&&rec) showDone(rec,d,wins);
   if(saved&&rec&&prevDates&&!prevDates.length) logEvent("first_workout",{exercises:d.ex.length});
