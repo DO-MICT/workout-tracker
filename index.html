@@ -55,31 +55,32 @@
   <nav class="daynav" id="tabs" aria-label="Day"></nav>
   <main id="day"></main>
 </div>
-<div class="timer" id="timer" role="status" aria-live="polite">
-  <span>Rest</span><span class="t" id="tt">1:30</span><span class="tb"><i id="tbar"></i></span>
+<div class="timer" id="timer" role="group" aria-label="Rest timer">
+  <span>Rest</span><span class="t" id="tt" role="timer">1:30</span><span class="tb"><i id="tbar"></i></span>
   <button id="t30">+30s</button><button id="tskip">Done</button>
 </div>
 <div class="toast" id="toast"></div>
-<div class="sheet" id="profile" role="dialog" aria-modal="true" aria-labelledby="ptitle" tabindex="-1" hidden></div>
+<div class="sr" id="srlive" role="status" aria-live="polite"></div>
+<div class="sheet" id="profile" role="dialog" aria-modal="false" aria-labelledby="ptitle" tabindex="-1" hidden></div>
 <div class="sheet" id="builder" role="dialog" aria-modal="true" aria-labelledby="btitle" tabindex="-1" hidden></div>
 <div class="donepop" id="donepop" hidden></div>
 <div class="donepop" id="askpop" hidden></div>
 <div class="sheet note-sheet" id="notesheet" role="dialog" aria-modal="true" aria-labelledby="ntitle" tabindex="-1" hidden></div>
-<div class="sheet" id="plans" role="dialog" aria-modal="true" aria-labelledby="pltitle" tabindex="-1" hidden></div>
+<div class="sheet" id="plans" role="dialog" aria-modal="false" aria-labelledby="pltitle" tabindex="-1" hidden></div>
 <div class="sheet" id="wizard" role="dialog" aria-modal="true" aria-labelledby="wtitle" tabindex="-1" hidden></div>
-<div class="sheet" id="equip" role="dialog" aria-modal="true" aria-labelledby="etitle" tabindex="-1" hidden></div>
-<div class="sheet" id="feedback" role="dialog" aria-modal="true" aria-labelledby="fbtitle" tabindex="-1" hidden></div>
-<div class="sheet" id="history" role="dialog" aria-modal="true" aria-labelledby="htitle" tabindex="-1" hidden></div>
-<div class="sheet" id="sugg" role="dialog" aria-modal="true" aria-labelledby="sgtitle" tabindex="-1" hidden></div>
-<div class="sheet" id="exlib" role="dialog" aria-modal="true" aria-labelledby="eltitle" tabindex="-1" hidden></div>
+<div class="sheet" id="equip" role="dialog" aria-modal="false" aria-labelledby="etitle" tabindex="-1" hidden></div>
+<div class="sheet" id="feedback" role="dialog" aria-modal="false" aria-labelledby="fbtitle" tabindex="-1" hidden></div>
+<div class="sheet" id="history" role="dialog" aria-modal="false" aria-labelledby="htitle" tabindex="-1" hidden></div>
+<div class="sheet" id="sugg" role="dialog" aria-modal="false" aria-labelledby="sgtitle" tabindex="-1" hidden></div>
+<div class="sheet" id="exlib" role="dialog" aria-modal="false" aria-labelledby="eltitle" tabindex="-1" hidden></div>
 <div class="sheet ms-sheet" id="measure" role="dialog" aria-modal="true" aria-labelledby="mstitle" tabindex="-1" hidden></div>
-<div class="sheet" id="body" role="dialog" aria-modal="true" aria-labelledby="bptitle" tabindex="-1" hidden></div>
-<div class="sheet" id="usage" role="dialog" aria-modal="true" aria-labelledby="ustitle" tabindex="-1" hidden></div>
-<div class="sheet" id="more" role="dialog" aria-modal="true" aria-labelledby="mtitle" tabindex="-1" hidden></div>
+<div class="sheet" id="body" role="dialog" aria-modal="false" aria-labelledby="bptitle" tabindex="-1" hidden></div>
+<div class="sheet" id="usage" role="dialog" aria-modal="false" aria-labelledby="ustitle" tabindex="-1" hidden></div>
+<div class="sheet" id="more" role="dialog" aria-modal="false" aria-labelledby="mtitle" tabindex="-1" hidden></div>
 <nav class="tabbar" id="tabbar" aria-label="Main"></nav>
 <div class="sheet onboard" id="onboard" role="dialog" aria-modal="true" aria-label="Get started" tabindex="-1" hidden></div>
 <div class="sheet onboard csgate" id="acctdel" role="dialog" aria-modal="true" aria-labelledby="dltitle" tabindex="-1" hidden></div>
-<div class="sheet note-sheet" id="healthsheet" role="dialog" aria-modal="true" aria-labelledby="htitle" tabindex="-1" hidden></div>
+<div class="sheet note-sheet" id="healthsheet" role="dialog" aria-modal="true" aria-labelledby="hstitle" tabindex="-1" hidden></div>
 <div class="sheet note-sheet" id="prosheet" role="dialog" aria-modal="true" aria-labelledby="protitle" tabindex="-1" hidden></div>
 <div class="sheet onboard csgate" id="consent" role="dialog" aria-modal="true" aria-labelledby="cstitle" tabindex="-1" hidden></div>
 

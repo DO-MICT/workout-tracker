@@ -189,7 +189,7 @@ function askAnswer(keep){
   OPEN[day+":"+a.ex.id]=true;
   var card=document.querySelector('details.ex[data-ex="'+a.ex.id+'"]');
   if(card){ card.open=true; var gp=card.closest("details.grp"); if(gp) gp.open=true; }
-  var inp=setInput(a.ex,a.i,"w"); if(inp){ inp.focus(); try{inp.select();}catch(e){} }
+  syncInert(); var inp=setInput(a.ex,a.i,"w"); if(inp){ inp.focus(); try{inp.select();}catch(e){} }
 }
 function finishWorkout(){
   var d=DAYS[day];
