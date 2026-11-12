@@ -6,7 +6,8 @@
   "scripts": {
     "app:build": "python3 tools/build_app.py",
     "app:sync": "python3 tools/build_app.py && npx cap sync android",
-    "app:apk": "python3 tools/build_app.py && npx cap sync android && cd android && ./gradlew assembleDebug"
+    "app:apk": "python3 tools/build_app.py && npx cap sync android && cd android && ./gradlew assembleProdDebug",
+    "app:dev": "python3 tools/build_app.py --env dev && npx cap sync android && cd android && ./gradlew assembleDevDebug"
   },
   "dependencies": {
     "@capacitor/android": "^8.6.0",

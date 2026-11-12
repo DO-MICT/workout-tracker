@@ -4,6 +4,7 @@
   "webDir": "build/app",
   "loggingBehavior": "debug",
   "android": {
+    "flavor": "prod",
     "allowMixedContent": false,
     "captureInput": false,
     "webContentsDebuggingEnabled": false
