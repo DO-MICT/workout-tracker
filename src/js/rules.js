@@ -265,6 +265,8 @@
      sets, the nearest earlier set typed today. Never the all-time top weight. */
   function setPrefill(today,i,lastSets){
     var ls=lastSets&&lastSets[i];
+    /* Deon, 12 Nov: a weight you changed today (typed, t) carries on to your next sets; reps still follow last time */
+    for(var k=i-1;k>=0;k--){ var tk=today&&today[k]; if(tk&&tk.t&&tk.w) return {w:tk.w,r:(ls&&ls.r)||tk.r||""}; }
     if(ls&&(ls.w||ls.r)) return {w:ls.w||"",r:ls.r||""};
     for(var j=i-1;j>=0;j--){ var t=today&&today[j]; if(t&&(t.w||t.r)) return {w:t.w||"",r:t.r||""}; }
     return {w:"",r:""};
@@ -285,6 +287,9 @@
      Returns null, or {x, ref} (times last), {by, ref} (more than last), {limit} */
   function bigJump(lab,value,lastSets,earlier){
     var v=num(value); if(!(v>0)||!lab||!lab[0]) return null;
+    /* a jump you already said yes to today (ok) is the new reference: later sets at that weight aren't asked again */
+    var okTop=0; (earlier||[]).forEach(function(s){ var o=num(s&&s.ok); if(o>okTop) okTop=o; });
+    if(okTop>0) lastSets=[{w:Math.max(okTop,topWeight(lastSets))}];
     var lastTop=topWeight(lastSets), lo=0;
     (earlier||[]).forEach(function(s){ var e=num(s&&s.w); if(e>0&&(!lo||e<lo)) lo=e; });
     if(lastTop>0){

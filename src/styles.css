@@ -1137,7 +1137,7 @@ body.np-open .wrap{padding-bottom:300px}
 body.focusview .timer{display:none!important}
 body.tabs.focusview .wrap{padding-bottom:calc(var(--tabh) + 16px)}
 body.focusview .daynav{margin-bottom:10px}
-.fx{display:flex;flex-direction:column;gap:8px;min-height:calc(100vh - var(--tabh) - 24px);min-height:calc(100svh - var(--tabh) - 24px);scroll-margin-top:calc(env(safe-area-inset-top,0px) + 8px)}
+.fx{display:flex;flex-direction:column;gap:8px;scroll-margin-top:calc(env(safe-area-inset-top,0px) + 8px)}
 .fx-top{display:flex;align-items:center;gap:6px;min-height:52px}
 .fx-nav{flex:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:700 1.4rem/1 Figtree,sans-serif;cursor:pointer;display:grid;place-items:center;padding:0}
 .fx-more{font-size:1.3rem;letter-spacing:.05em}
@@ -1195,6 +1195,21 @@ body.focusview .daynav{margin-bottom:10px}
 .fx-num input{box-sizing:border-box;width:100%;height:80px;border:1px solid var(--line);border-radius:14px;background:var(--bg);text-align:center;font:800 2.8rem/1 Archivo,sans-serif;font-variant-numeric:tabular-nums;padding:0 0 16px}
 .fx-num input:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .fx-num small{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-size:.72rem;color:var(--muted);pointer-events:none}
+/* short screens (fxFit): the same screen, a little tighter, so nothing needs a scroll during a set */
+.fx-tight{gap:4px}
+.fx-tight .fx-tz{height:94px;grid-template-columns:1fr 92px 1fr}
+.fx-tight .fx-ring{width:92px;height:92px}
+.fx-tight .fx-ring b{font-size:1.6rem}
+.fx-tight .fx-ring.go b{font-size:1.9rem}
+.fx-tight .fx-clock{margin-top:0}
+.fx-tight .fx-card{gap:8px;padding:8px 12px}
+.fx-tight .fx-pill{min-height:44px;padding:4px 8px;font-size:.85rem;line-height:1.15}
+.fx-tight .fx-lbl > span:first-child{font-size:1.35rem}
+.fx-tight .fx-num input{height:60px;font-size:2.3rem;padding-bottom:14px}
+.fx-tight .fx-num small{bottom:5px}
+.fx-tight .fx-go,.fx-tight .fx-gorow .fx-nav{min-height:52px}
+.fx-tight .fx-slot{min-height:44px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:44px}
+.fx-tight .fx-slot .linkbtn{max-width:100%;overflow:hidden;text-overflow:ellipsis}
 .fx-bot{position:sticky;bottom:calc(var(--tabh) + 8px);display:flex;flex-direction:column;gap:2px;background:var(--bg);padding-top:4px;z-index:2}
 .fx-gorow{display:flex;align-items:stretch;gap:8px}
 .fx-gorow .fx-nav{height:auto;min-height:60px;width:52px;border-radius:16px}

@@ -98,9 +98,27 @@ function renderFocus(){
   if(FX.tools) h+=fxToolsHtml(ex,miss);
   document.getElementById("day").innerHTML=h;
   fxClockStart();
-  if(started&&!FX.tools&&!document.body.classList.contains("wide")) fxScroll();
+  if(!fxFit()&&started&&!FX.tools&&!document.body.classList.contains("wide")) fxScroll();
 }
-/* once the workout has started, the header and day button scroll away so the whole focus view fits the screen */
+/* Deon, 12 Nov: the whole focus view fits on the screen without scrolling. It fills the space from where it starts down
+   to the tab bar, so the set card centres in what's really visible. Only when it can't fit (a long superset on a short
+   phone) does it take the full screen height and scroll the header away. Returns true when it fits. */
+function fxFit(){
+  var el=document.getElementById("fx"); if(!el) return true;
+  if(document.body.classList.contains("wide")){ el.style.minHeight=""; return true; }
+  var tb=document.getElementById("tabbar"), tabh=tb&&!tb.hidden?tb.getBoundingClientRect().height:0;
+  var top=el.getBoundingClientRect().top+window.scrollY, room=window.innerHeight-tabh-16;
+  /* first at full size, then tighter (smaller ring, number boxes and gaps; taps stay 44 px); with the header in view, then without it */
+  var fits=function(avail){ el.style.minHeight="0px"; return el.scrollHeight<=avail; };
+  for(var pass=0;pass<4;pass++){
+    el.classList.toggle("fx-tight",pass%2===1);
+    var avail=pass<2?room-top:room-8;
+    if(fits(avail)||pass===3){ el.style.minHeight=Math.max(avail,el.scrollHeight)+"px"; return pass<2; }
+  }
+  return false;
+}
+window.addEventListener("resize",function(){ if(document.getElementById("fx")) fxFit(); });
+/* when it doesn't fit, the header and day button scroll away so the focus view gets the whole screen */
 function fxScroll(){
   var el=document.getElementById("fx"); if(!el||document.getElementById("onboard")&&!document.getElementById("onboard").hidden) return;
   var top=el.getBoundingClientRect().top+window.scrollY-8;
