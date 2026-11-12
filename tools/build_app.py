@@ -39,29 +39,59 @@ def app_head(site_url, env):
     return head + (DEV_ERRORS if env == "dev" else "")
 
 
-# GFD Dev only: script errors show in a red box at the bottom of the screen (tap to hide), with the WebView
-# version, so a tester can screenshot them. There's no console to look at on a phone.
+# GFD Dev only: a small "DEV" tag in the bottom-left corner. Tap it for a status report (WebView version, screen size,
+# server connection, sign-in, tab bar) to screenshot; it turns red and opens by itself when a script error happens.
+# There's no console to look at on a phone.
 DEV_ERRORS = r"""
 <script>(function(){
-  var box=null, n=0;
-  function show(msg){
-    if(n++>20) return;
-    if(!document.body){ document.addEventListener("DOMContentLoaded",function(){ show(msg); n--; }); return; }
-    if(!box){
-      box=document.createElement("div");
-      box.setAttribute("style","position:fixed;left:6px;right:6px;bottom:6px;z-index:99999;max-height:45vh;overflow:auto;"+
-        "background:#B00020;color:#fff;font:12px/1.35 monospace;padding:8px;border-radius:8px;white-space:pre-wrap;word-break:break-word");
-      box.onclick=function(){ box.remove(); box=null; };
-      box.textContent="GFD Dev errors (tap to hide)\n"+(navigator.userAgent.match(/Chrome\/[0-9.]+/)||["?"])[0]+"\n";
-      document.body.appendChild(box);
-    }
-    box.textContent+="\n• "+msg;
+  var log=[], tag=null, box=null, t0=Date.now();
+  function chrome(){ return (navigator.userAgent.match(/Chrome\/[0-9.]+/)||["Chrome ?"])[0]; }
+  function el(id){ return document.getElementById(id); }
+  function vis(e){ if(!e) return "missing"; var r=e.getBoundingClientRect(), cs=getComputedStyle(e);
+    return (e.hidden?"hidden ":"")+"display:"+cs.display+" top:"+Math.round(r.top)+" h:"+Math.round(r.height); }
+  function v(f){ try{ return String(f()); }catch(e){ return "ERR "+e.message; } }
+  function report(){
+    return ["GFD Dev status (tap to close)", chrome()+" · Android "+(navigator.userAgent.match(/Android [0-9.]+/)||["?"])[0],
+      "seconds open: "+Math.round((Date.now()-t0)/1000),
+      "window "+innerWidth+"x"+innerHeight+" screen "+screen.width+"x"+screen.height+" dpr "+devicePixelRatio,
+      "safe-area top: "+v(function(){ var d=document.createElement("div"); d.style.cssText="position:fixed;top:0;height:env(safe-area-inset-top,0px)"; document.body.appendChild(d); var h=d.getBoundingClientRect().height; d.remove(); return h; }),
+      "supabase lib: "+v(function(){ return typeof (window.supabase&&window.supabase.createClient); }),
+      "client: "+v(function(){ return !!sb; })+" · offline: "+v(function(){ return sbOffline; })+" · user: "+v(function(){ return sbUser?"signed in":"none"; }),
+      "account on phone: "+v(function(){ return JSON.stringify(acct()); }).slice(0,120),
+      "status text: "+v(function(){ var s=el("status")||document.querySelector("[data-status]"); return s?s.textContent:"-"; }),
+      "body class: "+document.body.className,
+      "sign-in sheet: "+vis(el("onboard")),
+      "tab bar: "+vis(el("tabbar")),
+      "log:"].concat(log).join("\n");
+  }
+  function ensure(){
+    if(tag||!document.body) return;
+    tag=document.createElement("button"); tag.type="button"; tag.textContent="DEV";
+    tag.setAttribute("style","position:fixed;left:4px;bottom:4px;z-index:99999;font:bold 11px monospace;padding:3px 6px;border-radius:6px;border:0;background:#FF9F1C;color:#000;opacity:.85");
+    tag.onclick=function(){ toggle(); };
+    document.body.appendChild(tag);
+  }
+  function toggle(force){
+    if(box&&!force){ box.remove(); box=null; return; }
+    if(!box){ box=document.createElement("pre"); box.onclick=function(){ box.remove(); box=null; };
+      box.setAttribute("style","position:fixed;left:6px;right:6px;top:6px;z-index:99999;max-height:80vh;overflow:auto;margin:0;"+
+        "background:#111;color:#fff;font:11px/1.35 monospace;padding:8px;border-radius:8px;white-space:pre-wrap;word-break:break-word");
+      document.body.appendChild(box); }
+    box.textContent=report();
+  }
+  function add(msg, bad){
+    log.push(Math.round((Date.now()-t0)/1000)+"s "+msg); if(log.length>30) log.shift();
+    if(bad&&document.body){ ensure(); tag.style.background="#B00020"; tag.style.color="#fff"; toggle(true); }
+    else if(box) box.textContent=report();
   }
   window.addEventListener("error",function(e){
-    if(e.target&&e.target!==window&&(e.target.src||e.target.href)){ show("Failed to load "+(e.target.src||e.target.href)); return; }
-    show((e.message||"error")+"  @ "+String(e.filename||"").replace(/^.*\/public\//,"").replace(/^https?:\/\/[^/]+\//,"")+":"+e.lineno+":"+e.colno);
+    if(e.target&&e.target!==window&&(e.target.src||e.target.href)){ add("Failed to load "+(e.target.src||e.target.href),1); return; }
+    add((e.message||"error")+" @ "+String(e.filename||"").replace(/^https?:\/\/[^/]+\//,"")+":"+e.lineno+":"+e.colno,1);
   },true);
-  window.addEventListener("unhandledrejection",function(e){ var r=e.reason; show("Promise: "+(r&&(r.message||r))+""); });
+  window.addEventListener("unhandledrejection",function(e){ var r=e.reason; add("Promise: "+(r&&(r.message||r)),1); });
+  ["warn","error"].forEach(function(k){ var o=console[k]; console[k]=function(){ try{ add(k+": "+Array.prototype.map.call(arguments,String).join(" ").slice(0,200)); }catch(e){} return o&&o.apply(console,arguments); }; });
+  document.addEventListener("DOMContentLoaded",function(){ ensure(); add("page ready"); });
+  window.addEventListener("load",function(){ add("all files loaded"); });
 })();</script>"""
 
 
