@@ -198,6 +198,9 @@ test("set boxes start with last session's same set, never the all-time top", () 
   assert.deepEqual(R.setPrefill(sets([85, 4], [null, null]), 1, last), { w: "80", r: "5" }, "same set number last time, not today's set 1");
   assert.deepEqual(R.setPrefill(sets([85, 4], [85, 4], [null, null]), 2, last), { w: "85", r: "4" }, "past last session's sets: the nearest set today");
   assert.deepEqual(R.setPrefill(sets([null, null]), 0, undefined), { w: "", r: "" }, "first time: empty");
+  const typed = sets([85, 6], [null, null], [null, null]); typed[0].t = 1;
+  assert.deepEqual(R.setPrefill(typed, 1, last), { w: "85", r: "5" }, "a weight changed today carries to the next set, reps from last time");
+  assert.deepEqual(R.setPrefill(typed, 2, last), { w: "85", r: "6" }, "and on past last session's sets");
 });
 
 test("an empty box can't be ticked", () => {
@@ -218,6 +221,10 @@ test("big jumps are checked before saving", () => {
   assert.deepEqual(R.bigJump(KG, "15", sets([10, 10]), []), { by: 5, ref: 10 });
   assert.equal(R.bigJump(KG, "14", sets([10, 10]), []), null, "small dumbbell jumps don't nag");
   assert.deepEqual(R.bigJump(KG, "600", undefined, sets([60, 8])), { x: 10, ref: 60, today: true }, "10× an earlier set today");
+  const kept = sets([110, 5]); kept[0].ok = "110";
+  assert.equal(R.bigJump(KG, "110", sets([85, 5]), kept), null, "a jump kept earlier today isn't asked again");
+  assert.equal(R.bigJump(KG, "115", sets([85, 5]), kept), null, "nor a small step on from it");
+  assert.deepEqual(R.bigJump(KG, "1100", sets([85, 5]), kept), { x: 10, ref: 110 }, "a typo is still caught");
   assert.equal(R.bigJump(KG, "100", undefined, sets([60, 8])), null, "warm-up ramps are fine");
   assert.equal(R.bigJump(KG, "120", undefined, []), null, "first-ever set: no prompt");
   assert.deepEqual(R.bigJump(KG, "850", undefined, []), { limit: 400 }, "unless it's above a sane limit");
