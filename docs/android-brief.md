@@ -66,10 +66,15 @@ the Capacitor version? Run `npm install` and `npx cap sync android`, and commit 
    Users and permissions → invite its email with "Release to testing tracks". Save the JSON as the
    `PLAY_SERVICE_ACCOUNT_JSON` secret. Then each Run workflow (or `v*` tag) lands in internal testing as a draft;
    pick "completed" once the app has passed its first review.
-5. **Supabase redirect URL**: add `gfd://auth-callback` under Authentication → URL Configuration → Redirect URLs
+5. **Supabase redirect URL** (done on GFD Prod 12 Nov 2026): add `gfd://auth-callback` under Authentication → URL Configuration → Redirect URLs
    (or run `tools/push_auth_emails.py --apply`, which now adds it). Without it, email links open the website instead.
 6. **Closed test**: 12+ testers for 14 days before production (Play rule for new personal accounts).
 7. Store listing and Data safety: `docs/store-listing.md`.
+8. **Before the production launch: Google sign-in branding.** Google's account picker says "continue to
+   zdllpjrkwcdmcuizxuum.supabase.co" until GFD Prod has a Supabase custom domain (paid add-on, e.g.
+   `auth.getfitdaily.co.za`). Set that up, add its `/auth/v1/callback` to the Google Web client, point the app at it
+   (`deploy/supabase.json`), then ask Google for brand verification (Google Auth Platform → Branding) so the screen
+   shows the GFD name and logo. Sign-in works without it; it only looks less trustworthy. See `docs/site-brief.md`.
 
 Version: `versionName` is `APP_VERSION` in `src/js/events.js`; `versionCode` is 1000 + the workflow run number.
 
