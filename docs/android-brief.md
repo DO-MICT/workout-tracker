@@ -65,6 +65,11 @@ Notes:
 - **Pro purchases don't work in GFD Dev**: Play billing only works for the Play package installed from Play. Test
   buying with the Play app on the internal testing track (License testing), or give the dev account Pro with `admin_grant`.
 
+**Old WebViews**: the app runs in the phone's Android System WebView, which can be old (a Huawei P30 lite tested on
+12 Nov 2026 had Chrome 80). Don't use `inset:` (Chrome 87+; write top/right/bottom/left), and give `svh`/`dvh` a
+`vh` fallback first. `color-mix()` and flex `gap` just degrade (no tint, tighter spacing) on very old ones. GFD Dev's
+DEV tag (bottom-left) shows the WebView version and where the sign-in sheet and tab bar are.
+
 ## Build it yourself
 
 Needs Node 22, JDK 21 and the Android SDK (Android Studio, or the command-line tools with `platforms;android-36`).
