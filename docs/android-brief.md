@@ -8,7 +8,7 @@ reaches the website at once and the app in its next Play release. Architecture: 
 | Piece | What it does |
 | --- | --- |
 | `tools/build_app.py` | Builds `build/app/` (not checked in): `app.html` with an app head (no service worker or manifest; `window.GFD_SHELL` carries the site address from `site.json` and the app id), plus `src/`, `vendor/`, `icons/` and the policy pages |
-| `capacitor.config.json` | App id `com.getfitdaily.app`, name GFD, `webDir: build/app`, edge-to-edge insets, notification icon |
+| `capacitor.config.json` | App id `co.za.getfitdaily.app`, name GFD, `webDir: build/app`, edge-to-edge insets, notification icon |
 | `android/` | The native project (checked in). `npx cap sync android` copies `build/app` into it |
 | `src/js/platform.js` | The only file that talks to Capacitor. Web and Android behind one API (see its header). Core code calls `platform.*` |
 | `tools/build_android_icons.js` | Draws the launcher, round, adaptive/themed, notification and splash icons from the brand logo |
@@ -24,6 +24,9 @@ What the shell adds over the website:
 - **Sign-in links**: emails link to `gfd://auth-callback#access_token=…` (`platform.authRedirect()`); the app catches
   them (intent filter in `AndroidManifest.xml`) and `appAuthLink()` in `signin.js` sets the session, or opens New
   password for a reset link. The website keeps using its own address.
+- **Google sign-in** (WP11): `platform.openAuthUrl()` opens Google in a Custom Tab (Google blocks sign-in inside a
+  WebView), the result comes back as `gfd://auth-callback#access_token=…` like an email link, and the tab is closed.
+  No Android OAuth client or SHA-1 is needed: it's the same browser flow as the web. Setup: `docs/site-brief.md`.
 - **Back button**: closes whatever Escape would (sheet, menu, popup); on the main screen or sign-in it leaves the app.
 - **Downloads** (data export ZIP): written to the app cache and handed to Android's share sheet.
 - **Links that open a new tab** (policy pages) open in the in-app browser tab at the public site address.
@@ -39,7 +42,7 @@ npm ci
 npm run app:apk          # build/app → android → app/build/outputs/apk/debug/app-debug.apk
 ```
 
-The debug build installs as "com.getfitdaily.app.debug" next to the real app. Every PR that touches the app also
+The debug build installs as "co.za.getfitdaily.app.debug" next to the real app. Every PR that touches the app also
 builds one: Actions → the PR's Android build run → Artifacts → gfd-debug-apk.
 
 Change `app.html` or `src/`? Nothing else to do: the workflow rebuilds `build/app` every time. Change a plugin or
@@ -48,7 +51,7 @@ the Capacitor version? Run `npm install` and `npx cap sync android`, and commit 
 ## Release to Google Play (Deon's steps)
 
 1. **Play developer account** (B1) and create the app in Play Console: name "GFD · Get Fit Daily", package
-   `com.getfitdaily.app` (fixed for ever once uploaded).
+   `co.za.getfitdaily.app` (fixed for ever once uploaded; this is the name Play Console has, so never change it).
 2. **Upload key** (once; keep a copy of the file and passwords somewhere safe, e.g. a password manager):
    ```
    keytool -genkeypair -v -keystore gfd-upload.jks -alias upload -keyalg RSA -keysize 2048 -validity 10000
@@ -76,8 +79,48 @@ When the domain is bought (`site.json` → `domain`), uncomment the App Links in
 `android/app/src/main/AndroidManifest.xml`, set its host, and publish `/.well-known/assetlinks.json` on the domain
 with the app-signing SHA-256 from Play Console → Setup → App signing. Until then `gfd://` covers sign-in links.
 
+## Pro billing (WP12)
+
+Google Play sells Pro; RevenueCat checks every purchase and tells our server, and the server alone writes
+`public.entitlements`. The app never decides Pro: after buying it asks the server to sync and reads `my_access` again.
+Paddle on the website (WP13) goes through the same RevenueCat project and the same webhook.
+
+| Piece | What it does |
+| --- | --- |
+| `platform.billing` (`src/js/platform.js`) | The RevenueCat Capacitor plugin, app only: `ready(key, uid)`, `plans()`, `buy(id)`, `restore()`, `signOut()`, `manageUrl(product)` |
+| `src/js/billing.js` | Sets `window.GFDBilling` in the app for the upgrade page; the Your plan card's Manage or cancel and Restore purchases; the reminder a week before a yearly plan renews |
+| `supabase/functions/billing-webhook` | `POST /billing-webhook`: RevenueCat's webhook. `POST /billing-webhook/sync`: the app right after a purchase or restore. Both ask RevenueCat for the person's full record and call `billing_apply` |
+| Migration `20261111000019_billing.sql` | `billing_events` (each webhook once, no personal details), `billing_apply` (service_role only), `my_access.product_id` |
+
+RevenueCat's app user id is the Supabase user id (`Purchases.configure({appUserID})`), so a purchase always lands on the
+right account, and signing out logs RevenueCat out too. Stores map to sources: Google Play → `play`, Paddle/Web Billing →
+`web`, a product id containing `lifetime` → `lifetime` (WP15). RevenueCat promotional grants are ignored: use `admin_grant`.
+
+**Products** (create them in Play Console → Monetize → Subscriptions, then import them into RevenueCat):
+subscription `gfd_pro` with base plans `monthly` (US$4.99, auto-renewing, 1 month) and `yearly` (US$34.99, 1 year).
+No free trial on the base plans: everyone already gets 14 days of Pro at sign-up. In RevenueCat: entitlement `pro`
+with both products attached, and offering `default` with packages Monthly and Annual. The app shows whatever the current
+offering holds (monthly and yearly; lifetime waits for WP15), with Google's local prices.
+
+**Settings per Supabase project** (GFD Dev and GFD Prod):
+- `app_config` key `play_billing`: `insert into public.app_config (key, value, note) values ('play_billing', '{"rc_key":"goog_..."}', 'RevenueCat Google Play public key (WP12)') on conflict (key) do update set value = excluded.value;`
+  Until it exists, the upgrade page says buying opens soon, exactly as before.
+- Edge Function secrets: `REVENUECAT_WEBHOOK_AUTH` (any long random text, the same as RevenueCat's webhook
+  Authorization value), `REVENUECAT_SECRET_KEY` (RevenueCat secret API key, `sk_...`; delete-account uses it too), and
+  later `BILLING_SANDBOX=off` on GFD Prod once real sales start, so test purchases stop counting there.
+- Deploy: Actions → Deploy functions (deploys delete-account and billing-webhook).
+- RevenueCat → Integrations → Webhooks: URL `https://<project ref>.supabase.co/functions/v1/billing-webhook`,
+  Authorization header value = `REVENUECAT_WEBHOOK_AUTH`. One webhook per project (Dev and Prod can each have one,
+  filtered by environment: Sandbox for Dev, both for Prod).
+
+**Testing a purchase**: add your Google account under Play Console → Settings → License testing, install the app from
+the internal testing track, and buy: Google uses test cards and renews monthly every 5 minutes. Check
+`select * from public.billing_events order by received_at desc limit 5;` and the Your plan card.
+
+Cancel: Google Play handles it (the card links to Play's subscription page). Pro stays until the end of the paid
+time; the webhook then marks the row expired. Refunds end Pro straight away. A card problem keeps Pro through Google's
+grace period (status `grace`).
+
 ## Later work packages
 
-- WP11 Google sign-in: use `platform.authRedirect()` as the OAuth redirect; the callback already lands in `appAuthLink`.
-- WP12 billing: fill `platform.billing` (RevenueCat Capacitor plugin). Core code must not call RevenueCat directly.
 - iOS (M4): a new branch in `platform.js` and `npx cap add ios`; no fork.

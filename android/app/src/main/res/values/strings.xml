@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">GFD</string>
     <string name="title_activity_main">GFD</string>
-    <string name="package_name">com.getfitdaily.app</string>
+    <string name="package_name">co.za.getfitdaily.app</string>
     <string name="custom_url_scheme">gfd</string>
 </resources>

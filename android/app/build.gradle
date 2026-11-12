@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace = "com.getfitdaily.app"
+    namespace = "co.za.getfitdaily.app"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.getfitdaily.app"
+        applicationId "co.za.getfitdaily.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         // set by the android-build workflow: -PgfdVersionCode=<run number> -PgfdVersionName=<APP_VERSION>

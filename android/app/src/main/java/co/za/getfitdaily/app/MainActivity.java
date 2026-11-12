@@ -1,4 +1,4 @@
-package com.getfitdaily.app;
+package co.za.getfitdaily.app;
 
 import com.getcapacitor.BridgeActivity;
 

@@ -106,7 +106,7 @@ function healthOpen(mode,after){
   var lead=mode==="move"
     ?'You have injury notes on '+n+' exercise'+(n===1?'':'s')+'. Injury notes are health details, so GFD only keeps them in your account with your OK.'
     :'Injury notes are health details, so GFD only keeps them in your account with your OK.';
-  sh.innerHTML='<div class="sheet-in"><div class="sheet-top"><h2 id="htitle">'+title+'</h2><button class="chip" id="hLater">Not now</button></div>'+
+  sh.innerHTML='<div class="sheet-in"><div class="sheet-top"><h2 id="hstitle">'+title+'</h2><button class="chip" id="hLater">Not now</button></div>'+
     '<p class="sub">'+lead+'</p>'+
     '<ul class="hlist"><li>Kept apart from the rest of your data and open only to you.</li>'+
     '<li>Used only to show your notes on your exercises, and later to fit exercises to you.</li>'+

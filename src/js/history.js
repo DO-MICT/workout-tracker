@@ -28,19 +28,23 @@ function histSet(ex,k,i,s){
   return {exercise_id:clip(ex.id,80),exercise_name:clip(ex.n,120),muscle_group:clip(ex.mg||(LIB[ex.id]&&LIB[ex.id].mg)||"",40)||null,exercise_order:Math.min(k,199),set_no:Math.min(i+1,50),
     measure:ex.lab||"w",weight:numOrNull(s.w,-1000,5000,3),reps:numOrNull(s.r,0,100000),done:!!s.d,group_tag:/^[abc]$/.test(ex.ss||"")?ex.ss:null};
 }
-function buildWorkout(d){
+/* at: when it was done, for a workout logged later (F1.E4.S1); its start and length are then unknown */
+function buildWorkout(d,at){
   var P=activePlan(), cs=d.coles?colesSession():null, lo=cs?(locById(cs.loc)||colesLoc()):dayLoc(P.id,d.id);
   var sets=[], first=0, now=Date.now();
   d.ex.forEach(function(ex,k){
-    setsFor(ex).slice(0,ex.sets).forEach(function(s,i){
+    setsFor(ex).slice(0,nSets(ex)).forEach(function(s,i){
       if(!GFDRules.loggedSets([s]).length) return;
       if(s.at&&(!first||s.at<first)) first=s.at;
       sets.push(histSet(ex,k,i,s));
     });
   });
   if(!sets.length) return null;
+  /* the Start workout tap (focus view) counts as the start, when it came before the first set */
+  var fs=S.fstart; if(fs&&fs.day===d.id&&fs.who===(S.who||0)&&fs.at<now&&(!first||fs.at<first)) first=fs.at;
   var dur=first&&now>first?Math.round((now-first)/1000):null; if(dur!==null&&dur>86400) {dur=null;first=0;}
-  var w={id:uuid4(),performed_at:new Date(now).toISOString(),started_at:first?new Date(first).toISOString():null,duration_sec:dur,
+  if(at){ dur=null; first=0; }
+  var w={id:uuid4(),performed_at:at||new Date(now).toISOString(),started_at:first?new Date(first).toISOString():null,duration_sec:dur,
     plan_id:P.id,plan_name:P.name,day_id:d.id,day_title:d.title,location_id:lo?lo.id:null,location_name:lo?lo.name:null,
     source:"app",app_version:APP_VERSION,who:S.who||0,sets:sets};
   Object.keys(HIST_LIMITS).forEach(function(f){w[f]=clip(w[f],HIST_LIMITS[f]);});
@@ -167,11 +171,12 @@ function histDelete(id){
   });
 }
 /* save changes made to a past workout. Not uploaded yet: change it in place. Saved in the database: queue
-   an edit (op "update") that waits in the outbox like a new workout, so it works offline too. */
+   an edit (op "update") that waits in the outbox like a new workout, so it works offline too.
+   row.performed_at is when it happened (F1.E4.S1: it may have been moved); update_workout moves the sets with it. */
 function histSaveEdit(row,sets){
-  var id=row.id, q=wout().filter(function(w){return w.id===id;})[0];
-  if(q){ var k=wout().indexOf(q); wout()[k]=Object.assign({},q,{sets:sets}); }
-  else if(!WEB_MODE){ var lw=wlog().filter(function(w){return w.id===id;})[0]; if(lw) lw.sets=sets; }
+  var id=row.id, q=wout().filter(function(w){return w.id===id;})[0], when={performed_at:row.performed_at,started_at:row.started_at||null};
+  if(q){ var k=wout().indexOf(q); wout()[k]=Object.assign({},q,{sets:sets},when); }
+  else if(!WEB_MODE){ var lw=wlog().filter(function(w){return w.id===id;})[0]; if(lw){ lw.sets=sets; Object.assign(lw,when); wlog().sort(function(a,b){return a.performed_at<b.performed_at?-1:1;}); } }
   else wout().push({op:"update",id:id,performed_at:row.performed_at,started_at:row.started_at||null,duration_sec:row.duration_sec||null,
     plan_id:row.plan_id||null,plan_name:row.plan_name||null,day_id:row.day_id||null,day_title:row.day_title||null,location_name:row.location_name||null,
     source:row.source||"app",who:S.who||0,sets:sets});
@@ -242,9 +247,10 @@ function histRows(){
   var edits={}; if(WEB_MODE) wout().forEach(function(w){ if(w.op==="update") edits[w.id]=w; });
   var seen={}; pend.forEach(function(w){seen[w.id]=1;});
   return pend.concat((H.rows||[]).filter(function(w){return !seen[w.id];}).map(function(w){
-    if(edits[w.id]) return Object.assign({},w,{pending:true,edited:true,set_count:edits[w.id].sets.length,volume_kg:histVolume(edits[w.id])});
+    if(edits[w.id]) return Object.assign({},w,{pending:true,edited:true,performed_at:edits[w.id].performed_at||w.performed_at,started_at:edits[w.id].performed_at?edits[w.id].started_at:w.started_at,
+      set_count:edits[w.id].sets.length,volume_kg:histVolume(edits[w.id])});
     if(!WEB_MODE) return Object.assign({},w,{set_count:w.sets.length,volume_kg:histVolume(w)}); return w;
-  }));
+  })).sort(function(a,b){return a.performed_at<b.performed_at?1:a.performed_at>b.performed_at?-1:0;});
 }
 function histExerciseList(sets){
   var out=[], cur=null;
@@ -303,7 +309,7 @@ function histBodyHtml(w){
 function histEditStart(id){
   var row=histRows().filter(function(w){return w.id===id;})[0], sets=H.sets[id]; if(!row||!sets) return;
   H.del=null;
-  H.edit={id:id,row:row,err:"",ex:histExerciseList(sets).map(function(e){
+  H.edit={id:id,row:row,err:"",when:GFDRules.whenParts(row.performed_at),ex:histExerciseList(sets).map(function(e){
     var s0=e.sets[0]||{};
     return {id:e.id,name:e.name,mg:s0.muscle_group||null,measure:s0.measure||"w",tag:e.tag||null,order:e.order,
       /* weights are edited in the chosen unit and turned back into kg on save */
@@ -312,6 +318,9 @@ function histEditStart(id){
 }
 function histEditHtml(){
   var E=H.edit, h='<div class="hedit"><p class="sub">Change any number, add a set or remove one. Records and last time update to match.</p>';
+  /* F1.E4.S1: when it happened, in case it was logged late or on the wrong day */
+  h+='<fieldset class="hwhen"><legend>When you did it</legend><label><span>Date</span><input type="date" data-hedwhen="date" value="'+esc(E.when.date)+'" max="'+esc(GFDRules.whenParts(new Date().toISOString()).date)+'" min="2000-01-01"></label>'+
+    '<label><span>Finished at</span><input type="time" data-hedwhen="time" value="'+esc(E.when.time)+'"></label></fieldset>';
   E.ex.forEach(function(e,k){
     var lb0=LABS[e.measure]||LABS.w, lb=[GFDRules.unitLabel(lb0[0],U()),lb0[1]];
     h+='<div class="hedex numgrp"><b>'+esc(e.name)+'</b>';
@@ -330,6 +339,7 @@ function histEditHtml(){
   return h;
 }
 function historyInput(el){
+  if(H&&H.edit&&el.dataset&&el.dataset.hedwhen){ H.edit.when[el.dataset.hedwhen]=el.value; return true; }
   if(!H||!H.edit||!el.dataset||!el.dataset.hed) return false;
   var p=el.dataset.hed.split("|"), s=H.edit.ex[+p[0]].sets[+p[1]];
   s[p[2]]=el.value.replace(",",".").slice(0,7);
@@ -347,9 +357,18 @@ function histEditSave(){
     });
   });
   if(!sets.length){ E.err="Every set is empty. To remove the whole workout, use Delete workout instead."; renderHistory(true); return; }
-  histSaveEdit(E.row,sets);
-  H.sets[E.id]=sets; H.cache[E.id]=Object.assign({},E.row,{sets:sets}); H.edit=null;
-  renderHistory(true); statsLoad(); recChanged(); toast("Workout updated");
+  /* the date and time: only a real change moves it (the boxes have no seconds) */
+  var wh=GFDRules.whenFromParts(E.when.date,E.when.time), row=E.row, moved=false;
+  if(wh.err){ E.err=wh.err; renderHistory(true); var wi=document.querySelector("[data-hedwhen]"); if(wi) wi.focus(); return; }
+  var was=GFDRules.whenParts(row.performed_at);
+  if(was.date!==E.when.date||was.time!==E.when.time){
+    moved=true;
+    row=Object.assign({},row,{performed_at:wh.at,started_at:GFDRules.shiftStart(row.started_at,row.performed_at,wh.at)});
+    (H.rows||[]).forEach(function(r){ if(r.id===E.id){ r.performed_at=row.performed_at; r.started_at=row.started_at; } });
+  }
+  histSaveEdit(row,sets);
+  H.sets[E.id]=sets; H.cache[E.id]=Object.assign({},row,{sets:sets}); H.edit=null;
+  renderHistory(true); statsLoad(); recChanged(); toast(moved?"Workout moved to "+hDate(row.performed_at,{weekday:"short",day:"numeric",month:"short"}):"Workout updated");
 }
 /* progress for one exercise: chart of the best set per workout + every session */
 function histExHtml(){

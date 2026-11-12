@@ -1,10 +1,8 @@
 /* ---------- state ---------- */
-/* TESTER_BUILD: the copy shared with friends shows a register page and first-run setup */
-var TESTER_BUILD=false;
 /* WEB_MODE: running outside Claude (e.g. GitHub Pages) -> Supabase sign-in and sync */
 var WEB_MODE=!(window.claude&&typeof window.claude.use==="function");
 var KEY="split5-v1";
-function blank(){return {v:1,names:[(TESTER_BUILD||WEB_MODE)?"You":"Deon","Partner"],who:0,cur:[{},{}],last:[{},{}]};}
+function blank(){return {v:1,names:[WEB_MODE?"You":"Deon","Partner"],who:0,cur:[{},{}],last:[{},{}]};}
 function load(){try{var r=localStorage.getItem(KEY);if(r){var o=JSON.parse(r);if(o&&o.v===1&&o.cur&&o.last){o.who=0;return o;}}}catch(e){}return blank();}
 var S=load();
 var canSave=true, cloudRef=null, cloudOk=false, cloudBusy=false, cloudDirty=false, cloudTimer=null;
@@ -60,7 +58,7 @@ function setStatus(msg){
 /* one time: the equipment from Deon's gym photos goes into his first location (Gym).
    Runs only after account data has loaded, so it adds to what's saved rather than replacing it. */
 function seedMyGym(){
-  if(S.gearSeedV1||TESTER_BUILD||WEB_MODE) return;
+  if(S.gearSeedV1||WEB_MODE) return;
   var g=locState().list[0].gear;
   ["adjbench","flatbench","barbell","plates","ezbar","dumbbells","lyingpress","shoulderpress","latpulldown","legext","lyingcurl","standcalf","abbench","romanchair","cablecross","pullupbar","bands","yogamat","treadmill","smith","stabball"].forEach(function(id){if(g.indexOf(id)<0)g.push(id);});
   var k=g.indexOf("bag"); if(k>=0) g.splice(k,1);
@@ -90,7 +88,7 @@ function setsFor(ex){
   /* migrate: clear weights a much older version auto-filled from the record */
   arr.forEach(function(s){ if(s.pf&&!s.d&&!s.t) s.w=""; delete s.pf; });
   var L=lastFor(ex.id,ex), lab=labOf(ex);
-  for(var i=0;i<ex.sets;i++){
+  for(var i=0,n=nSets(ex,arr);i<n;i++){
     var s=arr[i]; if(s.d||s.t) continue;
     var p=GFDRules.setPrefill(arr,i,L&&L.sets);
     s.w=lab[0]?p.w:""; s.r=p.r;

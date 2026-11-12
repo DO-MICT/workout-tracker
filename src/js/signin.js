@@ -3,6 +3,9 @@
    row level security in the database keeps each person's data private. */
 var SB_URL="https://zdllpjrkwcdmcuizxuum.supabase.co", SB_KEY="sb_publishable_MDB4dT4ybWlZk5rzdcx40w_G7KwYRtm";
 var sb=null, sbUser=null, sbTimer=null, sbBusy=false, sbDirty=false, sbOk=false, sbOffline=false, sbDataModel=0;
+/* Google sign-in (WP11) shows only once the Supabase project has the Google provider switched on; the last answer
+   is remembered so the button doesn't pop in late, and offline it stays as it was. */
+var sbGoogle=(function(){ try{ return localStorage.getItem("gfd.google")==="1"; }catch(e){ return false; } })();
 function webStart(){
   setStatus("Connecting…");
   if(window.supabase&&window.supabase.createClient){ webReady(); return; }
@@ -14,7 +17,7 @@ function webStart(){
 function webReady(){
   try{ sb=window.supabase.createClient(SB_URL,SB_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}}); }
   catch(e){ sbOffline=true; setStatus(); if(!acct().signedIn) openWebAuth("signup"); return; }
-  catFetch(); evReady();
+  catFetch(); evReady(); googleCheck();
   sb.auth.onAuthStateChange(function(ev){ if(ev==="PASSWORD_RECOVERY") openWebAuth("newpass"); });
   platform.onAuthLink(appAuthLink);   /* the Android app: confirm-email and reset links come back as gfd://auth-callback (WP10) */
   sb.auth.getSession().then(function(r){
@@ -38,6 +41,36 @@ function appAuthLink(a){
     if(!sbUser||sbUser.id!==r.data.user.id) onSignedIn(r.data.user,a.type==="signup");
   },function(){ toast("Can’t reach the server. Check your connection."); });
 }
+/* ask the project which sign-in providers are on (a public endpoint; the publishable key is enough) */
+function googleCheck(){
+  if(typeof fetch!=="function") return;
+  fetch(SB_URL+"/auth/v1/settings",{headers:{apikey:SB_KEY}}).then(function(r){ return r.ok?r.json():null; }).then(function(j){
+    if(!j||!j.external) return;
+    sbGoogle=!!j.external.google;
+    try{ localStorage.setItem("gfd.google",sbGoogle?"1":"0"); }catch(e){}
+    var box=document.getElementById("waGoogleBox"); if(box) box.hidden=!sbGoogle;
+  },function(){});
+}
+function googleHtml(){
+  return '<div class="wagoog" id="waGoogleBox"'+(sbGoogle?'':' hidden')+'><button class="gbtn" id="waGoogle" type="button">'+
+    '<svg viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.2 0 24 0 14.6 0 6.6 5.4 2.7 13.3l7.9 6.1C12.5 13.6 17.8 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.6c0-1.6-.1-3.1-.4-4.6H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17z"/><path fill="#FBBC05" d="M10.6 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.7 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.2 0-11.5-4.1-13.4-9.9l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg>'+
+    '<span>Continue with Google</span></button><p class="orline"><span>or with email</span></p></div>';
+}
+/* web: the page goes to Google and comes back here, where supabase-js picks the session out of the address bar.
+   The app: Google opens in a Custom Tab and comes back as gfd://auth-callback, handled by appAuthLink.
+   A new account then gets the terms and privacy screen (consentCheck), since Google skips the sign-up tick box. */
+function googleStart(t,err){
+  if(!sb){ err.textContent="Can’t reach the server. Check your connection and reload."; return; }
+  var label="Continue with Google", lab=t.querySelector("span")||t, done=function(){ t.disabled=false; lab.textContent=label; };
+  t.disabled=true; lab.textContent="Opening Google…"; err.textContent="";
+  sb.auth.signInWithOAuth({provider:"google",options:{redirectTo:platform.authRedirect(),skipBrowserRedirect:true,queryParams:{prompt:"select_account"}}}).then(function(r){
+    if(r.error||!r.data||!r.data.url){ done(); err.textContent=authMsg(r.error); return; }
+    platform.openAuthUrl(r.data.url,done);
+    if(platform.native) setTimeout(done,4000);   /* the app stays on this screen behind the tab */
+  },function(x){ done(); err.textContent=authMsg(x); });
+}
+/* show or hide what's typed in a password box */
+function peekHtml(){ return '<button class="pwpeek" type="button" data-wapeek="1" aria-label="Show password" aria-pressed="false">Show</button>'; }
 function openWebAuth(mode){
   OB={step:"register",mode:mode||"signup",ans:{}};
   var sh=document.getElementById("onboard"); sh.hidden=false; document.body.style.overflow="hidden"; renderOnboard();
@@ -50,23 +83,24 @@ function authMsg(e){
   if(/password should be at least|weak password/i.test(m)) return "Use a password of at least 6 characters.";
   if(/email rate limit/i.test(m)) return "We can’t send sign-up emails right now because too many went out in the last hour. Please try again a bit later.";
   if(/rate limit|too many/i.test(m)) return "Too many tries. Wait a minute and try again.";
+  if(/provider is not enabled|unsupported provider/i.test(m)) return "Google sign-in isn’t switched on yet. Use your email for now.";
   if(/fetch|network/i.test(m)) return "Can’t reach the server. Check your connection.";
   return m;
 }
 function webAuthHtml(){
   var m=OB.mode, h=brandHtml()+'<div class="obhero"><h1>'+({signup:"Welcome",signin:"Welcome back",check:"Check your email",reset:"Reset password",sent:"Check your email",newpass:"New password"}[m])+'</h1>';
   if(m==="signup"){
-    h+='<p>Create your account to start testing Get Fit Daily.</p></div>'+obDots(1)+
+    h+='<p>Create your free account. Pro is yours to try for 14 days, no card needed.</p></div>'+obDots(1)+googleHtml()+
       '<label class="bname"><span>Name</span><input id="obName" maxlength="40" autocomplete="name" placeholder="What should we call you?"></label>'+
       '<label class="bname"><span>Email</span><input id="obEmail" type="email" inputmode="email" autocomplete="email" maxlength="80" placeholder="you@example.com"></label>'+
-      '<label class="bname"><span>Password</span><input id="obPass" type="password" autocomplete="new-password" minlength="6" maxlength="72" placeholder="At least 6 characters"></label>'+
+      '<label class="bname pw"><span>Password</span><input id="obPass" type="password" autocomplete="new-password" minlength="6" maxlength="72" placeholder="At least 6 characters">'+peekHtml()+'</label>'+
       consentSignupHtml()+
       '<p class="wzerr" id="obErr" role="alert"></p><button class="primary" id="waSignup">Create account</button>'+
       '<p class="obfine">Already have an account? <button class="linkbtn" data-wamode="signin">Sign in</button></p>';
   } else if(m==="signin"){
-    h+='<p>Sign in to load your plans and workouts.</p></div>'+
+    h+='<p>Sign in to load your plans and workouts.</p></div>'+googleHtml()+
       '<label class="bname"><span>Email</span><input id="obEmail" type="email" inputmode="email" autocomplete="email" maxlength="80" value="'+esc(OB.email||acct().email||"")+'"></label>'+
-      '<label class="bname"><span>Password</span><input id="obPass" type="password" autocomplete="current-password" maxlength="72"></label>'+
+      '<label class="bname pw"><span>Password</span><input id="obPass" type="password" autocomplete="current-password" maxlength="72">'+peekHtml()+'</label>'+
       '<p class="wzerr" id="obErr" role="alert"></p><button class="primary" id="waSignin">Sign in</button>'+
       '<p class="obfine"><button class="linkbtn" data-wamode="reset">Forgot password?</button> · New here? <button class="linkbtn" data-wamode="signup">Create an account</button></p>';
   } else if(m==="check"){
@@ -80,7 +114,7 @@ function webAuthHtml(){
     h+='<p>If there’s an account for <b>'+esc(OB.email||"")+'</b>, a reset link is on its way. Open it on this phone.</p></div><button class="primary" data-wamode="signin">Back to sign in</button>';
   } else if(m==="newpass"){
     h+='<p>Choose a new password for your account.</p></div>'+
-      '<label class="bname"><span>New password</span><input id="obPass" type="password" autocomplete="new-password" minlength="6" maxlength="72" placeholder="At least 6 characters"></label>'+
+      '<label class="bname pw"><span>New password</span><input id="obPass" type="password" autocomplete="new-password" minlength="6" maxlength="72" placeholder="At least 6 characters">'+peekHtml()+'</label>'+
       '<p class="wzerr" id="obErr" role="alert"></p><button class="primary" id="waNewpass">Save new password</button>';
   }
   return h;
@@ -89,9 +123,16 @@ function waBusy(t,on,label){ t.disabled=on; t.textContent=on?"Please wait…":la
 function webAuthClick(t){
   if(!OB||OB.step!=="register"||!WEB_MODE) return false;
   if(t.dataset.wamode){ var em=document.getElementById("obEmail"); if(em) OB.email=em.value.trim(); OB.mode=t.dataset.wamode; renderOnboard(); return true; }
+  if(t.dataset.wapeek){
+    var pi=document.getElementById("obPass"); if(!pi) return true;
+    var show=pi.type==="password"; pi.type=show?"text":"password";
+    t.textContent=show?"Hide":"Show"; t.setAttribute("aria-pressed",show?"true":"false"); t.setAttribute("aria-label",show?"Hide password":"Show password");
+    return true;
+  }
   var err=document.getElementById("obErr"), v=function(id){var el=document.getElementById(id);return el?(el.value||"").trim():"";};
   var okEmail=function(e){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e);};
   if(!sb&&(t.id==="waSignup"||t.id==="waSignin"||t.id==="waReset"||t.id==="waNewpass")){ err.textContent="Can’t reach the server. Check your connection and reload."; return true; }
+  if(t.id==="waGoogle"){ googleStart(t,err); return true; }
   if(t.id==="waSignup"){
     var n=v("obName"), e=v("obEmail"), p=document.getElementById("obPass").value;
     if(!okEmail(e)){err.textContent="Enter a valid email.";return true;}
@@ -154,6 +195,7 @@ function onSignedIn(user,fresh){
     return blobLoad(user).then(function(){ if(sbDataModel===1) return storeStart(user,1); });
   }).then(function(){
     if(pd){ if(pd.display_name&&(!S.names[0]||S.names[0]==="You")) S.names[0]=pd.display_name; sbAdmin=!!pd.is_admin; }
+    if(pd&&!pd.display_name) googleName(user);
     return refreshAccess();
   }).then(function(){ return deletionCheck(); })   /* asked to delete the account: keep it first, or sign out (WP8) */
   .then(function(){ return consentCheck(); })   /* then terms and privacy, if a version is owed (WP6) */
@@ -164,6 +206,13 @@ function onSignedIn(user,fresh){
     else if(OB){ sh.hidden=true; sh.innerHTML=""; document.body.style.overflow=""; OB=null; }
     pickToday=true; renderAll(); setStatus(); checkReplies(); histInit(); evWeek2(user);
   });
+}
+/* signed up with Google: use the first name Google gave us (people can change it in Profile) */
+function googleName(user){
+  var m=(user&&user.user_metadata)||{}, n=String(m.given_name||m.full_name||m.name||"").trim().split(/\s+/)[0]||"";
+  n=n.slice(0,40); if(!n) return;
+  if(!S.names[0]||S.names[0]==="You"){ S.names[0]=n; if(typeof save==="function") save(); }
+  sb.from("profiles").update({display_name:n}).eq("id",user.id).then(function(){},function(){});
 }
 /* the old one-blob sync: take the account copy if it is newer, else upload this phone's */
 function blobLoad(user){
