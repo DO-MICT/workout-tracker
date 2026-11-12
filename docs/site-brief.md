@@ -66,6 +66,11 @@ Setup, once (one Google client serves GFD Prod and GFD Dev):
 
 Google's screen says "continue to <ref>.supabase.co" until the project has a Supabase custom domain (a paid add-on,
 e.g. `auth.getfitdaily.co.za`); then add that domain's `/auth/v1/callback` to the client too.
+Planned before the production Play launch (`docs/android-brief.md` step 8), followed by Google brand verification.
+
+GFD Prod's URL Configuration (fixed 12 Nov 2026; it still had the old GitHub Pages address, so Google sign-in ended on
+a github.io 404): Site URL `https://getfitdaily.co.za/`; Redirect URLs `https://getfitdaily.co.za/**`,
+`https://www.getfitdaily.co.za/**`, `gfd://auth-callback`.
 
 ## Changing a policy text
 
