@@ -6,8 +6,10 @@
    The list of every exercise is still there: ⋯ → Show all exercises (S.dayView="list"), and "Focus view" goes back.
    Sets are the same objects the list uses (setsFor), and the boxes carry the same data-ex/data-i/data-f, so typing,
    the number pad, ticking (tickSet), the rest timer and Complete workout all run through the existing code. */
-var FX={id:null,si:null,prev:null,tools:false,clock:null};
-function focusOn(d){ return !!d&&!d.coles&&d.ex.length>0&&S.dayView!=="list"; }
+var FX={id:null,si:null,prev:null,tools:false,clock:null,pick:false};
+/* Deon, 12 Nov: opening the app always lands on the Workout screen (the start view), even if the list was last used */
+var FX_BOOT=true;
+function focusOn(d){ if(FX_BOOT&&typeof S!=="undefined"&&S){ FX_BOOT=false; if(S.dayView==="list") S.dayView="focus"; } return !!d&&!d.coles&&d.ex.length>0&&S.dayView!=="list"; }
 /* how many sets an exercise has today: the plan's sets plus any extra ones added on the fly (marked x) */
 function nSets(ex,arr){ arr=arr||setsFor(ex); var n=ex.sets; while(arr[n]&&arr[n].x) n++; return n; }
 function openSet(ex){ var a=setsFor(ex), n=nSets(ex,a); for(var i=0;i<n;i++) if(!a[i].d) return i; return -1; }
@@ -31,13 +33,18 @@ function fxNextOpen(fromId){
   return null;
 }
 function grpLetter(g){ var gs=groupsOf(DAYS[day]).filter(function(x){return x.kind!=="single";}); return String.fromCharCode(65+Math.max(0,gs.indexOf(g))); }
+/* when this workout started, or 0. A workout left alone for 3 hours (no set logged) counts as not started, so the clock
+   never shows 320:07 the next time you open the app; tapping Start begins a fresh clock. */
+var FX_IDLE=3*3600000;
 function fxStarted(){
-  var d=DAYS[day], f=S.fstart; if(f&&f.day===d.id&&f.who===(S.who||0)&&Date.now()-f.at<86400000) return f.at;
-  var first=0; d.ex.forEach(function(ex){ setsFor(ex).forEach(function(s){ if(s.d&&s.at&&(!first||s.at<first)) first=s.at; }); });
-  return first||0;
+  var d=DAYS[day], f=S.fstart, first=0, lastAt=0;
+  d.ex.forEach(function(ex){ setsFor(ex).forEach(function(s){ if(s.d&&s.at){ if(!first||s.at<first) first=s.at; if(s.at>lastAt) lastAt=s.at; } }); });
+  if(f&&f.day===d.id&&f.who===(S.who||0)&&Date.now()-Math.max(f.at,lastAt)<FX_IDLE) return f.at;
+  return first&&Date.now()-lastAt<FX_IDLE?first:0;
 }
 function fxResting(){ var t=document.getElementById("timer"); return !!t&&t.classList.contains("on")&&Date.now()<tEnd; }
-function mmssF(s){ s=Math.max(0,Math.round(s)); return Math.floor(s/60)+":"+String(s%60).padStart(2,"0"); }
+function mmssF(s){ s=Math.max(0,Math.round(s)); var h=Math.floor(s/3600), m=Math.floor(s/60)%60, ss=String(s%60).padStart(2,"0");
+  return h?h+":"+String(m).padStart(2,"0")+":"+ss:m+":"+ss; }
 
 /* ---------- render ---------- */
 var FX_C=2*Math.PI*54;
@@ -59,6 +66,11 @@ function fxLastFor(ex,i){
 function renderFocus(){
   var d=DAYS[day], it=fxCurrent(); if(!it){ S.dayView="list"; renderDay(); return; }
   document.body.classList.add("focusview");
+  /* before Start (or after "Change plan or day"): only the plan, the day and a Start button. Once started, the plan name and
+     day picker hide and the workout screen is all there is (Deon, 12 Nov). */
+  var live=!!fxStarted()&&!FX.pick;
+  document.body.classList.toggle("inworkout",live);
+  if(!live){ renderStart(d); return; }
   var ex=it.ex, g=it.g, arr=setsFor(ex), n=nSets(ex,arr), open=openSet(ex), all=open<0;
   if(FX.si!=null&&(FX.si>=n||FX.id!==ex.id)) FX.si=null;
   var si=FX.si!=null?FX.si:(all?n-1:open), s=arr[si], lab=labOf(ex), lw=GFDRules.unitLabel(lab[0],U());
@@ -100,6 +112,15 @@ function renderFocus(){
   fxClockStart();
   if(!fxFit()&&started&&!FX.tools&&!document.body.classList.contains("wide")) fxScroll();
 }
+function renderStart(d){
+  clearInterval(FX.clock); FX.tools=false;
+  var resume=FX.pick&&fxStarted(), n=d.ex.length;
+  var h='<div class="fx fx-startv" id="fx"><div class="fx-startinfo"><h2>'+esc(d.title)+'</h2><p>'+n+' exercise'+(n===1?'':'s')+' · first up: '+esc(d.ex[0].n)+'</p></div>'+
+    '<div class="fx-bot"><button class="fx-go" data-fx="'+(resume?'resume':'start')+'">'+(resume?'Back to workout':'Start workout')+'</button>'+
+    '<div class="fx-slot"><button class="linkbtn" data-fx="list">Show all exercises</button></div></div></div>';
+  document.getElementById("day").innerHTML=h;
+  fxFit();
+}
 /* Deon, 12 Nov: the whole focus view fits on the screen without scrolling. It fills the space from where it starts down
    to the tab bar, so the set card centres in what's really visible. Only when it can't fit (a long superset on a short
    phone) does it take the full screen height and scroll the header away. Returns true when it fits. */
@@ -107,7 +128,7 @@ function fxFit(){
   var el=document.getElementById("fx"); if(!el) return true;
   if(document.body.classList.contains("wide")){ el.style.minHeight=""; return true; }
   var tb=document.getElementById("tabbar"), tabh=tb&&!tb.hidden?tb.getBoundingClientRect().height:0;
-  var top=el.getBoundingClientRect().top+window.scrollY, room=window.innerHeight-tabh-16;
+  var top=el.getBoundingClientRect().top+window.scrollY, room=Math.floor(window.innerHeight-tabh-17);
   /* first at full size, then tighter (smaller ring, number boxes and gaps; taps stay 44 px); with the header in view, then without it */
   var fits=function(avail){ el.style.minHeight="0px"; return el.scrollHeight<=avail; };
   for(var pass=0;pass<4;pass++){
@@ -145,7 +166,7 @@ function fxToolsHtml(ex,miss){
   h+='<div class="last">'+esc(lastText(ex))+'</div>';
   h+='<div class="fx-links"><button class="linkbtn hlink" data-hex="'+ex.id+'">See history and progress</button><button class="linkbtn hlink notelink" data-note="'+ex.id+'" aria-label="'+(nt?'Edit':'Add')+' injury note for '+esc(ex.n)+'">'+NOTE_SVG+(nt?'Edit injury note':'Add injury note')+'</button></div>';
   h+='<details class="how"><summary>How to do it safely</summary>'+exFigure(ex.id,ex.f)+'<ul class="cues">'+(ex.c||[]).map(function(c){return '<li>'+esc(c)+'</li>';}).join("")+'</ul></details>';
-  h+='<div class="fx-sheetfoot"><button class="ghost" data-fx="list">Show all exercises</button><button class="ghost" id="editDay">Edit workout</button></div></div>';
+  h+='<div class="fx-sheetfoot"><button class="ghost" data-fx="list">Show all exercises</button><button class="ghost" id="editDay">Edit workout</button><button class="ghost" data-fx="pick">Change plan or day</button></div></div>';
   return h;
 }
 /* the timer and workout clock update in place, so nothing on the screen jumps */
@@ -193,7 +214,9 @@ function fxAdd(id){
 function focusClick(t){
   var a=t.dataset.fx; if(!a) return false;
   var it=fxCurrent(), ex=it&&it.ex;
-  if(a==="start"||(a==="ring"&&!fxStarted())){ S.fstart={day:DAYS[day].id,at:Date.now(),who:S.who||0}; save(); audio(); renderFocus(); var gb=document.querySelector(".fx-go"); if(gb) gb.focus({preventScroll:true}); return true; }
+  if(a==="pick"){ FX.pick=true; FX.tools=false; SWAP=null; renderFocus(); window.scrollTo(0,0); return true; }
+  if(a==="resume"){ FX.pick=false; renderFocus(); var rb=document.querySelector(".fx-go"); if(rb) rb.focus({preventScroll:true}); return true; }
+  if(a==="start"||(a==="ring"&&!fxStarted())){ FX.pick=false; S.fstart={day:DAYS[day].id,at:Date.now(),who:S.who||0}; save(); audio(); window.scrollTo(0,0); renderFocus(); var gb=document.querySelector(".fx-go"); if(gb) gb.focus({preventScroll:true}); return true; }
   if(a==="ring") return true;
   if(a==="log"){ var i=t.dataset.i!=null?+t.dataset.i:openSet(ex); if(i>=0&&!setsFor(ex)[i].d) tickSet(ex,i); return true; }
   if(a==="back"){ FX.si=null; renderFocus(); return true; }
@@ -207,7 +230,7 @@ function focusClick(t){
   }
   if(a==="go"){ fxGo(t.dataset.id); return true; }
   if(a==="tools"){ FX.tools=!FX.tools; if(!FX.tools) SWAP=null; renderFocus(); var f=FX.tools?document.getElementById("fxSheet"):document.querySelector(".fx-more"); if(f){ if(FX.tools) f.setAttribute("tabindex","-1"); f.focus({preventScroll:true}); } return true; }
-  if(a==="list"){ FX.tools=false; S.dayView="list"; save(); document.body.classList.remove("focusview"); renderDay(); window.scrollTo(0,0); return true; }
+  if(a==="list"){ FX.tools=false; S.dayView="list"; save(); document.body.classList.remove("focusview","inworkout"); renderDay(); window.scrollTo(0,0); return true; }
   if(a==="focus"){ S.dayView="focus"; save(); renderDay(); window.scrollTo(0,0); return true; }
   if(a==="t30"){ if(fxResting()){ tEnd+=30000; tTotal+=30; schedulePing((tEnd-Date.now())/1000); platform.restAlert(tEnd); focusRing(); } return true; }
   if(a==="skip"){ stopTimer(); tEnd=0; renderFocus(); return true; }
