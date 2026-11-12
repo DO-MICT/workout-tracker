@@ -65,10 +65,15 @@ Notes:
 - **Pro purchases don't work in GFD Dev**: Play billing only works for the Play package installed from Play. Test
   buying with the Play app on the internal testing track (License testing), or give the dev account Pro with `admin_grant`.
 
-**Old WebViews**: the app runs in the phone's Android System WebView, which can be old (a Huawei P30 lite tested on
-12 Nov 2026 had Chrome 80). Don't use `inset:` (Chrome 87+; write top/right/bottom/left), and give `svh`/`dvh` a
-`vh` fallback first. `color-mix()` and flex `gap` just degrade (no tint, tighter spacing) on very old ones. GFD Dev's
-DEV tag (bottom-left) shows the WebView version and where the sign-in sheet and tab bar are.
+**Old WebViews (supported, see CLAUDE.md)**: the app runs in the phone's Android System WebView, which can be old
+(a Huawei P30 lite tested on 12 Nov 2026 has Chrome 80, and Huawei phones may not update it). Both old and new
+WebViews must work:
+- Don't use `inset:` (Chrome 87+); write top/right/bottom/left. Give `svh`/`dvh` a `vh` line first.
+- Flex `gap` (Chrome 84+) is fine to use: `src/js/flexgap.js` turns it into margins where it's missing (it never runs
+  on newer WebViews). Check a screen with `?fgap=force` on a desktop browser: it should look the same as without.
+- `color-mix()` (Chrome 111+) only adds tints, so it may degrade; anything that carries meaning needs a plain colour.
+- GFD Dev's DEV tag (bottom-left) shows the WebView version, whether the gap fallback is on, and where the sign-in
+  sheet and tab bar are.
 
 ## Build it yourself
 

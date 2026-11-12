@@ -59,6 +59,7 @@ DEV_ERRORS = r"""
       "client: "+v(function(){ return !!sb; })+" · offline: "+v(function(){ return sbOffline; })+" · user: "+v(function(){ return sbUser?"signed in":"none"; }),
       "account on phone: "+v(function(){ return JSON.stringify(acct()); }).slice(0,120),
       "status text: "+v(function(){ var s=el("status")||document.querySelector("[data-status]"); return s?s.textContent:"-"; }),
+      "flex gap fallback: "+(document.documentElement.classList.contains("nofgap")?"on (old WebView)":"off"),
       "body class: "+document.body.className,
       "sign-in sheet: "+vis(el("onboard")),
       "tab bar: "+vis(el("tabbar")),
