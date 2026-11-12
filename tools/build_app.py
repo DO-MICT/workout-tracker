@@ -33,9 +33,36 @@ def app_head(site_url, env):
     # appId stays the Play package in both: it is only used for the Google Play link and billing
     app_id = json.loads((root / "capacitor.config.json").read_text(encoding="utf-8"))["appId"]
     shell = {"site": site_url, "platform": "android", "appId": app_id, "env": env, "scheme": SCHEMES[env]}
-    return f"""<title>GFD · Get Fit Daily</title>
+    head = f"""<title>GFD · Get Fit Daily</title>
 <meta name="theme-color" content="#0D0F12">
 <script>window.GFD_SHELL={json.dumps(shell)};</script>"""
+    return head + (DEV_ERRORS if env == "dev" else "")
+
+
+# GFD Dev only: script errors show in a red box at the bottom of the screen (tap to hide), with the WebView
+# version, so a tester can screenshot them. There's no console to look at on a phone.
+DEV_ERRORS = r"""
+<script>(function(){
+  var box=null, n=0;
+  function show(msg){
+    if(n++>20) return;
+    if(!document.body){ document.addEventListener("DOMContentLoaded",function(){ show(msg); n--; }); return; }
+    if(!box){
+      box=document.createElement("div");
+      box.setAttribute("style","position:fixed;left:6px;right:6px;bottom:6px;z-index:99999;max-height:45vh;overflow:auto;"+
+        "background:#B00020;color:#fff;font:12px/1.35 monospace;padding:8px;border-radius:8px;white-space:pre-wrap;word-break:break-word");
+      box.onclick=function(){ box.remove(); box=null; };
+      box.textContent="GFD Dev errors (tap to hide)\n"+(navigator.userAgent.match(/Chrome\/[0-9.]+/)||["?"])[0]+"\n";
+      document.body.appendChild(box);
+    }
+    box.textContent+="\n• "+msg;
+  }
+  window.addEventListener("error",function(e){
+    if(e.target&&e.target!==window&&(e.target.src||e.target.href)){ show("Failed to load "+(e.target.src||e.target.href)); return; }
+    show((e.message||"error")+"  @ "+String(e.filename||"").replace(/^.*\/public\//,"").replace(/^https?:\/\/[^/]+\//,"")+":"+e.lineno+":"+e.colno);
+  },true);
+  window.addEventListener("unhandledrejection",function(e){ var r=e.reason; show("Promise: "+(r&&(r.message||r))+""); });
+})();</script>"""
 
 
 def build(env="production"):
