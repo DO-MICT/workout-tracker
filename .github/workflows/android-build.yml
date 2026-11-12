@@ -1,17 +1,23 @@
 name: Android build
 # The Android app (WP10): the web app (app.html + src/) inside a Capacitor shell. See docs/android-brief.md.
-# - Pull requests that touch the app: a debug APK to try on a phone (Actions run → Artifacts → gfd-debug-apk).
-# - A v* tag, or Run workflow: a signed release bundle (.aab) for Google Play, uploaded to the internal
+# Two apps from one codebase: "GFD Dev" (co.za.getfitdaily.app.dev, GFD Dev) and the Play app
+# (co.za.getfitdaily.app, GFD Prod). They install side by side.
+# - Pull requests that touch the app: a GFD Dev debug APK to try (Actions run → Artifacts → gfd-dev-debug-apk).
+# - A push to dev: the GFD Dev APK, published as the "dev-latest" GitHub release (gfd-dev.apk) to install on a phone.
+# - A push to main, a v* tag, or Run workflow on main: the signed Play bundle (.aab), uploaded to Play's internal
 #   testing track when the Play service account secret is set.
+# - Run workflow on dev: the GFD Dev APK again (same as a push to dev).
 on:
   pull_request:
-    paths: [app.html, 'src/**', 'vendor/**', 'icons/**', 'android/**', capacitor.config.json, package.json, package-lock.json, tools/build_app.py, site.json, .github/workflows/android-build.yml]
+    paths: [app.html, 'src/**', 'vendor/**', 'icons/**', 'android/**', capacitor.config.json, package.json, package-lock.json, tools/build_app.py, tools/supabase_env.py, deploy/supabase.json, site.json, .github/workflows/android-build.yml]
   push:
+    branches: [dev, main]
+    paths: [app.html, 'src/**', 'vendor/**', 'icons/**', 'android/**', capacitor.config.json, package.json, package-lock.json, tools/build_app.py, tools/supabase_env.py, deploy/supabase.json, site.json, .github/workflows/android-build.yml]
     tags: ['v*']
   workflow_dispatch:
     inputs:
       status:
-        description: Play release status (draft until the app's first review is done, then completed)
+        description: Play release status for a main build (draft until the app's first review is done, then completed)
         type: choice
         options: [draft, completed]
         default: draft
@@ -20,11 +26,23 @@ concurrency:
   group: android-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: write   # the dev-latest release
+
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
+      - name: Which app
+        id: kind
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then k=pr
+          elif [ "$GITHUB_REF" = refs/heads/dev ]; then k=dev
+          elif [ "$GITHUB_REF" = refs/heads/main ] || [[ "$GITHUB_REF" == refs/tags/v* ]]; then k=prod
+          else echo "::error::Run this on dev (GFD Dev APK) or main (Play bundle), not $GITHUB_REF"; exit 1; fi
+          echo "kind=$k" >> "$GITHUB_OUTPUT"
+          echo "Building: $k"
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
@@ -35,9 +53,11 @@ jobs:
           distribution: temurin
           java-version: 21
       - name: Web files into the app
+        env:
+          GFD_ENV: ${{ steps.kind.outputs.kind == 'prod' && 'production' || 'dev' }}
         run: |
           npm ci
-          python3 tools/build_app.py
+          python3 tools/build_app.py --env "$GFD_ENV"
           npx cap sync android
       - name: Version
         id: v
@@ -47,44 +67,91 @@ jobs:
           echo "code=$((1000 + GITHUB_RUN_NUMBER))" >> "$GITHUB_OUTPUT"
           echo "Version $name (code $((1000 + GITHUB_RUN_NUMBER)))"
 
-      - name: Debug APK
-        if: github.event_name == 'pull_request'
+      # ---- pull request: GFD Dev debug APK
+      - name: Debug APK (GFD Dev)
+        if: steps.kind.outputs.kind == 'pr'
         working-directory: android
-        run: ./gradlew assembleDebug -PgfdVersionCode=${{ steps.v.outputs.code }} -PgfdVersionName=${{ steps.v.outputs.name }}
+        run: ./gradlew assembleDevDebug -PgfdVersionCode=${{ steps.v.outputs.code }} -PgfdVersionName=${{ steps.v.outputs.name }}
       - uses: actions/upload-artifact@v4
-        if: github.event_name == 'pull_request'
+        if: steps.kind.outputs.kind == 'pr'
         with:
-          name: gfd-debug-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          name: gfd-dev-debug-apk
+          path: android/app/build/outputs/apk/dev/debug/app-dev-debug.apk
           retention-days: 14
 
+      # ---- the upload key (dev APK and Play bundle). Without it the dev APK is signed with this run's throwaway
+      #      debug key, so each new one needs the old one uninstalled first; the Play bundle can't be built.
       - name: Upload key
-        if: github.event_name != 'pull_request'
+        id: key
+        if: steps.kind.outputs.kind != 'pr'
         env:
           KEYSTORE_B64: ${{ secrets.GFD_UPLOAD_KEYSTORE_B64 }}
+          KIND: ${{ steps.kind.outputs.kind }}
         run: |
-          if [ -z "$KEYSTORE_B64" ]; then
+          if [ -n "$KEYSTORE_B64" ]; then
+            echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+            echo "GFD_UPLOAD_KEYSTORE=$RUNNER_TEMP/upload.jks" >> "$GITHUB_ENV"
+            echo "ok=1" >> "$GITHUB_OUTPUT"
+          elif [ "$KIND" = dev ]; then
+            echo "::warning::No upload key yet: this GFD Dev APK is signed with a throwaway key. Uninstall the old GFD Dev before installing it. Add the GFD_UPLOAD_* secrets (docs/android-brief.md, step 2) to fix that."
+          elif [ "$GITHUB_EVENT_NAME" = push ] && [ "$GITHUB_REF" = refs/heads/main ]; then
+            echo "::notice::No upload key yet, so no Play bundle from this merge. Add the GFD_UPLOAD_* secrets (docs/android-brief.md, step 2)."
+          else
             echo "::error::No upload key yet. Make one and add the GFD_UPLOAD_* secrets (docs/android-brief.md, step 2)."; exit 1
           fi
-          echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/upload.jks"
-          echo "GFD_UPLOAD_KEYSTORE=$RUNNER_TEMP/upload.jks" >> "$GITHUB_ENV"
-      - name: Release bundle
-        if: github.event_name != 'pull_request'
+
+      # ---- dev: GFD Dev APK as the dev-latest release
+      - name: GFD Dev APK
+        if: steps.kind.outputs.kind == 'dev'
         working-directory: android
         env:
           GFD_UPLOAD_KEYSTORE_PASSWORD: ${{ secrets.GFD_UPLOAD_KEYSTORE_PASSWORD }}
           GFD_UPLOAD_KEY_ALIAS: ${{ secrets.GFD_UPLOAD_KEY_ALIAS }}
           GFD_UPLOAD_KEY_PASSWORD: ${{ secrets.GFD_UPLOAD_KEY_PASSWORD }}
-        run: ./gradlew bundleRelease -PgfdVersionCode=${{ steps.v.outputs.code }} -PgfdVersionName=${{ steps.v.outputs.name }}
+        run: |
+          ./gradlew assembleDevRelease -PgfdVersionCode=${{ steps.v.outputs.code }} -PgfdVersionName=${{ steps.v.outputs.name }}
+          cp app/build/outputs/apk/dev/release/app-dev-release.apk "$RUNNER_TEMP/gfd-dev.apk"
       - uses: actions/upload-artifact@v4
-        if: github.event_name != 'pull_request'
+        if: steps.kind.outputs.kind == 'dev'
+        with:
+          name: gfd-dev-apk
+          path: ${{ runner.temp }}/gfd-dev.apk
+          retention-days: 30
+      - name: Publish the dev-latest release
+        if: steps.kind.outputs.kind == 'dev'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NAME: ${{ steps.v.outputs.name }}
+          CODE: ${{ steps.v.outputs.code }}
+          SIGNED: ${{ steps.key.outputs.ok }}
+        run: |
+          short=${GITHUB_SHA::7}
+          note="GFD Dev $NAME-dev (build $CODE) from dev @ $short. Talks to GFD Dev (test data), not the real app."
+          note="$note"$'\n\n'"On the phone: open this page, tap gfd-dev.apk, then Install (allow your browser to install apps the first time)."
+          if [ "$SIGNED" != 1 ]; then note="$note"$'\n\n'"Signed with a throwaway key: uninstall the old GFD Dev first."; fi
+          gh release delete dev-latest --cleanup-tag --yes 2>/dev/null || true
+          gh release create dev-latest "$RUNNER_TEMP/gfd-dev.apk" --prerelease --target "$GITHUB_SHA" \
+            --title "GFD Dev (latest dev build)" --notes "$note"
+          echo "::notice::GFD Dev APK: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/tag/dev-latest"
+
+      # ---- prod: signed Play bundle
+      - name: Release bundle (Play)
+        if: steps.kind.outputs.kind == 'prod' && steps.key.outputs.ok == '1'
+        working-directory: android
+        env:
+          GFD_UPLOAD_KEYSTORE_PASSWORD: ${{ secrets.GFD_UPLOAD_KEYSTORE_PASSWORD }}
+          GFD_UPLOAD_KEY_ALIAS: ${{ secrets.GFD_UPLOAD_KEY_ALIAS }}
+          GFD_UPLOAD_KEY_PASSWORD: ${{ secrets.GFD_UPLOAD_KEY_PASSWORD }}
+        run: ./gradlew bundleProdRelease -PgfdVersionCode=${{ steps.v.outputs.code }} -PgfdVersionName=${{ steps.v.outputs.name }}
+      - uses: actions/upload-artifact@v4
+        if: steps.kind.outputs.kind == 'prod' && steps.key.outputs.ok == '1'
         with:
           name: gfd-release-aab
-          path: android/app/build/outputs/bundle/release/app-release.aab
+          path: android/app/build/outputs/bundle/prodRelease/app-prod-release.aab
           retention-days: 90
       - name: Is Google Play connected?
         id: play
-        if: github.event_name != 'pull_request'
+        if: steps.kind.outputs.kind == 'prod' && steps.key.outputs.ok == '1'
         env:
           PLAY_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
         run: |
@@ -96,7 +163,7 @@ jobs:
         with:
           serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
           packageName: co.za.getfitdaily.app
-          releaseFiles: android/app/build/outputs/bundle/release/app-release.aab
+          releaseFiles: android/app/build/outputs/bundle/prodRelease/app-prod-release.aab
           track: internal
           status: ${{ github.event.inputs.status || 'draft' }}
           releaseName: ${{ steps.v.outputs.name }} (${{ steps.v.outputs.code }})

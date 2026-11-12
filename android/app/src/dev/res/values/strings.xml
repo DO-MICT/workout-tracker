@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- The "GFD Dev" test app (dev flavour): its own name, and its own sign-in link scheme so it never
+     catches links meant for the Play app. Supabase GFD Dev must list gfddev://auth-callback as a redirect URL. -->
+<resources>
+    <string name="app_name">GFD Dev</string>
+    <string name="title_activity_main">GFD Dev</string>
+    <string name="custom_url_scheme">gfddev</string>
+</resources>

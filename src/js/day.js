@@ -127,7 +127,7 @@ function grpHtml(g){
 function renderDay(){
   var d=DAYS[day], h="";
   if(focusOn(d)){ DAYGEAR=d.coles?null:(function(){var lo=dayLoc(activePlan().id,d.id);return lo.gear.length?lo.gear:null;})(); renderFocus(); return; }
-  document.body.classList.remove("focusview");
+  document.body.classList.remove("focusview","inworkout");
   if(d.coles){
     DAYGEAR=null;
     h+='<div class="dayhead"><h2>'+esc(d.title)+'</h2></div>'+colesPanelHtml();
