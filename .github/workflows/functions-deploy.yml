@@ -33,6 +33,6 @@ jobs:
             echo "::error::Set the SUPABASE_ACCESS_TOKEN secret and the PROJECT_REF variable for ${{ inputs.target }}. See docs/db-brief.md."; exit 1
           fi
           for fn in delete-account billing-webhook; do
-            supabase functions deploy "$fn" --project-ref "$PROJECT_REF" --use-api
+            supabase functions deploy "$fn" --project-ref "$PROJECT_REF" --use-api --yes
             echo "Deployed $fn to ${{ inputs.target }} ($PROJECT_REF)" >> "$GITHUB_STEP_SUMMARY"
           done
