@@ -67,9 +67,8 @@ function renderFocus(){
   var miss=DAYGEAR&&LIB[ex.id]?missingFor(LIB[ex.id],DAYGEAR):[];
   var sub=g?(g.kind==="circuit"?"Circuit":"Superset")+" · "+ex.sets+" rounds × "+esc(ex.reps):"Target "+ex.sets+" × "+esc(ex.reps);
   var h='<div class="fx" id="fx">';
-  h+='<div class="fx-top"><button class="fx-nav" data-fx="prev" aria-label="Previous exercise">‹</button>'+
+  h+='<div class="fx-top">'+
     '<div class="fx-name"><span class="fx-pos'+(g?' grp':'')+'">'+tag+'</span><div><h2>'+esc(ex.n)+'</h2><span>'+sub+(miss.length?' · <b class="fx-warn">Needs gear</b>':'')+(noteOf(ex.id)?' · <b class="fx-warn">Injury note</b>':'')+'</span></div></div>'+
-    '<button class="fx-nav" data-fx="next" aria-label="Next exercise">›</button>'+
     '<button class="fx-nav fx-more" data-fx="tools" aria-haspopup="dialog" aria-label="More for '+esc(ex.n)+': swap, injury note, history, how to">⋯</button></div>';
   h+=fxRingHtml();
   h+='<div class="fx-card" id="fxCard">';
@@ -94,7 +93,7 @@ function renderFocus(){
   else if(!started){ label="Start workout"; act="start"; }
   else if(all){ label=nx?"Next: "+esc(nx.ex.n):"Complete workout"; act=nx?"next":"finish"; }
   else { label="✓ Log "+(g?L+(it.k+1)+" · round "+(si+1):"set "+(si+1)); act="log"; }
-  h+='<div class="fx-bot"><button class="fx-go" data-fx="'+act+'"'+(act==="log"?' data-i="'+si+'"':'')+'>'+label+'</button><div class="fx-slot">'+fxSlot(it,si,all,started,nx)+'</div></div>';
+  h+='<div class="fx-bot"><div class="fx-gorow"><button class="fx-nav" data-fx="prev" aria-label="Previous exercise">‹</button><button class="fx-go" data-fx="'+act+'"'+(act==="log"?' data-i="'+si+'"':'')+'>'+label+'</button><button class="fx-nav" data-fx="next" aria-label="Next exercise">›</button></div><div class="fx-slot">'+fxSlot(it,si,all,started,nx)+'</div></div>';
   h+='</div>';
   if(FX.tools) h+=fxToolsHtml(ex,miss);
   document.getElementById("day").innerHTML=h;

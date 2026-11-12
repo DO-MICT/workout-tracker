@@ -35,6 +35,8 @@ function draftFromDay(i){
 }
 function openBuilder(){
   if(DAYS[day]&&DAYS[day].coles){toast("Tap New session to change Cole’s Session");return;}
+  /* the focus view's ⋯ sheet sits in the page, which goes inert under the editor: close it first or it stays on top, frozen */
+  if(FX.tools){ FX.tools=false; SWAP=null; if(document.getElementById("fx")) renderFocus(); }
   BD=draftFromDay(day); BD.loc=dayLocOf(activePlan().id,DAYS[day].id);
   var sh=document.getElementById("builder"); sh.hidden=false; document.body.style.overflow="hidden";
   renderBuilder(); sh.scrollTop=0; sh.focus();

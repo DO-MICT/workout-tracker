@@ -231,8 +231,8 @@ document.addEventListener("click",function(e){
   if(t.id==="nDelete"){saveNote(true);return;}
   if(builderClick(t)) return;
   if(t.dataset.palset){S.palette=t.dataset.palset;save();applyTheme();document.querySelectorAll("[data-palset]").forEach(function(b){b.setAttribute("aria-pressed",b===t?"true":"false");});return;}
-  /* kg or lb (WP4): only what's shown and typed changes; everything is still kept in kg */
-  if(t.dataset.unitset){if(t.dataset.unitset==="lb")S.units="lb";else delete S.units;save();renderAll();renderMore();var ub=document.querySelector('[data-unitset="'+U()+'"]');if(ub)ub.focus();toast(U()==="lb"?"Weights now show in pounds":"Weights now show in kilograms");return;}
+  /* Unit: Metric (kg) or Imperial (lb) (WP4): only what's shown and typed changes; everything is still kept in kg */
+  if(t.dataset.unitset){if(t.dataset.unitset==="lb")S.units="lb";else delete S.units;save();renderAll();renderMore();var ub=document.querySelector('[data-unitset="'+U()+'"]');if(ub)ub.focus();toast(U()==="lb"?"Imperial: weights now show in pounds (lb)":"Metric: weights now show in kilograms (kg)");return;}
   if(t.dataset.themeset){S.theme=t.dataset.themeset;save();applyTheme();document.querySelectorAll("[data-themeset]").forEach(function(b){b.setAttribute("aria-pressed",b===t?"true":"false");});return;}
   if(colesClick(t)) return;
   if(t.id==="editDay"||t.id==="editDay2"){openBuilder();return;}
