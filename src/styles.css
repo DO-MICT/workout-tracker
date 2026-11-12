@@ -1137,6 +1137,34 @@ body.np-open .wrap{padding-bottom:300px}
 body.focusview .timer{display:none!important}
 body.tabs.focusview .wrap{padding-bottom:calc(var(--tabh) + 16px)}
 body.focusview .daynav{margin-bottom:10px}
+/* in a workout the plan name and day picker step aside: the workout screen is all there is */
+body.inworkout .wrap > header,body.inworkout .wrap > .daynav{display:none}
+body.inworkout .wrap{padding-top:calc(env(safe-area-inset-top,0px) + 10px)}
+/* start view: Option 4 "Coach card" */
+.fx-startv{gap:12px}
+.fx-hello p{margin:4px 0 2px;color:var(--muted);font-size:.95rem}
+.fx-hello h2{margin:0;font:900 1.75rem/1.1 Archivo,sans-serif;text-wrap:balance}
+.fx-pills2{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.fx-pill2{min-height:44px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:700;font-size:.95rem;padding:0 16px;cursor:pointer}
+.fx-pill2.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.fx-menu{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:4px;max-height:50vh;overflow:auto}
+.fx-mi{position:relative;min-height:48px;display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px;text-align:left;padding-right:36px!important;border:0;background:transparent;color:var(--ink);font-weight:700;font-size:.95rem;padding:6px 12px;border-radius:12px;cursor:pointer}
+.fx-mi small{flex-basis:100%;font-weight:500;color:var(--muted);font-size:.8rem}
+.fx-mi b{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--done)}
+.fx-mi[aria-pressed="true"]{background:var(--bg)}
+.fx-startmid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:8px 0}
+.fx-ring.fx-startring{width:170px;height:170px;margin:8px 0}
+.fx-ring.fx-startring b{font-size:2.5rem}
+.fx-ring.fx-startring small{font-size:.72rem;letter-spacing:.14em}
+.fx-startmeta{margin:0;display:flex;gap:16px;color:var(--muted)}
+.fx-startmeta b{color:var(--ink);font-weight:800}
+.fx-inlist{margin:0;padding:0 0 0 22px;width:100%;max-width:420px;display:flex;flex-direction:column;gap:6px}
+.fx-inlist li{color:var(--ink)}
+.fx-inlist li span{font-weight:600}
+.fx-inlist li small{display:block;color:var(--muted)}
+.fx-kind{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin-bottom:6px}
+.fx-kind b{font:900 1.3rem Archivo,sans-serif;color:var(--done)}
+@media (prefers-reduced-motion:reduce){.fx-ring.go::after{animation:none}}
 .fx{display:flex;flex-direction:column;gap:8px;scroll-margin-top:calc(env(safe-area-inset-top,0px) + 8px)}
 .fx-top{display:flex;align-items:center;gap:6px;min-height:52px}
 .fx-nav{flex:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:700 1.4rem/1 Figtree,sans-serif;cursor:pointer;display:grid;place-items:center;padding:0}
@@ -1197,8 +1225,8 @@ body.focusview .daynav{margin-bottom:10px}
 .fx-num small{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-size:.72rem;color:var(--muted);pointer-events:none}
 /* short screens (fxFit): the same screen, a little tighter, so nothing needs a scroll during a set */
 .fx-tight{gap:4px}
-.fx-tight .fx-tz{height:94px;grid-template-columns:1fr 92px 1fr}
-.fx-tight .fx-ring{width:92px;height:92px}
+.fx-tight .fx-tz{height:88px;grid-template-columns:1fr 88px 1fr}
+.fx-tight .fx-ring{width:88px;height:88px}
 .fx-tight .fx-ring b{font-size:1.6rem}
 .fx-tight .fx-ring.go b{font-size:1.9rem}
 .fx-tight .fx-clock{margin-top:0}
