@@ -15,7 +15,7 @@ function openNote(id){
 function closeNote(){
   var sh=document.getElementById("notesheet"); if(!sh||sh.hidden) return;
   sh.hidden=true; sh.innerHTML=""; document.body.style.overflow="";
-  var b=document.querySelector('[data-note="'+NOTE_ID+'"]'); NOTE_ID=null; if(b) b.focus();
+  syncInert(); var b=document.querySelector('[data-note="'+NOTE_ID+'"]'); NOTE_ID=null; if(b) b.focus();
 }
 function saveNote(del){
   if(!NOTE_ID) return; if(!S.notes) S.notes={};

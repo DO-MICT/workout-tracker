@@ -155,7 +155,7 @@ function renderFeedback(keepScroll){
   var st=sh.scrollTop, rows=FB.rows||[], cnt={all:rows.length};
   rows.forEach(function(x){cnt[x.status]=(cnt[x.status]||0)+1;});
   var h='<div class="sheet-in"><div class="sheet-top"><h2 id="fbtitle">Feedback</h2><button class="chip" id="closeFeedback">Close</button></div>'+
-    '<p class="sub">Suggestions from all testers. Changing the status updates what the tester sees. <button class="linkbtn" id="fbRefresh">Refresh</button></p>'+
+    '<p class="sub">Suggestions from all members. Changing the status updates what the member sees. <button class="linkbtn" id="fbRefresh">Refresh</button></p>'+
     '<div class="locchips fbfilters" role="group" aria-label="Filter by status">'+FB_FILTERS.map(function(f){return '<button class="chip sm" data-fbfilter="'+f[0]+'" aria-pressed="'+(FB.filter===f[0])+'">'+f[1]+' <span class="lcnt">'+(cnt[f[0]]||0)+'</span></button>';}).join("")+'</div>';
   if(FB.err) h+='<p class="wzerr" role="alert">'+esc(FB.err)+'</p>';
   if(FB.rows===null) h+='<p class="eqempty">Loading…</p>';
@@ -167,7 +167,7 @@ function renderFeedback(keepScroll){
       var dev=/iPhone|iPad/.test(c.ua||"")?"iPhone":/Android/.test(c.ua||"")?"Android":/Mac|Windows|Linux/.test(c.ua||"")?"Computer":"";
       var ctx=[c.plan,c.day&&(c.day+(c.workout?" ("+c.workout+")":"")),dev,c.version&&("v"+c.version)].filter(Boolean).join(" · ");
       var url=x.screenshot_path&&FB.urls[x.screenshot_path];
-      return '<article class="fbcard"><div class="fbhead"><div><b>'+esc(p.display_name||"Tester")+'</b><span>'+esc(p.email||"")+'</span></div><span class="fbkind k-'+esc(x.kind)+'">'+esc(kn)+'</span></div>'+
+      return '<article class="fbcard"><div class="fbhead"><div><b>'+esc(p.display_name||"Member")+'</b><span>'+esc(p.email||"")+'</span></div><span class="fbkind k-'+esc(x.kind)+'">'+esc(kn)+'</span></div>'+
         '<p class="fbmsg">'+esc(x.message)+'</p>'+
         (x.screenshot_path?(url?'<button class="fbshot" data-fbview="'+esc(x.screenshot_path)+'" aria-label="View screenshot full size"><img src="'+esc(url)+'" alt="Screenshot from '+esc(p.display_name||"tester")+'" loading="lazy"></button>':'<p class="eqempty">Loading screenshot…</p>'):'')+
         '<p class="fbctx">'+(isNaN(d)?"":d.toLocaleString(undefined,{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}))+(ctx?' · '+esc(ctx):'')+'</p>'+
@@ -182,7 +182,7 @@ function fbReplyHtml(x){
   var rd=x.replied_at?new Date(x.replied_at):null;
   if(x.admin_reply&&!FB.edit[x.id]) return '<div class="sgreply mine"><div><b>Your reply</b><span>'+(rd&&!isNaN(rd)?rd.toLocaleString(undefined,{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}):'')+'</span></div><p>'+esc(x.admin_reply)+'</p><button class="linkbtn" data-fbedit="'+esc(x.id)+'">Edit reply</button></div>';
   var v=FB.draft[x.id]!==undefined?FB.draft[x.id]:(x.admin_reply||"");
-  return '<div class="fbreply"><label><span>'+(x.admin_reply?'Edit your reply':'Reply to '+esc((FB.who[x.user_id]||{}).display_name||'tester'))+'</span><textarea rows="3" maxlength="2000" data-fbdraft="'+esc(x.id)+'" placeholder="The tester sees this under their suggestion.">'+esc(v)+'</textarea></label>'+
+  return '<div class="fbreply"><label><span>'+(x.admin_reply?'Edit your reply':'Reply to '+esc((FB.who[x.user_id]||{}).display_name||'member'))+'</span><textarea rows="3" maxlength="2000" data-fbdraft="'+esc(x.id)+'" placeholder="The tester sees this under their suggestion.">'+esc(v)+'</textarea></label>'+
     '<div class="fbrbtns">'+(x.admin_reply?'<button class="chip sm" data-fbcancel="'+esc(x.id)+'">Cancel</button><button class="chip sm danger" data-fbclear="'+esc(x.id)+'">Remove reply</button>':'')+
     '<button class="chip sm primarychip" data-fbsend="'+esc(x.id)+'"'+(FB.busy[x.id]?' disabled':'')+'>'+(FB.busy[x.id]?'Sending…':(x.admin_reply?'Save reply':'Send reply'))+'</button></div></div>';
 }

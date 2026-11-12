@@ -20,8 +20,16 @@ function tabSheetsOpen(){
   return {overlay:vis("onboard")||vis("wizard")||vis("builder")||vis("notesheet")||vis("donepop")||vis("measure"),
     tab:vis("more")||vis("exlib")||vis("profile")||vis("sugg")||vis("feedback")?"more":vis("history")||vis("body")?"stats":vis("plans")?"plans":vis("equip")?"gear":"workout"};
 }
+/* WP17: while any page or popup is open, the workout page underneath is inert, so TalkBack and the keyboard can't wander into it.
+   Tab pages (Plans, Stats, Gear, More...) are not modal: the tab bar stays reachable next to them. */
+function syncInert(){
+  var open=Array.prototype.some.call(document.querySelectorAll(".sheet,.donepop"),function(el){return !el.hidden;});
+  var w=document.querySelector(".wrap"); if(!w) return;
+  if(open){w.setAttribute("inert","");w.setAttribute("aria-hidden","true");} else {w.removeAttribute("inert");w.removeAttribute("aria-hidden");}
+}
 function syncTabs(){
   var st=tabSheetsOpen();
+  syncInert();
   document.body.classList.toggle("tabs",!st.overlay);
   if(st.tab!==TAB_ACTIVE){TAB_ACTIVE=st.tab;renderTabbar();}
 }
@@ -47,7 +55,7 @@ function renderMore(){
   var nm=S.names&&S.names[0]||"You", A=acct();
   var row=function(id,label,extra){return '<button class="mrow" id="'+id+'"><span>'+label+'</span>'+(extra||'')+'<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';};
   var h='<div class="sheet-in"><div class="sheet-top"><h2 id="mtitle">More</h2></div>'+
-    '<button class="mprof" id="openProfile"><span class="mav" aria-hidden="true">'+esc(nm.charAt(0).toUpperCase())+'</span><span class="mpt"><b>'+esc(nm)+'</b><span>'+esc(A.email||"Profile, rest timer and backup")+'</span></span><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+
+    '<button class="mprof" id="openProfile"><span class="mav" aria-hidden="true">'+esc(nm.charAt(0).toUpperCase())+'</span><span class="mpt"><b>'+esc(nm)+'</b><span>'+esc(A.email||"Profile and settings")+'</span></span><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+
     '<div class="mlist">'+row("openMeasure","Body check-in")+row("openBody","Body progress")+row("openLib","Exercise library")+
     (WEB_MODE?row("openSugg","Suggestions",SG_UNREAD?'<span class="replytag">'+SG_UNREAD+' new repl'+(SG_UNREAD>1?'ies':'y')+'</span>':''):'')+
     (WEB_MODE&&sbAdmin?row("openFeedback","Feedback",'<span class="admtag">Admin</span>')+row("openUsage","Usage",'<span class="admtag">Admin</span>'):'')+
@@ -78,7 +86,7 @@ function tabsClick(t){
 }
 (function initTabs(){
   renderTabbar();
-  var watch=["onboard","consent","wizard","builder","notesheet","donepop","measure","body","more","exlib","profile","sugg","feedback","usage","history","plans","equip"];
+  var watch=["onboard","consent","wizard","builder","notesheet","donepop","askpop","measure","body","more","exlib","profile","sugg","feedback","usage","history","plans","equip","acctdel","healthsheet","prosheet"];
   if(window.MutationObserver){
     var mo=new MutationObserver(function(){syncTabs();});
     watch.forEach(function(id){var el=document.getElementById(id); if(el) mo.observe(el,{attributes:true,attributeFilter:["hidden"]});});

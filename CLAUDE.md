@@ -10,6 +10,7 @@ The web app is the source of truth; the earlier Expo app (`mobile/`) was removed
 - Android app (Capacitor shell, `platform.js`, Play releases): `docs/android-brief.md`; store text: `docs/store-listing.md`
 - Database changes, dev/prod Supabase and Coolify hosting: `docs/db-brief.md` (migrations + rollbacks, db-check CI, deploy workflow)
 - Domain, privacy policy, terms and sign-in emails: `docs/site-brief.md` (edit `site.json` and `site/`, never the built pages)
+- Accessibility (WCAG 2.2 AA, tap targets, screen reader, the a11y-check CI): `docs/a11y-brief.md`
 
 ## Rules
 

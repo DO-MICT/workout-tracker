@@ -315,6 +315,19 @@ test("workouts: A's history is private and B cannot add sets to it or delete it"
   const upd = await rest('rpc/update_workout', 'b', { method: 'POST', body: { w: { id: wid, sets: [] } } });
   assert.ok(upd.status >= 400 || rows(await rest(`workout_sets?workout_id=eq.${wid}`, 'a')).length === 1,
     "B's update_workout must not change A's sets");
+
+  // F1.E4.S1: B can't move A's workout to another date; A can, and the sets move with it
+  const when = '2026-01-15T07:30:00.000Z';
+  const oneSet = [{ exercise_id: 'bench', exercise_name: 'Bench', exercise_order: 0, set_no: 1, weight: 60, reps: 8, done: true }];
+  const bMove = await rest('rpc/update_workout', 'b', { method: 'POST', body: { w: { id: wid, performed_at: when, sets: oneSet } } });
+  assert.ok(bMove.status >= 400, "B cannot move A's workout");
+  const aMove = await rest('rpc/update_workout', 'a', { method: 'POST', body: { w: { id: wid, performed_at: when, sets: oneSet } } });
+  assert.equal(aMove.status, 200, JSON.stringify(aMove.json));
+  assert.equal(new Date(rows(await rest(`workouts?id=eq.${wid}&select=performed_at`, 'a'))[0].performed_at).toISOString(), when);
+  assert.equal(new Date(rows(await rest(`workout_sets?workout_id=eq.${wid}&select=performed_at`, 'a'))[0].performed_at).toISOString(), when);
+  const future = new Date(Date.now() + 3 * 86400000).toISOString();
+  const aFuture = await rest('rpc/update_workout', 'a', { method: 'POST', body: { w: { id: wid, performed_at: future, sets: oneSet } } });
+  assert.ok(aFuture.status >= 400, 'a date days ahead is turned down');
 });
 
 test('suggestions: private to the sender, and status is not theirs to set', async () => {
@@ -633,4 +646,28 @@ test('plan cap: Free keeps 3 plans in use and picks which; B cannot touch them; 
 
   const anon = await call('/rest/v1/rpc/my_plan_access', { method: 'POST', body: {} });
   assert.ok(anon.status >= 400, 'signed-out visitors cannot call it');
+});
+
+test('billing (WP12): only the server writes store purchases; nobody reads the webhook log', async () => {
+  const apply = await rest('rpc/billing_apply', 'a', {
+    method: 'POST', body: { p_user: users.a.id, p_rows: [{ source: 'play', product_id: 'gfd_pro:yearly', expires_at: '2099-01-01T00:00:00Z' }] },
+  });
+  assert.ok(apply.status >= 400, 'a user cannot call billing_apply');
+  const anonApply = await call('/rest/v1/rpc/billing_apply', { method: 'POST', body: { p_user: users.a.id, p_rows: [] } });
+  assert.ok(anonApply.status >= 400, 'signed-out visitors cannot call billing_apply');
+  for (const who of ['a', null]) {
+    const r = await rest('billing_events?select=id', who);
+    assert.ok(r.status >= 400 || rows(r).length === 0, 'billing_events is not readable');
+    const w = await rest('billing_events', who, { method: 'POST', body: { id: 'fake-' + run, type: 'INITIAL_PURCHASE' } });
+    assert.ok(w.status >= 400, 'billing_events is not writable');
+  }
+  // B's purchase, written by the server, is B's alone
+  const ok = await admin('/rest/v1/rpc/billing_apply', {
+    method: 'POST', body: { p_user: users.b.id, p_rows: [{ source: 'play', product_id: 'gfd_pro:yearly', expires_at: '2099-01-01T00:00:00Z', will_renew: true }] },
+  });
+  assert.equal(ok.status, 200, JSON.stringify(ok.json));
+  const bAcc = rows(await rest('my_access?select=source,product_id', 'b'))[0];
+  assert.deepEqual(bAcc, { source: 'play', product_id: 'gfd_pro:yearly' });
+  assert.notEqual(rows(await rest('my_access?select=source', 'a'))[0].source, 'play', "B's purchase gives A nothing");
+  await admin('/rest/v1/rpc/billing_apply', { method: 'POST', body: { p_user: users.b.id, p_rows: [] } });
 });

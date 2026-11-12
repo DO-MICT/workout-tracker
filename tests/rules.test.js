@@ -429,3 +429,25 @@ test("a pound weight saved with only 2 kg decimals still shows as typed", () => 
   assert.equal(R.boxShow(20.41, "lb"), "45");
   assert.equal(R.boxShow(5.556, "lb"), "12.25");
 });
+
+/* ---------- when a workout happened (F1.E4.S1) ---------- */
+test("date and time boxes round-trip to an ISO time", () => {
+  const now = new Date(2026, 10, 11, 9, 0).getTime();
+  const r = R.whenFromParts("2026-11-10", "18:30", now);
+  assert.equal(r.err, undefined);
+  assert.deepEqual(R.whenParts(r.at), { date: "2026-11-10", time: "18:30" });
+  assert.equal(new Date(R.whenFromParts("2026-11-10", "", now).at).getHours(), 12, "no time means midday");
+});
+test("a workout can't be moved into the future, before 2000 or to a made-up date", () => {
+  const now = new Date(2026, 10, 11, 9, 0).getTime();
+  assert.ok(R.whenFromParts("2026-11-11", "09:03", now).at, "a few minutes ahead is fine (clock drift)");
+  assert.match(R.whenFromParts("2026-11-12", "08:00", now).err, /already passed/);
+  assert.match(R.whenFromParts("1999-12-31", "10:00", now).err, /2000/);
+  assert.match(R.whenFromParts("2026-02-30", "10:00", now).err, /date/);
+  assert.match(R.whenFromParts("", "10:00", now).err, /date/);
+  assert.match(R.whenFromParts("2026-11-01", "25:00", now).err, /time/);
+});
+test("moving a workout keeps its length", () => {
+  assert.equal(R.shiftStart("2026-11-10T17:00:00.000Z", "2026-11-10T18:00:00.000Z", "2026-11-08T07:00:00.000Z"), "2026-11-08T06:00:00.000Z");
+  assert.equal(R.shiftStart(null, "2026-11-10T18:00:00.000Z", "2026-11-08T07:00:00.000Z"), null);
+});

@@ -60,7 +60,7 @@ function boxVal(ex,s,f){ return f==="w"&&isKgLab(labOf(ex))?GFDRules.boxShow(s.w
 /* after a change, show the values of the boxes you haven't touched (they follow your earlier sets) */
 function refreshSets(ex){
   var arr=setsFor(ex);
-  for(var i=0;i<ex.sets;i++){
+  for(var i=0,n=nSets(ex,arr);i<n;i++){
     var s=arr[i]; if(s.d||s.t) continue;
     ["w","r"].forEach(function(f){
       var el=document.querySelector('input[data-ex="'+ex.id+'"][data-i="'+i+'"][data-f="'+f+'"]');
@@ -80,11 +80,11 @@ function noteOf(id){return (S.notes&&S.notes[id])||"";}
 function setNumHtml(ex,i,done){ return '<b>'+(i+1)+'</b>'+(done?'<button class="setdel" data-sdel="'+ex.id+'" data-i="'+i+'" aria-label="Delete set '+(i+1)+' of '+esc(ex.n)+'">'+DEL_SVG+'</button>':''); }
 function exHtml(ex){
   var arr=setsFor(ex), h="";
-  var nd=arr.slice(0,ex.sets).filter(function(s){return s.d;}).length;
-  h+='<details class="ex'+(nd===ex.sets?' alldone':'')+'" data-ex="'+ex.id+'"'+(OPEN[day+":"+ex.id]?' open':'')+'>';
+  var ns=nSets(ex,arr), nd=arr.slice(0,ns).filter(function(s){return s.d;}).length;
+  h+='<details class="ex'+(nd===ns?' alldone':'')+'" data-ex="'+ex.id+'"'+(OPEN[day+":"+ex.id]?' open':'')+'>';
   var nt=noteOf(ex.id);
   var exMiss=DAYGEAR&&LIB[ex.id]?missingFor(LIB[ex.id],DAYGEAR):[];
-  h+='<summary><div class="ttl"><h3>'+esc(ex.n)+'</h3>'+(exMiss.length?'<span class="nogear">Needs gear</span>':'')+'</div><div class="meta"><span class="target">'+ex.sets+' × '+esc(ex.reps)+'</span><span class="cntrow"><button class="notebtn'+(nt?' has':'')+'" data-note="'+ex.id+'" aria-label="'+(nt?'Edit':'Add')+' injury note for '+esc(ex.n)+'" title="Injury note">'+NOTE_SVG+'</button><span class="cnt'+(nd===ex.sets?' all':'')+'">'+nd+'/'+ex.sets+' sets</span></span></div></summary>';
+  h+='<summary><div class="ttl"><h3>'+esc(ex.n)+'</h3>'+(exMiss.length?'<span class="nogear">Needs gear</span>':'')+'</div><div class="meta"><span class="target">'+ex.sets+' × '+esc(ex.reps)+'</span><span class="cntrow">'+(nt?'<span class="notemark" title="Has an injury note">'+NOTE_SVG+'<span class="sr">Has an injury note.</span></span>':'')+'<span class="cnt'+(nd===ns?' all':'')+'">'+nd+'/'+ns+' sets</span></span></div></summary>';
   if(nt) h+='<div class="injnote"><b>Injury note</b><p>'+esc(nt)+'</p></div>';
   if(exMiss.length){
     var lo2=dayLoc(activePlan().id,DAYS[day].id);
@@ -92,13 +92,13 @@ function exHtml(ex){
   }
   h+=swapBarHtml(ex,exMiss.length>0);
   if(SWAP&&SWAP.ex===ex.id&&!exMiss.length&&!(DAYS[day]&&DAYS[day].coles)) h+=swapPanelHtml(ex,false);
-  h+='<div class="last">'+esc(lastText(ex))+'</div><button class="linkbtn hlink" data-hex="'+ex.id+'">See history and progress</button>';
+  h+='<div class="last">'+esc(lastText(ex))+'</div><div class="exlinks"><button class="linkbtn hlink" data-hex="'+ex.id+'">See history and progress</button><button class="linkbtn hlink notelink" data-note="'+ex.id+'" aria-label="'+(nt?'Edit':'Add')+' injury note for '+esc(ex.n)+'">'+NOTE_SVG+(nt?'Edit injury note':'Add injury note')+'</button></div>';
   if(DAYS[day]&&DAYS[day].coles) h+='<button class="chip sm colesswap" data-colesswap="'+ex.id+'">↻ Different '+esc((LIB[ex.id]||{}).mg||"").toLowerCase()+' exercise</button>';
   h+='<details class="how"><summary>How to do it safely</summary>'+exFigure(ex.id,ex.f)+'<ul class="cues">'+ex.c.map(function(c){return '<li>'+esc(c)+'</li>';}).join("")+'</ul></details>';
   var lb=labOf(ex), lw=GFDRules.unitLabel(lb[0],U());
   h+='<div class="sets numgrp"><div class="setrow" aria-hidden="true"><span></span><span class="lbl">'+lw+'</span><span class="lbl">'+lb[1]+'</span><span></span></div>';
   var missed=[];
-  arr.slice(0,ex.sets).forEach(function(s,i){
+  arr.slice(0,ns).forEach(function(s,i){
     var ph=phFor(ex), wp=ph[0], rp=ph[1], ms=s.d&&GFDRules.isMissed(lb,s,ex.reps);
     if(ms) missed.push(i+1);
     h+='<div class="setrow'+(s.d?' isdone':'')+(ms?' missed':'')+'"><span class="n">'+setNumHtml(ex,i,s.d)+'</span>'+
@@ -116,7 +116,7 @@ function missNote(ex,missed){
 }
 function grpHtml(g){
   var first=g.items[0], tot=0, nd=0;
-  g.items.forEach(function(ex){var a=setsFor(ex);for(var i=0;i<ex.sets;i++){tot++;if(a[i].d)nd++;}});
+  g.items.forEach(function(ex){var a=setsFor(ex);for(var i=0,n=nSets(ex,a);i<n;i++){tot++;if(a[i].d)nd++;}});
   var label=first.gl||(g.kind==="circuit"?"Circuit":"Superset");
   var hint=g.kind==="circuit"?"Go straight from one exercise to the next. The rest timer starts once set 1 of every exercise is ticked, and so on.":"Do one set of each, back and forth. The rest timer starts once both set 1s are ticked, then both set 2s, and so on.";
   var h='<details class="grp" data-g="'+g.items.map(function(x){return x.id;}).join(",")+'" data-gk="'+first.id+'"'+(OPEN[day+":g:"+first.id]?' open':'')+'>';
@@ -126,17 +126,19 @@ function grpHtml(g){
 }
 function renderDay(){
   var d=DAYS[day], h="";
+  if(focusOn(d)){ DAYGEAR=d.coles?null:(function(){var lo=dayLoc(activePlan().id,d.id);return lo.gear.length?lo.gear:null;})(); renderFocus(); return; }
+  document.body.classList.remove("focusview");
   if(d.coles){
     DAYGEAR=null;
     h+='<div class="dayhead"><h2>'+esc(d.title)+'</h2></div>'+colesPanelHtml();
     if(d.ex.length&&!colesState().editing){
       h+='<div class="progress"><div class="bar"><i id="pbar"></i></div><span id="ptext"></span></div>';
       groupsOf(d).forEach(function(g){ h+=exHtml(g.items[0]); });
-      h+='<div class="actions"><button class="primary" id="finish">Complete workout</button></div>';
+      h+=finishHtml();
     }
     document.getElementById("day").innerHTML=h; updateProgress(); return;
   }
-  h+=msDueHtml("day")+'<div class="dayhead"><h2>'+esc(d.title)+'</h2><button class="linkbtn" id="editDay">Edit workout</button></div>';
+  h+=msDueHtml("day")+'<div class="dayhead"><h2>'+esc(d.title)+'</h2><button class="linkbtn" id="editDay">Edit workout</button></div>'+(d.ex.length?'<button class="ghost fx-back" data-fx="focus">Back to one set at a time</button>':'');
   var pid=activePlan().id, lo=dayLoc(pid,d.id), set=!!dayLocOf(pid,d.id), miss=[];
   DAYGEAR=lo.gear.length?lo.gear:null;
   if(DAYGEAR) d.ex.forEach(function(x){var L=LIB[x.id]; if(L&&missingFor(L,DAYGEAR).length) miss.push(x);});
@@ -152,25 +154,36 @@ function renderDay(){
   h+='<div class="progress"><div class="bar"><i id="pbar"></i></div><span id="ptext"></span></div>';
   if(!d.ex.length) h+='<div class="emptyday"><p>'+(d.title==="Rest day"?'Rest day. Recover, walk, stretch.':'No exercises on this day yet.')+'</p><button class="'+(d.title==="Rest day"?'ghost':'primary')+'" id="editDay2">Add exercises</button></div>';
   groupsOf(d).forEach(function(g){ h+= g.kind==="single" ? exHtml(g.items[0]) : grpHtml(g); });
-  h+='<div class="actions"><button class="primary" id="finish">Complete workout</button></div>';
+  h+=finishHtml();
   document.getElementById("day").innerHTML=h;
   updateProgress();
 }
+/* Complete workout, with "log it for another day" for a workout done earlier (F1.E4.S1) */
+var PAST=null;   /* {date, time} while the date boxes are open, else null (the workout is saved as now) */
+function finishHtml(){
+  var btn='<div class="actions"><button class="primary" id="finish">'+(PAST?'Save for '+esc(pastLabel()):'Complete workout')+'</button></div>';
+  if(!PAST) return btn+'<p class="pastline"><button class="linkbtn" id="pastOpen" aria-expanded="false">Did this on another day? Log it for then</button></p>';
+  return '<fieldset class="hwhen pastwhen"><legend>When you did it</legend>'+
+    '<label><span>Date</span><input type="date" data-past="date" value="'+esc(PAST.date)+'" max="'+esc(GFDRules.whenParts(new Date().toISOString()).date)+'" min="2000-01-01"></label>'+
+    '<label><span>Finished at</span><input type="time" data-past="time" value="'+esc(PAST.time)+'"></label>'+
+    '<button class="linkbtn" id="pastClose" aria-expanded="true">Use today instead</button></fieldset>'+btn;
+}
+function pastLabel(){ var w=GFDRules.whenFromParts(PAST.date,PAST.time); return w.at?hDate(w.at,{weekday:"short",day:"numeric",month:"short"}):"that day"; }
 function updateProgress(){
   var d=DAYS[day], tot=0, done=0;
-  d.ex.forEach(function(ex){var a=setsFor(ex);for(var i=0;i<ex.sets;i++){tot++;if(a[i].d)done++;}});
+  d.ex.forEach(function(ex){var a=setsFor(ex);for(var i=0,n=nSets(ex,a);i<n;i++){tot++;if(a[i].d)done++;}});
   var pb=document.getElementById("pbar"), pt=document.getElementById("ptext");
   if(pb) pb.style.width=(tot?done/tot*100:0)+"%";
   if(pt) pt.textContent=done+" of "+tot+" sets";
   d.ex.forEach(function(ex){
     var el=document.querySelector('details.ex[data-ex="'+ex.id+'"]'); if(!el) return;
-    var a=setsFor(ex), n=0; for(var i=0;i<ex.sets;i++) if(a[i].d) n++;
-    var c=el.querySelector(".cnt"); if(c){c.textContent=n+"/"+ex.sets+" sets";c.classList.toggle("all",n===ex.sets);}
-    el.classList.toggle("alldone",n===ex.sets);
+    var a=setsFor(ex), n=0, ns=nSets(ex,a); for(var i=0;i<ns;i++) if(a[i].d) n++;
+    var c=el.querySelector(".cnt"); if(c){c.textContent=n+"/"+ns+" sets";c.classList.toggle("all",n===ns);}
+    el.classList.toggle("alldone",n===ns);
   });
   document.querySelectorAll("details.grp").forEach(function(g){
     var tot=0,n=0;
-    g.dataset.g.split(",").forEach(function(id){var ex=findEx(id); if(!ex) return; var a=setsFor(ex); for(var i=0;i<ex.sets;i++){tot++; if(a[i].d) n++;}});
+    g.dataset.g.split(",").forEach(function(id){var ex=findEx(id); if(!ex) return; var a=setsFor(ex); for(var i=0,m=nSets(ex,a);i<m;i++){tot++; if(a[i].d) n++;}});
     var c=g.firstElementChild&&g.firstElementChild.querySelector(".gcnt"); if(c){c.textContent=n+"/"+tot+" sets";c.classList.toggle("all",n===tot);}
   });
 }
@@ -188,6 +201,7 @@ document.addEventListener("click",function(e){
   if(!e.target.closest("#dayMenu")) setDayMenu(false);
   var t=e.target.closest("button"); if(!t) return;
   if(tabsClick(t)) return;
+  if(focusClick(t)) return;
   if(msClick(t)) return;
   if(libraryClick(t)) return;
   if(statsClick(t)) return;
@@ -238,6 +252,11 @@ document.addEventListener("click",function(e){
   if(t.id==="toastAct"){ if(toast._act){var fn=toast._act; toast._act=null; document.getElementById("toast").classList.remove("on"); fn();} return; }
   if(t.id==="askKeep"||t.id==="askFix"){ askAnswer(t.id==="askKeep"); return; }
   if(t.id==="finish"){finishWorkout();return;}
+  if(t.id==="pastOpen"||t.id==="pastClose"){
+    PAST=t.id==="pastOpen"?GFDRules.whenParts(new Date().toISOString()):null; renderDay();
+    var pf=document.querySelector(PAST?'[data-past="date"]':'#pastOpen'); if(pf) pf.focus();
+    return;
+  }
   if(t.id==="tskip"){stopTimer();return;}
   if(t.id==="t30"){tEnd+=30000;tTotal+=30;schedulePing((tEnd-Date.now())/1000);platform.restAlert(tEnd);return;}
 });
@@ -263,6 +282,7 @@ document.addEventListener("keydown",function(e){
   if(e.key==="Escape"){var ps=document.getElementById("plans");if(ps&&!ps.hidden){if(PL_REN){PL_REN=null;renderPlans();}else closePlans();return;}}
   if(e.key==="Escape"){var hs=document.getElementById("healthsheet");if(hs&&!hs.hidden){healthAfter=null;healthClose();return;}}
   if(e.key==="Escape"){var ns=document.getElementById("notesheet");if(ns&&!ns.hidden){closeNote();return;}}
+  if(e.key==="Escape"&&FX.tools&&document.getElementById("fxSheet")){var fb2=document.querySelector('.fx-more');if(fb2)focusClick(fb2);return;}
   if(e.key==="Escape"&&BD){ if(BD.view==="peek") peekBack(BD.peek); else if(BD.view==="pick"||BD.view==="rep"){BD.view="edit";renderBuilder();} else if(!BD.dirty) closeBuilder(); else toast("Tap Save workout or Cancel"); return; }
   if(e.key==="Escape"){var eq=document.getElementById("equip");if(eq&&!eq.hidden){closeEquip();return;}}
   if(e.key==="Escape"){var sh=document.getElementById("profile");if(sh&&!sh.hidden){closeProfile();return;}}
@@ -271,6 +291,7 @@ document.addEventListener("keydown",function(e){
 });
 document.addEventListener("input",function(e){
   var el=e.target; if(builderInput(el)||libraryInput(el)||historyInput(el)) return;
+  if(el.dataset&&el.dataset.past&&PAST){ PAST[el.dataset.past]=el.value; var fb=document.getElementById("finish"); if(fb) fb.textContent="Save for "+pastLabel(); return; }
   if(el.id==="eqSearch"){renderGear();return;}
   if(el.dataset&&el.dataset.pf){el.removeAttribute("aria-invalid");return;}
   if(!el.dataset||!el.dataset.ex) return;
