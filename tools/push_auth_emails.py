@@ -56,8 +56,9 @@ def wanted(args, current):
     site = args.site_url or v["site_url"]
     out["site_url"] = site
     allow = [u for u in (current.get("uri_allow_list") or "").split(",") if u.strip()]
-    # gfd://auth-callback: sign-in links that open the Android app (WP10)
-    for u in (site, site + "**", build_site.load()["pages_url"], "gfd://auth-callback"):
+    # gfd://auth-callback: sign-in links that open the Android app (WP10); gfddev:// the "GFD Dev" test app (dev only)
+    app = ["gfd://auth-callback"] + (["gfddev://auth-callback"] if getattr(args, "env", "") == "dev" else [])
+    for u in (site, site + "**", build_site.load()["pages_url"], *app):
         if u not in allow:
             allow.append(u)
     out["uri_allow_list"] = ",".join(allow)

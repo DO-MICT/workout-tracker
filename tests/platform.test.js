@@ -66,6 +66,18 @@ test("android: sign-in links come back to the app as gfd://auth-callback", () =>
   assert.equal(p.authRedirect(), "gfd://auth-callback");
 });
 
+test("GFD Dev app: sign-in links use gfddev:// and ignore the Play app's gfd:// links", async () => {
+  const { p, listeners } = page({ android: true, shell: { env: "dev", scheme: "gfddev" } });
+  assert.equal(p.env, "dev");
+  assert.equal(p.authRedirect(), "gfddev://auth-callback");
+  const got = [];
+  p.onAuthLink((a) => got.push(a));
+  listeners["App:appUrlOpen"]({ url: "gfd://auth-callback#access_token=P&refresh_token=R" });       // the Play app's
+  listeners["App:appUrlOpen"]({ url: "gfddev://auth-callback#access_token=D&refresh_token=R" });
+  assert.equal(got.length, 1);
+  assert.equal(got[0].access_token, "D");
+});
+
 test("site links use the site address from the shell, relative paths included", () => {
   const { p } = page({ shell: { site: "https://getfitdaily.app/" } });
   assert.equal(p.siteUrl("privacy.html"), "https://getfitdaily.app/privacy.html");

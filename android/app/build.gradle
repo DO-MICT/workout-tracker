@@ -30,15 +30,44 @@ android {
             }
         }
     }
+    // Two apps from one codebase (docs/android-brief.md, "Dev test app"):
+    //   prod = the Play app, co.za.getfitdaily.app, talks to GFD Prod
+    //   dev  = "GFD Dev", co.za.getfitdaily.app.dev, talks to GFD Dev; installs next to the Play app, never goes to Play.
+    // The web files decide the server: python3 tools/build_app.py [--env dev]. The check below stops a mix-up.
+    flavorDimensions = ["env"]
+    productFlavors {
+        prod {
+            dimension "env"
+        }
+        dev {
+            dimension "env"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+        }
+    }
     buildTypes {
         debug {
             applicationIdSuffix ".debug"
             versionNameSuffix "-debug"
         }
         release {
-            if (signingConfigs.release.storeFile) signingConfig signingConfigs.release
+            // no upload key (a local build, or before Deon makes one): sign with the debug key so the APK still installs
+            signingConfig signingConfigs.release.storeFile ? signingConfigs.release : signingConfigs.debug
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+// The web files inside the APK must be built for the same environment as the flavour.
+android.applicationVariants.all { variant ->
+    def want = variant.flavorName == "dev" ? "dev" : "production"
+    variant.preBuildProvider.configure {
+        doFirst {
+            def page = file("src/main/assets/public/index.html")
+            if (page.exists() && !page.text.contains("\"env\": \"${want}\"")) {
+                throw new GradleException("The web files are not built for ${want}. Run: python3 tools/build_app.py --env ${want} && npx cap sync android")
+            }
         }
     }
 }

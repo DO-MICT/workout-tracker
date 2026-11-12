@@ -6,7 +6,7 @@
    platform.name            "web" | "android"   (the Claude copy counts as web)
    platform.native          true inside the app
    platform.siteUrl(path)   the public website (in the app: site.json's domain; on the web: this site)
-   platform.authRedirect()  where sign-in emails send people back to: gfd://auth-callback in the app, this page on the web
+   platform.authRedirect()  where sign-in emails send people back to: gfd://auth-callback in the app (gfddev:// in the dev app), this page on the web
    platform.onAuthLink(fn)  the app was opened by a sign-in link: fn({access_token, refresh_token, type, error_description})
    platform.saveFile(blob,name)  web: download; app: the share sheet (Save to Files, Drive, email...)
    platform.share({title,text,url})
@@ -28,6 +28,8 @@ var platform=(function(){
   /* the app shell names the website; on the web the site is wherever this page is served from */
   var SITE=SHELL.site||(location.origin+location.pathname.replace(/[^\/]*$/,""));
   var APP_ID=SHELL.appId||"co.za.getfitdaily.app";
+  /* sign-in links come back on gfd:// in the Play app and gfddev:// in the dev app, so both can sit on one phone */
+  var SCHEME=SHELL.scheme||"gfd", AUTH_URL=SCHEME+"://auth-callback";
   var REST_ID=4201, restAsked=false, restEnd=0, linkFns=[], linkSeen={}, linkWait=[], authTab=null, authTabL=null;
 
   function siteUrl(path){
@@ -47,7 +49,7 @@ var platform=(function(){
     return out;
   }
   function gotLink(url){
-    if(!url||!/^gfd:\/\/auth-callback/i.test(url)||linkSeen[url]) return;
+    if(!url||String(url).toLowerCase().indexOf(AUTH_URL)!==0||linkSeen[url]) return;
     linkSeen[url]=1;
     if(authTab){ authTab=null; call("Browser","close"); }   /* back from Google sign-in: shut the Custom Tab */
     var a=parseLink(url);
@@ -206,9 +208,10 @@ var platform=(function(){
 
   return {
     name:isAndroid?"android":"web",
+    env:SHELL.env||null,   /* the app: "production" (Play) or "dev" (GFD Dev test build); null on the web */
     native:isAndroid,
     siteUrl:siteUrl,
-    authRedirect:function(){ return isAndroid?"gfd://auth-callback":location.origin+location.pathname; },
+    authRedirect:function(){ return isAndroid?AUTH_URL:location.origin+location.pathname; },
     onAuthLink:function(fn){ linkFns.push(fn); var w=linkWait; linkWait=[]; w.forEach(function(a){ try{ fn(a); }catch(e){} }); },
     parseLink:parseLink,
     saveFile:function(blob,name){ return isAndroid&&P.Filesystem&&P.Share?saveFileApp(blob,name):saveFileWeb(blob,name); },
