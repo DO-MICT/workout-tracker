@@ -1144,7 +1144,7 @@ body.inworkout .wrap{padding-top:calc(env(safe-area-inset-top,0px) + 10px)}
 .fx-startv{gap:12px}
 .fx-hello p{margin:4px 0 2px;color:var(--muted);font-size:.95rem}
 .fx-hello h2{margin:0;font:900 1.75rem/1.1 Archivo,sans-serif;text-wrap:balance}
-.fx-pills2{display:flex;flex-wrap:wrap;gap:8px}
+.fx-pills2{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
 .fx-pill2{min-height:44px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:700;font-size:.95rem;padding:0 16px;cursor:pointer}
 .fx-pill2.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .fx-menu{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:4px;max-height:50vh;overflow:auto}
