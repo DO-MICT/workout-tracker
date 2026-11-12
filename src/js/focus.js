@@ -6,7 +6,7 @@
    The list of every exercise is still there: ⋯ → Show all exercises (S.dayView="list"), and "Focus view" goes back.
    Sets are the same objects the list uses (setsFor), and the boxes carry the same data-ex/data-i/data-f, so typing,
    the number pad, ticking (tickSet), the rest timer and Complete workout all run through the existing code. */
-var FX={id:null,si:null,prev:null,tools:false,clock:null,pick:false};
+var FX={id:null,si:null,prev:null,tools:false,clock:null,pick:false,menu:null};
 /* Deon, 12 Nov: opening the app always lands on the Workout screen (the start view), even if the list was last used */
 var FX_BOOT=true;
 function focusOn(d){ if(FX_BOOT&&typeof S!=="undefined"&&S){ FX_BOOT=false; if(S.dayView==="list") S.dayView="focus"; } return !!d&&!d.coles&&d.ex.length>0&&S.dayView!=="list"; }
@@ -69,7 +69,8 @@ function renderFocus(){
   /* before Start (or after "Change plan or day"): only the plan, the day and a Start button. Once started, the plan name and
      day picker hide and the workout screen is all there is (Deon, 12 Nov). */
   var live=!!fxStarted()&&!FX.pick;
-  document.body.classList.toggle("inworkout",live);
+  /* the plan name and day picker at the top of the page are hidden on both: the start view has its own pills */
+  document.body.classList.add("inworkout");
   if(!live){ renderStart(d); return; }
   var ex=it.ex, g=it.g, arr=setsFor(ex), n=nSets(ex,arr), open=openSet(ex), all=open<0;
   if(FX.si!=null&&(FX.si>=n||FX.id!==ex.id)) FX.si=null;
@@ -112,14 +113,41 @@ function renderFocus(){
   fxClockStart();
   if(!fxFit()&&started&&!FX.tools&&!document.body.classList.contains("wide")) fxScroll();
 }
+/* ---------- start view: Option 4 "Coach card" (Deon, 12 Nov) ----------
+   A greeting, "Ready for <day>?", the plan and day as two pills (last ones kept), a round Start like the Go ring,
+   how many exercises and about how long, "What's in it", and a kind line about this week. */
+function fxGreeting(){ var h=new Date().getHours(), n=(S.names&&S.names[0]&&S.names[0]!=="You")?S.names[0]:"";
+  return (h<12?"Good morning":h<17?"Good afternoon":"Good evening")+(n?", "+n:""); }
+/* rough minutes: about 40 s per set plus the rest after it, rounded to 5 */
+function fxMinutes(d){ var r=restSec()||60, sec=0; d.ex.forEach(function(ex){ sec+=(+ex.sets||3)*(40+(ex.ss==="a"?0:r)); }); return Math.max(5,Math.round(sec/300)*5); }
+function fxWeekCount(){
+  try{ var p=stPeriod("week",0);
+    if(ST&&ST.all) return ST.all.filter(function(w){ return stIn(w.at,p); }).length;
+    var seen={}, n=0; wout().concat(wlog()).forEach(function(w){ if(w&&w.id&&!seen[w.id]&&w.performed_at&&stIn(w.performed_at,p)){ seen[w.id]=1; n++; } }); return n;
+  }catch(e){ return 0; }
+}
 function renderStart(d){
   clearInterval(FX.clock); FX.tools=false;
-  var resume=FX.pick&&fxStarted(), n=d.ex.length;
-  var h='<div class="fx fx-startv" id="fx"><div class="fx-startinfo"><h2>'+esc(d.title)+'</h2><p>'+n+' exercise'+(n===1?'':'s')+' · first up: '+esc(d.ex[0].n)+'</p></div>'+
-    '<div class="fx-bot"><button class="fx-go" data-fx="'+(resume?'resume':'start')+'">'+(resume?'Back to workout':'Start workout')+'</button>'+
-    '<div class="fx-slot"><button class="linkbtn" data-fx="list">Show all exercises</button></div></div></div>';
+  var resume=FX.pick&&fxStarted(), n=d.ex.length, menu=FX.menu; FX.menu=null; FX.open=menu; /* a menu stays open for one render: picking a plan or day closes it */
+  var plan=activePlan(), wk=fxWeekCount();
+  var h='<div class="fx fx-startv" id="fx"><div class="fx-hello"><p>'+esc(fxGreeting())+'</p><h2>'+(resume?'Back to '+esc(d.title)+'?':'Ready for '+esc(d.title)+'?')+'</h2></div>';
+  h+='<div class="fx-pills2"><button class="fx-pill2" data-fx="menu" data-m="plan" aria-expanded="'+(menu==="plan")+'">'+esc(plan.name)+' <span aria-hidden="true">▾</span></button>'+
+    (DAYS.length>1?'<button class="fx-pill2 on" data-fx="menu" data-m="day" aria-expanded="'+(menu==="day")+'">Day '+(day+1)+' · '+esc(weekLong(d.id))+' <span aria-hidden="true">▾</span></button>':'')+'</div>';
+  if(menu==="plan") h+='<div class="fx-menu" role="group" aria-label="Switch plan">'+allPlans().map(function(p){
+      var lk=planLocked(p.id); return '<button class="fx-mi" data-useplan="'+p.id+'" aria-pressed="'+(p.id===plan.id)+'">'+esc(p.name)+(p.id===plan.id?' <b aria-hidden="true">✓</b>':lk?' <small>Read only</small>':'')+'</button>';
+    }).join("")+'<button class="fx-mi" id="managePlans2" data-fx="plans">Manage plans</button></div>';
+  if(menu==="day") h+='<div class="fx-menu" role="group" aria-label="Pick a day">'+DAYS.map(function(x,i){
+      return '<button class="fx-mi" data-day="'+i+'" aria-pressed="'+(i===day)+'">Day '+(i+1)+' · '+esc(weekLong(x.id))+(isToday(x)?' · today':'')+'<small>'+esc(x.title)+'</small>'+(i===day?' <b aria-hidden="true">✓</b>':'')+'</button>';
+    }).join("")+'</div>';
+  if(menu==="plan"||menu==="day"){ h+='</div>'; document.getElementById("day").innerHTML=h; var f0=document.querySelector('.fx-menu [aria-pressed="true"]')||document.querySelector(".fx-mi"); if(f0) f0.focus({preventScroll:true}); return; }
+  h+='<div class="fx-startmid"><button class="fx-ring go fx-startring" data-fx="'+(resume?'resume':'start')+'" aria-label="'+(resume?'Back to workout':'Start workout')+'"><span class="in" aria-hidden="true"><b>'+(resume?'Back':'Start')+'</b><small>workout</small></span></button>'+
+    '<p class="fx-startmeta"><span><b>'+n+'</b> exercise'+(n===1?'':'s')+'</span><span><b>~'+fxMinutes(d)+'</b> min</span></p>'+
+    '<button class="linkbtn" data-fx="menu" data-m="list" aria-expanded="'+(menu==="list")+'">What’s in it '+(menu==="list"?'▴':'▾')+'</button>';
+  if(menu==="list") h+='<ol class="fx-inlist">'+d.ex.map(function(ex){ return '<li><span>'+esc(ex.n)+'</span><small>'+ex.sets+' × '+esc(ex.reps)+'</small></li>'; }).join("")+'</ol><button class="linkbtn" data-fx="list">Open the full list</button>';
+  h+='</div><div class="fx-kind"><b>'+wk+'</b><span>'+(wk?'workout'+(wk===1?'':'s')+' this week. Nice and steady.':'A fresh week. One workout at a time.')+'</span></div></div>';
   document.getElementById("day").innerHTML=h;
-  fxFit();
+  if(menu&&menu!=="list"){ var f=document.querySelector('.fx-menu [aria-pressed="true"]')||document.querySelector(".fx-mi"); if(f) f.focus({preventScroll:true}); }
+  if(!menu) fxFit();
 }
 /* Deon, 12 Nov: the whole focus view fits on the screen without scrolling. It fills the space from where it starts down
    to the tab bar, so the set card centres in what's really visible. Only when it can't fit (a long superset on a short
@@ -214,6 +242,8 @@ function fxAdd(id){
 function focusClick(t){
   var a=t.dataset.fx; if(!a) return false;
   var it=fxCurrent(), ex=it&&it.ex;
+  if(a==="menu"){ FX.menu=FX.open===t.dataset.m?null:t.dataset.m; renderFocus(); if(!FX.menu){ var mb=document.querySelector('[data-fx="menu"][data-m="'+t.dataset.m+'"]'); if(mb) mb.focus({preventScroll:true}); } return true; }
+  if(a==="plans"){ openPlans(); return true; }
   if(a==="pick"){ FX.pick=true; FX.tools=false; SWAP=null; renderFocus(); window.scrollTo(0,0); return true; }
   if(a==="resume"){ FX.pick=false; renderFocus(); var rb=document.querySelector(".fx-go"); if(rb) rb.focus({preventScroll:true}); return true; }
   if(a==="start"||(a==="ring"&&!fxStarted())){ FX.pick=false; S.fstart={day:DAYS[day].id,at:Date.now(),who:S.who||0}; save(); audio(); window.scrollTo(0,0); renderFocus(); var gb=document.querySelector(".fx-go"); if(gb) gb.focus({preventScroll:true}); return true; }

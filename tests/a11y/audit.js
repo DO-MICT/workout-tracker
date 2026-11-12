@@ -11,7 +11,7 @@ const TYPES={".html":"text/html",".js":"text/javascript",".css":"text/css",".jso
 const STEPS=[
   ["sign-up",""],
   ["workout","document.getElementById('onboard').hidden=true;syncTabs();S.dayView='focus';renderDay();"],
-  ["workout started","focusClick(document.querySelector('.fx-go[data-fx=start]'));"],
+  ["workout started","focusClick(document.querySelector('.fx-startring'));"],
   ["workout tools","focusClick(document.querySelector('.fx-more'));var h=document.querySelector('#fxSheet details.how');if(h)h.open=true;"],
   ["workout list","FX.tools=false;S.dayView='list';renderDay();var x=document.querySelector('details.ex');x.open=true;var h=x.querySelector('details.how');if(h)h.open=true;"],
   ["plans","goTab('plans')"],
