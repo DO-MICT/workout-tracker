@@ -1143,8 +1143,8 @@ body.focusview .daynav{margin-bottom:10px}
 .fx-more{font-size:1.3rem;letter-spacing:.05em}
 .fx-name{flex:1;min-width:0;display:flex;align-items:center;gap:8px}
 .fx-name > div{min-width:0}
-.fx-name h2{margin:0;font-size:1.3rem;line-height:1.05;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.fx-name span{display:block;font-size:.8rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fx-name h2{margin:0;font:900 1.6rem/1.1 Archivo,sans-serif;letter-spacing:-.01em;color:var(--ink);overflow-wrap:break-word;hyphens:auto}
+.fx-name > div > span{display:block;font-size:.8rem;color:var(--muted);margin-top:3px}
 .fx-warn{color:var(--warn);font-weight:700}
 .fx-pos{flex:none;font:800 .8rem Archivo,sans-serif;background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:3px 6px}
 .fx-pos.grp{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
@@ -1169,9 +1169,9 @@ body.focusview .daynav{margin-bottom:10px}
 .fx-clock{height:18px;text-align:center;font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:-6px}
 .fx-card{flex:1;display:flex;flex-direction:column;justify-content:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:12px 14px;touch-action:pan-y}
 .fx-pills{display:flex;gap:6px}
-.fx-pill{flex:1;min-width:0;min-height:44px;display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:12px;background:transparent;color:var(--muted);padding:0 8px;cursor:pointer;font-size:.8rem;text-align:left}
-.fx-pill b{flex:none;font:800 .85rem Archivo,sans-serif;color:var(--ink)}
-.fx-pill span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fx-pill{flex:1;min-width:0;min-height:60px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border:1px solid var(--line);border-radius:14px;background:transparent;color:var(--muted);padding:8px 10px;cursor:pointer;font-size:.92rem;font-weight:600;line-height:1.2;text-align:center}
+.fx-pill b{flex:none;font:800 .95rem Archivo,sans-serif;color:var(--ink)}
+.fx-pill span{overflow-wrap:break-word;hyphens:auto;max-width:100%}
 .fx-pill.on{border:2px solid var(--done);color:var(--ink)}
 .fx-pill.on b{color:var(--done)}
 .fx-lbl{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
