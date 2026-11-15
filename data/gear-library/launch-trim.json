@@ -1,0 +1,449 @@
+{
+ "note": "Launch gear trim decided by Deon on 2026-11-15 (review page artifact KqhotmJUYETKjW11xHhaXM). Gear not in keep is hidden (active=false). Floor ids stay valid for any exercise without being a gear item. req_map swaps a removed duplicate for the kept item before pruning. Exercises left with no way to meet their gear are hidden (active=false).",
+ "keep": [
+  "abbench",
+  "abcrunchm",
+  "abductor",
+  "abwheel",
+  "adjbench",
+  "airbike",
+  "anklestrap",
+  "assistpull",
+  "backextm",
+  "bag",
+  "bands",
+  "barbell",
+  "battleropes",
+  "bike",
+  "bosu",
+  "bumperplates",
+  "cablecross",
+  "captain",
+  "chair",
+  "chestpress",
+  "chesttbar",
+  "curlm",
+  "declinebench",
+  "dipstation",
+  "dumbbells",
+  "dyrowm",
+  "elliptical",
+  "ezbar",
+  "ezcablebar",
+  "flatbench",
+  "foamroller",
+  "functional",
+  "glutekick",
+  "hacksquat",
+  "highrowm",
+  "hipthrustm",
+  "inclinebench",
+  "inclinepressm",
+  "jumprope",
+  "kettlebells",
+  "latbar",
+  "lateralm",
+  "latpulldown",
+  "legext",
+  "legpress",
+  "liftbelt",
+  "lowrowm",
+  "lyingcurl",
+  "lyingpress",
+  "maggrip",
+  "massageball",
+  "medball",
+  "pecdeck",
+  "platechest",
+  "plates",
+  "plyobox",
+  "powerrack",
+  "preacher",
+  "pullupbar",
+  "reardelt",
+  "recumbent",
+  "ropeattach",
+  "rowbar",
+  "rower",
+  "rowmachine",
+  "seatcalf",
+  "seatedcurl",
+  "seatedrow",
+  "seatlegpress",
+  "shoulderpress",
+  "shrugm",
+  "singlehandle",
+  "skierg",
+  "sled",
+  "smith",
+  "spinbike",
+  "stabball",
+  "stairs",
+  "standcalf",
+  "straightbar",
+  "torso",
+  "trapbar",
+  "treadmill",
+  "tricepm",
+  "tricepv",
+  "trx",
+  "vhandle",
+  "weightvest",
+  "yogablocks",
+  "yogamat"
+ ],
+ "floor": [
+  "calisthenics",
+  "towel",
+  "wall",
+  "openspace"
+ ],
+ "req_map": {
+  "pilatesmat": "yogamat",
+  "romanchair": "backextm",
+  "halfrack": "powerrack",
+  "plateincline": "inclinepressm",
+  "squatstands": "powerrack"
+ },
+ "renames": {
+  "seatlegpress": {
+   "name": "Horizontal leg press"
+  },
+  "yogamat": {
+   "name": "Fitness mat",
+   "keywords": "pilates mat floor"
+  }
+ },
+ "hide_exercises": [
+  "atlas",
+  "axledl",
+  "beltmarch",
+  "beltsquat",
+  "curvedrun",
+  "curvedsprint",
+  "cycle",
+  "donkeycalf",
+  "elephant",
+  "fatgripcurl",
+  "fatgriphold",
+  "feetstraps",
+  "ghdbackext",
+  "ghdhipext",
+  "ghdsitup",
+  "ghr",
+  "gripper",
+  "hamstretch",
+  "humanflag",
+  "hurdlehop",
+  "ickyshuffle",
+  "ironcross",
+  "isopulldown",
+  "kneelcurl",
+  "kneestretch",
+  "laddercross",
+  "ladderhopscotch",
+  "ladderlateral",
+  "ladderone",
+  "laddersinglehop",
+  "laddertwo",
+  "landminelateral",
+  "landminepress",
+  "landminerdl",
+  "landminerevlunge",
+  "landminerot",
+  "landminesquat",
+  "landminesqueeze",
+  "landminethruster",
+  "logpress",
+  "longstretch",
+  "machinedip",
+  "machuprightrow",
+  "meadows",
+  "mermaid",
+  "multigymfly",
+  "multigymlegcurl",
+  "multigymlegext",
+  "multigympress",
+  "parachute",
+  "parapush",
+  "pendulum",
+  "pilatesringsq",
+  "pullovermach",
+  "pullstraps",
+  "reformerfoot",
+  "reversehyp",
+  "ringbridge",
+  "ringcurl",
+  "ringdip",
+  "ringleg",
+  "ringmu",
+  "ringpress",
+  "ringpush",
+  "ringrow",
+  "ringsupport",
+  "rowing",
+  "safetybarsquat",
+  "sandcarry",
+  "sbbearsq",
+  "sbclean",
+  "sbload",
+  "sbpress",
+  "sbrow",
+  "sbshoulder",
+  "sbzercher",
+  "sealrow",
+  "shortspine",
+  "speedbag",
+  "standlegcurl",
+  "strapadd",
+  "strapquad",
+  "swimbreast",
+  "swimfree",
+  "tbarrow",
+  "tdrill",
+  "tyreflip",
+  "ube",
+  "versaclimb",
+  "vsquat",
+  "wristroller",
+  "yoke"
+ ],
+ "req_updates": {
+  "trxpress": {
+   "old": "trx|rings",
+   "new": "trx"
+  },
+  "trxrow": {
+   "old": "trx|rings",
+   "new": "trx"
+  },
+  "trxw": {
+   "old": "trx|rings",
+   "new": "trx"
+  },
+  "trxt": {
+   "old": "trx|rings",
+   "new": "trx"
+  },
+  "trxy": {
+   "old": "trx|rings",
+   "new": "trx"
+  },
+  "trxcurl": {
+   "old": "trx|rings",
+   "new": "trx"
+  },
+  "trxtri": {
+   "old": "trx|rings",
+   "new": "trx"
+  },
+  "trxhamcurl": {
+   "old": "trx|rings",
+   "new": "trx"
+  },
+  "trxpistol": {
+   "old": "trx|rings",
+   "new": "trx"
+  },
+  "declinemach": {
+   "old": "declinepressm|plateincline|chestpress",
+   "new": "inclinepressm|chestpress"
+  },
+  "backext": {
+   "old": "romanchair",
+   "new": "backextm"
+  },
+  "shrugmach": {
+   "old": "shrugm|uprightrowm",
+   "new": "shrugm"
+  },
+  "glutebackext": {
+   "old": "romanchair",
+   "new": "backextm"
+  },
+  "multihipabd": {
+   "old": "multihip|abductor",
+   "new": "abductor"
+  },
+  "multihipext": {
+   "old": "multihip|glutekick",
+   "new": "glutekick"
+  },
+  "slbackext": {
+   "old": "romanchair",
+   "new": "backextm"
+  },
+  "advtuckfl": {
+   "old": "pullupbar|rings",
+   "new": "pullupbar"
+  },
+  "backlever": {
+   "old": "rings|pullupbar",
+   "new": "pullupbar"
+  },
+  "frontlever": {
+   "old": "pullupbar|rings",
+   "new": "pullupbar"
+  },
+  "straddlefl": {
+   "old": "pullupbar|rings",
+   "new": "pullupbar"
+  },
+  "tuckbl": {
+   "old": "rings|pullupbar",
+   "new": "pullupbar"
+  },
+  "tuckfl": {
+   "old": "pullupbar|rings",
+   "new": "pullupbar"
+  },
+  "germanhang": {
+   "old": "rings|pullupbar",
+   "new": "pullupbar"
+  },
+  "skinthecat": {
+   "old": "rings|pullupbar",
+   "new": "pullupbar"
+  },
+  "ringfly": {
+   "old": "rings|trx",
+   "new": "trx"
+  },
+  "archerrow": {
+   "old": "powerrack|smith|rings",
+   "new": "powerrack|smith"
+  },
+  "invrow": {
+   "old": "powerrack|smith|rings",
+   "new": "powerrack|smith"
+  },
+  "ringtriext": {
+   "old": "rings|trx",
+   "new": "trx"
+  },
+  "hangknee": {
+   "old": "pullupbar|abstraps",
+   "new": "pullupbar"
+  },
+  "hangleg": {
+   "old": "pullupbar|captain|abstraps",
+   "new": "pullupbar|captain"
+  },
+  "crunch": {
+   "old": "functional|cablecross|multigym",
+   "new": "functional|cablecross"
+  },
+  "trxfallout": {
+   "old": "trx|rings",
+   "new": "trx"
+  },
+  "trxtuck": {
+   "old": "trx|rings",
+   "new": "trx"
+  },
+  "trxpike": {
+   "old": "trx|rings",
+   "new": "trx"
+  },
+  "romanside": {
+   "old": "romanchair",
+   "new": "backextm"
+  },
+  "ruck": {
+   "old": "backpack|weightvest",
+   "new": "weightvest"
+  },
+  "swan": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "swimming": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "singlelegkick": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "legpullback": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "pshoulderbridge": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "sidekick": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "corkscrew": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "crisscross": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "lowerlift": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "doublelegstretch": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "legpullfront": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "openlegrocker": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "hundred": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "rollup": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "rollover": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "saw": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "scissors": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "rollingball": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "legcircles": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "singlelegstretch": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "spinetwist": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "teaser": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  },
+  "spinestretch": {
+   "old": "pilatesmat|yogamat",
+   "new": "yogamat"
+  }
+ }
+}
