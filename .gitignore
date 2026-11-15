@@ -3,3 +3,7 @@ node_modules/
 __pycache__/
 art-preview/
 build/
+
+# Local secrets and personal Claude settings
+.claude/settings.local.json
+.env*
