@@ -321,10 +321,14 @@
   /* ---- gear and swaps ---- */
   /* floor moves: gear you can always stand in for with a floor, a towel or carpet (F4.E3), so push-ups,
      plank and mat work count as doable at every location without adding them as gear */
-  var FLOOR=["calisthenics","yogamat","pilatesmat","gymmat"];
+  /* floor, towel, wall and open space: bodyweight moves need no gear, so these always count as owned */
+  var FLOOR=["calisthenics","yogamat","towel","wall","openspace"];
+  /* gear removed or merged for launch: a saved gear list that still names one counts as the kept item */
+  var GEAR_NOW={pilatesmat:"yogamat",romanchair:"backextm",halfrack:"powerrack",plateincline:"inclinepressm",squatstands:"powerrack"};
+  function gearNow(gear){ return (gear||[]).map(function(id){ return GEAR_NOW[id]||id; }); }
   /* [] when the gear covers it, otherwise the "any of" groups that are missing */
   function missingGear(req,gear){
-    if(!req) return []; gear=gear||[];
+    if(!req) return []; gear=gearNow(gear);
     return req.split(",").filter(function(alt){ return !alt.split("|").some(function(id){ return gear.indexOf(id)>=0||FLOOR.indexOf(id)>=0; }); });
   }
   var LEVELS={new:0,some:1,experienced:2}, DIFF={Beginner:0,Intermediate:1,Advanced:2};
@@ -333,7 +337,7 @@
   function nameWords(n){ return String(n||"").toLowerCase().replace(/[()]/g," ").split(/[\s,/]+/).filter(function(w){ return w&&!GEAR_WORDS.test(w); }); }
   /* the gear an exercise would use here: one id per "any of" group, preferring what's in the gear list */
   function gearUsed(req,gear){
-    if(!req) return [];
+    if(!req) return []; gear=gear&&gearNow(gear);
     return req.split(",").map(function(alt){
       var ids=alt.split("|"), have=ids.filter(function(id){ return gear&&gear.indexOf(id)>=0; });
       return have[0]||ids.filter(function(id){ return FLOOR.indexOf(id)<0; })[0]||"";

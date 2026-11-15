@@ -7645,7 +7645,7 @@
   },
   {
    "id": "seatlegpress",
-   "name": "Seated leg press machine",
+   "name": "Horizontal leg press",
    "aliases": [
     "Horizontal leg press",
     "Selectorised leg press",
@@ -17349,7 +17349,7 @@
   },
   {
    "id": "yogamat",
-   "name": "Yoga mat",
+   "name": "Fitness mat",
    "aliases": [
     "Exercise mat",
     "Sticky mat"
@@ -17384,7 +17384,7 @@
    ],
    "buying_tips": "4–5 mm with a grippy top suits most.",
    "safety": "Clean regularly to keep grip.",
-   "keywords": "yoga",
+   "keywords": "yoga pilates mat floor",
    "exercise_ids": [
     "boat",
     "boundangle",

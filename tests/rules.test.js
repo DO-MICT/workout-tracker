@@ -458,3 +458,13 @@ test("moving a workout keeps its length", () => {
   assert.equal(R.shiftStart("2026-11-10T17:00:00.000Z", "2026-11-10T18:00:00.000Z", "2026-11-08T07:00:00.000Z"), "2026-11-08T06:00:00.000Z");
   assert.equal(R.shiftStart(null, "2026-11-10T18:00:00.000Z", "2026-11-08T07:00:00.000Z"), null);
 });
+
+test("launch gear trim: floor, towel, wall and open space need no gear, and old saved gear still counts", () => {
+  assert.deepEqual(R.missingGear("towel", []), [], "towel moves always show");
+  assert.deepEqual(R.missingGear("wall", ["dumbbells"]), [], "wall moves always show");
+  assert.deepEqual(R.missingGear("openspace", ["dumbbells"]), []);
+  assert.deepEqual(R.missingGear("yogamat", ["pilatesmat"]), [], "a saved Pilates mat counts as the fitness mat");
+  assert.deepEqual(R.missingGear("backextm", ["romanchair"]), [], "a saved Roman chair counts as the back extension machine");
+  assert.deepEqual(R.missingGear("powerrack", ["halfrack"]), []);
+  assert.equal(R.missingGear("rings", ["dumbbells"]).length, 1, "rings are no longer floor gear");
+});

@@ -11190,7 +11190,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -13609,7 +13609,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -15612,7 +15612,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -15667,7 +15667,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -15721,7 +15721,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -18285,7 +18285,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -18337,7 +18337,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -21047,7 +21047,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -21158,7 +21158,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -22214,7 +22214,7 @@
    "equipment": [
     "Decline press machine"
    ],
-   "req": "declinepressm|plateincline|chestpress",
+   "req": "inclinepressm|chestpress",
    "equipment_tier": 3,
    "difficulty": "Beginner",
    "tracking": "w",
@@ -22929,7 +22929,7 @@
    "equipment": [
     "Back extension / Roman chair"
    ],
-   "req": "romanchair",
+   "req": "backextm",
    "equipment_tier": 3,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -23434,7 +23434,7 @@
    "equipment": [
     "Shrug machine"
    ],
-   "req": "shrugm|uprightrowm",
+   "req": "shrugm",
    "equipment_tier": 3,
    "difficulty": "Beginner",
    "tracking": "w",
@@ -25854,7 +25854,7 @@
    "equipment": [
     "Back extension / Roman chair"
    ],
-   "req": "romanchair",
+   "req": "backextm",
    "equipment_tier": 3,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -26116,7 +26116,7 @@
    "equipment": [
     "Multi-hip machine"
    ],
-   "req": "multihip|abductor",
+   "req": "abductor",
    "equipment_tier": 3,
    "difficulty": "Beginner",
    "tracking": "w",
@@ -26167,7 +26167,7 @@
    "equipment": [
     "Multi-hip machine"
    ],
-   "req": "multihip|glutekick",
+   "req": "glutekick",
    "equipment_tier": 3,
    "difficulty": "Beginner",
    "tracking": "w",
@@ -26324,7 +26324,7 @@
    "equipment": [
     "Back extension / Roman chair"
    ],
-   "req": "romanchair",
+   "req": "backextm",
    "equipment_tier": 3,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -28312,7 +28312,7 @@
    "equipment": [
     "Pull-up bar or rings"
    ],
-   "req": "pullupbar|rings",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "hold",
@@ -28421,7 +28421,7 @@
    "equipment": [
     "Rings or pull-up bar"
    ],
-   "req": "rings|pullupbar",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "hold",
@@ -28863,7 +28863,7 @@
    "equipment": [
     "Pull-up bar or rings"
    ],
-   "req": "pullupbar|rings",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "hold",
@@ -29306,7 +29306,7 @@
    "equipment": [
     "Pull-up bar or rings"
    ],
-   "req": "pullupbar|rings",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "hold",
@@ -29411,7 +29411,7 @@
    "equipment": [
     "Rings or pull-up bar"
    ],
-   "req": "rings|pullupbar",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "hold",
@@ -29464,7 +29464,7 @@
    "equipment": [
     "Pull-up bar or rings"
    ],
-   "req": "pullupbar|rings",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "hold",
@@ -29620,7 +29620,7 @@
    "equipment": [
     "Rings or pull-up bar"
    ],
-   "req": "rings|pullupbar",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "hold",
@@ -29776,7 +29776,7 @@
    "equipment": [
     "Rings or pull-up bar"
    ],
-   "req": "rings|pullupbar",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -29994,7 +29994,7 @@
    "equipment": [
     "Gymnastic rings"
    ],
-   "req": "rings|trx",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Advanced",
    "tracking": "bw",
@@ -30103,7 +30103,7 @@
    "equipment": [
     "Low bar or rings"
    ],
-   "req": "powerrack|smith|rings",
+   "req": "powerrack|smith",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -30160,7 +30160,7 @@
    "equipment": [
     "Low bar (rack/Smith) or rings"
    ],
-   "req": "powerrack|smith|rings",
+   "req": "powerrack|smith",
    "equipment_tier": 2,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -30374,7 +30374,7 @@
    "equipment": [
     "Rings or suspension trainer"
    ],
-   "req": "rings|trx",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -32769,7 +32769,7 @@
    "equipment": [
     "Pull-up bar"
    ],
-   "req": "pullupbar|abstraps",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -32826,7 +32826,7 @@
    "equipment": [
     "Pull-up bar"
    ],
-   "req": "pullupbar|captain|abstraps",
+   "req": "pullupbar|captain",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "bw",
@@ -33703,7 +33703,7 @@
     "Cable machine",
     "Rope attachment"
    ],
-   "req": "functional|cablecross|multigym",
+   "req": "functional|cablecross",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "w",
@@ -34194,7 +34194,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -34248,7 +34248,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -34302,7 +34302,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Advanced",
    "tracking": "bw",
@@ -34354,7 +34354,7 @@
    "equipment": [
     "Back extension bench"
    ],
-   "req": "romanchair",
+   "req": "backextm",
    "equipment_tier": 3,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -44111,7 +44111,7 @@
     "Backpack or rucksack with weight",
     "Weighted vest (optional)"
    ],
-   "req": "backpack|weightvest",
+   "req": "weightvest",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "cardio",
@@ -54599,7 +54599,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -54653,7 +54653,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -54707,7 +54707,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -54762,7 +54762,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "count",
@@ -54925,7 +54925,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -54981,7 +54981,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55087,7 +55087,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -55140,7 +55140,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -55193,7 +55193,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "count",
@@ -55247,7 +55247,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -55302,7 +55302,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -55356,7 +55356,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "count",
@@ -55413,7 +55413,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55467,7 +55467,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -55522,7 +55522,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "count",
@@ -55577,7 +55577,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55631,7 +55631,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -55684,7 +55684,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55740,7 +55740,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55793,7 +55793,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55846,7 +55846,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55900,7 +55900,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "count",
@@ -55954,7 +55954,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",

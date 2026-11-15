@@ -1,5 +1,5 @@
 /* ---------- first-run setup (sign-up itself is in signin.js) ---------- */
-var MY_GEAR=["adjbench","flatbench","barbell","plates","ezbar","dumbbells","lyingpress","shoulderpress","latpulldown","legext","lyingcurl","standcalf","abbench","romanchair","cablecross","pullupbar","bands","yogamat","treadmill","smith","stabball"];
+var MY_GEAR=["adjbench","flatbench","barbell","plates","ezbar","dumbbells","lyingpress","shoulderpress","latpulldown","legext","lyingcurl","standcalf","abbench","backextm","cablecross","pullupbar","bands","yogamat","treadmill","smith","stabball"];
 var OB=null; /* {step, ans:{train,level,goal,days}, plan, picked, locName}; web sign-in also keeps mode/email here */
 /* F3: four short questions, then where you train, then a plan that fits. Progress is kept in S.ob as you go,
    so a reload picks up where you left off; setup stays open until a plan is saved (Build my own included). */
@@ -14,7 +14,7 @@ var OB_LOC={gym:"Gym",mixed:"Gym",pilates:"Pilates studio",yoga:"Home",running:"
 var OB_PRESETS={
  gym:["Full gym",MY_GEAR.concat(["chestpress","legpress","seatedrow","seatedcurl","powerrack","kettlebells","pecdeck","abductor","bike","rower"])],
  home:["Home basics",["dumbbells","bands","adjbench","yogamat","calisthenics"]],
- pilates:["Pilates studio",["pilatesmat","reformer","pilatesring","yogamat","foamroller"]],
+ pilates:["Pilates studio",["yogamat","foamroller","stabball","bands"]],
  yoga:["Yoga at home",["yogamat","yogablocks","stretchstrap"]],
  body:["Just my body",["calisthenics"]]
 };

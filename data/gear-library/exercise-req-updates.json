@@ -18,7 +18,7 @@
    "id": "declinemach",
    "name": "Decline chest press machine",
    "old_req": "chestpress",
-   "new_req": "declinepressm|plateincline|chestpress"
+   "new_req": "inclinepressm|chestpress"
   },
   {
    "id": "isopulldown",
@@ -78,13 +78,13 @@
    "id": "multihipabd",
    "name": "Multi-hip abduction",
    "old_req": "abductor",
-   "new_req": "multihip|abductor"
+   "new_req": "abductor"
   },
   {
    "id": "multihipext",
    "name": "Multi-hip glute extension",
    "old_req": "glutekick",
-   "new_req": "multihip|glutekick"
+   "new_req": "glutekick"
   },
   {
    "id": "cstbar",
@@ -108,7 +108,7 @@
    "id": "shrugmach",
    "name": "Machine shrug",
    "old_req": "uprightrowm",
-   "new_req": "shrugm|uprightrowm"
+   "new_req": "shrugm"
   },
   {
    "id": "humanflag",
@@ -216,7 +216,7 @@
    "id": "ruck",
    "name": "Rucking",
    "old_req": "weightvest",
-   "new_req": "backpack|weightvest"
+   "new_req": "weightvest"
   },
   {
    "id": "cycle",
