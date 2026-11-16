@@ -80,7 +80,7 @@ var EXTRA=[
  ["deadlift","Deadlift","Back","barbell","rdl",4,"5","w",["Bar over mid-foot, shins close.","Flat back, push the floor away.","Stand tall; don't lean back at the top."]],
  ["trapdl","Trap bar deadlift","Back","trapbar","rdl",4,"6","w",["Stand in the centre of the bar.","Hips down, chest up, then drive.","Lock out with your glutes."]],
  ["chestrow","Chest-supported row machine","Back","rowmachine","cablerow",3,"10–12","w",["Chest pressed into the pad.","Squeeze your shoulder blades together.","Pause for a second at the back."]],
- ["invrow","Inverted row","Back","trx|rings|smith|powerrack","",3,"8–12","bw",["Body straight like a plank.","Pull your chest to the bar or handles.","Feet further forward makes it harder."]],
+ ["invrow","Inverted row","Back","trx|smith|powerrack","",3,"8–12","bw",["Body straight like a plank.","Pull your chest to the bar or handles.","Feet further forward makes it harder."]],
  ["trxrow","Suspension row","Back","trx","",3,"10–12","bw",["Lean back with arms straight.","Pull your hands to your ribs.","Keep your hips up."]],
  ["shrug","Dumbbell shrug","Back","dumbbells","",3,"12–15","w",["Arms straight, shoulders up to your ears.","Hold for a second at the top.","Don't roll your shoulders."]],
  ["superman","Superman hold","Back","calisthenics|yogamat","",3,"30 s","hold",["Lie face down, arms overhead.","Lift arms and legs a few centimetres.","Keep your neck long."]],
@@ -91,7 +91,7 @@ var EXTRA=[
  ["lateralmach","Lateral raise machine","Shoulders","lateralm","lateral",3,"12–15","w",["Pads on the outside of your elbows.","Raise to shoulder height.","Lower slowly."]],
  ["reardeltm","Rear delt machine","Shoulders","reardelt","revfly",3,"15","w",["Chest against the pad.","Sweep your arms back wide.","Squeeze the back of your shoulders."]],
  ["smithohp","Smith machine shoulder press","Shoulders","smith,adjbench|flatbench","ohp",3,"8–10","w",["Sit so the bar lowers just in front of your face.","Press to just short of lockout.","Set the stops at chin height."]],
- ["uprightrow","Cable upright row","Shoulders","cablecross|functional|uprightrowm","",3,"12","w",["Wide grip on the bar.","Pull to chest height, elbows leading.","Stop if your shoulders pinch."]],
+ ["uprightrow","Cable upright row","Shoulders","cablecross|functional","",3,"12","w",["Wide grip on the bar.","Pull to chest height, elbows leading.","Stop if your shoulders pinch."]],
  ["pikepush","Pike push-up","Shoulders","calisthenics","pushup",3,"8–10","bw",["Hips high in an upside-down V.","Lower your head toward your hands.","Press back up."]],
  ["bandpullapart","Band pull-apart","Shoulders","bands","revfly",3,"15–20","w",["Arms straight at chest height.","Pull the band apart to your chest.","Squeeze your shoulder blades."]],
 
@@ -146,7 +146,7 @@ var EXTRA=[
  ["plank","Plank","Core","calisthenics|yogamat","",3,"45 s","hold",["Elbows under shoulders.","Body straight, glutes squeezed.","Stop when your hips sag."]],
  ["sideplank","Side plank","Core","calisthenics|yogamat","",3,"30 s / side","hold",["Elbow under shoulder.","Hips lifted in a straight line.","Switch sides."]],
  ["abwheel","Ab wheel rollout","Core","abwheel","",3,"8–12","count",["Start on your knees.","Roll out only as far as your back stays flat.","Pull back with your abs."]],
- ["hangleg","Hanging leg raise","Core","pullupbar|abstraps|captain","",3,"10–12","count",["Hang with straight arms.","Raise legs without swinging.","Lower slowly."]],
+ ["hangleg","Hanging leg raise","Core","pullupbar|captain","",3,"10–12","count",["Hang with straight arms.","Raise legs without swinging.","Lower slowly."]],
  ["kneeraise","Captain's chair knee raise","Core","captain|dipstation","",3,"12–15","count",["Back against the pad.","Bring knees to chest.","Lower under control."]],
  ["woodchop","Cable woodchop","Core","cablecross|functional","",3,"12 / side","w",["Pulley high, pull down across your body.","Rotate through your torso.","Pivot your back foot."]],
  ["pallof","Pallof press","Core","cablecross|functional|bands","",3,"10 / side","w",["Stand side-on to the anchor.","Press straight out and hold.","Don't let it twist you."]],
@@ -155,7 +155,7 @@ var EXTRA=[
  ["medslam","Medicine ball slam","Core","medball","",3,"12","count",["Lift the ball overhead.","Slam it down hard.","Use a slam ball, not a bouncy one."]],
  ["stabcrunch","Stability ball crunch","Core","stabball","",3,"15","count",["Ball under your lower back.","Crunch up, not too far.","Lower slowly."]],
  ["torsorot","Rotary torso machine","Core","torso","",3,"12 / side","w",["Sit tall, knees locked in.","Rotate with control.","Go light."]],
- ["lsit","L-sit","Core","parallettes|dipstation","",3,"15 s","hold",["Arms locked, shoulders down.","Legs straight out in front.","Bend knees to make it easier."]],
+ ["lsit","L-sit","Core","dipstation","",3,"15 s","hold",["Arms locked, shoulders down.","Legs straight out in front.","Bend knees to make it easier."]],
  ["hundred","Pilates hundred","Core","yogamat","",2,"60 s","hold",["Head and legs lifted.","Pump your arms with each breath.","Bend knees if your back lifts."]],
  ["rollup","Pilates roll-up","Core","yogamat","",3,"8","count",["Arms overhead, lying flat.","Roll up one vertebra at a time.","Roll down slowly."]],
 
@@ -177,8 +177,7 @@ var EXTRA=[
  ["pigeon","Pigeon pose","Mobility","yogamat","",2,"60 s / side","hold",["Front shin across the mat.","Square your hips.","Use a block under your hip if needed."]],
  ["childpose","Child's pose","Mobility","yogamat","",2,"60 s","hold",["Knees wide, big toes together.","Reach your arms forward.","Breathe slowly into your back."]],
  ["catcow","Cat-cow","Mobility","yogamat|calisthenics","",2,"10","count",["Hands under shoulders, knees under hips.","Round your back, then arch it.","Move with your breath."]],
- ["hipflexor","Kneeling hip flexor stretch","Mobility","yogamat|stretchstrap|calisthenics","",2,"45 s / side","hold",["Back knee down, squeeze that glute.","Shift your hips forward gently.","Stay upright."]],
- ["hamstretch","Strap hamstring stretch","Mobility","stretchstrap|yogablocks","",2,"45 s / side","hold",["Lie on your back, strap round your foot.","Raise a straight leg until you feel the stretch.","Keep the other leg flat."]],
+ ["hipflexor","Kneeling hip flexor stretch","Mobility","yogamat|calisthenics","",2,"45 s / side","hold",["Back knee down, squeeze that glute.","Shift your hips forward gently.","Stay upright."]],
  ["foamroll","Foam roll legs and back","Mobility","foamroller","",1,"5 min","time",["Roll slowly.","Pause on tight spots for 20 seconds.","Avoid rolling your lower back directly."]],
  ["ballrelease","Massage ball glute release","Mobility","massageball","",1,"2 min / side","time",["Sit on the ball under one glute.","Roll slowly and breathe.","Ease off if it's sharp pain."]]
 ];

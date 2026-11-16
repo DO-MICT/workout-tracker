@@ -1,5 +1,5 @@
 {
- "note": "Launch gear trim decided by Deon on 2026-11-15 (review page artifact KqhotmJUYETKjW11xHhaXM). Gear not in keep is hidden (active=false). Floor ids stay valid for any exercise without being a gear item. req_map swaps a removed duplicate for the kept item before pruning. Exercises left with no way to meet their gear are hidden (active=false).",
+ "note": "Launch gear trim decided by Deon on 2026-11-15 (review page artifact KqhotmJUYETKjW11xHhaXM). Gear not in keep is hidden (active=false). Floor ids stay valid for any exercise without being a gear item. req_map swaps a removed duplicate for the kept item before pruning. Exercises left with no way to meet their gear are hidden (active=false). On 2026-11-16 the hidden gear (all ids not in keep, including the floor ids) and the hidden exercises were deleted from the repo and both databases (migration 20261116000024_delete_cut_gear, tools/remove_cut_gear.py).",
  "keep": [
   "abbench",
   "abcrunchm",

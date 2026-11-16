@@ -39,11 +39,10 @@ for k in range(0, len(rows), 100):
 ups = json.load(open("exercise-req-updates.json"))["updates"]
 for u in ups:
     for g in re.split(r"[,|]", u["new_req"]):
-        assert g in ids, (u["id"], g)
+        assert g in ids or g in ("calisthenics", "towel", "wall", "openspace"), (u["id"], g)
 vals = ",\n  ".join("('%s', '%s')" % (u["id"], u["new_req"]) for u in ups)
 out.append(f"update public.exercises e set req = v.req\nfrom (values\n  {vals}\n) as v(id, req)\nwhere e.id = v.id;")
 out.append("commit;")
-out.append("select (select count(*) from public.gear) as gear_rows, "
-           "(select count(*) from public.exercises where req ~ '(^|[,|])(highbench|ssb|pulloverm|yoke|log|tyre)([,|]|$)') as exact_req_rows;")
+out.append("select (select count(*) from public.gear) as gear_rows, (select count(*) from public.exercises) as exercise_rows;")
 open("gear.sql", "w", encoding="utf-8").write("\n\n".join(out) + "\n")
 print(len(rows), "gear rows,", len(ups), "req updates")
