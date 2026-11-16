@@ -282,11 +282,12 @@ test("S7: floor moves count at every location without adding gear", () => {
   assert.ok(ids.includes("glutebridge"), "a bodyweight hinge is on offer with no gear at all");
 });
 
-test("PW6: away from the studio a reformer move offers a band or mat version", () => {
-  const top = R.rankSwaps(CATALOG, "rowing", { gear: ["bands"], n: 3 });
-  assert.ok(top.length);
-  top.forEach((r) => assert.ok(!/reformer/.test(r.o.req), r.o.n));
-  assert.equal(top[0].o.id, "bandrow");
+test("every exercise needs only the 90 kept gear items or the floor", () => {
+  const gear = new Set(require("../data/gear-library/gear.json").items.map((g) => g.id));
+  assert.equal(gear.size, 90);
+  ["calisthenics", "towel", "wall", "openspace"].forEach((id) => gear.add(id));
+  Object.values(CATALOG).forEach((e) => e.req.split(/[,|]/).filter(Boolean).forEach((id) =>
+    assert.ok(gear.has(id), e.id + " needs " + id)));
 });
 
 test("swaps above your level stay in the list, lower down and marked harder", () => {
@@ -457,4 +458,14 @@ test("a workout can't be moved into the future, before 2000 or to a made-up date
 test("moving a workout keeps its length", () => {
   assert.equal(R.shiftStart("2026-11-10T17:00:00.000Z", "2026-11-10T18:00:00.000Z", "2026-11-08T07:00:00.000Z"), "2026-11-08T06:00:00.000Z");
   assert.equal(R.shiftStart(null, "2026-11-10T18:00:00.000Z", "2026-11-08T07:00:00.000Z"), null);
+});
+
+test("launch gear trim: floor, towel, wall and open space need no gear, and old saved gear still counts", () => {
+  assert.deepEqual(R.missingGear("towel", []), [], "towel moves always show");
+  assert.deepEqual(R.missingGear("wall", ["dumbbells"]), [], "wall moves always show");
+  assert.deepEqual(R.missingGear("openspace", ["dumbbells"]), []);
+  assert.deepEqual(R.missingGear("yogamat", ["pilatesmat"]), [], "a saved Pilates mat counts as the fitness mat");
+  assert.deepEqual(R.missingGear("backextm", ["romanchair"]), [], "a saved Roman chair counts as the back extension machine");
+  assert.deepEqual(R.missingGear("powerrack", ["halfrack"]), []);
+  assert.equal(R.missingGear("rings", ["dumbbells"]).length, 1, "rings are no longer floor gear");
 });

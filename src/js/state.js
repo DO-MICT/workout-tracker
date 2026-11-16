@@ -60,7 +60,7 @@ function setStatus(msg){
 function seedMyGym(){
   if(S.gearSeedV1||WEB_MODE) return;
   var g=locState().list[0].gear;
-  ["adjbench","flatbench","barbell","plates","ezbar","dumbbells","lyingpress","shoulderpress","latpulldown","legext","lyingcurl","standcalf","abbench","romanchair","cablecross","pullupbar","bands","yogamat","treadmill","smith","stabball"].forEach(function(id){if(g.indexOf(id)<0)g.push(id);});
+  ["adjbench","flatbench","barbell","plates","ezbar","dumbbells","lyingpress","shoulderpress","latpulldown","legext","lyingcurl","standcalf","abbench","backextm","cablecross","pullupbar","bands","yogamat","treadmill","smith","stabball"].forEach(function(id){if(g.indexOf(id)<0)g.push(id);});
   var k=g.indexOf("bag"); if(k>=0) g.splice(k,1);
   S.gearSeedV1=1; save(); if(typeof renderAll==="function"&&DAYS) renderAll();
 }

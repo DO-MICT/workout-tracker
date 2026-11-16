@@ -89,7 +89,7 @@ a{color:var(--volt)}
 /* "you are here" */
 .here{position:relative;padding-left:52px;margin:6px 0 34px}
 .here .pin{position:absolute;left:4px;top:50%;width:25px;height:25px;margin-top:-12.5px;border-radius:50%;background:var(--volt);box-shadow:0 0 0 6px var(--volt-dim)}
-.here .pin::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--volt);opacity:0;animation:ping 2.4s ease-out infinite}
+.here .pin::after{content:"";position:absolute;top:-6px;right:-6px;bottom:-6px;left:-6px;border-radius:50%;border:2px solid var(--volt);opacity:0;animation:ping 2.4s ease-out infinite}
 @keyframes ping{0%{transform:scale(.8);opacity:.9}100%{transform:scale(1.9);opacity:0}}
 .here div{background:var(--volt);color:var(--ink);border-radius:14px;padding:12px 16px;font-weight:700}
 .here b{font-family:Archivo,Figtree,sans-serif;font-weight:900;font-stretch:70%;text-transform:uppercase;font-size:22px;display:block;line-height:1}

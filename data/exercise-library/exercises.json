@@ -1,6 +1,6 @@
 {
  "version": 1,
- "count": 1032,
+ "count": 940,
  "exercises": [
   {
    "id": "declinepush",
@@ -3232,117 +3232,6 @@
    "notes": "Add a push-up between rows for a harder version."
   },
   {
-   "id": "sbrow",
-   "name": "Sandbag bent-over row",
-   "aliases": [],
-   "training_type": "Strength",
-   "tags": [
-    "Back",
-    "Compound",
-    "Home-friendly",
-    "Strength"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Lats",
-    "Rhomboids"
-   ],
-   "secondary_muscles": [
-    "Biceps",
-    "Rear delts",
-    "Forearms"
-   ],
-   "movement_pattern": "Horizontal pull",
-   "equipment": [
-    "Sandbag"
-   ],
-   "req": "sandbag",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–12",
-   "form_cues": [
-    "Hinge forward with a flat back, holding the bag's handles.",
-    "Row the bag to your belly button.",
-    "Lower it slowly without losing your hinge."
-   ],
-   "common_mistakes": [
-    "Standing up during the row",
-    "Rounding the back"
-   ],
-   "regressions": [
-    "Band seated row"
-   ],
-   "progressions": [
-    "Barbell bent-over row"
-   ],
-   "safety": "Keep the spine neutral and brace before each rep.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Sandbag+bent-over+row+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "sbclean",
-   "name": "Sandbag clean",
-   "aliases": [
-    "Sandbag lap clean"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Compound",
-    "Power",
-    "Strength",
-    "Strongman"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Glutes",
-    "Hamstrings",
-    "Upper back"
-   ],
-   "secondary_muscles": [
-    "Biceps",
-    "Forearms",
-    "Quadriceps"
-   ],
-   "movement_pattern": "Hinge",
-   "equipment": [
-    "Sandbag"
-   ],
-   "req": "sandbag",
-   "equipment_tier": 1,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 4,
-   "reps": "5–8",
-   "form_cues": [
-    "Straddle the bag and grip the sides or handles.",
-    "Drive hips through to pop the bag up.",
-    "Drop under it and catch it on your forearms at the chest."
-   ],
-   "common_mistakes": [
-    "Pulling with a rounded back",
-    "Curling the bag up with the arms"
-   ],
-   "regressions": [
-    "Kettlebell clean"
-   ],
-   "progressions": [
-    "Sandbag shouldering"
-   ],
-   "safety": "Start light; awkward loads need a tight, neutral spine.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Sandbag+clean+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
    "id": "arnold",
    "name": "Arnold press",
    "aliases": [
@@ -4879,60 +4768,6 @@
    "notes": "The lean keeps tension on the side delt at the bottom of the rep."
   },
   {
-   "id": "sbpress",
-   "name": "Sandbag overhead press",
-   "aliases": [
-    "Sandbag clean and press"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Compound",
-    "Shoulders",
-    "Strength"
-   ],
-   "muscle_group": "Shoulders",
-   "primary_muscles": [
-    "Shoulders",
-    "Triceps"
-   ],
-   "secondary_muscles": [
-    "Core",
-    "Upper back"
-   ],
-   "movement_pattern": "Vertical push",
-   "equipment": [
-    "Sandbag"
-   ],
-   "req": "sandbag",
-   "equipment_tier": 1,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "6–8",
-   "form_cues": [
-    "Clean the bag to your chest.",
-    "Brace and press it straight overhead.",
-    "Lower it back to the chest under control."
-   ],
-   "common_mistakes": [
-    "Leaning back",
-    "Bag rolling forward overhead"
-   ],
-   "regressions": [
-    "Kettlebell overhead press"
-   ],
-   "progressions": [
-    "Log press"
-   ],
-   "safety": "Use handles if available; loose sand shifts mid-rep.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Sandbag+overhead+press+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
    "id": "dbextrot",
    "name": "Side-lying dumbbell external rotation",
    "aliases": [
@@ -5830,58 +5665,6 @@
    "notes": ""
   },
   {
-   "id": "gripper",
-   "name": "Hand gripper squeeze",
-   "aliases": [
-    "Gripper close",
-    "Captains of Crush gripper"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Arms",
-    "Home-friendly",
-    "Isolation",
-    "Strength"
-   ],
-   "muscle_group": "Arms",
-   "primary_muscles": [
-    "Forearm flexors"
-   ],
-   "secondary_muscles": [
-    "Hand intrinsics"
-   ],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Hand gripper"
-   ],
-   "req": "gripper",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "count",
-   "unilateral": true,
-   "sets": 3,
-   "reps": "8–12 / hand",
-   "form_cues": [
-    "Set the gripper deep in the palm.",
-    "Squeeze until the handles touch.",
-    "Hold the close for a second, then open slowly."
-   ],
-   "common_mistakes": [
-    "Gripper set too high in the fingers",
-    "Rushing reps with no full close"
-   ],
-   "regressions": [
-    "Finger extension with band"
-   ],
-   "progressions": [],
-   "safety": "Build up gradually; overuse can irritate finger tendons.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Hand+gripper+squeeze+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Hold for time at the close for crush endurance."
-  },
-  {
    "id": "dbohext",
    "name": "Overhead dumbbell extension",
    "aliases": [
@@ -6033,112 +5816,6 @@
    "notes": ""
   },
   {
-   "id": "fatgripcurl",
-   "name": "Thick-grip dumbbell curl",
-   "aliases": [
-    "Fat grip curl"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Arms",
-    "Isolation",
-    "Strength"
-   ],
-   "muscle_group": "Arms",
-   "primary_muscles": [
-    "Biceps",
-    "Forearm flexors"
-   ],
-   "secondary_muscles": [
-    "Brachioradialis"
-   ],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Thick bar grips",
-    "Dumbbells"
-   ],
-   "req": "fatgrips,dumbbells",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–12",
-   "form_cues": [
-    "Fit the thick grips and hold the dumbbells hard.",
-    "Curl up with elbows pinned to your sides.",
-    "Lower slowly without losing your crush grip."
-   ],
-   "common_mistakes": [
-    "Swinging",
-    "Wrists curling back"
-   ],
-   "regressions": [
-    "Dumbbell curl"
-   ],
-   "progressions": [],
-   "safety": "Use about 20–30% less weight than your normal curl.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Thick-grip+dumbbell+curl+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "fatgriphold",
-   "name": "Thick-grip dumbbell hold",
-   "aliases": [
-    "Fat grip hold"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Arms",
-    "Isolation",
-    "Strength"
-   ],
-   "muscle_group": "Arms",
-   "primary_muscles": [
-    "Forearm flexors"
-   ],
-   "secondary_muscles": [
-    "Traps",
-    "Hand intrinsics"
-   ],
-   "movement_pattern": "Hold",
-   "equipment": [
-    "Thick bar grips",
-    "Dumbbells"
-   ],
-   "req": "fatgrips,dumbbells",
-   "equipment_tier": 1,
-   "difficulty": "Intermediate",
-   "tracking": "hold",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "20–40 sec",
-   "form_cues": [
-    "Fit thick grips over the handles.",
-    "Deadlift the dumbbells and stand tall.",
-    "Crush the handles and hold for time."
-   ],
-   "common_mistakes": [
-    "Shrugging the shoulders",
-    "Letting the thumb slip"
-   ],
-   "regressions": [
-    "Farmer's carry"
-   ],
-   "progressions": [
-    "Axle deadlift"
-   ],
-   "safety": "Set the dumbbells down before your grip fully fails.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Thick-grip+dumbbell+hold+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
    "id": "wristcurl",
    "name": "Wrist curl",
    "aliases": [
@@ -6188,59 +5865,6 @@
    "diagram": "",
    "in_app": true,
    "notes": ""
-  },
-  {
-   "id": "wristroller",
-   "name": "Wrist roller",
-   "aliases": [
-    "Forearm roller"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Arms",
-    "Endurance",
-    "Isolation",
-    "Strength"
-   ],
-   "muscle_group": "Arms",
-   "primary_muscles": [
-    "Forearm flexors",
-    "Forearm extensors"
-   ],
-   "secondary_muscles": [
-    "Front delts"
-   ],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Wrist roller",
-    "Weight plate"
-   ],
-   "req": "wristroller",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "2–3 lengths",
-   "form_cues": [
-    "Hold the roller at shoulder height with straight arms.",
-    "Roll the weight all the way up, one hand at a time.",
-    "Unroll slowly under control; don't let it drop."
-   ],
-   "common_mistakes": [
-    "Letting arms drop to waist height",
-    "Spinning the weight down quickly"
-   ],
-   "regressions": [
-    "Wrist curl"
-   ],
-   "progressions": [],
-   "safety": "Stop if you feel sharp pain at the elbow (tennis-elbow area).",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Wrist+roller+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Roll overhand for extensors and underhand for flexors."
   },
   {
    "id": "dbzottman",
@@ -7925,115 +7549,6 @@
    "safety": "Control the ball overhead; don't release or throw it.",
    "video": null,
    "video_search": "https://www.youtube.com/results?search_query=Medicine+ball+squat+to+press+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "sbbearsq",
-   "name": "Sandbag bear-hug squat",
-   "aliases": [],
-   "training_type": "Strength",
-   "tags": [
-    "Compound",
-    "Core",
-    "Legs",
-    "Strength"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Quadriceps",
-    "Glutes"
-   ],
-   "secondary_muscles": [
-    "Upper back",
-    "Core"
-   ],
-   "movement_pattern": "Squat",
-   "equipment": [
-    "Sandbag"
-   ],
-   "req": "sandbag",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–12",
-   "form_cues": [
-    "Hug the bag tight to your chest.",
-    "Sit down between your knees.",
-    "Stand up without letting the bag pull you forward."
-   ],
-   "common_mistakes": [
-    "Rounding forward",
-    "Heels lifting"
-   ],
-   "regressions": [
-    "Bodyweight squat"
-   ],
-   "progressions": [
-    "Sandbag Zercher squat"
-   ],
-   "safety": "Keep the bag close to reduce strain on the lower back.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Sandbag+bear-hug+squat+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "sbzercher",
-   "name": "Sandbag Zercher squat",
-   "aliases": [
-    "Sandbag front-hold squat"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Compound",
-    "Core",
-    "Legs",
-    "Strength"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Quadriceps",
-    "Glutes"
-   ],
-   "secondary_muscles": [
-    "Upper back",
-    "Core",
-    "Biceps"
-   ],
-   "movement_pattern": "Squat",
-   "equipment": [
-    "Sandbag"
-   ],
-   "req": "sandbag",
-   "equipment_tier": 1,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–10",
-   "form_cues": [
-    "Cradle the bag in the crooks of your elbows.",
-    "Squat deep while keeping the chest up.",
-    "Drive up through the whole foot."
-   ],
-   "common_mistakes": [
-    "Upper back rounding",
-    "Bag sliding toward the wrists"
-   ],
-   "regressions": [
-    "Goblet squat"
-   ],
-   "progressions": [
-    "Front squat"
-   ],
-   "safety": "Keep elbows high and the load tight to your body.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Sandbag+Zercher+squat+exercise+form",
    "diagram": "",
    "in_app": false,
    "notes": ""
@@ -10282,61 +9797,6 @@
    "notes": "Kneeling removes leg drive and keeps the work strict."
   },
   {
-   "id": "landminesqueeze",
-   "name": "Landmine squeeze press",
-   "aliases": [
-    "Landmine chest press"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Hypertrophy",
-    "Strength"
-   ],
-   "muscle_group": "Chest",
-   "primary_muscles": [
-    "Chest"
-   ],
-   "secondary_muscles": [
-    "Front delts",
-    "Triceps"
-   ],
-   "movement_pattern": "Horizontal push",
-   "equipment": [
-    "Landmine",
-    "Olympic barbell",
-    "Weight plates"
-   ],
-   "req": "landmine,barbell,plates",
-   "equipment_tier": 2,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "10–12",
-   "form_cues": [
-    "Hold the bar end with both palms pressed together",
-    "Squeeze your hands hard into the bar",
-    "Press up and out from your chest"
-   ],
-   "common_mistakes": [
-    "Losing the squeeze",
-    "Leaning back",
-    "Using the legs to push"
-   ],
-   "regressions": [
-    "Push-ups"
-   ],
-   "progressions": [
-    "Landmine press"
-   ],
-   "safety": "Keep the landmine anchored so it can't slide.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Landmine+squeeze+press+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
    "id": "lowhighfly",
    "name": "Low-to-high cable fly",
    "aliases": [
@@ -10502,115 +9962,6 @@
    "diagram": "",
    "in_app": false,
    "notes": "Targets the middle of the chest."
-  },
-  {
-   "id": "multigympress",
-   "name": "Multi-gym chest press",
-   "aliases": [
-    "Home gym chest press"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Compound",
-    "Home-friendly",
-    "Hypertrophy",
-    "Strength"
-   ],
-   "muscle_group": "Chest",
-   "primary_muscles": [
-    "Chest"
-   ],
-   "secondary_muscles": [
-    "Front delts",
-    "Triceps"
-   ],
-   "movement_pattern": "Horizontal push",
-   "equipment": [
-    "Home multi-gym"
-   ],
-   "req": "multigym",
-   "equipment_tier": 2,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "10–12",
-   "form_cues": [
-    "Set the seat so handles line up with mid-chest.",
-    "Press forward smoothly until arms are nearly straight.",
-    "Control the weight back until you feel a chest stretch."
-   ],
-   "common_mistakes": [
-    "Shrugging shoulders up to the ears.",
-    "Letting the stack slam between reps."
-   ],
-   "regressions": [
-    "Push-ups"
-   ],
-   "progressions": [
-    "Seated chest press machine",
-    "Flat dumbbell press"
-   ],
-   "safety": "Adjust the seat before loading; keep the weight stack clear of hands and feet.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Multi-gym+chest+press+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Most home multi-gyms use a pulley-driven press arm; resistance may feel lighter than a commercial machine."
-  },
-  {
-   "id": "multigymfly",
-   "name": "Multi-gym pec fly",
-   "aliases": [
-    "Home gym butterfly",
-    "Multi-gym pec deck"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Home-friendly",
-    "Hypertrophy",
-    "Isolation",
-    "Strength"
-   ],
-   "muscle_group": "Chest",
-   "primary_muscles": [
-    "Chest"
-   ],
-   "secondary_muscles": [
-    "Front delts"
-   ],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Home multi-gym"
-   ],
-   "req": "multigym",
-   "equipment_tier": 2,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "12–15",
-   "form_cues": [
-    "Keep a soft bend in the elbows throughout.",
-    "Squeeze the pads or handles together in front of your chest.",
-    "Open slowly until you feel a stretch, not a strain."
-   ],
-   "common_mistakes": [
-    "Pushing with the hands instead of hugging with the arms.",
-    "Letting the arms travel too far back."
-   ],
-   "regressions": [
-    "Band chest fly"
-   ],
-   "progressions": [
-    "Pec deck fly"
-   ],
-   "safety": "Avoid overstretching the shoulders at the open position.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Multi-gym+pec+fly+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
   },
   {
    "id": "dbneutralpress",
@@ -11190,7 +10541,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -12286,62 +11637,6 @@
    "notes": ""
   },
   {
-   "id": "meadows",
-   "name": "Meadows row",
-   "aliases": [
-    "Landmine single-arm row"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Hypertrophy",
-    "Strength",
-    "Unilateral"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Lats",
-    "Upper back"
-   ],
-   "secondary_muscles": [
-    "Rear delts",
-    "Biceps",
-    "Forearms"
-   ],
-   "movement_pattern": "Horizontal pull",
-   "equipment": [
-    "Landmine",
-    "Olympic barbell",
-    "Weight plates"
-   ],
-   "req": "landmine,barbell,plates",
-   "equipment_tier": 2,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": true,
-   "sets": 3,
-   "reps": "10 / side",
-   "form_cues": [
-    "Stand side-on to the bar end and stagger your stance",
-    "Grip the thick end overhand",
-    "Pull your elbow up and back"
-   ],
-   "common_mistakes": [
-    "Twisting the torso",
-    "Shrugging",
-    "Too heavy"
-   ],
-   "regressions": [
-    "One-arm dumbbell row"
-   ],
-   "progressions": [],
-   "safety": "Rest your free forearm on your knee for support.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Meadows+row+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
    "id": "neutralpulldown",
    "name": "Neutral-grip lat pulldown",
    "aliases": [
@@ -12684,60 +11979,6 @@
    "notes": ""
   },
   {
-   "id": "ringrow",
-   "name": "Ring row",
-   "aliases": [],
-   "training_type": "Strength",
-   "tags": [
-    "Back",
-    "Compound",
-    "Strength"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Lats",
-    "Rhomboids"
-   ],
-   "secondary_muscles": [
-    "Biceps",
-    "Rear delts",
-    "Core"
-   ],
-   "movement_pattern": "Horizontal pull",
-   "equipment": [
-    "Gymnastic rings"
-   ],
-   "req": "rings",
-   "equipment_tier": 2,
-   "difficulty": "Beginner",
-   "tracking": "bw",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–12",
-   "form_cues": [
-    "Hang under the rings, body straight.",
-    "Pull the rings to your ribs, turning palms in.",
-    "Lower to straight arms with control."
-   ],
-   "common_mistakes": [
-    "Hips sagging",
-    "Short range of motion"
-   ],
-   "regressions": [
-    "Suspension row"
-   ],
-   "progressions": [
-    "Inverted row",
-    "Pull-ups"
-   ],
-   "safety": "Check ring straps and anchor before use.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Ring+row+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Raise the feet on a box to make it harder."
-  },
-  {
    "id": "ropestraightarm",
    "name": "Rope straight-arm pulldown",
    "aliases": [
@@ -12792,60 +12033,6 @@
    "diagram": "",
    "in_app": false,
    "notes": "The rope allows a slightly longer range than the bar."
-  },
-  {
-   "id": "sealrow",
-   "name": "Seal row",
-   "aliases": [
-    "Bench barbell row"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Hypertrophy",
-    "Strength"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Upper back",
-    "Lats"
-   ],
-   "secondary_muscles": [
-    "Rear delts",
-    "Biceps"
-   ],
-   "movement_pattern": "Horizontal pull",
-   "equipment": [
-    "Olympic barbell",
-    "Weight plates",
-    "High flat bench"
-   ],
-   "req": "barbell,plates,highbench",
-   "equipment_tier": 2,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–12",
-   "form_cues": [
-    "Lie chest-down on a raised bench",
-    "Pull the bar to the underside of the bench",
-    "Lower to full stretch"
-   ],
-   "common_mistakes": [
-    "Lifting the chest off the bench",
-    "Short range",
-    "Kicking legs"
-   ],
-   "regressions": [
-    "Chest-supported row machine"
-   ],
-   "progressions": [],
-   "safety": "Bench must be stable and raised on blocks or a frame.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Seal+row+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Removes the lower back from rowing. Needs a raised bench (no specific gear id)."
   },
   {
    "id": "cablerow",
@@ -13609,7 +12796,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -13638,65 +12825,6 @@
    "diagram": "",
    "in_app": true,
    "notes": "Walk feet forward to make it harder."
-  },
-  {
-   "id": "tbarrow",
-   "name": "T-bar row",
-   "aliases": [
-    "Landmine row",
-    "Corner row"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Compound",
-    "Hypertrophy",
-    "Strength"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Upper back",
-    "Lats"
-   ],
-   "secondary_muscles": [
-    "Rear delts",
-    "Biceps",
-    "Lower back"
-   ],
-   "movement_pattern": "Horizontal pull",
-   "equipment": [
-    "Landmine or T-bar row",
-    "Olympic barbell",
-    "Weight plates"
-   ],
-   "req": "tbar|landmine,barbell,plates",
-   "equipment_tier": 2,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–10",
-   "form_cues": [
-    "Straddle the bar and hinge to about 45°",
-    "Pull the handle to your chest",
-    "Lower slowly to full stretch"
-   ],
-   "common_mistakes": [
-    "Rounding the back",
-    "Standing up too much",
-    "Using momentum"
-   ],
-   "regressions": [
-    "Seated cable row"
-   ],
-   "progressions": [
-    "Pendlay row"
-   ],
-   "safety": "Keep your back flat; use a V-handle under the bar.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=T-bar+row+exercise+form",
-   "diagram": "bbrow",
-   "in_app": true,
-   "notes": "The machine version needs only the tbar gear."
   },
   {
    "id": "trapdl",
@@ -14861,177 +13989,6 @@
    "notes": "Good for posture and shoulder blade control."
   },
   {
-   "id": "landminelateral",
-   "name": "Landmine lateral raise",
-   "aliases": [
-    "Landmine side raise"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Hypertrophy",
-    "Isolation",
-    "Strength",
-    "Unilateral"
-   ],
-   "muscle_group": "Shoulders",
-   "primary_muscles": [
-    "Side delts"
-   ],
-   "secondary_muscles": [
-    "Traps"
-   ],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Landmine",
-    "Olympic barbell",
-    "Weight plates"
-   ],
-   "req": "landmine,barbell,plates",
-   "equipment_tier": 2,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": true,
-   "sets": 3,
-   "reps": "10–12 / side",
-   "form_cues": [
-    "Stand side-on, holding the bar end low across your body",
-    "Raise it out to shoulder height",
-    "Lower slowly"
-   ],
-   "common_mistakes": [
-    "Shrugging",
-    "Swinging",
-    "Too heavy"
-   ],
-   "regressions": [
-    "Dumbbell lateral raise"
-   ],
-   "progressions": [],
-   "safety": "Light loads.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Landmine+lateral+raise+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "landminepress",
-   "name": "Landmine press",
-   "aliases": [
-    "Single-arm landmine press",
-    "Half-kneeling landmine press"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Rehab",
-    "Strength",
-    "Unilateral"
-   ],
-   "muscle_group": "Shoulders",
-   "primary_muscles": [
-    "Shoulders",
-    "Upper chest"
-   ],
-   "secondary_muscles": [
-    "Triceps",
-    "Core"
-   ],
-   "movement_pattern": "Vertical push",
-   "equipment": [
-    "Landmine",
-    "Olympic barbell",
-    "Weight plates"
-   ],
-   "req": "landmine,barbell,plates",
-   "equipment_tier": 2,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": true,
-   "sets": 3,
-   "reps": "8–10 / side",
-   "form_cues": [
-    "Hold the bar end at your shoulder",
-    "Press up and forward",
-    "Lower slowly back to the shoulder"
-   ],
-   "common_mistakes": [
-    "Leaning back",
-    "Shrugging",
-    "Twisting"
-   ],
-   "regressions": [
-    "Band chest press"
-   ],
-   "progressions": [
-    "Standing barbell overhead press"
-   ],
-   "safety": "Shoulder-friendly; keep your ribs down.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Landmine+press+exercise+form",
-   "diagram": "ohp",
-   "in_app": true,
-   "notes": "Do it half-kneeling or standing."
-  },
-  {
-   "id": "landminethruster",
-   "name": "Landmine thruster",
-   "aliases": [
-    "Landmine squat to press"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Compound",
-    "Endurance",
-    "Power",
-    "Strength"
-   ],
-   "muscle_group": "Shoulders",
-   "primary_muscles": [
-    "Quadriceps",
-    "Glutes",
-    "Shoulders"
-   ],
-   "secondary_muscles": [
-    "Triceps",
-    "Core"
-   ],
-   "movement_pattern": "Squat",
-   "equipment": [
-    "Landmine",
-    "Olympic barbell",
-    "Weight plates"
-   ],
-   "req": "landmine,barbell,plates",
-   "equipment_tier": 2,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–10",
-   "form_cues": [
-    "Squat with the bar end at your chest",
-    "Drive up and press in one motion",
-    "Lower back to the chest"
-   ],
-   "common_mistakes": [
-    "Pressing before standing",
-    "Leaning back",
-    "Losing balance"
-   ],
-   "regressions": [
-    "Landmine squat"
-   ],
-   "progressions": [
-    "Barbell thruster"
-   ],
-   "safety": "Moderate loads; keep your core braced.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Landmine+thruster+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
    "id": "dblyinglat",
    "name": "Lying side lateral raise",
    "aliases": [
@@ -15612,7 +14569,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -15667,7 +14624,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -15721,7 +14678,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -17832,55 +16789,6 @@
    "notes": ""
   },
   {
-   "id": "ringcurl",
-   "name": "Ring bicep curl",
-   "aliases": [],
-   "training_type": "Strength",
-   "tags": [
-    "Arms",
-    "Isolation",
-    "Strength"
-   ],
-   "muscle_group": "Arms",
-   "primary_muscles": [
-    "Biceps"
-   ],
-   "secondary_muscles": [
-    "Forearms",
-    "Core"
-   ],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Gymnastic rings"
-   ],
-   "req": "rings",
-   "equipment_tier": 2,
-   "difficulty": "Intermediate",
-   "tracking": "bw",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–12",
-   "form_cues": [
-    "Lean back with palms up and arms straight.",
-    "Curl hands toward your forehead, elbows high.",
-    "Lower slowly without dropping elbows."
-   ],
-   "common_mistakes": [
-    "Turning it into a row",
-    "Hips sagging"
-   ],
-   "regressions": [
-    "Suspension bicep curl"
-   ],
-   "progressions": [],
-   "safety": "Rings rotate freely, so start with a small lean.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Ring+bicep+curl+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
    "id": "ropecurl",
    "name": "Rope hammer curl",
    "aliases": [
@@ -18285,7 +17193,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -18337,7 +17245,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -20028,118 +18936,6 @@
    "notes": ""
   },
   {
-   "id": "landminerevlunge",
-   "name": "Landmine reverse lunge",
-   "aliases": [
-    "Landmine lunge"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Strength",
-    "Unilateral"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Quadriceps",
-    "Glutes"
-   ],
-   "secondary_muscles": [
-    "Core",
-    "Hamstrings"
-   ],
-   "movement_pattern": "Lunge",
-   "equipment": [
-    "Landmine",
-    "Olympic barbell",
-    "Weight plates"
-   ],
-   "req": "landmine,barbell,plates",
-   "equipment_tier": 2,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": true,
-   "sets": 3,
-   "reps": "8 / side",
-   "form_cues": [
-    "Hold the bar end at your chest",
-    "Step back and lower the knee",
-    "Drive through the front foot to stand"
-   ],
-   "common_mistakes": [
-    "Short step",
-    "Torso collapsing",
-    "Wobbly knees"
-   ],
-   "regressions": [
-    "Reverse lunge"
-   ],
-   "progressions": [
-    "Barbell reverse lunge"
-   ],
-   "safety": "Stable loading for beginners.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Landmine+reverse+lunge+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "landminesquat",
-   "name": "Landmine squat",
-   "aliases": [
-    "Landmine goblet squat"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Compound",
-    "Strength"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Quadriceps",
-    "Glutes"
-   ],
-   "secondary_muscles": [
-    "Core",
-    "Adductors"
-   ],
-   "movement_pattern": "Squat",
-   "equipment": [
-    "Landmine",
-    "Olympic barbell",
-    "Weight plates"
-   ],
-   "req": "landmine,barbell,plates",
-   "equipment_tier": 2,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–12",
-   "form_cues": [
-    "Hold the bar end at your chest",
-    "Sit down between your heels",
-    "Drive up through mid-foot"
-   ],
-   "common_mistakes": [
-    "Knees caving",
-    "Leaning onto the bar",
-    "Heels lifting"
-   ],
-   "regressions": [
-    "Goblet squat"
-   ],
-   "progressions": [
-    "Front squat"
-   ],
-   "safety": "Good beginner squat; the arc supports the torso.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Landmine+squat+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
    "id": "lowbarsquat",
    "name": "Low-bar back squat",
    "aliases": [
@@ -20199,111 +18995,6 @@
    "diagram": "",
    "in_app": false,
    "notes": "Common in powerlifting because the shorter lever lets you move more weight."
-  },
-  {
-   "id": "multigymlegcurl",
-   "name": "Multi-gym leg curl",
-   "aliases": [
-    "Home gym leg curl"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Home-friendly",
-    "Hypertrophy",
-    "Isolation",
-    "Strength"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Hamstrings"
-   ],
-   "secondary_muscles": [
-    "Calves"
-   ],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Home multi-gym"
-   ],
-   "req": "multigym",
-   "equipment_tier": 2,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "10–12",
-   "form_cues": [
-    "Set the pad just above your heels.",
-    "Curl the pad towards your glutes without lifting your hips.",
-    "Return slowly to almost straight legs."
-   ],
-   "common_mistakes": [
-    "Hips popping up off the bench.",
-    "Cutting the range short at the bottom."
-   ],
-   "regressions": [
-    "Glute bridge"
-   ],
-   "progressions": [
-    "Lying leg curl",
-    "Seated leg curl"
-   ],
-   "safety": "Keep your hips pressed down to protect the lower back.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Multi-gym+leg+curl+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Depending on the model this is done seated, standing or lying on the leg-extension attachment."
-  },
-  {
-   "id": "multigymlegext",
-   "name": "Multi-gym leg extension",
-   "aliases": [
-    "Home gym leg extension"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Home-friendly",
-    "Hypertrophy",
-    "Isolation",
-    "Strength"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Quadriceps"
-   ],
-   "secondary_muscles": [],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Home multi-gym"
-   ],
-   "req": "multigym",
-   "equipment_tier": 2,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "12–15",
-   "form_cues": [
-    "Line your knee up with the machine's pivot point.",
-    "Kick up until legs are straight and squeeze the quads.",
-    "Lower slowly over two to three seconds."
-   ],
-   "common_mistakes": [
-    "Swinging the weight up with momentum.",
-    "Lifting hips off the seat."
-   ],
-   "regressions": [
-    "Bodyweight squat"
-   ],
-   "progressions": [
-    "Leg extension"
-   ],
-   "safety": "Start light if you have knee pain and stop if it sharpens.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Multi-gym+leg+extension+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Usually shares a station with the multi-gym leg curl."
   },
   {
    "id": "ohsquat",
@@ -20367,67 +19058,6 @@
    "diagram": "",
    "in_app": false,
    "notes": "A key snatch accessory that builds overhead stability and mobility."
-  },
-  {
-   "id": "safetybarsquat",
-   "name": "Safety squat bar squat",
-   "aliases": [
-    "SSB squat",
-    "Yoke bar squat"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Compound",
-    "Rehab",
-    "Strength"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Quadriceps",
-    "Glutes"
-   ],
-   "secondary_muscles": [
-    "Upper back",
-    "Core",
-    "Adductors"
-   ],
-   "movement_pattern": "Squat",
-   "equipment": [
-    "Safety squat bar",
-    "Weight plates",
-    "Squat rack"
-   ],
-   "req": "ssb,plates,powerrack|squatstands|halfrack",
-   "equipment_tier": 2,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 4,
-   "reps": "5–8",
-   "form_cues": [
-    "Hold the handles lightly and keep elbows down",
-    "Brace and fight to keep your chest up",
-    "Sit down between your heels and drive straight up"
-   ],
-   "common_mistakes": [
-    "Letting the bar tip you forward",
-    "Pulling the handles too hard",
-    "Cutting depth"
-   ],
-   "regressions": [
-    "Box squat",
-    "Goblet squat"
-   ],
-   "progressions": [
-    "Barbell back squat",
-    "Pause squat"
-   ],
-   "safety": "Use safety pins; the bar's camber pushes you forward, so start lighter than your back squat.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Safety+squat+bar+squat+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Needs a safety squat bar (no app gear id; nearest is barbell). Shoulder-friendly squat option."
   },
   {
    "id": "dbseatcalf",
@@ -21047,7 +19677,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -21158,7 +19788,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -21804,61 +20434,6 @@
    "notes": ""
   },
   {
-   "id": "landminerdl",
-   "name": "Single-leg landmine Romanian deadlift",
-   "aliases": [
-    "Landmine single-leg RDL"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Balance",
-    "Strength",
-    "Unilateral"
-   ],
-   "muscle_group": "Glutes",
-   "primary_muscles": [
-    "Hamstrings",
-    "Glutes"
-   ],
-   "secondary_muscles": [
-    "Core",
-    "Adductors"
-   ],
-   "movement_pattern": "Hinge",
-   "equipment": [
-    "Landmine",
-    "Olympic barbell",
-    "Weight plates"
-   ],
-   "req": "landmine,barbell,plates",
-   "equipment_tier": 2,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": true,
-   "sets": 3,
-   "reps": "8 / side",
-   "form_cues": [
-    "Hold the bar end in the opposite hand",
-    "Hinge on one leg, reaching the other leg back",
-    "Return by driving hips forward"
-   ],
-   "common_mistakes": [
-    "Rounding the back",
-    "Opening the hips",
-    "Knee locked"
-   ],
-   "regressions": [
-    "Single-leg Romanian deadlift"
-   ],
-   "progressions": [],
-   "safety": "The landmine offers extra stability.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Single-leg+landmine+Romanian+deadlift+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
    "id": "smithhipthrust",
    "name": "Smith machine hip thrust",
    "aliases": [
@@ -22214,7 +20789,7 @@
    "equipment": [
     "Decline press machine"
    ],
-   "req": "declinepressm|plateincline|chestpress",
+   "req": "inclinepressm|chestpress",
    "equipment_tier": 3,
    "difficulty": "Beginner",
    "tracking": "w",
@@ -22929,7 +21504,7 @@
    "equipment": [
     "Back extension / Roman chair"
    ],
-   "req": "romanchair",
+   "req": "backextm",
    "equipment_tier": 3,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -23075,60 +21650,6 @@
    "notes": "Easier on the lower back than the standing T-bar row."
   },
   {
-   "id": "ghdbackext",
-   "name": "GHD back extension",
-   "aliases": [
-    "90-degree back extension",
-    "GHD hyperextension",
-    "Horizontal back extension"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Advanced",
-    "Strength"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Lower back",
-    "Glutes"
-   ],
-   "secondary_muscles": [
-    "Hamstrings"
-   ],
-   "movement_pattern": "Hinge",
-   "equipment": [
-    "Glute-ham developer (GHD)"
-   ],
-   "req": "ghd",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "bw",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "10–12",
-   "form_cues": [
-    "Set the pad at your hips with feet locked under the rollers.",
-    "Lower your torso towards the floor with a flat back.",
-    "Rise until your body is horizontal, not higher."
-   ],
-   "common_mistakes": [
-    "Swinging up past horizontal.",
-    "Rounding fast at the bottom."
-   ],
-   "regressions": [
-    "Back extension"
-   ],
-   "progressions": [
-    "Reverse hyper"
-   ],
-   "safety": "Lift no higher than straight; this horizontal version is harder than 45 degrees.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=GHD+back+extension+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
    "id": "dyrow",
    "name": "Iso-lateral D.Y. row",
    "aliases": [
@@ -23182,62 +21703,6 @@
    "diagram": "",
    "in_app": false,
    "notes": "Mimics the underhand barbell row made popular by Dorian Yates."
-  },
-  {
-   "id": "isopulldown",
-   "name": "Iso-lateral front lat pulldown",
-   "aliases": [
-    "Hammer Strength pulldown",
-    "Plate-loaded pulldown"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Compound",
-    "Hypertrophy",
-    "Strength"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Lats"
-   ],
-   "secondary_muscles": [
-    "Biceps",
-    "Teres major",
-    "Rear delts"
-   ],
-   "movement_pattern": "Vertical pull",
-   "equipment": [
-    "Plate-loaded pulldown machine",
-    "Weight plates"
-   ],
-   "req": "leverpulldown,plates",
-   "equipment_tier": 3,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "10–12",
-   "form_cues": [
-    "Lock your thighs under the pads.",
-    "Pull the handles down towards your shoulders, elbows to ribs.",
-    "Let the arms rise slowly to a full stretch."
-   ],
-   "common_mistakes": [
-    "Leaning back a lot to cheat.",
-    "Not letting the arms straighten."
-   ],
-   "regressions": [
-    "Assisted pull-up"
-   ],
-   "progressions": [
-    "Pull-ups"
-   ],
-   "safety": "Control the return so the plates don't yank your shoulders.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Iso-lateral+front+lat+pulldown+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No exact app gear id; nearest is the lat pulldown machine."
   },
   {
    "id": "isohighrow",
@@ -23434,7 +21899,7 @@
    "equipment": [
     "Shrug machine"
    ],
-   "req": "shrugm|uprightrowm",
+   "req": "shrugm",
    "equipment_tier": 3,
    "difficulty": "Beginner",
    "tracking": "w",
@@ -23462,61 +21927,6 @@
    "diagram": "",
    "in_app": false,
    "notes": ""
-  },
-  {
-   "id": "pullovermach",
-   "name": "Pullover machine",
-   "aliases": [
-    "Machine pullover",
-    "Nautilus pullover"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Hypertrophy",
-    "Isolation",
-    "Strength"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Lats"
-   ],
-   "secondary_muscles": [
-    "Chest",
-    "Teres major",
-    "Triceps (long head)"
-   ],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Pullover machine"
-   ],
-   "req": "pulloverm",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "10–12",
-   "form_cues": [
-    "Set the seat so your shoulders line up with the pivot.",
-    "Drive the elbows down in an arc to your stomach.",
-    "Return slowly to a deep overhead stretch."
-   ],
-   "common_mistakes": [
-    "Pulling with the hands instead of the elbows.",
-    "Arching the lower back at the top."
-   ],
-   "regressions": [
-    "Straight-arm pulldown"
-   ],
-   "progressions": [
-    "Dumbbell pullover"
-   ],
-   "safety": "Limit the top stretch if overhead positions hurt your shoulders.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Pullover+machine+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No exact app gear id; nearest is the lat pulldown machine. Trains lats without the biceps tiring first."
   },
   {
    "id": "backextmach",
@@ -23784,58 +22194,6 @@
    "safety": "Keep it light and controlled; the rear delts are small.",
    "video": null,
    "video_search": "https://www.youtube.com/results?search_query=Machine+rear+delt+row+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "machuprightrow",
-   "name": "Machine upright row",
-   "aliases": [
-    "Upright row machine"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Hypertrophy",
-    "Strength"
-   ],
-   "muscle_group": "Shoulders",
-   "primary_muscles": [
-    "Side delts",
-    "Upper traps"
-   ],
-   "secondary_muscles": [
-    "Biceps"
-   ],
-   "movement_pattern": "Vertical pull",
-   "equipment": [
-    "Shrug / upright row machine"
-   ],
-   "req": "uprightrowm",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "10–12",
-   "form_cues": [
-    "Grip slightly wider than shoulders.",
-    "Lead with the elbows up to about shoulder height.",
-    "Lower slowly to straight arms."
-   ],
-   "common_mistakes": [
-    "Pulling elbows above shoulder level.",
-    "Narrow grip causing shoulder pinch."
-   ],
-   "regressions": [
-    "Lateral raise machine"
-   ],
-   "progressions": [
-    "Cable upright row"
-   ],
-   "safety": "Stop at shoulder height and skip it if you feel a pinch.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Machine+upright+row+exercise+form",
    "diagram": "",
    "in_app": false,
    "notes": ""
@@ -24163,60 +22521,6 @@
    "notes": "Overhead position stretches the long head of the triceps."
   },
   {
-   "id": "machinedip",
-   "name": "Seated dip machine",
-   "aliases": [
-    "Triceps dip machine",
-    "Seated triceps press"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Compound",
-    "Hypertrophy",
-    "Strength"
-   ],
-   "muscle_group": "Arms",
-   "primary_muscles": [
-    "Triceps"
-   ],
-   "secondary_muscles": [
-    "Chest",
-    "Front delts"
-   ],
-   "movement_pattern": "Vertical push",
-   "equipment": [
-    "Seated dip machine"
-   ],
-   "req": "dipm",
-   "equipment_tier": 3,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "10–12",
-   "form_cues": [
-    "Sit tall with your back on the pad and grip the handles.",
-    "Press down until arms are straight, elbows close to sides.",
-    "Let the handles rise slowly to about 90 degrees."
-   ],
-   "common_mistakes": [
-    "Elbows flaring wide.",
-    "Leaning forward and pushing with shoulders."
-   ],
-   "regressions": [
-    "Bench dips"
-   ],
-   "progressions": [
-    "Chest dips"
-   ],
-   "safety": "Don't let the handles rise so high that your shoulders roll forward.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Seated+dip+machine+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No exact app gear id; nearest is the tricep extension machine."
-  },
-  {
    "id": "sacurlmach",
    "name": "Single-arm machine curl",
    "aliases": [
@@ -24320,215 +22624,6 @@
    "diagram": "pushdown",
    "in_app": true,
    "notes": ""
-  },
-  {
-   "id": "beltsquat",
-   "name": "Belt squat",
-   "aliases": [
-    "Belt squat machine",
-    "Hip belt squat"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Compound",
-    "Hypertrophy",
-    "Strength"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Quadriceps",
-    "Glutes"
-   ],
-   "secondary_muscles": [
-    "Adductors",
-    "Hamstrings"
-   ],
-   "movement_pattern": "Squat",
-   "equipment": [
-    "Belt squat machine"
-   ],
-   "req": "beltsquat|pendulum",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 4,
-   "reps": "8–12",
-   "form_cues": [
-    "Attach the belt low around your hips and stand tall.",
-    "Squat down keeping torso upright.",
-    "Drive up through mid-foot."
-   ],
-   "common_mistakes": [
-    "Leaning forward.",
-    "Belt riding up onto the lower back."
-   ],
-   "regressions": [
-    "Goblet squat"
-   ],
-   "progressions": [
-    "Barbell back squat"
-   ],
-   "safety": "Great option when the spine needs a break; unhook the belt only when the lever is racked.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Belt+squat+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Loads the legs without compressing the spine."
-  },
-  {
-   "id": "beltmarch",
-   "name": "Belt squat march",
-   "aliases": [
-    "Belt squat marching"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Conditioning",
-    "Endurance",
-    "Strength"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Glutes",
-    "Quadriceps"
-   ],
-   "secondary_muscles": [
-    "Hip flexors",
-    "Calves"
-   ],
-   "movement_pattern": "Gait",
-   "equipment": [
-    "Belt squat machine"
-   ],
-   "req": "beltsquat|pendulum",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "time",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "30 sec",
-   "form_cues": [
-    "Stand tall with the belt loaded and knees soft.",
-    "March in place, lifting knees to hip height.",
-    "Keep hips level and steady."
-   ],
-   "common_mistakes": [
-    "Shuffling feet instead of driving knees.",
-    "Leaning back."
-   ],
-   "regressions": [
-    "Belt squat"
-   ],
-   "progressions": [],
-   "safety": "Keep the load moderate and stop if form breaks.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Belt+squat+march+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "A conditioning and hip-stability finisher."
-  },
-  {
-   "id": "donkeycalf",
-   "name": "Donkey calf raise",
-   "aliases": [
-    "Donkey calf raise machine"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Hypertrophy",
-    "Isolation",
-    "Strength"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Calves"
-   ],
-   "secondary_muscles": [],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Donkey calf raise machine"
-   ],
-   "req": "donkeycalfm",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "12–15",
-   "form_cues": [
-    "Hinge forward with hips under the pad and back flat.",
-    "Rise high on your toes.",
-    "Lower to a deep stretch."
-   ],
-   "common_mistakes": [
-    "Rounding the back.",
-    "Short reps."
-   ],
-   "regressions": [
-    "Standing calf raise"
-   ],
-   "progressions": [],
-   "safety": "Keep the spine neutral.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Donkey+calf+raise+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No exact app gear id; nearest is the standing calf machine."
-  },
-  {
-   "id": "ghr",
-   "name": "Glute-ham raise",
-   "aliases": [
-    "GHR",
-    "GHD glute-ham raise"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Advanced",
-    "Strength"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Hamstrings"
-   ],
-   "secondary_muscles": [
-    "Glutes",
-    "Calves"
-   ],
-   "movement_pattern": "Flexion",
-   "equipment": [
-    "Glute-ham developer (GHD)"
-   ],
-   "req": "ghd",
-   "equipment_tier": 3,
-   "difficulty": "Advanced",
-   "tracking": "bw",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "5–8",
-   "form_cues": [
-    "Lock feet in with knees just behind the pad.",
-    "Start upright, then lower forward with a straight line hips to head.",
-    "Pull yourself back up by digging toes into the plate."
-   ],
-   "common_mistakes": [
-    "Bending at the hips to cheat.",
-    "Dropping uncontrolled on the way down."
-   ],
-   "regressions": [
-    "Lying leg curl",
-    "Back extension"
-   ],
-   "progressions": [
-    "Nordic hamstring curl"
-   ],
-   "safety": "Build up slowly; push off a box or use a band if you can't control the lowering.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Glute-ham+raise+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "One of the best hamstring builders for knee flexion and hip extension together."
   },
   {
    "id": "hacksq",
@@ -24682,59 +22777,6 @@
    "diagram": "",
    "in_app": true,
    "notes": ""
-  },
-  {
-   "id": "kneelcurl",
-   "name": "Kneeling leg curl",
-   "aliases": [
-    "Kneeling hamstring curl machine"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Hypertrophy",
-    "Isolation",
-    "Strength",
-    "Unilateral"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Hamstrings"
-   ],
-   "secondary_muscles": [
-    "Calves"
-   ],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Kneeling leg curl machine"
-   ],
-   "req": "kneellegcurl",
-   "equipment_tier": 3,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": true,
-   "sets": 3,
-   "reps": "10–12 / side",
-   "form_cues": [
-    "Kneel with forearms on the pads and heel under the roller.",
-    "Curl the heel up towards your glute.",
-    "Lower slowly."
-   ],
-   "common_mistakes": [
-    "Arching the lower back.",
-    "Using momentum."
-   ],
-   "regressions": [
-    "Lying leg curl"
-   ],
-   "progressions": [
-    "Glute-ham raise"
-   ],
-   "safety": "Keep the hips steady.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Kneeling+leg+curl+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No exact app gear id; nearest is the lying leg curl machine."
   },
   {
    "id": "legext",
@@ -25002,58 +23044,6 @@
    "diagram": "",
    "in_app": false,
    "notes": ""
-  },
-  {
-   "id": "pendulum",
-   "name": "Pendulum squat",
-   "aliases": [
-    "Pendulum squat machine"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Compound",
-    "Hypertrophy",
-    "Strength"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Quadriceps"
-   ],
-   "secondary_muscles": [
-    "Glutes"
-   ],
-   "movement_pattern": "Squat",
-   "equipment": [
-    "Pendulum squat machine"
-   ],
-   "req": "pendulum",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–12",
-   "form_cues": [
-    "Set shoulders under the pads with feet forward on the platform.",
-    "Sink deep with the arc, knees travelling forward.",
-    "Drive back up without locking out."
-   ],
-   "common_mistakes": [
-    "Shallow reps.",
-    "Feet set too far back so heels lift."
-   ],
-   "regressions": [
-    "Leg press"
-   ],
-   "progressions": [
-    "Hack squat"
-   ],
-   "safety": "Use the safety lock; depth is deep, so build up gradually.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Pendulum+squat+exercise+form",
-   "diagram": "goblet",
-   "in_app": true,
-   "notes": "Very quad-dominant with little load on the spine."
   },
   {
    "id": "seatedcalf",
@@ -25566,113 +23556,6 @@
    "notes": ""
   },
   {
-   "id": "standlegcurl",
-   "name": "Standing leg curl",
-   "aliases": [
-    "Standing single-leg curl",
-    "Standing hamstring curl"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Hypertrophy",
-    "Isolation",
-    "Strength",
-    "Unilateral"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Hamstrings"
-   ],
-   "secondary_muscles": [
-    "Calves"
-   ],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Standing leg curl machine"
-   ],
-   "req": "standlegcurl",
-   "equipment_tier": 3,
-   "difficulty": "Beginner",
-   "tracking": "w",
-   "unilateral": true,
-   "sets": 3,
-   "reps": "10–12 / side",
-   "form_cues": [
-    "Stand tall with the pad behind your ankle.",
-    "Curl the heel up towards your glute.",
-    "Lower slowly without swinging."
-   ],
-   "common_mistakes": [
-    "Hip flexing forward.",
-    "Leaning the torso."
-   ],
-   "regressions": [
-    "Lying leg curl"
-   ],
-   "progressions": [
-    "Single-leg lying leg curl"
-   ],
-   "safety": "Hold the handles and keep the hips square.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Standing+leg+curl+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No exact app gear id; nearest is the lying leg curl machine."
-  },
-  {
-   "id": "vsquat",
-   "name": "V-squat",
-   "aliases": [
-    "V-squat machine"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Compound",
-    "Hypertrophy",
-    "Strength"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Quadriceps",
-    "Glutes"
-   ],
-   "secondary_muscles": [
-    "Hamstrings"
-   ],
-   "movement_pattern": "Squat",
-   "equipment": [
-    "V-squat machine"
-   ],
-   "req": "vsquat,plates",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–12",
-   "form_cues": [
-    "Stand on the platform with shoulders under the pads.",
-    "Squat down with a slight lean following the machine's arc.",
-    "Press up through the whole foot."
-   ],
-   "common_mistakes": [
-    "Heels lifting.",
-    "Short range."
-   ],
-   "regressions": [
-    "Leg press"
-   ],
-   "progressions": [
-    "Hack squat"
-   ],
-   "safety": "Use the safety catches.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=V-squat+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No exact app gear id; nearest is the hack squat machine."
-  },
-  {
    "id": "verticalleg",
    "name": "Vertical leg press",
    "aliases": [
@@ -25721,58 +23604,6 @@
    "safety": "Always use the safety stops; this machine loads straight down onto you.",
    "video": null,
    "video_search": "https://www.youtube.com/results?search_query=Vertical+leg+press+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "ghdhipext",
-   "name": "GHD hip extension",
-   "aliases": [
-    "GHD hip raise",
-    "Hip extension on GHD"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Strength"
-   ],
-   "muscle_group": "Glutes",
-   "primary_muscles": [
-    "Glutes",
-    "Hamstrings"
-   ],
-   "secondary_muscles": [
-    "Lower back"
-   ],
-   "movement_pattern": "Hinge",
-   "equipment": [
-    "Glute-ham developer (GHD)"
-   ],
-   "req": "ghd",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "bw",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "10–12",
-   "form_cues": [
-    "Set the pad so your hips hang just off the front.",
-    "Hinge down from the hips, keeping the spine neutral.",
-    "Squeeze glutes to bring your body back to straight."
-   ],
-   "common_mistakes": [
-    "Rounding and un-rounding the spine.",
-    "Overextending at the top."
-   ],
-   "regressions": [
-    "Back extension"
-   ],
-   "progressions": [
-    "Reverse hyper"
-   ],
-   "safety": "Keep the motion at the hips; stop if the lower back takes over.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=GHD+hip+extension+exercise+form",
    "diagram": "",
    "in_app": false,
    "notes": ""
@@ -25854,7 +23685,7 @@
    "equipment": [
     "Back extension / Roman chair"
    ],
-   "req": "romanchair",
+   "req": "backextm",
    "equipment_tier": 3,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -26116,7 +23947,7 @@
    "equipment": [
     "Multi-hip machine"
    ],
-   "req": "multihip|abductor",
+   "req": "abductor",
    "equipment_tier": 3,
    "difficulty": "Beginner",
    "tracking": "w",
@@ -26167,7 +23998,7 @@
    "equipment": [
     "Multi-hip machine"
    ],
-   "req": "multihip|glutekick",
+   "req": "glutekick",
    "equipment_tier": 3,
    "difficulty": "Beginner",
    "tracking": "w",
@@ -26250,57 +24081,6 @@
    "notes": "More hip hinge than the regular hack squat, so the glutes work harder."
   },
   {
-   "id": "reversehyp",
-   "name": "Reverse hyper",
-   "aliases": [
-    "Reverse hyperextension"
-   ],
-   "training_type": "Strength",
-   "tags": [
-    "Strength"
-   ],
-   "muscle_group": "Glutes",
-   "primary_muscles": [
-    "Glutes",
-    "Hamstrings"
-   ],
-   "secondary_muscles": [
-    "Lower back"
-   ],
-   "movement_pattern": "Hinge",
-   "equipment": [
-    "Reverse hyper machine"
-   ],
-   "req": "reversehyper",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "12–15",
-   "form_cues": [
-    "Lie chest-down with hips at the pad's edge and grip the handles.",
-    "Swing legs up until in line with the body, squeezing glutes.",
-    "Lower under control; don't let the pendulum yank you."
-   ],
-   "common_mistakes": [
-    "Letting momentum drive the swing.",
-    "Overarching at the top."
-   ],
-   "regressions": [
-    "Glute bridge"
-   ],
-   "progressions": [
-    "GHD hip extension"
-   ],
-   "safety": "Start light; the strap and pendulum can whip the spine if you go too heavy.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Reverse+hyper+exercise+form",
-   "diagram": "",
-   "in_app": true,
-   "notes": "Popular as a lower-back rehab and strength accessory."
-  },
-  {
    "id": "slbackext",
    "name": "Single-leg back extension",
    "aliases": [
@@ -26324,7 +24104,7 @@
    "equipment": [
     "Back extension / Roman chair"
    ],
-   "req": "romanchair",
+   "req": "backextm",
    "equipment_tier": 3,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -28183,60 +25963,6 @@
    "notes": ""
   },
   {
-   "id": "parapush",
-   "name": "Parallette push-up",
-   "aliases": [
-    "Deep push-up"
-   ],
-   "training_type": "Calisthenics",
-   "tags": [
-    "Calisthenics",
-    "Home-friendly",
-    "Strength"
-   ],
-   "muscle_group": "Chest",
-   "primary_muscles": [
-    "Chest",
-    "Triceps"
-   ],
-   "secondary_muscles": [
-    "Front delts",
-    "Core"
-   ],
-   "movement_pattern": "Horizontal push",
-   "equipment": [
-    "Parallettes"
-   ],
-   "req": "parallettes",
-   "equipment_tier": 1,
-   "difficulty": "Intermediate",
-   "tracking": "bw",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–12",
-   "form_cues": [
-    "Grip parallettes under your shoulders in a push-up.",
-    "Lower your chest below hand height for extra range.",
-    "Press back up to straight arms."
-   ],
-   "common_mistakes": [
-    "Going deeper than shoulders tolerate",
-    "Sagging hips"
-   ],
-   "regressions": [
-    "Push-ups"
-   ],
-   "progressions": [
-    "Pseudo planche push-up"
-   ],
-   "safety": "Make sure the parallettes are on a non-slip surface.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Parallette+push-up+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Neutral grip is easy on the wrists."
-  },
-  {
    "id": "straightbardip",
    "name": "Straight bar dip",
    "aliases": [],
@@ -28312,7 +26038,7 @@
    "equipment": [
     "Pull-up bar or rings"
    ],
-   "req": "pullupbar|rings",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "hold",
@@ -28421,7 +26147,7 @@
    "equipment": [
     "Rings or pull-up bar"
    ],
-   "req": "rings|pullupbar",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "hold",
@@ -28863,7 +26589,7 @@
    "equipment": [
     "Pull-up bar or rings"
    ],
-   "req": "pullupbar|rings",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "hold",
@@ -29306,7 +27032,7 @@
    "equipment": [
     "Pull-up bar or rings"
    ],
-   "req": "pullupbar|rings",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "hold",
@@ -29411,7 +27137,7 @@
    "equipment": [
     "Rings or pull-up bar"
    ],
-   "req": "rings|pullupbar",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "hold",
@@ -29464,7 +27190,7 @@
    "equipment": [
     "Pull-up bar or rings"
    ],
-   "req": "pullupbar|rings",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "hold",
@@ -29620,7 +27346,7 @@
    "equipment": [
     "Rings or pull-up bar"
    ],
-   "req": "rings|pullupbar",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "hold",
@@ -29646,61 +27372,6 @@
    "diagram": "",
    "in_app": false,
    "notes": "Prepares the shoulders for back lever."
-  },
-  {
-   "id": "humanflag",
-   "name": "Human flag",
-   "aliases": [
-    "Flag"
-   ],
-   "training_type": "Calisthenics",
-   "tags": [
-    "Calisthenics",
-    "Core",
-    "Strength"
-   ],
-   "muscle_group": "Shoulders",
-   "primary_muscles": [
-    "Lats",
-    "Obliques",
-    "Shoulders"
-   ],
-   "secondary_muscles": [
-    "Core",
-    "Triceps",
-    "Grip"
-   ],
-   "movement_pattern": "Hold",
-   "equipment": [
-    "Vertical pole or stall bars"
-   ],
-   "req": "pole|stallbars",
-   "equipment_tier": 1,
-   "difficulty": "Advanced",
-   "tracking": "hold",
-   "unilateral": false,
-   "sets": 4,
-   "reps": "3–10 sec",
-   "form_cues": [
-    "Grip a vertical pole with hands wide, top arm pulling, bottom arm pushing.",
-    "Lock both arms and lift your body sideways.",
-    "Hold your legs level with the floor."
-   ],
-   "common_mistakes": [
-    "Bending the bottom arm",
-    "Hips sagging"
-   ],
-   "regressions": [
-    "Tuck human flag",
-    "Side plank"
-   ],
-   "progressions": [],
-   "safety": "Use a fixed pole that cannot rotate; warm up shoulders well.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Human+flag+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No exact gear id for a vertical pole; pullupbar used as nearest."
   },
   {
    "id": "koreandip",
@@ -29776,7 +27447,7 @@
    "equipment": [
     "Rings or pull-up bar"
    ],
-   "req": "rings|pullupbar",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -29916,60 +27587,6 @@
    "notes": ""
   },
   {
-   "id": "ringdip",
-   "name": "Ring dip",
-   "aliases": [],
-   "training_type": "Calisthenics",
-   "tags": [
-    "Calisthenics",
-    "Compound",
-    "Strength"
-   ],
-   "muscle_group": "Chest",
-   "primary_muscles": [
-    "Chest",
-    "Triceps"
-   ],
-   "secondary_muscles": [
-    "Front delts",
-    "Core",
-    "Biceps"
-   ],
-   "movement_pattern": "Vertical push",
-   "equipment": [
-    "Gymnastic rings"
-   ],
-   "req": "rings",
-   "equipment_tier": 2,
-   "difficulty": "Advanced",
-   "tracking": "bw",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "4–8",
-   "form_cues": [
-    "Start in a stable ring support.",
-    "Lower until shoulders are below elbows, rings close to the body.",
-    "Press back up and turn rings out at the top."
-   ],
-   "common_mistakes": [
-    "Rings flaring wide",
-    "Too deep too soon"
-   ],
-   "regressions": [
-    "Chest dips",
-    "Ring support hold"
-   ],
-   "progressions": [
-    "Ring muscle-up"
-   ],
-   "safety": "Master ring support holds first; instability is high.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Ring+dip+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
    "id": "ringfly",
    "name": "Ring fly",
    "aliases": [
@@ -29994,7 +27611,7 @@
    "equipment": [
     "Gymnastic rings"
    ],
-   "req": "rings|trx",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Advanced",
    "tracking": "bw",
@@ -30024,60 +27641,6 @@
    "notes": ""
   },
   {
-   "id": "ringpush",
-   "name": "Ring push-ups",
-   "aliases": [],
-   "training_type": "Calisthenics",
-   "tags": [
-    "Calisthenics",
-    "Compound",
-    "Strength"
-   ],
-   "muscle_group": "Chest",
-   "primary_muscles": [
-    "Chest",
-    "Triceps"
-   ],
-   "secondary_muscles": [
-    "Front delts",
-    "Core",
-    "Serratus anterior"
-   ],
-   "movement_pattern": "Horizontal push",
-   "equipment": [
-    "Gymnastic rings"
-   ],
-   "req": "rings",
-   "equipment_tier": 2,
-   "difficulty": "Intermediate",
-   "tracking": "bw",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "6–12",
-   "form_cues": [
-    "Set rings a few centimetres off the floor and grip them.",
-    "Lower with rings close to your sides.",
-    "Press up and turn rings out slightly at the top."
-   ],
-   "common_mistakes": [
-    "Rings drifting apart",
-    "Sagging hips"
-   ],
-   "regressions": [
-    "Push-ups"
-   ],
-   "progressions": [
-    "Ring dip",
-    "Ring fly"
-   ],
-   "safety": "Start with rings higher to reduce the instability.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Ring+push-ups+exercise+form",
-   "diagram": "pushup",
-   "in_app": true,
-   "notes": ""
-  },
-  {
    "id": "archerrow",
    "name": "Archer row",
    "aliases": [
@@ -30103,7 +27666,7 @@
    "equipment": [
     "Low bar or rings"
    ],
-   "req": "powerrack|smith|rings",
+   "req": "powerrack|smith",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -30160,7 +27723,7 @@
    "equipment": [
     "Low bar (rack/Smith) or rings"
    ],
-   "req": "powerrack|smith|rings",
+   "req": "powerrack|smith",
    "equipment_tier": 2,
    "difficulty": "Beginner",
    "tracking": "bw",
@@ -30191,166 +27754,6 @@
    "notes": "Lower the bar or raise the feet to make it harder."
   },
   {
-   "id": "ironcross",
-   "name": "Iron cross",
-   "aliases": [
-    "Cross"
-   ],
-   "training_type": "Calisthenics",
-   "tags": [
-    "Calisthenics",
-    "Strength"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Lats",
-    "Chest"
-   ],
-   "secondary_muscles": [
-    "Biceps",
-    "Shoulders",
-    "Core"
-   ],
-   "movement_pattern": "Hold",
-   "equipment": [
-    "Gymnastic rings"
-   ],
-   "req": "rings",
-   "equipment_tier": 2,
-   "difficulty": "Advanced",
-   "tracking": "hold",
-   "unilateral": false,
-   "sets": 4,
-   "reps": "2–5 sec",
-   "form_cues": [
-    "Start from ring support and spread arms out to the sides.",
-    "Keep arms straight and press rings down.",
-    "Hold the T shape with body upright."
-   ],
-   "common_mistakes": [
-    "Bending elbows",
-    "Dropping below horizontal"
-   ],
-   "regressions": [
-    "Ring fly"
-   ],
-   "progressions": [],
-   "safety": "Elite gymnastics skill; high tendon load, train with bands and spotting.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Iron+cross+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "ringmu",
-   "name": "Ring muscle-up",
-   "aliases": [],
-   "training_type": "Calisthenics",
-   "tags": [
-    "Calisthenics",
-    "Power",
-    "Strength"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Lats",
-    "Chest",
-    "Triceps"
-   ],
-   "secondary_muscles": [
-    "Biceps",
-    "Core",
-    "Shoulders"
-   ],
-   "movement_pattern": "Vertical pull",
-   "equipment": [
-    "Gymnastic rings"
-   ],
-   "req": "rings",
-   "equipment_tier": 2,
-   "difficulty": "Advanced",
-   "tracking": "bw",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "1–5",
-   "form_cues": [
-    "Hang using a false grip.",
-    "Pull rings to the chest and lean the shoulders forward over them.",
-    "Transition into a dip and press to support."
-   ],
-   "common_mistakes": [
-    "Losing the false grip",
-    "Pulling too far away from the rings"
-   ],
-   "regressions": [
-    "Ring dip",
-    "Chest-to-bar pull-up"
-   ],
-   "progressions": [],
-   "safety": "Build strong ring dips and false-grip pull-ups first.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Ring+muscle-up+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "ringsupport",
-   "name": "Ring support hold",
-   "aliases": [
-    "RTO support"
-   ],
-   "training_type": "Calisthenics",
-   "tags": [
-    "Calisthenics",
-    "Strength"
-   ],
-   "muscle_group": "Arms",
-   "primary_muscles": [
-    "Triceps",
-    "Shoulders"
-   ],
-   "secondary_muscles": [
-    "Chest",
-    "Biceps",
-    "Core"
-   ],
-   "movement_pattern": "Hold",
-   "equipment": [
-    "Gymnastic rings"
-   ],
-   "req": "rings",
-   "equipment_tier": 2,
-   "difficulty": "Intermediate",
-   "tracking": "hold",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "15–30 sec",
-   "form_cues": [
-    "Jump up to support on the rings with straight arms.",
-    "Keep rings close to your hips.",
-    "Turn the rings out so palms face forward if you can."
-   ],
-   "common_mistakes": [
-    "Rings swaying out",
-    "Shrugging"
-   ],
-   "regressions": [
-    "Dip support hold"
-   ],
-   "progressions": [
-    "Ring dip",
-    "Ring L-sit"
-   ],
-   "safety": "Use a box to get in and out.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Ring+support+hold+exercise+form",
-   "diagram": "",
-   "in_app": true,
-   "notes": ""
-  },
-  {
    "id": "ringtriext",
    "name": "Ring triceps extension",
    "aliases": [
@@ -30374,7 +27777,7 @@
    "equipment": [
     "Rings or suspension trainer"
    ],
-   "req": "rings|trx",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -32769,7 +30172,7 @@
    "equipment": [
     "Pull-up bar"
    ],
-   "req": "pullupbar|abstraps",
+   "req": "pullupbar",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -32826,7 +30229,7 @@
    "equipment": [
     "Pull-up bar"
    ],
-   "req": "pullupbar|captain|abstraps",
+   "req": "pullupbar|captain",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "bw",
@@ -33703,7 +31106,7 @@
     "Cable machine",
     "Rope attachment"
    ],
-   "req": "functional|cablecross|multigym",
+   "req": "functional|cablecross",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "w",
@@ -33948,63 +31351,6 @@
    "notes": ""
   },
   {
-   "id": "landminerot",
-   "name": "Landmine rotation",
-   "aliases": [
-    "Landmine 180",
-    "Landmine rainbow",
-    "Landmine twist"
-   ],
-   "training_type": "Core",
-   "tags": [
-    "Core",
-    "Power"
-   ],
-   "muscle_group": "Core",
-   "primary_muscles": [
-    "Obliques"
-   ],
-   "secondary_muscles": [
-    "Shoulders",
-    "Rectus abdominis",
-    "Glutes"
-   ],
-   "movement_pattern": "Rotation",
-   "equipment": [
-    "Barbell",
-    "Landmine attachment"
-   ],
-   "req": "landmine,barbell",
-   "equipment_tier": 2,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–10 / side",
-   "form_cues": [
-    "Hold the bar end at arm's length above your head",
-    "Rotate it down in an arc to one hip, pivoting the feet",
-    "Bring it back over the top and go to the other side"
-   ],
-   "common_mistakes": [
-    "Bending the arms",
-    "Twisting from the lower back with locked hips"
-   ],
-   "regressions": [
-    "Russian twist",
-    "Cable woodchop"
-   ],
-   "progressions": [
-    "Heavier landmine rotation"
-   ],
-   "safety": "Start with the empty bar; use a corner if you have no landmine.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Landmine+rotation+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
    "id": "lowhighchop",
    "name": "Low-to-high cable woodchop",
    "aliases": [
@@ -34194,7 +31540,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -34248,7 +31594,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -34302,7 +31648,7 @@
    "equipment": [
     "Suspension trainer"
    ],
-   "req": "trx|rings",
+   "req": "trx",
    "equipment_tier": 2,
    "difficulty": "Advanced",
    "tracking": "bw",
@@ -34354,7 +31700,7 @@
    "equipment": [
     "Back extension bench"
    ],
-   "req": "romanchair",
+   "req": "backextm",
    "equipment_tier": 3,
    "difficulty": "Intermediate",
    "tracking": "bw",
@@ -34490,56 +31836,6 @@
    "diagram": "",
    "in_app": true,
    "notes": "Straighten the legs for a harder leg raise version."
-  },
-  {
-   "id": "ghdsitup",
-   "name": "GHD sit-up",
-   "aliases": [
-    "Glute-ham developer sit-up"
-   ],
-   "training_type": "Core",
-   "tags": [
-    "Core"
-   ],
-   "muscle_group": "Core",
-   "primary_muscles": [
-    "Rectus abdominis",
-    "Hip flexors"
-   ],
-   "secondary_muscles": [
-    "Quadriceps",
-    "Obliques"
-   ],
-   "movement_pattern": "Flexion",
-   "equipment": [
-    "Glute-ham developer"
-   ],
-   "req": "ghd",
-   "equipment_tier": 3,
-   "difficulty": "Advanced",
-   "tracking": "bw",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "8–15",
-   "form_cues": [
-    "Sit on the pad with feet locked, hips just past it",
-    "Lower back to parallel, then reach behind if trained",
-    "Kick the knees straight to sit up and reach for your feet"
-   ],
-   "common_mistakes": [
-    "Going too far back too soon",
-    "Doing high volume on the first try"
-   ],
-   "regressions": [
-    "Decline sit-up"
-   ],
-   "progressions": [],
-   "safety": "Start with low reps and a short range; overuse can cause rhabdo or back strain.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=GHD+sit-up+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
   },
   {
    "id": "torsorot",
@@ -36512,63 +33808,6 @@
    "notes": "NFL combine 3-cone drill."
   },
   {
-   "id": "parachute",
-   "name": "Parachute sprint",
-   "aliases": [
-    "Speed chute sprint",
-    "Resistance parachute run"
-   ],
-   "training_type": "Power",
-   "tags": [
-    "Cardio",
-    "Legs",
-    "Power",
-    "Speed"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Glutes",
-    "Hamstrings",
-    "Quadriceps"
-   ],
-   "secondary_muscles": [
-    "Calves",
-    "Hip flexors"
-   ],
-   "movement_pattern": "Gait",
-   "equipment": [
-    "Speed parachute"
-   ],
-   "req": "parachute",
-   "equipment_tier": 1,
-   "difficulty": "Intermediate",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 1,
-   "reps": "6 × 20–30 m",
-   "form_cues": [
-    "Clip the chute on and start with a strong forward lean.",
-    "Sprint hard so the chute opens behind you.",
-    "Keep your form tall and relaxed once the chute fills."
-   ],
-   "common_mistakes": [
-    "Leaning back against the pull",
-    "Over-striding"
-   ],
-   "regressions": [
-    "Acceleration sprint"
-   ],
-   "progressions": [
-    "Sled sprint"
-   ],
-   "safety": "Use only in open space with no wind gusts that could yank you.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Parachute+sprint+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No gear id for a speed chute; req is empty."
-  },
-  {
    "id": "shuttlerun",
    "name": "Shuttle run",
    "aliases": [
@@ -36683,63 +33922,6 @@
    "diagram": "",
    "in_app": false,
    "notes": "Alternate arms each rep for conditioning work."
-  },
-  {
-   "id": "tdrill",
-   "name": "T-drill",
-   "aliases": [
-    "T-test agility drill"
-   ],
-   "training_type": "Power",
-   "tags": [
-    "Agility",
-    "Legs",
-    "Power",
-    "Speed"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Quadriceps",
-    "Glutes",
-    "Adductors"
-   ],
-   "secondary_muscles": [
-    "Calves",
-    "Abductors",
-    "Hamstrings"
-   ],
-   "movement_pattern": "Locomotion",
-   "equipment": [
-    "4 cones"
-   ],
-   "req": "cones",
-   "equipment_tier": 1,
-   "difficulty": "Intermediate",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 1,
-   "reps": "4–6 reps",
-   "form_cues": [
-    "Sprint forward 10 m to the middle cone.",
-    "Shuffle 5 m left, 10 m right, 5 m back to the middle.",
-    "Backpedal to the start, staying low throughout."
-   ],
-   "common_mistakes": [
-    "Crossing feet while shuffling",
-    "Standing tall in the shuffle"
-   ],
-   "regressions": [
-    "Lateral shuffle"
-   ],
-   "progressions": [
-    "Box drill"
-   ],
-   "safety": "Use a flat, non-slip surface.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=T-drill+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Cones laid out in a T; no gear id for cones, so req is empty."
   },
   {
    "id": "wallball",
@@ -40462,464 +37644,6 @@
    "notes": "Teaches the body angle and leg action of acceleration."
   },
   {
-   "id": "laddersinglehop",
-   "name": "Agility ladder: single-leg hops",
-   "aliases": [
-    "Single-leg ladder hops",
-    "One-foot ladder hops"
-   ],
-   "training_type": "Plyometric",
-   "tags": [
-    "Agility",
-    "Balance",
-    "Legs",
-    "Plyometric",
-    "Unilateral"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Calves",
-    "Quadriceps"
-   ],
-   "secondary_muscles": [
-    "Glutes",
-    "Core"
-   ],
-   "movement_pattern": "Jump",
-   "equipment": [
-    "Agility ladder"
-   ],
-   "req": "agilityladder",
-   "equipment_tier": 1,
-   "difficulty": "Intermediate",
-   "tracking": "count",
-   "unilateral": true,
-   "sets": 3,
-   "reps": "2 lengths / leg",
-   "form_cues": [
-    "Hop on one foot into each square.",
-    "Land softly on the ball of the foot, knee slightly bent.",
-    "Keep the hip level and the knee over the toes."
-   ],
-   "common_mistakes": [
-    "Knee caving on landing",
-    "Hopping too far and losing control"
-   ],
-   "regressions": [
-    "Agility ladder: hopscotch"
-   ],
-   "progressions": [
-    "Single-leg lateral hop"
-   ],
-   "safety": "Lay the ladder flat on a non-slip surface so it cannot slide.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Agility+ladder%3A+single-leg+hops+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Agility ladder has no gear id, so req is empty; tape on the floor works too."
-  },
-  {
-   "id": "hurdlehop",
-   "name": "Hurdle hops",
-   "aliases": [
-    "Mini hurdle hops",
-    "Hurdle jumps"
-   ],
-   "training_type": "Plyometric",
-   "tags": [
-    "Legs",
-    "Plyometric",
-    "Power"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Calves",
-    "Quadriceps",
-    "Glutes"
-   ],
-   "secondary_muscles": [
-    "Hamstrings",
-    "Core"
-   ],
-   "movement_pattern": "Jump",
-   "equipment": [
-    "Mini hurdles or cones"
-   ],
-   "req": "hurdles|cones",
-   "equipment_tier": 1,
-   "difficulty": "Intermediate",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "5–6 hurdles",
-   "form_cues": [
-    "Line up 4–6 low hurdles about a stride apart.",
-    "Jump over each with both feet, tucking knees slightly.",
-    "Rebound quickly off each landing, staying tall."
-   ],
-   "common_mistakes": [
-    "Long, sinking ground contacts",
-    "Clipping hurdles by not lifting the knees"
-   ],
-   "regressions": [
-    "Pogo jumps",
-    "Consecutive broad jumps"
-   ],
-   "progressions": [
-    "Depth jump"
-   ],
-   "safety": "Use collapsible hurdles or cones that fall over if clipped.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Hurdle+hops+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No gear id for hurdles; req is empty."
-  },
-  {
-   "id": "laddercross",
-   "name": "Agility ladder crossover",
-   "aliases": [
-    "Ladder carioca",
-    "Crossover ladder step"
-   ],
-   "training_type": "Plyometric",
-   "tags": [
-    "Agility",
-    "Cardio",
-    "Legs",
-    "Plyometric",
-    "Warm-up"
-   ],
-   "muscle_group": "Cardio",
-   "primary_muscles": [
-    "Calves",
-    "Hip flexors",
-    "Adductors"
-   ],
-   "secondary_muscles": [
-    "Obliques",
-    "Abductors"
-   ],
-   "movement_pattern": "Locomotion",
-   "equipment": [
-    "Agility ladder"
-   ],
-   "req": "agilityladder",
-   "equipment_tier": 1,
-   "difficulty": "Advanced",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "4 lengths",
-   "form_cues": [
-    "Move sideways along the ladder.",
-    "Cross the trail foot over into each square, then step out.",
-    "Turn the hips, keep the shoulders square."
-   ],
-   "common_mistakes": [
-    "Turning the whole body",
-    "Stepping on rungs"
-   ],
-   "regressions": [
-    "Carioca"
-   ],
-   "progressions": [],
-   "safety": "Lay the ladder flat on a non-slip surface so it cannot slide.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Agility+ladder+crossover+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Agility ladder has no gear id, so req is empty; tape on the floor works too."
-  },
-  {
-   "id": "ladderhopscotch",
-   "name": "Agility ladder: hopscotch",
-   "aliases": [
-    "Hopscotch ladder",
-    "Ladder in-out hops"
-   ],
-   "training_type": "Plyometric",
-   "tags": [
-    "Agility",
-    "Cardio",
-    "Legs",
-    "Plyometric",
-    "Warm-up"
-   ],
-   "muscle_group": "Cardio",
-   "primary_muscles": [
-    "Calves",
-    "Quadriceps"
-   ],
-   "secondary_muscles": [
-    "Glutes",
-    "Core"
-   ],
-   "movement_pattern": "Jump",
-   "equipment": [
-    "Agility ladder"
-   ],
-   "req": "agilityladder",
-   "equipment_tier": 1,
-   "difficulty": "Intermediate",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "4 lengths",
-   "form_cues": [
-    "Hop with both feet into a square, then land one foot either side of the next.",
-    "Alternate in and out all the way down.",
-    "Keep contacts quick and quiet."
-   ],
-   "common_mistakes": [
-    "Landing heavy on the heels",
-    "Losing rhythm halfway"
-   ],
-   "regressions": [
-    "Agility ladder: two feet in each"
-   ],
-   "progressions": [
-    "Agility ladder: single-leg hops"
-   ],
-   "safety": "Lay the ladder flat on a non-slip surface so it cannot slide.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Agility+ladder%3A+hopscotch+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Agility ladder has no gear id, so req is empty; tape on the floor works too."
-  },
-  {
-   "id": "ladderlateral",
-   "name": "Agility ladder: lateral in-in-out-out",
-   "aliases": [
-    "Lateral in and out",
-    "Lateral two-in ladder"
-   ],
-   "training_type": "Plyometric",
-   "tags": [
-    "Agility",
-    "Cardio",
-    "Legs",
-    "Plyometric",
-    "Warm-up"
-   ],
-   "muscle_group": "Cardio",
-   "primary_muscles": [
-    "Calves",
-    "Abductors",
-    "Adductors"
-   ],
-   "secondary_muscles": [
-    "Quadriceps",
-    "Glutes"
-   ],
-   "movement_pattern": "Locomotion",
-   "equipment": [
-    "Agility ladder"
-   ],
-   "req": "agilityladder",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "4 lengths",
-   "form_cues": [
-    "Face the side of the ladder.",
-    "Step in, in, then out, out, moving down one square each time.",
-    "Keep your hips low and facing forward."
-   ],
-   "common_mistakes": [
-    "Crossing the feet",
-    "Standing too tall"
-   ],
-   "regressions": [
-    "Agility ladder: two feet in each"
-   ],
-   "progressions": [
-    "Icky shuffle"
-   ],
-   "safety": "Lay the ladder flat on a non-slip surface so it cannot slide.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Agility+ladder%3A+lateral+in-in-out-out+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Agility ladder has no gear id, so req is empty; tape on the floor works too."
-  },
-  {
-   "id": "ladderone",
-   "name": "Agility ladder: one foot in each",
-   "aliases": [
-    "Quick feet ladder",
-    "Ladder run-through",
-    "One-in ladder"
-   ],
-   "training_type": "Plyometric",
-   "tags": [
-    "Agility",
-    "Cardio",
-    "Legs",
-    "Plyometric",
-    "Warm-up"
-   ],
-   "muscle_group": "Cardio",
-   "primary_muscles": [
-    "Calves",
-    "Hip flexors"
-   ],
-   "secondary_muscles": [
-    "Quadriceps",
-    "Core"
-   ],
-   "movement_pattern": "Locomotion",
-   "equipment": [
-    "Agility ladder"
-   ],
-   "req": "agilityladder",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "4 lengths",
-   "form_cues": [
-    "Run through, placing one foot in each square.",
-    "Stay on the balls of your feet, arms pumping.",
-    "Speed up only as long as you stay clean."
-   ],
-   "common_mistakes": [
-    "Stepping on the rungs",
-    "Looking straight down the whole time"
-   ],
-   "regressions": [
-    "Walk-through"
-   ],
-   "progressions": [
-    "Agility ladder: two feet in each"
-   ],
-   "safety": "Lay the ladder flat on a non-slip surface so it cannot slide.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Agility+ladder%3A+one+foot+in+each+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Agility ladder has no gear id, so req is empty; tape on the floor works too."
-  },
-  {
-   "id": "laddertwo",
-   "name": "Agility ladder: two feet in each",
-   "aliases": [
-    "Two-in ladder",
-    "Two feet in each square"
-   ],
-   "training_type": "Plyometric",
-   "tags": [
-    "Agility",
-    "Cardio",
-    "Legs",
-    "Plyometric",
-    "Warm-up"
-   ],
-   "muscle_group": "Cardio",
-   "primary_muscles": [
-    "Calves",
-    "Hip flexors"
-   ],
-   "secondary_muscles": [
-    "Quadriceps",
-    "Core"
-   ],
-   "movement_pattern": "Locomotion",
-   "equipment": [
-    "Agility ladder"
-   ],
-   "req": "agilityladder",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "4 lengths",
-   "form_cues": [
-    "Step both feet into each square, one after the other.",
-    "Keep steps short, light and fast.",
-    "Drive arms in rhythm with your feet."
-   ],
-   "common_mistakes": [
-    "Heavy, flat-footed steps",
-    "Rushing and kicking the ladder"
-   ],
-   "regressions": [
-    "Agility ladder: one foot in each"
-   ],
-   "progressions": [
-    "Agility ladder: lateral in-in-out-out"
-   ],
-   "safety": "Lay the ladder flat on a non-slip surface so it cannot slide.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Agility+ladder%3A+two+feet+in+each+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Agility ladder has no gear id, so req is empty; tape on the floor works too."
-  },
-  {
-   "id": "ickyshuffle",
-   "name": "Icky shuffle",
-   "aliases": [
-    "Ickey shuffle",
-    "In-in-out ladder"
-   ],
-   "training_type": "Plyometric",
-   "tags": [
-    "Agility",
-    "Cardio",
-    "Legs",
-    "Plyometric",
-    "Warm-up"
-   ],
-   "muscle_group": "Cardio",
-   "primary_muscles": [
-    "Calves",
-    "Abductors",
-    "Adductors"
-   ],
-   "secondary_muscles": [
-    "Quadriceps",
-    "Hip flexors"
-   ],
-   "movement_pattern": "Locomotion",
-   "equipment": [
-    "Agility ladder"
-   ],
-   "req": "agilityladder",
-   "equipment_tier": 1,
-   "difficulty": "Intermediate",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "4 lengths",
-   "form_cues": [
-    "Step in-in, then out to the side, moving forward each square.",
-    "Alternate the outside step from side to side.",
-    "Stay light and rhythmic, eyes up."
-   ],
-   "common_mistakes": [
-    "Losing the in-in-out rhythm",
-    "Big slow steps"
-   ],
-   "regressions": [
-    "Agility ladder: lateral in-in-out-out"
-   ],
-   "progressions": [
-    "Agility ladder crossover"
-   ],
-   "safety": "Lay the ladder flat on a non-slip surface so it cannot slide.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Icky+shuffle+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Agility ladder has no gear id, so req is empty; tape on the floor works too."
-  },
-  {
    "id": "depthpush",
    "name": "Depth push-up",
    "aliases": [
@@ -41378,177 +38102,6 @@
    "notes": ""
   },
   {
-   "id": "sbload",
-   "name": "Sandbag load to platform",
-   "aliases": [
-    "Sandbag over bar",
-    "Sandbag to platform"
-   ],
-   "training_type": "Strongman",
-   "tags": [
-    "Compound",
-    "Power",
-    "Strongman"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Glutes",
-    "Hamstrings",
-    "Lower back"
-   ],
-   "secondary_muscles": [
-    "Upper back",
-    "Biceps"
-   ],
-   "movement_pattern": "Hinge",
-   "equipment": [
-    "Sandbag",
-    "Platform or box"
-   ],
-   "req": "sandbag",
-   "equipment_tier": 1,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 4,
-   "reps": "3–5",
-   "form_cues": [
-    "Lap the bag onto your thighs.",
-    "Hug it tight and extend the hips hard.",
-    "Drive the bag onto the platform without pressing it."
-   ],
-   "common_mistakes": [
-    "Using the arms to throw the bag",
-    "Standing too far from the platform"
-   ],
-   "regressions": [
-    "Sandbag clean"
-   ],
-   "progressions": [
-    "Atlas stone load"
-   ],
-   "safety": "Use a stable platform at waist to chest height and keep fingers clear.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Sandbag+load+to+platform+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Popular in strongman events and medleys."
-  },
-  {
-   "id": "sbshoulder",
-   "name": "Sandbag shouldering",
-   "aliases": [
-    "Sandbag to shoulder"
-   ],
-   "training_type": "Strongman",
-   "tags": [
-    "Compound",
-    "Power",
-    "Strength",
-    "Strongman"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Glutes",
-    "Hamstrings",
-    "Upper back"
-   ],
-   "secondary_muscles": [
-    "Biceps",
-    "Core",
-    "Traps"
-   ],
-   "movement_pattern": "Hinge",
-   "equipment": [
-    "Sandbag"
-   ],
-   "req": "sandbag",
-   "equipment_tier": 1,
-   "difficulty": "Intermediate",
-   "tracking": "w",
-   "unilateral": true,
-   "sets": 4,
-   "reps": "3–5 / side",
-   "form_cues": [
-    "Lap the bag first by squatting and pulling it to your thighs.",
-    "Explode hips and pop the bag onto one shoulder.",
-    "Stand tall, then lower it under control."
-   ],
-   "common_mistakes": [
-    "Lifting with the lower back alone",
-    "Not alternating shoulders"
-   ],
-   "regressions": [
-    "Sandbag clean"
-   ],
-   "progressions": [
-    "Atlas stone load"
-   ],
-   "safety": "A rounded back is normal on stone-style lifts but keep it braced; start light.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Sandbag+shouldering+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "sandcarry",
-   "name": "Sandbag bear-hug carry",
-   "aliases": [
-    "Sandbag carry"
-   ],
-   "training_type": "Strongman",
-   "tags": [
-    "Compound",
-    "Core",
-    "Endurance",
-    "Strength",
-    "Strongman"
-   ],
-   "muscle_group": "Core",
-   "primary_muscles": [
-    "Core",
-    "Upper back"
-   ],
-   "secondary_muscles": [
-    "Biceps",
-    "Glutes",
-    "Quadriceps"
-   ],
-   "movement_pattern": "Carry",
-   "equipment": [
-    "Sandbag"
-   ],
-   "req": "sandbag",
-   "equipment_tier": 1,
-   "difficulty": "Intermediate",
-   "tracking": "cardio",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "40 m",
-   "form_cues": [
-    "Hug the bag tight to your chest, hands clasped.",
-    "Stand tall and keep your chin over the bag.",
-    "Walk with short, quick steps and steady breathing."
-   ],
-   "common_mistakes": [
-    "Leaning back excessively",
-    "Letting the bag slide down"
-   ],
-   "regressions": [
-    "Kettlebell front rack carry"
-   ],
-   "progressions": [
-    "Yoke carry"
-   ],
-   "safety": "Lift the bag from the floor with a hinge, not a rounded back.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Sandbag+bear-hug+carry+exercise+form",
-   "diagram": "",
-   "in_app": true,
-   "notes": ""
-  },
-  {
    "id": "suitcase",
    "name": "Suitcase carry",
    "aliases": [
@@ -41601,119 +38154,6 @@
    "diagram": "",
    "in_app": false,
    "notes": ""
-  },
-  {
-   "id": "atlas",
-   "name": "Atlas stone load",
-   "aliases": [
-    "Stone to platform",
-    "Stone load"
-   ],
-   "training_type": "Strongman",
-   "tags": [
-    "Compound",
-    "Power",
-    "Strongman"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Glutes",
-    "Hamstrings",
-    "Spinal erectors"
-   ],
-   "secondary_muscles": [
-    "Biceps",
-    "Upper back",
-    "Quadriceps"
-   ],
-   "movement_pattern": "Hinge",
-   "equipment": [
-    "Atlas stone",
-    "Platform"
-   ],
-   "req": "atlasstone|sandbag",
-   "equipment_tier": 3,
-   "difficulty": "Advanced",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 4,
-   "reps": "2–4",
-   "form_cues": [
-    "Straddle the stone and wrap your arms deep around it.",
-    "Lap it onto your thighs, then re-grip high.",
-    "Extend hips explosively to roll it onto the platform."
-   ],
-   "common_mistakes": [
-    "Pulling with straight legs",
-    "Stone too far from the body"
-   ],
-   "regressions": [
-    "Sandbag load to platform"
-   ],
-   "progressions": [],
-   "safety": "Use tacky and forearm sleeves, start light, and keep your feet clear of the drop.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Atlas+stone+load+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No gear id for stones; req uses sandbag, the closest home substitute."
-  },
-  {
-   "id": "axledl",
-   "name": "Axle deadlift",
-   "aliases": [
-    "Fat bar deadlift"
-   ],
-   "training_type": "Strongman",
-   "tags": [
-    "Back",
-    "Compound",
-    "Strength",
-    "Strongman"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Glutes",
-    "Hamstrings",
-    "Forearms"
-   ],
-   "secondary_muscles": [
-    "Spinal erectors",
-    "Traps",
-    "Quadriceps"
-   ],
-   "movement_pattern": "Hinge",
-   "equipment": [
-    "Axle bar or barbell with thick grips",
-    "Weight plates"
-   ],
-   "req": "barbell,plates,fatgrips",
-   "equipment_tier": 3,
-   "difficulty": "Advanced",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "3–5",
-   "form_cues": [
-    "Set up like a normal deadlift, double overhand grip.",
-    "Squeeze the thick bar hard before you pull.",
-    "Drive through the floor and lock out tall."
-   ],
-   "common_mistakes": [
-    "Mixed grip to avoid grip work",
-    "Bar drifting away from the shins"
-   ],
-   "regressions": [
-    "Thick-grip dumbbell hold",
-    "Deadlift"
-   ],
-   "progressions": [],
-   "safety": "Use a hook or double overhand grip and lower with control; the axle doesn't spin.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Axle+deadlift+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Thick grips on a regular barbell mimic an axle."
   },
   {
    "id": "sledpull",
@@ -41769,61 +38209,6 @@
    "diagram": "",
    "in_app": false,
    "notes": ""
-  },
-  {
-   "id": "logpress",
-   "name": "Log press",
-   "aliases": [
-    "Log clean and press"
-   ],
-   "training_type": "Strongman",
-   "tags": [
-    "Compound",
-    "Power",
-    "Shoulders",
-    "Strongman"
-   ],
-   "muscle_group": "Shoulders",
-   "primary_muscles": [
-    "Shoulders",
-    "Triceps"
-   ],
-   "secondary_muscles": [
-    "Upper chest",
-    "Core",
-    "Quadriceps"
-   ],
-   "movement_pattern": "Vertical push",
-   "equipment": [
-    "Strongman log"
-   ],
-   "req": "log",
-   "equipment_tier": 3,
-   "difficulty": "Advanced",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 4,
-   "reps": "3–5",
-   "form_cues": [
-    "Clean the log onto your chest, elbows high.",
-    "Dip and drive with the legs.",
-    "Press through to lockout with the head forward."
-   ],
-   "common_mistakes": [
-    "Pressing with elbows low",
-    "Leaning back on the press"
-   ],
-   "regressions": [
-    "Sandbag overhead press",
-    "Standing barbell overhead press"
-   ],
-   "progressions": [],
-   "safety": "Learn the clean light and drop the log in front, never behind you.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Log+press+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No log gear id; req uses barbell as nearest. Neutral grip suits sore shoulders."
   },
   {
    "id": "sledback",
@@ -41994,115 +38379,6 @@
    "notes": "No eccentric load, so it is easy to recover from."
   },
   {
-   "id": "tyreflip",
-   "name": "Tyre flip",
-   "aliases": [
-    "Tire flip"
-   ],
-   "training_type": "Strongman",
-   "tags": [
-    "Compound",
-    "Power",
-    "Strongman"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Glutes",
-    "Hamstrings",
-    "Quadriceps"
-   ],
-   "secondary_muscles": [
-    "Spinal erectors",
-    "Chest",
-    "Triceps"
-   ],
-   "movement_pattern": "Hinge",
-   "equipment": [
-    "Large tyre"
-   ],
-   "req": "tyre",
-   "equipment_tier": 3,
-   "difficulty": "Advanced",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 4,
-   "reps": "4–6",
-   "form_cues": [
-    "Squat down, chest against the tyre, fingers under the tread.",
-    "Drive forward and up with the legs, not the arms.",
-    "Pop a knee in, flip hands, and push it over."
-   ],
-   "common_mistakes": [
-    "Deadlifting with a rounded back",
-    "Curling the tyre with the arms (biceps tear risk)"
-   ],
-   "regressions": [
-    "Sandbag load to platform"
-   ],
-   "progressions": [],
-   "safety": "Keep arms long (never curl the tyre) and stay clear of where it lands.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Tyre+flip+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No gear id for a tyre; req uses sled as the nearest strongman-area id."
-  },
-  {
-   "id": "yoke",
-   "name": "Yoke carry",
-   "aliases": [
-    "Yoke walk"
-   ],
-   "training_type": "Strongman",
-   "tags": [
-    "Compound",
-    "Core",
-    "Legs",
-    "Strongman"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Quadriceps",
-    "Glutes",
-    "Core"
-   ],
-   "secondary_muscles": [
-    "Upper back",
-    "Calves",
-    "Spinal erectors"
-   ],
-   "movement_pattern": "Carry",
-   "equipment": [
-    "Yoke"
-   ],
-   "req": "yoke",
-   "equipment_tier": 3,
-   "difficulty": "Advanced",
-   "tracking": "w",
-   "unilateral": false,
-   "sets": 4,
-   "reps": "20 m",
-   "form_cues": [
-    "Set under the yoke bar like a back squat.",
-    "Brace hard and stand it up.",
-    "Take short, fast steps, keeping the yoke level."
-   ],
-   "common_mistakes": [
-    "Taking long strides that swing the yoke",
-    "Losing the brace and folding forward"
-   ],
-   "regressions": [
-    "Farmer's carry"
-   ],
-   "progressions": [],
-   "safety": "Learn with light loads on a flat surface and drop the yoke forward or back if you lose control.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Yoke+carry+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No yoke? A barbell in a rack can be walked out for short distances (bar walk). req uses barbell as nearest gear id."
-  },
-  {
    "id": "swimback",
    "name": "Backstroke",
    "aliases": [
@@ -42214,62 +38490,6 @@
    "diagram": "",
    "in_app": false,
    "notes": "Crawl forward and backward, or log distance (e.g. 4 × 10 m) in notes."
-  },
-  {
-   "id": "swimbreast",
-   "name": "Breaststroke",
-   "aliases": [
-    "Breaststroke swimming"
-   ],
-   "training_type": "Cardio",
-   "tags": [
-    "Cardio",
-    "Endurance",
-    "Recovery"
-   ],
-   "muscle_group": "Cardio",
-   "primary_muscles": [
-    "Pectorals",
-    "Adductors",
-    "Quadriceps"
-   ],
-   "secondary_muscles": [
-    "Shoulders",
-    "Glutes",
-    "Latissimus dorsi",
-    "Heart and lungs"
-   ],
-   "movement_pattern": "Locomotion",
-   "equipment": [
-    "Swimming pool or open water",
-    "Goggles"
-   ],
-   "req": "pool",
-   "equipment_tier": 0,
-   "difficulty": "Beginner",
-   "tracking": "cardio",
-   "unilateral": false,
-   "sets": 1,
-   "reps": "500 m",
-   "form_cues": [
-    "Pull, breathe, kick, glide—in that order.",
-    "Snap your heels round in a whip kick.",
-    "Glide with arms extended before the next stroke."
-   ],
-   "common_mistakes": [
-    "Skipping the glide",
-    "Keeping the head up the whole time"
-   ],
-   "regressions": [],
-   "progressions": [
-    "Freestyle swimming"
-   ],
-   "safety": "Breaststroke kick can strain the inner knee; ease in if you have knee issues.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Breaststroke+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "Needs pool access; no app gear id for a pool."
   },
   {
    "id": "walk",
@@ -42607,67 +38827,6 @@
    "diagram": "",
    "in_app": false,
    "notes": "Swedish for 'speed play'. A fun way to add speed without a track."
-  },
-  {
-   "id": "swimfree",
-   "name": "Freestyle swimming",
-   "aliases": [
-    "Front crawl",
-    "Freestyle"
-   ],
-   "training_type": "Cardio",
-   "tags": [
-    "Cardio",
-    "Endurance",
-    "Recovery"
-   ],
-   "muscle_group": "Cardio",
-   "primary_muscles": [
-    "Latissimus dorsi",
-    "Shoulders"
-   ],
-   "secondary_muscles": [
-    "Triceps",
-    "Core",
-    "Glutes",
-    "Hip flexors",
-    "Heart and lungs"
-   ],
-   "movement_pattern": "Locomotion",
-   "equipment": [
-    "Swimming pool or open water",
-    "Goggles"
-   ],
-   "req": "pool",
-   "equipment_tier": 0,
-   "difficulty": "Intermediate",
-   "tracking": "cardio",
-   "unilateral": false,
-   "sets": 1,
-   "reps": "1 km",
-   "form_cues": [
-    "Keep your head down and body long and flat.",
-    "Rotate your body and reach long with each stroke.",
-    "Breathe to the side every 2–3 strokes."
-   ],
-   "common_mistakes": [
-    "Lifting the head to breathe so the legs sink",
-    "Kicking from the knees instead of the hips",
-    "Crossing hands over the midline"
-   ],
-   "regressions": [
-    "Kickboard kicks",
-    "Breaststroke"
-   ],
-   "progressions": [
-    "Butterfly"
-   ],
-   "safety": "Swim in supervised areas; avoid open water alone.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Freestyle+swimming+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No app gear id exists for a pool, so 'req' is left empty—needs pool access."
   },
   {
    "id": "highknees",
@@ -44111,7 +40270,7 @@
     "Backpack or rucksack with weight",
     "Weighted vest (optional)"
    ],
-   "req": "backpack|weightvest",
+   "req": "weightvest",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "cardio",
@@ -44874,64 +41033,6 @@
    "notes": ""
   },
   {
-   "id": "cycle",
-   "name": "Outdoor cycling",
-   "aliases": [
-    "Road cycling",
-    "Bike ride",
-    "Cycling"
-   ],
-   "training_type": "Cardio",
-   "tags": [
-    "Cardio",
-    "Endurance",
-    "Recovery"
-   ],
-   "muscle_group": "Cardio",
-   "primary_muscles": [
-    "Quadriceps",
-    "Glutes"
-   ],
-   "secondary_muscles": [
-    "Hamstrings",
-    "Calves",
-    "Heart and lungs"
-   ],
-   "movement_pattern": "Locomotion",
-   "equipment": [
-    "Bicycle",
-    "Helmet"
-   ],
-   "req": "bicycle",
-   "equipment_tier": 2,
-   "difficulty": "Beginner",
-   "tracking": "cardio",
-   "unilateral": false,
-   "sets": 1,
-   "reps": "20 km",
-   "form_cues": [
-    "Set saddle height so your knee is slightly bent at the bottom.",
-    "Spin smoothly; shift gears to keep your cadence up.",
-    "Relax your grip and keep elbows soft."
-   ],
-   "common_mistakes": [
-    "Grinding a big gear at low cadence",
-    "Saddle too low causing knee pain"
-   ],
-   "regressions": [
-    "Stationary bike"
-   ],
-   "progressions": [
-    "Spin bike intervals"
-   ],
-   "safety": "Always wear a helmet and use lights in low visibility.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Outdoor+cycling+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No outdoor-bike gear id exists, so 'bike' (stationary bike) is used as the nearest match. Counts commuting too."
-  },
-  {
    "id": "recumbent",
    "name": "Recumbent bike",
    "aliases": [
@@ -45443,176 +41544,6 @@
    "notes": ""
   },
   {
-   "id": "ube",
-   "name": "Arm bike",
-   "aliases": [
-    "Upper body ergometer",
-    "UBE",
-    "Arm ergometer"
-   ],
-   "training_type": "Cardio",
-   "tags": [
-    "Cardio",
-    "Endurance",
-    "Rehab"
-   ],
-   "muscle_group": "Cardio",
-   "primary_muscles": [
-    "Shoulders",
-    "Upper back"
-   ],
-   "secondary_muscles": [
-    "Biceps",
-    "Triceps",
-    "Chest",
-    "Heart and lungs"
-   ],
-   "movement_pattern": "Locomotion",
-   "equipment": [
-    "Upper body ergometer"
-   ],
-   "req": "ube",
-   "equipment_tier": 3,
-   "difficulty": "Beginner",
-   "tracking": "time",
-   "unilateral": false,
-   "sets": 1,
-   "reps": "10 min",
-   "form_cues": [
-    "Sit tall with the crank at shoulder height.",
-    "Pedal smoothly with your hands.",
-    "Switch direction halfway through."
-   ],
-   "common_mistakes": [
-    "Hunching forward",
-    "Too much resistance so you jerk the cranks"
-   ],
-   "regressions": [],
-   "progressions": [
-    "Air bike"
-   ],
-   "safety": "Useful when legs are injured; keep resistance low if shoulders are sore.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Arm+bike+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No arm-ergometer gear id; 'bike' used as nearest."
-  },
-  {
-   "id": "curvedrun",
-   "name": "Curved treadmill run",
-   "aliases": [
-    "Assault Runner",
-    "Manual treadmill run",
-    "Woodway Curve"
-   ],
-   "training_type": "Cardio",
-   "tags": [
-    "Cardio",
-    "Endurance"
-   ],
-   "muscle_group": "Cardio",
-   "primary_muscles": [
-    "Quadriceps",
-    "Hamstrings",
-    "Glutes",
-    "Calves"
-   ],
-   "secondary_muscles": [
-    "Hip flexors",
-    "Core",
-    "Heart and lungs"
-   ],
-   "movement_pattern": "Gait",
-   "equipment": [
-    "Curved / manual treadmill"
-   ],
-   "req": "curvedtread",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "cardio",
-   "unilateral": false,
-   "sets": 1,
-   "reps": "3 km",
-   "form_cues": [
-    "Move forward on the curve to speed up, back to slow down.",
-    "Run tall with quick, light steps.",
-    "Stay near the middle to hold a steady pace."
-   ],
-   "common_mistakes": [
-    "Drifting too far forward and accelerating",
-    "Heavy heel-striking"
-   ],
-   "regressions": [
-    "Treadmill run"
-   ],
-   "progressions": [
-    "Curved treadmill sprints"
-   ],
-   "safety": "Use the handrails to get on and off safely; the belt keeps moving.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Curved+treadmill+run+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "curvedsprint",
-   "name": "Curved treadmill sprints",
-   "aliases": [
-    "Assault Runner sprints",
-    "Curve sprints"
-   ],
-   "training_type": "Cardio",
-   "tags": [
-    "Cardio",
-    "Endurance",
-    "Power"
-   ],
-   "muscle_group": "Cardio",
-   "primary_muscles": [
-    "Glutes",
-    "Hamstrings",
-    "Quadriceps"
-   ],
-   "secondary_muscles": [
-    "Calves",
-    "Hip flexors",
-    "Core",
-    "Heart and lungs"
-   ],
-   "movement_pattern": "Gait",
-   "equipment": [
-    "Curved / manual treadmill"
-   ],
-   "req": "curvedtread",
-   "equipment_tier": 3,
-   "difficulty": "Advanced",
-   "tracking": "time",
-   "unilateral": false,
-   "sets": 8,
-   "reps": "20 sec",
-   "form_cues": [
-    "Lean into the curve and drive hard with your arms.",
-    "Stay on the balls of your feet.",
-    "Step back onto the rails to stop and rest."
-   ],
-   "common_mistakes": [
-    "Sprinting cold without warm-up",
-    "Looking down at the belt"
-   ],
-   "regressions": [
-    "Curved treadmill run"
-   ],
-   "progressions": [],
-   "safety": "Hold the rails when stepping off; the belt freewheels for a few seconds.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Curved+treadmill+sprints+exercise+form",
-   "diagram": "",
-   "in_app": true,
-   "notes": "Example: 8 × 20 sec all-out / 40 sec rest."
-  },
-  {
    "id": "ski",
    "name": "Ski erg",
    "aliases": [
@@ -45721,62 +41652,6 @@
    "diagram": "",
    "in_app": true,
    "notes": ""
-  },
-  {
-   "id": "versaclimb",
-   "name": "VersaClimber",
-   "aliases": [
-    "Vertical climber",
-    "Climbing machine"
-   ],
-   "training_type": "Cardio",
-   "tags": [
-    "Cardio",
-    "Compound",
-    "Endurance"
-   ],
-   "muscle_group": "Cardio",
-   "primary_muscles": [
-    "Glutes",
-    "Quadriceps",
-    "Shoulders"
-   ],
-   "secondary_muscles": [
-    "Latissimus dorsi",
-    "Calves",
-    "Core",
-    "Heart and lungs"
-   ],
-   "movement_pattern": "Vertical pull",
-   "equipment": [
-    "VersaClimber"
-   ],
-   "req": "versaclimber",
-   "equipment_tier": 3,
-   "difficulty": "Advanced",
-   "tracking": "time",
-   "unilateral": false,
-   "sets": 1,
-   "reps": "10 min",
-   "form_cues": [
-    "Move opposite arm and leg together.",
-    "Use long, full strokes before speeding up.",
-    "Stay upright, close to the machine."
-   ],
-   "common_mistakes": [
-    "Short, choppy strokes",
-    "Leaning back away from the machine"
-   ],
-   "regressions": [
-    "Stair climber"
-   ],
-   "progressions": [],
-   "safety": "Brutally intense; start with short intervals.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=VersaClimber+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No VersaClimber gear id; 'stairs' (stair climber) used as nearest."
   },
   {
    "id": "frontkick",
@@ -46740,58 +42615,6 @@
    "diagram": "",
    "in_app": true,
    "notes": "Typical: 3 × 3 min rounds with 1 min rest."
-  },
-  {
-   "id": "speedbag",
-   "name": "Speed bag",
-   "aliases": [
-    "Speedball"
-   ],
-   "training_type": "Combat",
-   "tags": [
-    "Cardio",
-    "Combat",
-    "Endurance"
-   ],
-   "muscle_group": "Cardio",
-   "primary_muscles": [
-    "Shoulders",
-    "Forearms"
-   ],
-   "secondary_muscles": [
-    "Upper back",
-    "Triceps"
-   ],
-   "movement_pattern": "Rotation",
-   "equipment": [
-    "Speed bag and platform"
-   ],
-   "req": "speedbag",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "time",
-   "unilateral": false,
-   "sets": 3,
-   "reps": "2 min",
-   "form_cues": [
-    "Set the bag at mouth or chin height.",
-    "Hit in a steady rhythm with small circular motions.",
-    "Let the bag rebound three times before the next hit."
-   ],
-   "common_mistakes": [
-    "Hitting too hard and losing rhythm",
-    "Arms too far from the bag"
-   ],
-   "regressions": [
-    "Shadowboxing"
-   ],
-   "progressions": [],
-   "safety": "Wear light gloves or wraps to protect your knuckles.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Speed+bag+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": "No speed-bag gear id exists; 'bag' (punching bag) is used as nearest. Mostly a timing and shoulder endurance drill."
   },
   {
    "id": "ninetyswitch",
@@ -50065,158 +45888,6 @@
    "safety": "Keep feet wide for balance; avoid if you get dizzy.",
    "video": null,
    "video_search": "https://www.youtube.com/results?search_query=Stability+ball+back+stretch+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "strapadd",
-   "name": "Strap adductor stretch",
-   "aliases": [
-    "Lying strap groin stretch"
-   ],
-   "training_type": "Stretching",
-   "tags": [
-    "Home-friendly",
-    "Stretching"
-   ],
-   "muscle_group": "Mobility",
-   "primary_muscles": [
-    "Adductors"
-   ],
-   "secondary_muscles": [
-    "Hamstrings"
-   ],
-   "movement_pattern": "Stretch",
-   "equipment": [
-    "Stretching strap"
-   ],
-   "req": "stretchstrap",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "hold",
-   "unilateral": true,
-   "sets": 2,
-   "reps": "30 sec / side",
-   "form_cues": [
-    "Lie on your back with a strap on one foot, leg straight up.",
-    "Lower the leg out to the side.",
-    "Keep the opposite hip pinned down."
-   ],
-   "common_mistakes": [
-    "Rolling the pelvis over",
-    "Bending the knee"
-   ],
-   "regressions": [
-    "Butterfly stretch"
-   ],
-   "progressions": [],
-   "safety": "Lower only as far as your hips stay level.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Strap+adductor+stretch+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "hamstretch",
-   "name": "Strap hamstring stretch",
-   "aliases": [
-    "Lying hamstring stretch",
-    "Supine hamstring stretch"
-   ],
-   "training_type": "Stretching",
-   "tags": [
-    "Home-friendly",
-    "Stretching"
-   ],
-   "muscle_group": "Mobility",
-   "primary_muscles": [
-    "Hamstrings"
-   ],
-   "secondary_muscles": [
-    "Calves"
-   ],
-   "movement_pattern": "Stretch",
-   "equipment": [
-    "Stretching strap or towel"
-   ],
-   "req": "stretchstrap",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "hold",
-   "unilateral": true,
-   "sets": 2,
-   "reps": "30–45 sec / side",
-   "form_cues": [
-    "Lie on your back with a strap around one foot.",
-    "Raise the straight leg until you feel a stretch.",
-    "Keep the other leg flat on the floor."
-   ],
-   "common_mistakes": [
-    "Bending the raised knee a lot",
-    "Lifting the hips"
-   ],
-   "regressions": [
-    "Standing hamstring stretch"
-   ],
-   "progressions": [
-    "PNF hamstring stretch"
-   ],
-   "safety": "Use a towel if you don't have a strap.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Strap+hamstring+stretch+exercise+form",
-   "diagram": "",
-   "in_app": true,
-   "notes": ""
-  },
-  {
-   "id": "strapquad",
-   "name": "Strap prone quad stretch",
-   "aliases": [
-    "Lying strap quad stretch"
-   ],
-   "training_type": "Stretching",
-   "tags": [
-    "Home-friendly",
-    "Stretching"
-   ],
-   "muscle_group": "Mobility",
-   "primary_muscles": [
-    "Quadriceps"
-   ],
-   "secondary_muscles": [
-    "Hip flexors"
-   ],
-   "movement_pattern": "Stretch",
-   "equipment": [
-    "Stretching strap or towel"
-   ],
-   "req": "stretchstrap",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "hold",
-   "unilateral": true,
-   "sets": 2,
-   "reps": "30 sec / side",
-   "form_cues": [
-    "Lie face down with a strap looped around one ankle.",
-    "Pull the heel toward your glute.",
-    "Press the hip into the floor."
-   ],
-   "common_mistakes": [
-    "Arching the back",
-    "Knee drifting outward"
-   ],
-   "regressions": [
-    "Side-lying quad stretch"
-   ],
-   "progressions": [
-    "Couch stretch"
-   ],
-   "safety": "Ease the strap in slowly.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Strap+prone+quad+stretch+exercise+form",
    "diagram": "",
    "in_app": false,
    "notes": ""
@@ -54522,58 +50193,6 @@
    "notes": ""
   },
   {
-   "id": "ringpress",
-   "name": "Pilates ring chest press",
-   "aliases": [
-    "Magic circle arm press"
-   ],
-   "training_type": "Pilates",
-   "tags": [
-    "Home-friendly",
-    "Pilates",
-    "Strength"
-   ],
-   "muscle_group": "Chest",
-   "primary_muscles": [
-    "Pectorals"
-   ],
-   "secondary_muscles": [
-    "Anterior deltoids",
-    "Triceps"
-   ],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Pilates ring",
-    "Mat"
-   ],
-   "req": "pilatesring",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 2,
-   "reps": "12–15",
-   "form_cues": [
-    "Hold the ring at chest height, palms on the pads.",
-    "Squeeze the ring with soft elbows.",
-    "Keep shoulders down away from ears."
-   ],
-   "common_mistakes": [
-    "Shrugging",
-    "Locking elbows"
-   ],
-   "regressions": [],
-   "progressions": [
-    "Overhead ring press"
-   ],
-   "safety": "Use light pressure with shoulder pain.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Pilates+ring+chest+press+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
    "id": "swan",
    "name": "Pilates swan",
    "aliases": [
@@ -54599,7 +50218,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -54653,7 +50272,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -54707,7 +50326,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -54762,7 +50381,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "count",
@@ -54790,117 +50409,6 @@
    "notes": ""
   },
   {
-   "id": "ringbridge",
-   "name": "Pilates ring bridge",
-   "aliases": [
-    "Magic circle bridge"
-   ],
-   "training_type": "Pilates",
-   "tags": [
-    "Glutes",
-    "Pilates",
-    "Strength"
-   ],
-   "muscle_group": "Glutes",
-   "primary_muscles": [
-    "Glutes",
-    "Adductors"
-   ],
-   "secondary_muscles": [
-    "Hamstrings",
-    "Core"
-   ],
-   "movement_pattern": "Hinge",
-   "equipment": [
-    "Pilates ring",
-    "Mat"
-   ],
-   "req": "pilatesring",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 2,
-   "reps": "10–12",
-   "form_cues": [
-    "Ring between the knees, feet hip-width.",
-    "Roll up into a bridge one bone at a time.",
-    "Squeeze the ring at the top, then roll down."
-   ],
-   "common_mistakes": [
-    "Arching the low back at the top",
-    "Losing ring tension"
-   ],
-   "regressions": [
-    "Glute bridge"
-   ],
-   "progressions": [
-    "Single-leg ring bridge"
-   ],
-   "safety": "Keep the weight off the neck.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Pilates+ring+bridge+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "pilatesringsq",
-   "name": "Pilates ring thigh squeeze",
-   "aliases": [
-    "Magic circle inner thigh squeeze",
-    "Adductor squeeze"
-   ],
-   "training_type": "Pilates",
-   "tags": [
-    "Home-friendly",
-    "Pilates",
-    "Rehab",
-    "Strength"
-   ],
-   "muscle_group": "Glutes",
-   "primary_muscles": [
-    "Adductors"
-   ],
-   "secondary_muscles": [
-    "Pelvic floor",
-    "Core"
-   ],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Pilates ring",
-    "Mat"
-   ],
-   "req": "pilatesring",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 2,
-   "reps": "12–15",
-   "form_cues": [
-    "Place the ring between the knees or ankles.",
-    "Squeeze slowly for 2 seconds.",
-    "Release with control without letting it drop."
-   ],
-   "common_mistakes": [
-    "Bracing with the neck",
-    "Snapping the release"
-   ],
-   "regressions": [
-    "Pillow squeeze"
-   ],
-   "progressions": [
-    "Squeeze in a bridge"
-   ],
-   "safety": "Keep pressure moderate after groin injuries.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Pilates+ring+thigh+squeeze+exercise+form",
-   "diagram": "",
-   "in_app": true,
-   "notes": ""
-  },
-  {
    "id": "pshoulderbridge",
    "name": "Pilates shoulder bridge",
    "aliases": [
@@ -54925,7 +50433,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -54981,7 +50489,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55011,59 +50519,6 @@
    "notes": ""
   },
   {
-   "id": "ringleg",
-   "name": "Side-lying ring leg press",
-   "aliases": [
-    "Magic circle side-lying leg press"
-   ],
-   "training_type": "Pilates",
-   "tags": [
-    "Pilates",
-    "Strength",
-    "Unilateral"
-   ],
-   "muscle_group": "Glutes",
-   "primary_muscles": [
-    "Hip abductors",
-    "Glutes"
-   ],
-   "secondary_muscles": [
-    "Adductors",
-    "Obliques"
-   ],
-   "movement_pattern": "Isolation",
-   "equipment": [
-    "Pilates ring",
-    "Mat"
-   ],
-   "req": "pilatesring",
-   "equipment_tier": 1,
-   "difficulty": "Beginner",
-   "tracking": "count",
-   "unilateral": true,
-   "sets": 2,
-   "reps": "10–12 / side",
-   "form_cues": [
-    "Lie on your side with the ring between the ankles.",
-    "Press the top leg down into the ring.",
-    "Lift back up against the outside pad."
-   ],
-   "common_mistakes": [
-    "Rolling the hips back",
-    "Rushing"
-   ],
-   "regressions": [
-    "Side kick"
-   ],
-   "progressions": [],
-   "safety": "Prop the head to keep the neck easy.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Side-lying+ring+leg+press+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
    "id": "corkscrew",
    "name": "Corkscrew",
    "aliases": [
@@ -55087,7 +50542,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -55140,7 +50595,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -55193,7 +50648,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "count",
@@ -55247,7 +50702,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -55302,7 +50757,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -55356,7 +50811,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "count",
@@ -55413,7 +50868,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55467,7 +50922,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -55522,7 +50977,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "count",
@@ -55577,7 +51032,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55631,7 +51086,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Intermediate",
    "tracking": "count",
@@ -55684,7 +51139,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55740,7 +51195,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55793,7 +51248,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55846,7 +51301,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55900,7 +51355,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Advanced",
    "tracking": "count",
@@ -55954,7 +51409,7 @@
    "equipment": [
     "Pilates mat"
    ],
-   "req": "pilatesmat|yogamat",
+   "req": "yogamat",
    "equipment_tier": 1,
    "difficulty": "Beginner",
    "tracking": "count",
@@ -55980,493 +51435,6 @@
    "safety": "Sit on a raised surface if hamstrings are tight.",
    "video": null,
    "video_search": "https://www.youtube.com/results?search_query=Spine+stretch+forward+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "pullstraps",
-   "name": "Pulling straps",
-   "aliases": [
-    "Long box pulling straps"
-   ],
-   "training_type": "Pilates",
-   "tags": [
-    "Pilates",
-    "Strength"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Latissimus dorsi",
-    "Rear deltoids"
-   ],
-   "secondary_muscles": [
-    "Erector spinae",
-    "Triceps"
-   ],
-   "movement_pattern": "Horizontal pull",
-   "equipment": [
-    "Pilates reformer"
-   ],
-   "req": "reformer",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 2,
-   "reps": "6–8",
-   "form_cues": [
-    "Lie prone on the long box, holding the straps.",
-    "Pull arms down by your sides, lifting the chest.",
-    "Return slowly with control."
-   ],
-   "common_mistakes": [
-    "Crunching the low back",
-    "Shrugging"
-   ],
-   "regressions": [
-    "Lighter spring"
-   ],
-   "progressions": [
-    "T-pull"
-   ],
-   "safety": "Use a light spring and lift the chest only slightly.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Pulling+straps+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "rowing",
-   "name": "Reformer rowing",
-   "aliases": [
-    "Rowing series",
-    "Rowing back"
-   ],
-   "training_type": "Pilates",
-   "tags": [
-    "Mobility",
-    "Pilates",
-    "Strength"
-   ],
-   "muscle_group": "Back",
-   "primary_muscles": [
-    "Rhomboids",
-    "Rear deltoids"
-   ],
-   "secondary_muscles": [
-    "Erector spinae",
-    "Core"
-   ],
-   "movement_pattern": "Horizontal pull",
-   "equipment": [
-    "Pilates reformer"
-   ],
-   "req": "reformer",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 2,
-   "reps": "5–6",
-   "form_cues": [
-    "Sit tall on the carriage holding the straps.",
-    "Pull the straps with elbows bent, rolling back.",
-    "Sit up and circle arms round."
-   ],
-   "common_mistakes": [
-    "Slouching",
-    "Yanking with the arms"
-   ],
-   "regressions": [
-    "Seated straight-arm pull"
-   ],
-   "progressions": [
-    "Rowing from the hips"
-   ],
-   "safety": "Use light springs; keep the back long.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Reformer+rowing+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "feetstraps",
-   "name": "Feet in straps",
-   "aliases": [
-    "Reformer frog",
-    "Reformer leg circles"
-   ],
-   "training_type": "Pilates",
-   "tags": [
-    "Mobility",
-    "Pilates",
-    "Strength"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Adductors",
-    "Hamstrings",
-    "Glutes"
-   ],
-   "secondary_muscles": [
-    "Core"
-   ],
-   "movement_pattern": "Mobility",
-   "equipment": [
-    "Pilates reformer"
-   ],
-   "req": "reformer",
-   "equipment_tier": 3,
-   "difficulty": "Beginner",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 2,
-   "reps": "8–10 per pattern",
-   "form_cues": [
-    "Lie on the carriage, feet in straps.",
-    "Move through frogs, circles and openings.",
-    "Keep the pelvis steady."
-   ],
-   "common_mistakes": [
-    "Low back arching",
-    "Heavy springs"
-   ],
-   "regressions": [
-    "Lighter springs"
-   ],
-   "progressions": [
-    "Single-leg straps"
-   ],
-   "safety": "Use light springs and keep range pain-free.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Feet+in+straps+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "reformerfoot",
-   "name": "Reformer footwork",
-   "aliases": [
-    "Footwork series",
-    "Reformer leg press"
-   ],
-   "training_type": "Pilates",
-   "tags": [
-    "Pilates",
-    "Strength",
-    "Warm-up"
-   ],
-   "muscle_group": "Legs",
-   "primary_muscles": [
-    "Quadriceps",
-    "Glutes",
-    "Calves"
-   ],
-   "secondary_muscles": [
-    "Hamstrings",
-    "Core"
-   ],
-   "movement_pattern": "Squat",
-   "equipment": [
-    "Pilates reformer"
-   ],
-   "req": "reformer",
-   "equipment_tier": 3,
-   "difficulty": "Beginner",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 2,
-   "reps": "10 per position",
-   "form_cues": [
-    "Lie on the carriage with feet on the footbar.",
-    "Press out to straight legs without locking.",
-    "Return with control, resisting the springs."
-   ],
-   "common_mistakes": [
-    "Hyperextending knees",
-    "Pelvis rocking"
-   ],
-   "regressions": [
-    "Lighter springs"
-   ],
-   "progressions": [
-    "Single-leg footwork"
-   ],
-   "safety": "Use lighter springs and avoid locking knees.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Reformer+footwork+exercise+form",
-   "diagram": "",
-   "in_app": true,
-   "notes": "Positions: toes, arches, heels, wide V; 2–4 springs typical."
-  },
-  {
-   "id": "elephant",
-   "name": "Elephant",
-   "aliases": [
-    "Reformer elephant"
-   ],
-   "training_type": "Pilates",
-   "tags": [
-    "Core",
-    "Pilates",
-    "Stretching"
-   ],
-   "muscle_group": "Core",
-   "primary_muscles": [
-    "Transverse abdominis",
-    "Hamstrings"
-   ],
-   "secondary_muscles": [
-    "Hip flexors",
-    "Shoulders"
-   ],
-   "movement_pattern": "Flexion",
-   "equipment": [
-    "Pilates reformer"
-   ],
-   "req": "reformer",
-   "equipment_tier": 3,
-   "difficulty": "Beginner",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 2,
-   "reps": "8–10",
-   "form_cues": [
-    "Stand on the carriage, hands on the footbar, hips high.",
-    "Push the carriage back with the legs.",
-    "Draw it in using the abs."
-   ],
-   "common_mistakes": [
-    "Bending knees",
-    "Dropping the hips"
-   ],
-   "regressions": [
-    "Smaller range"
-   ],
-   "progressions": [
-    "Single-leg elephant"
-   ],
-   "safety": "Keep the range short if hamstrings are tight.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Elephant+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "kneestretch",
-   "name": "Knee stretches",
-   "aliases": [
-    "Reformer knee stretch series"
-   ],
-   "training_type": "Pilates",
-   "tags": [
-    "Core",
-    "Pilates"
-   ],
-   "muscle_group": "Core",
-   "primary_muscles": [
-    "Rectus abdominis",
-    "Hip flexors"
-   ],
-   "secondary_muscles": [
-    "Quadriceps",
-    "Shoulders"
-   ],
-   "movement_pattern": "Flexion",
-   "equipment": [
-    "Pilates reformer"
-   ],
-   "req": "reformer",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 2,
-   "reps": "10",
-   "form_cues": [
-    "Kneel on the carriage, hands on the footbar.",
-    "Push the carriage back with a round back.",
-    "Draw it in with the abs."
-   ],
-   "common_mistakes": [
-    "Using the legs only",
-    "Sinking into the shoulders"
-   ],
-   "regressions": [
-    "Smaller range"
-   ],
-   "progressions": [
-    "Knees off"
-   ],
-   "safety": "Pad knees; use 1–2 springs.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Knee+stretches+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "longstretch",
-   "name": "Long stretch",
-   "aliases": [
-    "Reformer long stretch"
-   ],
-   "training_type": "Pilates",
-   "tags": [
-    "Core",
-    "Pilates",
-    "Strength"
-   ],
-   "muscle_group": "Core",
-   "primary_muscles": [
-    "Transverse abdominis",
-    "Shoulders"
-   ],
-   "secondary_muscles": [
-    "Triceps",
-    "Glutes"
-   ],
-   "movement_pattern": "Anti-extension",
-   "equipment": [
-    "Pilates reformer"
-   ],
-   "req": "reformer",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 2,
-   "reps": "5–8",
-   "form_cues": [
-    "Hold the footbar in a plank, heels on the headrest.",
-    "Push the carriage back from the shoulders.",
-    "Pull it in keeping a straight line."
-   ],
-   "common_mistakes": [
-    "Hips sagging",
-    "Shrugging the shoulders"
-   ],
-   "regressions": [
-    "Knee stretches"
-   ],
-   "progressions": [
-    "Up stretch"
-   ],
-   "safety": "Use 1–2 springs; stop with wrist or shoulder pain.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Long+stretch+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "mermaid",
-   "name": "Mermaid",
-   "aliases": [
-    "Reformer mermaid",
-    "Side stretch"
-   ],
-   "training_type": "Pilates",
-   "tags": [
-    "Mobility",
-    "Pilates",
-    "Stretching"
-   ],
-   "muscle_group": "Mobility",
-   "primary_muscles": [
-    "Latissimus dorsi",
-    "Obliques"
-   ],
-   "secondary_muscles": [
-    "Quadratus lumborum"
-   ],
-   "movement_pattern": "Stretch",
-   "equipment": [
-    "Pilates reformer"
-   ],
-   "req": "reformer",
-   "equipment_tier": 3,
-   "difficulty": "Beginner",
-   "tracking": "count",
-   "unilateral": true,
-   "sets": 2,
-   "reps": "4 / side",
-   "form_cues": [
-    "Sit sideways on the carriage, hand on the footbar.",
-    "Push the carriage out as you side-bend.",
-    "Return and reach the other way."
-   ],
-   "common_mistakes": [
-    "Shrugging",
-    "Twisting"
-   ],
-   "regressions": [
-    "Seated side stretch"
-   ],
-   "progressions": [
-    "Mermaid with a twist"
-   ],
-   "safety": "Keep it gentle with shoulder pain.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Mermaid+exercise+form",
-   "diagram": "",
-   "in_app": false,
-   "notes": ""
-  },
-  {
-   "id": "shortspine",
-   "name": "Short spine massage",
-   "aliases": [
-    "Short spine stretch"
-   ],
-   "training_type": "Pilates",
-   "tags": [
-    "Mobility",
-    "Pilates",
-    "Stretching"
-   ],
-   "muscle_group": "Mobility",
-   "primary_muscles": [
-    "Erector spinae",
-    "Hamstrings"
-   ],
-   "secondary_muscles": [
-    "Rectus abdominis"
-   ],
-   "movement_pattern": "Flexion",
-   "equipment": [
-    "Pilates reformer"
-   ],
-   "req": "reformer",
-   "equipment_tier": 3,
-   "difficulty": "Intermediate",
-   "tracking": "count",
-   "unilateral": false,
-   "sets": 2,
-   "reps": "4–6",
-   "form_cues": [
-    "Feet in straps, legs out.",
-    "Lift legs over, rolling the spine up.",
-    "Roll down slowly one bone at a time."
-   ],
-   "common_mistakes": [
-    "Rolling onto the neck",
-    "Using momentum"
-   ],
-   "regressions": [
-    "Feet in straps"
-   ],
-   "progressions": [
-    "Long spine massage"
-   ],
-   "safety": "Avoid with neck issues or osteoporosis.",
-   "video": null,
-   "video_search": "https://www.youtube.com/results?search_query=Short+spine+massage+exercise+form",
    "diagram": "",
    "in_app": false,
    "notes": ""

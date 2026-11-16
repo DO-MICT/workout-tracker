@@ -8,6 +8,8 @@ to the exercise library (via `req` plus the researched `linked_exercise_ids`).
 import csv, glob, json, os, re, sys
 
 ROOT, EXFILE = sys.argv[1], sys.argv[2]
+# no-gear ids: valid in an exercise req (bodyweight, towel, wall, open floor) but not gear items since 16 Nov 2026
+FLOOR = {"calisthenics", "towel", "wall", "openspace"}
 FIELDS = ["id", "name", "aliases", "category", "subcategory", "app_group", "in_app", "tier", "setting",
           "description", "muscle_focus", "loading", "weight_options", "adjustability", "footprint", "space",
           "price_band", "requires", "substitutes", "signature_exercises", "linked_exercise_ids",
@@ -97,11 +99,9 @@ if errs:
 # link exercises: every exercise whose req names the id, plus researched links
 by_req = {}
 for e in exercises:
-    if not e["req"]:
-        by_req.setdefault("calisthenics", []).append(e["id"])  # no-equipment moves
     for g in set(t for t in re.split(r"[,|]", e["req"]) if t):
         by_req.setdefault(g, []).append(e["id"])
-unknown_req = sorted(g for g in by_req if g not in items)
+unknown_req = sorted(g for g in by_req if g not in items and g not in FLOOR)
 if unknown_req:
     sys.exit(f"exercise req ids with no gear item: {unknown_req}")
 # proposed exact req strings for exercises that used a stand-in id
@@ -109,7 +109,7 @@ updates = json.load(open(os.path.join(ROOT, "tools", "req-updates.json")))
 exbyid = {e["id"]: e for e in exercises}
 upd_out = []
 for x, req in updates.items():
-    bad = [g for g in re.split(r"[,|]", req) if g and g not in items]
+    bad = [g for g in re.split(r"[,|]", req) if g and g not in items and g not in FLOOR]
     if x not in exbyid or bad:
         sys.exit(f"req update {x}: unknown exercise or gear {bad}")
     upd_out.append({"id": x, "name": exbyid[x]["name"], "old_req": exbyid[x]["req"], "new_req": req})

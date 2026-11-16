@@ -28,4 +28,7 @@ The web app is the source of truth; the earlier Expo app (`mobile/`) was removed
   Grep or query them for the part you need.
 - Work in batches with a clear end (about 6–10 illustrations or 20–40 library entries per session). When a batch is done,
   update the relevant brief if something new was decided, and start a new session for the next batch.
+- Old and new phones are both supported: the app must work in Android WebViews from Chrome 80 up as well as current
+  ones (no `inset:`, a `vh` fallback before `svh`/`dvh`, flex `gap` is covered by `src/js/flexgap.js`).
+  Details: `docs/android-brief.md`, "Old WebViews".
 - Plain, friendly English in the app; metric units.

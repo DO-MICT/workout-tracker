@@ -1,6 +1,6 @@
 # Exercise library
 
-1,032 exercises grouped by training type, from no equipment up to a full commercial gym.
+940 exercises grouped by training type, from no equipment up to a full commercial gym.
 The app reads them from the Supabase `exercises` table (loaded with `exercises.sql`); these files are the source.
 
 | File | What it is |
@@ -15,7 +15,7 @@ Rebuild: `cd data/exercise-library && python3 tools/merge.py tools .`
 
 ## Fields
 
-- `id`: stable id. All 152 exercises already in the app keep their ids (`in_app: true`), so plans and history still match.
+- `id`: stable id. All exercises already in the app keep their ids (`in_app: true`), so plans and history still match.
 - `training_type`: one of Strength, Calisthenics, Core, Balance, Power, Plyometric, Strongman, Cardio, Combat, Mobility, Stretching, Recovery, Yoga, Pilates.
 - `tags`: every other category the exercise fits (extra training types, goals such as Hypertrophy or Rehab, Home-friendly, Unilateral, Compound or Isolation).
 - `muscle_group`: the app's bucket (`MGS`). `primary_muscles` and `secondary_muscles` are more detailed.

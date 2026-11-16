@@ -39,7 +39,6 @@ chinup	Chin-ups	Back
 crossfly	Cable crossover fly	Chest
 crunch	Cable rope crunch	Core
 curlmach	Bicep curl machine	Arms
-curvedsprint	Curved treadmill sprints	Cardio
 dbcalf	Dumbbell calf raise	Legs
 dbcurl	Dumbbell curl	Arms
 dbfly	Dumbbell fly	Chest
@@ -63,7 +62,6 @@ glutebridge	Glute bridge	Glutes
 goblet	Goblet squat	Legs
 hacksq	Hack squat	Legs
 hammer	Hammer curl	Arms
-hamstretch	Strap hamstring stretch	Mobility
 hangleg	Hanging leg raise	Core
 hipflexor	Kneeling hip flexor stretch	Mobility
 hipthrust	Barbell hip thrust	Glutes
@@ -79,7 +77,6 @@ jumpsquat	Jump squat	Legs
 kbswing	Kettlebell swing	Glutes
 kickback	Cable glute kickback	Glutes
 kneeraise	Captain's chair knee raise	Core
-landminepress	Landmine press	Shoulders
 lateral	Dumbbell lateral raise	Shoulders
 lateralmach	Lateral raise machine	Shoulders
 legcurl	Lying leg curl	Legs
@@ -95,28 +92,21 @@ ohext	Overhead rope extension	Arms
 ohp	Standing barbell overhead press	Shoulders
 pallof	Pallof press	Core
 pecdeckfly	Pec deck fly	Chest
-pendulum	Pendulum / belt squat	Legs
 pigeon	Pigeon pose	Mobility
 pikepush	Pike push-up	Shoulders
-pilatesringsq	Pilates ring thigh squeeze	Glutes
 plank	Plank	Core
 preachercurl	Preacher curl	Arms
 pullup	Pull-ups	Back
 pushup	Push-ups	Chest
 rdl	Barbell Romanian deadlift	Legs
 reardeltm	Rear delt machine	Shoulders
-reformerfoot	Reformer footwork	Legs
-reversehyp	Reverse hyper	Glutes
 revfly	Reverse cable fly	Shoulders
-ringpush	Ring push-ups	Chest
-ringsupport	Ring support hold	Arms
 rollup	Pilates roll-up	Core
 rope	Jump rope	Cardio
 ropecurl	Rope hammer curl	Arms
 ropepush	Rope pushdown	Arms
 row	Rowing machine	Cardio
 russian	Russian twist	Core
-sandcarry	Sandbag carry	Cardio
 sapush	Single-arm cable pushdown	Arms
 seatedcalf	Seated calf raise	Legs
 seatedlegcurl	Seated leg curl	Legs
@@ -138,7 +128,6 @@ straightarm	Straight-arm pulldown	Back
 sumodl	Sumo deadlift	Glutes
 sunsal	Sun salutation flow	Mobility
 superman	Superman hold	Back
-tbarrow	T-bar row	Back
 torsorot	Rotary torso machine	Core
 trapdl	Trap bar deadlift	Back
 treadrun	Treadmill run	Cardio

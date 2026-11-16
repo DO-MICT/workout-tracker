@@ -1,7 +1,9 @@
 # Gear library
 
-441 pieces of training equipment, from no equipment and household stand-ins up to a full commercial gym,
-linked to the 1,032-exercise library in `data/exercise-library/` (PR #2).
+90 pieces of common gym equipment, linked to the 940-exercise library in `data/exercise-library/`.
+The research covered 441 items; Deon cut it to these 90 for launch and the rest were deleted on 16 Nov 2026
+(`launch-trim.json`, `docs/data-brief.md`). Bodyweight, towel, wall and open floor space are valid in an exercise's
+`req` without being gear items.
 The app reads them from the Supabase `gear` table (loaded with `gear.sql`, which also sets the exact `req` for the 41 exercises below); these files are the source.
 Rebuild the SQL: `cd data/gear-library && python3 tools/to_sql.py`.
 
@@ -40,5 +42,4 @@ Rebuild (needs the exercise library from PR #2):
 ## Caveats
 
 - Researched from expert knowledge by six parallel passes, not checked item by item against retailers. Prices, weights and sizes are typical ranges, not quotes.
-- Some specialist kit (Conan's wheel, focus mitts, Cadillac and others) has no exercises in the library yet, so `exercise_count` is 0.
 - General-purpose cable units link to every cable exercise they can do, so those lists are long.
