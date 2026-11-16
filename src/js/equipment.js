@@ -17,7 +17,14 @@ function locState(){
     S.locs={active:"loc1",list:[{id:"loc1",name:"Gym",gear:Array.isArray(S.gear)?S.gear.slice():[]}]};
   }
   if(S.gear!==undefined) delete S.gear;   /* older single gear list moves into the first location */
-  S.locs.list.forEach(function(l){if(!Array.isArray(l.gear))l.gear=[];});
+  var moved=false;
+  S.locs.list.forEach(function(l){
+    if(!Array.isArray(l.gear))l.gear=[];
+    /* gear deleted at launch: swap it for the kept item(s) once, then save so it syncs (GEAR_NOW in rules.js) */
+    var now=GFDRules.gearNow(l.gear);
+    if(now.join()!==l.gear.join()){ l.gear=now; moved=true; }
+  });
+  if(moved) setTimeout(save,0);
   return S.locs;
 }
 function curLoc(){var L=locState();for(var i=0;i<L.list.length;i++)if(L.list[i].id===L.active)return L.list[i];L.active=L.list[0].id;return L.list[0];}
