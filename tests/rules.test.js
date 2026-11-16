@@ -467,5 +467,8 @@ test("launch gear trim: floor, towel, wall and open space need no gear, and old 
   assert.deepEqual(R.missingGear("yogamat", ["pilatesmat"]), [], "a saved Pilates mat counts as the fitness mat");
   assert.deepEqual(R.missingGear("backextm", ["romanchair"]), [], "a saved Roman chair counts as the back extension machine");
   assert.deepEqual(R.missingGear("powerrack", ["halfrack"]), []);
+  assert.deepEqual(R.missingGear("seatedrow", ["latrowcombo"]), [], "a lat pulldown / low row combo counts as both");
+  assert.deepEqual(R.gearNow(["latrowcombo", "latpulldown", "legextcurl", "benchlegattach", "widechestm", "stretchstrap", "bicycle", "dumbbells"]),
+    ["latpulldown", "seatedrow", "legext", "lyingcurl", "platechest", "yogablocks", "bike", "dumbbells"]);
   assert.equal(R.missingGear("rings", ["dumbbells"]).length, 1, "rings are no longer floor gear");
 });

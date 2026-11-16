@@ -323,9 +323,16 @@
      plank and mat work count as doable at every location without adding them as gear */
   /* floor, towel, wall and open space: bodyweight moves need no gear, so these always count as owned */
   var FLOOR=["calisthenics","yogamat","towel","wall","openspace"];
-  /* gear removed or merged for launch: a saved gear list that still names one counts as the kept item */
-  var GEAR_NOW={pilatesmat:"yogamat",romanchair:"backextm",halfrack:"powerrack",plateincline:"inclinepressm",squatstands:"powerrack"};
-  function gearNow(gear){ return (gear||[]).map(function(id){ return GEAR_NOW[id]||id; }); }
+  /* gear removed or merged for launch: a saved gear list that still names one counts as the kept item(s).
+     equipment.js also rewrites saved lists with this, so the Gear page shows the kept items ticked */
+  var GEAR_NOW={pilatesmat:["yogamat"],romanchair:["backextm"],halfrack:["powerrack"],plateincline:["inclinepressm"],
+    squatstands:["powerrack"],latrowcombo:["latpulldown","seatedrow"],legextcurl:["legext","lyingcurl"],
+    benchlegattach:["legext","lyingcurl"],widechestm:["platechest"],stretchstrap:["yogablocks"],bicycle:["bike"]};
+  function gearNow(gear){
+    var out=[];
+    (gear||[]).forEach(function(id){ (GEAR_NOW[id]||[id]).forEach(function(k){ if(out.indexOf(k)<0) out.push(k); }); });
+    return out;
+  }
   /* [] when the gear covers it, otherwise the "any of" groups that are missing */
   function missingGear(req,gear){
     if(!req) return []; gear=gearNow(gear);
@@ -496,7 +503,7 @@
     e1rm:e1rm,targetOf:targetOf,isMissed:isMissed,setCounts:setCounts,bestsOf:bestsOf,recordList:recordList,lastMatching:lastMatching,
     weekKey:weekKey,milestones:milestones,
     historyRows:historyRows,exerciseRecords:exerciseRecords,setPrefill:setPrefill,tickMissing:tickMissing,bigJump:bigJump,jumpText:jumpText,
-    lastSetParts:lastSetParts,missingGear:missingGear,swapCandidates:swapCandidates,rankSwaps:rankSwaps,swapReason:swapReason,swapReps:swapReps,
+    lastSetParts:lastSetParts,gearNow:gearNow,missingGear:missingGear,swapCandidates:swapCandidates,rankSwaps:rankSwaps,swapReason:swapReason,swapReps:swapReps,
     workoutVolume:workoutVolume,cardioSum:cardioSum,
     planOrder:planOrder,recommendPlan:recommendPlan,celebrateFor:celebrateFor,starterDays:starterDays,
     whenParts:whenParts,whenFromParts:whenFromParts,shiftStart:shiftStart};
