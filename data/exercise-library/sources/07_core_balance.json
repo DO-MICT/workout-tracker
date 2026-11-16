@@ -4190,60 +4190,6 @@
   "notes": ""
  },
  {
-  "id": "landminerot",
-  "name": "Landmine rotation",
-  "aliases": [
-   "Landmine 180",
-   "Landmine rainbow",
-   "Landmine twist"
-  ],
-  "training_type": "Core",
-  "tags": [
-   "Core",
-   "Power"
-  ],
-  "muscle_group": "Core",
-  "primary_muscles": [
-   "Obliques"
-  ],
-  "secondary_muscles": [
-   "Shoulders",
-   "Rectus abdominis",
-   "Glutes"
-  ],
-  "movement_pattern": "Rotation",
-  "equipment": [
-   "Barbell",
-   "Landmine attachment"
-  ],
-  "req": "landmine,barbell",
-  "equipment_tier": 2,
-  "difficulty": "Intermediate",
-  "tracking": "w",
-  "unilateral": false,
-  "sets": 3,
-  "reps": "8–10 / side",
-  "form_cues": [
-   "Hold the bar end at arm's length above your head",
-   "Rotate it down in an arc to one hip, pivoting the feet",
-   "Bring it back over the top and go to the other side"
-  ],
-  "common_mistakes": [
-   "Bending the arms",
-   "Twisting from the lower back with locked hips"
-  ],
-  "regressions": [
-   "Russian twist",
-   "Cable woodchop"
-  ],
-  "progressions": [
-   "Heavier landmine rotation"
-  ],
-  "safety": "Start with the empty bar; use a corner if you have no landmine.",
-  "video": null,
-  "notes": ""
- },
- {
   "id": "bbrollout",
   "name": "Barbell rollout",
   "aliases": [
@@ -4595,53 +4541,6 @@
   "safety": "Keep shoulders down, not shrugged.",
   "video": null,
   "notes": "Straighten the legs for a harder leg raise version."
- },
- {
-  "id": "ghdsitup",
-  "name": "GHD sit-up",
-  "aliases": [
-   "Glute-ham developer sit-up"
-  ],
-  "training_type": "Core",
-  "tags": [
-   "Core"
-  ],
-  "muscle_group": "Core",
-  "primary_muscles": [
-   "Rectus abdominis",
-   "Hip flexors"
-  ],
-  "secondary_muscles": [
-   "Quadriceps",
-   "Obliques"
-  ],
-  "movement_pattern": "Flexion",
-  "equipment": [
-   "Glute-ham developer"
-  ],
-  "req": "ghd",
-  "equipment_tier": 3,
-  "difficulty": "Advanced",
-  "tracking": "bw",
-  "unilateral": false,
-  "sets": 3,
-  "reps": "8–15",
-  "form_cues": [
-   "Sit on the pad with feet locked, hips just past it",
-   "Lower back to parallel, then reach behind if trained",
-   "Kick the knees straight to sit up and reach for your feet"
-  ],
-  "common_mistakes": [
-   "Going too far back too soon",
-   "Doing high volume on the first try"
-  ],
-  "regressions": [
-   "Decline sit-up"
-  ],
-  "progressions": [],
-  "safety": "Start with low reps and a short range; overuse can cause rhabdo or back strain.",
-  "video": null,
-  "notes": ""
  },
  {
   "id": "romanside",

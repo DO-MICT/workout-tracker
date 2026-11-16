@@ -15,7 +15,7 @@ var OB_PRESETS={
  gym:["Full gym",MY_GEAR.concat(["chestpress","legpress","seatedrow","seatedcurl","powerrack","kettlebells","pecdeck","abductor","bike","rower"])],
  home:["Home basics",["dumbbells","bands","adjbench","yogamat","calisthenics"]],
  pilates:["Pilates studio",["yogamat","foamroller","stabball","bands"]],
- yoga:["Yoga at home",["yogamat","yogablocks","stretchstrap"]],
+ yoga:["Yoga at home",["yogamat","yogablocks"]],
  body:["Just my body",["calisthenics"]]
 };
 function obPresetOrder(t){return ({pilates:["pilates","home","body","gym"],yoga:["yoga","home","body","gym"],running:["body","home","gym"]})[t]||["gym","home","body","yoga"];}

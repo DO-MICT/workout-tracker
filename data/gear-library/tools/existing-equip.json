@@ -36,11 +36,6 @@
     "inclinepressm",
     "Incline press machine",
     ""
-   ],
-   [
-    "dipbelt",
-    "Dip belt",
-    "weighted dips"
    ]
   ]
  },
@@ -58,11 +53,6 @@
     "low row"
    ],
    [
-    "tbar",
-    "T-bar row",
-    "landmine row"
-   ],
-   [
     "pullupbar",
     "Pull-up bar",
     "chin up"
@@ -71,16 +61,6 @@
     "assistpull",
     "Assisted pull-up / dip machine",
     "gravitron"
-   ],
-   [
-    "romanchair",
-    "Back extension / Roman chair",
-    "hyperextension"
-   ],
-   [
-    "reversehyper",
-    "Reverse hyper",
-    ""
    ],
    [
     "rowmachine",
@@ -106,16 +86,6 @@
     "reardelt",
     "Rear delt machine",
     "reverse fly"
-   ],
-   [
-    "landmine",
-    "Landmine attachment",
-    ""
-   ],
-   [
-    "uprightrowm",
-    "Shrug / upright row machine",
-    "traps"
    ]
   ]
  },
@@ -146,21 +116,6 @@
     "dipstation",
     "Dip station / parallel bars",
     "dips"
-   ],
-   [
-    "wristroller",
-    "Wrist roller",
-    "forearm grip"
-   ],
-   [
-    "gripper",
-    "Hand grippers",
-    "forearm grip"
-   ],
-   [
-    "fatgrips",
-    "Thick bar grips",
-    "fat gripz"
    ]
   ]
  },
@@ -223,16 +178,6 @@
     "inner outer thigh"
    ],
    [
-    "pendulum",
-    "Pendulum / belt squat machine",
-    ""
-   ],
-   [
-    "ghd",
-    "Glute-ham developer (GHD)",
-    "nordic"
-   ],
-   [
     "plyobox",
     "Plyo box",
     "box jump step up"
@@ -261,11 +206,6 @@
     "captain",
     "Captain's chair / knee raise station",
     "vkr"
-   ],
-   [
-    "abstraps",
-    "Hanging ab straps",
-    ""
    ],
    [
     "abcrunchm",
@@ -363,16 +303,6 @@
     "boxing heavy bag"
    ],
    [
-    "sandbag",
-    "Sandbag",
-    ""
-   ],
-   [
-    "multigym",
-    "Home multi-gym",
-    "station"
-   ],
-   [
     "weightvest",
     "Weighted vest",
     ""
@@ -426,32 +356,12 @@
     "jumprope",
     "Jump rope",
     "skipping"
-   ],
-   [
-    "curvedtread",
-    "Curved / manual treadmill",
-    "assault runner"
    ]
   ]
  },
  {
   "g": "Bodyweight & mind-body",
   "items": [
-   [
-    "calisthenics",
-    "Calisthenics (bodyweight only)",
-    "no equipment street workout"
-   ],
-   [
-    "rings",
-    "Gymnastic rings",
-    ""
-   ],
-   [
-    "parallettes",
-    "Parallettes",
-    "push-up bars"
-   ],
    [
     "yogamat",
     "Yoga mat",
@@ -463,21 +373,6 @@
     "yoga"
    ],
    [
-    "pilatesmat",
-    "Pilates mat",
-    "pilates"
-   ],
-   [
-    "reformer",
-    "Pilates reformer",
-    "pilates"
-   ],
-   [
-    "pilatesring",
-    "Pilates ring / magic circle",
-    "pilates"
-   ],
-   [
     "foamroller",
     "Foam roller",
     "mobility recovery"
@@ -486,11 +381,6 @@
     "massageball",
     "Massage / lacrosse ball",
     "mobility recovery"
-   ],
-   [
-    "stretchstrap",
-    "Stretching strap",
-    "mobility flexibility"
    ]
   ]
  }
