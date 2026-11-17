@@ -11,7 +11,10 @@ const SHELL = [
   'src/js/history.js', 'src/js/records.js', 'src/js/feedback.js', 'src/js/backup.js', 'src/js/coles.js', 'src/js/builder.js', 'src/js/swaps.js',
   'src/js/equipment.js', 'src/js/catalog.js', 'src/js/profile.js', 'src/js/finish.js', 'src/js/stats.js',
   'src/js/measure.js', 'src/js/wide.js', 'src/js/tabs.js', 'src/js/main.js',
-  'src/js/gfd-exercise-art-gym.js', 'src/js/gfd-body-fig.js'
+  'src/js/gfd-exercise-art-gym.js', 'src/js/gfd-body-fig.js',
+  'src/anim/bwsquat/base_three_quarter.webp', 'src/anim/bwsquat/mask_three_quarter.webp',
+  'src/anim/goblet/base_three_quarter.webp', 'src/anim/goblet/mask_three_quarter.webp',
+  'src/anim/pecdeckfly/base_three_quarter.webp', 'src/anim/pecdeckfly/mask_three_quarter.webp'
 ];
 const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
 
