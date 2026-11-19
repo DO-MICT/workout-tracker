@@ -3,12 +3,13 @@ var NOTE_ID=null;
 function openNote(id){
   var L=LIB[id]||findEx(id); if(!L) return;
   if(!healthMayEdit(id)) return;   /* signed in without health consent: ask first (health.js, WP9) */
+  if(typeof FX!=="undefined"&&FX.tools){ FX.tools=false; SWAP=null; renderFocus(); } /* the ⋯ sheet would sit on top of the note */
   NOTE_ID=id;
   var sh=document.getElementById("notesheet"), cur=noteOf(id);
-  sh.innerHTML='<div class="sheet-in"><div class="sheet-top"><h2 id="ntitle">Injury note</h2><button class="chip" id="nCancel">Cancel</button></div>'+
+  sh.innerHTML='<div class="sheet-in"><div class="sheet-top"><h2 id="ntitle">Notes</h2><button class="chip" id="nCancel">Cancel</button></div>'+
     '<p class="sub">'+esc(L.n)+'. Shows on this exercise every time it comes up.</p>'+
     '<textarea id="nText" maxlength="400" rows="5" placeholder="e.g. Left shoulder: keep elbows tucked, stop at any pinch." aria-label="Injury note for '+esc(L.n)+'">'+esc(cur)+'</textarea>'+
-    '<button class="primary" id="nSave">Save note</button>'+(cur?'<button class="ghost bre" id="nDelete">Delete note</button>':'')+'</div>';
+    (cur?'<button class="ghost bre" id="nDelete">Delete note</button>':'')+'<button class="primary" id="nSave">Save note</button></div>';
   sh.hidden=false; document.body.style.overflow="hidden";
   var ta=document.getElementById("nText"); ta.focus(); ta.setSelectionRange(ta.value.length,ta.value.length);
 }
@@ -77,39 +78,53 @@ function renderBuilder(){
   h+='</div>';
   sh.innerHTML=h;
 }
+function pickMgs(){ if(!Array.isArray(BD.mgs)) BD.mgs=BD.mg?[BD.mg]:[]; return BD.mgs; }
+/* "Dumbbells + Bench": the equipment an exercise uses, preferring what this location has */
+function reqPill(L,g){
+  var groups=(L.req||"").split(",").filter(Boolean); if(!groups.length) return "Bodyweight";
+  return groups.map(function(a){var ids=a.split("|"), have=ids.filter(function(i){return g.indexOf(i)>=0;}); return gearName(have[0]||ids[0]);}).join(" + ");
+}
 function pickList(){
-  var bg=bGear(), q=BD.q.trim().toLowerCase(), inDay=BD.ex.map(function(x){return x.id;});
+  var bg=bGear(), q=BD.q.trim().toLowerCase(), inDay=BD.ex.map(function(x){return x.id;}), mgs=pickMgs();
   return Object.keys(LIB).map(function(id){return LIB[id];}).filter(function(L){
-    if(BD.mg&&L.mg!==BD.mg) return false;
+    if(mgs.length&&mgs.indexOf(L.mg)<0) return false;
     if(q&&(L.n+" "+L.mg).toLowerCase().indexOf(q)<0) return false;
     /* equipment not set at this location: everything shows (missingFor is empty) */
     if(!BD.all&&missingFor(L,bg).length) return false;
     return true;
   }).map(function(L){return {L:L,added:inDay.indexOf(L.id)>=0,ok:!missingFor(L,bg).length};});
 }
+var PLOCK_SVG='<svg class="plock" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" fill="currentColor"/><path d="M8 11V8a4 4 0 018 0v3" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>';
+/* the exercise picker: a lime filter bar on top that opens the muscle / location panel, then big-art rows */
 function renderPicker(sh){
+  var mgs=pickMgs(), list=pickList(), n=list.length, nok=list.filter(function(r){return r.ok;}).length;
+  if(BD.fopen){ renderPickFilter(sh,list); return; }
   var keepFocus=document.activeElement&&document.activeElement.id==="pSearch";
-  var h='<div class="sheet-in"><div class="sheet-top"><h2 id="btitle">'+(BD.wizard?'Add to '+esc(weekLong(BD.dayId)):'Add exercise')+'</h2><button class="chip" id="pBack">Done</button></div>';
-  h+='<p class="sub">'+(bGear().length?'Showing exercises you can do at <b>'+esc(bLoc().name)+'</b>.':'No equipment set for '+esc(bLoc().name)+' yet, so every exercise shows.')+'</p>';
-  if(locState().list.length>1) h+='<div class="locchips pickloc" role="group" aria-label="Location">'+locChips("data-bdloc",bLoc().id)+'</div>';
+  var h='<div class="sheet-in pkr"><div class="sheet-top"><h2 id="btitle" class="pkrh">'+(BD.wizard?'Add to '+esc(weekLong(BD.dayId)):'Exercises')+'</h2><button class="chip" id="pBack">Done</button></div>';
   h+='<div class="eqsearch"><input type="search" id="pSearch" value="'+esc(BD.q)+'" placeholder="Search exercises" autocomplete="off" aria-label="Search exercises"></div>';
-  h+='<div class="mgchips" role="group" aria-label="Muscle group">'+['All'].concat(MGS).map(function(m){var v=m==="All"?"":m;return '<button class="chip sm" data-pmg="'+v+'" aria-pressed="'+(BD.mg===v)+'">'+m+'</button>';}).join("")+'</div>';
+  var sum=mgs.length?(mgs.length>2?mgs.slice(0,2).join(", ")+" +"+(mgs.length-2):mgs.join(", ")):"All muscles";
+  h+='<button class="pkfilter" id="pfOpen" aria-expanded="false"><span><b>'+esc(sum)+' · '+esc(bLoc().name)+'</b><small>'+n+' exercise'+(n===1?'':'s')+' match</small></span><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';
   if(!bGear().length) h+='<div class="bnote">No equipment picked yet. <button class="linkbtn" id="bGoGear">Choose equipment</button></div>';
-  if(gearSet(bGear())) h+='<label class="ptoggle"><input type="checkbox" id="pAll"'+(BD.all?' checked':'')+'> Also show exercises I don’t have equipment for</label>';
-  var list=pickList();
   if(!list.length) h+='<p class="eqempty">'+(BD.q?'No exercises match “'+esc(BD.q)+'”.':(bGear().length?'Nothing here with your current equipment. Try another muscle group or add equipment.':'No exercises here. Try another muscle group.'))+'</p>';
-  MGS.forEach(function(m){
-    var part=list.filter(function(r){return r.L.mg===m;}); if(!part.length) return;
-    h+='<h4 class="pgh">'+m+'</h4>';
-    part.forEach(function(r){
-      var L=r.L;
-      h+='<div class="prow'+(r.ok?'':' na')+'"><button class="pview" data-pview="'+L.id+'" aria-label="'+esc(L.n)+': see how to do it"><span class="bn"><b>'+esc(L.n)+'</b>'+(L.x&&L.x.pm.length?'<span>'+esc(L.x.pm.slice(0,3).join(", "))+'</span>':'')+(r.ok?'':'<em>Needs '+esc(needsText(L,bGear()))+'</em>')+'</span>'+PINFO_SVG+'</button>'+
-        (r.added?'<span class="padded">Added</span>':r.ok?'<button class="chip sm" data-padd="'+L.id+'" aria-label="Add '+esc(L.n)+'">Add</button>':'')+'</div>';
-    });
+  list.sort(function(a,b){return MGS.indexOf(a.L.mg)-MGS.indexOf(b.L.mg);});
+  list.forEach(function(r){
+    var L=r.L, g=bGear();
+    h+='<div class="prow px'+(r.ok?'':' na')+'"><button class="pview" data-pview="'+L.id+'" aria-label="'+esc(L.n)+': see how to do it">'+exFigure(L.id,L.f,"pxfig")+'<span class="bn"><b>'+esc(L.n)+'</b><span>'+esc(L.x&&L.x.pm.length?L.x.pm.slice(0,3).join(", "):L.mg)+'</span><em class="pxpill'+(r.ok?'':' need')+'">'+esc(r.ok?reqPill(L,g):"Needs "+needsText(L,g))+'</em></span></button>'+
+      (r.added?'<span class="padded">Added</span>':r.ok?'<button class="chip sm" data-padd="'+L.id+'" aria-label="Add '+esc(L.n)+'">Add</button>':PLOCK_SVG)+'</div>';
   });
   h+='</div>';
   var st=sh.scrollTop; sh.innerHTML=h; sh.scrollTop=st;
   if(keepFocus){var i=document.getElementById("pSearch");i.focus();i.setSelectionRange(i.value.length,i.value.length);}
+}
+/* the filter panel: big muscle tiles, location, and the "show what I can't do" switch */
+function renderPickFilter(sh,list){
+  var mgs=pickMgs(), n=list.length;
+  var h='<div class="sheet-in pkr ob"><div class="sheet-top"><h2 id="btitle" class="pkrh">Which muscles?</h2></div>';
+  h+='<div class="pkmg" role="group" aria-label="Muscle groups">'+MGS.map(function(m){return '<button class="pkmgt" data-pmg="'+m+'" aria-pressed="'+(mgs.indexOf(m)>=0)+'">'+m+'</button>';}).join("")+'</div>';
+  if(locState().list.length>1) h+='<h3 class="psec">Where</h3><div class="locchips pickloc" role="group" aria-label="Location">'+locChips("data-bdloc",bLoc().id)+'</div>';
+  if(gearSet(bGear())) h+='<label class="ptoggle"><input type="checkbox" id="pAll"'+(BD.all?' checked':'')+'> Also show exercises I don’t have equipment for</label>';
+  h+='<div class="wznav"><button class="ghost" id="pfClear">Clear</button><button class="primary" id="pfShow">Show '+n+' exercise'+(n===1?'':'s')+'</button></div></div>';
+  var st=sh.scrollTop; sh.innerHTML=h; sh.scrollTop=st;
 }
 /* Replace (F4.E2.S2): the best swaps for one exercise in the draft, same ranking as the day view */
 function renderReplace(sh){
@@ -150,9 +165,12 @@ function builderClick(t){
     closeBuilder();return true;
   }
   if(t.id==="bGoGear"){if(!BD.wizard)closeBuilder();openEquip();return true;}
-  if(t.id==="bAdd"){BD.view="pick";BD.q="";renderBuilder();bSheet().scrollTop=0;return true;}
+  if(t.id==="bAdd"){BD.view="pick";BD.q="";BD.fopen=false;renderBuilder();bSheet().scrollTop=0;return true;}
   if(t.id==="pBack"){BD.view="edit";renderBuilder();var sh=bSheet();sh.scrollTop=sh.scrollHeight;return true;}
-  if(t.dataset.pmg!==undefined){BD.mg=t.dataset.pmg;renderBuilder();return true;}
+  if(t.dataset.pmg!==undefined){var mgs=pickMgs(), k=mgs.indexOf(t.dataset.pmg); if(k>=0) mgs.splice(k,1); else mgs.push(t.dataset.pmg); renderBuilder(); var mb=document.querySelector('[data-pmg="'+t.dataset.pmg+'"]'); if(mb) mb.focus({preventScroll:true}); return true;}
+  if(t.id==="pfOpen"){BD.fopen=true;renderBuilder();bSheet().scrollTop=0;return true;}
+  if(t.id==="pfShow"){BD.fopen=false;renderBuilder();bSheet().scrollTop=0;var fo=document.getElementById("pfOpen");if(fo)fo.focus({preventScroll:true});return true;}
+  if(t.id==="pfClear"){BD.mgs=[];BD.all=false;renderBuilder();return true;}
   if(t.dataset.pview){BD.pickTop=bSheet().scrollTop;BD.peek=t.dataset.pview;BD.view="peek";renderBuilder();var pb=document.getElementById("pkBack");if(pb)pb.focus();return true;}
   if(t.id==="pkBack"||t.id==="pkBack2"){peekBack(BD.peek);return true;}
   if(t.dataset.brep!==undefined){BD.rep=+t.dataset.brep;BD.repMore=false;BD.view="rep";renderBuilder();var rb=document.getElementById("rBack");if(rb)rb.focus();return true;}

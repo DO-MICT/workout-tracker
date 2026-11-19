@@ -72,8 +72,9 @@ function swapPanelHtml(ex,inline){
     '<button role="radio" data-swmode="today" aria-checked="'+(SWMODE==="today")+'">Just today</button>'+
     '<button role="radio" data-swmode="plan" aria-checked="'+(SWMODE==="plan")+'">Change my plan</button></div>';
   h+='<div class="swlist">'+list.map(function(r){
-    return '<button class="swopt" data-swto="'+ex.id+'|'+r.o.id+'"><span class="bn"><b>'+esc(r.o.n)+'</b><span>'+esc(swapReasonText(r))+'</span></span>'+
-      swapLevelTag(r)+'</button>';
+    var O=LIB[r.o.id]||r.o;
+    return '<button class="swopt swart" data-swto="'+ex.id+'|'+r.o.id+'" aria-label="Swap to '+esc(r.o.n)+'">'+exFigure(O.id,O.f,"pxfig")+
+      '<span class="bn"><b>'+esc(r.o.n)+'</b><span>'+esc(O.x&&O.x.pm&&O.x.pm.length?O.x.pm.slice(0,3).join(", "):O.mg)+'</span><span class="swwhy">'+esc(swapReasonText(r))+'</span>'+swapLevelTag(r)+'</span></button>';
   }).join("")+'</div>';
   if(all.length>list.length&&!more) h+='<button class="linkbtn swmore" data-swmore="'+ex.id+'">More options ('+(Math.min(all.length,15)-list.length)+')</button>';
   return h+'</div>';

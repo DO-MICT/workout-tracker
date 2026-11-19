@@ -92,7 +92,7 @@ function exHtml(ex){
   }
   h+=swapBarHtml(ex,exMiss.length>0);
   if(SWAP&&SWAP.ex===ex.id&&!exMiss.length&&!(DAYS[day]&&DAYS[day].coles)) h+=swapPanelHtml(ex,false);
-  h+='<div class="last">'+esc(lastText(ex))+'</div><div class="exlinks"><button class="linkbtn hlink" data-hex="'+ex.id+'">See history and progress</button><button class="linkbtn hlink notelink" data-note="'+ex.id+'" aria-label="'+(nt?'Edit':'Add')+' injury note for '+esc(ex.n)+'">'+NOTE_SVG+(nt?'Edit injury note':'Add injury note')+'</button></div>';
+  h+='<div class="last">'+esc(lastText(ex))+'</div><div class="exlinks"><button class="chip sm hlink" data-hex="'+ex.id+'" aria-label="Stats and history for '+esc(ex.n)+'">Stats</button><button class="chip sm hlink notelink" data-note="'+ex.id+'" aria-label="'+(nt?'Edit':'Add')+' notes for '+esc(ex.n)+'">'+NOTE_SVG+'Notes'+'</button></div>';
   if(DAYS[day]&&DAYS[day].coles) h+='<button class="chip sm colesswap" data-colesswap="'+ex.id+'">↻ Different '+esc((LIB[ex.id]||{}).mg||"").toLowerCase()+' exercise</button>';
   h+='<details class="how"><summary>How to do it safely</summary>'+exFigure(ex.id,ex.f)+'<ul class="cues">'+ex.c.map(function(c){return '<li>'+esc(c)+'</li>';}).join("")+'</ul></details>';
   var lb=labOf(ex), lw=GFDRules.unitLabel(lb[0],U());

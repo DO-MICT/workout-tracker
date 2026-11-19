@@ -141,9 +141,9 @@ function renderStart(d){
   var h='<div class="fx fx-startv" id="fx"><div class="fx-hello"><p>'+esc(fxGreeting())+'</p><h2>'+(resume?'Back to '+esc(d.title)+'?':'Ready for '+esc(d.title)+'?')+'</h2></div>';
   h+='<div class="fx-pills2"><button class="fx-pill2" data-fx="menu" data-m="plan" aria-expanded="'+(menu==="plan")+'">'+esc(plan.name)+' <span aria-hidden="true">▾</span></button>'+
     (DAYS.length>1?'<button class="fx-pill2 on" data-fx="menu" data-m="day" aria-expanded="'+(menu==="day")+'">Day '+(day+1)+' · '+esc(weekLong(d.id))+' <span aria-hidden="true">▾</span></button>':'')+'</div>';
-  if(menu==="plan") h+='<div class="fx-menu" role="group" aria-label="Switch plan">'+allPlans().map(function(p){
+  if(menu==="plan") h+='<div class="fx-menu" role="group" aria-label="Switch routine">'+listPlans().map(function(p){
       var lk=planLocked(p.id); return '<button class="fx-mi" data-useplan="'+p.id+'" aria-pressed="'+(p.id===plan.id)+'">'+esc(p.name)+(p.id===plan.id?' <b aria-hidden="true">✓</b>':lk?' <small>Read only</small>':'')+'</button>';
-    }).join("")+'<button class="fx-mi" id="managePlans2" data-fx="plans">Manage plans</button></div>';
+    }).join("")+'<button class="fx-mi" id="managePlans2" data-fx="plans">Manage routines</button></div>';
   if(menu==="day") h+='<div class="fx-menu" role="group" aria-label="Pick a day">'+DAYS.map(function(x,i){
       return '<button class="fx-mi" data-day="'+i+'" aria-pressed="'+(i===day)+'">Day '+(i+1)+' · '+esc(weekLong(x.id))+(isToday(x)?' · today':'')+'<small>'+esc(x.title)+'</small>'+(i===day?' <b aria-hidden="true">✓</b>':'')+'</button>';
     }).join("")+'</div>';
@@ -200,7 +200,7 @@ function fxToolsHtml(ex,miss){
   h+=swapBarHtml(ex,miss.length>0);
   if(SWAP&&SWAP.ex===ex.id&&!miss.length) h+=swapPanelHtml(ex,false);
   h+='<div class="last">'+esc(lastText(ex))+'</div>';
-  h+='<div class="fx-links"><button class="linkbtn hlink" data-hex="'+ex.id+'">See history and progress</button><button class="linkbtn hlink notelink" data-note="'+ex.id+'" aria-label="'+(nt?'Edit':'Add')+' injury note for '+esc(ex.n)+'">'+NOTE_SVG+(nt?'Edit injury note':'Add injury note')+'</button></div>';
+  h+='<div class="fx-links"><button class="chip sm hlink" data-hex="'+ex.id+'" aria-label="Stats and history for '+esc(ex.n)+'">Stats</button><button class="chip sm hlink notelink" data-note="'+ex.id+'" aria-label="'+(nt?'Edit':'Add')+' notes for '+esc(ex.n)+'">'+NOTE_SVG+'Notes'+'</button></div>';
   h+='<details class="how"><summary>How to do it safely</summary>'+exFigure(ex.id,ex.f)+'<ul class="cues">'+(ex.c||[]).map(function(c){return '<li>'+esc(c)+'</li>';}).join("")+'</ul></details>';
   h+='<div class="fx-sheetfoot"><button class="ghost" data-fx="list">Show all exercises</button><button class="ghost" id="editDay">Edit workout</button><button class="ghost" data-fx="pick">Change plan or day</button></div></div>';
   return h;
