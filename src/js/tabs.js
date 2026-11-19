@@ -1,4 +1,4 @@
-/* ---------- bottom tab bar: Plans · Stats · Workout · Gear · More ----------
+/* ---------- bottom tab bar: Plans · Stats · Workout · Equipment · More ----------
    Each side tab opens its full-screen page; the big centre plate goes back to today's workout. */
 var TAB_SVG={
   plans:'<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 3v4M16 3v4M4 10h16M8 14h3M8 17h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
@@ -13,7 +13,7 @@ function renderTabbar(){
   var side=function(id,label){return '<button class="tab" data-tab="'+id+'" aria-current="'+(TAB_ACTIVE===id?"page":"false")+'"><span class="tpill">'+TAB_SVG[id]+(id==="more"&&SG_UNREAD?'<i class="tdot" aria-label="New reply"></i>':'')+'</span>'+label+'</button>';};
   nav.innerHTML='<span class="rbrand" aria-hidden="true"><svg viewBox="0 0 100 100" width="40" height="40"><rect width="100" height="100" rx="22" fill="#D4FF3A"/><circle cx="50" cy="50" r="37" fill="none" stroke="#0D0F12" stroke-width="8"/><text x="50" y="60" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="30" fill="#0D0F12">GFD</text></svg><b>Get Fit Daily</b></span>'+side("plans","Plans")+side("stats","Stats")+
     '<button class="tab tcentre" data-tab="workout" aria-current="'+(TAB_ACTIVE==="workout"?"page":"false")+'"><span class="tplate">'+TAB_SVG.workout+'</span>Workout</button>'+
-    side("gear","Gear")+side("more","More");
+    side("gear","Equipment")+side("more","More");
 }
 function tabSheetsOpen(){
   var vis=function(id){var el=document.getElementById(id);return el&&!el.hidden;};
@@ -21,7 +21,7 @@ function tabSheetsOpen(){
     tab:vis("more")||vis("exlib")||vis("profile")||vis("sugg")||vis("feedback")?"more":vis("history")||vis("body")?"stats":vis("plans")?"plans":vis("equip")?"gear":"workout"};
 }
 /* WP17: while any page or popup is open, the workout page underneath is inert, so TalkBack and the keyboard can't wander into it.
-   Tab pages (Plans, Stats, Gear, More...) are not modal: the tab bar stays reachable next to them. */
+   Tab pages (Plans, Stats, Equipment, More...) are not modal: the tab bar stays reachable next to them. */
 function syncInert(){
   var open=Array.prototype.some.call(document.querySelectorAll(".sheet,.donepop"),function(el){return !el.hidden;});
   var w=document.querySelector(".wrap"); if(!w) return;

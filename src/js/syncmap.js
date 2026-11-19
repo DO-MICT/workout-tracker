@@ -14,7 +14,7 @@
      user_settings  units (kg or lb, WP4), theme, palette, celebrate, plans.active, profile.rest, names; every other key of S that is
                     not local-only goes in prefs (prefs["profile.x"], prefs["plans.x"], prefs["locs.x"] for the
                     extra keys of those objects), so nothing is lost moving off the blob
-     about_me       S.about
+     about_me       nothing: the setup questions are gone (UAT 6.1). The table stays; old rows are left alone and not read
      locations      S.locs.list (order kept in sort, unknown fields in extra)
      plans          one record per custom plan (body.custom) and per edited built-in plan
                     (body.edits / body.meta), with body.dayLoc for either
@@ -116,11 +116,6 @@
       display_names:Array.isArray(S.names)?clone(S.names):null,
       prefs:prefs
     });
-    if(isObj(S.about)){
-      var A=S.about, dd=num(A.days);
-      put("about_me",uid,{train:str(A.train,40),level:str(A.level,40),goal:str(A.goal,40),
-        days_per_week:(dd!==null&&dd>=1&&dd<=7)?Math.round(dd):null});
-    }
     if(L&&Array.isArray(L.list)) L.list.forEach(function(l,i){
       if(!l||l.id===undefined||l.id===null||l.id==="") return;
       var extra={}; Object.keys(l).forEach(function(k){ if(k!=="id"&&k!=="name"&&k!=="gear"&&l[k]!==undefined) extra[k]=clone(l[k]); });
@@ -174,9 +169,6 @@
     if(f.palette!=null) S.palette=f.palette;
     if(f.celebrate!=null) S.celebrate=f.celebrate;
     S.names=Array.isArray(f.display_names)?clone(f.display_names):(Array.isArray(oldNames)?oldNames:["You","Partner"]);
-    /* about */
-    var ab=byTable(recs,"about_me")[0];
-    if(ab){ var a=ab.f||{}, o={}; if(a.train!=null)o.train=a.train; if(a.level!=null)o.level=a.level; if(a.goal!=null)o.goal=a.goal; if(a.days_per_week!=null)o.days=a.days_per_week; S.about=o; }
     /* profile: rest, measurements, the rest from prefs */
     var prof=sub("profile");
     if(f.rest_default!=null) prof.rest=f.rest_default;

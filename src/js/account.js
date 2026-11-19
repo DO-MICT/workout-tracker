@@ -140,7 +140,7 @@ function delClose(){
 }
 function delOpen(){
   delSheet('<div class="obhero"><h1 id="dltitle">Delete my account</h1>'+
-    '<p>This deletes your account and everything in it: plans, workouts, records, measurements, notes, gear and settings. It can’t be undone.</p></div>'+
+    '<p>This deletes your account and everything in it: plans, workouts, records, measurements, notes, equipment and settings. It can’t be undone.</p></div>'+
     delStoreNote()+
     '<ul class="dellist"><li>You have <b>7 days</b> to change your mind: sign in again and tap Keep my account.</li>'+
     '<li>After that, everything is removed for good.</li>'+

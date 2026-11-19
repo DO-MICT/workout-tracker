@@ -28,7 +28,7 @@ What the shell adds over the website:
 - **Google sign-in** (WP11): `platform.openAuthUrl()` opens Google in a Custom Tab (Google blocks sign-in inside a
   WebView), the result comes back as `gfd://auth-callback#access_token=…` like an email link, and the tab is closed.
   No Android OAuth client or SHA-1 is needed: it's the same browser flow as the web. Setup: `docs/site-brief.md`.
-- **Back button**: closes whatever Escape would (sheet, menu, popup); on the main screen or sign-in it leaves the app.
+- **Back button**: closes whatever Escape would (sheet, menu, popup). In first-run setup it steps back (plan list, then Equipment, then Location); on Location, sign-in and the main screen it leaves the app.
 - **Downloads** (data export ZIP): written to the app cache and handed to Android's share sheet.
 - **Links that open a new tab** (policy pages) open in the in-app browser tab at the public site address.
 - **Update bar**: when `app_config.min_version` is newer, the app points to Google Play instead of reloading.

@@ -82,7 +82,7 @@ function renderFocus(){
   var sub=g?(g.kind==="circuit"?"Circuit":"Superset")+" · "+ex.sets+" rounds × "+esc(ex.reps):"Target "+ex.sets+" × "+esc(ex.reps);
   var h='<div class="fx" id="fx">';
   h+='<div class="fx-top">'+
-    '<div class="fx-name"><span class="fx-pos'+(g?' grp':'')+'">'+tag+'</span><div><h2>'+esc(ex.n)+'</h2><span>'+sub+(miss.length?' · <b class="fx-warn">Needs gear</b>':'')+(noteOf(ex.id)?' · <b class="fx-warn">Injury note</b>':'')+'</span></div></div>'+
+    '<div class="fx-name"><span class="fx-pos'+(g?' grp':'')+'">'+tag+'</span><div><h2>'+esc(ex.n)+'</h2><span>'+sub+(miss.length?' · <b class="fx-warn">Needs equipment</b>':'')+(noteOf(ex.id)?' · <b class="fx-warn">Injury note</b>':'')+'</span></div></div>'+
     '<button class="fx-nav fx-more" data-fx="tools" aria-haspopup="dialog" aria-label="More for '+esc(ex.n)+': swap, injury note, history, how to">⋯</button></div>';
   /* the exercise animation on a card at the top; ‹ › on its sides (swipe it too). The workout clock sits in its corner. */
   var fig=exFigure(ex.id,ex.f,"fx-fig"), started=fxStarted();

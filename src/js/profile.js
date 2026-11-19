@@ -72,7 +72,6 @@ function openProfile(){
   var P=prof(), hs=P.hist, lastS=hs.length?hs[hs.length-1]:null;
   var h='<div class="sheet-in"><div class="sheet-top"><h2 id="ptitle">Profile</h2><button class="chip" id="closeProfile">Close</button></div>'+
     accountHtml()+
-    aboutHtml()+
     '<h3 class="psec">Default rest timer</h3><p class="sub">Used by the built-in plans. Plans you set up can have their own. Saves as you scroll.</p>'+
     wheelHtml()+
     '<button class="linkbtn" id="testPing">Play the start sound</button>'+

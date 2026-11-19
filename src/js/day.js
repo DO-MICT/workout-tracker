@@ -84,7 +84,7 @@ function exHtml(ex){
   h+='<details class="ex'+(nd===ns?' alldone':'')+'" data-ex="'+ex.id+'"'+(OPEN[day+":"+ex.id]?' open':'')+'>';
   var nt=noteOf(ex.id);
   var exMiss=DAYGEAR&&LIB[ex.id]?missingFor(LIB[ex.id],DAYGEAR):[];
-  h+='<summary><div class="ttl"><h3>'+esc(ex.n)+'</h3>'+(exMiss.length?'<span class="nogear">Needs gear</span>':'')+'</div><div class="meta"><span class="target">'+ex.sets+' × '+esc(ex.reps)+'</span><span class="cntrow">'+(nt?'<span class="notemark" title="Has an injury note">'+NOTE_SVG+'<span class="sr">Has an injury note.</span></span>':'')+'<span class="cnt'+(nd===ns?' all':'')+'">'+nd+'/'+ns+' sets</span></span></div></summary>';
+  h+='<summary><div class="ttl"><h3>'+esc(ex.n)+'</h3>'+(exMiss.length?'<span class="nogear">Needs equipment</span>':'')+'</div><div class="meta"><span class="target">'+ex.sets+' × '+esc(ex.reps)+'</span><span class="cntrow">'+(nt?'<span class="notemark" title="Has an injury note">'+NOTE_SVG+'<span class="sr">Has an injury note.</span></span>':'')+'<span class="cnt'+(nd===ns?' all':'')+'">'+nd+'/'+ns+' sets</span></span></div></summary>';
   if(nt) h+='<div class="injnote"><b>Injury note</b><p>'+esc(nt)+'</p></div>';
   if(exMiss.length){
     var lo2=dayLoc(activePlan().id,DAYS[day].id);
@@ -144,12 +144,12 @@ function renderDay(){
   if(DAYGEAR) d.ex.forEach(function(x){var L=LIB[x.id]; if(L&&missingFor(L,DAYGEAR).length) miss.push(x);});
   h+='<div class="dayloc"><button id="dayLocBtn" class="locpill" aria-haspopup="true" aria-expanded="false" aria-controls="dayLocMenu">'+PIN_SVG+'<span>At '+esc(lo.name)+(set?'':' <i>(default)</i>')+'</span>'+CHEV_SVG+'</button>'+
     '<div class="menu daylocmenu" id="dayLocMenu" hidden><div class="menu-lbl2">Where are you training on '+weekLong(d.id)+'?</div>'+
-    locState().list.map(function(l){return '<button class="menu-item pm-item" data-dayloc="'+l.id+'" aria-pressed="'+(l.id===lo.id)+'"><span>'+esc(l.name)+' <small>'+l.gear.length+' items</small></span>'+(l.id===lo.id?'<b aria-hidden="true">✓</b>':'')+'</button>';}).join("")+
-    '<button class="menu-item pm-manage" id="dayLocSetup">Set up locations and gear</button></div></div>';
+    locState().list.map(function(l){return '<button class="menu-item pm-item" data-dayloc="'+l.id+'" aria-pressed="'+(l.id===lo.id)+'"><span>'+esc(l.name)+' <small>'+(l.gear.length?l.gear.length+' items':'not set')+'</small></span>'+(l.id===lo.id?'<b aria-hidden="true">✓</b>':'')+'</button>';}).join("")+
+    '<button class="menu-item pm-manage" id="dayLocSetup">Set up locations and equipment</button></div></div>';
   if(d.ex.length){
     if(!DAYGEAR) h+='<div class="ready none">No equipment set for '+esc(lo.name)+' yet, so this can’t be checked. <button class="linkbtn" id="dayLocSetup2">Set it up</button></div>';
     else if(!miss.length) h+='<div class="ready ok">'+OK_SVG+'<span>Everything for today is at '+esc(lo.name)+'.</span></div>';
-    else h+='<div class="ready warn">'+WARN_SVG+'<span><b>'+miss.length+' of '+d.ex.length+' exercises</b> need gear that isn’t at '+esc(lo.name)+'. Open them to swap.</span></div>';
+    else h+='<div class="ready warn">'+WARN_SVG+'<span><b>'+miss.length+' of '+d.ex.length+' exercises</b> need equipment that isn’t at '+esc(lo.name)+'. Open them to swap.</span></div>';
   }
   h+='<div class="progress"><div class="bar"><i id="pbar"></i></div><span id="ptext"></span></div>';
   if(!d.ex.length) h+='<div class="emptyday"><p>'+(d.title==="Rest day"?'Rest day. Recover, walk, stretch.':'No exercises on this day yet.')+'</p><button class="'+(d.title==="Rest day"?'ghost':'primary')+'" id="editDay2">Add exercises</button></div>';
@@ -244,7 +244,6 @@ document.addEventListener("click",function(e){
   if(t.id==="closeProfile"){closeProfile();return;}
   if(t.id==="saveAcct"){saveAcct();return;}
   if(t.id==="testPing"){schedulePing(3);return;}
-  if(aboutClick(t)) return;
   if(t.dataset.celebset){S.celebrate=t.dataset.celebset;save();document.querySelectorAll("[data-celebset]").forEach(function(b){b.setAttribute("aria-pressed",b===t?"true":"false");});toast(t.dataset.celebset==="calm"?"Calm: quieter words, no confetti":"Energetic: cheers and confetti for real wins");return;}
   if(t.dataset.day!==undefined){day=+t.dataset.day;renderTabs();renderDay();window.scrollTo(0,0);var db=document.getElementById("dayBtn");if(db)db.focus({preventScroll:true});return;}
   if(t.dataset.tick){ tickSet(findEx(t.dataset.tick),+t.dataset.i,t); return; }
@@ -317,7 +316,6 @@ document.addEventListener("mouseup",function(e){
 document.addEventListener("focusout",function(e){ if(e.target===SELBOX) SELBOX=null; });
 document.addEventListener("toggle",function(e){
   var el=e.target; if(!el||!el.classList) return;
-  if(el.classList.contains("eqfold")){if(!(document.getElementById("eqSearch")||{}).value) EQ_OPEN[el.dataset.eqg]=el.open; return;}
   if(el.classList.contains("ex")){OPEN[day+":"+el.dataset.ex]=el.open;}
   else if(el.classList.contains("grp")){
     OPEN[day+":g:"+el.dataset.gk]=el.open;

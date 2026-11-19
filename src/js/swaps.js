@@ -6,12 +6,16 @@
 var SWAP=null;          /* open swap panel on the day view: {ex, more} */
 var SWMODE="today";     /* "today" | "plan" */
 
-function swapLevel(){ return S.about&&S.about.level||null; }
+/* easier / similar / harder than the exercise being swapped */
+function swapLevelTag(r){
+  var t={easier:"Easier",similar:"Similar",harder:"Harder"}[r.level]; if(!t) return "";
+  return '<em class="swhard '+r.level+'">'+t+'</em>';
+}
 function swapGearName(id){ return gearName(id); }
 /* ranked options for one exercise; g = gear list, or null when no gear is set (then everything counts) */
-/* g: the gear list ([] = bodyweight only), or null to ignore gear */
+/* g: the gear list ([] or null = equipment not set, so gear is ignored) */
 function swapOptions(exId,g,inDay,n){
-  return GFDRules.rankSwaps(LIB,exId,{gear:g||null,inDay:inDay||[],level:swapLevel(),n:n});
+  return GFDRules.rankSwaps(LIB,exId,{gear:gearSet(g)?g:null,inDay:inDay||[],n:n});
 }
 function swapReasonText(r){ return GFDRules.swapReason(r,swapGearName); }
 
@@ -63,13 +67,13 @@ function swapPanelHtml(ex,inline){
   var all=swapOptions(ex.id,DAYGEAR,inDay,null), list=all.slice(0,more?15:3);
   var h='<div class="swpanel'+(inline?' inline':'')+'" role="group" aria-label="Swap '+esc(ex.n)+'">';
   if(!inline) h+='<div class="swhead"><b>Swap '+esc(ex.n)+'</b><button class="linkbtn" data-swclose="'+ex.id+'">Cancel</button></div>';
-  if(!list.length) return h+'<p class="swnone">No alternative here with your gear.</p></div>';
+  if(!list.length) return h+'<p class="swnone">No alternative here with your equipment.</p></div>';
   h+='<div class="swmode" role="radiogroup" aria-label="How long is this swap for?">'+
     '<button role="radio" data-swmode="today" aria-checked="'+(SWMODE==="today")+'">Just today</button>'+
     '<button role="radio" data-swmode="plan" aria-checked="'+(SWMODE==="plan")+'">Change my plan</button></div>';
   h+='<div class="swlist">'+list.map(function(r){
     return '<button class="swopt" data-swto="'+ex.id+'|'+r.o.id+'"><span class="bn"><b>'+esc(r.o.n)+'</b><span>'+esc(swapReasonText(r))+'</span></span>'+
-      (r.harder?'<em class="swhard">Harder</em>':'')+'</button>';
+      swapLevelTag(r)+'</button>';
   }).join("")+'</div>';
   if(all.length>list.length&&!more) h+='<button class="linkbtn swmore" data-swmore="'+ex.id+'">More options ('+(Math.min(all.length,15)-list.length)+')</button>';
   return h+'</div>';
@@ -121,7 +125,7 @@ function swapsClick(t){
   if(t.dataset.swto){ var p=t.dataset.swto.split("|"); doSwap(p[0],p[1],SWMODE); return true; }
   if(t.dataset.swtaken){
     var id2=t.dataset.swtaken, best=swapOptions(id2,DAYGEAR,DAYS[day].ex.map(function(x){return x.id;}),1)[0];
-    if(!best){ toast("No alternative here with your gear"); return true; }
+    if(!best){ toast("No alternative here with your equipment"); return true; }
     doSwap(id2,best.o.id,"today"); return true;
   }
   if(t.dataset.swback){

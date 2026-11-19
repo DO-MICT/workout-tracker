@@ -191,8 +191,9 @@ var LIB={};
 })();
 /* returns [] when you can do it, otherwise a list of missing "any of" groups */
 function missingFor(ex,g){
-  if(!ex.req) return [];
-  return GFDRules.missingGear(ex.req,g||gear());
+  var list=g||gear();
+  if(!ex.req||!gearSet(list)) return [];   /* equipment not set: nothing is missing, nothing is filtered */
+  return GFDRules.missingGear(ex.req,list);
 }
 function needsText(ex,g){return missingFor(ex,g).map(function(alt){return alt.split("|").map(gearName).join(" or ");}).join(" and ");}
 function labOf(ex){return LABS[ex.lab||"w"]||LABS.w;}

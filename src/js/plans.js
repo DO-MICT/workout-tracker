@@ -40,7 +40,7 @@ var TEMPLATES=[
   wed:{title:"Strength for runners",ex:T([["bwsquat",3,"15"],["walklunge",2,"10 / leg"],["glutebridge",3,"15"],["sideplank",2,"20 s / side"],["deadbug",2,"8 / side"],["hipflexor",1,"45 s / side"]])},
   fri:{title:"Longer run",ex:T([["jog",1,"25–35 min"],["hipflexor",1,"45 s / side"],["downdog",1,"45 s"]])}
  }},
- {id:"coles",name:"Cole’s Sessions",desc:"A random session from the gear at your location. Pick full body, upper, lower, core or cardio, how many exercises and how many sets.",days:null,random:true}
+ {id:"coles",name:"Cole’s Sessions",desc:"A random session from the equipment at your location. Pick full body, upper, lower, core or cardio, how many exercises and how many sets.",days:null,random:true}
 ];
 TEMPLATES.forEach(function(t){ if(t.starter&&t.days&&!t.days.thu) t.days.thu=t.days.wed; });
 /* the days a built-in plan uses when you haven't changed them */
@@ -275,7 +275,7 @@ function renderWizard(){
       var ex=WZ.ex[w.id]||[], title=(WZ.titles[w.id]||"").trim()||"Workout";
       var wl=locById(WZ.locs[w.id])||curLoc(), wg=wl.gear, nmiss=wg.length?ex.filter(function(x){return missingFor(LIB[x.id],wg).length;}).length:0;
       h+='<div class="wzrev"><div class="wzrev-h"><h4><span>'+w.short+'</span>'+esc(ex.length?title:"Rest day")+'</h4><button class="linkbtn" data-wzedit="'+w.id+'">Edit</button></div>';
-      if(ex.length) h+='<p class="wzmeta">At '+esc(wl.name)+(nmiss?' · <em class="warnt">'+nmiss+' need gear that isn’t there</em>':(wg.length?' · <span class="okt">all gear there</span>':''))+'</p>';
+      if(ex.length) h+='<p class="wzmeta">At '+esc(wl.name)+(nmiss?' · <em class="warnt">'+nmiss+' need equipment that isn’t there</em>':(wg.length?' · <span class="okt">all equipment there</span>':''))+'</p>';
       if(ex.length){
         h+='<ol class="wzlist">'+ex.map(function(x,k){var L=LIB[x.id], miss=wg.length?needsText(L,wg):"", lk=x.link||(k>0&&ex[k-1].link);
           return '<li class="'+(lk?'lk':'')+'"><span>'+esc(L.n)+(miss?' <em>needs '+esc(miss)+'</em>':'')+'</span><b>'+x.sets+' × '+esc(x.reps)+'</b></li>';}).join("")+'</ol>';

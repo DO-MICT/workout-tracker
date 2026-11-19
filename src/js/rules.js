@@ -338,7 +338,7 @@
     if(!req) return []; gear=gearNow(gear);
     return req.split(",").filter(function(alt){ return !alt.split("|").some(function(id){ return gear.indexOf(id)>=0||FLOOR.indexOf(id)>=0; }); });
   }
-  var LEVELS={new:0,some:1,experienced:2}, DIFF={Beginner:0,Intermediate:1,Advanced:2};
+  var DIFF={Beginner:0,Intermediate:1,Advanced:2};
   /* words that name the gear, not the movement: "Barbell Romanian deadlift" and "Dumbbell Romanian deadlift" match */
   var GEAR_WORDS=/^(barbell|dumbbell|dumbbells|db|bb|kettlebell|kettlebells|kb|double|cable|machine|smith|trap|bar|ez|ez-bar|band|banded|resistance|landmine|seated|standing|lying|incline|decline|flat|weighted|bodyweight|reformer|mat|trx|suspension|ring|rings|single-arm|one-arm|a|the|with|on|and|of|to|in)$/;
   function nameWords(n){ return String(n||"").toLowerCase().replace(/[()]/g," ").split(/[\s,/]+/).filter(function(w){ return w&&!GEAR_WORDS.test(w); }); }
@@ -359,12 +359,13 @@
   }
   /* swaps for exId, best first (F4.E1.S3). Keeps the movement and changes the gear:
      same movement pattern, then same main muscle, then same style (pilates stays pilates), tracked the same way,
-     similar name. Moves above the person's level stay in the list, lower down, marked harder.
-     opts: gear (null = don't check gear), inDay (ids to leave out), level ("new"|"some"|"experienced"), n.
-     Returns [{o, score, move, muscle, style, harder, gear:[ids used]}]. */
+     similar name. Each option is compared with the exercise being swapped: level is "easier", "similar" or
+     "harder" (null when either has no difficulty). A harder option ranks a little lower.
+     opts: gear (null = don't check gear), inDay (ids to leave out), n.
+     Returns [{o, score, move, muscle, style, level, harder, gear:[ids used]}]. */
   function rankSwaps(lib,exId,opts){
     var L=lib[exId]; if(!L) return [];
-    opts=opts||{}; var gear=opts.gear||null, inDay=opts.inDay||[], lv=LEVELS[opts.level];
+    opts=opts||{}; var gear=opts.gear||null, inDay=opts.inDay||[], ld=DIFF[(L.x||{}).diff];
     var lx=L.x||{}, lpm=(lx.pm||[]).map(function(m){ return m.toLowerCase(); }), lw=nameWords(L.n);
     var out=[];
     Object.keys(lib).forEach(function(k){
@@ -377,11 +378,12 @@
       if(o.mg!==L.mg&&!(move&&overlap)) return;
       /* "Isolation" says little on its own, so it only counts with the same main muscle */
       if(move&&iso&&!overlap) move=false;
-      var style=!!(lx.tt&&x.tt===lx.tt), harder=lv!=null&&DIFF[x.diff]!=null&&DIFF[x.diff]>lv;
+      var style=!!(lx.tt&&x.tt===lx.tt), od=DIFF[x.diff],
+        level=ld==null||od==null?null:od>ld?"harder":od<ld?"easier":"similar", harder=level==="harder";
       var w=nameWords(o.n), shared=w.filter(function(t){ return lw.indexOf(t)>=0; }).length;
       var score=(move?100:0)+(main?40:overlap?20:0)+(o.mg===L.mg?10:0)+(style?12:0)+(o.lab===L.lab?8:0)+
-        Math.min(shared,3)*6+(!!x.uni===!!lx.uni?10:0)+gearKin(L.req,o.req)-(harder?120:0);
-      out.push({o:o,score:score,move:move,muscle:main||overlap,style:style,harder:harder,gear:gearUsed(o.req,gear)});
+        Math.min(shared,3)*6+(!!x.uni===!!lx.uni?10:0)+gearKin(L.req,o.req)-(harder?15:0);
+      out.push({o:o,score:score,move:move,muscle:main||overlap,style:style,level:level,harder:harder,gear:gearUsed(o.req,gear)});
     });
     out.sort(function(a,b){ return (b.score-a.score)||String(a.o.n).localeCompare(String(b.o.n)); });
     return opts.n==null?out:out.slice(0,opts.n);
@@ -391,7 +393,7 @@
     var name=gearName||function(id){ return id; }, parts=[];
     if(r.move) parts.push("Same movement"); else if(r.muscle) parts.push("Same muscles"); else parts.push("Same muscle group");
     var g=r.gear.map(function(id){ return String(name(id)).toLowerCase(); });
-    parts.push(g.length?"uses "+(g.length>1?g.slice(0,-1).join(", ")+" and "+g[g.length-1]:g[0]):"no gear needed");
+    parts.push(g.length?"uses "+(g.length>1?g.slice(0,-1).join(", ")+" and "+g[g.length-1]:g[0]):"no equipment needed");
     return parts.join(", ");
   }
   /* reps to plan after a swap: keep the plan's target when both are tracked the same way */
@@ -440,35 +442,6 @@
     return out;
   }
 
-  /* ---- onboarding: suggest a plan from four answers (F3) ----
-     ans = {train: gym|pilates|yoga|running|mixed, level: new|some|experienced,
-            goal: strength|muscle|weight|move|general, days: 2..5}
-     fit = {planId: share of the plan's exercises the location has the gear for, 0..1}
-     Returns plan ids best first. pick is the first one that doesn't mostly need gear the location
-     doesn't have (fit of at least 0.5); "coles" builds from the gear that's there, so it always fits. */
-  function planOrder(ans){
-    var a=ans||{}, t=a.train, lv=a.level, g=a.goal, d=+a.days||3, out;
-    if(t==="pilates") out=["pilates","yoga","beginner"];
-    else if(t==="yoga") out=["yoga","pilates","beginner"];
-    else if(t==="running") out=["run","beginner","fb3"];
-    else if(lv==="new") out=["beginner","fb3"];
-    else if(t==="mixed") out=d>=4||g==="weight"?["fb3","beginner","split5"]:["beginner","fb3"];
-    else if(d>=5&&lv==="experienced") out=g==="muscle"?["split5","bro","fb3"]:["split5","fb3","bro"];
-    else if(d>=5) out=["split5","fb3","beginner"];
-    else out=["fb3","beginner","split5"];
-    if(g==="move"&&out.indexOf("yoga")<0) out.push("yoga");
-    return out;
-  }
-  function recommendPlan(ans,fit){
-    var order=planOrder(ans), f=fit||{}, pick="coles";
-    for(var i=0;i<order.length;i++){ var v=f[order[i]]; if(v==null||v>=0.5){ pick=order[i]; break; } }
-    return {pick:pick,order:order};
-  }
-  /* how the app cheers: calm for pilates, yoga and "move better", energetic for the rest */
-  function celebrateFor(ans){ var a=ans||{}; return a.train==="pilates"||a.train==="yoga"||a.goal==="move"?"calm":"energetic"; }
-  /* training days for the starter plans: 2 days a week sit apart, 3 or more use Monday, Wednesday, Friday */
-  function starterDays(days){ return (+days||3)<=2?["mon","thu"]:["mon","wed","fri"]; }
-
   /* ---- when a workout happened (F1.E4.S1) ----
      The date and time boxes are local time ("2026-11-10", "18:30"); the database keeps an ISO time.
      A workout can be moved or logged in the past, never more than 5 minutes ahead and never before 2000. */
@@ -505,7 +478,6 @@
     historyRows:historyRows,exerciseRecords:exerciseRecords,setPrefill:setPrefill,tickMissing:tickMissing,bigJump:bigJump,jumpText:jumpText,
     lastSetParts:lastSetParts,gearNow:gearNow,missingGear:missingGear,swapCandidates:swapCandidates,rankSwaps:rankSwaps,swapReason:swapReason,swapReps:swapReps,
     workoutVolume:workoutVolume,cardioSum:cardioSum,
-    planOrder:planOrder,recommendPlan:recommendPlan,celebrateFor:celebrateFor,starterDays:starterDays,
     whenParts:whenParts,whenFromParts:whenFromParts,shiftStart:shiftStart};
   if(typeof module!=="undefined"&&module.exports) module.exports=R; else root.GFDRules=R;
 })(typeof window!=="undefined"?window:this);

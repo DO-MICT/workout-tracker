@@ -18,7 +18,7 @@ function colesFocus(id){for(var i=0;i<COLES_FOCUS.length;i++)if(COLES_FOCUS[i][0
 function shuffled(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t;}return a;}
 /* everything at the location for these muscle groups (no mobility moves) */
 function colesPool(groups,g){
-  return Object.keys(LIB).map(function(k){return LIB[k];}).filter(function(L){return groups.indexOf(L.mg)>=0&&g.length&&!missingFor(L,g).length;});
+  return Object.keys(LIB).map(function(k){return LIB[k];}).filter(function(L){return groups.indexOf(L.mg)>=0&&!missingFor(L,g).length;});
 }
 /* balanced pick: take turns across the focus's muscle groups so a full-body session isn't all chest */
 function colesPick(focusId,count,g,exclude){
@@ -54,13 +54,13 @@ function colesPanelHtml(){
     var n=s.ex.length, sl=locById(s.loc)||lo;
     return '<div class="colesbar"><div><b>'+esc(f[1])+'</b><span>'+n+' exercise'+(n>1?'s':'')+' · at '+esc(sl.name)+'</span></div><button class="chip sm" id="colesNew">New session</button></div>';
   }
-  var pool=lo.gear.length?colesPool(colesFocus(o.focus)[2],lo.gear).length:0;
-  var h='<div class="coles"><p class="sub">Pick where you are and what to train. Cole builds a random session from the gear there.</p>'+
+  var pool=colesPool(colesFocus(o.focus)[2],lo.gear).length;
+  var h='<div class="coles"><p class="sub">Pick where you are and what to train. Cole builds a random session from the equipment there.</p>'+
     '<span class="loclbl">Location</span><div class="locchips" role="group" aria-label="Location">'+locChips("data-colesloc",lo.id)+'</div>'+
     '<span class="loclbl">Focus</span><div class="locchips colesfocus" role="radiogroup" aria-label="Focus">'+COLES_FOCUS.map(function(x){return '<button class="chip sm" role="radio" data-colesfocus="'+x[0]+'" aria-checked="'+(o.focus===x[0])+'" aria-pressed="'+(o.focus===x[0])+'">'+x[1]+'</button>';}).join("")+'</div>'+
     '<div class="colessteps"><div class="bstep"><span>Exercises</span><button class="ibtn" data-colescount="-1" aria-label="Fewer exercises"'+(o.count<=2?' disabled':'')+'>−</button><b aria-live="polite">'+o.count+'</b><button class="ibtn" data-colescount="1" aria-label="More exercises"'+(o.count>=12?' disabled':'')+'>+</button></div>'+
     '<div class="bstep"><span>Sets each</span><button class="ibtn" data-colessets="-1" aria-label="Fewer sets"'+(o.sets<=1?' disabled':'')+'>−</button><b aria-live="polite">'+o.sets+'</b><button class="ibtn" data-colessets="1" aria-label="More sets"'+(o.sets>=6?' disabled':'')+'>+</button></div></div>';
-  if(!lo.gear.length) h+='<div class="ready none">No equipment set for '+esc(lo.name)+' yet. <button class="linkbtn" id="colesGear">Add equipment</button></div>';
+  if(!lo.gear.length) h+='<div class="ready none">No equipment set for '+esc(lo.name)+' yet, so all exercises are included. <button class="linkbtn" id="colesGear">Add equipment</button></div>';
   else h+='<p class="colesinfo">'+pool+' '+esc(colesFocus(o.focus)[1].toLowerCase())+' exercises possible at '+esc(lo.name)+(pool&&pool<o.count?', so you’ll get '+pool:'')+'.'+(o.focus==="cardio"?' Cardio machines count as one block each.':'')+'</p>';
   h+='<div class="colesbtns">'+(s?'<button class="ghost" id="colesCancel">Keep current</button>':'')+'<button class="primary" id="colesGo"'+(pool?'':' disabled')+'>'+(s?'Build new session':'Build my session')+'</button></div></div>';
   return h;
@@ -77,7 +77,7 @@ function colesClick(t){
   if(t.id==="colesGear"){setLoc(colesLoc().id);openEquip();return true;}
   if(t.id==="colesGo"){
     var n=colesGenerate(); C.editing=false;
-    if(!n){toast("No exercises fit that gear. Try another focus or add equipment");renderDay();return true;}
+    if(!n){toast("No exercises fit that equipment. Try another focus or add equipment");renderDay();return true;}
     save(); OPEN={}; DAYS=buildDays(); renderTabs(); renderDay();
     var first=document.querySelector("#day details.ex"); if(first){first.open=true;}
     toast("Session ready: "+n+" exercises"); return true;
@@ -86,7 +86,7 @@ function colesClick(t){
     var s=colesSession(); if(!s) return true;
     var old=t.dataset.colesswap, L=LIB[old], lo=locById(s.loc)||colesLoc();
     var alt=shuffled(colesPool([L.mg],lo.gear).filter(function(x){return !s.ex.some(function(e){return e.id===x.id;});}))[0];
-    if(!alt){toast("No other "+L.mg.toLowerCase()+" exercise fits the gear there");return true;}
+    if(!alt){toast("No other "+L.mg.toLowerCase()+" exercise fits the equipment there");return true;}
     s.ex.forEach(function(e,i){ if(e.id===old) s.ex[i]={id:alt.id,sets:colesSetsFor(alt,o.sets),reps:alt.reps,link:false}; });
     delete cur()[alt.id]; save(); DAYS=buildDays(); OPEN[day+":"+alt.id]=true; renderDay(); toast("Swapped for "+alt.n); return true;
   }

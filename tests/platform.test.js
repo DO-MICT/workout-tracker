@@ -162,6 +162,16 @@ test("back button: closes what's open (as Escape), else leaves the app", () => {
   assert.equal(calls.pop()[0], "App.minimizeApp");
 });
 
+test("back button in setup: steps back when it can, else leaves the app", () => {
+  const { ctx, listeners, calls } = page({ android: true });
+  ctx.OB = { step: "gear" };
+  ctx.obBackStep = () => { if (ctx.OB.step === "loc") return false; ctx.OB.step = "loc"; calls.push(["obBackStep"]); return true; };
+  listeners["App:backButton"]({ canGoBack: false });
+  assert.equal(calls.pop()[0], "obBackStep");
+  listeners["App:backButton"]({ canGoBack: false });
+  assert.equal(calls.pop()[0], "App.minimizeApp");
+});
+
 test("android: links that would open a new tab go to the browser", () => {
   const { docListeners, calls } = page({ android: true, shell: { site: "https://getfitdaily.app/" } });
   let prevented = false;

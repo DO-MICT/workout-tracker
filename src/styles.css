@@ -440,6 +440,8 @@ details.grp .ex{margin-bottom:8px}
 .swopt:hover{border-color:var(--ink)}
 .swopt:focus-visible{outline:3px solid var(--blue);outline-offset:1px}
 .swhard{flex:none;font-style:normal;font-size:.72rem;font-weight:700;color:var(--warn);border:1.5px solid currentColor;border-radius:999px;padding:0 8px}
+.swhard.easier{color:var(--ok,var(--muted))}
+.swhard.similar{color:var(--muted);border-width:1px}
 .swlist .pview .swhard{display:inline-block;margin-top:2px}
 .swlist span.pview{cursor:default}
 .swmore{margin-top:6px;padding:4px 0;min-height:32px}
@@ -492,24 +494,15 @@ details.grp .ex{margin-bottom:8px}
 .obh{font-size:1.8rem;margin:4px 0 4px;font-weight:800}
 .bname em{display:block;font-style:normal;font-size:.8rem;color:var(--muted);margin-top:6px}
 .ob .primary{width:100%}
+.sheet-in.ob{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;min-height:100%;box-sizing:border-box;padding-bottom:0}
+.ob .wznav{grid-template-columns:1fr 1fr;margin-top:auto;padding-top:12px;border-top:1px solid var(--line,rgba(128,128,128,.25))}
+.ob .wznav:before{content:none}
+.ob .wznav.w3{grid-template-columns:1fr 1fr 1.4fr}
+.ob .wznav .primary,.ob .wznav .ghost{margin:0}
 .obfine{font-size:.82rem;color:var(--muted);text-align:center;margin:12px 0 0}
-.obopt{display:block;width:100%;text-align:left;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:14px 16px;margin:0 0 12px;cursor:pointer;color:var(--ink)}
-.obopt b{display:block;font-family:Archivo,sans-serif;font-size:1.6rem;margin-bottom:4px}
-.obopt span{color:var(--muted);font-size:.92rem}
-.obopt.on{border-color:var(--done);box-shadow:inset 0 0 0 1px var(--done)}
-.obdaysq{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.obdaysq .obopt{text-align:center;padding:16px 4px;margin:0}
-.obdaysq .obopt b{font-size:1.3rem;margin:0}
-.ttag.obbest{background:var(--accent);color:var(--accent-ink)}
 .tier .obdays{list-style:none;margin:6px 0 4px -18px;display:flex;flex-wrap:wrap;gap:4px}
 .tier .obdays span{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:1px 8px;color:var(--ink)}
 .tier .obdays span.opt{border-style:dashed;color:var(--muted)}
-.obmore{margin:2px 0}
-.obmore>summary{cursor:pointer;font-weight:700;padding:8px 2px;color:var(--muted)}
-.obmore>.tiers{margin-top:6px}
-.obpresets{margin-bottom:10px}
-.aboutlbl{margin:10px 0 6px;font-weight:700;font-size:.9rem}
-.obopt:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .bkbtns{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
 .bktext{box-sizing:border-box;width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--card);font:12px/1.4 ui-monospace,Menlo,monospace;color:var(--ink);margin-bottom:6px}
 .sgkinds{margin:0 0 12px}
@@ -599,17 +592,16 @@ details.grp .ex{margin-bottom:8px}
 .eqsearch{position:sticky;top:0;z-index:2;display:flex;gap:8px;align-items:center;background:var(--bg);padding:6px 0 10px}
 .eqsearch input{flex:1;min-width:0;box-sizing:border-box;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);font-size:1rem}
 .eqsearch input:focus-visible{outline:3px solid var(--blue);outline-offset:1px}
-.eqsec{margin-bottom:8px}
-.mygear{background:var(--card);border-radius:14px;padding:4px 12px 10px;margin-bottom:14px}
-.eqn{display:inline-block;min-width:24px;padding:0 7px;margin-left:4px;border-radius:999px;background:var(--done);color:var(--on-done);font-size:.85rem;text-align:center;vertical-align:middle;line-height:1.6}
-.eqgrp h4{margin:10px 0 6px;font-size:.82rem;font-weight:700;color:var(--muted);letter-spacing:.03em}
-.eqchips{display:flex;flex-wrap:wrap;gap:6px}
-.eqchip{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:8px 12px;min-height:40px;cursor:pointer;font-weight:500;text-align:left}
-.eqchip>span:first-child{font-weight:700;color:var(--blue)}
-.eqchip.mine{background:var(--done-bg);border-color:transparent}
-.eqchip.mine>span:first-child{color:var(--done)}
-.eqchip .x{color:var(--muted);font-size:1.1rem;line-height:1;margin-left:2px}
-.eqchip:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.eqstate{margin:0 0 4px;color:var(--muted);font-size:.9rem}
+.eqgh{margin:16px 0 8px;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.eqgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.eqtile{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:6px;box-sizing:border-box;min-height:104px;padding:10px 6px 8px;border:0;border-bottom:4px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);cursor:pointer;font:inherit;text-align:center}
+.eqth{display:grid;place-items:center;width:52px;height:52px;border-radius:10px;background:var(--line);color:var(--muted)}
+.eqnm{font-size:.74rem;font-weight:800;text-transform:uppercase;line-height:1.15;overflow-wrap:anywhere}
+.eqtile.on{background:var(--accent);color:var(--accent-ink);border-bottom-color:var(--accent-ink)}
+.eqtile.on .eqth{background:rgba(13,15,18,.12);color:var(--accent-ink)}
+.eqtile.fixed{cursor:default}
+.eqtile:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .eqempty{color:var(--muted);font-size:.92rem;margin:6px 0 4px}
 .psec{font-size:1.35rem;margin:18px 0 2px;font-weight:700}
 details.padv{margin-top:22px;border-top:1px solid var(--line)}
@@ -734,13 +726,6 @@ body.tabs .sheet-in{padding-bottom:40px}
 .stempty .chip{margin-top:12px}
 .stsample{font-size:.85rem;color:var(--muted);margin:0 0 8px}
 /* ---------- gear groups fold away; exercise library ---------- */
-.eqfold>summary{list-style:none;cursor:pointer;display:flex;align-items:center;min-height:44px;border-top:1px solid var(--line)}
-.eqfold>summary::-webkit-details-marker{display:none}
-.eqfold>summary h4{margin:0;flex:1}
-.eqfold>summary::after{content:"";width:9px;height:9px;border-right:2.4px solid var(--muted);border-bottom:2.4px solid var(--muted);transform:rotate(45deg);margin:0 6px 4px 0}
-.eqfold[open]>summary::after{transform:rotate(225deg);margin-bottom:-4px}
-.eqfold>summary:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px}
-.eqfold .eqchips{padding-bottom:10px}
 .elcount{margin:2px 0 8px;font-size:.85rem;color:var(--muted)}
 .elrow{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;border:0;background:var(--card);color:var(--ink);border-radius:12px;padding:10px 12px;margin-bottom:6px;cursor:pointer;min-height:56px}
 .elrow svg{flex:none;color:var(--muted)}
@@ -1266,7 +1251,7 @@ body.wide .fx-sheet{bottom:0;left:50%;right:auto;width:min(640px,100%);transform
 
 /* ---------- WP17 accessibility (WCAG 2.2 AA, NFR-5) ----------
    Tap targets are at least 44 px. Buttons that look smaller keep their look and get an invisible 44 px hit area. */
-.chip,.eqchip,.locpill,.seg button,.stseg button,.timer button{min-height:44px}
+.chip,.locpill,.seg button,.stseg button,.timer button{min-height:44px}
 .setrow input,.tick{min-height:44px}
 .ptoggle{min-height:44px;display:flex;align-items:center;gap:8px}
 .chip.sm,.planbtn,.linkbtn,.hit{position:relative}

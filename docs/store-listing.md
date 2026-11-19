@@ -19,13 +19,13 @@ Great Form and Discipline: show up, log it, get stronger.
 
 PLAN YOUR WEEK
 • Start from a ready-made plan (5-day split, full body, bro split) or build your own day by day
-• Over 1,000 exercises with form cues, and illustrations of the start and end position for the most popular ones
-• Tell GFD where you train and what gear you have; it only suggests exercises you can actually do
-• Swap any exercise for another that works the same muscles
+• Hundreds of exercises with form cues and illustrations.
+• Set up multiple locations with different equipment at each location.
+• Quick swap exercises so you don't have to wait around in the gym.
 
 LOG FAST, EVEN OFFLINE
-• Weights and reps pre-filled from last time, so most sets are one tap
-• Rest timer with a sound and an alert when rest is over, even with the screen off
+• Weights and reps pre-filled from history, so most sets are one tap
+• Rest timer with an alert to keep you going
 • Supersets and circuits
 • Works without signal in the gym; everything syncs when you're back online
 
