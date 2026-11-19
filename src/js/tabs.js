@@ -11,13 +11,13 @@ var TAB_ACTIVE="workout";
 function renderTabbar(){
   var nav=document.getElementById("tabbar"); if(!nav) return;
   var side=function(id,label){return '<button class="tab" data-tab="'+id+'" aria-current="'+(TAB_ACTIVE===id?"page":"false")+'"><span class="tpill">'+TAB_SVG[id]+(id==="more"&&SG_UNREAD?'<i class="tdot" aria-label="New reply"></i>':'')+'</span>'+label+'</button>';};
-  nav.innerHTML='<span class="rbrand" aria-hidden="true"><svg viewBox="0 0 100 100" width="40" height="40"><rect width="100" height="100" rx="22" fill="#D4FF3A"/><circle cx="50" cy="50" r="37" fill="none" stroke="#0D0F12" stroke-width="8"/><text x="50" y="60" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="30" fill="#0D0F12">GFD</text></svg><b>Get Fit Daily</b></span>'+side("plans","Plans")+side("stats","Stats")+
+  nav.innerHTML='<span class="rbrand" aria-hidden="true"><svg viewBox="0 0 100 100" width="40" height="40"><rect width="100" height="100" rx="22" fill="#D4FF3A"/><circle cx="50" cy="50" r="37" fill="none" stroke="#0D0F12" stroke-width="8"/><text x="50" y="60" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="30" fill="#0D0F12">GFD</text></svg><b>Get Fit Daily</b></span>'+side("plans","Routines")+side("stats","Stats")+
     '<button class="tab tcentre" data-tab="workout" aria-current="'+(TAB_ACTIVE==="workout"?"page":"false")+'"><span class="tplate">'+TAB_SVG.workout+'</span>Workout</button>'+
     side("gear","Equipment")+side("more","More");
 }
 function tabSheetsOpen(){
   var vis=function(id){var el=document.getElementById(id);return el&&!el.hidden;};
-  return {overlay:vis("onboard")||vis("wizard")||vis("builder")||vis("notesheet")||vis("donepop")||vis("measure"),
+  return {overlay:vis("onboard")||vis("wizard")||vis("donepop"),
     tab:vis("more")||vis("exlib")||vis("profile")||vis("sugg")||vis("feedback")?"more":vis("history")||vis("body")?"stats":vis("plans")?"plans":vis("equip")?"gear":"workout"};
 }
 /* WP17: while any page or popup is open, the workout page underneath is inert, so TalkBack and the keyboard can't wander into it.
@@ -33,9 +33,10 @@ function syncTabs(){
   document.body.classList.toggle("tabs",!st.overlay);
   if(st.tab!==TAB_ACTIVE){TAB_ACTIVE=st.tab;renderTabbar();}
 }
-function closeTabSheets(){ msClose(); bpClose(); closeMore(); closeLibrary(); closeProfile(); closeSugg(); closeFeedback(); closeUsage(); closePlans(); closeHistory(); closeEquip(); }
+function closeTabSheets(){ closeNote(); closeBuilder(); msClose(); bpClose(); closeMore(); closeLibrary(); closeProfile(); closeSugg(); closeFeedback(); closeUsage(); closePlans(); closeHistory(); closeEquip(); }
 function goTab(id){
   if(id===TAB_ACTIVE&&id!=="workout"&&!(id==="stats"&&!document.getElementById("body").hidden)) return;
+  var bs=document.getElementById("builder"); if(bs&&!bs.hidden&&BD&&BD.dirty){ toast("Save or cancel your workout changes first"); return; }
   closeTabSheets();
   if(id==="plans") openPlans();
   else if(id==="stats") openHistory();

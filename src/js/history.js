@@ -206,6 +206,7 @@ function metricOf(measure){
 /* ---------- History page: past workouts, and progress per exercise ---------- */
 var H=null; /* {rows, more, loading, err, sets:{id:[...]}, open:{id:true}, del:id, ex:exId|null, exRows, back:bool, cache:{}, dirty} */
 function openHistory(exId){
+  if(typeof FX!=="undefined"&&FX.tools){ FX.tools=false; SWAP=null; renderFocus(); } /* the ⋯ sheet would sit on top of History */
   H={rows:null,more:false,loading:false,err:"",sets:{},open:{},del:null,ex:exId||null,exRows:null,fromEx:!!exId,cache:{},dirty:false};
   var sh=document.getElementById("history"); sh.hidden=false; document.body.style.overflow="hidden";
   renderHistory(); sh.scrollTop=0; sh.focus();

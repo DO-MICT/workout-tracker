@@ -53,6 +53,8 @@ function plansState(){
 }
 function planMeta(id){var P=plansState(); if(!P.meta) P.meta={}; return P.meta[id]||{};}
 function allPlans(){var P=plansState();return TEMPLATES.map(function(t){var m=planMeta(t.id);return {id:t.id,name:m.name||t.name,desc:t.desc,builtin:true};}).concat(P.custom.map(function(c){return {id:c.id,name:c.name,desc:"",builtin:false};}));}
+/* routines shown in lists: the ones you made, plus the built-in one you're on right now (there is no default routine) */
+function listPlans(){var act=plansState().active; return allPlans().filter(function(p){return !p.builtin||p.id===act;});}
 function planById(id){var a=allPlans();for(var i=0;i<a.length;i++)if(a[i].id===id)return a[i];return null;}
 function activePlan(){var P=plansState();return planById(P.active)||planById("split5");}
 function tmplById(id){for(var i=0;i<TEMPLATES.length;i++)if(TEMPLATES[i].id===id)return TEMPLATES[i];return null;}
@@ -118,10 +120,10 @@ function renderPlanBtn(){
   var b=document.getElementById("planBtn"); if(!b) return;
   b.firstChild.textContent=activePlan().name;
   var m=document.getElementById("planMenu"), act=activePlan().id;
-  m.innerHTML='<div class="menu-lbl2">Switch plan</div>'+allPlans().map(function(p){
+  m.innerHTML='<div class="menu-lbl2">Switch routine</div>'+listPlans().map(function(p){
     var lk=planLocked(p.id);
     return '<button class="menu-item pm-item'+(lk?' pm-locked':'')+'" data-useplan="'+p.id+'" aria-pressed="'+(p.id===act)+'"'+(lk?' aria-label="'+esc(p.name)+', read only on Free"':'')+'><span>'+esc(p.name)+'</span>'+(p.id===act?'<b aria-hidden="true">✓</b>':lk?'<span class="ttag">Read only</span>':'')+'</button>';
-  }).join("")+'<button class="menu-item pm-manage" id="managePlans">Manage plans</button>';
+  }).join("")+'<button class="menu-item pm-manage" id="managePlans">Manage routines</button>';
 }
 function setPlanMenu(open){
   var m=document.getElementById("planMenu"), b=document.getElementById("planBtn"); if(!m||!b) return;
@@ -136,15 +138,17 @@ function renderPlans(){
   var sh=document.getElementById("plans"); if(!sh||sh.hidden) return;
   if(isWide()){ renderPlanGrid(sh); return; }   /* tablet and desktop: week grid (wide.js, WP16) */
   var act=activePlan().id;
-  var h='<div class="sheet-in"><div class="sheet-top"><h2 id="pltitle">Workout plans</h2><button class="chip" id="closePlans">Close</button></div>'+
-    '<p class="sub">Pick the plan you’re following. Each plan keeps its own edits. Your logs and PRs follow the exercise, whichever plan you’re on.</p>'+
+  var h='<div class="sheet-in"><div class="sheet-top"><h2 id="pltitle">Routines</h2><button class="chip" id="closePlans">Close</button></div>'+
+    '<button class="primary" id="newPlan">+ Create new</button>'+
+    '<p class="sub">Pick the routine you’re following. Each routine keeps its own edits. Your logs and PRs follow the exercise, whichever routine you’re on.</p>'+
     planCapHtml();
-  allPlans().forEach(function(p){
+  var shown=listPlans(); if(!shown.length) h+='<p class="pldesc">No routines yet. Tap Create new to make your first one.</p>';
+  shown.forEach(function(p){
     if(p.id==="coles"){
       var cs=colesSession(), cf=colesFocus(cs?cs.focus:colesState().opts.focus);
       h+='<div class="plcard'+(p.id===act?' on':'')+'"><div class="plhead"><h3>'+esc(p.name)+'</h3>'+(p.id===act?'<span class="pltag">Active</span>':'')+'<span class="ttag">Random</span></div><p class="pldesc">'+esc(p.desc)+'</p>'+
         '<p class="pldesc">'+(cs?'Today: '+esc(cf[1])+' · '+cs.ex.length+' exercises':'No session built today')+'</p>'+
-        '<div class="placts">'+(p.id===act?'':'<button class="chip sm primarychip" data-useplan="coles">Use this plan</button>')+'</div></div>';
+        '<div class="placts">'+(p.id===act?'':'<button class="chip sm primarychip" data-useplan="coles">Use this routine</button>')+'</div></div>';
       return;
     }
     var days=buildDaysFor(p.id), edited=planEdited(p.id);
@@ -152,23 +156,23 @@ function renderPlans(){
       h+='<div class="plcard pllocked"><div class="plhead"><h3>'+esc(p.name)+'</h3><span class="ttag">Read only</span></div>'+
         '<p class="pldesc">Saved, but not in use on Free. Pick it to use it again, or get Pro.</p>'+
         '<ul class="pldays">'+days.map(function(d){return '<li><b>'+d.short+'</b>'+esc(d.title)+'<span>'+(d.ex.length?d.ex.length+' exercises':'Empty')+'</span></li>';}).join("")+'</ul>'+
-        '<div class="placts">'+(sbUser?'<button class="chip sm primarychip" data-pickplans="1">Pick plans in use</button>':'')+'<button class="chip sm" data-pro="plans">Get Pro</button>'+
+        '<div class="placts">'+(sbUser?'<button class="chip sm primarychip" data-pickplans="1">Pick routines in use</button>':'')+'<button class="chip sm" data-pro="plans">Get Pro</button>'+
         '<button class="chip sm danger" data-delplan="'+p.id+'">Delete</button></div></div>';
       return;
     }
     h+='<div class="plcard'+(p.id===act?' on':'')+'">';
-    if(PL_REN===p.id) h+='<div class="plren"><input id="plName" maxlength="32" value="'+esc(p.name)+'" aria-label="Plan name"><button class="chip sm" data-saveren="'+p.id+'">Save</button></div>';
+    if(PL_REN===p.id) h+='<div class="plren"><input id="plName" maxlength="32" value="'+esc(p.name)+'" aria-label="Routine name"><button class="chip sm" data-saveren="'+p.id+'">Save</button></div>';
     else h+='<div class="plhead"><h3>'+esc(p.name)+'</h3>'+(p.id===act?'<span class="pltag">Active</span>':'')+'</div>';
     var pcp=customById(p.id);
     if(p.desc) h+='<p class="pldesc">'+esc(p.desc)+(edited?' <em>Edited</em>':'')+'</p>'; else if(edited) h+='<p class="pldesc"><em>Edited</em></p>';
     h+='<p class="pldesc">'+days.length+' day'+(days.length>1?'s':'')+' a week · '+restText(p.id)+'</p>';
     h+='<ul class="pldays">'+days.map(function(d){return '<li><b>'+d.short+'</b>'+esc(d.title)+'<span>'+(d.ex.length?d.ex.length+' exercises':'Empty')+'</span></li>';}).join("")+'</ul>';
-    h+='<div class="placts">'+(p.id===act?'':'<button class="chip sm primarychip" data-useplan="'+p.id+'">Use this plan</button>')+
+    h+='<div class="placts">'+(p.id===act?'':'<button class="chip sm primarychip" data-useplan="'+p.id+'">Use this routine</button>')+
       '<button class="chip sm" data-editplan="'+p.id+'">Edit</button><button class="chip sm" data-dupplan="'+p.id+'">Duplicate</button>'+
       (p.builtin?'':'<button class="chip sm" data-renplan="'+p.id+'">Rename</button><button class="chip sm danger" data-delplan="'+p.id+'">Delete</button>')+
       (p.builtin&&edited?'<button class="chip sm" data-resetplan="'+p.id+'">Reset edits</button>':'')+'</div></div>';
   });
-  h+='<button class="primary" id="newPlan">+ Set up a new plan</button></div>';
+  h+='</div>';
   var st=sh.scrollTop; sh.innerHTML=h; sh.scrollTop=st;
   if(PL_REN){var i=document.getElementById("plName"); if(i){i.focus();i.select();}}
 }
@@ -176,7 +180,7 @@ function renderPlans(){
 function planCapHtml(){
   var cap=planCap(); if(cap===Infinity) return "";
   var n=plansInUse(), locked=Object.keys(lockedPlans()).length;
-  return '<div class="plcap" role="status"><span><b>'+n+' of '+cap+'</b> of your own plans in use'+(locked?' · '+locked+' read only':'')+'</span>'+
+  return '<div class="plcap" role="status"><span><b>'+n+' of '+cap+'</b> of your own routines in use'+(locked?' · '+locked+' read only':'')+'</span>'+
     (locked&&sbUser?'<button class="linkbtn" data-pickplans="1">Pick which</button>':'<button class="linkbtn" data-pro="plans">Unlimited with Pro</button>')+'</div>';
 }
 function confirmTap(t,label,again){
@@ -214,23 +218,23 @@ function plansClick(t){
     var P=plansState(), id=t.dataset.delplan;
     P.custom=P.custom.filter(function(c){return c.id!==id;});
     if(P.active===id){P.active="split5";save();renderAll();} else save();
-    renderPlans(); renderPlanBtn(); toast("Plan deleted"); return true;
+    renderPlans(); renderPlanBtn(); toast("Routine deleted"); return true;
   }
   if(t.dataset.resetplan){
     if(!confirmTap(t,"Reset edits","Tap again to reset")) return true;
-    delete plansState().edits[t.dataset.resetplan]; if(plansState().meta) delete plansState().meta[t.dataset.resetplan]; save(); renderAll(); renderPlans(); toast("Plan reset to the original"); return true;
+    delete plansState().edits[t.dataset.resetplan]; if(plansState().meta) delete plansState().meta[t.dataset.resetplan]; save(); renderAll(); renderPlans(); toast("Routine reset to the original"); return true;
   }
-  if(t.id==="newPlan"){ if(!canAddPlan()){ proOffer("plans"); return true; } openWizard();return true;}
+  if(t.id==="newPlan"){ if(!canAddPlan()){ proOffer("plans"); return true; } openWizard(null,false,true);return true;}
   return false;
 }
 /* ---------- guided plan setup ---------- */
 var WZ=null; /* {step, days:[ids], titles:{}, ex:{}, cur, rest, name, activate} */
-var WZSTEPS=["Pick your days","Add exercises","Rest timer","Name your plan","Review","Save"];
-function openWizard(editId,fromOb){
-  WZ={ob:!!fromOb,step:1,days:[],titles:{},ex:{},locs:{},cur:"",rest:profileRest(),name:"",activate:true,touched:false};
+var WZSTEPS=["Name your routine","Pick your days","Add exercises","Rest timer","Review","Save"];
+function openWizard(editId,fromOb,startChooser){
+  WZ={ob:!!fromOb,step:startChooser?0:1,chooser:!!startChooser,tpl:false,days:[],titles:{},ex:{},locs:{},cur:"",rest:profileRest(),name:"",activate:true,touched:false};
   var ep=editId&&planById(editId);
   if(ep){
-    WZ.editId=ep.id; WZ.step=5; WZ.name=ep.name; WZ.rest=planRest(ep.id)||profileRest(); WZ.restWas=WZ.rest; WZ.activate=activePlan().id===ep.id;
+    WZ.editId=ep.id; WZ.chooser=false; WZ.step=5; WZ.name=ep.name; WZ.rest=planRest(ep.id)||profileRest(); WZ.restWas=WZ.rest; WZ.activate=activePlan().id===ep.id;
     buildDaysFor(ep.id).forEach(function(d){var s=dayToSrc(d); WZ.days.push(d.id); var dl=dayLocOf(ep.id,d.id); if(dl) WZ.locs[d.id]=dl; WZ.titles[d.id]=d.title; WZ.ex[d.id]=s.ex.map(function(x){return {id:x.id,sets:x.sets,reps:x.reps,link:x.link};});});
     WZ.orig=JSON.stringify([WZ.days,WZ.titles,WZ.ex,WZ.rest,WZ.name,WZ.locs]);
   }
@@ -243,34 +247,54 @@ function closeWizard(){
   sh.hidden=true; sh.innerHTML=""; document.body.style.overflow=""; WZ=null; if(BD&&BD.wizard) BD=null;
   if(backToOb) resumeOnboarding();   /* backing out of "Build my own" goes back to the plan step */
 }
+/* "From template": copy a ready-made routine's days and exercises; you name it */
+function wzPrefill(tid){
+  buildDaysFor(tid).forEach(function(d){var s=dayToSrc(d); WZ.days.push(d.id); WZ.titles[d.id]=d.title; WZ.ex[d.id]=s.ex.map(function(x){return {id:x.id,sets:x.sets,reps:x.reps,link:x.link};});});
+  var r=planRest(tid); if(r) WZ.rest=r;
+}
+function wzChooser(){
+  var sh=document.getElementById("wizard");
+  var h='<div class="sheet-in"><div class="sheet-top"><h2 id="wtitle">Create new</h2><button class="chip" id="wzCancel">Cancel</button></div>';
+  if(!WZ.tpl){
+    h+='<p class="sub">How do you want to start?</p><div class="tiers">'+
+      '<button class="tier" data-wzstart="scratch"><span class="th"><b>From scratch</b></span><span class="tprice">Name it, pick your days and add your own exercises.</span></button>'+
+      '<button class="tier" data-wzstart="tpl"><span class="th"><b>From template</b></span><span class="tprice">Start from a ready-made routine and change what you like.</span></button></div></div>';
+  } else {
+    h+='<p class="sub">Pick a template to start from. It’s copied, so the original stays as it is.</p><div class="tiers">'+
+      TEMPLATES.filter(function(t){return !t.random;}).map(function(t){return '<button class="tier" data-wztpl="'+t.id+'"><span class="th"><b>'+esc(t.name)+'</b></span><span class="tprice">'+esc(t.desc)+'</span></button>';}).join("")+
+      '</div><div class="wznav"><button class="ghost" id="wzBack">Back</button><span></span></div></div>';
+  }
+  sh.innerHTML=h;
+}
 function wzOrderedDays(){return WEEK.filter(function(w){return WZ.days.indexOf(w.id)>=0;});}
 function wzHead(){
-  var h='<div class="sheet-in"><div class="sheet-top"><h2 id="wtitle">'+(WZ.editId?'Edit plan':'New plan')+'</h2><button class="chip" id="wzCancel">Cancel</button></div>';
+  var h='<div class="sheet-in"><div class="sheet-top"><h2 id="wtitle">'+(WZ.editId?'Edit routine':'New routine')+'</h2><button class="chip" id="wzCancel">Cancel</button></div>';
   h+='<div class="wzsteps" aria-label="Step '+WZ.step+' of 6"><ol>'+WZSTEPS.map(function(s,i){var n=i+1;return '<li class="'+(n<WZ.step?'done':n===WZ.step?'on':'')+'"'+(n===WZ.step?' aria-current="step"':'')+'><span>'+n+'</span></li>';}).join("")+'</ol>'+
      '<p><b>Step '+WZ.step+' of 6</b> · '+WZSTEPS[WZ.step-1]+'</p></div>';
   return h;
 }
 function wzNav(nextLabel){
-  return '<div class="wznav">'+(WZ.step>1?'<button class="ghost" id="wzBack">Back</button>':'<span></span>')+'<button class="primary" id="wzNext">'+(nextLabel||"Next")+'</button></div></div>';
+  return '<div class="wznav">'+(WZ.step>1||WZ.chooser?'<button class="ghost" id="wzBack">Back</button>':'<span></span>')+'<button class="primary" id="wzNext">'+(nextLabel||"Next")+'</button></div></div>';
 }
 function wzDayLabel(id){for(var i=0;i<WEEK.length;i++)if(WEEK[i].id===id)return WEEK[i].long;return id;}
 function renderWizard(){
   var sh=document.getElementById("wizard"); if(!sh||!WZ) return;
-  if(WZ.step===2){ wzStep2(); return; }
+  if(WZ.step===0){ wzChooser(); return; }
+  if(WZ.step===3){ wzStep2(); return; }
   var h=wzHead();
   if(WZ.step===1){
+    h+='<p class="sub">Give it a name you’ll recognise in your routines.</p><label class="bname"><span>Routine name</span><input id="wzName" maxlength="32" value="'+esc(WZ.name)+'" placeholder="e.g. Summer cut, Push pull legs" autocomplete="off"></label><p class="wzerr" id="wzErr" role="alert"></p>'+wzNav();
+  } else if(WZ.step===2){
     h+='<p class="sub">Which days will you train? Pick at least one. Each day gets its own tab.</p><div class="wzdays" role="group" aria-label="Training days">'+
-      WEEK.map(function(w){var on=WZ.days.indexOf(w.id)>=0;return '<button class="wzday" data-wzday="'+w.id+'" aria-pressed="'+on+'"><b>'+w.short+'</b><span>'+w.long+'</span></button>';}).join("")+'</div>'+
+      WEEK.map(function(w){var on=WZ.days.indexOf(w.id)>=0;return '<button class="wzday" data-wzday="'+w.id+'" aria-pressed="'+on+'"><span>'+w.long+'</span></button>';}).join("")+'</div>'+
       '<p class="wzcount">'+(WZ.days.length?WZ.days.length+' day'+(WZ.days.length>1?'s':'')+' a week':'No days picked yet')+'</p>';
     h+=wzNav();
-  } else if(WZ.step===3){
-    h+='<p class="sub">How long to rest between sets on this plan. It starts at your default from Profile.</p>'+wheelHtml()+wzNav();
   } else if(WZ.step===4){
-    h+='<p class="sub">Give it a name you’ll recognise in the plan list.</p><label class="bname"><span>Plan name</span><input id="wzName" maxlength="32" value="'+esc(WZ.name)+'" placeholder="e.g. Summer cut, Push pull legs" autocomplete="off"></label><p class="wzerr" id="wzErr" role="alert"></p>'+wzNav();
+    h+='<p class="sub">How long to rest between sets on this routine. It starts at your default from Profile.</p>'+wheelHtml()+wzNav();
   } else if(WZ.step===5){
     h+='<p class="sub">Check everything before you save. Tap Edit to change a section.</p>';
-    h+='<div class="wzrev"><div class="wzrev-h"><h3>'+esc(WZ.name)+'</h3><button class="linkbtn" data-wzgo="4">Edit</button></div>'+
-       '<p class="wzmeta">Rest '+fmtRest(WZ.rest)+' between sets <button class="linkbtn" data-wzgo="3">Edit</button></p></div>';
+    h+='<div class="wzrev"><div class="wzrev-h"><h3>'+esc(WZ.name)+'</h3><button class="linkbtn" data-wzgo="1">Edit</button></div>'+
+       '<p class="wzmeta">Rest '+fmtRest(WZ.rest)+' between sets <button class="linkbtn" data-wzgo="4">Edit</button></p></div>';
     wzOrderedDays().forEach(function(w){
       var ex=WZ.ex[w.id]||[], title=(WZ.titles[w.id]||"").trim()||"Workout";
       var wl=locById(WZ.locs[w.id])||curLoc(), wg=wl.gear, nmiss=wg.length?ex.filter(function(x){return missingFor(LIB[x.id],wg).length;}).length:0;
@@ -282,15 +306,15 @@ function renderWizard(){
       } else h+='<p class="wzmeta">No exercises. It will show as a rest day.</p>';
       h+='</div>';
     });
-    h+='<button class="linkbtn" data-wzgo="1">Change days</button>'+wzNav("Next: save");
+    h+='<button class="linkbtn" data-wzgo="2">Change days</button>'+wzNav("Next: save");
   } else if(WZ.step===6){
     var nEx=0; WZ.days.forEach(function(d){nEx+=(WZ.ex[d]||[]).length;});
     h+='<div class="wzdone"><h3>'+esc(WZ.name)+'</h3><p>'+WZ.days.length+' day'+(WZ.days.length>1?'s':'')+' a week · '+nEx+' exercises · rest '+fmtRest(WZ.rest)+'</p>'+
-       (WZ.ob?'<p>You’ll start on this plan.</p>':WZ.editId&&activePlan().id===WZ.editId?'<p>This is the plan you’re on now.</p>':'<label class="ptoggle"><input type="checkbox" id="wzAct"'+(WZ.activate?' checked':'')+'> Start using this plan now</label>')+'</div>'+wzNav(WZ.editId?"Save changes":"Create plan");
+       (WZ.ob?'<p>You’ll start on this routine.</p>':WZ.editId&&activePlan().id===WZ.editId?'<p>This is the routine you’re on now.</p>':'<label class="ptoggle"><input type="checkbox" id="wzAct"'+(WZ.activate?' checked':'')+'> Start using this routine now</label>')+'</div>'+wzNav(WZ.editId?"Save changes":"Create routine");
   }
   sh.innerHTML=h;
-  if(WZ.step===3) initWheel(WZ.rest,function(v){WZ.rest=v;});
-  if(WZ.step===4){var i=document.getElementById("wzName"); if(i){i.focus();i.setSelectionRange(i.value.length,i.value.length);}}
+  if(WZ.step===4) initWheel(WZ.rest,function(v){WZ.rest=v;});
+  if(WZ.step===1){var i=document.getElementById("wzName"); if(i){i.focus();i.setSelectionRange(i.value.length,i.value.length);}}
 }
 /* step 2 reuses the workout editor and exercise picker, one day at a time */
 function wzStep2(){
@@ -308,17 +332,17 @@ function wzBuilderChrome(){ /* header for step 2 inside the editor */
   return h;
 }
 function wzValidate(){
-  if(WZ.step===1&&!WZ.days.length){toast("Pick at least one day");return false;}
-  if(WZ.step===2){ if(!WZ.days.some(function(d){return (WZ.ex[d]||[]).length;})){toast("Add exercises to at least one day");return false;} }
-  if(WZ.step===4){
+  if(WZ.step===2&&!WZ.days.length){toast("Pick at least one day");return false;}
+  if(WZ.step===3){ if(!WZ.days.some(function(d){return (WZ.ex[d]||[]).length;})){toast("Add exercises to at least one day");return false;} }
+  if(WZ.step===1){
     var v=(document.getElementById("wzName").value||"").trim(), err=document.getElementById("wzErr");
-    if(!v){err.textContent="Give your plan a name.";document.getElementById("wzName").focus();return false;}
-    if(allPlans().some(function(p){return p.id!==WZ.editId&&p.name.toLowerCase()===v.toLowerCase();})){err.textContent="You already have a plan with that name.";return false;}
+    if(!v){err.textContent="Give your routine a name.";document.getElementById("wzName").focus();return false;}
+    if(allPlans().some(function(p){return p.id!==WZ.editId&&p.name.toLowerCase()===v.toLowerCase();})){err.textContent="You already have a routine with that name.";return false;}
     WZ.name=v;
   }
   return true;
 }
-function wzGo(step){ WZ.step=step; if(step!==2&&BD&&BD.wizard) BD=null; renderWizard(); document.getElementById("wizard").scrollTop=0; }
+function wzGo(step){ if(WZ.step===1){var ni=document.getElementById("wzName"); if(ni) WZ.name=(ni.value||"").trim();} WZ.step=step; if(step!==2&&BD&&BD.wizard) BD=null; renderWizard(); document.getElementById("wizard").scrollTop=0; }
 function wzSubmit(){
   if(WZ.editId) return wzSaveEdit();
   if(!canAddPlan()){ proOffer("plans"); return; }   /* Free is at its plan limit (set up from onboarding, or another phone added one) */
@@ -334,7 +358,7 @@ function wzSubmit(){
   WZ.saved=true; save(); closeWizard(); closePlans();
   if(ob){ endOnboarding(); toast("All set. You’re on "+np.name); return; }
   if(act){OPEN={};pickToday=true;} renderAll();
-  toast(act?"Plan created. You’re now on "+np.name:"Plan created");
+  toast(act?"Routine created. You’re now on "+np.name:"Routine created");
 }
 function wzBuiltDays(){
   var days={};
@@ -369,14 +393,20 @@ function wizardClick(t){
   if(!WZ) return false;
   if(t.id==="wzCancel"){
     var started=WZ.editId?JSON.stringify([WZ.days,WZ.titles,WZ.ex,WZ.rest,WZ.name,WZ.locs])!==WZ.orig:(WZ.days.length||WZ.name);
-    if(started&&!t.dataset.armed){t.dataset.armed="1";t.textContent=WZ.editId?"Discard changes?":"Discard plan?";setTimeout(function(){if(document.body.contains(t)){delete t.dataset.armed;t.textContent="Cancel";}},3000);return true;}
+    if(started&&!t.dataset.armed){t.dataset.armed="1";t.textContent=WZ.editId?"Discard changes?":"Discard routine?";setTimeout(function(){if(document.body.contains(t)){delete t.dataset.armed;t.textContent="Cancel";}},3000);return true;}
     closeWizard();return true;
   }
   if(t.dataset.wzday){var id=t.dataset.wzday,k=WZ.days.indexOf(id); if(k>=0) WZ.days.splice(k,1); else WZ.days.push(id); renderWizard(); var b=document.querySelector('[data-wzday="'+id+'"]'); if(b) b.focus(); return true;}
   if(t.dataset.wzcur){ if(BD&&BD.wizard) WZ.titles[WZ.cur]=BD.title; WZ.cur=t.dataset.wzcur; BD=null; wzStep2(); var c=document.querySelector('[data-wzcur="'+WZ.cur+'"]'); if(c) c.focus(); return true;}
   if(t.dataset.wzgo){wzGo(+t.dataset.wzgo);return true;}
-  if(t.dataset.wzedit){WZ.cur=t.dataset.wzedit;wzGo(2);return true;}
-  if(t.id==="wzBack"){ if(WZ.step===4) WZ.name=(document.getElementById("wzName").value||"").trim(); if(BD&&BD.wizard) WZ.titles[WZ.cur]=BD.title; wzGo(WZ.step-1); return true; }
+  if(t.dataset.wzedit){WZ.cur=t.dataset.wzedit;wzGo(3);return true;}
+  if(t.dataset.wzstart){ if(t.dataset.wzstart==="tpl"){WZ.tpl=true;renderWizard();} else wzGo(1); return true; }
+  if(t.dataset.wztpl){ wzPrefill(t.dataset.wztpl); wzGo(1); return true; }
+  if(t.id==="wzBack"){
+    if(WZ.step===0){ WZ.tpl=false; renderWizard(); return true; }
+    if(WZ.step===1&&WZ.chooser){ WZ.name=(document.getElementById("wzName").value||"").trim(); WZ.days=[];WZ.titles={};WZ.ex={};WZ.locs={}; WZ.step=0; WZ.tpl=false; renderWizard(); return true; }
+    if(BD&&BD.wizard) WZ.titles[WZ.cur]=BD.title; wzGo(WZ.step-1); return true;
+  }
   if(t.id==="wzNext"){
     if(BD&&BD.wizard) WZ.titles[WZ.cur]=BD.title;
     if(!wzValidate()) return true;

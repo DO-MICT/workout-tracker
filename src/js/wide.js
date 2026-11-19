@@ -271,15 +271,15 @@ function renderPlanGrid(sh){
   if(!PG||!planById(PG.id)) { PG=null; pgLoad(act); }
   else if(!PG.dirty) { var keep={q:PG.q,mg:PG.mg,target:PG.target,undo:PG.undo,redo:PG.redo}; pgLoad(PG.id); Object.assign(PG,keep); }   /* pick up changes synced from the phone */
   var id=PG.id, p=planById(id), ro=planLocked(id)||id==="coles", edited=planEdited(id);
-  var h='<div class="sheet-in pgwrap"><div class="sheet-top"><h2 id="pltitle">Workout plans</h2><button class="chip" id="closePlans">Close</button></div>'+planCapHtml();
-  h+='<div class="pg"><nav class="pglist" aria-label="Your plans">'+plans.map(function(q){
+  var h='<div class="sheet-in pgwrap"><div class="sheet-top"><h2 id="pltitle">Routines</h2><button class="chip" id="closePlans">Close</button></div>'+planCapHtml();
+  h+='<div class="pg"><nav class="pglist" aria-label="Your routines"><button class="pgplan pgnew" id="newPlan">+ Create new</button>'+listPlans().map(function(q){
     return '<button class="pgplan'+(q.id===id?' on':'')+'" data-pgsel="'+q.id+'" aria-pressed="'+(q.id===id)+'"><span>'+esc(q.name)+'</span>'+(q.id===act?'<em class="pltag">Active</em>':planLocked(q.id)?'<em class="ttag">Read only</em>':'')+'</button>';
-  }).join("")+'<button class="pgplan pgnew" id="newPlan">+ New plan</button></nav>';
+  }).join("")+'</nav>';
   /* the selected plan */
   h+='<section class="pgmain" aria-labelledby="pgname">';
   if(PL_REN===id) h+='<div class="plren"><input id="plName" maxlength="32" value="'+esc(p.name)+'" aria-label="Plan name"><button class="chip sm" data-saveren="'+id+'">Save</button></div>';
   else h+='<div class="pghead"><h3 id="pgname">'+esc(p.name)+'</h3>'+(id===act?'<span class="pltag">Active</span>':'')+(edited?'<em class="pgedited">Edited</em>':'')+'</div>';
-  h+='<div class="placts">'+(id===act?'':'<button class="chip sm primarychip" data-useplan="'+id+'">Use this plan</button>')+
+  h+='<div class="placts">'+(id===act?'':'<button class="chip sm primarychip" data-useplan="'+id+'">Use this routine</button>')+
     (id==="coles"?'':'<button class="chip sm" data-dupplan="'+id+'">Duplicate</button>')+
     (p.builtin?'':'<button class="chip sm" data-renplan="'+id+'">Rename</button><button class="chip sm danger" data-delplan="'+id+'">Delete</button>')+
     (p.builtin&&edited&&id!=="coles"?'<button class="chip sm" data-resetplan="'+id+'">Reset edits</button>':'')+
