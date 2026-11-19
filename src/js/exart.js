@@ -4,7 +4,7 @@
    Frames are rendered once per exercise and theme and shown as cached SVG images. Tap to pause. */
 var ART_STEPS=12, ART_MS=110, ART_HOLD=5, ART_CACHE={}, ART_LIVE=[], ART_TIMER=null, ART_IO=null;
 /* approved illustrations (commercial gym and mobility) drawn by the newer generator (gfd-exercise-art-gym.js, loaded on first use;
-   rebuild it with tools/build_gym_art.js when approved redraws come from the spec generator).
+   frozen: the generator is retired, so fix it by hand).
    Only ids listed here are shown; add an id once Deon approves it. [name, [start, end]] for the label before the script loads. */
 var ART_GYM={
   assistdip:["Assisted dip", ["Knees on the pad, arms straight on the dip handles", "Lowered with a slight forward lean until the elbows reach about 90°"]],
