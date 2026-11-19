@@ -268,7 +268,7 @@ const CATALOG = (() => {
 })();
 
 test("D2: Barbell RDL offers Dumbbell RDL first, and every top swap is still a hinge", () => {
-  const top = R.rankSwaps(CATALOG, "rdl", { gear: ["dumbbells", "kettlebells", "cablecross"], level: "some", n: 3 });
+  const top = R.rankSwaps(CATALOG, "rdl", { gear: ["dumbbells", "kettlebells", "cablecross"], n: 3 });
   assert.equal(top[0].o.id, "dbrdl");
   top.forEach((r) => assert.equal(r.o.x.mp, "Hinge", r.o.n));
   assert.equal(R.swapReason(top[0], (id) => ({ dumbbells: "Dumbbells" })[id] || id), "Same movement, uses dumbbells");
@@ -290,20 +290,23 @@ test("every exercise needs only the 90 kept gear items or the floor", () => {
     assert.ok(gear.has(id), e.id + " needs " + id)));
 });
 
-test("swaps above your level stay in the list, lower down and marked harder", () => {
+test("each swap is labelled easier, similar or harder than the exercise being swapped", () => {
   const lib = {
-    a: { id: "a", n: "Push-up", mg: "Chest", req: "", lab: "bw", x: { mp: "Horizontal push", pm: ["Chest"], diff: "Beginner" } },
+    a: { id: "a", n: "Push-up", mg: "Chest", req: "", lab: "bw", x: { mp: "Horizontal push", pm: ["Chest"], diff: "Intermediate" } },
     hard: { id: "hard", n: "Archer push-up", mg: "Chest", req: "", lab: "bw", x: { mp: "Horizontal push", pm: ["Chest"], diff: "Advanced" } },
     easy: { id: "easy", n: "Knee push-up", mg: "Chest", req: "", lab: "bw", x: { mp: "Horizontal push", pm: ["Chest"], diff: "Beginner" } },
-    fly: { id: "fly", n: "Floor fly", mg: "Chest", req: "", lab: "w", x: { mp: "Isolation", pm: ["Chest"], diff: "Beginner" } },
+    same: { id: "same", n: "Wide push-up", mg: "Chest", req: "", lab: "bw", x: { mp: "Horizontal push", pm: ["Chest"], diff: "Intermediate" } },
+    none: { id: "none", n: "Floor fly", mg: "Chest", req: "", lab: "w", x: { mp: "Isolation", pm: ["Chest"] } },
   };
-  const r = R.rankSwaps(lib, "a", { gear: [], level: "new" });
-  assert.deepEqual(r.map((x) => x.o.id), ["easy", "fly", "hard"]);
-  assert.equal(r[2].harder, true);
-  const exp = R.rankSwaps(lib, "a", { gear: [], level: "experienced" });
-  assert.ok(exp.findIndex((x) => x.o.id === "hard") < exp.findIndex((x) => x.o.id === "fly"), "no penalty when it suits your level");
-  assert.equal(exp.find((x) => x.o.id === "hard").harder, false);
-  assert.equal(R.rankSwaps(lib, "a", { gear: null }).length, 3, "gear null = don't check gear (no gear picked yet)");
+  const r = R.rankSwaps(lib, "a", { gear: [] });
+  const lv = (id) => r.find((x) => x.o.id === id).level;
+  assert.equal(lv("easy"), "easier");
+  assert.equal(lv("same"), "similar");
+  assert.equal(lv("hard"), "harder");
+  assert.equal(lv("none"), null, "no difficulty, no label");
+  assert.equal(r.find((x) => x.o.id === "hard").harder, true);
+  assert.ok(r.findIndex((x) => x.o.id === "hard") > r.findIndex((x) => x.o.id === "easy"), "harder ranks below an equal easier option");
+  assert.equal(R.rankSwaps(lib, "a", { gear: null }).length, 4, "gear null = don't check gear (no gear picked yet)");
 });
 
 test("a swap keeps the plan's target when both are tracked the same way", () => {
@@ -355,38 +358,6 @@ test("S4 (F2): Tuesday's 3×8 press pre-fills from the last 3×8 day, not Friday
   const rec = recOf([r2("w1", W1, 60, 8, "tue"), r2("w2", W2, 72.5, 3, "fri")], "press");
   const L = R.lastMatching(rec, { plan: "ppl", day: "tue", target: "8" });
   assert.deepEqual(R.setPrefill(sets([null, null]), 0, L.sets), { w: "60", r: "8" });
-});
-
-/* ---------- onboarding plan suggestion (F3) ---------- */
-const GYM_SPLITS = ["split5", "bro"];
-test("a pilates instructor at a studio is never given a gym split", () => {
-  const ans = { train: "pilates", level: "experienced", goal: "move", days: 3 };
-  const r = R.recommendPlan(ans, { pilates: 1, yoga: 0.6, beginner: 0.1, split5: 0.2, bro: 0.1, fb3: 0.2 });
-  assert.equal(r.pick, "pilates");
-  assert.ok(r.order.every((id) => !GYM_SPLITS.includes(id)));
-});
-test("a 3-day beginner gets the beginner full body plan, never a split", () => {
-  const r = R.recommendPlan({ train: "gym", level: "new", goal: "general", days: 3 }, { beginner: 1, fb3: 0.8, split5: 0.9 });
-  assert.equal(r.pick, "beginner");
-  assert.ok(r.order.every((id) => !GYM_SPLITS.includes(id)));
-});
-test("a plan that mostly needs missing gear is skipped", () => {
-  const r = R.recommendPlan({ train: "gym", level: "new", goal: "strength", days: 2 }, { beginner: 0.3, fb3: 0.6 });
-  assert.equal(r.pick, "fb3");
-  assert.equal(R.recommendPlan({ train: "pilates", level: "new", days: 3 }, { pilates: 0.1, yoga: 0.2, beginner: 0 }).pick, "coles", "falls back to sessions built from the gear that's there");
-});
-test("experienced lifters training 5 days get the split", () => {
-  assert.equal(R.recommendPlan({ train: "gym", level: "experienced", goal: "muscle", days: 5 }, {}).pick, "split5");
-  assert.equal(R.recommendPlan({ train: "gym", level: "some", goal: "strength", days: 3 }, {}).pick, "fb3");
-  assert.equal(R.recommendPlan({ train: "running", level: "new", days: 3 }, {}).pick, "run");
-  assert.equal(R.recommendPlan({ train: "yoga", level: "some", days: 4 }, {}).pick, "yoga");
-});
-test("celebration style and starter days follow the answers", () => {
-  assert.equal(R.celebrateFor({ train: "pilates", goal: "strength" }), "calm");
-  assert.equal(R.celebrateFor({ train: "gym", goal: "move" }), "calm");
-  assert.equal(R.celebrateFor({ train: "gym", goal: "muscle" }), "energetic");
-  assert.deepEqual(R.starterDays(2), ["mon", "thu"]);
-  assert.deepEqual(R.starterDays(5), ["mon", "wed", "fri"]);
 });
 
 /* ---------- kg or lb (WP4) ---------- */

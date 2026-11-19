@@ -77,7 +77,7 @@ test("the anon id is random, kept for the install, and is not the account id", (
 
 test("events wait on the phone while offline and go out in order once connected", async () => {
   const { ctx, queue } = page();
-  ctx.logEvent("onboarding_done", { train: "gym", days: 3 });
+  ctx.logEvent("onboarding_done");
   ctx.logEvent("first_workout", { note: "free text is dropped" });
   ctx.logEvent("sign_up");   // server-only: ignored
   assert.deepEqual(queue().map((e) => e.n), ["onboarding_done", "first_workout"]);

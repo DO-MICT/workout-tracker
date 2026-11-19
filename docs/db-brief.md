@@ -119,7 +119,7 @@ Migration `20261108000013_events_errors_config.sql`. Nothing here may hold perso
 
 - `events(name, at, anon_id, platform, app_version, props)`: counts, not people. `anon_id` is a random id per install
   (`src/js/events.js`), never the account id. The app sends only `onboarding_done`, `first_workout`, `week2_return`,
-  `paywall_seen` and `export` through `log_event`; the database writes `sign_up`, `trial_start`, `purchase` (an
+  `paywall_seen` and `export` through `log_event` (`onboarding_done` carries no properties: the setup questions are gone); the database writes `sign_up`, `trial_start`, `purchase` (an
   entitlement from play, web, lifetime or couple) and `account_deleted` itself, with no id at all. `props` holds up to 8
   numbers, true/false or short lower-case codes: free text and health data are refused. 100 events a day per install.
 - `client_errors`: message, stack, screen, version, scrubbed of emails, query strings, ids and long numbers (in the app and

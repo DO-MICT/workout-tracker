@@ -82,7 +82,7 @@ function pickList(){
   return Object.keys(LIB).map(function(id){return LIB[id];}).filter(function(L){
     if(BD.mg&&L.mg!==BD.mg) return false;
     if(q&&(L.n+" "+L.mg).toLowerCase().indexOf(q)<0) return false;
-    /* no gear at this location means bodyweight only (Deon's suggestion, 10 Nov) */
+    /* equipment not set at this location: everything shows (missingFor is empty) */
     if(!BD.all&&missingFor(L,bg).length) return false;
     return true;
   }).map(function(L){return {L:L,added:inDay.indexOf(L.id)>=0,ok:!missingFor(L,bg).length};});
@@ -90,14 +90,14 @@ function pickList(){
 function renderPicker(sh){
   var keepFocus=document.activeElement&&document.activeElement.id==="pSearch";
   var h='<div class="sheet-in"><div class="sheet-top"><h2 id="btitle">'+(BD.wizard?'Add to '+esc(weekLong(BD.dayId)):'Add exercise')+'</h2><button class="chip" id="pBack">Done</button></div>';
-  h+='<p class="sub">'+(bGear().length?'Showing exercises you can do at <b>'+esc(bLoc().name)+'</b>.':'No equipment set for '+esc(bLoc().name)+' yet, so only bodyweight exercises show.')+'</p>';
+  h+='<p class="sub">'+(bGear().length?'Showing exercises you can do at <b>'+esc(bLoc().name)+'</b>.':'No equipment set for '+esc(bLoc().name)+' yet, so every exercise shows.')+'</p>';
   if(locState().list.length>1) h+='<div class="locchips pickloc" role="group" aria-label="Location">'+locChips("data-bdloc",bLoc().id)+'</div>';
   h+='<div class="eqsearch"><input type="search" id="pSearch" value="'+esc(BD.q)+'" placeholder="Search exercises" autocomplete="off" aria-label="Search exercises"></div>';
   h+='<div class="mgchips" role="group" aria-label="Muscle group">'+['All'].concat(MGS).map(function(m){var v=m==="All"?"":m;return '<button class="chip sm" data-pmg="'+v+'" aria-pressed="'+(BD.mg===v)+'">'+m+'</button>';}).join("")+'</div>';
   if(!bGear().length) h+='<div class="bnote">No equipment picked yet. <button class="linkbtn" id="bGoGear">Choose equipment</button></div>';
-  h+='<label class="ptoggle"><input type="checkbox" id="pAll"'+(BD.all?' checked':'')+'> Also show exercises I don’t have gear for</label>';
+  if(gearSet(bGear())) h+='<label class="ptoggle"><input type="checkbox" id="pAll"'+(BD.all?' checked':'')+'> Also show exercises I don’t have equipment for</label>';
   var list=pickList();
-  if(!list.length) h+='<p class="eqempty">'+(BD.q?'No exercises match “'+esc(BD.q)+'”.':(bGear().length?'Nothing here with your current gear. Try another muscle group or add equipment.':'No bodyweight exercises here. Try another muscle group or add equipment.'))+'</p>';
+  if(!list.length) h+='<p class="eqempty">'+(BD.q?'No exercises match “'+esc(BD.q)+'”.':(bGear().length?'Nothing here with your current equipment. Try another muscle group or add equipment.':'No exercises here. Try another muscle group.'))+'</p>';
   MGS.forEach(function(m){
     var part=list.filter(function(r){return r.L.mg===m;}); if(!part.length) return;
     h+='<h4 class="pgh">'+m+'</h4>';
@@ -118,9 +118,9 @@ function renderReplace(sh){
   var h='<div class="sheet-in"><div class="sheet-top"><button class="chip" id="rBack">‹ Back</button></div>'+
     '<h2 id="btitle" class="eltitle">Replace '+esc(L.n)+'</h2>'+
     '<p class="sub">'+(bg.length?'Best matches you can do at <b>'+esc(bLoc().name)+'</b>, closest movement first.':'Closest movement first. No equipment set for '+esc(bLoc().name)+' yet, so only bodyweight options show.')+'</p>';
-  if(!list.length) h+='<p class="eqempty">No alternative here with your gear. Try <button class="linkbtn" id="bAdd">adding an exercise</button> instead.</p>';
+  if(!list.length) h+='<p class="eqempty">No alternative here with your equipment. Try <button class="linkbtn" id="bAdd">adding an exercise</button> instead.</p>';
   h+='<div class="swlist">'+list.map(function(r){
-    return '<div class="prow"><span class="pview"><span class="bn"><b>'+esc(r.o.n)+'</b><span>'+esc(swapReasonText(r))+'</span>'+(r.harder?'<em class="swhard">Harder</em>':'')+'</span></span>'+
+    return '<div class="prow"><span class="pview"><span class="bn"><b>'+esc(r.o.n)+'</b><span>'+esc(swapReasonText(r))+'</span>'+swapLevelTag(r)+'</span></span>'+
       '<button class="chip sm" data-brepto="'+r.o.id+'" aria-label="Use '+esc(r.o.n)+' instead">Use</button></div>';
   }).join("")+'</div>';
   if(all.length>list.length) h+='<button class="ghost elmore" id="rMore">More options</button>';

@@ -111,7 +111,10 @@ var platform=(function(){
   }
   function onBack(ev){
     if(location.pathname.replace(/\/index\.html$/,"/")!=="/"&&ev&&ev.canGoBack){ history.back(); return; }   /* a policy page */
-    if(typeof OB!=="undefined"&&OB){ call("App","minimizeApp"); return; }   /* sign-in and first-run setup: nothing to go back to */
+    if(typeof OB!=="undefined"&&OB){   /* first-run setup: step back; sign-in and the first step have nothing to go back to */
+      if(typeof obBackStep==="function"&&obBackStep()) return;
+      if(!overlayOpen()){ call("App","minimizeApp"); return; }
+    }
     if(overlayOpen()){ document.dispatchEvent(new KeyboardEvent("keydown",{key:"Escape",bubbles:true})); return; }
     call("App","minimizeApp");
   }

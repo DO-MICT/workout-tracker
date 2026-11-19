@@ -72,7 +72,8 @@ test("the blob splits into the synced tables", () => {
   assert.deepEqual(st.prefs["profile.vals"], { weight: "80.6", height: "180.0" });
   assert.equal(st.prefs["locs.active"], "loc2");
   for (const k of ["cur", "last", "wout", "account", "who", "v", "ts", "gearSeedV1"]) assert.ok(!(k in st.prefs), k + " stays on the phone");
-  assert.deepEqual(by("about_me")[0].f, { train: "gym", level: "beginner", goal: "strength", days_per_week: 4 });
+  assert.equal(by("about_me").length, 0, "old About you answers are no longer pushed");
+  assert.ok(!("about" in st.prefs), "and do not leak into prefs");
   assert.equal(by("locations").length, 2);
   assert.deepEqual(by("locations").find((r) => r.f.local_id === "loc2").f, { local_id: "loc2", name: "Home", gear: ["dumbbells"], sort: 1, extra: { kind: "home" } });
   const plans = by("plans");
@@ -106,7 +107,6 @@ test("records turn back into the same app data (round trip)", () => {
   assert.deepEqual(b.plans.dayLoc, a.plans.dayLoc);
   assert.equal(b.plans.active, "p1");
   assert.deepEqual(b.locs, a.locs);
-  assert.deepEqual(b.about, a.about);
   assert.equal(S1.notes, undefined, "notes don't come from the synced tables");
   assert.deepEqual(b.profile.hist, a.profile.hist);
   assert.deepEqual(b.profile.vals, a.profile.vals);

@@ -7,14 +7,14 @@ A mobile-first workout planner and logger. MVP running as a single web page, wit
 Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-tracker/**.
 
 ## What it does
-- Bottom tab bar: Plans · Stats · Workout (centre plate button) · Gear · More
+- Bottom tab bar: Plans · Stats · Workout (centre plate button) · Equipment · More
 - Stats: volume chart (week, month, 3 months, year), body weight trend, streak, weekly goal and insights
-- Exercise library (More › Exercise library): all 940 exercises with muscles, gear, how-to, common mistakes and a demo search
+- Exercise library (More › Exercise library): all 940 exercises with muscles, equipment, how-to, common mistakes and a demo search
 - Workout plans (5-day split, Bro split, Full body 3-day + cardio, or build your own with a guided setup)
-- Cole’s Sessions: a random session from the gear at a chosen location (full body, upper, lower, core or cardio; you pick how many exercises and sets)
+- Cole’s Sessions: a random session from the equipment at a chosen location (full body, upper, lower, core or cardio; you pick how many exercises and sets)
 - Per-set logging with PR hints, rest timer with a race-start countdown, supersets and circuits
 - Workout history: every completed workout (date, plan, day, location, duration, every set), per-exercise progress chart, delete a workout
-- Equipment per location (gym, home, …) from the 90-item gear library; each plan day has a location and is checked against its gear, with swap suggestions
+- Equipment per location (gym, home, …) from the 90-item equipment library; each plan day has a location and is checked against its equipment, with swap suggestions
 - Profile with measurements, injury notes per exercise, light/dark mode
 - Email + password accounts (Supabase); data syncs per user, newest save wins
 - Suggestions page (web version): testers send an idea or problem with an optional screenshot

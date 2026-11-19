@@ -14,7 +14,7 @@ var EQUIP=[
 /* locations: each one keeps its own gear list; the active one filters exercises */
 function locState(){
   if(!S.locs||!Array.isArray(S.locs.list)||!S.locs.list.length){
-    S.locs={active:"loc1",list:[{id:"loc1",name:"Gym",gear:Array.isArray(S.gear)?S.gear.slice():[]}]};
+    S.locs={active:"loc1",list:[{id:"loc1",name:"Default",gear:Array.isArray(S.gear)?S.gear.slice():[]}]};
   }
   if(S.gear!==undefined) delete S.gear;   /* older single gear list moves into the first location */
   var moved=false;
@@ -40,7 +40,7 @@ function bLoc(){return (BD&&BD.loc&&locById(BD.loc))||curLoc();}
 function bGear(){return bLoc().gear;}
 function locChips(attr,sel){
   var L=locState(); sel=sel||L.active;
-  return L.list.map(function(l){return '<button class="chip sm" '+attr+'="'+l.id+'" aria-pressed="'+(l.id===sel)+'">'+esc(l.name)+' <span class="lcnt">'+l.gear.length+'</span></button>';}).join("");
+  return L.list.map(function(l){return '<button class="chip sm" '+attr+'="'+l.id+'" aria-pressed="'+(l.id===sel)+'">'+esc(l.name)+(l.gear.length?' <span class="lcnt">'+l.gear.length+'</span>':'')+'</button>';}).join("");
 }
 function renderLocBar(){
   var box=document.getElementById("eqLoc"); if(!box) return;
@@ -98,7 +98,7 @@ function toggleGear(id){
 function openEquip(){
   var sh=document.getElementById("equip");
   sh.innerHTML='<div class="sheet-in"><div class="sheet-top"><h2 id="etitle">Equipment</h2><button class="chip" id="closeEquip">Close</button></div>'+
-    '<p class="sub">Set up each place you train. Tap what’s there and it moves to My gear. Exercises are filtered by the location you pick.</p>'+
+    '<p class="sub">Set up each place you train. Tap what’s there. Exercises are filtered by the location you pick, once you pick something.</p>'+
     '<div id="eqLoc"></div>'+
     '<div class="eqsearch"><input type="search" id="eqSearch" placeholder="Search, e.g. treadmill, yoga, cable" autocomplete="off" aria-label="Search equipment"><button class="linkbtn" id="clearSearch" hidden>Clear</button></div>'+
     '<div id="eqLists"></div></div>';
@@ -110,25 +110,45 @@ function closeEquip(){
   sh.hidden=true; sh.innerHTML=""; document.body.style.overflow="";
   if(BD&&BD.wizard){document.body.style.overflow="hidden";renderBuilder();return;}
 }
-/* groups under All equipment fold away (441 items); remember which are open while you tap */
-var EQ_OPEN={};
+/* The picker shows six groups (Pick.png). Ids stay as they are; this only says where each one is listed.
+   Anything not named here lands in Other, so a new catalogue item still shows up. */
+var EQ_PICK=[
+ ["Weights and Cables","dumbbells kettlebells plates bumperplates medball bands weightvest cablecross functional anklestrap ezcablebar latbar maggrip singlehandle straightbar ropeattach tricepv vhandle rowbar"],
+ ["Benches","flatbench inclinebench declinebench adjbench preacher abbench"],
+ ["Bars","barbell ezbar trapbar pullupbar dipstation powerrack captain"],
+ ["Machines","chestpress lyingpress pecdeck inclinepressm platechest latpulldown seatedrow assistpull rowmachine backextm chesttbar dyrowm highrowm lowrowm shrugm shoulderpress lateralm reardelt curlm tricepm legpress seatlegpress hacksquat legext lyingcurl seatedcurl standcalf seatcalf hipthrustm glutekick abductor abcrunchm torso smith sled"],
+ ["Cardio","treadmill bike recumbent spinbike airbike rower elliptical stairs skierg jumprope"],
+ ["Other",""]
+];
+function eqPickGroups(q){
+  var of={}, out=EQ_PICK.map(function(g){g[1].split(" ").forEach(function(id){if(id)of[id]=g[0];});return {g:g[0],items:[]};});
+  EQUIP.forEach(function(G){G.items.forEach(function(it){
+    var name=of[it[0]]||"Other", row=out.filter(function(o){return o.g===name;})[0];
+    if(!q||(it[1]+" "+it[2]+" "+G.g+" "+name).toLowerCase().indexOf(q)>=0) row.items.push(it);
+  });});
+  return out;
+}
+/* thumbnail: the GFD logo as a placeholder for every item until real renders exist (see art/complete_equipment) */
+function eqThumb(){return '<svg viewBox="0 0 100 100" width="40" height="40" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#D4FF3A"/><circle cx="50" cy="50" r="37" fill="none" stroke="#0D0F12" stroke-width="8"/><text x="50" y="60" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="30" fill="#0D0F12">GFD</text></svg>';}
+/* Equipment not set (nothing picked) means every exercise is available and nothing is filtered or flagged.
+   The first pick turns filtering on for that location. Bodyweight needs no pick: it is always available. */
+function gearSet(list){return !!(list&&list.length);}
 function renderGear(){
   var box=document.getElementById("eqLists"); if(!box) return;
   var qi=document.getElementById("eqSearch"), q=(qi?qi.value:"").trim().toLowerCase();
   var cb=document.getElementById("clearSearch"); if(cb) cb.hidden=!q;
-  var mine=gear(), nMine=0, nAll=0, mineH="", allH="";
-  EQUIP.forEach(function(G){
-    var hit=G.items.filter(function(it){ return !q || (it[1]+" "+it[2]+" "+G.g).toLowerCase().indexOf(q)>=0; });
-    var have=hit.filter(function(it){return mine.indexOf(it[0])>=0;}), rest=hit.filter(function(it){return mine.indexOf(it[0])<0;});
-    if(have.length){ nMine+=have.length; mineH+='<div class="eqgrp"><h4>'+esc(G.g)+'</h4><div class="eqchips">'+have.map(function(it){return '<button class="eqchip mine" data-gear="'+it[0]+'" aria-label="Remove '+esc(it[1])+' from my gear"><span aria-hidden="true">✓</span>'+esc(it[1])+'<span class="x" aria-hidden="true">×</span></button>';}).join("")+'</div></div>'; }
-    if(rest.length){ nAll+=rest.length; allH+='<details class="eqgrp eqfold" data-eqg="'+esc(G.g)+'"'+(q||EQ_OPEN[G.g]?' open':'')+'><summary><h4>'+esc(G.g)+' <span class="eqn">'+rest.length+'</span></h4></summary><div class="eqchips">'+rest.map(function(it){return '<button class="eqchip" data-gear="'+it[0]+'" aria-label="Add '+esc(it[1])+' to my gear"><span aria-hidden="true">+</span>'+esc(it[1])+'</button>';}).join("")+'</div></details>'; }
+  var mine=gear(), h='', n=0;
+  h+='<p class="eqstate">'+(gearSet(mine)?mine.length+' selected at '+esc(curLoc().name)+'. Exercises are matched to these.':'Nothing picked yet, so every exercise shows. Pick what you have to filter them.')+'</p>';
+  if(!q||"bodyweight".indexOf(q)>=0) h+='<div class="eqgrid"><div class="eqtile on fixed" role="img" aria-label="Bodyweight, always available"><span class="eqth"><svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" fill="currentColor"><circle cx="24" cy="9" r="5"/><path d="M8 18h32v4H28v8l5 12h-4l-5-10-5 10h-4l5-12v-8H8z"/></svg></span><span class="eqnm">Bodyweight</span></div></div>';
+  eqPickGroups(q).forEach(function(G){
+    if(!G.items.length) return; n+=G.items.length;
+    h+='<h4 class="eqgh">'+esc(G.g)+'</h4><div class="eqgrid">'+G.items.map(function(it){
+      var on=mine.indexOf(it[0])>=0;
+      return '<button class="eqtile'+(on?' on':'')+'" data-gear="'+it[0]+'" aria-pressed="'+on+'"><span class="eqth">'+eqThumb(G.g)+'</span><span class="eqnm">'+esc(it[1])+'</span></button>';
+    }).join("")+'</div>';
   });
-  var totalMine=mine.length;
-  var h='<section class="eqsec mygear"><h3 class="psec">My gear at '+esc(curLoc().name)+' <span class="eqn">'+totalMine+'</span></h3>';
+  if(!n&&q) h+='<p class="eqempty">No equipment matches “'+esc(q)+'”.</p>';
   var copyFrom=locState().list.filter(function(l){return l.id!==curLoc().id&&l.gear.length;});
-  h+= nMine? mineH : '<p class="eqempty">'+(q&&totalMine?'None of your gear matches “'+esc(q)+'”.':'Nothing here yet. Tap equipment below to add it.')+'</p>'+
-    (!totalMine&&!q&&copyFrom.length?'<div class="loccopy">'+copyFrom.map(function(l){return '<button class="chip sm" data-loccopy="'+l.id+'">Copy gear from '+esc(l.name)+'</button>';}).join("")+'</div>':'');
-  h+='</section><section class="eqsec"><h3 class="psec">All equipment</h3>';
-  h+= nAll? allH : '<p class="eqempty">'+(q?'No equipment matches “'+esc(q)+'”.':'You’ve added everything.')+'</p>';
-  box.innerHTML=h+'</section>';
+  if(!gearSet(mine)&&!q&&copyFrom.length) h+='<div class="loccopy">'+copyFrom.map(function(l){return '<button class="chip sm" data-loccopy="'+l.id+'">Copy equipment from '+esc(l.name)+'</button>';}).join("")+'</div>';
+  box.innerHTML=h;
 }

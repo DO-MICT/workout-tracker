@@ -106,7 +106,7 @@ function renderLibrary(keep){
   var focusQ=document.activeElement&&document.activeElement.id==="libSearch";
   var list=libList(), n=Object.keys(LIB).length;
   var h='<div class="sheet-in"><div class="sheet-top"><h2 id="eltitle">Exercise library</h2><button class="chip" id="closeLib">Close</button></div>'+
-    '<p class="sub">'+n.toLocaleString("en")+' exercises'+(WEB_MODE&&!CAT.ex&&!CAT.loaded?' · loading the full library…':'')+'. Tap one for how to do it, the muscles it works and the gear it needs.</p>'+
+    '<p class="sub">'+n.toLocaleString("en")+' exercises'+(WEB_MODE&&!CAT.ex&&!CAT.loaded?' · loading the full library…':'')+'. Tap one for how to do it, the muscles it works and the equipment it needs.</p>'+
     '<div class="eqsearch"><input type="search" id="libSearch" value="'+esc(EL.q)+'" placeholder="Search, e.g. squat, glutes, kettlebell" autocomplete="off" aria-label="Search exercises"></div>'+
     '<div class="mgchips" role="group" aria-label="Muscle group">'+['All'].concat(MGS).map(function(m){var v=m==="All"?"":m;return '<button class="chip sm" data-elmg="'+v+'" aria-pressed="'+(EL.mg===v)+'">'+m+'</button>';}).join("")+'</div>'+
     (gear().length?'<label class="ptoggle"><input type="checkbox" id="libCan"'+(EL.can?' checked':'')+'> Only what I can do at '+esc(curLoc().name)+'</label>':'')+
@@ -137,7 +137,7 @@ function exDetailBody(L,g,locName){
   h+=exFigure(L.id,L.f,"elfig");
   if(L.c&&L.c.length) h+='<section class="elsec"><h3 class="psec">How to do it</h3>'+li(L.c)+'</section>';
   if(x.pm&&(x.pm.length||x.sm.length)) h+='<section class="elsec"><h3 class="psec">Muscles</h3><p class="elmus"><b>Main:</b> '+esc(x.pm.join(", "))+(x.sm.length?'<br><b>Helpers:</b> '+esc(x.sm.join(", ")):'')+'</p></section>';
-  h+='<section class="elsec"><h3 class="psec">Gear</h3><p class="elmus">'+(need.length?esc(need.join(", ")):'No equipment needed')+'</p>'+
+  h+='<section class="elsec"><h3 class="psec">Equipment</h3><p class="elmus">'+(need.length?esc(need.join(", ")):'No equipment needed')+'</p>'+
     (miss.length?'<p class="elwarn">Not at '+esc(locName)+': '+esc(needsText(L,g))+'.</p>':(g.length&&need.length?'<p class="elok">You have this at '+esc(locName)+'.</p>':''))+'</section>';
   h+='<section class="elsec"><h3 class="psec">Default</h3><p class="elmus">'+L.sets+' sets × '+esc(L.reps)+'</p></section>';
   if(x.mist&&x.mist.length) h+='<section class="elsec"><h3 class="psec">Common mistakes</h3>'+li(x.mist)+'</section>';
