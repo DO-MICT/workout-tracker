@@ -1225,6 +1225,8 @@ body.inworkout .wrap{padding-top:calc(env(safe-area-inset-top,0px) + 10px)}
 .fx-last b{color:var(--ink)}
 .fx-x{font:700 .7rem Figtree,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--warn);vertical-align:middle}
 .fx-x.ed{color:var(--done)}
+.fx-xdel{font:700 .8rem Figtree,sans-serif;color:var(--muted);background:none;border:0;text-decoration:underline;padding:0 10px;min-height:44px;margin:-8px 0 -8px 2px;vertical-align:middle;cursor:pointer}
+.fx-xdel:hover,.fx-xdel:focus-visible{color:var(--warn)}
 .fx-dots{display:flex;flex-wrap:wrap;gap:4px}
 .fx-dot{width:44px;height:44px;border-radius:50%;border:2px solid var(--line);background:transparent;color:var(--muted);font-weight:700;cursor:pointer;padding:0}
 .fx-dot.d{background:var(--done);border-color:var(--done);color:var(--on-done)}

@@ -97,7 +97,7 @@ function renderFocus(){
     }).join("")+'</div>';
   }
   var editing=FX.si!=null&&s.d;
-  h+='<div class="fx-lbl"><span>'+(all&&FX.si==null?'All done':(g?'Round ':'Set ')+(si+1)+' <small>of '+n+'</small>')+(s.x?' <span class="fx-x">Extra</span>':'')+(editing?' <span class="fx-x ed">Editing</span>':'')+'</span>'+
+  h+='<div class="fx-lbl"><span>'+(all&&FX.si==null?'All done':(g?'Round ':'Set ')+(si+1)+' <small>of '+n+'</small>')+(s.x?' <span class="fx-x">Extra</span>'+(s.d?'':' <button class="fx-xdel" data-fx="del" data-i="'+si+'" aria-label="'+(g?'Remove this extra round':'Remove this extra set')+'">Remove</button>'):'')+(editing?' <span class="fx-x ed">Editing</span>':'')+'</span>'+
     (fxLastFor(ex,si)?'<span class="fx-last">Last time <b>'+esc(fxLastFor(ex,si))+'</b></span>':'<span class="fx-last">First time</span>')+'</div>';
   h+='<div class="fx-dots" role="group" aria-label="Sets">'+arr.slice(0,n).map(function(q,k){
     return '<button class="fx-dot'+(q.d?' d':'')+(k===si?' c':'')+(q.x?' x':'')+'" data-fx="set" data-i="'+k+'" aria-label="Set '+(k+1)+(q.d?', done':'')+(q.x?', extra':'')+'"'+(k===si?' aria-current="step"':'')+'>'+(k+1)+'</button>';
@@ -247,6 +247,17 @@ function fxAdd(id){
   save(); FX.prev=null; FX.si=null; FX.id=it.g?it.g.items[0].id:id; updateProgress(); renderFocus();
   toast(it.g?"Extra round added":"Extra set added");
 }
+/* take an extra set back off (an extra round comes off every exercise in the group). Only extra sets not yet logged
+   can go; a logged one stays, so nothing you did is lost by a stray tap. */
+function fxRemove(id,i){
+  var it=fxItem(id); if(!it) return;
+  var items=it.g?it.g.items:[it.ex];
+  var ok=items.every(function(x){ var a=setsFor(x), q=a[i]; return !q||(q.x&&!q.d); });
+  if(!ok){ toast(it.g?"Part of that round is logged, so it stays":"That set is logged, so it stays"); return; }
+  items.forEach(function(x){ var a=setsFor(x); if(a[i]&&a[i].x&&i<nSets(x,a)) a.splice(i,1); });
+  save(); FX.si=null; updateProgress(); renderFocus();
+  toast(it.g?"Extra round removed":"Extra set removed");
+}
 function focusClick(t){
   var a=t.dataset.fx; if(!a) return false;
   var it=fxCurrent(), ex=it&&it.ex;
@@ -260,6 +271,7 @@ function focusClick(t){
   if(a==="back"){ FX.si=null; renderFocus(); return true; }
   if(a==="set"){ var k=+t.dataset.i; FX.si=k===openSet(ex)?null:k; renderFocus(); var w=document.querySelector('#fx input[data-f="w"]')||document.querySelector('#fx input[data-f="r"]'); if(w&&FX.si!=null) w.focus({preventScroll:true}); return true; }
   if(a==="add"){ fxAdd(ex.id); return true; }
+  if(a==="del"){ fxRemove(ex.id,+t.dataset.i); return true; }
   if(a==="addprev"){ if(FX.prev) fxAdd(FX.prev); return true; }
   if(a==="next"||a==="prev"){
     if(a==="next"&&t.classList.contains("fx-ring")){ var nx=fxNextOpen(ex.id); if(nx) fxGo(nx.ex.id); return true; }
