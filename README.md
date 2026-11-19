@@ -34,7 +34,6 @@ Supabase for accounts and sync. Live at **https://do-mict.github.io/workout-trac
 | `tests/db/` | RLS two-user test, run by CI against a throwaway Supabase and against GFD Dev. |
 | `docs/db-brief.md` | How database changes are written, checked and deployed. |
 | `data/exercise-library/`, `data/gear-library/` | Source data for the `exercises` and `gear` tables, and the SQL that loads them (`exercises.sql`, `gear.sql`). |
-| `docs/context.md` | Project context for planning sessions. |
 
 ## Making changes
 1. Edit the file for that area in `src/js/` (or `src/styles.css`).

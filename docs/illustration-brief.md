@@ -2,17 +2,13 @@
 
 Read this instead of the history of the illustration threads. The style is decided; new work adds poses, not new drawing code.
 
-## New illustrations: use the generator (since 2 Nov 2026)
+## Generator art: frozen (generator retired 19 Nov 2026)
 
-New exercise art is no longer written as `EX` entries by hand. It is made from short specs with the spec → SVG
-generator in the project files, `illustrations/generator/` (its `README.md` has the commands, coordinates and spec format).
-Before presenting art to Deon, follow `illustrations/reference/ILLUSTRATION-CHECKLIST.md`; the generator's build
-runs the motion, equipment and flicker checks.
+The spec → SVG illustrations generator (in the claude.ai project files) is retired; new exercise art comes from the
+3D avatar animations below. What it made stays live and is now frozen:
 
-Approved generator art reaches the live app like this:
-
-- `src/js/gfd-exercise-art-gym.js` (`GFDArtGym`, lazy-loaded) is **generated**, never edited by hand:
-  `node tools/build_gym_art.js <generator dir> specs/<approved batch>.js ...` (list every approved spec file each time).
+- `src/js/gfd-exercise-art-gym.js` (`GFDArtGym`, lazy-loaded) and `src/js/gfd-body-fig.js` (the measurements anatomy
+  figure) can no longer be rebuilt. Make any fix by hand in the file, small and targeted.
 - `ART_GYM` in `src/js/exart.js` is the allow-list: only the ids listed there show generator art.
 - Don't replace `src/js/gfd-exercise-art.js`; the 5-day split below still draws from it.
 

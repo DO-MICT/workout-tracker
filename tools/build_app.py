@@ -6,7 +6,7 @@ Gradle checks that the flavour you build matches: prod* for production, dev* for
 The app is the same app.html + src/ as the website, with three differences:
   - no service worker or web manifest (the files are already inside the app, so it works offline from the first open)
   - window.GFD_SHELL tells platform.js which site address to use for links that open in the browser
-    (the policy pages, the roadmap), taken from site.json (the domain once bought, else GitHub Pages)
+    (the policy pages), taken from site.json (the domain once bought, else GitHub Pages)
   - only the files the app needs are copied (no art previews, data sources or tools)
 build/ is not checked in; the android-build workflow runs this script before every build.
 """
@@ -22,7 +22,7 @@ sys.path.insert(0, str(root / "tools"))
 import build_site  # noqa: E402
 
 COPY_DIRS = ["src", "vendor", "icons"]
-COPY_FILES = ["roadmap.html", "privacy.html", "terms.html", "delete-account.html"]
+COPY_FILES = ["privacy.html", "terms.html", "delete-account.html"]
 
 
 # per environment: the URL scheme sign-in links come back on (must match the flavour's custom_url_scheme string)
