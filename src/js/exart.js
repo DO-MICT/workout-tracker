@@ -97,7 +97,20 @@ var ART_GYM_SRC="src/js/gfd-exercise-art-gym.js", ART_GYM_WAIT=null;
 var ART_SPRITE={
   bwsquat:{name:"Bodyweight squat",frames:["Standing tall, feet about shoulder-width apart","Squatted down, hips back, thighs about level with the floor"],view:"three_quarter",frames_n:97,cols:10,w:344,h:605,fps:30,peak:48},
   goblet:{name:"Goblet squat",frames:["Standing tall, kettlebell held at the chest","Squatted down between the knees, chest up, kettlebell still at the chest"],view:"three_quarter",frames_n:97,cols:10,w:224,h:605,fps:30,peak:48},
-  pecdeckfly:{name:"Pec deck fly",frames:ART_GYM.pecdeckfly[1],view:"three_quarter",frames_n:97,cols:10,w:362,h:482,fps:30,peak:48}
+  pecdeckfly:{name:"Pec deck fly",frames:ART_GYM.pecdeckfly[1],view:"three_quarter",frames_n:97,cols:10,w:362,h:482,fps:30,peak:48},
+  /* 19 Nov: the rest of art/complete_exercises */
+  backsquat:{name:"Barbell back squat",frames:["Standing tall, bar across the upper back","Squatted down, hips back, thighs about level with the floor"],view:"three_quarter",frames_n:97,cols:10,w:426,h:442,fps:30,peak:48},
+  bench:{name:"Barbell bench press",frames:["Arms straight over the chest","Bar lowered to just above mid-chest"],view:"three_quarter",frames_n:97,cols:10,w:368,h:384,fps:30,peak:48},
+  dbfloorpress:{name:"Dumbbell floor press",frames:["Lying on the floor, dumbbells pressed up over the chest","Lowered until the upper arms touch the floor"],view:"three_quarter",frames_n:97,cols:10,w:312,h:245,fps:30,peak:48},
+  dbpress:{name:"Seated dumbbell shoulder press",frames:["Seated upright, dumbbells at shoulder height","Pressed straight up overhead"],view:"three_quarter",frames_n:97,cols:10,w:276,h:450,fps:30,peak:48},
+  dbsqueeze:{name:"Dumbbell squeeze press",frames:["Dumbbells pressed together up over the chest","Lowered to the chest, still squeezed together"],view:"three_quarter",frames_n:97,cols:10,w:342,h:342,fps:30,peak:48},
+  flatdb:{name:"Flat dumbbell press",frames:["Dumbbells up over the chest","Lowered to the sides of the chest"],view:"three_quarter",frames_n:97,cols:10,w:342,h:362,fps:30,peak:48},
+  incdb:{name:"Incline dumbbell press",frames:["Dumbbells pressed up over the upper chest","Lowered beside the chest on an incline bench"],view:"three_quarter",frames_n:97,cols:10,w:342,h:502,fps:30,peak:48},
+  lateral:{name:"Dumbbell lateral raise",frames:["Arms down, dumbbells by your thighs","Raised out to shoulder height"],view:"three_quarter",frames_n:97,cols:10,w:416,h:472,fps:30,peak:48},
+  ohp:{name:"Standing barbell overhead press",frames:["Bar on the front of the shoulders","Pressed straight up over the middle of the feet"],view:"three_quarter",frames_n:97,cols:10,w:324,h:454,fps:30,peak:48},
+  plank:{name:"Plank",frames:["On the forearms, body in a straight line from head to heels","Held there, breathing slowly and bracing the core"],view:"three_quarter",frames_n:97,cols:10,w:484,h:169,fps:30,peak:48},
+  rdl:{name:"Barbell Romanian deadlift",frames:["Standing tall, bar at your thighs","Hips pushed back, bar just below the knees"],view:"three_quarter",frames_n:97,cols:10,w:420,h:435,fps:30,peak:48},
+  widepull:{name:"Wide-grip lat pulldown",frames:["Wide grip, arms straight up","Bar pulled to the upper chest"],view:"three_quarter",frames_n:97,cols:10,w:285,h:478,fps:30,peak:48}
 };
 var ART_SHEETS={}, ART_SPR_LIVE=[], ART_SPR_RAF=0;
 function hasArt(id){return !!(ART_SPRITE.hasOwnProperty(id)||(window.GFDArt&&GFDArt.EX[id])||ART_GYM.hasOwnProperty(id));}
