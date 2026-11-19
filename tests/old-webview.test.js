@@ -6,7 +6,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const root = path.join(__dirname, "..");
-const files = ["src/styles.css", "app.html", "roadmap.html", "privacy.html", "terms.html", "delete-account.html"]
+const files = ["src/styles.css", "app.html", "privacy.html", "terms.html", "delete-account.html"]
   .concat(fs.readdirSync(path.join(root, "src/js")).filter((f) => f.endsWith(".js") && !f.startsWith("gfd-exercise-art")).map((f) => "src/js/" + f));
 
 test("no inset shorthand (Chrome 87+): write top/right/bottom/left", () => {

@@ -1,7 +1,7 @@
 # GFD · Get Fit Daily
 
 Workout planner and logger: a web app (`app.html` + `src/`, live at getfitdaily.co.za via Coolify) on the Supabase project in `supabase/migrations/`.
-The web app is the source of truth. Background and next steps: `docs/context.md`.
+The web app is the source of truth.
 
 ## Read the brief for the area you're working in, not old threads
 

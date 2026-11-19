@@ -83,7 +83,7 @@ test("site links use the site address from the shell, relative paths included", 
   assert.equal(p.siteUrl("privacy.html"), "https://getfitdaily.app/privacy.html");
   assert.equal(p.siteUrl("./terms.html"), "https://getfitdaily.app/terms.html");
   assert.equal(p.siteUrl("https://example.com/x"), "https://example.com/x");
-  assert.equal(page().p.siteUrl("roadmap.html"), "https://do-mict.github.io/workout-tracker/roadmap.html");
+  assert.equal(page().p.siteUrl("privacy.html"), "https://do-mict.github.io/workout-tracker/privacy.html");
 });
 
 test("web: site links stay on the site the page is served from", () => {

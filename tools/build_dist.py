@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
 
-FILES = ["index.html", "sw.js", "manifest.webmanifest", "roadmap.html",
+FILES = ["index.html", "sw.js", "manifest.webmanifest",
          "privacy.html", "terms.html", "delete-account.html", "robots.txt"]
 DIRS = ["src", "icons", "vendor", ".well-known"]
 REQUIRED = ["index.html", "sw.js", "manifest.webmanifest"]
