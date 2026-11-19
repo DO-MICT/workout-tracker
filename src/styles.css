@@ -22,7 +22,7 @@ html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:100%;line-height:1.45;font-stretch:75%;-webkit-text-size-adjust:100%}
 button,input{font:inherit;color:inherit}
 .wrap{max-width:640px;margin:0 auto;padding:16px 14px 120px}
-h1,h2,h3,.cond{font-family:Archivo,"Arial Narrow",Figtree,sans-serif}
+h1,h2,h3{font-family:Archivo,"Arial Narrow",Figtree,sans-serif}
 header{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
 h1{font-size:1.9rem;line-height:1;margin:0;font-weight:800;letter-spacing:.01em}
 .status{font-size:.85rem;color:var(--muted);margin-top:4px}
@@ -103,7 +103,6 @@ h1{font-size:1.9rem;line-height:1;margin:0;font-weight:800;letter-spacing:.01em}
 .menu-item{display:block;width:100%;text-align:left;border:0;border-top:1px solid var(--line);background:transparent;padding:12px 2px 4px;cursor:pointer;font-weight:600;min-height:44px}
 .chip{border:2px solid var(--ink);background:transparent;border-radius:999px;padding:6px 14px;font-weight:600;cursor:pointer;min-height:40px}
 .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-.icon-btn{border:0;background:transparent;padding:8px;cursor:pointer;color:var(--muted);min-height:40px;min-width:40px;border-radius:8px}
 .daynav{position:relative;margin-bottom:18px}
 .daybtn{width:100%;display:flex;align-items:center;gap:10px;border:0;background:var(--accent);color:var(--accent-ink);border-radius:12px;padding:8px 14px 9px;min-height:56px;cursor:pointer;text-align:left;border-bottom:5px solid var(--accent-ink)}
 .daybtn .dn{flex:1;min-width:0}
@@ -128,9 +127,6 @@ h1{font-size:1.9rem;line-height:1;margin:0;font-weight:800;letter-spacing:.01em}
 .bar i{display:block;height:100%;background:var(--done);width:0;transition:width .3s}
 .warm{background:var(--card);border-left:5px solid var(--steel);border-radius:10px;padding:10px 12px;margin-bottom:12px;font-size:.95rem}
 .ex{background:var(--card);border-radius:12px;padding:14px 14px 12px;margin-bottom:12px}
-.ex.ss-a{border-top:4px solid var(--blue);border-radius:12px 12px 12px 12px;margin-bottom:4px}
-.ex.ss-b{margin-top:0}
-.ex-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
 details.ex>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;min-height:48px;border-radius:8px}
 details.ex>summary::-webkit-details-marker{display:none}
 details.ex>summary .ttl{flex:1;min-width:0}
@@ -197,8 +193,6 @@ details.how[open] summary::before{content:"−"}
 .asksub{color:var(--muted);margin:0 0 8px}
 .asktext{font-size:1.1rem;font-weight:600;margin:0 0 14px}
 .toast .toastbtn{margin-left:12px;border:0;background:transparent;color:inherit;font-weight:800;text-decoration:underline;cursor:pointer;padding:4px 2px;font-size:1rem}
-.fin{border:2px dashed var(--steel);background:transparent}
-.fin .row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:8px}
 .actions{display:grid;gap:10px;margin:22px 0}
 .linkbtn.hlink{font-size:.88rem;padding:0;min-height:32px;margin:-4px 0 6px}
 .hpend{background:var(--done-bg);color:var(--ink);border-radius:10px;padding:10px 12px;font-size:.92rem}
@@ -333,7 +327,6 @@ details.grp .ex{margin-bottom:8px}
 .sheet-top{display:flex;flex-wrap:wrap;row-gap:8px;justify-content:space-between;align-items:center;gap:12px;margin-bottom:6px}
 .sheet-top h2{font-size:2.2rem;line-height:1;margin:0;font-weight:800}
 .sheet .sub{color:var(--muted);margin:0 0 16px;font-size:.92rem}
-.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .pf{display:block;background:var(--card);border-radius:12px;padding:10px 12px 8px}
 .pf .pl{display:flex;justify-content:space-between;align-items:baseline;font-weight:600;font-size:.95rem}
 .pf .pl i{font-style:normal;color:var(--muted);font-weight:500;font-size:.8rem}
@@ -402,9 +395,6 @@ details.grp .ex{margin-bottom:8px}
 .pkbar .ghost{width:100%;margin-top:8px}
 .pkbar .elwarn{background:var(--card);border-radius:10px;padding:10px 12px;margin:0}
 .cntrow{display:flex;align-items:center;gap:4px}
-.notebtn{display:inline-grid;place-items:center;width:30px;height:30px;flex:none;border:0;border-radius:8px;background:transparent;color:var(--muted);cursor:pointer;padding:0}
-.notebtn.has{background:#F6C445;border-color:#F6C445;color:#3A2A00}
-.notebtn:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .injnote{background:color-mix(in srgb,#F6C445 22%,var(--card));border-left:5px solid #F6C445;border-radius:10px;padding:8px 12px;margin:6px 0 8px}
 .injnote b{display:block;font-size:.78rem;letter-spacing:.03em;text-transform:uppercase}
 .injnote p{margin:2px 0 0;font-size:.95rem;white-space:pre-wrap}
@@ -500,7 +490,6 @@ details.grp .ex{margin-bottom:8px}
 .ob .obhero h1{font-size:2.6rem;line-height:1;margin:0 0 6px;font-weight:800}
 .ob .obhero p{margin:0 0 12px;color:var(--muted)}
 .obh{font-size:1.8rem;margin:4px 0 4px;font-weight:800}
-.bname.dim input{opacity:.6;cursor:not-allowed}
 .bname em{display:block;font-style:normal;font-size:.8rem;color:var(--muted);margin-top:6px}
 .ob .primary{width:100%}
 .obfine{font-size:.82rem;color:var(--muted);text-align:center;margin:12px 0 0}
@@ -1280,8 +1269,8 @@ body.wide .fx-sheet{bottom:0;left:50%;right:auto;width:min(640px,100%);transform
 .chip,.eqchip,.locpill,.seg button,.stseg button,.timer button{min-height:44px}
 .setrow input,.tick{min-height:44px}
 .ptoggle{min-height:44px;display:flex;align-items:center;gap:8px}
-.chip.sm,.planbtn,.linkbtn,.notebtn,.hit{position:relative}
-.chip.sm::before,.planbtn::before,.linkbtn::before,.notebtn::before,.hit::before{content:"";position:absolute;left:50%;top:50%;width:max(100%,44px);height:max(100%,44px);transform:translate(-50%,-50%)}
+.chip.sm,.planbtn,.linkbtn,.hit{position:relative}
+.chip.sm::before,.planbtn::before,.linkbtn::before,.hit::before{content:"";position:absolute;left:50%;top:50%;width:max(100%,44px);height:max(100%,44px);transform:translate(-50%,-50%)}
 /* screen-reader-only text, and the live region that reads toasts and the rest timer aloud */
 .sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 /* the injury note button sits in the open exercise (a button inside the tap-to-open row can't be reached by TalkBack) */

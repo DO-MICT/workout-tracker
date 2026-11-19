@@ -79,7 +79,6 @@ function isKgLab(lab){return !!lab&&(lab[0]==="kg"||lab[0]==="+kg");}
 function fmtW(kg,dp){return GFDRules.fmtWeight(kg,U(),dp);}
 function last(){return S.last[S.who];}
 /* records and last time come from history (records.js, rules.js) */
-function prFor(ex){ var r=bestFor(ex.id); return r&&r.best>0?String(r.best):""; }
 /* today's sets for an exercise. Boxes you haven't touched start with real values (last session's same set,
    or your earlier set today), so what you see is exactly what ✓ saves. pre marks those untouched values. */
 function setsFor(ex){
