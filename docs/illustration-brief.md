@@ -18,6 +18,18 @@ Approved generator art reaches the live app like this:
 
 The rest of this brief describes that original engine, which still holds the 5-day split (30 exercises).
 
+## 3D avatar animations (since 17 Nov 2026)
+
+Approved 3D avatar animations replace the drawn art for their exercise: `bwsquat`, `goblet`, `pecdeckfly` (17 Nov),
+and since 19 Nov `backsquat`, `bench`, `dbfloorpress`, `dbpress`, `dbsqueeze`, `flatdb`, `incdb`, `lateral`, `ohp`,
+`plank`, `rdl`, `widepull`.
+Files: `src/anim/<id>/base_three_quarter.webp`, `mask_three_quarter.webp`, `sheets_three_quarter.json`, copied from
+`art/complete_exercises/<id>/` (the side view stays there for now). `ART_SPRITE` in `src/js/exart.js` lists them with the
+sheet layout. The mask is tinted with the theme's `--accent` at draw time (canvas `source-in`, then `multiply` over the
+grey figure), so the highlight follows the colour theme. To add one: copy its files and add an `ART_SPRITE` entry.
+Only the first three are in `SHELL` in `sw.js`; the rest (about 27 MB all together) are cached the first time they play,
+so a service worker update doesn't re-download every sheet.
+
 ## Where it lives
 
 - `src/js/gfd-exercise-art.js`: the whole engine plus the exercise entries (`EX`) and the 5-day split (`DAYS`).

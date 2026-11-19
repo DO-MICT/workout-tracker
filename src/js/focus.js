@@ -1,7 +1,7 @@
 /* ---------- Focus view: one-thumb set logging (Deon, 11 Nov) ----------
-   The Workout tab shows one exercise and one set at a time. A round timer at the top reads Start, then counts down
-   the rest after each set, then says Go. Nothing below it moves when the timer changes. "Log set" sits right above the
-   tab bar. Finishing an exercise moves on to the next one by itself; + adds an extra set (an extra round in a superset
+   The Workout tab shows one exercise and one set at a time. Since 19 Nov: the exercise animation is a card at the top,
+   the set card (weight × reps) below it, and the round Go / rest timer right above the tab bar is also the log button
+   (Go + "log set 2"; while resting it counts down and a tap still logs). Nothing moves when the timer changes. Finishing an exercise moves on to the next one by itself; + adds an extra set (an extra round in a superset
    or circuit). Swap, Machine taken, the injury note, history and How to do it safely live in the ⋯ sheet.
    The list of every exercise is still there: ⋯ → Show all exercises (S.dayView="list"), and "Focus view" goes back.
    Sets are the same objects the list uses (setsFor), and the boxes carry the same data-ex/data-i/data-f, so typing,
@@ -48,16 +48,17 @@ function mmssF(s){ s=Math.max(0,Math.round(s)); var h=Math.floor(s/3600), m=Math
 
 /* ---------- render ---------- */
 var FX_C=2*Math.PI*54;
-function fxRingHtml(){
-  var started=fxStarted(), rest=fxResting(), left=rest?(tEnd-Date.now())/1000:0;
-  var cls=rest?"rest":started?"go":"idle", big=rest?mmssF(left):started?"Go":"Start", small=rest?"rest":started?(FX.sw?"no rest":"next set"):"workout";
-  var off=rest?FX_C*(1-left/tTotal):started?0:FX_C;
-  var label=cls==="idle"?"Start workout":cls==="rest"?"Rest timer, "+mmssF(left)+" left":"Rest over. Go";
+/* Deon, 19 Nov: the Go / rest ring is the log button. It sits at the bottom where "Log set" was: Go + "log set 2", tap it
+   to log. While resting it counts down (with +30s and Skip beside it) and a tap still logs the next set early.
+   act/i are what a tap does (log, back, next, finish), big/small its default words, say the screen reader label. */
+function fxRingHtml(act,i,big,small,say){
+  var rest=fxResting(), left=rest?(tEnd-Date.now())/1000:0;
+  var off=rest?FX_C*(1-left/tTotal):0;
+  var label=rest?"Rest timer, "+mmssF(left)+" left. Tap to "+say:(big==="Go"?"Go. ":"")+say.charAt(0).toUpperCase()+say.slice(1);
   return '<div class="fx-tz"><button class="fx-side'+(rest?'':' off')+'" data-fx="t30"'+(rest?'':' tabindex="-1" aria-hidden="true"')+'>+30s</button>'+
-    '<button class="fx-ring '+cls+'" data-fx="ring" aria-label="'+label+'"><svg viewBox="0 0 128 128" aria-hidden="true"><circle class="trk" cx="64" cy="64" r="54"/><circle class="arc" id="fxArc" cx="64" cy="64" r="54" stroke-dasharray="'+FX_C.toFixed(1)+'" stroke-dashoffset="'+off.toFixed(1)+'"/></svg>'+
-    '<span class="in" aria-hidden="true"><b id="fxBig">'+big+'</b><small id="fxSmall">'+small+'</small></span></button>'+
-    '<button class="fx-side'+(rest?'':' off')+'" data-fx="skip"'+(rest?'':' tabindex="-1" aria-hidden="true"')+'>Skip</button></div>'+
-    '<div class="fx-clock" id="fxClock">'+(started?'Workout '+mmssF((Date.now()-started)/1000):'')+'</div>';
+    '<button class="fx-ring '+(rest?'rest':'go')+'" data-fx="'+act+'"'+(i!=null?' data-i="'+i+'"':'')+' aria-label="'+label+'"><svg viewBox="0 0 128 128" aria-hidden="true"><circle class="trk" cx="64" cy="64" r="54"/><circle class="arc" id="fxArc" cx="64" cy="64" r="54" stroke-dasharray="'+FX_C.toFixed(1)+'" stroke-dashoffset="'+off.toFixed(1)+'"/></svg>'+
+    '<span class="in" aria-hidden="true"><b id="fxBig">'+(rest?mmssF(left):big)+'</b><small id="fxSmall">'+small+'</small></span></button>'+
+    '<button class="fx-side'+(rest?'':' off')+'" data-fx="skip"'+(rest?'':' tabindex="-1" aria-hidden="true"')+'>Skip</button></div>';
 }
 function fxLastFor(ex,i){
   var L=lastFor(ex.id,ex); if(!L||!L.sets||!L.sets.length) return "";
@@ -83,7 +84,11 @@ function renderFocus(){
   h+='<div class="fx-top">'+
     '<div class="fx-name"><span class="fx-pos'+(g?' grp':'')+'">'+tag+'</span><div><h2>'+esc(ex.n)+'</h2><span>'+sub+(miss.length?' · <b class="fx-warn">Needs gear</b>':'')+(noteOf(ex.id)?' · <b class="fx-warn">Injury note</b>':'')+'</span></div></div>'+
     '<button class="fx-nav fx-more" data-fx="tools" aria-haspopup="dialog" aria-label="More for '+esc(ex.n)+': swap, injury note, history, how to">⋯</button></div>';
-  h+=fxRingHtml();
+  /* the exercise animation on a card at the top; ‹ › on its sides (swipe it too). The workout clock sits in its corner. */
+  var fig=exFigure(ex.id,ex.f,"fx-fig"), started=fxStarted();
+  h+='<div class="fx-art'+(fig?'':' nofig')+'" id="fxArt">'+fig+
+    '<span class="fx-clock" id="fxClock">'+(started?'Workout '+mmssF((Date.now()-started)/1000):'')+'</span>'+
+    '<button class="fx-nav fx-artnav l" data-fx="prev" aria-label="Previous exercise">‹</button><button class="fx-nav fx-artnav r" data-fx="next" aria-label="Next exercise">›</button></div>';
   h+='<div class="fx-card" id="fxCard">';
   if(g){
     h+='<div class="fx-pills">'+g.items.map(function(x,k){
@@ -101,15 +106,18 @@ function renderFocus(){
     (lab[0]?'<label class="fx-num"><input'+numFor(lw)+' aria-label="Set '+(si+1)+' '+lw+'" data-ex="'+ex.id+'" data-i="'+si+'" data-f="w" value="'+esc(boxVal(ex,s,"w"))+'" placeholder="–"><small>'+esc(lw)+'</small></label><span class="fx-times" aria-hidden="true">×</span>':'')+
     '<label class="fx-num"><input'+numFor(lab[1])+' aria-label="Set '+(si+1)+' '+lab[1]+'" data-ex="'+ex.id+'" data-i="'+si+'" data-f="r" value="'+esc(s.r)+'" placeholder="–"><small>'+esc(lab[1])+'</small></label></div>';
   h+='</div>';
-  var started=fxStarted(), nx=fxNextOpen(ex.id), label, act;
-  if(editing){ label="Done editing set "+(si+1); act="back"; }
-  else if(!started){ label="Start workout"; act="start"; }
-  else if(all){ label=nx?"Next: "+esc(nx.ex.n):"Complete workout"; act=nx?"next":"finish"; }
-  else { label="✓ Log "+(g?L+(it.k+1)+" · round "+(si+1):"set "+(si+1)); act="log"; }
-  h+='<div class="fx-bot"><div class="fx-gorow"><button class="fx-nav" data-fx="prev" aria-label="Previous exercise">‹</button><button class="fx-go" data-fx="'+act+'"'+(act==="log"?' data-i="'+si+'"':'')+'>'+label+'</button><button class="fx-nav" data-fx="next" aria-label="Next exercise">›</button></div><div class="fx-slot">'+fxSlot(it,si,all,started,nx)+'</div></div>';
+  var nx=fxNextOpen(ex.id), act, big, small, say;
+  if(editing){ act="back"; big="Save"; small="set "+(si+1); say="save set "+(si+1); }
+  else if(all){ act=nx?"next":"finish"; big=nx?"Next":"Finish"; small=nx?"exercise":"workout"; say=nx?"go to "+esc(nx.ex.n):"complete the workout"; }
+  else { var what=g?L+(it.k+1)+" · R"+(si+1):"set "+(si+1); act="log"; big="Go"; small="log "+what; say="log "+(g?L+(it.k+1)+", round "+(si+1):"set "+(si+1)); }
+  h+='<div class="fx-bot">'+fxRingHtml(act,act==="log"?si:null,big,small,say)+'<div class="fx-slot">'+fxSlot(it,si,all,started,nx)+'</div></div>';
   h+='</div>';
   if(FX.tools) h+=fxToolsHtml(ex,miss);
-  document.getElementById("day").innerHTML=h;
+  /* keep the playing animation when it's the same exercise, so logging a set doesn't restart or blink it */
+  var oldArt=document.querySelector("#fxArt .exart"), host=document.getElementById("day");
+  if(oldArt&&oldArt.dataset.art!==ex.id) oldArt=null;
+  host.innerHTML=h;
+  if(oldArt){ var na=host.querySelector("#fxArt .exart"); if(na) na.parentNode.replaceChild(oldArt,na); }
   fxClockStart();
   if(!fxFit()&&started&&!FX.tools&&!document.body.classList.contains("wide")) fxScroll();
 }
@@ -245,8 +253,8 @@ function focusClick(t){
   if(a==="menu"){ FX.menu=FX.open===t.dataset.m?null:t.dataset.m; renderFocus(); if(!FX.menu){ var mb=document.querySelector('[data-fx="menu"][data-m="'+t.dataset.m+'"]'); if(mb) mb.focus({preventScroll:true}); } return true; }
   if(a==="plans"){ openPlans(); return true; }
   if(a==="pick"){ FX.pick=true; FX.tools=false; SWAP=null; renderFocus(); window.scrollTo(0,0); return true; }
-  if(a==="resume"){ FX.pick=false; renderFocus(); var rb=document.querySelector(".fx-go"); if(rb) rb.focus({preventScroll:true}); return true; }
-  if(a==="start"||(a==="ring"&&!fxStarted())){ FX.pick=false; S.fstart={day:DAYS[day].id,at:Date.now(),who:S.who||0}; save(); audio(); window.scrollTo(0,0); renderFocus(); var gb=document.querySelector(".fx-go"); if(gb) gb.focus({preventScroll:true}); return true; }
+  if(a==="resume"){ FX.pick=false; renderFocus(); var rb=document.querySelector("#fx .fx-ring"); if(rb) rb.focus({preventScroll:true}); return true; }
+  if(a==="start"||(a==="ring"&&!fxStarted())){ FX.pick=false; S.fstart={day:DAYS[day].id,at:Date.now(),who:S.who||0}; save(); audio(); window.scrollTo(0,0); renderFocus(); var gb=document.querySelector("#fx .fx-ring"); if(gb) gb.focus({preventScroll:true}); return true; }
   if(a==="ring") return true;
   if(a==="log"){ var i=t.dataset.i!=null?+t.dataset.i:openSet(ex); if(i>=0&&!setsFor(ex)[i].d) tickSet(ex,i); return true; }
   if(a==="back"){ FX.si=null; renderFocus(); return true; }
@@ -254,7 +262,7 @@ function focusClick(t){
   if(a==="add"){ fxAdd(ex.id); return true; }
   if(a==="addprev"){ if(FX.prev) fxAdd(FX.prev); return true; }
   if(a==="next"||a==="prev"){
-    if(a==="next"&&t.classList.contains("fx-go")){ var nx=fxNextOpen(ex.id); if(nx) fxGo(nx.ex.id); return true; }
+    if(a==="next"&&t.classList.contains("fx-ring")){ var nx=fxNextOpen(ex.id); if(nx) fxGo(nx.ex.id); return true; }
     var o=fxOrder(), at=0; o.forEach(function(x,i2){ if(x.ex===ex) at=i2; });
     fxGo(o[(at+(a==="next"?1:-1)+o.length)%o.length].ex.id); return true;
   }
@@ -270,7 +278,7 @@ function focusClick(t){
 /* swipe the set card sideways to move between exercises (the ‹ › buttons do the same) */
 (function(){
   var sx=null, sy=0;
-  document.addEventListener("touchstart",function(e){ var c=e.target.closest&&e.target.closest("#fxCard"); if(!c||e.target.closest("input,button")){ sx=null; return; } sx=e.touches[0].clientX; sy=e.touches[0].clientY; },{passive:true});
+  document.addEventListener("touchstart",function(e){ var c=e.target.closest&&e.target.closest("#fxCard,#fxArt"); if(!c||e.target.closest("input,button")){ sx=null; return; } sx=e.touches[0].clientX; sy=e.touches[0].clientY; },{passive:true});
   document.addEventListener("touchend",function(e){
     if(sx===null) return; var t=e.changedTouches[0], dx=t.clientX-sx, dy=t.clientY-sy; sx=null;
     if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.5){ var b=document.querySelector('.fx-nav[data-fx="'+(dx<0?"next":"prev")+'"]'); if(b) focusClick(b); }

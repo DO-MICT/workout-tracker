@@ -90,7 +90,30 @@ var ART_GYM={
   adductrock:["Adductor rock-back", ["On hands and one knee, the other leg straight out to the side", "Hips rocked back toward the heel, back long"]]
 };
 var ART_GYM_SRC="src/js/gfd-exercise-art-gym.js", ART_GYM_WAIT=null;
-function hasArt(id){return !!((window.GFDArt&&GFDArt.EX[id])||ART_GYM.hasOwnProperty(id));}
+/* 3D avatar animations (sprite sheets in src/anim/<id>/, from art/complete_exercises). These replace the drawn art for
+   their ids. base_<view>.webp is the grey figure; mask_<view>.webp is white with alpha = how hard each muscle works, and
+   is tinted with the theme's --accent at draw time, so the highlight follows the colour theme. One rep of `frames`
+   frames at `fps`, looping; frame i sits at column i%cols, row floor(i/cols). peak = the frame shown as the end pose. */
+var ART_SPRITE={
+  bwsquat:{name:"Bodyweight squat",frames:["Standing tall, feet about shoulder-width apart","Squatted down, hips back, thighs about level with the floor"],view:"three_quarter",frames_n:97,cols:10,w:344,h:605,fps:30,peak:48},
+  goblet:{name:"Goblet squat",frames:["Standing tall, kettlebell held at the chest","Squatted down between the knees, chest up, kettlebell still at the chest"],view:"three_quarter",frames_n:97,cols:10,w:224,h:605,fps:30,peak:48},
+  pecdeckfly:{name:"Pec deck fly",frames:ART_GYM.pecdeckfly[1],view:"three_quarter",frames_n:97,cols:10,w:362,h:482,fps:30,peak:48},
+  /* 19 Nov: the rest of art/complete_exercises */
+  backsquat:{name:"Barbell back squat",frames:["Standing tall, bar across the upper back","Squatted down, hips back, thighs about level with the floor"],view:"three_quarter",frames_n:97,cols:10,w:426,h:442,fps:30,peak:48},
+  bench:{name:"Barbell bench press",frames:["Arms straight over the chest","Bar lowered to just above mid-chest"],view:"three_quarter",frames_n:97,cols:10,w:368,h:384,fps:30,peak:48},
+  dbfloorpress:{name:"Dumbbell floor press",frames:["Lying on the floor, dumbbells pressed up over the chest","Lowered until the upper arms touch the floor"],view:"three_quarter",frames_n:97,cols:10,w:312,h:245,fps:30,peak:48},
+  dbpress:{name:"Seated dumbbell shoulder press",frames:["Seated upright, dumbbells at shoulder height","Pressed straight up overhead"],view:"three_quarter",frames_n:97,cols:10,w:276,h:450,fps:30,peak:48},
+  dbsqueeze:{name:"Dumbbell squeeze press",frames:["Dumbbells pressed together up over the chest","Lowered to the chest, still squeezed together"],view:"three_quarter",frames_n:97,cols:10,w:342,h:342,fps:30,peak:48},
+  flatdb:{name:"Flat dumbbell press",frames:["Dumbbells up over the chest","Lowered to the sides of the chest"],view:"three_quarter",frames_n:97,cols:10,w:342,h:362,fps:30,peak:48},
+  incdb:{name:"Incline dumbbell press",frames:["Dumbbells pressed up over the upper chest","Lowered beside the chest on an incline bench"],view:"three_quarter",frames_n:97,cols:10,w:342,h:502,fps:30,peak:48},
+  lateral:{name:"Dumbbell lateral raise",frames:["Arms down, dumbbells by your thighs","Raised out to shoulder height"],view:"three_quarter",frames_n:97,cols:10,w:416,h:472,fps:30,peak:48},
+  ohp:{name:"Standing barbell overhead press",frames:["Bar on the front of the shoulders","Pressed straight up over the middle of the feet"],view:"three_quarter",frames_n:97,cols:10,w:324,h:454,fps:30,peak:48},
+  plank:{name:"Plank",frames:["On the forearms, body in a straight line from head to heels","Held there, breathing slowly and bracing the core"],view:"three_quarter",frames_n:97,cols:10,w:484,h:169,fps:30,peak:48},
+  rdl:{name:"Barbell Romanian deadlift",frames:["Standing tall, bar at your thighs","Hips pushed back, bar just below the knees"],view:"three_quarter",frames_n:97,cols:10,w:420,h:435,fps:30,peak:48},
+  widepull:{name:"Wide-grip lat pulldown",frames:["Wide grip, arms straight up","Bar pulled to the upper chest"],view:"three_quarter",frames_n:97,cols:10,w:285,h:478,fps:30,peak:48}
+};
+var ART_SHEETS={}, ART_SPR_LIVE=[], ART_SPR_RAF=0;
+function hasArt(id){return !!(ART_SPRITE.hasOwnProperty(id)||(window.GFDArt&&GFDArt.EX[id])||ART_GYM.hasOwnProperty(id));}
 /* the generator that draws this exercise; calls back once it is loaded */
 function artEngine(id,done){
   if(window.GFDArt&&GFDArt.EX[id]) return done(GFDArt);
@@ -145,8 +168,8 @@ function artTint(svg,theme){
 }
 function artStill(){return window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;}
 function artHtml(id,cls){
-  var ex=GFDArt.EX[id]||{name:ART_GYM[id][0],frames:ART_GYM[id][1]};
-  return '<div class="exart'+(cls?" "+cls:"")+'" data-art="'+id+'" role="img" aria-label="'+esc(ex.name+": "+ex.frames[0]+", then "+ex.frames[1].charAt(0).toLowerCase()+ex.frames[1].slice(1))+'"></div>';
+  var sp=ART_SPRITE[id], ex=sp||GFDArt.EX[id]||{name:ART_GYM[id][0],frames:ART_GYM[id][1]};
+  return '<div class="exart'+(sp?" spr":"")+(cls?" "+cls:"")+'" data-art="'+id+'" role="img" aria-label="'+esc(ex.name+": "+ex.frames[0]+", then "+ex.frames[1].charAt(0).toLowerCase()+ex.frames[1].slice(1))+'"></div>';
 }
 /* the illustration for an exercise, or the old stick figure for exercises without one */
 function exFigure(id,f,cls){
@@ -174,9 +197,87 @@ function artFrames(id,theme,done){
     more();
   });
 }
+/* both sprite sheets for one exercise, loaded once; done(sheet) or done(null) if they fail to load */
+function artSheets(id,done){
+  var s=ART_SHEETS[id];
+  if(s&&s.ready) return done(s.ok?s:null);
+  if(s){s.wait.push(done);return;}
+  var sp=ART_SPRITE[id], n=0;
+  s=ART_SHEETS[id]={ready:false,ok:true,wait:[done],base:new Image(),mask:new Image()};
+  function one(ok){
+    if(!ok) s.ok=false;
+    if(++n<2) return;
+    s.ready=true; s.wait.forEach(function(fn){fn(s.ok?s:null);}); s.wait=[];
+  }
+  [["base",s.base],["mask",s.mask]].forEach(function(p){
+    p[1].onload=function(){one(true);}; p[1].onerror=function(){one(false);};
+    p[1].src="src/anim/"+id+"/"+p[0]+"_"+sp.view+".webp";
+  });
+}
+function artAccent(){
+  var c=window.getComputedStyle?getComputedStyle(document.documentElement).getPropertyValue("--accent").trim():"";
+  return c||"#D4FF3A";
+}
+/* one frame: grey figure, then the mask tinted with the accent multiplied over it (keeps the shading) */
+function artSprFrame(a,f){
+  var sp=a.sp, w=sp.w, h=sp.h, sx=(f%sp.cols)*w, sy=Math.floor(f/sp.cols)*h, o=a.octx, c=a.ctx;
+  o.globalCompositeOperation="source-over"; o.clearRect(0,0,w,h);
+  o.drawImage(a.sheet.mask,sx,sy,w,h,0,0,w,h);
+  o.globalCompositeOperation="source-in"; o.fillStyle=a.acc; o.fillRect(0,0,w,h);
+  o.globalCompositeOperation="source-over";
+  c.globalCompositeOperation="source-over"; c.clearRect(0,0,w,h);
+  c.drawImage(a.sheet.base,sx,sy,w,h,0,0,w,h);
+  c.globalCompositeOperation="multiply"; c.drawImage(a.off,0,0);
+  c.globalCompositeOperation="source-over";
+}
+function artSprPlayer(sp,sheet,acc){
+  var cv=document.createElement("canvas"), off=document.createElement("canvas");
+  cv.width=off.width=sp.w; cv.height=off.height=sp.h;
+  return {cv:cv,ctx:cv.getContext("2d"),off:off,octx:off.getContext("2d"),sp:sp,sheet:sheet,acc:acc};
+}
+function artDrawSprite(el,id,theme){
+  artSheets(id,function(sheet){
+    if(!el.isConnected||el.dataset.theme!==theme) return;
+    if(!sheet){ /* sheets failed to load: fall back to the drawn art where there is one */
+      if((window.GFDArt&&GFDArt.EX[id])||ART_GYM.hasOwnProperty(id)){el.classList.remove("spr");el.dataset.nospr="1";artDraw(el);}
+      return;
+    }
+    var sp=ART_SPRITE[id], acc=artAccent();
+    el.innerHTML="";
+    if(artStill()){
+      el.classList.add("still");
+      [0,sp.peak].forEach(function(f){var p=artSprPlayer(sp,sheet,acc);artSprFrame(p,f);el.appendChild(p.cv);});
+      return;
+    }
+    el.classList.remove("still");
+    var a=artSprPlayer(sp,sheet,acc);
+    a.spr=true; a.pos=0; a.paused=false; a.vis=true; a.t=0;
+    artSprFrame(a,0); el.appendChild(a.cv); el._art=a;
+    if(ART_SPR_LIVE.indexOf(el)<0) ART_SPR_LIVE.push(el);
+    artSprRun();
+  });
+}
+/* one requestAnimationFrame loop plays every visible sprite animation at its own fps */
+function artSprRun(){
+  if(ART_SPR_RAF) return;
+  var last=0;
+  function tick(ts){
+    ART_SPR_LIVE=ART_SPR_LIVE.filter(function(el){return el.isConnected&&el._art&&el._art.spr;});
+    if(!ART_SPR_LIVE.length){ART_SPR_RAF=0;return;}
+    var dt=last?Math.min(ts-last,250):0; last=ts;
+    ART_SPR_LIVE.forEach(function(el){
+      var a=el._art; if(a.paused||!a.vis) return;
+      a.t+=dt; var step=1000/a.sp.fps, n=Math.floor(a.t/step);
+      if(n>0){a.t-=n*step; a.pos=(a.pos+n)%a.sp.frames_n; artSprFrame(a,a.pos);}
+    });
+    ART_SPR_RAF=requestAnimationFrame(tick);
+  }
+  ART_SPR_RAF=requestAnimationFrame(tick);
+}
 function artDraw(el){
   var id=el.dataset.art, theme=artTheme();
   el.dataset.theme=theme;
+  if(ART_SPRITE.hasOwnProperty(id)&&!el.dataset.nospr) return artDrawSprite(el,id,theme);
   artFrames(id,theme,function(c){
     if(!el.isConnected||el.dataset.theme!==theme) return;
     if(artStill()){
